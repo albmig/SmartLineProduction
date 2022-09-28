@@ -1,0 +1,102 @@
+NCR_SegnalazioneNumero_Page1				Ncr_Progr + "/" + Ncr_Year
+NCR_Maggiore_Page1							Ncr_Level
+NCR_Minore_Page1							Ncr_Level
+NCR_Osservazione_Page1						Ncr_Level
+NCR_Data_Page1								Ncr_DataCreaz
+-------------------------------
+NCR_Articolo_Page1							Ncr_CodArticolo		relazione su articoli >>> 
+NCR_CliFor_C_Page1							Ncr_CodCliFor
+NCR_CliFor_F_Page1							Ncr_CodCliFor
+NCR_CliFor_Page1												relazione su vista Ncr_Clifor	>>>	RAGIONESOCIALE
+-------------------------------
+NCR_Provenienza_01							Ncr_Provenienza
+NCR_Provenienza_02							Ncr_Provenienza
+NCR_Provenienza_03							Ncr_Provenienza
+NCR_Provenienza_04							Ncr_Provenienza
+NCR_Provenienza_05							Ncr_Provenienza
+NCR_Provenienza_06							Ncr_Provenienza
+NCR_Provenienza_07							Ncr_Provenienza
+NCR_Provenienza_08							Ncr_Provenienza
+NCR_Provenienza_Altro						Ncr_Provenienza_Altro
+NCR_Problema_01
+NCR_Problema_02
+NCR_Problema_Des
+-------------------------------
+NCR_Riferimento
+NCR_Emissione
+NCR_Destinatario
+-------------------------------
+NCR_Causa_01
+NCR_Causa_02
+NCR_Causa_03
+NCR_Causa_04
+NCR_Causa_Des
+-------------------------------
+NCR_Azione_01
+NCR_Azione_02
+NCR_Azione_03
+NCR_Azione_04
+NCR_Azione_05
+NCR_Azione_06
+NCR_Azione_07
+NCR_Azione_Des_01
+NCR_Azione_Des_02
+-------------------------------
+NCR_Pianificazione_01
+NCR_Pianificazione_02
+-------------------------------
+NCR_VerificaAttuazione_01
+NCR_VerificaAttuazione_02
+NCR_VerificaAttuazione_Des
+NCR_VerificaEfficacia_01
+NCR_VerificaEfficacia_02
+NCR_VerificaEfficacia_Des
+-------------------------------
+NCR_GiudRisolutiva
+NCR_GiudBuona
+NCR_GiudScarsa
+NCR_GiudInsuff
+-------------------------------
+
+-------------------------------
+NCR_SegnalazioneNumero_Page2
+NCR_Maggiore_Page2
+NCR_Minore_Page2
+NCR_Osservazione_Page2
+NCR_Data_Page2
+-------------------------------
+NCR_Articolo_Page2
+NCR_CliFor_C_Page2
+NCR_CliFor_F_Page2
+NCR_CliFor_Page2
+-------------------------------
+NCR_Att_Data_01
+NCR_Att_Data_02
+NCR_Att_Data_03
+NCR_Att_Data_04
+NCR_Att_Data_05
+NCR_Att_Data_06
+NCR_Att_Data_07
+NCR_Att_Data_08
+NCR_Att_Data_09
+NCR_Att_Data_010
+NCR_Att_Data_011
+NCR_Att_Data_012
+NCR_Att_Data_013
+NCR_Att_Data_014
+NCR_Att_Data_015
+NCR_Att_Des_01
+NCR_Att_Des_02
+NCR_Att_Des_03
+NCR_Att_Des_04
+NCR_Att_Des_05
+NCR_Att_Des_06
+NCR_Att_Des_07
+NCR_Att_Des_08
+NCR_Att_Des_09
+NCR_Att_Des_010
+NCR_Att_Des_011
+NCR_Att_Des_012
+NCR_Att_Des_013
+NCR_Att_Des_014
+NCR_Att_Des_015

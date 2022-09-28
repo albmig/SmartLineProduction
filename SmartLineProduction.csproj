@@ -1,0 +1,1188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D0C7842B-7BE8-40FC-8C23-E75EFDE7F299}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SmartLineProduction</RootNamespace>
+    <AssemblyName>SmartLineProduction</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo_new_32.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.2.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>packages\Portable.BouncyCastle.1.8.2\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Csv, Version=2.0.62.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Csv.2.0.62\lib\net40\Csv.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v20.1.Drawing, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPdfViewer.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DotNetZip, Version=1.15.0.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>packages\DotNetZip.1.15.0\lib\net40\DotNetZip.dll</HintPath>
+    </Reference>
+    <Reference Include="EmbeddedMail, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\EmbeddedMail.0.1.1.11\lib\net40\EmbeddedMail.dll</HintPath>
+    </Reference>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="FluentFTP, Version=33.1.6.0, Culture=neutral, PublicKeyToken=f4af092b1d8df44f, processorArchitecture=MSIL">
+      <HintPath>packages\FluentFTP.33.1.6\lib\net45\FluentFTP.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DotNet.PlatformAbstractions, Version=2.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.DotNet.PlatformAbstractions.2.1.0\lib\net45\Microsoft.DotNet.PlatformAbstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyModel, Version=2.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.DependencyModel.2.1.0\lib\net451\Microsoft.Extensions.DependencyModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SdkApi.Core, Version=2.15.2634.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Zebra.Printer.SDK.2.15.2634\lib\net471\SdkApi.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SdkApi.Desktop, Version=2.15.2634.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Zebra.Printer.SDK.2.15.2634\lib\net471\SdkApi.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="SdkApi.Desktop.Usb, Version=2.15.2634.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Zebra.Printer.SDK.2.15.2634\lib\net471\SdkApi.Desktop.Usb.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpSnmpLib, Version=12.3.0.0, Culture=neutral, PublicKeyToken=4c00852d3788e005, processorArchitecture=MSIL">
+      <HintPath>packages\Lextm.SharpSnmpLib.12.3.0\lib\net471\SharpSnmpLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.License, Version=1.3.8.40, Culture=neutral, PublicKeyToken=b1144360237c8b3f, processorArchitecture=MSIL">
+      <HintPath>packages\FreeSpire.PDF.7.2.0\lib\net40\Spire.License.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Pdf, Version=7.2.6.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>packages\FreeSpire.PDF.7.2.0\lib\net40\Spire.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Chart.Base, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Chart.Windows, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Core.WinForms, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Data.WinForms, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Grid.Base, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Grid.Grouping.Windows, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Grid.Windows, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.GridCommon.WinForms, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Grouping.Base, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Linq.Base, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Pdf.Base, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.PdfViewer.Windows, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.PivotAnalysis.Base, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.PivotAnalysis.Windows, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.SfDataGrid.WinForms, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.SfInput.WinForms, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.SfListView.WinForms, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Shared.Base, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Shared.Windows, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.SpellChecker.Base, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Tools.Base, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Tools.Windows, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Specialized, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Collections.Specialized.4.3.0\lib\net46\System.Collections.Specialized.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.NameResolution, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Net.NameResolution.4.3.0\lib\net46\System.Net.NameResolution.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Sockets, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Net.Sockets.4.3.0\lib\net46\System.Net.Sockets.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.InteropServices.RuntimeInformation.4.0.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.XmlDocument, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Xml.XmlDocument.4.3.0\lib\net46\System.Xml.XmlDocument.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Card.cs" />
+    <Compile Include="ds_ClassicDS.cs">
+      <DependentUpon>ds_ClassicDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_ClassicDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_ClassicDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_Eventi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_Eventi.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_FwClienti.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_FwClienti.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_Ncr.cs">
+      <DependentUpon>ds_Ncr.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_Ncr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_Ncr.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_Prototipi.cs">
+      <DependentUpon>ds_Prototipi.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_Prototipi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_Prototipi.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_Programmazione.cs">
+      <DependentUpon>ds_Programmazione.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_Programmazione.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_Programmazione.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_Proj.cs">
+      <DependentUpon>ds_Proj.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_Proj.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_Proj.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_Quality.cs">
+      <DependentUpon>ds_Quality.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_Quality.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_Quality.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_QuerySN.cs">
+      <DependentUpon>ds_QuerySN.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_QuerySN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_QuerySN.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_RealTime.cs">
+      <DependentUpon>ds_RealTime.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_RealTime.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_RealTime.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_SafetyPointNFC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_SafetyPointNFC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_SL.cs">
+      <DependentUpon>ds_SL.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_SL.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_SL.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_SL_History.cs">
+      <DependentUpon>ds_SL_History.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_SL_History.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_SL_History.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_XSLV.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_XSLV.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GFunctions.cs" />
+    <Compile Include="GVar.cs" />
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Prova.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prova.designer.cs">
+      <DependentUpon>Prova.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash.designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Amm_AnalisiCosti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_Amm_AnalisiCosti.Designer.cs">
+      <DependentUpon>UC_Amm_AnalisiCosti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Avanzamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_Avanzamento.Designer.cs">
+      <DependentUpon>UC_Avanzamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_ConfirmTAG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_ConfirmTAG.Designer.cs">
+      <DependentUpon>UC_ConfirmTAG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_ViewConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_ViewConfig.designer.cs">
+      <DependentUpon>UC_ViewConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_AV_CollConf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_AV_CollConf.designer.cs">
+      <DependentUpon>UC_AV_CollConf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_AV_Montaggio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_AV_Montaggio.designer.cs">
+      <DependentUpon>UC_AV_Montaggio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_AV_Programmazione.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_AV_Programmazione.Designer.cs">
+      <DependentUpon>UC_AV_Programmazione.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_AV_Spedizioni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_AV_Spedizioni.designer.cs">
+      <DependentUpon>UC_AV_Spedizioni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_AV_Vendite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_AV_Vendite.designer.cs">
+      <DependentUpon>UC_AV_Vendite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_CodificaKit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_CodificaKit.Designer.cs">
+      <DependentUpon>UC_CodificaKit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_VerificaNFC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_VerificaNFC.Designer.cs">
+      <DependentUpon>UC_VerificaNFC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Fattibilita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_Fattibilita.Designer.cs">
+      <DependentUpon>UC_Fattibilita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_FW_P.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_FW_P.designer.cs">
+      <DependentUpon>UC_FW_P.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_FW_R.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_FW_R.designer.cs">
+      <DependentUpon>UC_FW_R.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_NCR_Search_Articoli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_NCR_Search_Articoli.designer.cs">
+      <DependentUpon>UC_NCR_Search_Articoli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_NCR_Search_Clienti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_NCR_Search_Clienti.designer.cs">
+      <DependentUpon>UC_NCR_Search_Clienti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_RealTime_Preview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_RealTime_Preview.designer.cs">
+      <DependentUpon>UC_RealTime_Preview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_RealTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_RealTime.Designer.cs">
+      <DependentUpon>UC_RealTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Eventi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_Eventi.Designer.cs">
+      <DependentUpon>UC_Eventi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_SyncroDS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_SyncroDS.designer.cs">
+      <DependentUpon>UC_SyncroDS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Prototipo_ID_Ricevitore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_Prototipo_ID_Ricevitore.designer.cs">
+      <DependentUpon>UC_Prototipo_ID_Ricevitore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Prototipo_ID_Palmare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_Prototipo_ID_Palmare.designer.cs">
+      <DependentUpon>UC_Prototipo_ID_Palmare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Programmazione_Progettazione.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_Programmazione_Progettazione.Designer.cs">
+      <DependentUpon>UC_Programmazione_Progettazione.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Reprint_Label.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_Reprint_Label.designer.cs">
+      <DependentUpon>UC_Reprint_Label.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_Login.designer.cs">
+      <DependentUpon>UC_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Ncr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_Ncr.Designer.cs">
+      <DependentUpon>UC_Ncr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_ClassicDS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_ClassicDS.Designer.cs">
+      <DependentUpon>UC_ClassicDS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_SchedeLavorazione.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_SchedeLavorazione.Designer.cs">
+      <DependentUpon>UC_SchedeLavorazione.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_PdfReader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_PdfReader.designer.cs">
+      <DependentUpon>UC_PdfReader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_SL_FirmwareClienti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_SL_FirmwareClienti.Designer.cs">
+      <DependentUpon>UC_SL_FirmwareClienti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_SL_History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_SL_History.Designer.cs">
+      <DependentUpon>UC_SL_History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Programmazione_Commessa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_Programmazione_Commessa.Designer.cs">
+      <DependentUpon>UC_Programmazione_Commessa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Programmazione_Template.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_Programmazione_Template.Designer.cs">
+      <DependentUpon>UC_Programmazione_Template.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Projects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_Projects.designer.cs">
+      <DependentUpon>UC_Projects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Identifica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_Identifica.designer.cs">
+      <DependentUpon>UC_Identifica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_ID_Palmare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_ID_Palmare.designer.cs">
+      <DependentUpon>UC_ID_Palmare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_ID_Ricevitore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_ID_Ricevitore.designer.cs">
+      <DependentUpon>UC_ID_Ricevitore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_ImageDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_ImageDevice.designer.cs">
+      <DependentUpon>UC_ImageDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Implosion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_Implosion.Designer.cs">
+      <DependentUpon>UC_Implosion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Pack_Commessa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_Pack_Commessa.Designer.cs">
+      <DependentUpon>UC_Pack_Commessa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_Password.Designer.cs">
+      <DependentUpon>UC_Password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Quality.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_Quality.designer.cs">
+      <DependentUpon>UC_Quality.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_ConfigurazioneOutput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_ConfigurazioneOutput.Designer.cs">
+      <DependentUpon>UC_ConfigurazioneOutput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_IndividuaLabel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_IndividuaLabel.Designer.cs">
+      <DependentUpon>UC_IndividuaLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Programmazione_Clona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_Programmazione_Clona.Designer.cs">
+      <DependentUpon>UC_Programmazione_Clona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Schede.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_Schede.Designer.cs">
+      <DependentUpon>UC_Schede.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_ReportProdotti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_ReportProdotti.Designer.cs">
+      <DependentUpon>UC_ReportProdotti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_AssegnaSNProduzione.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_AssegnaSNProduzione.Designer.cs">
+      <DependentUpon>UC_AssegnaSNProduzione.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Spedizione.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_Spedizione.Designer.cs">
+      <DependentUpon>UC_Spedizione.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Venduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_Venduto.Designer.cs">
+      <DependentUpon>UC_Venduto.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prova.resx">
+      <DependentUpon>Prova.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Amm_AnalisiCosti.resx">
+      <DependentUpon>UC_Amm_AnalisiCosti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Avanzamento.resx">
+      <DependentUpon>UC_Avanzamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_ConfirmTAG.resx">
+      <DependentUpon>UC_ConfirmTAG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_ViewConfig.resx">
+      <DependentUpon>UC_ViewConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_AV_CollConf.resx">
+      <DependentUpon>UC_AV_CollConf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_AV_Montaggio.resx">
+      <DependentUpon>UC_AV_Montaggio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_AV_Programmazione.resx">
+      <DependentUpon>UC_AV_Programmazione.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_AV_Spedizioni.resx">
+      <DependentUpon>UC_AV_Spedizioni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_AV_Vendite.resx">
+      <DependentUpon>UC_AV_Vendite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_CodificaKit.resx">
+      <DependentUpon>UC_CodificaKit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_VerificaNFC.resx">
+      <DependentUpon>UC_VerificaNFC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Fattibilita.resx">
+      <DependentUpon>UC_Fattibilita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_FW_P.resx">
+      <DependentUpon>UC_FW_P.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_FW_R.resx">
+      <DependentUpon>UC_FW_R.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_NCR_Search_Articoli.resx">
+      <DependentUpon>UC_NCR_Search_Articoli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_NCR_Search_Clienti.resx">
+      <DependentUpon>UC_NCR_Search_Clienti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_RealTime_Preview.resx">
+      <DependentUpon>UC_RealTime_Preview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_RealTime.resx">
+      <DependentUpon>UC_RealTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Eventi.resx">
+      <DependentUpon>UC_Eventi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_SyncroDS.resx">
+      <DependentUpon>UC_SyncroDS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Prototipo_ID_Ricevitore.resx">
+      <DependentUpon>UC_Prototipo_ID_Ricevitore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Prototipo_ID_Palmare.resx">
+      <DependentUpon>UC_Prototipo_ID_Palmare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Programmazione_Progettazione.resx">
+      <DependentUpon>UC_Programmazione_Progettazione.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Reprint_Label.resx">
+      <DependentUpon>UC_Reprint_Label.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Login.resx">
+      <DependentUpon>UC_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Ncr.resx">
+      <DependentUpon>UC_Ncr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_ClassicDS.resx">
+      <DependentUpon>UC_ClassicDS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_SchedeLavorazione.resx">
+      <DependentUpon>UC_SchedeLavorazione.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_PdfReader.resx">
+      <DependentUpon>UC_PdfReader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_SL_FirmwareClienti.resx">
+      <DependentUpon>UC_SL_FirmwareClienti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_SL_History.resx">
+      <DependentUpon>UC_SL_History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Programmazione_Commessa.resx">
+      <DependentUpon>UC_Programmazione_Commessa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Programmazione_Template.resx">
+      <DependentUpon>UC_Programmazione_Template.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Projects.resx">
+      <DependentUpon>UC_Projects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Identifica.resx">
+      <DependentUpon>UC_Identifica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_ID_Palmare.resx">
+      <DependentUpon>UC_ID_Palmare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_ID_Ricevitore.resx">
+      <DependentUpon>UC_ID_Ricevitore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_ImageDevice.resx">
+      <DependentUpon>UC_ImageDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Implosion.resx">
+      <DependentUpon>UC_Implosion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Pack_Commessa.resx">
+      <DependentUpon>UC_Pack_Commessa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Password.resx">
+      <DependentUpon>UC_Password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Quality.resx">
+      <DependentUpon>UC_Quality.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_ConfigurazioneOutput.resx">
+      <DependentUpon>UC_ConfigurazioneOutput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_IndividuaLabel.resx">
+      <DependentUpon>UC_IndividuaLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Programmazione_Clona.resx">
+      <DependentUpon>UC_Programmazione_Clona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Schede.resx">
+      <DependentUpon>UC_Schede.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_ReportProdotti.resx">
+      <DependentUpon>UC_ReportProdotti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_AssegnaSNProduzione.resx">
+      <DependentUpon>UC_AssegnaSNProduzione.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Spedizione.resx">
+      <DependentUpon>UC_Spedizione.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Venduto.resx">
+      <DependentUpon>UC_Venduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ds_ClassicDS.xsc">
+      <DependentUpon>ds_ClassicDS.xsd</DependentUpon>
+    </None>
+    <None Include="ds_ClassicDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_ClassicDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds_ClassicDS.xss">
+      <DependentUpon>ds_ClassicDS.xsd</DependentUpon>
+    </None>
+    <None Include="ds_Eventi.xsc">
+      <DependentUpon>ds_Eventi.xsd</DependentUpon>
+    </None>
+    <None Include="ds_Eventi.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_Eventi.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds_Eventi.xss">
+      <DependentUpon>ds_Eventi.xsd</DependentUpon>
+    </None>
+    <None Include="ds_FwClienti.xsc">
+      <DependentUpon>ds_FwClienti.xsd</DependentUpon>
+    </None>
+    <None Include="ds_FwClienti.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_FwClienti.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds_FwClienti.xss">
+      <DependentUpon>ds_FwClienti.xsd</DependentUpon>
+    </None>
+    <None Include="ds_Ncr.xsc">
+      <DependentUpon>ds_Ncr.xsd</DependentUpon>
+    </None>
+    <None Include="ds_Ncr.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_Ncr.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ds_Ncr.xss">
+      <DependentUpon>ds_Ncr.xsd</DependentUpon>
+    </None>
+    <None Include="ds_Prototipi.xsc">
+      <DependentUpon>ds_Prototipi.xsd</DependentUpon>
+    </None>
+    <None Include="ds_Prototipi.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_Prototipi.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds_Prototipi.xss">
+      <DependentUpon>ds_Prototipi.xsd</DependentUpon>
+    </None>
+    <None Include="ds_Programmazione.xsc">
+      <DependentUpon>ds_Programmazione.xsd</DependentUpon>
+    </None>
+    <None Include="ds_Programmazione.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_Programmazione.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds_Programmazione.xss">
+      <DependentUpon>ds_Programmazione.xsd</DependentUpon>
+    </None>
+    <None Include="ds_Proj.xsc">
+      <DependentUpon>ds_Proj.xsd</DependentUpon>
+    </None>
+    <None Include="ds_Proj.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_Proj.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds_Proj.xss">
+      <DependentUpon>ds_Proj.xsd</DependentUpon>
+    </None>
+    <None Include="ds_Quality.xsc">
+      <DependentUpon>ds_Quality.xsd</DependentUpon>
+    </None>
+    <None Include="ds_Quality.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_Quality.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds_Quality.xss">
+      <DependentUpon>ds_Quality.xsd</DependentUpon>
+    </None>
+    <None Include="ds_QuerySN.xsc">
+      <DependentUpon>ds_QuerySN.xsd</DependentUpon>
+    </None>
+    <None Include="ds_QuerySN.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_QuerySN.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds_QuerySN.xss">
+      <DependentUpon>ds_QuerySN.xsd</DependentUpon>
+    </None>
+    <None Include="ds_RealTime.xsc">
+      <DependentUpon>ds_RealTime.xsd</DependentUpon>
+    </None>
+    <None Include="ds_RealTime.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_RealTime.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds_RealTime.xss">
+      <DependentUpon>ds_RealTime.xsd</DependentUpon>
+    </None>
+    <None Include="ds_SafetyPointNFC.xsc">
+      <DependentUpon>ds_SafetyPointNFC.xsd</DependentUpon>
+    </None>
+    <None Include="ds_SafetyPointNFC.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_SafetyPointNFC.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds_SafetyPointNFC.xss">
+      <DependentUpon>ds_SafetyPointNFC.xsd</DependentUpon>
+    </None>
+    <None Include="ds_SL.xsc">
+      <DependentUpon>ds_SL.xsd</DependentUpon>
+    </None>
+    <None Include="ds_SL.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_SL.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds_SL.xss">
+      <DependentUpon>ds_SL.xsd</DependentUpon>
+    </None>
+    <None Include="ds_SL_History.xsc">
+      <DependentUpon>ds_SL_History.xsd</DependentUpon>
+    </None>
+    <None Include="ds_SL_History.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_SL_History.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds_SL_History.xss">
+      <DependentUpon>ds_SL_History.xsd</DependentUpon>
+    </None>
+    <None Include="ds_XSLV.xsc">
+      <DependentUpon>ds_XSLV.xsd</DependentUpon>
+    </None>
+    <None Include="ds_XSLV.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_XSLV.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds_XSLV.xss">
+      <DependentUpon>ds_XSLV.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\NO_XSLV.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Pdf_notpresent.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icone\Icona_AV_Doc_Enable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icone\Icona_AV_Exclamation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icone\Icona_AV_Montaggio_Disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icone\Icona_AV_Montaggio_Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icone\Icona_AV_Montaggio_Enable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icone\Icona_AV_Pack_Disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icone\Icona_AV_Pack_Enable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icone\Icona_AV_Programma_Disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icone\Icona_AV_Programma_Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icone\Icona_AV_Programma_Enable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icone\Icona_AV_Ship.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icone\Icona_AV_Ship_Disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icone\Icona_AV_Ship_Enable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icone\Icona_AV_Archivia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icone\Icona_AV_Doc_Disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icone\32x32\Icona_AV_Doc_Disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icone\32x32\Icona_AV_Doc_Enable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icone\32x32\Icona_AV_Exclamation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icone\32x32\Icona_AV_Montaggio_Disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icone\32x32\Icona_AV_Montaggio_Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icone\32x32\Icona_AV_Montaggio_Enable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icone\32x32\Icona_AV_Pack_Disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icone\32x32\Icona_AV_Pack_Enable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icone\32x32\Icona_AV_Programma_Disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icone\32x32\Icona_AV_Programma_Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icone\32x32\Icona_AV_Programma_Enable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icone\32x32\Icona_AV_Ship.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icone\32x32\Icona_AV_Ship_Disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icone\32x32\Icona_AV_Programma_Disable_nota.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icone\32x32\Icona_AV_Programma_Enable_nota.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BROLIB.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Lettori_Rfid.jpg" />
+    <None Include="Lettori_Scanner.jpg" />
+    <None Include="Icone 32x32\Icona_NotOK.png" />
+    <None Include="Icone 32x32\Icona_OK.png" />
+    <None Include="Icone 32x32\15x15_Icona_OK.png" />
+    <None Include="Icone 32x32\15x15_Icona_NotOK.png" />
+    <Content Include="Resources\Lettori_Rfid.jpg" />
+    <Content Include="Resources\Lettori_Scanner.jpg" />
+    <Content Include="ZebraCommands.txt" />
+    <None Include="Icone\gb.png" />
+    <None Include="Icone\it.png" />
+    <None Include="Icone\Mail-01.png" />
+    <None Include="Icone\NoImplosione.png" />
+    <None Include="Icone 32x32\Icona_AV_Doc_Disable.png" />
+    <None Include="Icone 32x32\Icona_AV_Doc_Disable_nota.png" />
+    <None Include="Icone 32x32\Icona_AV_Doc_Enable.png" />
+    <None Include="Icone 32x32\Icona_AV_Doc_Enable_nota.png" />
+    <None Include="Icone 32x32\Icona_AV_Montaggio_Disable.png" />
+    <None Include="Icone 32x32\Icona_AV_Montaggio_Disable_nota.png" />
+    <None Include="Icone 32x32\Icona_AV_Montaggio_Enable.png" />
+    <None Include="Icone 32x32\Icona_AV_Montaggio_Enable_nota.png" />
+    <None Include="Icone 32x32\Icona_AV_Montaggio_KO.png" />
+    <None Include="Icone 32x32\Icona_AV_Pack_Disable.png" />
+    <None Include="Icone 32x32\Icona_AV_Pack_Disable_nota.png" />
+    <None Include="Icone 32x32\Icona_AV_Pack_Enable.png" />
+    <None Include="Icone 32x32\Icona_AV_Pack_Enable_nota.png" />
+    <None Include="Icone 32x32\Icona_AV_Programma_Disable.png" />
+    <None Include="Icone 32x32\Icona_AV_Programma_Disable_nota.png" />
+    <None Include="Icone 32x32\Icona_AV_Programma_Enable.png" />
+    <None Include="Icone 32x32\Icona_AV_Programma_Enable_nota.png" />
+    <None Include="Icone 32x32\Icona_AV_Programma_KO.png" />
+    <None Include="Icone 32x32\Icona_AV_Ship_Disable.png" />
+    <None Include="Icone 32x32\Icona_AV_Ship_Disable_nota.png" />
+    <None Include="Icone 32x32\Icona_AV_Ship_Enable.png" />
+    <None Include="Icone 32x32\Icona_AV_Ship_Enable_nota.png" />
+    <None Include="Icone 32x32\Exit_16x.png" />
+    <None Include="Icone 32x32\Icona_AV_Programma_to_Montaggio.png" />
+    <None Include="Icone 32x32\Icona_AV_Abort.png" />
+    <None Include="Icone\PDF_Flags_UK.png" />
+    <None Include="Icone\PDF_Flags_IT.png" />
+    <None Include="Icone\ImageNotPresent.png" />
+    <None Include="Icone\Indicatore__1.png" />
+    <None Include="Icone\Indicatore__2.png" />
+    <None Include="Icone\Indicatore__3.png" />
+    <Content Include="elencomoduli.txt" />
+    <None Include="Icone\IconaCF_C.png" />
+    <None Include="Icone\IconaCF_F.png" />
+    <Content Include="Indicatore__1.png" />
+    <Content Include="Indicatore__2.png" />
+    <Content Include="Indicatore__3.png" />
+    <Content Include="logo_new_32.ico" />
+    <None Include="Resources\lente.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\EsplodiNull.png" />
+    <None Include="Resources\FindInFile_16x.png" />
+    <None Include="Resources\Execute_16x.png" />
+    <None Include="Resources\CloakOrHide_16x.png" />
+    <None Include="Resources\Hide_16x.png" />
+    <Content Include="Resources\Indicatore__1.png" />
+    <Content Include="Resources\Indicatore__2.png" />
+    <Content Include="Resources\Indicatore__3.png" />
+    <Content Include="Resources\logo_new_32.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\ServiceBusSubscriptionTrid_16x.png" />
+    <None Include="Resources\QuickFind_16x.png" />
+    <None Include="Resources\Refresh_16x.png" />
+    <None Include="Resources\Question_16x.png" />
+    <None Include="Resources\Visible_16x.png" />
+    <Content Include="tada.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Windows Notify.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Yamaha.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

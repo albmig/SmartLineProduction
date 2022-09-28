@@ -1,0 +1,1041 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ds_RealTime" targetNamespace="http://tempuri.org/ds_RealTime.xsd" xmlns:mstns="http://tempuri.org/ds_RealTime.xsd" xmlns="http://tempuri.org/ds_RealTime.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SISTEMATICA_FACTORYConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SISTEMATICA_FACTORYConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SmartLineProduction.Properties.Settings.GlobalReference.Default.SISTEMATICA_FACTORYConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FirmwareTableAdapter" GeneratorDataComponentClassName="FirmwareTableAdapter" Name="Firmware" UserDataComponentName="FirmwareTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select 'default' SW_Code, 'R' SW_TipoDevice, null SW_Versione, '0' SW_Obsolete_ver, null Id, 'default' SW_Descrizione, 'default' SW_Descrizione_EN
+
+UNION 
+SELECT        SW_Code, SW_TipoDevice, SW_Versione, SW_Obsolete_ver, Id, SW_Descrizione, SW_Descrizione_EN
+FROM            Firmware
+WHERE        (SW_TipoDevice = 'R') AND (SW_Obsolete_ver = 0)
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SW_Code" DataSetColumn="SW_Code" />
+              <Mapping SourceColumn="SW_TipoDevice" DataSetColumn="SW_TipoDevice" />
+              <Mapping SourceColumn="SW_Versione" DataSetColumn="SW_Versione" />
+              <Mapping SourceColumn="SW_Obsolete_ver" DataSetColumn="SW_Obsolete_ver" />
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="SW_Descrizione" DataSetColumn="SW_Descrizione" />
+              <Mapping SourceColumn="SW_Descrizione_EN" DataSetColumn="SW_Descrizione_EN" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="UI_Analog_MessagesTableAdapter" GeneratorDataComponentClassName="UI_Analog_MessagesTableAdapter" Name="UI_Analog_Messages" UserDataComponentName="UI_Analog_MessagesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionString (Settings)" DbObjectName="SISTEMATICA_FACTORY.dbo.UI_Analog_Messages" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[UI_Analog_Messages] ([UI_An_SW_Code], [UI_An_Progr], [UI_An_Group], [UI_An_Desc], [UI_An_DisplayOrder], [UI_An_DisplayOrder_GroupElements], [UI_An_Format], [UI_An_UM], [UI_An_Multiplier], [UI_An_Icon_Name], [UI_An_Min_Value], [UI_An_Max_Value], [UI_An_Ref_Dg_Alarm], [UI_An_Threshold_Des], [UI_An_Obsolete]) VALUES (@UI_An_SW_Code, @UI_An_Progr, @UI_An_Group, @UI_An_Desc, @UI_An_DisplayOrder, @UI_An_DisplayOrder_GroupElements, @UI_An_Format, @UI_An_UM, @UI_An_Multiplier, @UI_An_Icon_Name, @UI_An_Min_Value, @UI_An_Max_Value, @UI_An_Ref_Dg_Alarm, @UI_An_Threshold_Des, @UI_An_Obsolete)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_An_SW_Code" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_An_SW_Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@UI_An_Progr" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UI_An_Progr" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_An_Group" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_An_Group" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_An_Desc" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_An_Desc" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@UI_An_DisplayOrder" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UI_An_DisplayOrder" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@UI_An_DisplayOrder_GroupElements" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UI_An_DisplayOrder_GroupElements" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_An_Format" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_An_Format" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_An_UM" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_An_UM" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@UI_An_Multiplier" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="UI_An_Multiplier" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_An_Icon_Name" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_An_Icon_Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@UI_An_Min_Value" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="UI_An_Min_Value" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@UI_An_Max_Value" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="UI_An_Max_Value" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@UI_An_Ref_Dg_Alarm" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UI_An_Ref_Dg_Alarm" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_An_Threshold_Des" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_An_Threshold_Des" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@UI_An_Obsolete" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="UI_An_Obsolete" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT UI_An_PK, UI_An_SW_Code, UI_An_Progr, UI_An_Group, UI_An_Desc, UI_An_DisplayOrder, UI_An_DisplayOrder_GroupElements, UI_An_Format, UI_An_UM, UI_An_Multiplier, UI_An_Icon_Name, UI_An_Min_Value, UI_An_Max_Value, UI_An_Ref_Dg_Alarm, UI_An_Threshold_Des, UI_An_Obsolete FROM dbo.UI_Analog_Messages</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="UI_An_PK" DataSetColumn="UI_An_PK" />
+              <Mapping SourceColumn="UI_An_SW_Code" DataSetColumn="UI_An_SW_Code" />
+              <Mapping SourceColumn="UI_An_Progr" DataSetColumn="UI_An_Progr" />
+              <Mapping SourceColumn="UI_An_Group" DataSetColumn="UI_An_Group" />
+              <Mapping SourceColumn="UI_An_Desc" DataSetColumn="UI_An_Desc" />
+              <Mapping SourceColumn="UI_An_DisplayOrder" DataSetColumn="UI_An_DisplayOrder" />
+              <Mapping SourceColumn="UI_An_DisplayOrder_GroupElements" DataSetColumn="UI_An_DisplayOrder_GroupElements" />
+              <Mapping SourceColumn="UI_An_Format" DataSetColumn="UI_An_Format" />
+              <Mapping SourceColumn="UI_An_UM" DataSetColumn="UI_An_UM" />
+              <Mapping SourceColumn="UI_An_Multiplier" DataSetColumn="UI_An_Multiplier" />
+              <Mapping SourceColumn="UI_An_Icon_Name" DataSetColumn="UI_An_Icon_Name" />
+              <Mapping SourceColumn="UI_An_Min_Value" DataSetColumn="UI_An_Min_Value" />
+              <Mapping SourceColumn="UI_An_Max_Value" DataSetColumn="UI_An_Max_Value" />
+              <Mapping SourceColumn="UI_An_Ref_Dg_Alarm" DataSetColumn="UI_An_Ref_Dg_Alarm" />
+              <Mapping SourceColumn="UI_An_Threshold_Des" DataSetColumn="UI_An_Threshold_Des" />
+              <Mapping SourceColumn="UI_An_Obsolete" DataSetColumn="UI_An_Obsolete" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="UI_Digital_MessagesTableAdapter" GeneratorDataComponentClassName="UI_Digital_MessagesTableAdapter" Name="UI_Digital_Messages" UserDataComponentName="UI_Digital_MessagesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionString (Settings)" DbObjectName="SISTEMATICA_FACTORY.dbo.UI_Digital_Messages" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[UI_Digital_Messages] ([UI_Dg_SW_Code], [UI_Dg_Bit_00_Present], [UI_Dg_Bit_00_Desc_0], [UI_Dg_Bit_00_Desc_1], [UI_Dg_Bit_00_Icon_0], [UI_Dg_Bit_00_Icon_1], [UI_Dg_Bit_00_Ref_An_Value], [UI_Dg_Bit_01_Present], [UI_Dg_Bit_01_Desc_0], [UI_Dg_Bit_01_Desc_1], [UI_Dg_Bit_01_Icon_0], [UI_Dg_Bit_01_Icon_1], [UI_Dg_Bit_01_Ref_An_Value], [UI_Dg_Bit_02_Present], [UI_Dg_Bit_02_Desc_0], [UI_Dg_Bit_02_Desc_1], [UI_Dg_Bit_02_Icon_0], [UI_Dg_Bit_02_Icon_1], [UI_Dg_Bit_02_Ref_An_Value], [UI_Dg_Bit_03_Present], [UI_Dg_Bit_03_Desc_0], [UI_Dg_Bit_03_Desc_1], [UI_Dg_Bit_03_Icon_0], [UI_Dg_Bit_03_Icon_1], [UI_Dg_Bit_03_Ref_An_Value], [UI_Dg_Bit_04_Present], [UI_Dg_Bit_04_Desc_0], [UI_Dg_Bit_04_Desc_1], [UI_Dg_Bit_04_Icon_0], [UI_Dg_Bit_04_Icon_1], [UI_Dg_Bit_04_Ref_An_Value], [UI_Dg_Bit_05_Present], [UI_Dg_Bit_05_Desc_0], [UI_Dg_Bit_05_Desc_1], [UI_Dg_Bit_05_Icon_0], [UI_Dg_Bit_05_Icon_1], [UI_Dg_Bit_05_Ref_An_Value], [UI_Dg_Bit_06_Present], [UI_Dg_Bit_06_Desc_0], [UI_Dg_Bit_06_Desc_1], [UI_Dg_Bit_06_Icon_0], [UI_Dg_Bit_06_Icon_1], [UI_Dg_Bit_06_Ref_An_Value], [UI_Dg_Bit_07_Present], [UI_Dg_Bit_07_Desc_0], [UI_Dg_Bit_07_Desc_1], [UI_Dg_Bit_07_Icon_0], [UI_Dg_Bit_07_Icon_1], [UI_Dg_Bit_07_Ref_An_Value], [UI_Dg_Bit_08_Present], [UI_Dg_Bit_08_Desc_0], [UI_Dg_Bit_08_Desc_1], [UI_Dg_Bit_08_Icon_0], [UI_Dg_Bit_08_Icon_1], [UI_Dg_Bit_08_Ref_An_Value], [UI_Dg_Bit_09_Present], [UI_Dg_Bit_09_Desc_0], [UI_Dg_Bit_09_Desc_1], [UI_Dg_Bit_09_Icon_0], [UI_Dg_Bit_09_Icon_1], [UI_Dg_Bit_09_Ref_An_Value], [UI_Dg_Bit_10_Present], [UI_Dg_Bit_10_Desc_0], [UI_Dg_Bit_10_Desc_1], [UI_Dg_Bit_10_Icon_0], [UI_Dg_Bit_10_Icon_1], [UI_Dg_Bit_10_Ref_An_Value], [UI_Dg_Bit_11_Present], [UI_Dg_Bit_11_Desc_0], [UI_Dg_Bit_11_Desc_1], [UI_Dg_Bit_11_Icon_0], [UI_Dg_Bit_11_Icon_1], [UI_Dg_Bit_11_Ref_An_Value], [UI_Dg_Bit_12_Present], [UI_Dg_Bit_12_Desc_0], [UI_Dg_Bit_12_Desc_1], [UI_Dg_Bit_12_Icon_0], [UI_Dg_Bit_12_Icon_1], [UI_Dg_Bit_12_Ref_An_Value], [UI_Dg_Bit_13_Present], [UI_Dg_Bit_13_Desc_0], [UI_Dg_Bit_13_Desc_1], [UI_Dg_Bit_13_Icon_0], [UI_Dg_Bit_13_Icon_1], [UI_Dg_Bit_13_Ref_An_Value], [UI_Dg_Bit_14_Present], [UI_Dg_Bit_14_Desc_0], [UI_Dg_Bit_14_Desc_1], [UI_Dg_Bit_14_Icon_0], [UI_Dg_Bit_14_Icon_1], [UI_Dg_Bit_14_Ref_An_Value], [UI_Dg_Bit_15_Present], [UI_Dg_Bit_15_Desc_0], [UI_Dg_Bit_15_Desc_1], [UI_Dg_Bit_15_Icon_0], [UI_Dg_Bit_15_Icon_1], [UI_Dg_Bit_15_Ref_An_Value]) VALUES (@UI_Dg_SW_Code, @UI_Dg_Bit_00_Present, @UI_Dg_Bit_00_Desc_0, @UI_Dg_Bit_00_Desc_1, @UI_Dg_Bit_00_Icon_0, @UI_Dg_Bit_00_Icon_1, @UI_Dg_Bit_00_Ref_An_Value, @UI_Dg_Bit_01_Present, @UI_Dg_Bit_01_Desc_0, @UI_Dg_Bit_01_Desc_1, @UI_Dg_Bit_01_Icon_0, @UI_Dg_Bit_01_Icon_1, @UI_Dg_Bit_01_Ref_An_Value, @UI_Dg_Bit_02_Present, @UI_Dg_Bit_02_Desc_0, @UI_Dg_Bit_02_Desc_1, @UI_Dg_Bit_02_Icon_0, @UI_Dg_Bit_02_Icon_1, @UI_Dg_Bit_02_Ref_An_Value, @UI_Dg_Bit_03_Present, @UI_Dg_Bit_03_Desc_0, @UI_Dg_Bit_03_Desc_1, @UI_Dg_Bit_03_Icon_0, @UI_Dg_Bit_03_Icon_1, @UI_Dg_Bit_03_Ref_An_Value, @UI_Dg_Bit_04_Present, @UI_Dg_Bit_04_Desc_0, @UI_Dg_Bit_04_Desc_1, @UI_Dg_Bit_04_Icon_0, @UI_Dg_Bit_04_Icon_1, @UI_Dg_Bit_04_Ref_An_Value, @UI_Dg_Bit_05_Present, @UI_Dg_Bit_05_Desc_0, @UI_Dg_Bit_05_Desc_1, @UI_Dg_Bit_05_Icon_0, @UI_Dg_Bit_05_Icon_1, @UI_Dg_Bit_05_Ref_An_Value, @UI_Dg_Bit_06_Present, @UI_Dg_Bit_06_Desc_0, @UI_Dg_Bit_06_Desc_1, @UI_Dg_Bit_06_Icon_0, @UI_Dg_Bit_06_Icon_1, @UI_Dg_Bit_06_Ref_An_Value, @UI_Dg_Bit_07_Present, @UI_Dg_Bit_07_Desc_0, @UI_Dg_Bit_07_Desc_1, @UI_Dg_Bit_07_Icon_0, @UI_Dg_Bit_07_Icon_1, @UI_Dg_Bit_07_Ref_An_Value, @UI_Dg_Bit_08_Present, @UI_Dg_Bit_08_Desc_0, @UI_Dg_Bit_08_Desc_1, @UI_Dg_Bit_08_Icon_0, @UI_Dg_Bit_08_Icon_1, @UI_Dg_Bit_08_Ref_An_Value, @UI_Dg_Bit_09_Present, @UI_Dg_Bit_09_Desc_0, @UI_Dg_Bit_09_Desc_1, @UI_Dg_Bit_09_Icon_0, @UI_Dg_Bit_09_Icon_1, @UI_Dg_Bit_09_Ref_An_Value, @UI_Dg_Bit_10_Present, @UI_Dg_Bit_10_Desc_0, @UI_Dg_Bit_10_Desc_1, @UI_Dg_Bit_10_Icon_0, @UI_Dg_Bit_10_Icon_1, @UI_Dg_Bit_10_Ref_An_Value, @UI_Dg_Bit_11_Present, @UI_Dg_Bit_11_Desc_0, @UI_Dg_Bit_11_Desc_1, @UI_Dg_Bit_11_Icon_0, @UI_Dg_Bit_11_Icon_1, @UI_Dg_Bit_11_Ref_An_Value, @UI_Dg_Bit_12_Present, @UI_Dg_Bit_12_Desc_0, @UI_Dg_Bit_12_Desc_1, @UI_Dg_Bit_12_Icon_0, @UI_Dg_Bit_12_Icon_1, @UI_Dg_Bit_12_Ref_An_Value, @UI_Dg_Bit_13_Present, @UI_Dg_Bit_13_Desc_0, @UI_Dg_Bit_13_Desc_1, @UI_Dg_Bit_13_Icon_0, @UI_Dg_Bit_13_Icon_1, @UI_Dg_Bit_13_Ref_An_Value, @UI_Dg_Bit_14_Present, @UI_Dg_Bit_14_Desc_0, @UI_Dg_Bit_14_Desc_1, @UI_Dg_Bit_14_Icon_0, @UI_Dg_Bit_14_Icon_1, @UI_Dg_Bit_14_Ref_An_Value, @UI_Dg_Bit_15_Present, @UI_Dg_Bit_15_Desc_0, @UI_Dg_Bit_15_Desc_1, @UI_Dg_Bit_15_Icon_0, @UI_Dg_Bit_15_Icon_1, @UI_Dg_Bit_15_Ref_An_Value)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_SW_Code" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_SW_Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@UI_Dg_Bit_00_Present" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_00_Present" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_00_Desc_0" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_00_Desc_0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_00_Desc_1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_00_Desc_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_00_Icon_0" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_00_Icon_0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_00_Icon_1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_00_Icon_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@UI_Dg_Bit_00_Ref_An_Value" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_00_Ref_An_Value" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@UI_Dg_Bit_01_Present" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_01_Present" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_01_Desc_0" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_01_Desc_0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_01_Desc_1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_01_Desc_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_01_Icon_0" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_01_Icon_0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_01_Icon_1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_01_Icon_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@UI_Dg_Bit_01_Ref_An_Value" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_01_Ref_An_Value" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@UI_Dg_Bit_02_Present" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_02_Present" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_02_Desc_0" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_02_Desc_0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_02_Desc_1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_02_Desc_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_02_Icon_0" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_02_Icon_0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_02_Icon_1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_02_Icon_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@UI_Dg_Bit_02_Ref_An_Value" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_02_Ref_An_Value" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@UI_Dg_Bit_03_Present" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_03_Present" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_03_Desc_0" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_03_Desc_0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_03_Desc_1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_03_Desc_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_03_Icon_0" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_03_Icon_0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_03_Icon_1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_03_Icon_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@UI_Dg_Bit_03_Ref_An_Value" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_03_Ref_An_Value" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@UI_Dg_Bit_04_Present" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_04_Present" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_04_Desc_0" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_04_Desc_0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_04_Desc_1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_04_Desc_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_04_Icon_0" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_04_Icon_0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_04_Icon_1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_04_Icon_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@UI_Dg_Bit_04_Ref_An_Value" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_04_Ref_An_Value" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@UI_Dg_Bit_05_Present" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_05_Present" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_05_Desc_0" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_05_Desc_0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_05_Desc_1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_05_Desc_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_05_Icon_0" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_05_Icon_0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_05_Icon_1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_05_Icon_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@UI_Dg_Bit_05_Ref_An_Value" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_05_Ref_An_Value" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@UI_Dg_Bit_06_Present" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_06_Present" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_06_Desc_0" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_06_Desc_0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_06_Desc_1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_06_Desc_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_06_Icon_0" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_06_Icon_0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_06_Icon_1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_06_Icon_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@UI_Dg_Bit_06_Ref_An_Value" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_06_Ref_An_Value" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@UI_Dg_Bit_07_Present" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_07_Present" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_07_Desc_0" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_07_Desc_0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_07_Desc_1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_07_Desc_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_07_Icon_0" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_07_Icon_0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_07_Icon_1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_07_Icon_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@UI_Dg_Bit_07_Ref_An_Value" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_07_Ref_An_Value" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@UI_Dg_Bit_08_Present" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_08_Present" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_08_Desc_0" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_08_Desc_0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_08_Desc_1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_08_Desc_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_08_Icon_0" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_08_Icon_0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_08_Icon_1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_08_Icon_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@UI_Dg_Bit_08_Ref_An_Value" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_08_Ref_An_Value" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@UI_Dg_Bit_09_Present" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_09_Present" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_09_Desc_0" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_09_Desc_0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_09_Desc_1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_09_Desc_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_09_Icon_0" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_09_Icon_0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_09_Icon_1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_09_Icon_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@UI_Dg_Bit_09_Ref_An_Value" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_09_Ref_An_Value" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@UI_Dg_Bit_10_Present" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_10_Present" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_10_Desc_0" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_10_Desc_0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_10_Desc_1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_10_Desc_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_10_Icon_0" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_10_Icon_0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_10_Icon_1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_10_Icon_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@UI_Dg_Bit_10_Ref_An_Value" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_10_Ref_An_Value" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@UI_Dg_Bit_11_Present" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_11_Present" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_11_Desc_0" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_11_Desc_0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_11_Desc_1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_11_Desc_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_11_Icon_0" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_11_Icon_0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_11_Icon_1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_11_Icon_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@UI_Dg_Bit_11_Ref_An_Value" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_11_Ref_An_Value" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@UI_Dg_Bit_12_Present" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_12_Present" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_12_Desc_0" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_12_Desc_0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_12_Desc_1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_12_Desc_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_12_Icon_0" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_12_Icon_0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_12_Icon_1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_12_Icon_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@UI_Dg_Bit_12_Ref_An_Value" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_12_Ref_An_Value" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@UI_Dg_Bit_13_Present" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_13_Present" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_13_Desc_0" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_13_Desc_0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_13_Desc_1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_13_Desc_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_13_Icon_0" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_13_Icon_0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_13_Icon_1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_13_Icon_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@UI_Dg_Bit_13_Ref_An_Value" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_13_Ref_An_Value" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@UI_Dg_Bit_14_Present" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_14_Present" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_14_Desc_0" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_14_Desc_0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_14_Desc_1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_14_Desc_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_14_Icon_0" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_14_Icon_0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_14_Icon_1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_14_Icon_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@UI_Dg_Bit_14_Ref_An_Value" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_14_Ref_An_Value" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@UI_Dg_Bit_15_Present" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_15_Present" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_15_Desc_0" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_15_Desc_0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_15_Desc_1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_15_Desc_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_15_Icon_0" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_15_Icon_0" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_Dg_Bit_15_Icon_1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_15_Icon_1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@UI_Dg_Bit_15_Ref_An_Value" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UI_Dg_Bit_15_Ref_An_Value" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT UI_Dg_PK, UI_Dg_SW_Code, UI_Dg_Bit_00_Present, UI_Dg_Bit_00_Desc_0, UI_Dg_Bit_00_Desc_1, UI_Dg_Bit_00_Icon_0, UI_Dg_Bit_00_Icon_1, UI_Dg_Bit_00_Ref_An_Value, UI_Dg_Bit_01_Present, UI_Dg_Bit_01_Desc_0, UI_Dg_Bit_01_Desc_1, UI_Dg_Bit_01_Icon_0, UI_Dg_Bit_01_Icon_1, UI_Dg_Bit_01_Ref_An_Value, UI_Dg_Bit_02_Present, UI_Dg_Bit_02_Desc_0, UI_Dg_Bit_02_Desc_1, UI_Dg_Bit_02_Icon_0, UI_Dg_Bit_02_Icon_1, UI_Dg_Bit_02_Ref_An_Value, UI_Dg_Bit_03_Present, UI_Dg_Bit_03_Desc_0, UI_Dg_Bit_03_Desc_1, UI_Dg_Bit_03_Icon_0, UI_Dg_Bit_03_Icon_1, UI_Dg_Bit_03_Ref_An_Value, UI_Dg_Bit_04_Present, UI_Dg_Bit_04_Desc_0, UI_Dg_Bit_04_Desc_1, UI_Dg_Bit_04_Icon_0, UI_Dg_Bit_04_Icon_1, UI_Dg_Bit_04_Ref_An_Value, UI_Dg_Bit_05_Present, UI_Dg_Bit_05_Desc_0, UI_Dg_Bit_05_Desc_1, UI_Dg_Bit_05_Icon_0, UI_Dg_Bit_05_Icon_1, UI_Dg_Bit_05_Ref_An_Value, UI_Dg_Bit_06_Present, UI_Dg_Bit_06_Desc_0, UI_Dg_Bit_06_Desc_1, UI_Dg_Bit_06_Icon_0, UI_Dg_Bit_06_Icon_1, UI_Dg_Bit_06_Ref_An_Value, UI_Dg_Bit_07_Present, UI_Dg_Bit_07_Desc_0, UI_Dg_Bit_07_Desc_1, UI_Dg_Bit_07_Icon_0, UI_Dg_Bit_07_Icon_1, UI_Dg_Bit_07_Ref_An_Value, UI_Dg_Bit_08_Present, UI_Dg_Bit_08_Desc_0, UI_Dg_Bit_08_Desc_1, UI_Dg_Bit_08_Icon_0, UI_Dg_Bit_08_Icon_1, UI_Dg_Bit_08_Ref_An_Value, UI_Dg_Bit_09_Present, UI_Dg_Bit_09_Desc_0, UI_Dg_Bit_09_Desc_1, UI_Dg_Bit_09_Icon_0, UI_Dg_Bit_09_Icon_1, UI_Dg_Bit_09_Ref_An_Value, UI_Dg_Bit_10_Present, UI_Dg_Bit_10_Desc_0, UI_Dg_Bit_10_Desc_1, UI_Dg_Bit_10_Icon_0, UI_Dg_Bit_10_Icon_1, UI_Dg_Bit_10_Ref_An_Value, UI_Dg_Bit_11_Present, UI_Dg_Bit_11_Desc_0, UI_Dg_Bit_11_Desc_1, UI_Dg_Bit_11_Icon_0, UI_Dg_Bit_11_Icon_1, UI_Dg_Bit_11_Ref_An_Value, UI_Dg_Bit_12_Present, UI_Dg_Bit_12_Desc_0, UI_Dg_Bit_12_Desc_1, UI_Dg_Bit_12_Icon_0, UI_Dg_Bit_12_Icon_1, UI_Dg_Bit_12_Ref_An_Value, UI_Dg_Bit_13_Present, UI_Dg_Bit_13_Desc_0, UI_Dg_Bit_13_Desc_1, UI_Dg_Bit_13_Icon_0, UI_Dg_Bit_13_Icon_1, UI_Dg_Bit_13_Ref_An_Value, UI_Dg_Bit_14_Present, UI_Dg_Bit_14_Desc_0, UI_Dg_Bit_14_Desc_1, UI_Dg_Bit_14_Icon_0, UI_Dg_Bit_14_Icon_1, UI_Dg_Bit_14_Ref_An_Value, UI_Dg_Bit_15_Present, UI_Dg_Bit_15_Desc_0, UI_Dg_Bit_15_Desc_1, UI_Dg_Bit_15_Icon_0, UI_Dg_Bit_15_Icon_1, UI_Dg_Bit_15_Ref_An_Value FROM dbo.UI_Digital_Messages</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="UI_Dg_PK" DataSetColumn="UI_Dg_PK" />
+              <Mapping SourceColumn="UI_Dg_SW_Code" DataSetColumn="UI_Dg_SW_Code" />
+              <Mapping SourceColumn="UI_Dg_Bit_00_Present" DataSetColumn="UI_Dg_Bit_00_Present" />
+              <Mapping SourceColumn="UI_Dg_Bit_00_Desc_0" DataSetColumn="UI_Dg_Bit_00_Desc_0" />
+              <Mapping SourceColumn="UI_Dg_Bit_00_Desc_1" DataSetColumn="UI_Dg_Bit_00_Desc_1" />
+              <Mapping SourceColumn="UI_Dg_Bit_00_Icon_0" DataSetColumn="UI_Dg_Bit_00_Icon_0" />
+              <Mapping SourceColumn="UI_Dg_Bit_00_Icon_1" DataSetColumn="UI_Dg_Bit_00_Icon_1" />
+              <Mapping SourceColumn="UI_Dg_Bit_00_Ref_An_Value" DataSetColumn="UI_Dg_Bit_00_Ref_An_Value" />
+              <Mapping SourceColumn="UI_Dg_Bit_01_Present" DataSetColumn="UI_Dg_Bit_01_Present" />
+              <Mapping SourceColumn="UI_Dg_Bit_01_Desc_0" DataSetColumn="UI_Dg_Bit_01_Desc_0" />
+              <Mapping SourceColumn="UI_Dg_Bit_01_Desc_1" DataSetColumn="UI_Dg_Bit_01_Desc_1" />
+              <Mapping SourceColumn="UI_Dg_Bit_01_Icon_0" DataSetColumn="UI_Dg_Bit_01_Icon_0" />
+              <Mapping SourceColumn="UI_Dg_Bit_01_Icon_1" DataSetColumn="UI_Dg_Bit_01_Icon_1" />
+              <Mapping SourceColumn="UI_Dg_Bit_01_Ref_An_Value" DataSetColumn="UI_Dg_Bit_01_Ref_An_Value" />
+              <Mapping SourceColumn="UI_Dg_Bit_02_Present" DataSetColumn="UI_Dg_Bit_02_Present" />
+              <Mapping SourceColumn="UI_Dg_Bit_02_Desc_0" DataSetColumn="UI_Dg_Bit_02_Desc_0" />
+              <Mapping SourceColumn="UI_Dg_Bit_02_Desc_1" DataSetColumn="UI_Dg_Bit_02_Desc_1" />
+              <Mapping SourceColumn="UI_Dg_Bit_02_Icon_0" DataSetColumn="UI_Dg_Bit_02_Icon_0" />
+              <Mapping SourceColumn="UI_Dg_Bit_02_Icon_1" DataSetColumn="UI_Dg_Bit_02_Icon_1" />
+              <Mapping SourceColumn="UI_Dg_Bit_02_Ref_An_Value" DataSetColumn="UI_Dg_Bit_02_Ref_An_Value" />
+              <Mapping SourceColumn="UI_Dg_Bit_03_Present" DataSetColumn="UI_Dg_Bit_03_Present" />
+              <Mapping SourceColumn="UI_Dg_Bit_03_Desc_0" DataSetColumn="UI_Dg_Bit_03_Desc_0" />
+              <Mapping SourceColumn="UI_Dg_Bit_03_Desc_1" DataSetColumn="UI_Dg_Bit_03_Desc_1" />
+              <Mapping SourceColumn="UI_Dg_Bit_03_Icon_0" DataSetColumn="UI_Dg_Bit_03_Icon_0" />
+              <Mapping SourceColumn="UI_Dg_Bit_03_Icon_1" DataSetColumn="UI_Dg_Bit_03_Icon_1" />
+              <Mapping SourceColumn="UI_Dg_Bit_03_Ref_An_Value" DataSetColumn="UI_Dg_Bit_03_Ref_An_Value" />
+              <Mapping SourceColumn="UI_Dg_Bit_04_Present" DataSetColumn="UI_Dg_Bit_04_Present" />
+              <Mapping SourceColumn="UI_Dg_Bit_04_Desc_0" DataSetColumn="UI_Dg_Bit_04_Desc_0" />
+              <Mapping SourceColumn="UI_Dg_Bit_04_Desc_1" DataSetColumn="UI_Dg_Bit_04_Desc_1" />
+              <Mapping SourceColumn="UI_Dg_Bit_04_Icon_0" DataSetColumn="UI_Dg_Bit_04_Icon_0" />
+              <Mapping SourceColumn="UI_Dg_Bit_04_Icon_1" DataSetColumn="UI_Dg_Bit_04_Icon_1" />
+              <Mapping SourceColumn="UI_Dg_Bit_04_Ref_An_Value" DataSetColumn="UI_Dg_Bit_04_Ref_An_Value" />
+              <Mapping SourceColumn="UI_Dg_Bit_05_Present" DataSetColumn="UI_Dg_Bit_05_Present" />
+              <Mapping SourceColumn="UI_Dg_Bit_05_Desc_0" DataSetColumn="UI_Dg_Bit_05_Desc_0" />
+              <Mapping SourceColumn="UI_Dg_Bit_05_Desc_1" DataSetColumn="UI_Dg_Bit_05_Desc_1" />
+              <Mapping SourceColumn="UI_Dg_Bit_05_Icon_0" DataSetColumn="UI_Dg_Bit_05_Icon_0" />
+              <Mapping SourceColumn="UI_Dg_Bit_05_Icon_1" DataSetColumn="UI_Dg_Bit_05_Icon_1" />
+              <Mapping SourceColumn="UI_Dg_Bit_05_Ref_An_Value" DataSetColumn="UI_Dg_Bit_05_Ref_An_Value" />
+              <Mapping SourceColumn="UI_Dg_Bit_06_Present" DataSetColumn="UI_Dg_Bit_06_Present" />
+              <Mapping SourceColumn="UI_Dg_Bit_06_Desc_0" DataSetColumn="UI_Dg_Bit_06_Desc_0" />
+              <Mapping SourceColumn="UI_Dg_Bit_06_Desc_1" DataSetColumn="UI_Dg_Bit_06_Desc_1" />
+              <Mapping SourceColumn="UI_Dg_Bit_06_Icon_0" DataSetColumn="UI_Dg_Bit_06_Icon_0" />
+              <Mapping SourceColumn="UI_Dg_Bit_06_Icon_1" DataSetColumn="UI_Dg_Bit_06_Icon_1" />
+              <Mapping SourceColumn="UI_Dg_Bit_06_Ref_An_Value" DataSetColumn="UI_Dg_Bit_06_Ref_An_Value" />
+              <Mapping SourceColumn="UI_Dg_Bit_07_Present" DataSetColumn="UI_Dg_Bit_07_Present" />
+              <Mapping SourceColumn="UI_Dg_Bit_07_Desc_0" DataSetColumn="UI_Dg_Bit_07_Desc_0" />
+              <Mapping SourceColumn="UI_Dg_Bit_07_Desc_1" DataSetColumn="UI_Dg_Bit_07_Desc_1" />
+              <Mapping SourceColumn="UI_Dg_Bit_07_Icon_0" DataSetColumn="UI_Dg_Bit_07_Icon_0" />
+              <Mapping SourceColumn="UI_Dg_Bit_07_Icon_1" DataSetColumn="UI_Dg_Bit_07_Icon_1" />
+              <Mapping SourceColumn="UI_Dg_Bit_07_Ref_An_Value" DataSetColumn="UI_Dg_Bit_07_Ref_An_Value" />
+              <Mapping SourceColumn="UI_Dg_Bit_08_Present" DataSetColumn="UI_Dg_Bit_08_Present" />
+              <Mapping SourceColumn="UI_Dg_Bit_08_Desc_0" DataSetColumn="UI_Dg_Bit_08_Desc_0" />
+              <Mapping SourceColumn="UI_Dg_Bit_08_Desc_1" DataSetColumn="UI_Dg_Bit_08_Desc_1" />
+              <Mapping SourceColumn="UI_Dg_Bit_08_Icon_0" DataSetColumn="UI_Dg_Bit_08_Icon_0" />
+              <Mapping SourceColumn="UI_Dg_Bit_08_Icon_1" DataSetColumn="UI_Dg_Bit_08_Icon_1" />
+              <Mapping SourceColumn="UI_Dg_Bit_08_Ref_An_Value" DataSetColumn="UI_Dg_Bit_08_Ref_An_Value" />
+              <Mapping SourceColumn="UI_Dg_Bit_09_Present" DataSetColumn="UI_Dg_Bit_09_Present" />
+              <Mapping SourceColumn="UI_Dg_Bit_09_Desc_0" DataSetColumn="UI_Dg_Bit_09_Desc_0" />
+              <Mapping SourceColumn="UI_Dg_Bit_09_Desc_1" DataSetColumn="UI_Dg_Bit_09_Desc_1" />
+              <Mapping SourceColumn="UI_Dg_Bit_09_Icon_0" DataSetColumn="UI_Dg_Bit_09_Icon_0" />
+              <Mapping SourceColumn="UI_Dg_Bit_09_Icon_1" DataSetColumn="UI_Dg_Bit_09_Icon_1" />
+              <Mapping SourceColumn="UI_Dg_Bit_09_Ref_An_Value" DataSetColumn="UI_Dg_Bit_09_Ref_An_Value" />
+              <Mapping SourceColumn="UI_Dg_Bit_10_Present" DataSetColumn="UI_Dg_Bit_10_Present" />
+              <Mapping SourceColumn="UI_Dg_Bit_10_Desc_0" DataSetColumn="UI_Dg_Bit_10_Desc_0" />
+              <Mapping SourceColumn="UI_Dg_Bit_10_Desc_1" DataSetColumn="UI_Dg_Bit_10_Desc_1" />
+              <Mapping SourceColumn="UI_Dg_Bit_10_Icon_0" DataSetColumn="UI_Dg_Bit_10_Icon_0" />
+              <Mapping SourceColumn="UI_Dg_Bit_10_Icon_1" DataSetColumn="UI_Dg_Bit_10_Icon_1" />
+              <Mapping SourceColumn="UI_Dg_Bit_10_Ref_An_Value" DataSetColumn="UI_Dg_Bit_10_Ref_An_Value" />
+              <Mapping SourceColumn="UI_Dg_Bit_11_Present" DataSetColumn="UI_Dg_Bit_11_Present" />
+              <Mapping SourceColumn="UI_Dg_Bit_11_Desc_0" DataSetColumn="UI_Dg_Bit_11_Desc_0" />
+              <Mapping SourceColumn="UI_Dg_Bit_11_Desc_1" DataSetColumn="UI_Dg_Bit_11_Desc_1" />
+              <Mapping SourceColumn="UI_Dg_Bit_11_Icon_0" DataSetColumn="UI_Dg_Bit_11_Icon_0" />
+              <Mapping SourceColumn="UI_Dg_Bit_11_Icon_1" DataSetColumn="UI_Dg_Bit_11_Icon_1" />
+              <Mapping SourceColumn="UI_Dg_Bit_11_Ref_An_Value" DataSetColumn="UI_Dg_Bit_11_Ref_An_Value" />
+              <Mapping SourceColumn="UI_Dg_Bit_12_Present" DataSetColumn="UI_Dg_Bit_12_Present" />
+              <Mapping SourceColumn="UI_Dg_Bit_12_Desc_0" DataSetColumn="UI_Dg_Bit_12_Desc_0" />
+              <Mapping SourceColumn="UI_Dg_Bit_12_Desc_1" DataSetColumn="UI_Dg_Bit_12_Desc_1" />
+              <Mapping SourceColumn="UI_Dg_Bit_12_Icon_0" DataSetColumn="UI_Dg_Bit_12_Icon_0" />
+              <Mapping SourceColumn="UI_Dg_Bit_12_Icon_1" DataSetColumn="UI_Dg_Bit_12_Icon_1" />
+              <Mapping SourceColumn="UI_Dg_Bit_12_Ref_An_Value" DataSetColumn="UI_Dg_Bit_12_Ref_An_Value" />
+              <Mapping SourceColumn="UI_Dg_Bit_13_Present" DataSetColumn="UI_Dg_Bit_13_Present" />
+              <Mapping SourceColumn="UI_Dg_Bit_13_Desc_0" DataSetColumn="UI_Dg_Bit_13_Desc_0" />
+              <Mapping SourceColumn="UI_Dg_Bit_13_Desc_1" DataSetColumn="UI_Dg_Bit_13_Desc_1" />
+              <Mapping SourceColumn="UI_Dg_Bit_13_Icon_0" DataSetColumn="UI_Dg_Bit_13_Icon_0" />
+              <Mapping SourceColumn="UI_Dg_Bit_13_Icon_1" DataSetColumn="UI_Dg_Bit_13_Icon_1" />
+              <Mapping SourceColumn="UI_Dg_Bit_13_Ref_An_Value" DataSetColumn="UI_Dg_Bit_13_Ref_An_Value" />
+              <Mapping SourceColumn="UI_Dg_Bit_14_Present" DataSetColumn="UI_Dg_Bit_14_Present" />
+              <Mapping SourceColumn="UI_Dg_Bit_14_Desc_0" DataSetColumn="UI_Dg_Bit_14_Desc_0" />
+              <Mapping SourceColumn="UI_Dg_Bit_14_Desc_1" DataSetColumn="UI_Dg_Bit_14_Desc_1" />
+              <Mapping SourceColumn="UI_Dg_Bit_14_Icon_0" DataSetColumn="UI_Dg_Bit_14_Icon_0" />
+              <Mapping SourceColumn="UI_Dg_Bit_14_Icon_1" DataSetColumn="UI_Dg_Bit_14_Icon_1" />
+              <Mapping SourceColumn="UI_Dg_Bit_14_Ref_An_Value" DataSetColumn="UI_Dg_Bit_14_Ref_An_Value" />
+              <Mapping SourceColumn="UI_Dg_Bit_15_Present" DataSetColumn="UI_Dg_Bit_15_Present" />
+              <Mapping SourceColumn="UI_Dg_Bit_15_Desc_0" DataSetColumn="UI_Dg_Bit_15_Desc_0" />
+              <Mapping SourceColumn="UI_Dg_Bit_15_Desc_1" DataSetColumn="UI_Dg_Bit_15_Desc_1" />
+              <Mapping SourceColumn="UI_Dg_Bit_15_Icon_0" DataSetColumn="UI_Dg_Bit_15_Icon_0" />
+              <Mapping SourceColumn="UI_Dg_Bit_15_Icon_1" DataSetColumn="UI_Dg_Bit_15_Icon_1" />
+              <Mapping SourceColumn="UI_Dg_Bit_15_Ref_An_Value" DataSetColumn="UI_Dg_Bit_15_Ref_An_Value" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="UI_EventLog_MessagesTableAdapter" GeneratorDataComponentClassName="UI_EventLog_MessagesTableAdapter" Name="UI_EventLog_Messages" UserDataComponentName="UI_EventLog_MessagesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionString (Settings)" DbObjectName="SISTEMATICA_FACTORY.dbo.UI_EventLog_Messages" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [UI_EventLog_Messages] ([UI_EL_SW_Code], [UI_EL_EventNumber], [UI_EL_Channel], [UI_EL_InputType], [UI_EL_UM], [UI_EL_Format], [UI_EL_Multiplier], [UI_EL_Desc_it], [UI_EL_Desc_en], [UI_EL_ShowValOrDes], [UI_EL_Obsolete], [UI_EL_Totalizza]) VALUES (@UI_EL_SW_Code, @UI_EL_EventNumber, @UI_EL_Channel, @UI_EL_InputType, @UI_EL_UM, @UI_EL_Format, @UI_EL_Multiplier, @UI_EL_Desc_it, @UI_EL_Desc_en, @UI_EL_ShowValOrDes, @UI_EL_Obsolete, @UI_EL_Totalizza)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_EL_SW_Code" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_EL_SW_Code" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@UI_EL_EventNumber" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UI_EL_EventNumber" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@UI_EL_Channel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UI_EL_Channel" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@UI_EL_InputType" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="UI_EL_InputType" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_EL_UM" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_EL_UM" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_EL_Format" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_EL_Format" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@UI_EL_Multiplier" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="UI_EL_Multiplier" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_EL_Desc_it" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_EL_Desc_it" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UI_EL_Desc_en" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UI_EL_Desc_en" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@UI_EL_ShowValOrDes" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="UI_EL_ShowValOrDes" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@UI_EL_Obsolete" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="UI_EL_Obsolete" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@UI_EL_Totalizza" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="UI_EL_Totalizza" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        UI_EL_PK, UI_EL_SW_Code, UI_EL_EventNumber, UI_EL_Channel, UI_EL_InputType, UI_EL_UM, UI_EL_Format, UI_EL_Multiplier, UI_EL_Desc_it, UI_EL_Desc_en, UI_EL_ShowValOrDes, UI_EL_Obsolete, 
+                         UI_EL_Totalizza
+FROM            UI_EventLog_Messages</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="UI_EL_PK" DataSetColumn="UI_EL_PK" />
+              <Mapping SourceColumn="UI_EL_SW_Code" DataSetColumn="UI_EL_SW_Code" />
+              <Mapping SourceColumn="UI_EL_EventNumber" DataSetColumn="UI_EL_EventNumber" />
+              <Mapping SourceColumn="UI_EL_Channel" DataSetColumn="UI_EL_Channel" />
+              <Mapping SourceColumn="UI_EL_InputType" DataSetColumn="UI_EL_InputType" />
+              <Mapping SourceColumn="UI_EL_UM" DataSetColumn="UI_EL_UM" />
+              <Mapping SourceColumn="UI_EL_Format" DataSetColumn="UI_EL_Format" />
+              <Mapping SourceColumn="UI_EL_Multiplier" DataSetColumn="UI_EL_Multiplier" />
+              <Mapping SourceColumn="UI_EL_Desc_it" DataSetColumn="UI_EL_Desc_it" />
+              <Mapping SourceColumn="UI_EL_Desc_en" DataSetColumn="UI_EL_Desc_en" />
+              <Mapping SourceColumn="UI_EL_ShowValOrDes" DataSetColumn="UI_EL_ShowValOrDes" />
+              <Mapping SourceColumn="UI_EL_Obsolete" DataSetColumn="UI_EL_Obsolete" />
+              <Mapping SourceColumn="UI_EL_Totalizza" DataSetColumn="UI_EL_Totalizza" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ds_RealTime" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ds_RealTime" msprop:Generator_UserDSName="ds_RealTime">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Firmware" msprop:Generator_TableClassName="FirmwareDataTable" msprop:Generator_TableVarName="tableFirmware" msprop:Generator_TablePropName="Firmware" msprop:Generator_RowDeletingName="FirmwareRowDeleting" msprop:Generator_RowChangingName="FirmwareRowChanging" msprop:Generator_RowEvHandlerName="FirmwareRowChangeEventHandler" msprop:Generator_RowDeletedName="FirmwareRowDeleted" msprop:Generator_UserTableName="Firmware" msprop:Generator_RowChangedName="FirmwareRowChanged" msprop:Generator_RowEvArgName="FirmwareRowChangeEvent" msprop:Generator_RowClassName="FirmwareRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SW_Code" msprop:Generator_ColumnVarNameInTable="columnSW_Code" msprop:Generator_ColumnPropNameInRow="SW_Code" msprop:Generator_ColumnPropNameInTable="SW_CodeColumn" msprop:Generator_UserColumnName="SW_Code" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SW_TipoDevice" msprop:Generator_ColumnVarNameInTable="columnSW_TipoDevice" msprop:Generator_ColumnPropNameInRow="SW_TipoDevice" msprop:Generator_ColumnPropNameInTable="SW_TipoDeviceColumn" msprop:Generator_UserColumnName="SW_TipoDevice" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SW_Versione" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSW_Versione" msprop:Generator_ColumnPropNameInRow="SW_Versione" msprop:Generator_ColumnPropNameInTable="SW_VersioneColumn" msprop:Generator_UserColumnName="SW_Versione" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SW_Obsolete_ver" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSW_Obsolete_ver" msprop:Generator_ColumnPropNameInRow="SW_Obsolete_ver" msprop:Generator_ColumnPropNameInTable="SW_Obsolete_verColumn" msprop:Generator_UserColumnName="SW_Obsolete_ver" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Id" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" minOccurs="0" />
+              <xs:element name="SW_Descrizione" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSW_Descrizione" msprop:Generator_ColumnPropNameInRow="SW_Descrizione" msprop:Generator_ColumnPropNameInTable="SW_DescrizioneColumn" msprop:Generator_UserColumnName="SW_Descrizione" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SW_Descrizione_EN" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSW_Descrizione_EN" msprop:Generator_ColumnPropNameInRow="SW_Descrizione_EN" msprop:Generator_ColumnPropNameInTable="SW_Descrizione_ENColumn" msprop:Generator_UserColumnName="SW_Descrizione_EN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="UI_Analog_Messages" msprop:Generator_TableClassName="UI_Analog_MessagesDataTable" msprop:Generator_TableVarName="tableUI_Analog_Messages" msprop:Generator_TablePropName="UI_Analog_Messages" msprop:Generator_RowDeletingName="UI_Analog_MessagesRowDeleting" msprop:Generator_RowChangingName="UI_Analog_MessagesRowChanging" msprop:Generator_RowEvHandlerName="UI_Analog_MessagesRowChangeEventHandler" msprop:Generator_RowDeletedName="UI_Analog_MessagesRowDeleted" msprop:Generator_UserTableName="UI_Analog_Messages" msprop:Generator_RowChangedName="UI_Analog_MessagesRowChanged" msprop:Generator_RowEvArgName="UI_Analog_MessagesRowChangeEvent" msprop:Generator_RowClassName="UI_Analog_MessagesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="UI_An_PK" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnUI_An_PK" msprop:Generator_ColumnPropNameInRow="UI_An_PK" msprop:Generator_ColumnPropNameInTable="UI_An_PKColumn" msprop:Generator_UserColumnName="UI_An_PK" type="xs:int" />
+              <xs:element name="UI_An_SW_Code" msprop:Generator_ColumnVarNameInTable="columnUI_An_SW_Code" msprop:Generator_ColumnPropNameInRow="UI_An_SW_Code" msprop:Generator_ColumnPropNameInTable="UI_An_SW_CodeColumn" msprop:Generator_UserColumnName="UI_An_SW_Code" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_An_Progr" msprop:Generator_ColumnVarNameInTable="columnUI_An_Progr" msprop:Generator_ColumnPropNameInRow="UI_An_Progr" msprop:Generator_ColumnPropNameInTable="UI_An_ProgrColumn" msprop:Generator_UserColumnName="UI_An_Progr" type="xs:int" />
+              <xs:element name="UI_An_Group" msprop:Generator_ColumnVarNameInTable="columnUI_An_Group" msprop:Generator_ColumnPropNameInRow="UI_An_Group" msprop:Generator_ColumnPropNameInTable="UI_An_GroupColumn" msprop:Generator_UserColumnName="UI_An_Group" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_An_Desc" msprop:Generator_ColumnVarNameInTable="columnUI_An_Desc" msprop:Generator_ColumnPropNameInRow="UI_An_Desc" msprop:Generator_ColumnPropNameInTable="UI_An_DescColumn" msprop:Generator_UserColumnName="UI_An_Desc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_An_DisplayOrder" msprop:Generator_ColumnVarNameInTable="columnUI_An_DisplayOrder" msprop:Generator_ColumnPropNameInRow="UI_An_DisplayOrder" msprop:Generator_ColumnPropNameInTable="UI_An_DisplayOrderColumn" msprop:Generator_UserColumnName="UI_An_DisplayOrder" type="xs:int" minOccurs="0" />
+              <xs:element name="UI_An_DisplayOrder_GroupElements" msprop:Generator_ColumnVarNameInTable="columnUI_An_DisplayOrder_GroupElements" msprop:Generator_ColumnPropNameInRow="UI_An_DisplayOrder_GroupElements" msprop:Generator_ColumnPropNameInTable="UI_An_DisplayOrder_GroupElementsColumn" msprop:Generator_UserColumnName="UI_An_DisplayOrder_GroupElements" type="xs:int" minOccurs="0" />
+              <xs:element name="UI_An_Format" msprop:Generator_ColumnVarNameInTable="columnUI_An_Format" msprop:Generator_ColumnPropNameInRow="UI_An_Format" msprop:Generator_ColumnPropNameInTable="UI_An_FormatColumn" msprop:Generator_UserColumnName="UI_An_Format" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_An_UM" msprop:Generator_ColumnVarNameInTable="columnUI_An_UM" msprop:Generator_ColumnPropNameInRow="UI_An_UM" msprop:Generator_ColumnPropNameInTable="UI_An_UMColumn" msprop:Generator_UserColumnName="UI_An_UM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_An_Multiplier" msprop:Generator_ColumnVarNameInTable="columnUI_An_Multiplier" msprop:Generator_ColumnPropNameInRow="UI_An_Multiplier" msprop:Generator_ColumnPropNameInTable="UI_An_MultiplierColumn" msprop:Generator_UserColumnName="UI_An_Multiplier" type="xs:double" minOccurs="0" />
+              <xs:element name="UI_An_Icon_Name" msprop:Generator_ColumnVarNameInTable="columnUI_An_Icon_Name" msprop:Generator_ColumnPropNameInRow="UI_An_Icon_Name" msprop:Generator_ColumnPropNameInTable="UI_An_Icon_NameColumn" msprop:Generator_UserColumnName="UI_An_Icon_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_An_Min_Value" msprop:Generator_ColumnVarNameInTable="columnUI_An_Min_Value" msprop:Generator_ColumnPropNameInRow="UI_An_Min_Value" msprop:Generator_ColumnPropNameInTable="UI_An_Min_ValueColumn" msprop:Generator_UserColumnName="UI_An_Min_Value" type="xs:double" minOccurs="0" />
+              <xs:element name="UI_An_Max_Value" msprop:Generator_ColumnVarNameInTable="columnUI_An_Max_Value" msprop:Generator_ColumnPropNameInRow="UI_An_Max_Value" msprop:Generator_ColumnPropNameInTable="UI_An_Max_ValueColumn" msprop:Generator_UserColumnName="UI_An_Max_Value" type="xs:double" minOccurs="0" />
+              <xs:element name="UI_An_Ref_Dg_Alarm" msprop:Generator_ColumnVarNameInTable="columnUI_An_Ref_Dg_Alarm" msprop:Generator_ColumnPropNameInRow="UI_An_Ref_Dg_Alarm" msprop:Generator_ColumnPropNameInTable="UI_An_Ref_Dg_AlarmColumn" msprop:Generator_UserColumnName="UI_An_Ref_Dg_Alarm" type="xs:int" minOccurs="0" />
+              <xs:element name="UI_An_Threshold_Des" msprop:Generator_ColumnVarNameInTable="columnUI_An_Threshold_Des" msprop:Generator_ColumnPropNameInRow="UI_An_Threshold_Des" msprop:Generator_ColumnPropNameInTable="UI_An_Threshold_DesColumn" msprop:Generator_UserColumnName="UI_An_Threshold_Des" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_An_Obsolete" msprop:Generator_ColumnVarNameInTable="columnUI_An_Obsolete" msprop:Generator_ColumnPropNameInRow="UI_An_Obsolete" msprop:Generator_ColumnPropNameInTable="UI_An_ObsoleteColumn" msprop:Generator_UserColumnName="UI_An_Obsolete" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="UI_Digital_Messages" msprop:Generator_TableClassName="UI_Digital_MessagesDataTable" msprop:Generator_TableVarName="tableUI_Digital_Messages" msprop:Generator_TablePropName="UI_Digital_Messages" msprop:Generator_RowDeletingName="UI_Digital_MessagesRowDeleting" msprop:Generator_RowChangingName="UI_Digital_MessagesRowChanging" msprop:Generator_RowEvHandlerName="UI_Digital_MessagesRowChangeEventHandler" msprop:Generator_RowDeletedName="UI_Digital_MessagesRowDeleted" msprop:Generator_UserTableName="UI_Digital_Messages" msprop:Generator_RowChangedName="UI_Digital_MessagesRowChanged" msprop:Generator_RowEvArgName="UI_Digital_MessagesRowChangeEvent" msprop:Generator_RowClassName="UI_Digital_MessagesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="UI_Dg_PK" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_PK" msprop:Generator_ColumnPropNameInRow="UI_Dg_PK" msprop:Generator_ColumnPropNameInTable="UI_Dg_PKColumn" msprop:Generator_UserColumnName="UI_Dg_PK" type="xs:int" />
+              <xs:element name="UI_Dg_SW_Code" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_SW_Code" msprop:Generator_ColumnPropNameInRow="UI_Dg_SW_Code" msprop:Generator_ColumnPropNameInTable="UI_Dg_SW_CodeColumn" msprop:Generator_UserColumnName="UI_Dg_SW_Code" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_00_Present" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_00_Present" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_00_Present" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_00_PresentColumn" msprop:Generator_UserColumnName="UI_Dg_Bit_00_Present" type="xs:boolean" minOccurs="0" />
+              <xs:element name="UI_Dg_Bit_00_Desc_0" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_00_Desc_0" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_00_Desc_0" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_00_Desc_0Column" msprop:Generator_UserColumnName="UI_Dg_Bit_00_Desc_0" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_00_Desc_1" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_00_Desc_1" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_00_Desc_1" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_00_Desc_1Column" msprop:Generator_UserColumnName="UI_Dg_Bit_00_Desc_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_00_Icon_0" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_00_Icon_0" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_00_Icon_0" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_00_Icon_0Column" msprop:Generator_UserColumnName="UI_Dg_Bit_00_Icon_0" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_00_Icon_1" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_00_Icon_1" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_00_Icon_1" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_00_Icon_1Column" msprop:Generator_UserColumnName="UI_Dg_Bit_00_Icon_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_00_Ref_An_Value" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_00_Ref_An_Value" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_00_Ref_An_Value" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_00_Ref_An_ValueColumn" msprop:Generator_UserColumnName="UI_Dg_Bit_00_Ref_An_Value" type="xs:int" minOccurs="0" />
+              <xs:element name="UI_Dg_Bit_01_Present" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_01_Present" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_01_Present" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_01_PresentColumn" msprop:Generator_UserColumnName="UI_Dg_Bit_01_Present" type="xs:boolean" minOccurs="0" />
+              <xs:element name="UI_Dg_Bit_01_Desc_0" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_01_Desc_0" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_01_Desc_0" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_01_Desc_0Column" msprop:Generator_UserColumnName="UI_Dg_Bit_01_Desc_0" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_01_Desc_1" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_01_Desc_1" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_01_Desc_1" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_01_Desc_1Column" msprop:Generator_UserColumnName="UI_Dg_Bit_01_Desc_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_01_Icon_0" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_01_Icon_0" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_01_Icon_0" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_01_Icon_0Column" msprop:Generator_UserColumnName="UI_Dg_Bit_01_Icon_0" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_01_Icon_1" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_01_Icon_1" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_01_Icon_1" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_01_Icon_1Column" msprop:Generator_UserColumnName="UI_Dg_Bit_01_Icon_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_01_Ref_An_Value" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_01_Ref_An_Value" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_01_Ref_An_Value" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_01_Ref_An_ValueColumn" msprop:Generator_UserColumnName="UI_Dg_Bit_01_Ref_An_Value" type="xs:int" minOccurs="0" />
+              <xs:element name="UI_Dg_Bit_02_Present" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_02_Present" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_02_Present" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_02_PresentColumn" msprop:Generator_UserColumnName="UI_Dg_Bit_02_Present" type="xs:boolean" minOccurs="0" />
+              <xs:element name="UI_Dg_Bit_02_Desc_0" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_02_Desc_0" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_02_Desc_0" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_02_Desc_0Column" msprop:Generator_UserColumnName="UI_Dg_Bit_02_Desc_0" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_02_Desc_1" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_02_Desc_1" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_02_Desc_1" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_02_Desc_1Column" msprop:Generator_UserColumnName="UI_Dg_Bit_02_Desc_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_02_Icon_0" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_02_Icon_0" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_02_Icon_0" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_02_Icon_0Column" msprop:Generator_UserColumnName="UI_Dg_Bit_02_Icon_0" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_02_Icon_1" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_02_Icon_1" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_02_Icon_1" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_02_Icon_1Column" msprop:Generator_UserColumnName="UI_Dg_Bit_02_Icon_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_02_Ref_An_Value" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_02_Ref_An_Value" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_02_Ref_An_Value" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_02_Ref_An_ValueColumn" msprop:Generator_UserColumnName="UI_Dg_Bit_02_Ref_An_Value" type="xs:int" minOccurs="0" />
+              <xs:element name="UI_Dg_Bit_03_Present" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_03_Present" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_03_Present" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_03_PresentColumn" msprop:Generator_UserColumnName="UI_Dg_Bit_03_Present" type="xs:boolean" minOccurs="0" />
+              <xs:element name="UI_Dg_Bit_03_Desc_0" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_03_Desc_0" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_03_Desc_0" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_03_Desc_0Column" msprop:Generator_UserColumnName="UI_Dg_Bit_03_Desc_0" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_03_Desc_1" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_03_Desc_1" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_03_Desc_1" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_03_Desc_1Column" msprop:Generator_UserColumnName="UI_Dg_Bit_03_Desc_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_03_Icon_0" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_03_Icon_0" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_03_Icon_0" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_03_Icon_0Column" msprop:Generator_UserColumnName="UI_Dg_Bit_03_Icon_0" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_03_Icon_1" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_03_Icon_1" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_03_Icon_1" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_03_Icon_1Column" msprop:Generator_UserColumnName="UI_Dg_Bit_03_Icon_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_03_Ref_An_Value" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_03_Ref_An_Value" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_03_Ref_An_Value" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_03_Ref_An_ValueColumn" msprop:Generator_UserColumnName="UI_Dg_Bit_03_Ref_An_Value" type="xs:int" minOccurs="0" />
+              <xs:element name="UI_Dg_Bit_04_Present" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_04_Present" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_04_Present" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_04_PresentColumn" msprop:Generator_UserColumnName="UI_Dg_Bit_04_Present" type="xs:boolean" minOccurs="0" />
+              <xs:element name="UI_Dg_Bit_04_Desc_0" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_04_Desc_0" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_04_Desc_0" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_04_Desc_0Column" msprop:Generator_UserColumnName="UI_Dg_Bit_04_Desc_0" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_04_Desc_1" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_04_Desc_1" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_04_Desc_1" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_04_Desc_1Column" msprop:Generator_UserColumnName="UI_Dg_Bit_04_Desc_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_04_Icon_0" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_04_Icon_0" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_04_Icon_0" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_04_Icon_0Column" msprop:Generator_UserColumnName="UI_Dg_Bit_04_Icon_0" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_04_Icon_1" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_04_Icon_1" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_04_Icon_1" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_04_Icon_1Column" msprop:Generator_UserColumnName="UI_Dg_Bit_04_Icon_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_04_Ref_An_Value" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_04_Ref_An_Value" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_04_Ref_An_Value" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_04_Ref_An_ValueColumn" msprop:Generator_UserColumnName="UI_Dg_Bit_04_Ref_An_Value" type="xs:int" minOccurs="0" />
+              <xs:element name="UI_Dg_Bit_05_Present" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_05_Present" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_05_Present" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_05_PresentColumn" msprop:Generator_UserColumnName="UI_Dg_Bit_05_Present" type="xs:boolean" minOccurs="0" />
+              <xs:element name="UI_Dg_Bit_05_Desc_0" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_05_Desc_0" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_05_Desc_0" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_05_Desc_0Column" msprop:Generator_UserColumnName="UI_Dg_Bit_05_Desc_0" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_05_Desc_1" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_05_Desc_1" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_05_Desc_1" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_05_Desc_1Column" msprop:Generator_UserColumnName="UI_Dg_Bit_05_Desc_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_05_Icon_0" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_05_Icon_0" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_05_Icon_0" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_05_Icon_0Column" msprop:Generator_UserColumnName="UI_Dg_Bit_05_Icon_0" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_05_Icon_1" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_05_Icon_1" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_05_Icon_1" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_05_Icon_1Column" msprop:Generator_UserColumnName="UI_Dg_Bit_05_Icon_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_05_Ref_An_Value" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_05_Ref_An_Value" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_05_Ref_An_Value" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_05_Ref_An_ValueColumn" msprop:Generator_UserColumnName="UI_Dg_Bit_05_Ref_An_Value" type="xs:int" minOccurs="0" />
+              <xs:element name="UI_Dg_Bit_06_Present" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_06_Present" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_06_Present" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_06_PresentColumn" msprop:Generator_UserColumnName="UI_Dg_Bit_06_Present" type="xs:boolean" minOccurs="0" />
+              <xs:element name="UI_Dg_Bit_06_Desc_0" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_06_Desc_0" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_06_Desc_0" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_06_Desc_0Column" msprop:Generator_UserColumnName="UI_Dg_Bit_06_Desc_0" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_06_Desc_1" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_06_Desc_1" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_06_Desc_1" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_06_Desc_1Column" msprop:Generator_UserColumnName="UI_Dg_Bit_06_Desc_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_06_Icon_0" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_06_Icon_0" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_06_Icon_0" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_06_Icon_0Column" msprop:Generator_UserColumnName="UI_Dg_Bit_06_Icon_0" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_06_Icon_1" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_06_Icon_1" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_06_Icon_1" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_06_Icon_1Column" msprop:Generator_UserColumnName="UI_Dg_Bit_06_Icon_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_06_Ref_An_Value" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_06_Ref_An_Value" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_06_Ref_An_Value" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_06_Ref_An_ValueColumn" msprop:Generator_UserColumnName="UI_Dg_Bit_06_Ref_An_Value" type="xs:int" minOccurs="0" />
+              <xs:element name="UI_Dg_Bit_07_Present" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_07_Present" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_07_Present" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_07_PresentColumn" msprop:Generator_UserColumnName="UI_Dg_Bit_07_Present" type="xs:boolean" minOccurs="0" />
+              <xs:element name="UI_Dg_Bit_07_Desc_0" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_07_Desc_0" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_07_Desc_0" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_07_Desc_0Column" msprop:Generator_UserColumnName="UI_Dg_Bit_07_Desc_0" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_07_Desc_1" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_07_Desc_1" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_07_Desc_1" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_07_Desc_1Column" msprop:Generator_UserColumnName="UI_Dg_Bit_07_Desc_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_07_Icon_0" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_07_Icon_0" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_07_Icon_0" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_07_Icon_0Column" msprop:Generator_UserColumnName="UI_Dg_Bit_07_Icon_0" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_07_Icon_1" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_07_Icon_1" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_07_Icon_1" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_07_Icon_1Column" msprop:Generator_UserColumnName="UI_Dg_Bit_07_Icon_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_07_Ref_An_Value" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_07_Ref_An_Value" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_07_Ref_An_Value" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_07_Ref_An_ValueColumn" msprop:Generator_UserColumnName="UI_Dg_Bit_07_Ref_An_Value" type="xs:int" minOccurs="0" />
+              <xs:element name="UI_Dg_Bit_08_Present" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_08_Present" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_08_Present" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_08_PresentColumn" msprop:Generator_UserColumnName="UI_Dg_Bit_08_Present" type="xs:boolean" minOccurs="0" />
+              <xs:element name="UI_Dg_Bit_08_Desc_0" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_08_Desc_0" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_08_Desc_0" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_08_Desc_0Column" msprop:Generator_UserColumnName="UI_Dg_Bit_08_Desc_0" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_08_Desc_1" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_08_Desc_1" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_08_Desc_1" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_08_Desc_1Column" msprop:Generator_UserColumnName="UI_Dg_Bit_08_Desc_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_08_Icon_0" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_08_Icon_0" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_08_Icon_0" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_08_Icon_0Column" msprop:Generator_UserColumnName="UI_Dg_Bit_08_Icon_0" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_08_Icon_1" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_08_Icon_1" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_08_Icon_1" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_08_Icon_1Column" msprop:Generator_UserColumnName="UI_Dg_Bit_08_Icon_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_08_Ref_An_Value" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_08_Ref_An_Value" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_08_Ref_An_Value" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_08_Ref_An_ValueColumn" msprop:Generator_UserColumnName="UI_Dg_Bit_08_Ref_An_Value" type="xs:int" minOccurs="0" />
+              <xs:element name="UI_Dg_Bit_09_Present" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_09_Present" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_09_Present" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_09_PresentColumn" msprop:Generator_UserColumnName="UI_Dg_Bit_09_Present" type="xs:boolean" minOccurs="0" />
+              <xs:element name="UI_Dg_Bit_09_Desc_0" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_09_Desc_0" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_09_Desc_0" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_09_Desc_0Column" msprop:Generator_UserColumnName="UI_Dg_Bit_09_Desc_0" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_09_Desc_1" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_09_Desc_1" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_09_Desc_1" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_09_Desc_1Column" msprop:Generator_UserColumnName="UI_Dg_Bit_09_Desc_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_09_Icon_0" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_09_Icon_0" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_09_Icon_0" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_09_Icon_0Column" msprop:Generator_UserColumnName="UI_Dg_Bit_09_Icon_0" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_09_Icon_1" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_09_Icon_1" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_09_Icon_1" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_09_Icon_1Column" msprop:Generator_UserColumnName="UI_Dg_Bit_09_Icon_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_09_Ref_An_Value" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_09_Ref_An_Value" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_09_Ref_An_Value" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_09_Ref_An_ValueColumn" msprop:Generator_UserColumnName="UI_Dg_Bit_09_Ref_An_Value" type="xs:int" minOccurs="0" />
+              <xs:element name="UI_Dg_Bit_10_Present" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_10_Present" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_10_Present" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_10_PresentColumn" msprop:Generator_UserColumnName="UI_Dg_Bit_10_Present" type="xs:boolean" minOccurs="0" />
+              <xs:element name="UI_Dg_Bit_10_Desc_0" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_10_Desc_0" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_10_Desc_0" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_10_Desc_0Column" msprop:Generator_UserColumnName="UI_Dg_Bit_10_Desc_0" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_10_Desc_1" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_10_Desc_1" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_10_Desc_1" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_10_Desc_1Column" msprop:Generator_UserColumnName="UI_Dg_Bit_10_Desc_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_10_Icon_0" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_10_Icon_0" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_10_Icon_0" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_10_Icon_0Column" msprop:Generator_UserColumnName="UI_Dg_Bit_10_Icon_0" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_10_Icon_1" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_10_Icon_1" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_10_Icon_1" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_10_Icon_1Column" msprop:Generator_UserColumnName="UI_Dg_Bit_10_Icon_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_10_Ref_An_Value" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_10_Ref_An_Value" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_10_Ref_An_Value" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_10_Ref_An_ValueColumn" msprop:Generator_UserColumnName="UI_Dg_Bit_10_Ref_An_Value" type="xs:int" minOccurs="0" />
+              <xs:element name="UI_Dg_Bit_11_Present" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_11_Present" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_11_Present" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_11_PresentColumn" msprop:Generator_UserColumnName="UI_Dg_Bit_11_Present" type="xs:boolean" minOccurs="0" />
+              <xs:element name="UI_Dg_Bit_11_Desc_0" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_11_Desc_0" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_11_Desc_0" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_11_Desc_0Column" msprop:Generator_UserColumnName="UI_Dg_Bit_11_Desc_0" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_11_Desc_1" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_11_Desc_1" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_11_Desc_1" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_11_Desc_1Column" msprop:Generator_UserColumnName="UI_Dg_Bit_11_Desc_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_11_Icon_0" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_11_Icon_0" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_11_Icon_0" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_11_Icon_0Column" msprop:Generator_UserColumnName="UI_Dg_Bit_11_Icon_0" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_11_Icon_1" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_11_Icon_1" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_11_Icon_1" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_11_Icon_1Column" msprop:Generator_UserColumnName="UI_Dg_Bit_11_Icon_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_11_Ref_An_Value" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_11_Ref_An_Value" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_11_Ref_An_Value" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_11_Ref_An_ValueColumn" msprop:Generator_UserColumnName="UI_Dg_Bit_11_Ref_An_Value" type="xs:int" minOccurs="0" />
+              <xs:element name="UI_Dg_Bit_12_Present" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_12_Present" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_12_Present" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_12_PresentColumn" msprop:Generator_UserColumnName="UI_Dg_Bit_12_Present" type="xs:boolean" minOccurs="0" />
+              <xs:element name="UI_Dg_Bit_12_Desc_0" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_12_Desc_0" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_12_Desc_0" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_12_Desc_0Column" msprop:Generator_UserColumnName="UI_Dg_Bit_12_Desc_0" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_12_Desc_1" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_12_Desc_1" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_12_Desc_1" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_12_Desc_1Column" msprop:Generator_UserColumnName="UI_Dg_Bit_12_Desc_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_12_Icon_0" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_12_Icon_0" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_12_Icon_0" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_12_Icon_0Column" msprop:Generator_UserColumnName="UI_Dg_Bit_12_Icon_0" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_12_Icon_1" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_12_Icon_1" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_12_Icon_1" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_12_Icon_1Column" msprop:Generator_UserColumnName="UI_Dg_Bit_12_Icon_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_12_Ref_An_Value" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_12_Ref_An_Value" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_12_Ref_An_Value" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_12_Ref_An_ValueColumn" msprop:Generator_UserColumnName="UI_Dg_Bit_12_Ref_An_Value" type="xs:int" minOccurs="0" />
+              <xs:element name="UI_Dg_Bit_13_Present" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_13_Present" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_13_Present" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_13_PresentColumn" msprop:Generator_UserColumnName="UI_Dg_Bit_13_Present" type="xs:boolean" minOccurs="0" />
+              <xs:element name="UI_Dg_Bit_13_Desc_0" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_13_Desc_0" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_13_Desc_0" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_13_Desc_0Column" msprop:Generator_UserColumnName="UI_Dg_Bit_13_Desc_0" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_13_Desc_1" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_13_Desc_1" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_13_Desc_1" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_13_Desc_1Column" msprop:Generator_UserColumnName="UI_Dg_Bit_13_Desc_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_13_Icon_0" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_13_Icon_0" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_13_Icon_0" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_13_Icon_0Column" msprop:Generator_UserColumnName="UI_Dg_Bit_13_Icon_0" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_13_Icon_1" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_13_Icon_1" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_13_Icon_1" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_13_Icon_1Column" msprop:Generator_UserColumnName="UI_Dg_Bit_13_Icon_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_13_Ref_An_Value" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_13_Ref_An_Value" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_13_Ref_An_Value" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_13_Ref_An_ValueColumn" msprop:Generator_UserColumnName="UI_Dg_Bit_13_Ref_An_Value" type="xs:int" minOccurs="0" />
+              <xs:element name="UI_Dg_Bit_14_Present" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_14_Present" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_14_Present" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_14_PresentColumn" msprop:Generator_UserColumnName="UI_Dg_Bit_14_Present" type="xs:boolean" minOccurs="0" />
+              <xs:element name="UI_Dg_Bit_14_Desc_0" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_14_Desc_0" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_14_Desc_0" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_14_Desc_0Column" msprop:Generator_UserColumnName="UI_Dg_Bit_14_Desc_0" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_14_Desc_1" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_14_Desc_1" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_14_Desc_1" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_14_Desc_1Column" msprop:Generator_UserColumnName="UI_Dg_Bit_14_Desc_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_14_Icon_0" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_14_Icon_0" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_14_Icon_0" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_14_Icon_0Column" msprop:Generator_UserColumnName="UI_Dg_Bit_14_Icon_0" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_14_Icon_1" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_14_Icon_1" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_14_Icon_1" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_14_Icon_1Column" msprop:Generator_UserColumnName="UI_Dg_Bit_14_Icon_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_14_Ref_An_Value" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_14_Ref_An_Value" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_14_Ref_An_Value" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_14_Ref_An_ValueColumn" msprop:Generator_UserColumnName="UI_Dg_Bit_14_Ref_An_Value" type="xs:int" minOccurs="0" />
+              <xs:element name="UI_Dg_Bit_15_Present" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_15_Present" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_15_Present" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_15_PresentColumn" msprop:Generator_UserColumnName="UI_Dg_Bit_15_Present" type="xs:boolean" minOccurs="0" />
+              <xs:element name="UI_Dg_Bit_15_Desc_0" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_15_Desc_0" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_15_Desc_0" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_15_Desc_0Column" msprop:Generator_UserColumnName="UI_Dg_Bit_15_Desc_0" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_15_Desc_1" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_15_Desc_1" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_15_Desc_1" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_15_Desc_1Column" msprop:Generator_UserColumnName="UI_Dg_Bit_15_Desc_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_15_Icon_0" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_15_Icon_0" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_15_Icon_0" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_15_Icon_0Column" msprop:Generator_UserColumnName="UI_Dg_Bit_15_Icon_0" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_15_Icon_1" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_15_Icon_1" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_15_Icon_1" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_15_Icon_1Column" msprop:Generator_UserColumnName="UI_Dg_Bit_15_Icon_1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_Dg_Bit_15_Ref_An_Value" msprop:Generator_ColumnVarNameInTable="columnUI_Dg_Bit_15_Ref_An_Value" msprop:Generator_ColumnPropNameInRow="UI_Dg_Bit_15_Ref_An_Value" msprop:Generator_ColumnPropNameInTable="UI_Dg_Bit_15_Ref_An_ValueColumn" msprop:Generator_UserColumnName="UI_Dg_Bit_15_Ref_An_Value" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="UI_EventLog_Messages" msprop:Generator_TableClassName="UI_EventLog_MessagesDataTable" msprop:Generator_TableVarName="tableUI_EventLog_Messages" msprop:Generator_TablePropName="UI_EventLog_Messages" msprop:Generator_RowDeletingName="UI_EventLog_MessagesRowDeleting" msprop:Generator_RowChangingName="UI_EventLog_MessagesRowChanging" msprop:Generator_RowEvHandlerName="UI_EventLog_MessagesRowChangeEventHandler" msprop:Generator_RowDeletedName="UI_EventLog_MessagesRowDeleted" msprop:Generator_UserTableName="UI_EventLog_Messages" msprop:Generator_RowChangedName="UI_EventLog_MessagesRowChanged" msprop:Generator_RowEvArgName="UI_EventLog_MessagesRowChangeEvent" msprop:Generator_RowClassName="UI_EventLog_MessagesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="UI_EL_PK" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnUI_EL_PK" msprop:Generator_ColumnPropNameInRow="UI_EL_PK" msprop:Generator_ColumnPropNameInTable="UI_EL_PKColumn" msprop:Generator_UserColumnName="UI_EL_PK" type="xs:int" />
+              <xs:element name="UI_EL_SW_Code" msprop:Generator_ColumnVarNameInTable="columnUI_EL_SW_Code" msprop:Generator_ColumnPropNameInRow="UI_EL_SW_Code" msprop:Generator_ColumnPropNameInTable="UI_EL_SW_CodeColumn" msprop:Generator_UserColumnName="UI_EL_SW_Code" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_EL_EventNumber" msprop:Generator_ColumnVarNameInTable="columnUI_EL_EventNumber" msprop:Generator_ColumnPropNameInRow="UI_EL_EventNumber" msprop:Generator_ColumnPropNameInTable="UI_EL_EventNumberColumn" msprop:Generator_UserColumnName="UI_EL_EventNumber" type="xs:int" minOccurs="0" />
+              <xs:element name="UI_EL_Channel" msprop:Generator_ColumnVarNameInTable="columnUI_EL_Channel" msprop:Generator_ColumnPropNameInRow="UI_EL_Channel" msprop:Generator_ColumnPropNameInTable="UI_EL_ChannelColumn" msprop:Generator_UserColumnName="UI_EL_Channel" type="xs:int" minOccurs="0" />
+              <xs:element name="UI_EL_InputType" msprop:Generator_ColumnVarNameInTable="columnUI_EL_InputType" msprop:Generator_ColumnPropNameInRow="UI_EL_InputType" msprop:Generator_ColumnPropNameInTable="UI_EL_InputTypeColumn" msprop:Generator_UserColumnName="UI_EL_InputType" type="xs:boolean" minOccurs="0" />
+              <xs:element name="UI_EL_UM" msprop:Generator_ColumnVarNameInTable="columnUI_EL_UM" msprop:Generator_ColumnPropNameInRow="UI_EL_UM" msprop:Generator_ColumnPropNameInTable="UI_EL_UMColumn" msprop:Generator_UserColumnName="UI_EL_UM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_EL_Format" msprop:Generator_ColumnVarNameInTable="columnUI_EL_Format" msprop:Generator_ColumnPropNameInRow="UI_EL_Format" msprop:Generator_ColumnPropNameInTable="UI_EL_FormatColumn" msprop:Generator_UserColumnName="UI_EL_Format" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_EL_Multiplier" msprop:Generator_ColumnVarNameInTable="columnUI_EL_Multiplier" msprop:Generator_ColumnPropNameInRow="UI_EL_Multiplier" msprop:Generator_ColumnPropNameInTable="UI_EL_MultiplierColumn" msprop:Generator_UserColumnName="UI_EL_Multiplier" type="xs:double" minOccurs="0" />
+              <xs:element name="UI_EL_Desc_it" msprop:Generator_ColumnVarNameInTable="columnUI_EL_Desc_it" msprop:Generator_ColumnPropNameInRow="UI_EL_Desc_it" msprop:Generator_ColumnPropNameInTable="UI_EL_Desc_itColumn" msprop:Generator_UserColumnName="UI_EL_Desc_it" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_EL_Desc_en" msprop:Generator_ColumnVarNameInTable="columnUI_EL_Desc_en" msprop:Generator_ColumnPropNameInRow="UI_EL_Desc_en" msprop:Generator_ColumnPropNameInTable="UI_EL_Desc_enColumn" msprop:Generator_UserColumnName="UI_EL_Desc_en" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_EL_ShowValOrDes" msprop:Generator_ColumnVarNameInTable="columnUI_EL_ShowValOrDes" msprop:Generator_ColumnPropNameInRow="UI_EL_ShowValOrDes" msprop:Generator_ColumnPropNameInTable="UI_EL_ShowValOrDesColumn" msprop:Generator_UserColumnName="UI_EL_ShowValOrDes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_EL_Obsolete" msprop:Generator_ColumnVarNameInTable="columnUI_EL_Obsolete" msprop:Generator_ColumnPropNameInRow="UI_EL_Obsolete" msprop:Generator_ColumnPropNameInTable="UI_EL_ObsoleteColumn" msprop:Generator_UserColumnName="UI_EL_Obsolete" type="xs:boolean" minOccurs="0" />
+              <xs:element name="UI_EL_Totalizza" msprop:Generator_ColumnVarNameInTable="columnUI_EL_Totalizza" msprop:Generator_ColumnPropNameInRow="UI_EL_Totalizza" msprop:Generator_ColumnPropNameInTable="UI_EL_TotalizzaColumn" msprop:Generator_UserColumnName="UI_EL_Totalizza" type="xs:boolean" default="false" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_tmp_Preview" msprop:Generator_TableClassName="dt_tmp_PreviewDataTable" msprop:Generator_TableVarName="tabledt_tmp_Preview" msprop:Generator_RowChangedName="dt_tmp_PreviewRowChanged" msprop:Generator_TablePropName="dt_tmp_Preview" msprop:Generator_RowDeletingName="dt_tmp_PreviewRowDeleting" msprop:Generator_RowChangingName="dt_tmp_PreviewRowChanging" msprop:Generator_RowEvHandlerName="dt_tmp_PreviewRowChangeEventHandler" msprop:Generator_RowDeletedName="dt_tmp_PreviewRowDeleted" msprop:Generator_RowClassName="dt_tmp_PreviewRow" msprop:Generator_UserTableName="dt_tmp_Preview" msprop:Generator_RowEvArgName="dt_tmp_PreviewRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="tmp_Id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columntmp_Id" msprop:Generator_ColumnPropNameInRow="tmp_Id" msprop:Generator_ColumnPropNameInTable="tmp_IdColumn" msprop:Generator_UserColumnName="tmp_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="tmp_Col_1" msprop:Generator_ColumnVarNameInTable="columntmp_Col_1" msprop:Generator_ColumnPropNameInRow="tmp_Col_1" msprop:Generator_ColumnPropNameInTable="tmp_Col_1Column" msprop:Generator_UserColumnName="tmp_Col_1" type="xs:string" minOccurs="0" />
+              <xs:element name="tmp_Col_2" msprop:Generator_ColumnVarNameInTable="columntmp_Col_2" msprop:Generator_ColumnPropNameInRow="tmp_Col_2" msprop:Generator_ColumnPropNameInTable="tmp_Col_2Column" msprop:Generator_UserColumnName="tmp_Col_2" type="xs:string" minOccurs="0" />
+              <xs:element name="tmp_Col_3" msprop:Generator_ColumnVarNameInTable="columntmp_Col_3" msprop:Generator_ColumnPropNameInRow="tmp_Col_3" msprop:Generator_ColumnPropNameInTable="tmp_Col_3Column" msprop:Generator_UserColumnName="tmp_Col_3" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="Firmware_UI_Analog_Messages" msdata:parent="Firmware" msdata:child="UI_Analog_Messages" msdata:parentkey="SW_Code" msdata:childkey="UI_An_SW_Code" msprop:Generator_UserChildTable="UI_Analog_Messages" msprop:Generator_ChildPropName="GetUI_Analog_MessagesRows" msprop:Generator_UserRelationName="Firmware_UI_Analog_Messages" msprop:Generator_ParentPropName="FirmwareRow" msprop:Generator_RelationVarName="relationFirmware_UI_Analog_Messages" msprop:Generator_UserParentTable="Firmware" />
+      <msdata:Relationship name="Firmware_UI_Digital_Messages" msdata:parent="Firmware" msdata:child="UI_Digital_Messages" msdata:parentkey="SW_Code" msdata:childkey="UI_Dg_SW_Code" msprop:Generator_UserChildTable="UI_Digital_Messages" msprop:Generator_ChildPropName="GetUI_Digital_MessagesRows" msprop:Generator_UserRelationName="Firmware_UI_Digital_Messages" msprop:Generator_ParentPropName="FirmwareRow" msprop:Generator_RelationVarName="relationFirmware_UI_Digital_Messages" msprop:Generator_UserParentTable="Firmware" />
+      <msdata:Relationship name="Firmware_UI_EventLog_Messages" msdata:parent="Firmware" msdata:child="UI_EventLog_Messages" msdata:parentkey="SW_Code" msdata:childkey="UI_EL_SW_Code" msprop:Generator_UserChildTable="UI_EventLog_Messages" msprop:Generator_ChildPropName="GetUI_EventLog_MessagesRows" msprop:Generator_UserRelationName="Firmware_UI_EventLog_Messages" msprop:Generator_ParentPropName="FirmwareRow" msprop:Generator_RelationVarName="relationFirmware_UI_EventLog_Messages" msprop:Generator_UserParentTable="Firmware" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

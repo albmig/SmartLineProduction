@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartLineProduction", "SmartLineProduction.csproj", "{D0C7842B-7BE8-40FC-8C23-E75EFDE7F299}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D0C7842B-7BE8-40FC-8C23-E75EFDE7F299}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0C7842B-7BE8-40FC-8C23-E75EFDE7F299}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0C7842B-7BE8-40FC-8C23-E75EFDE7F299}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0C7842B-7BE8-40FC-8C23-E75EFDE7F299}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E7C23693-AAC4-4094-9116-C0761E766E4A}
+	EndGlobalSection
+EndGlobal

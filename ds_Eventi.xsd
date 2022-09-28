@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ds_Eventi" targetNamespace="http://tempuri.org/ds_Eventi.xsd" xmlns:mstns="http://tempuri.org/ds_Eventi.xsd" xmlns="http://tempuri.org/ds_Eventi.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SISTEMATICA_FACTORYConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SISTEMATICA_FACTORYConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SmartLineProduction.Properties.Settings.GlobalReference.Default.SISTEMATICA_FACTORYConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="UI_EventsTableAdapter" GeneratorDataComponentClassName="UI_EventsTableAdapter" Name="UI_Events" UserDataComponentName="UI_EventsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionString (Settings)" DbObjectName="SISTEMATICA_FACTORY.dbo.UI_Events" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT serialnumber, id, firmware, event, value, recorded_at, UI_EL_Multiplier, ValMolt, UI_EL_Desc_it, UI_EL_Desc_en FROM dbo.UI_Events</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="serialnumber" DataSetColumn="serialnumber" />
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="firmware" DataSetColumn="firmware" />
+              <Mapping SourceColumn="event" DataSetColumn="event" />
+              <Mapping SourceColumn="value" DataSetColumn="value" />
+              <Mapping SourceColumn="recorded_at" DataSetColumn="recorded_at" />
+              <Mapping SourceColumn="UI_EL_Multiplier" DataSetColumn="UI_EL_Multiplier" />
+              <Mapping SourceColumn="ValMolt" DataSetColumn="ValMolt" />
+              <Mapping SourceColumn="UI_EL_Desc_it" DataSetColumn="UI_EL_Desc_it" />
+              <Mapping SourceColumn="UI_EL_Desc_en" DataSetColumn="UI_EL_Desc_en" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="UI_Events_AnagTableAdapter" GeneratorDataComponentClassName="UI_Events_AnagTableAdapter" Name="UI_Events_Anag" UserDataComponentName="UI_Events_AnagTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionString (Settings)" DbObjectName="SISTEMATICA_FACTORY.dbo.UI_Events_Anag" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT serialnumber, Firmware, event, UI_EL_Desc_it, UI_EL_Desc_en, UI_EL_Multiplier FROM dbo.UI_Events_Anag</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="serialnumber" DataSetColumn="serialnumber" />
+              <Mapping SourceColumn="Firmware" DataSetColumn="Firmware" />
+              <Mapping SourceColumn="event" DataSetColumn="event" />
+              <Mapping SourceColumn="UI_EL_Desc_it" DataSetColumn="UI_EL_Desc_it" />
+              <Mapping SourceColumn="UI_EL_Desc_en" DataSetColumn="UI_EL_Desc_en" />
+              <Mapping SourceColumn="UI_EL_Multiplier" DataSetColumn="UI_EL_Multiplier" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ds_Eventi" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ds_Eventi" msprop:Generator_UserDSName="ds_Eventi">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="UI_Events" msprop:Generator_TableClassName="UI_EventsDataTable" msprop:Generator_TableVarName="tableUI_Events" msprop:Generator_RowChangedName="UI_EventsRowChanged" msprop:Generator_TablePropName="UI_Events" msprop:Generator_RowDeletingName="UI_EventsRowDeleting" msprop:Generator_RowChangingName="UI_EventsRowChanging" msprop:Generator_RowEvHandlerName="UI_EventsRowChangeEventHandler" msprop:Generator_RowDeletedName="UI_EventsRowDeleted" msprop:Generator_RowClassName="UI_EventsRow" msprop:Generator_UserTableName="UI_Events" msprop:Generator_RowEvArgName="UI_EventsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="serialnumber" msprop:Generator_ColumnVarNameInTable="columnserialnumber" msprop:Generator_ColumnPropNameInRow="serialnumber" msprop:Generator_ColumnPropNameInTable="serialnumberColumn" msprop:Generator_UserColumnName="serialnumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="firmware" msprop:Generator_ColumnVarNameInTable="columnfirmware" msprop:Generator_ColumnPropNameInRow="firmware" msprop:Generator_ColumnPropNameInTable="firmwareColumn" msprop:Generator_UserColumnName="firmware" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="event" msprop:Generator_ColumnVarNameInTable="columnevent" msprop:Generator_ColumnPropNameInRow="_event" msprop:Generator_ColumnPropNameInTable="eventColumn" msprop:Generator_UserColumnName="event" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="value" msprop:Generator_ColumnVarNameInTable="columnvalue" msprop:Generator_ColumnPropNameInRow="value" msprop:Generator_ColumnPropNameInTable="valueColumn" msprop:Generator_UserColumnName="value" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="recorded_at" msprop:Generator_ColumnVarNameInTable="columnrecorded_at" msprop:Generator_ColumnPropNameInRow="recorded_at" msprop:Generator_ColumnPropNameInTable="recorded_atColumn" msprop:Generator_UserColumnName="recorded_at" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="UI_EL_Multiplier" msprop:Generator_ColumnVarNameInTable="columnUI_EL_Multiplier" msprop:Generator_ColumnPropNameInRow="UI_EL_Multiplier" msprop:Generator_ColumnPropNameInTable="UI_EL_MultiplierColumn" msprop:Generator_UserColumnName="UI_EL_Multiplier" type="xs:double" minOccurs="0" />
+              <xs:element name="ValMolt" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnValMolt" msprop:Generator_ColumnPropNameInRow="ValMolt" msprop:Generator_ColumnPropNameInTable="ValMoltColumn" msprop:Generator_UserColumnName="ValMolt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="UI_EL_Desc_it" msprop:Generator_ColumnVarNameInTable="columnUI_EL_Desc_it" msprop:Generator_ColumnPropNameInRow="UI_EL_Desc_it" msprop:Generator_ColumnPropNameInTable="UI_EL_Desc_itColumn" msprop:Generator_UserColumnName="UI_EL_Desc_it" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_EL_Desc_en" msprop:Generator_ColumnVarNameInTable="columnUI_EL_Desc_en" msprop:Generator_ColumnPropNameInRow="UI_EL_Desc_en" msprop:Generator_ColumnPropNameInTable="UI_EL_Desc_enColumn" msprop:Generator_UserColumnName="UI_EL_Desc_en" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="UI_Events_Anag" msprop:Generator_TableClassName="UI_Events_AnagDataTable" msprop:Generator_TableVarName="tableUI_Events_Anag" msprop:Generator_TablePropName="UI_Events_Anag" msprop:Generator_RowDeletingName="UI_Events_AnagRowDeleting" msprop:Generator_RowChangingName="UI_Events_AnagRowChanging" msprop:Generator_RowEvHandlerName="UI_Events_AnagRowChangeEventHandler" msprop:Generator_RowDeletedName="UI_Events_AnagRowDeleted" msprop:Generator_UserTableName="UI_Events_Anag" msprop:Generator_RowChangedName="UI_Events_AnagRowChanged" msprop:Generator_RowEvArgName="UI_Events_AnagRowChangeEvent" msprop:Generator_RowClassName="UI_Events_AnagRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="serialnumber" msprop:Generator_ColumnVarNameInTable="columnserialnumber" msprop:Generator_ColumnPropNameInRow="serialnumber" msprop:Generator_ColumnPropNameInTable="serialnumberColumn" msprop:Generator_UserColumnName="serialnumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Firmware" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFirmware" msprop:Generator_ColumnPropNameInRow="Firmware" msprop:Generator_ColumnPropNameInTable="FirmwareColumn" msprop:Generator_UserColumnName="Firmware" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="event" msprop:Generator_ColumnVarNameInTable="columnevent" msprop:Generator_ColumnPropNameInRow="_event" msprop:Generator_ColumnPropNameInTable="eventColumn" msprop:Generator_UserColumnName="event" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_EL_Desc_it" msprop:Generator_ColumnVarNameInTable="columnUI_EL_Desc_it" msprop:Generator_ColumnPropNameInRow="UI_EL_Desc_it" msprop:Generator_ColumnPropNameInTable="UI_EL_Desc_itColumn" msprop:Generator_UserColumnName="UI_EL_Desc_it" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_EL_Desc_en" msprop:Generator_ColumnVarNameInTable="columnUI_EL_Desc_en" msprop:Generator_ColumnPropNameInRow="UI_EL_Desc_en" msprop:Generator_ColumnPropNameInTable="UI_EL_Desc_enColumn" msprop:Generator_UserColumnName="UI_EL_Desc_en" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UI_EL_Multiplier" msprop:Generator_ColumnVarNameInTable="columnUI_EL_Multiplier" msprop:Generator_ColumnPropNameInRow="UI_EL_Multiplier" msprop:Generator_ColumnPropNameInTable="UI_EL_MultiplierColumn" msprop:Generator_UserColumnName="UI_EL_Multiplier" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:UI_Events" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="UI_Events_Anag_UI_Events" msdata:parent="UI_Events_Anag" msdata:child="UI_Events" msdata:parentkey="serialnumber event" msdata:childkey="serialnumber event" msprop:Generator_UserChildTable="UI_Events" msprop:Generator_ChildPropName="GetUI_EventsRows" msprop:Generator_UserRelationName="UI_Events_Anag_UI_Events" msprop:Generator_RelationVarName="relationUI_Events_Anag_UI_Events" msprop:Generator_UserParentTable="UI_Events_Anag" msprop:Generator_ParentPropName="UI_Events_AnagRowParent" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

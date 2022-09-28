@@ -1,0 +1,51 @@
+﻿                //configLabel = Encoding.UTF8.GetBytes("^XA^FO17,16^GB379,371,8^FS^FT65,255^A0N,135,134^FDTEST^FS^XZ");
+                //string ZPL = "^XA";                              //Start of label format
+                //ZPL = ZPL + "^MMT";                              //Media Type = T -- thermal transfer
+                //ZPL = ZPL + "^MNV";                              //media tracking = V -- continuous media, variable length
+                ////ZPL = ZPL + "^MD";                             //media darkness -- da vedere
+                ////ZPL = ZPL + "^CFE,25";                         //Change Font
+
+                //ZPL = ZPL + "^FO00,00";                          //Set start position
+                //ZPL = ZPL + "^LT-60";                            //Label top position
+
+                //ZPL = ZPL + "^BXR,2,200";                        //Set Bar Code Datamatrix
+                //ZPL = ZPL + "^FD" + "3929202100000097" + "^FS";  //Data Field
+
+                //ZPL = ZPL + "^XZ";                               //End of label format
+
+                //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                int scostamento = 20;
+                scostamento = scostamento + Convert.ToInt32(cb_Correzione.Text);
+
+                string ZPL = "^XA";                              //Start of label format
+                ZPL = ZPL + "~TA000";                            //Tear-off Adjust Position
+                ZPL = ZPL + "^LT0";                              //Label Top
+                ZPL = ZPL + "^MTT";                              //Media Type = T -- thermal transfer
+                ZPL = ZPL + "^MMT";                              //
+                ZPL = ZPL + "^MNV";                              //media tracking = V -- continuous media, variable length
+                ZPL = ZPL + "^PR1";                              //Print Rate
+                ZPL = ZPL + "^PW368";                            //Print Width
+                ZPL = ZPL + "^LL0088";                           //Label Length
+                ZPL = ZPL + "^LT" + scostamento.ToString();      //Set start position
+                //ZPL = ZPL + "^FO60,0";                           //Set start position
+                ZPL = ZPL + "^BXN,3,200";                        //Set Bar Code Datamatrix
+                //ZPL = ZPL + "^FD" + "3929202100000097" + "^FS";  //Data Field
+                ZPL = ZPL + "^BY28,28^FT65,0^BXN,2,200,0,0,1,~";
+                //ZPL = ZPL + "^FH\\^FD3929202100000097^FS";
+                ZPL = ZPL + "^FH\\^FD" + glob_ser_num_write + "^FS";
+                ZPL = ZPL + "^BY28,28^FT190,0^BXN,2,200,0,0,1,~";
+                //ZPL = ZPL + "^FH\\^FD1901202100000095^FS";
+                ZPL = ZPL + "^FH\\^FD" + glob_ser_num_write + "^FS";
+
+                ZPL = ZPL + "^XZ";                               //End of label format
+                                                                 //ZPL = ZPL + "^POI";                            //Print Orientation
+                                                                 //ZPL = ZPL + "^JMA";                            //Set Dots per Millimeter - A = 24 dots/mm, 12 dots/mm, 8 dots/mm or 6 dots/mm
+                                                                 //ZPL = ZPL + "~SDA25";                          //Set Darkness
+                                                                 //ZPL = ZPL + "^CI9";                            //Change International Font/Encoding
+                                                                 //ZPL = ZPL + "^PQ4";                            //Print copies
+                                                                 //ZPL = ZPL + "^MD";                             //media darkness -- da vedere
+                                                                 //ZPL = ZPL + "^CFE,25";                         //Change Font
+                                                                 //ZPL = ZPL + "^LT-30";                          //Label top position
+                                                                 //ZPL = ZPL + "^LT10";                           //Label top position
+                                                                 //ZPL = ZPL + "^FO00,00^ADN,36,20^FDRRRRRRRRRRRR^FS";

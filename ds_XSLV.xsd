@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ds_XSLV" targetNamespace="http://tempuri.org/ds_XSLV.xsd" xmlns:mstns="http://tempuri.org/ds_XSLV.xsd" xmlns="http://tempuri.org/ds_XSLV.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SISTEMATICA_FACTORYConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SISTEMATICA_FACTORYConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SmartLineProduction.Properties.Settings.GlobalReference.Default.SISTEMATICA_FACTORYConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SF_Dbar_XSLVTableAdapter" GeneratorDataComponentClassName="SF_Dbar_XSLVTableAdapter" Name="SF_Dbar_XSLV" UserDataComponentName="SF_Dbar_XSLVTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT
+  RTRIM(DBAR0000.ArticoloComposto) AS ArticoloComposto
+ ,ARTA0000.Descrizione AS Des_Composto
+ ,ARTB0000.DescrizioneEstesa AS Des_Est_Composto
+ ,DBAR0000.ProgrComponente
+ ,RTRIM(DBAR0000.ArticoloComponente) AS ArticoloComponente
+ ,DBAR0000.Quantita
+ ,DBAR0000.UMComponente
+-- ,IIF((SUBSTRING(RTRIM(DBAR0000.ArticoloComponente), 5, 2) = 'SE'), 'LS', 'AL') as TipoScheda
+-- ,IIF((SUBSTRING(RTRIM(DBAR0000.ArticoloComponente), 5, 2) = 'SE'), 'LS', IIF((SUBSTRING(RTRIM(DBAR0000.ArticoloComponente), 1, 5) = 'XSLVSE'), 'LS', 'LA')) as TipoScheda
+ ,CASE 
+  WHEN (SUBSTRING(RTRIM(DBAR0000.ArticoloComponente), 1, 6) = 'XSLVSE') then 'LST'
+  WHEN (SUBSTRING(RTRIM(DBAR0000.ArticoloComponente), 1, 5) = 'XSLV0') then 'LSP'
+  WHEN (SUBSTRING(RTRIM(DBAR0000.ArticoloComponente), 1, 4) = 'XPCL') then 'COL'
+  END as TipoScheda
+FROM DYOPENG.dbo.DBAR0000
+LEFT OUTER JOIN DYOPENG.dbo.ARTA0000
+  ON DBAR0000.ArticoloComponente = ARTA0000.Articolo
+LEFT OUTER JOIN DYOPENG.dbo.ARTB0000
+  ON ARTA0000.Articolo = ARTB0000.Articolo
+WHERE CONVERT(VARCHAR, DBAR0000.DataFineValidita, 103) = '30/12/1899'
+AND (DBAR0000.ArticoloComponente LIKE 'XSLV%'
+OR DBAR0000.ArticoloComponente LIKE 'XPCL%')
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ArticoloComposto" DataSetColumn="ArticoloComposto" />
+              <Mapping SourceColumn="ProgrComponente" DataSetColumn="ProgrComponente" />
+              <Mapping SourceColumn="ArticoloComponente" DataSetColumn="ArticoloComponente" />
+              <Mapping SourceColumn="Quantita" DataSetColumn="Quantita" />
+              <Mapping SourceColumn="UMComponente" DataSetColumn="UMComponente" />
+              <Mapping SourceColumn="Des_Composto" DataSetColumn="Des_Composto" />
+              <Mapping SourceColumn="Des_Est_Composto" DataSetColumn="Des_Est_Composto" />
+              <Mapping SourceColumn="TipoScheda" DataSetColumn="TipoScheda" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ds_XSLV" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ds_XSLV" msprop:Generator_UserDSName="ds_XSLV">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SF_Dbar_XSLV" msprop:Generator_TableClassName="SF_Dbar_XSLVDataTable" msprop:Generator_TableVarName="tableSF_Dbar_XSLV" msprop:Generator_TablePropName="SF_Dbar_XSLV" msprop:Generator_RowDeletingName="SF_Dbar_XSLVRowDeleting" msprop:Generator_RowChangingName="SF_Dbar_XSLVRowChanging" msprop:Generator_RowEvHandlerName="SF_Dbar_XSLVRowChangeEventHandler" msprop:Generator_RowDeletedName="SF_Dbar_XSLVRowDeleted" msprop:Generator_UserTableName="SF_Dbar_XSLV" msprop:Generator_RowChangedName="SF_Dbar_XSLVRowChanged" msprop:Generator_RowEvArgName="SF_Dbar_XSLVRowChangeEvent" msprop:Generator_RowClassName="SF_Dbar_XSLVRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ArticoloComposto" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnArticoloComposto" msprop:Generator_ColumnPropNameInRow="ArticoloComposto" msprop:Generator_ColumnPropNameInTable="ArticoloCompostoColumn" msprop:Generator_UserColumnName="ArticoloComposto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProgrComponente" msprop:Generator_ColumnVarNameInTable="columnProgrComponente" msprop:Generator_ColumnPropNameInRow="ProgrComponente" msprop:Generator_ColumnPropNameInTable="ProgrComponenteColumn" msprop:Generator_UserColumnName="ProgrComponente" type="xs:int" />
+              <xs:element name="ArticoloComponente" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnArticoloComponente" msprop:Generator_ColumnPropNameInRow="ArticoloComponente" msprop:Generator_ColumnPropNameInTable="ArticoloComponenteColumn" msprop:Generator_UserColumnName="ArticoloComponente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Quantita" msprop:Generator_ColumnVarNameInTable="columnQuantita" msprop:Generator_ColumnPropNameInRow="Quantita" msprop:Generator_ColumnPropNameInTable="QuantitaColumn" msprop:Generator_UserColumnName="Quantita" type="xs:decimal" minOccurs="0" />
+              <xs:element name="UMComponente" msprop:Generator_ColumnVarNameInTable="columnUMComponente" msprop:Generator_ColumnPropNameInRow="UMComponente" msprop:Generator_ColumnPropNameInTable="UMComponenteColumn" msprop:Generator_UserColumnName="UMComponente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Des_Composto" msprop:Generator_ColumnVarNameInTable="columnDes_Composto" msprop:Generator_ColumnPropNameInRow="Des_Composto" msprop:Generator_ColumnPropNameInTable="Des_CompostoColumn" msprop:Generator_UserColumnName="Des_Composto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Des_Est_Composto" msprop:Generator_ColumnVarNameInTable="columnDes_Est_Composto" msprop:Generator_ColumnPropNameInRow="Des_Est_Composto" msprop:Generator_ColumnPropNameInTable="Des_Est_CompostoColumn" msprop:Generator_UserColumnName="Des_Est_Composto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TipoScheda" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTipoScheda" msprop:Generator_ColumnPropNameInRow="TipoScheda" msprop:Generator_ColumnPropNameInTable="TipoSchedaColumn" msprop:Generator_UserColumnName="TipoScheda" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
