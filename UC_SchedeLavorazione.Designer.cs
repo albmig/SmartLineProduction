@@ -35,7 +35,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_SchedeLavorazione));
             this.panel_tipo_slv = new MetroFramework.Controls.MetroPanel();
-            this.lab_tog_slv = new MetroFramework.Controls.MetroLabel();
+            this.lab_tog_slv_Spec = new MetroFramework.Controls.MetroLabel();
             this.tog_Slv = new DevExpress.XtraEditors.ToggleSwitch();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.pdfCommandBar1 = new DevExpress.XtraPdfViewer.Bars.PdfCommandBar();
@@ -90,6 +90,8 @@
             this.layout_orizz_menu = new System.Windows.Forms.TableLayoutPanel();
             this.pan_Menu_exit = new System.Windows.Forms.MenuStrip();
             this.menu_sw_exit = new System.Windows.Forms.ToolStripMenuItem();
+            this.layout_filtro_XSLV = new System.Windows.Forms.TableLayoutPanel();
+            this.lab_tog_slv_Std = new MetroFramework.Controls.MetroLabel();
             this.panel_tipo_slv.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tog_Slv.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
@@ -107,12 +109,12 @@
             this.panel_view.SuspendLayout();
             this.layout_orizz_menu.SuspendLayout();
             this.pan_Menu_exit.SuspendLayout();
+            this.layout_filtro_XSLV.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_tipo_slv
             // 
-            this.panel_tipo_slv.Controls.Add(this.lab_tog_slv);
-            this.panel_tipo_slv.Controls.Add(this.tog_Slv);
+            this.panel_tipo_slv.Controls.Add(this.layout_filtro_XSLV);
             this.panel_tipo_slv.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_tipo_slv.HorizontalScrollbarBarColor = true;
             this.panel_tipo_slv.HorizontalScrollbarHighlightOnWheel = false;
@@ -125,20 +127,24 @@
             this.panel_tipo_slv.VerticalScrollbarHighlightOnWheel = false;
             this.panel_tipo_slv.VerticalScrollbarSize = 10;
             // 
-            // lab_tog_slv
+            // lab_tog_slv_Spec
             // 
-            this.lab_tog_slv.AutoSize = true;
-            this.lab_tog_slv.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lab_tog_slv.Location = new System.Drawing.Point(0, 0);
-            this.lab_tog_slv.Name = "lab_tog_slv";
-            this.lab_tog_slv.Size = new System.Drawing.Size(81, 19);
-            this.lab_tog_slv.TabIndex = 4;
-            this.lab_tog_slv.Text = "metroLabel1";
+            this.lab_tog_slv_Spec.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lab_tog_slv_Spec.AutoSize = true;
+            this.lab_tog_slv_Spec.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lab_tog_slv_Spec.Location = new System.Drawing.Point(3, 3);
+            this.lab_tog_slv_Spec.Name = "lab_tog_slv_Spec";
+            this.lab_tog_slv_Spec.Size = new System.Drawing.Size(53, 19);
+            this.lab_tog_slv_Spec.Style = MetroFramework.MetroColorStyle.Red;
+            this.lab_tog_slv_Spec.TabIndex = 4;
+            this.lab_tog_slv_Spec.Text = "Speciali";
+            this.lab_tog_slv_Spec.UseStyleColors = true;
             // 
             // tog_Slv
             // 
             this.tog_Slv.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tog_Slv.Location = new System.Drawing.Point(120, 3);
+            this.tog_Slv.AutoSizeInLayoutControl = true;
+            this.tog_Slv.Location = new System.Drawing.Point(169, 3);
             this.tog_Slv.MenuManager = this.barManager1;
             this.tog_Slv.Name = "tog_Slv";
             this.tog_Slv.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -147,7 +153,7 @@
             this.tog_Slv.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.tog_Slv.Properties.OffText = "";
             this.tog_Slv.Properties.OnText = "";
-            this.tog_Slv.Size = new System.Drawing.Size(200, 20);
+            this.tog_Slv.Size = new System.Drawing.Size(55, 20);
             this.tog_Slv.TabIndex = 3;
             this.tog_Slv.Toggled += new System.EventHandler(this.tog_Slv_Toggled);
             // 
@@ -631,6 +637,7 @@
             this.sFDbarXSLVBindingSource.DataMember = "SF_Dbar_XSLV";
             this.sFDbarXSLVBindingSource.DataSource = this.ds_XSLV;
             this.sFDbarXSLVBindingSource.CurrentChanged += new System.EventHandler(this.sFDbarXSLVBindingSource_CurrentChanged);
+            this.sFDbarXSLVBindingSource.ListChanged += new System.ComponentModel.ListChangedEventHandler(this.sFDbarXSLVBindingSource_ListChanged);
             // 
             // ds_XSLV
             // 
@@ -748,6 +755,36 @@
             this.menu_sw_exit.Text = "Uscita";
             this.menu_sw_exit.Click += new System.EventHandler(this.menu_sw_exit_Click);
             // 
+            // layout_filtro_XSLV
+            // 
+            this.layout_filtro_XSLV.ColumnCount = 3;
+            this.layout_filtro_XSLV.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.layout_filtro_XSLV.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.layout_filtro_XSLV.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.layout_filtro_XSLV.Controls.Add(this.lab_tog_slv_Std, 2, 0);
+            this.layout_filtro_XSLV.Controls.Add(this.lab_tog_slv_Spec, 0, 0);
+            this.layout_filtro_XSLV.Controls.Add(this.tog_Slv, 1, 0);
+            this.layout_filtro_XSLV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layout_filtro_XSLV.Location = new System.Drawing.Point(0, 0);
+            this.layout_filtro_XSLV.Name = "layout_filtro_XSLV";
+            this.layout_filtro_XSLV.RowCount = 1;
+            this.layout_filtro_XSLV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.layout_filtro_XSLV.Size = new System.Drawing.Size(394, 26);
+            this.layout_filtro_XSLV.TabIndex = 5;
+            // 
+            // lab_tog_slv_Std
+            // 
+            this.lab_tog_slv_Std.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lab_tog_slv_Std.AutoSize = true;
+            this.lab_tog_slv_Std.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lab_tog_slv_Std.Location = new System.Drawing.Point(265, 3);
+            this.lab_tog_slv_Std.Name = "lab_tog_slv_Std";
+            this.lab_tog_slv_Std.Size = new System.Drawing.Size(126, 19);
+            this.lab_tog_slv_Std.Style = MetroFramework.MetroColorStyle.Red;
+            this.lab_tog_slv_Std.TabIndex = 5;
+            this.lab_tog_slv_Std.Text = "Standard / Collaudo";
+            this.lab_tog_slv_Std.UseStyleColors = true;
+            // 
             // UC_SchedeLavorazione
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -764,7 +801,6 @@
             this.Load += new System.EventHandler(this.UC_SchedeLavorazione_Load);
             this.Shown += new System.EventHandler(this.UC_SchedeLavorazione_Shown);
             this.panel_tipo_slv.ResumeLayout(false);
-            this.panel_tipo_slv.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tog_Slv.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPageNumberEdit1)).EndInit();
@@ -785,6 +821,8 @@
             this.layout_orizz_menu.PerformLayout();
             this.pan_Menu_exit.ResumeLayout(false);
             this.pan_Menu_exit.PerformLayout();
+            this.layout_filtro_XSLV.ResumeLayout(false);
+            this.layout_filtro_XSLV.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -845,6 +883,8 @@
         private System.Windows.Forms.TableLayoutPanel layout_orizz_menu;
         private System.Windows.Forms.MenuStrip pan_Menu_exit;
         private System.Windows.Forms.ToolStripMenuItem menu_sw_exit;
-        private MetroFramework.Controls.MetroLabel lab_tog_slv;
+        private MetroFramework.Controls.MetroLabel lab_tog_slv_Spec;
+        private System.Windows.Forms.TableLayoutPanel layout_filtro_XSLV;
+        private MetroFramework.Controls.MetroLabel lab_tog_slv_Std;
     }
 }

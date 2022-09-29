@@ -211,7 +211,7 @@ namespace SmartLineProduction
             panel_device.Visible = false;
             panel_result.Visible = false;
             if (tog_Slv.IsOn) { tog_Slv.Toggle(); };
-            if (tog_Slv.IsOn) { lab_tog_slv.Text = "Standard / Collaudo"; } else { lab_tog_slv.Text = "Speciali"; }
+            if (tog_Slv.IsOn) { lab_tog_slv_Spec.Visible = false; lab_tog_slv_Std.Visible = true; } else { lab_tog_slv_Spec.Visible = true; lab_tog_slv_Std.Visible = false; }
 
         }
 
@@ -286,15 +286,25 @@ namespace SmartLineProduction
             if (tog_Slv.IsOn)
             {
                 filtroprincipale = filtro_articolo + " AND " + filtro_standard;
-                lab_tog_slv.Text = "Standard / Collaudo";
+                lab_tog_slv_Spec.Visible = false;
+                lab_tog_slv_Std.Visible = true;
             }
             else
             {
                 filtroprincipale = filtro_articolo + " AND " + filtro_special;
-                lab_tog_slv.Text = "Speciali";
+                lab_tog_slv_Spec.Visible = true;
+                lab_tog_slv_Std.Visible = false;
             }
             sFDbarXSLVBindingSource.Filter = filtroprincipale;
 
+        }
+
+        private void sFDbarXSLVBindingSource_ListChanged(object sender, ListChangedEventArgs e)
+        {
+            if (sFDbarXSLVBindingSource.Count == 0)
+            {
+                pdf_viewer_xslv.LoadDocument(@"Resources\NO_XSLV.pdf");
+            }
         }
     }
 }
