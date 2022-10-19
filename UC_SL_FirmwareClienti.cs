@@ -26,14 +26,14 @@ namespace SmartLineProduction
 
         private void menu_sw_exit_Click(object sender, EventArgs e)
         {
-            string MessageBoxTitle = "Aggiornamento archivi in cloud";
-            string MessageBoxContent = "Effettuare l'aggiornamento?";
+            //string MessageBoxTitle = "Aggiornamento archivi in cloud";
+            //string MessageBoxContent = "Effettuare l'aggiornamento?";
 
-            DialogResult dialogResult = MessageBox.Show(MessageBoxContent, MessageBoxTitle, MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
-                ExecCmd();
-            }
+            //DialogResult dialogResult = MessageBox.Show(MessageBoxContent, MessageBoxTitle, MessageBoxButtons.YesNo);
+            //if (dialogResult == DialogResult.Yes)
+            //{
+            //    ExecCmd();
+            //}
 
             this.Close();
         }

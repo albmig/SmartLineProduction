@@ -396,6 +396,7 @@ namespace SmartLineProduction
             newrow["SW_P_Opt_Use_LedTorch"] = false;
             newrow["SW_P_Opt_MaxPairDevices"] = "1";
             newrow["SW_P_PLD"] = false;
+            newrow["SW_P_Opt_Use_Radius"] = false;
             ////
             newrow["SW_Obsolete_ver"] = false;
 
