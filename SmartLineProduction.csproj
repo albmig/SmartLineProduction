@@ -416,18 +416,6 @@
     <Compile Include="UC_FW_R.designer.cs">
       <DependentUpon>UC_FW_R.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_NCR_Search_Articoli.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UC_NCR_Search_Articoli.designer.cs">
-      <DependentUpon>UC_NCR_Search_Articoli.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UC_NCR_Search_Clienti.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UC_NCR_Search_Clienti.designer.cs">
-      <DependentUpon>UC_NCR_Search_Clienti.cs</DependentUpon>
-    </Compile>
     <Compile Include="UC_RealTime_Preview.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -475,18 +463,6 @@
     </Compile>
     <Compile Include="UC_Reprint_Label.designer.cs">
       <DependentUpon>UC_Reprint_Label.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UC_Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UC_Login.designer.cs">
-      <DependentUpon>UC_Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UC_Ncr.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UC_Ncr.Designer.cs">
-      <DependentUpon>UC_Ncr.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_ClassicDS.cs">
       <SubType>Form</SubType>
@@ -694,12 +670,6 @@
     <EmbeddedResource Include="UC_FW_R.resx">
       <DependentUpon>UC_FW_R.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_NCR_Search_Articoli.resx">
-      <DependentUpon>UC_NCR_Search_Articoli.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC_NCR_Search_Clienti.resx">
-      <DependentUpon>UC_NCR_Search_Clienti.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UC_RealTime_Preview.resx">
       <DependentUpon>UC_RealTime_Preview.cs</DependentUpon>
     </EmbeddedResource>
@@ -723,12 +693,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Reprint_Label.resx">
       <DependentUpon>UC_Reprint_Label.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC_Login.resx">
-      <DependentUpon>UC_Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC_Ncr.resx">
-      <DependentUpon>UC_Ncr.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_ClassicDS.resx">
       <DependentUpon>UC_ClassicDS.cs</DependentUpon>

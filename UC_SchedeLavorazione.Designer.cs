@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_SchedeLavorazione));
             this.panel_tipo_slv = new MetroFramework.Controls.MetroPanel();
+            this.layout_filtro_XSLV = new System.Windows.Forms.TableLayoutPanel();
+            this.lab_tog_slv_Std = new MetroFramework.Controls.MetroLabel();
             this.lab_tog_slv_Spec = new MetroFramework.Controls.MetroLabel();
             this.tog_Slv = new DevExpress.XtraEditors.ToggleSwitch();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
@@ -90,9 +92,8 @@
             this.layout_orizz_menu = new System.Windows.Forms.TableLayoutPanel();
             this.pan_Menu_exit = new System.Windows.Forms.MenuStrip();
             this.menu_sw_exit = new System.Windows.Forms.ToolStripMenuItem();
-            this.layout_filtro_XSLV = new System.Windows.Forms.TableLayoutPanel();
-            this.lab_tog_slv_Std = new MetroFramework.Controls.MetroLabel();
             this.panel_tipo_slv.SuspendLayout();
+            this.layout_filtro_XSLV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tog_Slv.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPageNumberEdit1)).BeginInit();
@@ -109,7 +110,6 @@
             this.panel_view.SuspendLayout();
             this.layout_orizz_menu.SuspendLayout();
             this.pan_Menu_exit.SuspendLayout();
-            this.layout_filtro_XSLV.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_tipo_slv
@@ -126,6 +126,36 @@
             this.panel_tipo_slv.VerticalScrollbarBarColor = true;
             this.panel_tipo_slv.VerticalScrollbarHighlightOnWheel = false;
             this.panel_tipo_slv.VerticalScrollbarSize = 10;
+            // 
+            // layout_filtro_XSLV
+            // 
+            this.layout_filtro_XSLV.ColumnCount = 3;
+            this.layout_filtro_XSLV.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.layout_filtro_XSLV.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.layout_filtro_XSLV.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.layout_filtro_XSLV.Controls.Add(this.lab_tog_slv_Std, 2, 0);
+            this.layout_filtro_XSLV.Controls.Add(this.lab_tog_slv_Spec, 0, 0);
+            this.layout_filtro_XSLV.Controls.Add(this.tog_Slv, 1, 0);
+            this.layout_filtro_XSLV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layout_filtro_XSLV.Location = new System.Drawing.Point(0, 0);
+            this.layout_filtro_XSLV.Name = "layout_filtro_XSLV";
+            this.layout_filtro_XSLV.RowCount = 1;
+            this.layout_filtro_XSLV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.layout_filtro_XSLV.Size = new System.Drawing.Size(394, 26);
+            this.layout_filtro_XSLV.TabIndex = 5;
+            // 
+            // lab_tog_slv_Std
+            // 
+            this.lab_tog_slv_Std.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lab_tog_slv_Std.AutoSize = true;
+            this.lab_tog_slv_Std.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lab_tog_slv_Std.Location = new System.Drawing.Point(265, 3);
+            this.lab_tog_slv_Std.Name = "lab_tog_slv_Std";
+            this.lab_tog_slv_Std.Size = new System.Drawing.Size(126, 19);
+            this.lab_tog_slv_Std.Style = MetroFramework.MetroColorStyle.Red;
+            this.lab_tog_slv_Std.TabIndex = 5;
+            this.lab_tog_slv_Std.Text = "Standard / Collaudo";
+            this.lab_tog_slv_Std.UseStyleColors = true;
             // 
             // lab_tog_slv_Spec
             // 
@@ -144,7 +174,7 @@
             // 
             this.tog_Slv.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tog_Slv.AutoSizeInLayoutControl = true;
-            this.tog_Slv.Location = new System.Drawing.Point(169, 3);
+            this.tog_Slv.Location = new System.Drawing.Point(169, 4);
             this.tog_Slv.MenuManager = this.barManager1;
             this.tog_Slv.Name = "tog_Slv";
             this.tog_Slv.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -548,35 +578,35 @@
             this.gv_result.AllowUserToAddRows = false;
             this.gv_result.AllowUserToDeleteRows = false;
             this.gv_result.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Gainsboro;
-            this.gv_result.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gainsboro;
+            this.gv_result.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.gv_result.AutoGenerateColumns = false;
             this.gv_result.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.gv_result.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gv_result.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.gv_result.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gv_result.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gv_result.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.gv_result.ColumnHeadersHeight = 40;
             this.gv_result.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ArticoloComposto,
             this.ArticoloComponente,
             this.desCompostoDataGridViewTextBoxColumn});
             this.gv_result.DataSource = this.sFDbarXSLVBindingSource;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gv_result.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gv_result.DefaultCellStyle = dataGridViewCellStyle3;
             this.gv_result.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gv_result.EnableHeadersVisualStyles = false;
             this.gv_result.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -586,14 +616,14 @@
             this.gv_result.Name = "gv_result";
             this.gv_result.ReadOnly = true;
             this.gv_result.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gv_result.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gv_result.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.gv_result.RowHeadersVisible = false;
             this.gv_result.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.gv_result.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Wheat;
@@ -755,36 +785,6 @@
             this.menu_sw_exit.Text = "Uscita";
             this.menu_sw_exit.Click += new System.EventHandler(this.menu_sw_exit_Click);
             // 
-            // layout_filtro_XSLV
-            // 
-            this.layout_filtro_XSLV.ColumnCount = 3;
-            this.layout_filtro_XSLV.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.layout_filtro_XSLV.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.layout_filtro_XSLV.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.layout_filtro_XSLV.Controls.Add(this.lab_tog_slv_Std, 2, 0);
-            this.layout_filtro_XSLV.Controls.Add(this.lab_tog_slv_Spec, 0, 0);
-            this.layout_filtro_XSLV.Controls.Add(this.tog_Slv, 1, 0);
-            this.layout_filtro_XSLV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layout_filtro_XSLV.Location = new System.Drawing.Point(0, 0);
-            this.layout_filtro_XSLV.Name = "layout_filtro_XSLV";
-            this.layout_filtro_XSLV.RowCount = 1;
-            this.layout_filtro_XSLV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.layout_filtro_XSLV.Size = new System.Drawing.Size(394, 26);
-            this.layout_filtro_XSLV.TabIndex = 5;
-            // 
-            // lab_tog_slv_Std
-            // 
-            this.lab_tog_slv_Std.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lab_tog_slv_Std.AutoSize = true;
-            this.lab_tog_slv_Std.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lab_tog_slv_Std.Location = new System.Drawing.Point(265, 3);
-            this.lab_tog_slv_Std.Name = "lab_tog_slv_Std";
-            this.lab_tog_slv_Std.Size = new System.Drawing.Size(126, 19);
-            this.lab_tog_slv_Std.Style = MetroFramework.MetroColorStyle.Red;
-            this.lab_tog_slv_Std.TabIndex = 5;
-            this.lab_tog_slv_Std.Text = "Standard / Collaudo";
-            this.lab_tog_slv_Std.UseStyleColors = true;
-            // 
             // UC_SchedeLavorazione
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -801,6 +801,8 @@
             this.Load += new System.EventHandler(this.UC_SchedeLavorazione_Load);
             this.Shown += new System.EventHandler(this.UC_SchedeLavorazione_Shown);
             this.panel_tipo_slv.ResumeLayout(false);
+            this.layout_filtro_XSLV.ResumeLayout(false);
+            this.layout_filtro_XSLV.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tog_Slv.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPageNumberEdit1)).EndInit();
@@ -821,8 +823,6 @@
             this.layout_orizz_menu.PerformLayout();
             this.pan_Menu_exit.ResumeLayout(false);
             this.pan_Menu_exit.PerformLayout();
-            this.layout_filtro_XSLV.ResumeLayout(false);
-            this.layout_filtro_XSLV.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -515,7 +515,6 @@
             this.compilazioneNCRToolStripMenuItem.Name = "compilazioneNCRToolStripMenuItem";
             this.compilazioneNCRToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
             this.compilazioneNCRToolStripMenuItem.Text = "Compilazione NCR";
-            this.compilazioneNCRToolStripMenuItem.Click += new System.EventHandler(this.compilazioneNCRToolStripMenuItem_Click);
             // 
             // progettiToolStripMenuItem
             // 

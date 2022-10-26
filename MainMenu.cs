@@ -453,19 +453,6 @@ namespace SmartLineProduction
             uC_SchedeLavorazione.Show();
         }
 
-        private void compilazioneNCRToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            GVar.CloseSplash = false;
-            Splash SplashDB = new Splash();
-            SplashDB.Show();
-
-            UC_Ncr uC_Ncr = new UC_Ncr();
-            SplashDB.Close();
-            uC_Ncr.MdiParent = this;
-            uC_Ncr.Dock = DockStyle.Fill;
-            uC_Ncr.Show();
-        }
-
         private void programmazionePerProgettazioneToolStripMenuItem_Click(object sender, EventArgs e)
         {
             GVar.CloseSplash = false;
@@ -567,7 +554,8 @@ namespace SmartLineProduction
         private void FindBrotherPrinters()
         {
             //Interroga 192.168.0.221 - TJ-4120TN_SL
-            int Result_ip_221 = BROLIB_DLL.openport(GVar.Brother_SL_addr);
+            //Eliminata l'interrogazione tramite openport in quanto crea processo di spool
+            //int Result_ip_221 = BROLIB_DLL.openport(GVar.Brother_SL_addr);
 
             //Interroga IP tramite ping
             bool Result_ping_221 = false;
@@ -578,7 +566,8 @@ namespace SmartLineProduction
                 if (reply.Status.ToString() == "Success") { Result_ping_221 = true; }
             }
             catch { }
-            if ((Result_ip_221 == 1) && (Result_ping_221))
+            //if ((Result_ip_221 == 1) && (Result_ping_221))
+            if (Result_ping_221)
             {
                 pic_221.Image = global::SmartLineProduction.Properties.Resources.Small_Icona_OK;
                 pic_221.Refresh();
@@ -590,7 +579,8 @@ namespace SmartLineProduction
             }
 
             //Interroga 192.168.0.222 - TJ-4120TN_Antiman
-            int Result_ip_222 = BROLIB_DLL.openport(GVar.Brother_Antiman_addr);
+            //Eliminata l'interrogazione tramite openport in quanto crea processo di spool
+            //int Result_ip_222 = BROLIB_DLL.openport(GVar.Brother_Antiman_addr);
 
             //Interroga IP tramite ping
             bool Result_ping_222 = false;
@@ -601,7 +591,8 @@ namespace SmartLineProduction
                 if (reply.Status.ToString() == "Success") { Result_ping_222 = true; }
             }
             catch { }
-            if ((Result_ip_222 == 1) && (Result_ping_222))
+            //if ((Result_ip_222 == 1) && (Result_ping_222))
+            if (Result_ping_222)
             {
                 pic_222.Image = global::SmartLineProduction.Properties.Resources.Small_Icona_OK;
                 pic_222.Refresh();
