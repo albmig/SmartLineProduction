@@ -362,6 +362,7 @@ namespace SmartLineProduction
             newrow["SW_R_Opt_ShiftPage"] = false;
             newrow["SW_Obsolete_ver"] = false;
             newrow["SW_R_Opt_Use_Radius"] = false;
+            newrow["SW_CustomPIC"] = false;
 
             ds_Programmazione.Firmware.Rows.Add(newrow);
             firmwareTableAdapter.Update(newrow);

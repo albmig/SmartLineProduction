@@ -986,8 +986,15 @@ namespace SmartLineProduction
                 ((glob_Device.Substring(0, 6) == "XPDEET") || (glob_Device.Substring(0, 3) == "XET")))
             {
                 UC_ConfirmTAG uC_ConfirmTAG = new UC_ConfirmTAG();
-                if (uC_ConfirmTAG.ShowDialog() == DialogResult.Cancel)
-                    return;
+                DialogResult diag = uC_ConfirmTAG.ShowDialog();
+
+                if (diag == DialogResult.Abort)
+                {
+                    uC_ConfirmTAG.tag_1 = "11:11:11:11:11:11:11";
+                    uC_ConfirmTAG.tag_2 = "22:22:22:22:22:22:22";
+                }
+                //if (uC_ConfirmTAG.ShowDialog() == DialogResult.Cancel)
+                //    return;
 
                 glob_tag_1 = uC_ConfirmTAG.tag_1;
                 glob_tag_2 = uC_ConfirmTAG.tag_2;

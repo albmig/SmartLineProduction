@@ -37,14 +37,18 @@ namespace SmartLineProduction
             this.safetyPointRFIDBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ds_Programmazione = new SmartLineProduction.ds_Programmazione();
             this.safetyPointRFIDTableAdapter = new SmartLineProduction.ds_ProgrammazioneTableAdapters.SafetyPointRFIDTableAdapter();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_Abort = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.safetyPointRFIDBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ds_Programmazione)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tb_Tag1
             // 
-            this.tb_Tag1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tb_Tag1.Location = new System.Drawing.Point(62, 53);
+            this.tb_Tag1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableLayoutPanel1.SetColumnSpan(this.tb_Tag1, 2);
+            this.tb_Tag1.Location = new System.Drawing.Point(41, 27);
             this.tb_Tag1.Name = "tb_Tag1";
             this.tb_Tag1.Size = new System.Drawing.Size(177, 20);
             this.tb_Tag1.TabIndex = 0;
@@ -54,8 +58,10 @@ namespace SmartLineProduction
             // 
             // lab_Tag1
             // 
+            this.lab_Tag1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lab_Tag1.AutoSize = true;
-            this.lab_Tag1.Location = new System.Drawing.Point(124, 31);
+            this.tableLayoutPanel1.SetColumnSpan(this.lab_Tag1, 2);
+            this.lab_Tag1.Location = new System.Drawing.Point(104, 2);
             this.lab_Tag1.Name = "lab_Tag1";
             this.lab_Tag1.Size = new System.Drawing.Size(52, 19);
             this.lab_Tag1.TabIndex = 1;
@@ -63,9 +69,10 @@ namespace SmartLineProduction
             // 
             // btn_Invia
             // 
-            this.btn_Invia.Location = new System.Drawing.Point(113, 155);
+            this.btn_Invia.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Invia.Location = new System.Drawing.Point(3, 123);
             this.btn_Invia.Name = "btn_Invia";
-            this.btn_Invia.Size = new System.Drawing.Size(75, 23);
+            this.btn_Invia.Size = new System.Drawing.Size(124, 23);
             this.btn_Invia.TabIndex = 1;
             this.btn_Invia.Text = "Invia";
             this.btn_Invia.UseSelectable = true;
@@ -73,8 +80,10 @@ namespace SmartLineProduction
             // 
             // metroLabel1
             // 
+            this.metroLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(124, 87);
+            this.tableLayoutPanel1.SetColumnSpan(this.metroLabel1, 2);
+            this.metroLabel1.Location = new System.Drawing.Point(103, 50);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(54, 19);
             this.metroLabel1.TabIndex = 3;
@@ -82,8 +91,9 @@ namespace SmartLineProduction
             // 
             // tb_Tag2
             // 
-            this.tb_Tag2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tb_Tag2.Location = new System.Drawing.Point(62, 109);
+            this.tb_Tag2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableLayoutPanel1.SetColumnSpan(this.tb_Tag2, 2);
+            this.tb_Tag2.Location = new System.Drawing.Point(41, 75);
             this.tb_Tag2.Name = "tb_Tag2";
             this.tb_Tag2.Size = new System.Drawing.Size(177, 20);
             this.tb_Tag2.TabIndex = 2;
@@ -105,6 +115,43 @@ namespace SmartLineProduction
             // 
             this.safetyPointRFIDTableAdapter.ClearBeforeFill = true;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.lab_Tag1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btn_Invia, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.tb_Tag2, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel1, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.tb_Tag1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btn_Abort, 1, 5);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(20, 30);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 6;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(260, 150);
+            this.tableLayoutPanel1.TabIndex = 4;
+            // 
+            // btn_Abort
+            // 
+            this.btn_Abort.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Abort.BackColor = System.Drawing.Color.Red;
+            this.btn_Abort.DialogResult = System.Windows.Forms.DialogResult.Abort;
+            this.btn_Abort.Location = new System.Drawing.Point(133, 123);
+            this.btn_Abort.Name = "btn_Abort";
+            this.btn_Abort.Size = new System.Drawing.Size(124, 23);
+            this.btn_Abort.TabIndex = 4;
+            this.btn_Abort.Text = "NON ASSOCIARE TAG";
+            this.btn_Abort.UseCustomBackColor = true;
+            this.btn_Abort.UseSelectable = true;
+            // 
             // UC_ConfirmTAG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -112,21 +159,19 @@ namespace SmartLineProduction
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(300, 200);
             this.ControlBox = false;
-            this.Controls.Add(this.metroLabel1);
-            this.Controls.Add(this.tb_Tag2);
-            this.Controls.Add(this.btn_Invia);
-            this.Controls.Add(this.lab_Tag1);
-            this.Controls.Add(this.tb_Tag1);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.DisplayHeader = false;
             this.Name = "UC_ConfirmTAG";
             this.Padding = new System.Windows.Forms.Padding(20, 30, 20, 20);
             this.Style = MetroFramework.MetroColorStyle.Red;
             this.Text = "UC_ConfirmTAG";
             this.Load += new System.EventHandler(this.UC_ConfirmTAG_Load);
+            this.Validating += new System.ComponentModel.CancelEventHandler(this.UC_ConfirmTAG_Validating);
             ((System.ComponentModel.ISupportInitialize)(this.safetyPointRFIDBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ds_Programmazione)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -140,5 +185,7 @@ namespace SmartLineProduction
         private ds_Programmazione ds_Programmazione;
         private System.Windows.Forms.BindingSource safetyPointRFIDBindingSource;
         private ds_ProgrammazioneTableAdapters.SafetyPointRFIDTableAdapter safetyPointRFIDTableAdapter;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private MetroFramework.Controls.MetroButton btn_Abort;
     }
 }

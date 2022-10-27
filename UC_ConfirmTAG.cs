@@ -24,6 +24,18 @@ namespace SmartLineProduction
         {
             tag_1 = tb_Tag1.Text;
             tag_2 = tb_Tag2.Text;
+            if (tb_Tag1.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("Impossibile proseguire, inserire valore TAG # 1!");
+                tb_Tag1.Focus();
+                return;
+            }
+            if (tb_Tag2.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("Impossibile proseguire, inserire valore TAG # 2!");
+                tb_Tag2.Focus();
+                return;
+            }
 
             this.DialogResult = DialogResult.OK;
         }
@@ -135,11 +147,32 @@ namespace SmartLineProduction
                     MessageBox.Show("Impossibile proseguire, il TAG non è stato verificato!");
                     return false;
                 }
+
+                if (current["Rfid_Ser_SN_Prod"].ToString().Trim() != string.Empty)
+                {
+                    MessageBox.Show("Impossibile proseguire, il TAG è già stato associato al Serial Number n.: "+ current["Rfid_Ser_SN_Prod"].ToString().Trim());
+                    return false;
+                }
+
                 return true;
             }
             else
             {
                 return false;
+            }
+        }
+
+        private void UC_ConfirmTAG_Validating(object sender, CancelEventArgs e)
+        {
+            if (tb_Tag1.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("Valore mancante - TAG #1");
+                tb_Tag1.Focus();
+            }
+            if (tb_Tag2.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("Valore mancante - TAG #2");
+                tb_Tag2.Focus();
             }
         }
     }
