@@ -64,6 +64,12 @@
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.tb_gv_Code = new MetroFramework.Controls.MetroTextBox();
             this.panel_dati = new MetroFramework.Controls.MetroPanel();
+            this.group_Lock = new System.Windows.Forms.GroupBox();
+            this.cb_Lock_3 = new System.Windows.Forms.CheckBox();
+            this.cb_Lock_2 = new System.Windows.Forms.CheckBox();
+            this.cb_Lock_1 = new System.Windows.Forms.CheckBox();
+            this.cb_Lock_0 = new System.Windows.Forms.CheckBox();
+            this.metroLabel40 = new MetroFramework.Controls.MetroLabel();
             this.tog_PIC = new MetroFramework.Controls.MetroToggle();
             this.metroLabel39 = new MetroFramework.Controls.MetroLabel();
             this.tog_Radius = new MetroFramework.Controls.MetroToggle();
@@ -175,6 +181,7 @@
             this.panel_filter_FW.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ds_SL)).BeginInit();
             this.panel_dati.SuspendLayout();
+            this.group_Lock.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel_freq.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv_Famiglia)).BeginInit();
@@ -502,6 +509,7 @@
             // panel_dati
             // 
             this.layout_dati.SetColumnSpan(this.panel_dati, 2);
+            this.panel_dati.Controls.Add(this.group_Lock);
             this.panel_dati.Controls.Add(this.tog_PIC);
             this.panel_dati.Controls.Add(this.metroLabel39);
             this.panel_dati.Controls.Add(this.tog_Radius);
@@ -553,11 +561,78 @@
             this.panel_dati.HorizontalScrollbarSize = 10;
             this.panel_dati.Location = new System.Drawing.Point(3, 3);
             this.panel_dati.Name = "panel_dati";
-            this.panel_dati.Size = new System.Drawing.Size(874, 600);
+            this.panel_dati.Size = new System.Drawing.Size(874, 630);
             this.panel_dati.TabIndex = 77;
             this.panel_dati.VerticalScrollbarBarColor = true;
             this.panel_dati.VerticalScrollbarHighlightOnWheel = false;
             this.panel_dati.VerticalScrollbarSize = 10;
+            // 
+            // group_Lock
+            // 
+            this.group_Lock.Controls.Add(this.cb_Lock_3);
+            this.group_Lock.Controls.Add(this.cb_Lock_2);
+            this.group_Lock.Controls.Add(this.cb_Lock_1);
+            this.group_Lock.Controls.Add(this.cb_Lock_0);
+            this.group_Lock.Controls.Add(this.metroLabel40);
+            this.group_Lock.Location = new System.Drawing.Point(6, 590);
+            this.group_Lock.Name = "group_Lock";
+            this.group_Lock.Size = new System.Drawing.Size(678, 34);
+            this.group_Lock.TabIndex = 136;
+            this.group_Lock.TabStop = false;
+            // 
+            // cb_Lock_3
+            // 
+            this.cb_Lock_3.AutoSize = true;
+            this.cb_Lock_3.Location = new System.Drawing.Point(558, 13);
+            this.cb_Lock_3.Name = "cb_Lock_3";
+            this.cb_Lock_3.Size = new System.Drawing.Size(114, 17);
+            this.cb_Lock_3.TabIndex = 113;
+            this.cb_Lock_3.Text = "3 - Solo questo Fw";
+            this.cb_Lock_3.UseVisualStyleBackColor = true;
+            this.cb_Lock_3.Click += new System.EventHandler(this.cb_Lock_3_Click);
+            // 
+            // cb_Lock_2
+            // 
+            this.cb_Lock_2.AutoSize = true;
+            this.cb_Lock_2.Location = new System.Drawing.Point(387, 13);
+            this.cb_Lock_2.Name = "cb_Lock_2";
+            this.cb_Lock_2.Size = new System.Drawing.Size(134, 17);
+            this.cb_Lock_2.TabIndex = 112;
+            this.cb_Lock_2.Text = "2 - Fw Lock del Cliente";
+            this.cb_Lock_2.UseVisualStyleBackColor = true;
+            this.cb_Lock_2.Click += new System.EventHandler(this.cb_Lock_2_Click);
+            // 
+            // cb_Lock_1
+            // 
+            this.cb_Lock_1.AutoSize = true;
+            this.cb_Lock_1.Location = new System.Drawing.Point(265, 13);
+            this.cb_Lock_1.Name = "cb_Lock_1";
+            this.cb_Lock_1.Size = new System.Drawing.Size(85, 17);
+            this.cb_Lock_1.TabIndex = 111;
+            this.cb_Lock_1.Text = "1 - Fw Lock ";
+            this.cb_Lock_1.UseVisualStyleBackColor = true;
+            this.cb_Lock_1.Click += new System.EventHandler(this.cb_Lock_1_Click);
+            // 
+            // cb_Lock_0
+            // 
+            this.cb_Lock_0.AutoSize = true;
+            this.cb_Lock_0.Location = new System.Drawing.Point(146, 13);
+            this.cb_Lock_0.Name = "cb_Lock_0";
+            this.cb_Lock_0.Size = new System.Drawing.Size(82, 17);
+            this.cb_Lock_0.TabIndex = 110;
+            this.cb_Lock_0.Text = "0 - No Lock";
+            this.cb_Lock_0.UseVisualStyleBackColor = true;
+            this.cb_Lock_0.Click += new System.EventHandler(this.cb_Lock_0_Click);
+            // 
+            // metroLabel40
+            // 
+            this.metroLabel40.AutoSize = true;
+            this.metroLabel40.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel40.Location = new System.Drawing.Point(3, 12);
+            this.metroLabel40.Name = "metroLabel40";
+            this.metroLabel40.Size = new System.Drawing.Size(72, 19);
+            this.metroLabel40.TabIndex = 109;
+            this.metroLabel40.Text = "Lock Level";
             // 
             // tog_PIC
             // 
@@ -1620,7 +1695,7 @@
             this.panel_funzionamento.HorizontalScrollbarBarColor = true;
             this.panel_funzionamento.HorizontalScrollbarHighlightOnWheel = false;
             this.panel_funzionamento.HorizontalScrollbarSize = 10;
-            this.panel_funzionamento.Location = new System.Drawing.Point(443, 609);
+            this.panel_funzionamento.Location = new System.Drawing.Point(443, 639);
             this.panel_funzionamento.Name = "panel_funzionamento";
             this.panel_funzionamento.Size = new System.Drawing.Size(434, 228);
             this.panel_funzionamento.TabIndex = 80;
@@ -1662,7 +1737,7 @@
             this.panel_history.Location = new System.Drawing.Point(883, 3);
             this.panel_history.Name = "panel_history";
             this.layout_dati.SetRowSpan(this.panel_history, 2);
-            this.panel_history.Size = new System.Drawing.Size(215, 834);
+            this.panel_history.Size = new System.Drawing.Size(215, 864);
             this.panel_history.TabIndex = 78;
             this.panel_history.VerticalScrollbarBarColor = true;
             this.panel_history.VerticalScrollbarHighlightOnWheel = false;
@@ -1719,7 +1794,7 @@
             this.gv_history.RowHeadersVisible = false;
             this.gv_history.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.gv_history.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gv_history.Size = new System.Drawing.Size(215, 796);
+            this.gv_history.Size = new System.Drawing.Size(215, 826);
             this.gv_history.Style = MetroFramework.MetroColorStyle.Red;
             this.gv_history.TabIndex = 4;
             this.gv_history.UseStyleColors = true;
@@ -1788,7 +1863,7 @@
             this.panel_revisioni.HorizontalScrollbarBarColor = true;
             this.panel_revisioni.HorizontalScrollbarHighlightOnWheel = false;
             this.panel_revisioni.HorizontalScrollbarSize = 10;
-            this.panel_revisioni.Location = new System.Drawing.Point(3, 609);
+            this.panel_revisioni.Location = new System.Drawing.Point(3, 639);
             this.panel_revisioni.Name = "panel_revisioni";
             this.panel_revisioni.Size = new System.Drawing.Size(434, 228);
             this.panel_revisioni.TabIndex = 79;
@@ -1998,6 +2073,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ds_SL)).EndInit();
             this.panel_dati.ResumeLayout(false);
             this.panel_dati.PerformLayout();
+            this.group_Lock.ResumeLayout(false);
+            this.group_Lock.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel_freq.ResumeLayout(false);
@@ -2152,5 +2229,11 @@
         private MetroFramework.Controls.MetroLabel metroLabel34;
         private MetroFramework.Controls.MetroToggle tog_PIC;
         private MetroFramework.Controls.MetroLabel metroLabel39;
+        private System.Windows.Forms.GroupBox group_Lock;
+        private System.Windows.Forms.CheckBox cb_Lock_3;
+        private System.Windows.Forms.CheckBox cb_Lock_2;
+        private System.Windows.Forms.CheckBox cb_Lock_1;
+        private System.Windows.Forms.CheckBox cb_Lock_0;
+        private MetroFramework.Controls.MetroLabel metroLabel40;
     }
 }

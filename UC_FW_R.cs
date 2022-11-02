@@ -20,54 +20,17 @@ namespace SmartLineProduction
     {
         private string displayform = "V"; // V-View/INV-InsertNewVersion/INR-InsertNewRelease/CLO-CloneFirmware
         private string filtroincorso = "";
+
+        private int LockLevel = 0;
+
         public UC_FW_R()
         {
             InitializeComponent();
         }
 
-        private void uscitaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void UC_FW_R_Load(object sender, EventArgs e)
-        {
-            // TODO: questa riga di codice carica i dati nella tabella 'ds_SL.Fam_Prod'. È possibile spostarla o rimuoverla se necessario.
-            this.fam_ProdTableAdapter.FillBy_Famiglie_FW_R(this.ds_SL.Fam_Prod);
-
-            // TODO: questa riga di codice carica i dati nella tabella 'ds_SL.Firmware'. È possibile spostarla o rimuoverla se necessario.
-            this.firmwareTableAdapter.Fill(this.ds_Programmazione.Firmware);
-
-            GVar.formclosing = false;
-
-            displayform = "V";
-
-            AbilitaForm();
-            radio_FW_all.Checked = true;
-            radio_FW_standard.Checked = false;
-            radio_FW_custom.Checked = false;
-
-            firmwareBindingSource.MoveFirst();
-            if (firmwareBindingSource.Current != null)
-            {
-                DB2Riga();
-            }
-        }
-
-        private void gv_FW_R_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
-        {
-            if (GVar.formclosing) { return; }
-
-            foreach (DataGridViewRow x in gv_FW_R.Rows)
-            {
-                x.MinimumHeight = 30;
-            }
-        }
-
-        private void UC_FW_R_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            GVar.formclosing = true;
-        }
+        ////////////////////////////////////////////////////////////////////////////////
+        /// Private functions
+        ////////////////////////////////////////////////////////////////////////////////
 
         private void AbilitaForm()
         {
@@ -94,6 +57,7 @@ namespace SmartLineProduction
                 pan_Menu_salva.Enabled = false;
 
                 gv_FW_R.Enabled = true;
+                group_Lock.Enabled = false;
             }
 
             if (displayform == "INR")
@@ -132,6 +96,7 @@ namespace SmartLineProduction
                 tb_gv_Revisione.Focus();
 
                 gv_FW_R.Enabled = false;
+                group_Lock.Enabled = false;
             }
 
             if (displayform == "CLO")
@@ -164,6 +129,7 @@ namespace SmartLineProduction
                 tb_gv_Revisione.Focus();
 
                 gv_FW_R.Enabled = false;
+                group_Lock.Enabled = true;
             }
 
             if (displayform == "INV")
@@ -213,10 +179,318 @@ namespace SmartLineProduction
                 tb_gv_Revisione.Focus();
 
                 gv_FW_R.Enabled = false;
+
+                LockLevel = 0;
+                group_Lock.Enabled = true;
             }
+
+            ManageLock(LockLevel);
 
             gv_history.DataSource = null;
             gv_history.Refresh();
+        }
+
+        private void Riga2DB()
+        {
+            var newrow = ds_Programmazione.Firmware.NewRow();
+
+            newrow["SW_Code"] = tb_gv_Code.Text;
+            newrow["SW_TipoDevice"] = "R";
+            newrow["SW_Versione"] = tb_gv_Versione.Text;
+            newrow["SW_Revisione"] = tb_gv_Revisione.Text;
+            newrow["SW_Descrizione"] = tb_gv_Des1.Text;
+            newrow["SW_Descrizione_EN"] = tb_gv_Des2.Text;
+            if (cbox_SoftwareStandard.Checked) { newrow["SW_Standard"] = true; } else { newrow["SW_Standard"] = false; }
+            if (tog_Exp.Checked) { newrow["SW_R_Opt_Plug_Exp"] = true; } else { newrow["SW_R_Opt_Plug_Exp"] = false; }
+            if (tog_Ple.Checked) { newrow["SW_R_Opt_Plug_Ple"] = true; } else { newrow["SW_R_Opt_Plug_Ple"] = false; }
+            if (tog_TstEm.Checked) { newrow["SW_R_Opt_Em_Keyb"] = true; } else { newrow["SW_R_Opt_Em_Keyb"] = false; }
+            if (tog_optCan.Checked) { newrow["SW_R_Opt_Can"] = true; } else { newrow["SW_R_Opt_Can"] = false; }
+            if (tog_Prop.Checked) { newrow["SW_R_Opt_Prop_Out"] = true; } else { newrow["SW_R_Opt_Prop_Out"] = false; }
+            newrow["SW_R_Opt_TimeOut"] = tb_gv_TimeOut.Text;
+            newrow["SW_R_Opt_Cont_Keys"] = Int32.Parse(tb_gv_ContKeys.Text);
+            if (tog_SameRow.Checked) { newrow["SW_R_Opt_LockSameRow"] = true; } else { newrow["SW_R_Opt_LockSameRow"] = false; }
+            if (tog_SP.Checked) { newrow["SW_R_Opt_Use_SP"] = true; } else { newrow["SW_R_Opt_Use_SP"] = false; }
+            newrow["SW_R_Opt_MaxPairDevices"] = tb_gv_MaxPair.Text;
+            if (tog_ShiftPage.Checked) { newrow["SW_R_Opt_ShiftPage"] = true; } else { newrow["SW_R_Opt_ShiftPage"] = false; }
+            newrow["SW_R_Opt_Output_No"] = tb_gv_OutputN.Text;
+            newrow["SW_R_Opt_Dig_Input_No"] = tb_gv_DigInputN.Text;
+            newrow["SW_R_Opt_Ana_Input_No"] = tb_gv_AnaInputN.Text;
+            if (tog_Radius.Checked) { newrow["SW_R_Opt_Use_Radius"] = true; } else { newrow["SW_R_Opt_Use_Radius"] = false; }
+            newrow["SW_Revisioni"] = rtb_Revisioni.Text;
+            newrow["SW_Funzionamento"] = rtb_Funzionamento.Text;
+            if (tog_PIC.Checked) { newrow["SW_CustomPIC"] = true; } else { newrow["SW_CustomPIC"] = false; }
+
+            if (cb_868.Checked) { newrow["SW_R_Opt_RF"] = "868|24"; }
+            if (cb_433.Checked) { newrow["SW_R_Opt_RF"] = "433"; }
+            if (cb_915.Checked) { newrow["SW_R_Opt_RF"] = "915"; }
+            if (cb_filo.Checked) { newrow["SW_R_Opt_RF"] = "filo"; }
+            if (cb_24.Checked) { newrow["SW_R_Opt_RF"] = "24"; }
+
+            string famcomp = "";
+            foreach (DataGridViewRow fam_row in gv_Famiglia.Rows)
+            {
+                bool isSelected = Convert.ToBoolean(fam_row.Cells["gv_Famiglia_Check"].EditedFormattedValue);
+                if (isSelected)
+                {
+                    famcomp = famcomp + fam_row.Cells["gv_Famiglia_Ident"].Value.ToString();
+                }
+            }
+            newrow["SW_FamProd"] = famcomp;
+
+            newrow["SW_Revisioni"] = rtb_Revisioni.Text;
+            newrow["SW_Funzionamento"] = rtb_Funzionamento.Text;
+            newrow["SW_R_Lock"] = LockLevel;
+
+            //Campi da riempire NOT NULL
+            newrow["SW_P_Opt_RF"] = newrow["SW_R_Opt_RF"];
+            newrow["SW_P_Opt_Use_Oled"] = false;
+            newrow["SW_P_Opt_Use_EmButt"] = false;
+            newrow["SW_P_Opt_Use_Backlight"] = false;
+            newrow["SW_P_Opt_ShiftPage"] = false;
+            newrow["SW_P_Opt_Use_Accel"] = false;
+            newrow["SW_P_Opt_Use_SP"] = false;
+            newrow["SW_P_Opt_Use_Buzzer"] = false;
+            newrow["SW_P_Opt_Use_Vibracall"] = false;
+            newrow["SW_P_Opt_Use_LedTorch"] = false;
+            newrow["SW_P_Opt_MaxPairDevices"] = "1";
+            newrow["SW_P_PLD"] = false;
+            newrow["SW_P_Opt_Use_Radius"] = false;
+            ////
+            newrow["SW_Obsolete_ver"] = false;
+            newrow["SW_P_Lock"] = 0;
+
+
+            ds_Programmazione.Firmware.Rows.Add(newrow);
+            firmwareTableAdapter.Update(newrow);
+        }
+
+        private void DB2Riga()
+        {
+            DataRowView myRow = (DataRowView)firmwareBindingSource.Current;
+
+            tb_gv_Code.Text = myRow["SW_Code"].ToString();
+            tb_gv_Versione.Text = myRow["SW_Versione"].ToString();
+            tb_gv_Revisione.Text = myRow["SW_Revisione"].ToString();
+
+            tb_gv_Des1.Text = myRow["SW_Descrizione"].ToString();
+            tb_gv_Des2.Text = myRow["SW_Descrizione_EN"].ToString();
+            bool standard = (bool)myRow["SW_Standard"];
+            if (standard) { cbox_SoftwareStandard.Checked = true; } else { cbox_SoftwareStandard.Checked = false; }
+
+            cb_868.Checked = false;
+            cb_433.Checked = false;
+            cb_915.Checked = false;
+            cb_filo.Checked = false;
+            cb_24.Checked = false;
+
+            switch (myRow["SW_R_Opt_RF"].ToString())
+            {
+                case "868|24": cb_868.Checked = true; break;
+                case "915": cb_915.Checked = true; break;
+                case "433": cb_433.Checked = true; break;
+                case "24": cb_24.Checked = true; break;
+                case "filo": cb_filo.Checked = true; break;
+                default: break;
+            }
+            tog_Exp.Checked = (bool)myRow["SW_R_Opt_Plug_Exp"];
+            tog_Ple.Checked = (bool)myRow["SW_R_Opt_Plug_Ple"];
+            tog_TstEm.Checked = (bool)myRow["SW_R_Opt_Em_Keyb"];
+            tog_optCan.Checked = (bool)myRow["SW_R_Opt_Can"];
+            tog_Prop.Checked = (bool)myRow["SW_R_Opt_Prop_Out"];
+            tb_gv_TimeOut.Text = (string)myRow["SW_R_Opt_TimeOut"];
+            tb_gv_ContKeys.Text = myRow["SW_R_Opt_Cont_Keys"].ToString();
+            tog_SameRow.Checked = (bool)myRow["SW_R_Opt_LockSameRow"];
+            tog_SP.Checked = (bool)myRow["SW_R_Opt_Use_SP"];
+            tb_gv_MaxPair.Text = myRow["SW_R_Opt_MaxPairDevices"].ToString();
+            tog_ShiftPage.Checked = (bool)myRow["SW_R_Opt_ShiftPage"];
+            tb_gv_OutputN.Text = myRow["SW_R_Opt_Output_No"].ToString();
+            tb_gv_DigInputN.Text = myRow["SW_R_Opt_Dig_Input_No"].ToString();
+            tb_gv_AnaInputN.Text = myRow["SW_R_Opt_Ana_Input_No"].ToString();
+            tog_Radius.Checked = (bool)myRow["SW_R_Opt_Use_Radius"];
+            rtb_Revisioni.Text = myRow["SW_Revisioni"].ToString();
+            rtb_Funzionamento.Text = myRow["SW_Funzionamento"].ToString();
+            tog_PIC.Checked = (bool)myRow["SW_CustomPIC"];
+
+            LockLevel = (int)myRow["SW_R_Lock"];
+            ManageLock(LockLevel);
+
+            //Crea grid History
+            string filtrohistory = "SW_TipoDevice = 'R' and SW_Obsolete_ver and SW_Code = '" + myRow["SW_Code"].ToString() + "'";
+            DataView dv_R_history = new DataView(ds_Programmazione.Firmware);
+            dv_R_history.RowFilter = filtrohistory;
+            gv_history.DataSource = dv_R_history;
+            dv_R_history.Sort = "SW_Obsolete_ver_from_date DESC";
+            gv_history.Refresh();
+            ///////////////////////////////////
+
+            //Crea Grid Famiglia
+            string famiglie = myRow["SW_FamProd"].ToString();
+            foreach (DataGridViewRow famrow in gv_Famiglia.Rows)
+            {
+                string cella = famrow.Cells["gv_Famiglia_Ident"].Value.ToString(); //trova identificatore della famiglia
+
+                DataGridViewCheckBoxCell cellcheck = (DataGridViewCheckBoxCell)famrow.Cells["gv_Famiglia_Check"];
+                char identificatore = Convert.ToChar(famrow.Cells["gv_Famiglia_Ident"].Value);
+                bool trovato = false;
+                if (famiglie.IndexOf(identificatore) == -1) { trovato = false; } else { trovato = true; }
+
+                if (cellcheck.Value != null)
+                {
+                    if (cellcheck.Value.Equals(cellcheck.FalseValue))
+                    {
+                        cellcheck.Value = cellcheck.TrueValue;
+                    }
+                    else
+                    {
+                        cellcheck.Value = cellcheck.FalseValue;
+                    }
+                }
+                else
+                {
+                    cellcheck.Value = true;
+                }
+
+
+                if (trovato)
+                {
+                    famrow.Cells["gv_Famiglia_Check"].Value = true;
+                }
+                else
+                {
+                    famrow.Cells["gv_Famiglia_Check"].Value = false;
+                }
+
+                this.gv_Famiglia.RefreshEdit();
+            }
+
+            gv_Famiglia.ClearSelection();
+            gv_history.ClearSelection();
+        }
+
+        private void CreaCodice()
+        {
+            if ((tb_gv_Versione.Text != "") && (tb_gv_Revisione.Text != ""))
+            {
+                string code = "XSWRR";
+
+                if (cbox_SoftwareStandard.Checked) { code = code + "S"; } else { code = code + "C"; }
+
+                code = code + tb_gv_Versione.Text.ToUpper();
+
+                string freq = "";
+                if (cb_868.Checked) { freq = "X"; }
+                if (cb_915.Checked) { freq = "A"; }
+                if (cb_433.Checked) { freq = "B"; }
+                if (cb_filo.Checked) { freq = "N"; }
+                if (cb_24.Checked) { freq = "G"; }
+
+                code = code + freq + "_L";
+                tb_gv_Code.Text = code;
+                tb_gv_Code.Refresh();
+            }
+        }
+
+        private void SetView()
+        {
+            SetFilter();
+            firmwareBindingSource.Filter = filtroincorso;
+
+            firmwareBindingSource.MoveFirst();
+            if (firmwareBindingSource.Current != null)
+            {
+                DB2Riga();
+            }
+
+            gv_FW_R.Refresh();
+        }
+
+        private void SetFilter()
+        {
+            filtroincorso = "SW_TipoDevice = 'R' and not SW_Obsolete_ver";
+
+            if (GVar.gl_tipofiltro_FW_R == "A") { filtroincorso = filtroincorso; }
+            if (GVar.gl_tipofiltro_FW_R == "S") { filtroincorso = filtroincorso + " and (SW_Standard = 1)"; }
+            if (GVar.gl_tipofiltro_FW_R == "C") { filtroincorso = filtroincorso + " and (SW_Standard = 0)"; }
+
+        }
+
+        private void ManageLock(int LockLevel)
+        {
+            switch (LockLevel)
+            {
+                case 0:
+                    cb_Lock_0.Checked = true;
+                    cb_Lock_1.Checked = false;
+                    cb_Lock_2.Checked = false;
+                    cb_Lock_3.Checked = false;
+                    break;
+                case 1:
+                    cb_Lock_0.Checked = false;
+                    cb_Lock_1.Checked = true;
+                    cb_Lock_2.Checked = false;
+                    cb_Lock_3.Checked = false;
+                    break;
+                case 2:
+                    cb_Lock_0.Checked = false;
+                    cb_Lock_1.Checked = false;
+                    cb_Lock_2.Checked = true;
+                    cb_Lock_3.Checked = false;
+                    break;
+                case 3:
+                    cb_Lock_0.Checked = false;
+                    cb_Lock_1.Checked = false;
+                    cb_Lock_2.Checked = false;
+                    cb_Lock_3.Checked = true;
+                    break;
+            }
+        }
+
+        ////////////////////////////////////////////////////////////////////////////////
+        /// Generated functions
+        ////////////////////////////////////////////////////////////////////////////////
+
+        private void uscitaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void UC_FW_R_Load(object sender, EventArgs e)
+        {
+            // TODO: questa riga di codice carica i dati nella tabella 'ds_SL.Fam_Prod'. È possibile spostarla o rimuoverla se necessario.
+            this.fam_ProdTableAdapter.FillBy_Famiglie_FW_R(this.ds_SL.Fam_Prod);
+
+            // TODO: questa riga di codice carica i dati nella tabella 'ds_SL.Firmware'. È possibile spostarla o rimuoverla se necessario.
+            this.firmwareTableAdapter.Fill(this.ds_Programmazione.Firmware);
+
+            GVar.formclosing = false;
+
+            displayform = "V";
+
+            AbilitaForm();
+            radio_FW_all.Checked = true;
+            radio_FW_standard.Checked = false;
+            radio_FW_custom.Checked = false;
+
+            firmwareBindingSource.MoveFirst();
+            if (firmwareBindingSource.Current != null)
+            {
+                DB2Riga();
+            }
+        }
+
+        private void gv_FW_R_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            if (GVar.formclosing) { return; }
+
+            foreach (DataGridViewRow x in gv_FW_R.Rows)
+            {
+                x.MinimumHeight = 30;
+            }
+        }
+
+        private void UC_FW_R_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            GVar.formclosing = true;
         }
 
         private void gv_history_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
@@ -333,178 +607,6 @@ namespace SmartLineProduction
             AbilitaForm();
         }
 
-        private void Riga2DB()
-        {
-            var newrow = ds_Programmazione.Firmware.NewRow();
-
-            newrow["SW_Code"] = tb_gv_Code.Text;
-            newrow["SW_TipoDevice"] = "R";
-            newrow["SW_Versione"] = tb_gv_Versione.Text;
-            newrow["SW_Revisione"] = tb_gv_Revisione.Text;
-            newrow["SW_Descrizione"] = tb_gv_Des1.Text;
-            newrow["SW_Descrizione_EN"] = tb_gv_Des2.Text;
-            if (cbox_SoftwareStandard.Checked) { newrow["SW_Standard"] = true; } else { newrow["SW_Standard"] = false; }
-            if (tog_Exp.Checked) { newrow["SW_R_Opt_Plug_Exp"] = true; } else { newrow["SW_R_Opt_Plug_Exp"] = false; }
-            if (tog_Ple.Checked) { newrow["SW_R_Opt_Plug_Ple"] = true; } else { newrow["SW_R_Opt_Plug_Ple"] = false; }
-            if (tog_TstEm.Checked) { newrow["SW_R_Opt_Em_Keyb"] = true; } else { newrow["SW_R_Opt_Em_Keyb"] = false; }
-            if (tog_optCan.Checked) { newrow["SW_R_Opt_Can"] = true; } else { newrow["SW_R_Opt_Can"] = false; }
-            if (tog_Prop.Checked) { newrow["SW_R_Opt_Prop_Out"] = true; } else { newrow["SW_R_Opt_Prop_Out"] = false; }
-            newrow["SW_R_Opt_TimeOut"] = tb_gv_TimeOut.Text;
-            newrow["SW_R_Opt_Cont_Keys"] = Int32.Parse(tb_gv_ContKeys.Text);
-            if (tog_SameRow.Checked) { newrow["SW_R_Opt_LockSameRow"] = true; } else { newrow["SW_R_Opt_LockSameRow"] = false; }
-            if (tog_SP.Checked) { newrow["SW_R_Opt_Use_SP"] = true; } else { newrow["SW_R_Opt_Use_SP"] = false; }
-            newrow["SW_R_Opt_MaxPairDevices"] = tb_gv_MaxPair.Text;
-            if (tog_ShiftPage.Checked) { newrow["SW_R_Opt_ShiftPage"] = true; } else { newrow["SW_R_Opt_ShiftPage"] = false; }
-            newrow["SW_R_Opt_Output_No"] = tb_gv_OutputN.Text;
-            newrow["SW_R_Opt_Dig_Input_No"] = tb_gv_DigInputN.Text;
-            newrow["SW_R_Opt_Ana_Input_No"] = tb_gv_AnaInputN.Text;
-            if (tog_Radius.Checked) { newrow["SW_R_Opt_Use_Radius"] = true; } else { newrow["SW_R_Opt_Use_Radius"] = false; }
-            newrow["SW_Revisioni"] = rtb_Revisioni.Text;
-            newrow["SW_Funzionamento"] = rtb_Funzionamento.Text;
-            if (tog_PIC.Checked) { newrow["SW_CustomPIC"] = true; } else { newrow["SW_CustomPIC"] = false; }
-
-            if (cb_868.Checked) { newrow["SW_R_Opt_RF"] = "868|24"; }
-            if (cb_433.Checked) { newrow["SW_R_Opt_RF"] = "433"; }
-            if (cb_915.Checked) { newrow["SW_R_Opt_RF"] = "915"; }
-            if (cb_filo.Checked) { newrow["SW_R_Opt_RF"] = "filo"; }
-            if (cb_24.Checked) { newrow["SW_R_Opt_RF"] = "24"; }
-
-            string famcomp = "";
-            foreach (DataGridViewRow fam_row in gv_Famiglia.Rows)
-            {
-                bool isSelected = Convert.ToBoolean(fam_row.Cells["gv_Famiglia_Check"].EditedFormattedValue);
-                if (isSelected)
-                {
-                    famcomp = famcomp + fam_row.Cells["gv_Famiglia_Ident"].Value.ToString();
-                }
-            }
-            newrow["SW_FamProd"] = famcomp;
-
-            newrow["SW_Revisioni"] = rtb_Revisioni.Text;
-            newrow["SW_Funzionamento"] = rtb_Funzionamento.Text;
-
-            //Campi da riempire NOT NULL
-            newrow["SW_P_Opt_RF"] = newrow["SW_R_Opt_RF"];
-            newrow["SW_P_Opt_Use_Oled"] = false;
-            newrow["SW_P_Opt_Use_EmButt"] = false;
-            newrow["SW_P_Opt_Use_Backlight"] = false;
-            newrow["SW_P_Opt_ShiftPage"] = false;
-            newrow["SW_P_Opt_Use_Accel"] = false;
-            newrow["SW_P_Opt_Use_SP"] = false;
-            newrow["SW_P_Opt_Use_Buzzer"] = false;
-            newrow["SW_P_Opt_Use_Vibracall"] = false;
-            newrow["SW_P_Opt_Use_LedTorch"] = false;
-            newrow["SW_P_Opt_MaxPairDevices"] = "1";
-            newrow["SW_P_PLD"] = false;
-            newrow["SW_P_Opt_Use_Radius"] = false;
-            ////
-            newrow["SW_Obsolete_ver"] = false;
-
-
-            ds_Programmazione.Firmware.Rows.Add(newrow);
-            firmwareTableAdapter.Update(newrow);
-        }
-
-        private void DB2Riga()
-        {
-            DataRowView myRow = (DataRowView)firmwareBindingSource.Current;
-
-            tb_gv_Code.Text = myRow["SW_Code"].ToString();
-            tb_gv_Versione.Text = myRow["SW_Versione"].ToString();
-            tb_gv_Revisione.Text = myRow["SW_Revisione"].ToString();
-
-            tb_gv_Des1.Text = myRow["SW_Descrizione"].ToString();
-            tb_gv_Des2.Text = myRow["SW_Descrizione_EN"].ToString();
-            bool standard = (bool)myRow["SW_Standard"];
-            if (standard) { cbox_SoftwareStandard.Checked = true; } else { cbox_SoftwareStandard.Checked = false; }
-
-            cb_868.Checked = false;
-            cb_433.Checked = false;
-            cb_915.Checked = false;
-            cb_filo.Checked = false;
-            cb_24.Checked = false;
-
-            switch (myRow["SW_R_Opt_RF"].ToString())
-            {
-                case "868|24": cb_868.Checked = true; break;
-                case "915": cb_915.Checked = true; break;
-                case "433": cb_433.Checked = true; break;
-                case "24": cb_24.Checked = true; break;
-                case "filo": cb_filo.Checked = true; break;
-                default: break;
-            }
-            tog_Exp.Checked = (bool)myRow["SW_R_Opt_Plug_Exp"];
-            tog_Ple.Checked = (bool)myRow["SW_R_Opt_Plug_Ple"];
-            tog_TstEm.Checked = (bool)myRow["SW_R_Opt_Em_Keyb"];
-            tog_optCan.Checked = (bool)myRow["SW_R_Opt_Can"];
-            tog_Prop.Checked = (bool)myRow["SW_R_Opt_Prop_Out"];
-            tb_gv_TimeOut.Text = (string)myRow["SW_R_Opt_TimeOut"];
-            tb_gv_ContKeys.Text = myRow["SW_R_Opt_Cont_Keys"].ToString();
-            tog_SameRow.Checked = (bool)myRow["SW_R_Opt_LockSameRow"];
-            tog_SP.Checked = (bool)myRow["SW_R_Opt_Use_SP"];
-            tb_gv_MaxPair.Text = myRow["SW_R_Opt_MaxPairDevices"].ToString();
-            tog_ShiftPage.Checked = (bool)myRow["SW_R_Opt_ShiftPage"];
-            tb_gv_OutputN.Text = myRow["SW_R_Opt_Output_No"].ToString();
-            tb_gv_DigInputN.Text = myRow["SW_R_Opt_Dig_Input_No"].ToString();
-            tb_gv_AnaInputN.Text = myRow["SW_R_Opt_Ana_Input_No"].ToString();
-            tog_Radius.Checked= (bool)myRow["SW_R_Opt_Use_Radius"];
-            rtb_Revisioni.Text = myRow["SW_Revisioni"].ToString();
-            rtb_Funzionamento.Text = myRow["SW_Funzionamento"].ToString();
-            tog_PIC.Checked = (bool)myRow["SW_CustomPIC"];
-
-            //Crea grid History
-            string filtrohistory = "SW_TipoDevice = 'R' and SW_Obsolete_ver and SW_Code = '" + myRow["SW_Code"].ToString() + "'";
-            DataView dv_R_history = new DataView(ds_Programmazione.Firmware);
-            dv_R_history.RowFilter = filtrohistory;
-            gv_history.DataSource = dv_R_history;
-            dv_R_history.Sort = "SW_Obsolete_ver_from_date DESC";
-            gv_history.Refresh();
-            ///////////////////////////////////
-
-            //Crea Grid Famiglia
-            string famiglie = myRow["SW_FamProd"].ToString();
-            foreach (DataGridViewRow famrow in gv_Famiglia.Rows)
-            {
-                string cella = famrow.Cells["gv_Famiglia_Ident"].Value.ToString(); //trova identificatore della famiglia
-
-                DataGridViewCheckBoxCell cellcheck = (DataGridViewCheckBoxCell)famrow.Cells["gv_Famiglia_Check"];
-                char identificatore = Convert.ToChar(famrow.Cells["gv_Famiglia_Ident"].Value);
-                bool trovato = false;
-                if (famiglie.IndexOf(identificatore) == -1) { trovato = false; } else { trovato = true; }
-
-                if (cellcheck.Value != null)
-                {
-                    if (cellcheck.Value.Equals(cellcheck.FalseValue))
-                    {
-                        cellcheck.Value = cellcheck.TrueValue;
-                    }
-                    else
-                    {
-                        cellcheck.Value = cellcheck.FalseValue;
-                    }
-                }
-                else
-                {
-                    cellcheck.Value = true;
-                }
-
-
-                if (trovato) 
-                {
-                    famrow.Cells["gv_Famiglia_Check"].Value = true;
-                }
-                else
-                {
-                    famrow.Cells["gv_Famiglia_Check"].Value = false;
-                }
-
-                this.gv_Famiglia.RefreshEdit();
-            }
-
-            gv_Famiglia.ClearSelection();
-            gv_history.ClearSelection();
-        }
-
         private void firmwareBindingSource_CurrentChanged(object sender, EventArgs e)
         {
             DB2Riga();
@@ -518,29 +620,6 @@ namespace SmartLineProduction
             var sourceRow = ((DataRowView)firmwareBindingSource.Current).Row;
             AbilitaForm();
             tb_gv_Versione.Focus();
-        }
-
-        private void CreaCodice()
-        {
-            if ((tb_gv_Versione.Text != "") && (tb_gv_Revisione.Text != ""))
-            {
-                string code = "XSWRR";
-
-                if (cbox_SoftwareStandard.Checked) { code = code + "S"; } else { code = code + "C"; }
-
-                code = code + tb_gv_Versione.Text.ToUpper();
-
-                string freq = "";
-                if (cb_868.Checked) { freq = "X"; }
-                if (cb_915.Checked) { freq = "A"; }
-                if (cb_433.Checked) { freq = "B"; }
-                if (cb_filo.Checked) { freq = "N"; }
-                if (cb_24.Checked) { freq = "G"; }
-
-                code = code + freq + "_L";
-                tb_gv_Code.Text = code;
-                tb_gv_Code.Refresh();
-            }
         }
 
         private void tb_gv_Versione_Validating(object sender, CancelEventArgs e)
@@ -655,29 +734,24 @@ namespace SmartLineProduction
             SetView();
         }
 
-        private void SetView()
+        private void cb_Lock_0_Click(object sender, EventArgs e)
         {
-            SetFilter();
-            firmwareBindingSource.Filter = filtroincorso;
-
-            firmwareBindingSource.MoveFirst();
-            if (firmwareBindingSource.Current != null)
-            {
-                DB2Riga();
-            }
-
-            gv_FW_R.Refresh();
+            ManageLock(0);
         }
 
-        private void SetFilter()
+        private void cb_Lock_1_Click(object sender, EventArgs e)
         {
-            filtroincorso = "SW_TipoDevice = 'R' and not SW_Obsolete_ver";
-
-            if (GVar.gl_tipofiltro_FW_R == "A") { filtroincorso = filtroincorso; }
-            if (GVar.gl_tipofiltro_FW_R == "S") { filtroincorso = filtroincorso + " and (SW_Standard = 1)"; }
-            if (GVar.gl_tipofiltro_FW_R == "C") { filtroincorso = filtroincorso + " and (SW_Standard = 0)"; }
-
+            ManageLock(1);
         }
 
+        private void cb_Lock_2_Click(object sender, EventArgs e)
+        {
+            ManageLock(2);
+        }
+
+        private void cb_Lock_3_Click(object sender, EventArgs e)
+        {
+            ManageLock(3);
+        }
     }
 }
