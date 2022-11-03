@@ -3909,6 +3909,8 @@ namespace SmartLineProduction {
             
             private global::System.Data.DataColumn columnSer_Note;
             
+            private global::System.Data.DataColumn columnSer_LockLevel;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public SerialNumbersDataTable() {
@@ -4080,6 +4082,14 @@ namespace SmartLineProduction {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_LockLevelColumn {
+                get {
+                    return this.columnSer_LockLevel;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -4131,7 +4141,8 @@ namespace SmartLineProduction {
                         bool Ser_Spedito, 
                         System.DateTime Ser_Data_Spedito, 
                         string Ser_Substition_ID_ReadSerial, 
-                        string Ser_Note) {
+                        string Ser_Note, 
+                        int Ser_LockLevel) {
                 SerialNumbersRow rowSerialNumbersRow = ((SerialNumbersRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -4150,7 +4161,8 @@ namespace SmartLineProduction {
                         Ser_Spedito,
                         Ser_Data_Spedito,
                         Ser_Substition_ID_ReadSerial,
-                        Ser_Note};
+                        Ser_Note,
+                        Ser_LockLevel};
                 rowSerialNumbersRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSerialNumbersRow);
                 return rowSerialNumbersRow;
@@ -4197,6 +4209,7 @@ namespace SmartLineProduction {
                 this.columnSer_Data_Spedito = base.Columns["Ser_Data_Spedito"];
                 this.columnSer_Substition_ID_ReadSerial = base.Columns["Ser_Substition_ID_ReadSerial"];
                 this.columnSer_Note = base.Columns["Ser_Note"];
+                this.columnSer_LockLevel = base.Columns["Ser_LockLevel"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4236,6 +4249,8 @@ namespace SmartLineProduction {
                 base.Columns.Add(this.columnSer_Substition_ID_ReadSerial);
                 this.columnSer_Note = new global::System.Data.DataColumn("Ser_Note", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSer_Note);
+                this.columnSer_LockLevel = new global::System.Data.DataColumn("Ser_LockLevel", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_LockLevel);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
@@ -4466,6 +4481,10 @@ namespace SmartLineProduction {
             private global::System.Data.DataColumn columnSW_Obsolete_ver;
             
             private global::System.Data.DataColumn columnSW_Obsolete_ver_from_date;
+            
+            private global::System.Data.DataColumn columnSW_P_Lock;
+            
+            private global::System.Data.DataColumn columnSW_R_Lock;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -4814,6 +4833,22 @@ namespace SmartLineProduction {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_LockColumn {
+                get {
+                    return this.columnSW_P_Lock;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_LockColumn {
+                get {
+                    return this.columnSW_R_Lock;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -4887,7 +4922,9 @@ namespace SmartLineProduction {
                         string SW_Funzionamento, 
                         string SW_Config, 
                         bool SW_Obsolete_ver, 
-                        System.DateTime SW_Obsolete_ver_from_date) {
+                        System.DateTime SW_Obsolete_ver_from_date, 
+                        int SW_P_Lock, 
+                        int SW_R_Lock) {
                 dt_Firmware_lookupCommesseSLRow rowdt_Firmware_lookupCommesseSLRow = ((dt_Firmware_lookupCommesseSLRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -4928,7 +4965,9 @@ namespace SmartLineProduction {
                         SW_Funzionamento,
                         SW_Config,
                         SW_Obsolete_ver,
-                        SW_Obsolete_ver_from_date};
+                        SW_Obsolete_ver_from_date,
+                        SW_P_Lock,
+                        SW_R_Lock};
                 rowdt_Firmware_lookupCommesseSLRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowdt_Firmware_lookupCommesseSLRow);
                 return rowdt_Firmware_lookupCommesseSLRow;
@@ -4997,6 +5036,8 @@ namespace SmartLineProduction {
                 this.columnSW_Config = base.Columns["SW_Config"];
                 this.columnSW_Obsolete_ver = base.Columns["SW_Obsolete_ver"];
                 this.columnSW_Obsolete_ver_from_date = base.Columns["SW_Obsolete_ver_from_date"];
+                this.columnSW_P_Lock = base.Columns["SW_P_Lock"];
+                this.columnSW_R_Lock = base.Columns["SW_R_Lock"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5080,6 +5121,10 @@ namespace SmartLineProduction {
                 base.Columns.Add(this.columnSW_Obsolete_ver);
                 this.columnSW_Obsolete_ver_from_date = new global::System.Data.DataColumn("SW_Obsolete_ver_from_date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSW_Obsolete_ver_from_date);
+                this.columnSW_P_Lock = new global::System.Data.DataColumn("SW_P_Lock", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Lock);
+                this.columnSW_R_Lock = new global::System.Data.DataColumn("SW_R_Lock", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Lock);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
@@ -5291,6 +5336,8 @@ namespace SmartLineProduction {
             
             private global::System.Data.DataColumn columnSer_ObsoleteFromDate;
             
+            private global::System.Data.DataColumn columnSer_LockLevel;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public SerialNumbers_ObsoleteDataTable() {
@@ -5462,6 +5509,14 @@ namespace SmartLineProduction {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_LockLevelColumn {
+                get {
+                    return this.columnSer_LockLevel;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -5514,7 +5569,8 @@ namespace SmartLineProduction {
                         System.DateTime Ser_Data_Spedito, 
                         string Ser_Substition_ID_ReadSerial, 
                         string Ser_Note, 
-                        System.DateTime Ser_ObsoleteFromDate) {
+                        System.DateTime Ser_ObsoleteFromDate, 
+                        int Ser_LockLevel) {
                 SerialNumbers_ObsoleteRow rowSerialNumbers_ObsoleteRow = ((SerialNumbers_ObsoleteRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Ser_Kit,
@@ -5533,7 +5589,8 @@ namespace SmartLineProduction {
                         Ser_Data_Spedito,
                         Ser_Substition_ID_ReadSerial,
                         Ser_Note,
-                        Ser_ObsoleteFromDate};
+                        Ser_ObsoleteFromDate,
+                        Ser_LockLevel};
                 rowSerialNumbers_ObsoleteRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSerialNumbers_ObsoleteRow);
                 return rowSerialNumbers_ObsoleteRow;
@@ -5573,6 +5630,7 @@ namespace SmartLineProduction {
                 this.columnSer_Substition_ID_ReadSerial = base.Columns["Ser_Substition_ID_ReadSerial"];
                 this.columnSer_Note = base.Columns["Ser_Note"];
                 this.columnSer_ObsoleteFromDate = base.Columns["Ser_ObsoleteFromDate"];
+                this.columnSer_LockLevel = base.Columns["Ser_LockLevel"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5612,6 +5670,8 @@ namespace SmartLineProduction {
                 base.Columns.Add(this.columnSer_Note);
                 this.columnSer_ObsoleteFromDate = new global::System.Data.DataColumn("Ser_ObsoleteFromDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSer_ObsoleteFromDate);
+                this.columnSer_LockLevel = new global::System.Data.DataColumn("Ser_LockLevel", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_LockLevel);
                 this.columnSer_Kit.MaxLength = 25;
                 this.columnSer_Device.MaxLength = 25;
                 this.columnSer_Device_ID_Code.MaxLength = 4;
@@ -9768,6 +9828,22 @@ namespace SmartLineProduction {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Ser_LockLevel {
+                get {
+                    try {
+                        return ((int)(this[this.tableSerialNumbers.Ser_LockLevelColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Ser_LockLevel\' nella tabella \'SerialNumbers\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSerialNumbers.Ser_LockLevelColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsSer_KitNull() {
                 return this.IsNull(this.tableSerialNumbers.Ser_KitColumn);
             }
@@ -9944,6 +10020,18 @@ namespace SmartLineProduction {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetSer_NoteNull() {
                 this[this.tableSerialNumbers.Ser_NoteColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSer_LockLevelNull() {
+                return this.IsNull(this.tableSerialNumbers.Ser_LockLevelColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSer_LockLevelNull() {
+                this[this.tableSerialNumbers.Ser_LockLevelColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -10476,6 +10564,40 @@ namespace SmartLineProduction {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int SW_P_Lock {
+                get {
+                    try {
+                        return ((int)(this[this.tabledt_Firmware_lookupCommesseSL.SW_P_LockColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_P_Lock\' nella tabella \'dt_Firmware_lookupCommesseSL\' " +
+                                "è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseSL.SW_P_LockColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int SW_R_Lock {
+                get {
+                    try {
+                        return ((int)(this[this.tabledt_Firmware_lookupCommesseSL.SW_R_LockColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_R_Lock\' nella tabella \'dt_Firmware_lookupCommesseSL\' " +
+                                "è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseSL.SW_R_LockColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsSW_DescrizioneNull() {
                 return this.IsNull(this.tabledt_Firmware_lookupCommesseSL.SW_DescrizioneColumn);
             }
@@ -10640,6 +10762,30 @@ namespace SmartLineProduction {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetSW_Obsolete_ver_from_dateNull() {
                 this[this.tabledt_Firmware_lookupCommesseSL.SW_Obsolete_ver_from_dateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_P_LockNull() {
+                return this.IsNull(this.tabledt_Firmware_lookupCommesseSL.SW_P_LockColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_P_LockNull() {
+                this[this.tabledt_Firmware_lookupCommesseSL.SW_P_LockColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_R_LockNull() {
+                return this.IsNull(this.tabledt_Firmware_lookupCommesseSL.SW_R_LockColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_R_LockNull() {
+                this[this.tabledt_Firmware_lookupCommesseSL.SW_R_LockColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -10942,6 +11088,23 @@ namespace SmartLineProduction {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Ser_LockLevel {
+                get {
+                    try {
+                        return ((int)(this[this.tableSerialNumbers_Obsolete.Ser_LockLevelColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Ser_LockLevel\' nella tabella \'SerialNumbers_Obsolete\' è " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSerialNumbers_Obsolete.Ser_LockLevelColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsSer_KitNull() {
                 return this.IsNull(this.tableSerialNumbers_Obsolete.Ser_KitColumn);
             }
@@ -11130,6 +11293,18 @@ namespace SmartLineProduction {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetSer_ObsoleteFromDateNull() {
                 this[this.tableSerialNumbers_Obsolete.Ser_ObsoleteFromDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSer_LockLevelNull() {
+                return this.IsNull(this.tableSerialNumbers_Obsolete.Ser_LockLevelColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSer_LockLevelNull() {
+                this[this.tableSerialNumbers_Obsolete.Ser_LockLevelColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -15519,6 +15694,7 @@ WHERE        (SF_Commesse_SL.Is_Kit = '1') OR
             tableMapping.ColumnMappings.Add("Ser_Data_Spedito", "Ser_Data_Spedito");
             tableMapping.ColumnMappings.Add("Ser_Substition_ID_ReadSerial", "Ser_Substition_ID_ReadSerial");
             tableMapping.ColumnMappings.Add("Ser_Note", "Ser_Note");
+            tableMapping.ColumnMappings.Add("Ser_LockLevel", "Ser_LockLevel");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -15543,7 +15719,8 @@ WHERE        (SF_Commesse_SL.Is_Kit = '1') OR
                 "ta_Spedito = 1 AND [Ser_Data_Spedito] IS NULL) OR ([Ser_Data_Spedito] = @Origina" +
                 "l_Ser_Data_Spedito)) AND ((@IsNull_Ser_Substition_ID_ReadSerial = 1 AND [Ser_Sub" +
                 "stition_ID_ReadSerial] IS NULL) OR ([Ser_Substition_ID_ReadSerial] = @Original_S" +
-                "er_Substition_ID_ReadSerial)))";
+                "er_Substition_ID_ReadSerial)) AND ((@IsNull_Ser_LockLevel = 1 AND [Ser_LockLevel" +
+                "] IS NULL) OR ([Ser_LockLevel] = @Original_Ser_LockLevel)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_Kit", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Kit", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -15575,10 +15752,12 @@ WHERE        (SF_Commesse_SL.Is_Kit = '1') OR
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_Data_Spedito", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Data_Spedito", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_Substition_ID_ReadSerial", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Substition_ID_ReadSerial", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_Substition_ID_ReadSerial", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Substition_ID_ReadSerial", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_LockLevel", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_LockLevel", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_LockLevel", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_LockLevel", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [SerialNumbers] ([Ser_Kit], [Ser_ID_Cli], [Ser_Device], [Ser_Device_ID_Code], [Ser_OfficialSerial], [Ser_ReadSerial], [Ser_SW_Code], [Ser_SW_Code_Rev], [Ser_SW_Std_Type], [Ser_SN_prod], [Ser_Commessa], [Ser_DateProduction], [Ser_Spedito], [Ser_Data_Spedito], [Ser_Substition_ID_ReadSerial], [Ser_Note]) VALUES (@Ser_Kit, @Ser_ID_Cli, @Ser_Device, @Ser_Device_ID_Code, @Ser_OfficialSerial, @Ser_ReadSerial, @Ser_SW_Code, @Ser_SW_Code_Rev, @Ser_SW_Std_Type, @Ser_SN_prod, @Ser_Commessa, @Ser_DateProduction, @Ser_Spedito, @Ser_Data_Spedito, @Ser_Substition_ID_ReadSerial, @Ser_Note);
-SELECT Id, Ser_Kit, Ser_ID_Cli, Ser_Device, Ser_Device_ID_Code, Ser_OfficialSerial, Ser_ReadSerial, Ser_SW_Code, Ser_SW_Code_Rev, Ser_SW_Std_Type, Ser_SN_prod, Ser_Commessa, Ser_DateProduction, Ser_Spedito, Ser_Data_Spedito, Ser_Substition_ID_ReadSerial, Ser_Note FROM SerialNumbers WHERE (Id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [SerialNumbers] ([Ser_Kit], [Ser_ID_Cli], [Ser_Device], [Ser_Device_ID_Code], [Ser_OfficialSerial], [Ser_ReadSerial], [Ser_SW_Code], [Ser_SW_Code_Rev], [Ser_SW_Std_Type], [Ser_SN_prod], [Ser_Commessa], [Ser_DateProduction], [Ser_Spedito], [Ser_Data_Spedito], [Ser_Substition_ID_ReadSerial], [Ser_Note], [Ser_LockLevel]) VALUES (@Ser_Kit, @Ser_ID_Cli, @Ser_Device, @Ser_Device_ID_Code, @Ser_OfficialSerial, @Ser_ReadSerial, @Ser_SW_Code, @Ser_SW_Code_Rev, @Ser_SW_Std_Type, @Ser_SN_prod, @Ser_Commessa, @Ser_DateProduction, @Ser_Spedito, @Ser_Data_Spedito, @Ser_Substition_ID_ReadSerial, @Ser_Note, @Ser_LockLevel);
+SELECT Id, Ser_Kit, Ser_ID_Cli, Ser_Device, Ser_Device_ID_Code, Ser_OfficialSerial, Ser_ReadSerial, Ser_SW_Code, Ser_SW_Code_Rev, Ser_SW_Std_Type, Ser_SN_prod, Ser_Commessa, Ser_DateProduction, Ser_Spedito, Ser_Data_Spedito, Ser_Substition_ID_ReadSerial, Ser_Note, Ser_LockLevel FROM SerialNumbers WHERE (Id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Kit", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Kit", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_ID_Cli", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_ID_Cli", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -15596,6 +15775,7 @@ SELECT Id, Ser_Kit, Ser_ID_Cli, Ser_Device, Ser_Device_ID_Code, Ser_OfficialSeri
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Data_Spedito", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Data_Spedito", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Substition_ID_ReadSerial", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Substition_ID_ReadSerial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Note", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Note", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_LockLevel", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_LockLevel", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE [SerialNumbers] SET [Ser_Kit] = @Ser_Kit, [Ser_ID_Cli] = @Ser_ID_Cli, [Ser" +
@@ -15605,32 +15785,34 @@ SELECT Id, Ser_Kit, Ser_ID_Cli, Ser_Device, Ser_Device_ID_Code, Ser_OfficialSeri
                 "_SW_Std_Type, [Ser_SN_prod] = @Ser_SN_prod, [Ser_Commessa] = @Ser_Commessa, [Ser" +
                 "_DateProduction] = @Ser_DateProduction, [Ser_Spedito] = @Ser_Spedito, [Ser_Data_" +
                 "Spedito] = @Ser_Data_Spedito, [Ser_Substition_ID_ReadSerial] = @Ser_Substition_I" +
-                "D_ReadSerial, [Ser_Note] = @Ser_Note WHERE (([Id] = @Original_Id) AND ((@IsNull_" +
-                "Ser_Kit = 1 AND [Ser_Kit] IS NULL) OR ([Ser_Kit] = @Original_Ser_Kit)) AND ((@Is" +
-                "Null_Ser_ID_Cli = 1 AND [Ser_ID_Cli] IS NULL) OR ([Ser_ID_Cli] = @Original_Ser_I" +
-                "D_Cli)) AND ((@IsNull_Ser_Device = 1 AND [Ser_Device] IS NULL) OR ([Ser_Device] " +
-                "= @Original_Ser_Device)) AND ((@IsNull_Ser_Device_ID_Code = 1 AND [Ser_Device_ID" +
-                "_Code] IS NULL) OR ([Ser_Device_ID_Code] = @Original_Ser_Device_ID_Code)) AND ((" +
-                "@IsNull_Ser_OfficialSerial = 1 AND [Ser_OfficialSerial] IS NULL) OR ([Ser_Offici" +
-                "alSerial] = @Original_Ser_OfficialSerial)) AND ((@IsNull_Ser_ReadSerial = 1 AND " +
-                "[Ser_ReadSerial] IS NULL) OR ([Ser_ReadSerial] = @Original_Ser_ReadSerial)) AND " +
-                "((@IsNull_Ser_SW_Code = 1 AND [Ser_SW_Code] IS NULL) OR ([Ser_SW_Code] = @Origin" +
-                "al_Ser_SW_Code)) AND ((@IsNull_Ser_SW_Code_Rev = 1 AND [Ser_SW_Code_Rev] IS NULL" +
-                ") OR ([Ser_SW_Code_Rev] = @Original_Ser_SW_Code_Rev)) AND ((@IsNull_Ser_SW_Std_T" +
-                "ype = 1 AND [Ser_SW_Std_Type] IS NULL) OR ([Ser_SW_Std_Type] = @Original_Ser_SW_" +
-                "Std_Type)) AND ((@IsNull_Ser_SN_prod = 1 AND [Ser_SN_prod] IS NULL) OR ([Ser_SN_" +
-                "prod] = @Original_Ser_SN_prod)) AND ((@IsNull_Ser_Commessa = 1 AND [Ser_Commessa" +
-                "] IS NULL) OR ([Ser_Commessa] = @Original_Ser_Commessa)) AND ((@IsNull_Ser_DateP" +
-                "roduction = 1 AND [Ser_DateProduction] IS NULL) OR ([Ser_DateProduction] = @Orig" +
-                "inal_Ser_DateProduction)) AND ([Ser_Spedito] = @Original_Ser_Spedito) AND ((@IsN" +
-                "ull_Ser_Data_Spedito = 1 AND [Ser_Data_Spedito] IS NULL) OR ([Ser_Data_Spedito] " +
-                "= @Original_Ser_Data_Spedito)) AND ((@IsNull_Ser_Substition_ID_ReadSerial = 1 AN" +
-                "D [Ser_Substition_ID_ReadSerial] IS NULL) OR ([Ser_Substition_ID_ReadSerial] = @" +
-                "Original_Ser_Substition_ID_ReadSerial)));\r\nSELECT Id, Ser_Kit, Ser_ID_Cli, Ser_D" +
-                "evice, Ser_Device_ID_Code, Ser_OfficialSerial, Ser_ReadSerial, Ser_SW_Code, Ser_" +
-                "SW_Code_Rev, Ser_SW_Std_Type, Ser_SN_prod, Ser_Commessa, Ser_DateProduction, Ser" +
-                "_Spedito, Ser_Data_Spedito, Ser_Substition_ID_ReadSerial, Ser_Note FROM SerialNu" +
-                "mbers WHERE (Id = @Id)";
+                "D_ReadSerial, [Ser_Note] = @Ser_Note, [Ser_LockLevel] = @Ser_LockLevel WHERE (([" +
+                "Id] = @Original_Id) AND ((@IsNull_Ser_Kit = 1 AND [Ser_Kit] IS NULL) OR ([Ser_Ki" +
+                "t] = @Original_Ser_Kit)) AND ((@IsNull_Ser_ID_Cli = 1 AND [Ser_ID_Cli] IS NULL) " +
+                "OR ([Ser_ID_Cli] = @Original_Ser_ID_Cli)) AND ((@IsNull_Ser_Device = 1 AND [Ser_" +
+                "Device] IS NULL) OR ([Ser_Device] = @Original_Ser_Device)) AND ((@IsNull_Ser_Dev" +
+                "ice_ID_Code = 1 AND [Ser_Device_ID_Code] IS NULL) OR ([Ser_Device_ID_Code] = @Or" +
+                "iginal_Ser_Device_ID_Code)) AND ((@IsNull_Ser_OfficialSerial = 1 AND [Ser_Offici" +
+                "alSerial] IS NULL) OR ([Ser_OfficialSerial] = @Original_Ser_OfficialSerial)) AND" +
+                " ((@IsNull_Ser_ReadSerial = 1 AND [Ser_ReadSerial] IS NULL) OR ([Ser_ReadSerial]" +
+                " = @Original_Ser_ReadSerial)) AND ((@IsNull_Ser_SW_Code = 1 AND [Ser_SW_Code] IS" +
+                " NULL) OR ([Ser_SW_Code] = @Original_Ser_SW_Code)) AND ((@IsNull_Ser_SW_Code_Rev" +
+                " = 1 AND [Ser_SW_Code_Rev] IS NULL) OR ([Ser_SW_Code_Rev] = @Original_Ser_SW_Cod" +
+                "e_Rev)) AND ((@IsNull_Ser_SW_Std_Type = 1 AND [Ser_SW_Std_Type] IS NULL) OR ([Se" +
+                "r_SW_Std_Type] = @Original_Ser_SW_Std_Type)) AND ((@IsNull_Ser_SN_prod = 1 AND [" +
+                "Ser_SN_prod] IS NULL) OR ([Ser_SN_prod] = @Original_Ser_SN_prod)) AND ((@IsNull_" +
+                "Ser_Commessa = 1 AND [Ser_Commessa] IS NULL) OR ([Ser_Commessa] = @Original_Ser_" +
+                "Commessa)) AND ((@IsNull_Ser_DateProduction = 1 AND [Ser_DateProduction] IS NULL" +
+                ") OR ([Ser_DateProduction] = @Original_Ser_DateProduction)) AND ([Ser_Spedito] =" +
+                " @Original_Ser_Spedito) AND ((@IsNull_Ser_Data_Spedito = 1 AND [Ser_Data_Spedito" +
+                "] IS NULL) OR ([Ser_Data_Spedito] = @Original_Ser_Data_Spedito)) AND ((@IsNull_S" +
+                "er_Substition_ID_ReadSerial = 1 AND [Ser_Substition_ID_ReadSerial] IS NULL) OR (" +
+                "[Ser_Substition_ID_ReadSerial] = @Original_Ser_Substition_ID_ReadSerial)) AND ((" +
+                "@IsNull_Ser_LockLevel = 1 AND [Ser_LockLevel] IS NULL) OR ([Ser_LockLevel] = @Or" +
+                "iginal_Ser_LockLevel)));\r\nSELECT Id, Ser_Kit, Ser_ID_Cli, Ser_Device, Ser_Device" +
+                "_ID_Code, Ser_OfficialSerial, Ser_ReadSerial, Ser_SW_Code, Ser_SW_Code_Rev, Ser_" +
+                "SW_Std_Type, Ser_SN_prod, Ser_Commessa, Ser_DateProduction, Ser_Spedito, Ser_Dat" +
+                "a_Spedito, Ser_Substition_ID_ReadSerial, Ser_Note, Ser_LockLevel FROM SerialNumb" +
+                "ers WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Kit", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Kit", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_ID_Cli", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_ID_Cli", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -15648,6 +15830,7 @@ SELECT Id, Ser_Kit, Ser_ID_Cli, Ser_Device, Ser_Device_ID_Code, Ser_OfficialSeri
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Data_Spedito", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Data_Spedito", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Substition_ID_ReadSerial", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Substition_ID_ReadSerial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Note", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Note", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_LockLevel", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_LockLevel", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_Kit", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Kit", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_Kit", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Kit", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -15678,6 +15861,8 @@ SELECT Id, Ser_Kit, Ser_ID_Cli, Ser_Device, Ser_Device_ID_Code, Ser_OfficialSeri
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_Data_Spedito", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Data_Spedito", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_Substition_ID_ReadSerial", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Substition_ID_ReadSerial", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_Substition_ID_ReadSerial", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Substition_ID_ReadSerial", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_LockLevel", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_LockLevel", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_LockLevel", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_LockLevel", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -15694,11 +15879,13 @@ SELECT Id, Ser_Kit, Ser_ID_Cli, Ser_Device, Ser_Device_ID_Code, Ser_OfficialSeri
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT Id, Ser_Kit, Ser_ID_Cli, Ser_Device, Ser_Device_ID_Code, Ser_OfficialSerial, Ser_ReadSerial, Ser_SW_Code, Ser_SW_Code_Rev, Ser_SW_Std_Type, Ser_SN_prod, Ser_Commessa, Ser_DateProduction, Ser_Spedito, Ser_Data_Spedito, Ser_Substition_ID_ReadSerial, Ser_Note FROM SerialNumbers";
+            this._commandCollection[0].CommandText = @"SELECT        Id, Ser_Kit, Ser_ID_Cli, Ser_Device, Ser_Device_ID_Code, Ser_OfficialSerial, Ser_ReadSerial, Ser_SW_Code, Ser_SW_Code_Rev, Ser_SW_Std_Type, Ser_SN_prod, Ser_Commessa, Ser_DateProduction, Ser_Spedito, 
+                         Ser_Data_Spedito, Ser_Substition_ID_ReadSerial, Ser_Note, Ser_LockLevel
+FROM            SerialNumbers";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"SELECT Id, Ser_Commessa, Ser_Data_Spedito, Ser_DateProduction, Ser_Device, Ser_Device_ID_Code, Ser_ID_Cli, Ser_Kit, Ser_Note, Ser_OfficialSerial, Ser_ReadSerial, Ser_SN_prod, Ser_SW_Code, Ser_SW_Code_Rev, Ser_SW_Std_Type, Ser_Spedito, Ser_Substition_ID_ReadSerial FROM SerialNumbers WHERE (Ser_OfficialSerial = @BarCodeID)";
+            this._commandCollection[1].CommandText = @"SELECT Id, Ser_Commessa, Ser_Data_Spedito, Ser_DateProduction, Ser_Device, Ser_Device_ID_Code, Ser_ID_Cli, Ser_Kit, Ser_LockLevel, Ser_Note, Ser_OfficialSerial, Ser_ReadSerial, Ser_SN_prod, Ser_SW_Code, Ser_SW_Code_Rev, Ser_SW_Std_Type, Ser_Spedito, Ser_Substition_ID_ReadSerial FROM SerialNumbers WHERE (Ser_OfficialSerial = @BarCodeID)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BarCodeID", global::System.Data.SqlDbType.VarChar, 25, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_OfficialSerial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -15812,7 +15999,8 @@ SELECT Id, Ser_Kit, Ser_ID_Cli, Ser_Device, Ser_Device_ID_Code, Ser_OfficialSeri
                     global::System.Nullable<global::System.DateTime> Original_Ser_DateProduction, 
                     bool Original_Ser_Spedito, 
                     global::System.Nullable<global::System.DateTime> Original_Ser_Data_Spedito, 
-                    string Original_Ser_Substition_ID_ReadSerial) {
+                    string Original_Ser_Substition_ID_ReadSerial, 
+                    global::System.Nullable<int> Original_Ser_LockLevel) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
             if ((Original_Ser_Kit == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -15927,6 +16115,14 @@ SELECT Id, Ser_Kit, Ser_ID_Cli, Ser_Device, Ser_Device_ID_Code, Ser_OfficialSeri
                 this.Adapter.DeleteCommand.Parameters[28].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[29].Value = ((string)(Original_Ser_Substition_ID_ReadSerial));
             }
+            if ((Original_Ser_LockLevel.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[30].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[31].Value = ((int)(Original_Ser_LockLevel.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[30].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[31].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -15963,7 +16159,8 @@ SELECT Id, Ser_Kit, Ser_ID_Cli, Ser_Device, Ser_Device_ID_Code, Ser_OfficialSeri
                     bool Ser_Spedito, 
                     global::System.Nullable<global::System.DateTime> Ser_Data_Spedito, 
                     string Ser_Substition_ID_ReadSerial, 
-                    string Ser_Note) {
+                    string Ser_Note, 
+                    global::System.Nullable<int> Ser_LockLevel) {
             if ((Ser_Kit == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -16055,6 +16252,12 @@ SELECT Id, Ser_Kit, Ser_ID_Cli, Ser_Device, Ser_Device_ID_Code, Ser_OfficialSeri
             else {
                 this.Adapter.InsertCommand.Parameters[15].Value = ((string)(Ser_Note));
             }
+            if ((Ser_LockLevel.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[16].Value = ((int)(Ser_LockLevel.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -16092,6 +16295,7 @@ SELECT Id, Ser_Kit, Ser_ID_Cli, Ser_Device, Ser_Device_ID_Code, Ser_OfficialSeri
                     global::System.Nullable<global::System.DateTime> Ser_Data_Spedito, 
                     string Ser_Substition_ID_ReadSerial, 
                     string Ser_Note, 
+                    global::System.Nullable<int> Ser_LockLevel, 
                     int Original_Id, 
                     string Original_Ser_Kit, 
                     global::System.Nullable<int> Original_Ser_ID_Cli, 
@@ -16108,6 +16312,7 @@ SELECT Id, Ser_Kit, Ser_ID_Cli, Ser_Device, Ser_Device_ID_Code, Ser_OfficialSeri
                     bool Original_Ser_Spedito, 
                     global::System.Nullable<global::System.DateTime> Original_Ser_Data_Spedito, 
                     string Original_Ser_Substition_ID_ReadSerial, 
+                    global::System.Nullable<int> Original_Ser_LockLevel, 
                     int Id) {
             if ((Ser_Kit == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -16200,121 +16405,135 @@ SELECT Id, Ser_Kit, Ser_ID_Cli, Ser_Device, Ser_Device_ID_Code, Ser_OfficialSeri
             else {
                 this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Ser_Note));
             }
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_Id));
-            if ((Original_Ser_Kit == null)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+            if ((Ser_LockLevel.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Ser_LockLevel.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_Ser_Kit));
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_Id));
+            if ((Original_Ser_Kit == null)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_Ser_Kit));
             }
             if ((Original_Ser_ID_Cli.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_Ser_ID_Cli.Value));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((int)(Original_Ser_ID_Cli.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
             }
             if ((Original_Ser_Device == null)) {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_Ser_Device));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_Ser_Device));
             }
             if ((Original_Ser_Device_ID_Code == null)) {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_Ser_Device_ID_Code));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_Ser_Device_ID_Code));
             }
             if ((Original_Ser_OfficialSerial == null)) {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_Ser_OfficialSerial));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_Ser_OfficialSerial));
             }
             if ((Original_Ser_ReadSerial == null)) {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Original_Ser_ReadSerial));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(Original_Ser_ReadSerial));
             }
             if ((Original_Ser_SW_Code == null)) {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((string)(Original_Ser_SW_Code));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((string)(Original_Ser_SW_Code));
             }
             if ((Original_Ser_SW_Code_Rev == null)) {
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((string)(Original_Ser_SW_Code_Rev));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((string)(Original_Ser_SW_Code_Rev));
             }
             if ((Original_Ser_SW_Std_Type.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((bool)(Original_Ser_SW_Std_Type.Value));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((bool)(Original_Ser_SW_Std_Type.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
             }
             if ((Original_Ser_SN_prod == null)) {
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((string)(Original_Ser_SN_prod));
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((string)(Original_Ser_SN_prod));
             }
             if ((Original_Ser_Commessa == null)) {
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((string)(Original_Ser_Commessa));
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((string)(Original_Ser_Commessa));
             }
             if ((Original_Ser_DateProduction.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((System.DateTime)(Original_Ser_DateProduction.Value));
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((System.DateTime)(Original_Ser_DateProduction.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[40].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[41].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[41].Value = ((bool)(Original_Ser_Spedito));
+            this.Adapter.UpdateCommand.Parameters[42].Value = ((bool)(Original_Ser_Spedito));
             if ((Original_Ser_Data_Spedito.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[43].Value = ((System.DateTime)(Original_Ser_Data_Spedito.Value));
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((System.DateTime)(Original_Ser_Data_Spedito.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[43].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[44].Value = global::System.DBNull.Value;
             }
             if ((Original_Ser_Substition_ID_ReadSerial == null)) {
-                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[45].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[46].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[45].Value = ((string)(Original_Ser_Substition_ID_ReadSerial));
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((string)(Original_Ser_Substition_ID_ReadSerial));
             }
-            this.Adapter.UpdateCommand.Parameters[46].Value = ((int)(Id));
+            if ((Original_Ser_LockLevel.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((int)(Original_Ser_LockLevel.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[48].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[49].Value = ((int)(Id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -16352,6 +16571,7 @@ SELECT Id, Ser_Kit, Ser_ID_Cli, Ser_Device, Ser_Device_ID_Code, Ser_OfficialSeri
                     global::System.Nullable<global::System.DateTime> Ser_Data_Spedito, 
                     string Ser_Substition_ID_ReadSerial, 
                     string Ser_Note, 
+                    global::System.Nullable<int> Ser_LockLevel, 
                     int Original_Id, 
                     string Original_Ser_Kit, 
                     global::System.Nullable<int> Original_Ser_ID_Cli, 
@@ -16367,8 +16587,9 @@ SELECT Id, Ser_Kit, Ser_ID_Cli, Ser_Device, Ser_Device_ID_Code, Ser_OfficialSeri
                     global::System.Nullable<global::System.DateTime> Original_Ser_DateProduction, 
                     bool Original_Ser_Spedito, 
                     global::System.Nullable<global::System.DateTime> Original_Ser_Data_Spedito, 
-                    string Original_Ser_Substition_ID_ReadSerial) {
-            return this.Update(Ser_Kit, Ser_ID_Cli, Ser_Device, Ser_Device_ID_Code, Ser_OfficialSerial, Ser_ReadSerial, Ser_SW_Code, Ser_SW_Code_Rev, Ser_SW_Std_Type, Ser_SN_prod, Ser_Commessa, Ser_DateProduction, Ser_Spedito, Ser_Data_Spedito, Ser_Substition_ID_ReadSerial, Ser_Note, Original_Id, Original_Ser_Kit, Original_Ser_ID_Cli, Original_Ser_Device, Original_Ser_Device_ID_Code, Original_Ser_OfficialSerial, Original_Ser_ReadSerial, Original_Ser_SW_Code, Original_Ser_SW_Code_Rev, Original_Ser_SW_Std_Type, Original_Ser_SN_prod, Original_Ser_Commessa, Original_Ser_DateProduction, Original_Ser_Spedito, Original_Ser_Data_Spedito, Original_Ser_Substition_ID_ReadSerial, Original_Id);
+                    string Original_Ser_Substition_ID_ReadSerial, 
+                    global::System.Nullable<int> Original_Ser_LockLevel) {
+            return this.Update(Ser_Kit, Ser_ID_Cli, Ser_Device, Ser_Device_ID_Code, Ser_OfficialSerial, Ser_ReadSerial, Ser_SW_Code, Ser_SW_Code_Rev, Ser_SW_Std_Type, Ser_SN_prod, Ser_Commessa, Ser_DateProduction, Ser_Spedito, Ser_Data_Spedito, Ser_Substition_ID_ReadSerial, Ser_Note, Ser_LockLevel, Original_Id, Original_Ser_Kit, Original_Ser_ID_Cli, Original_Ser_Device, Original_Ser_Device_ID_Code, Original_Ser_OfficialSerial, Original_Ser_ReadSerial, Original_Ser_SW_Code, Original_Ser_SW_Code_Rev, Original_Ser_SW_Std_Type, Original_Ser_SN_prod, Original_Ser_Commessa, Original_Ser_DateProduction, Original_Ser_Spedito, Original_Ser_Data_Spedito, Original_Ser_Substition_ID_ReadSerial, Original_Ser_LockLevel, Original_Id);
         }
     }
     
@@ -16532,44 +16753,49 @@ SELECT Id, Ser_Kit, Ser_ID_Cli, Ser_Device, Ser_Device_ID_Code, Ser_OfficialSeri
             tableMapping.ColumnMappings.Add("SW_Config", "SW_Config");
             tableMapping.ColumnMappings.Add("SW_Obsolete_ver", "SW_Obsolete_ver");
             tableMapping.ColumnMappings.Add("SW_Obsolete_ver_from_date", "SW_Obsolete_ver_from_date");
+            tableMapping.ColumnMappings.Add("SW_P_Lock", "SW_P_Lock");
+            tableMapping.ColumnMappings.Add("SW_R_Lock", "SW_R_Lock");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Firmware] WHERE (([Id] = @Original_Id) AND ([SW_Code] = @Origi" +
-                "nal_SW_Code) AND ([SW_TipoDevice] = @Original_SW_TipoDevice) AND ((@IsNull_SW_De" +
-                "scrizione = 1 AND [SW_Descrizione] IS NULL) OR ([SW_Descrizione] = @Original_SW_" +
-                "Descrizione)) AND ((@IsNull_SW_Descrizione_EN = 1 AND [SW_Descrizione_EN] IS NUL" +
-                "L) OR ([SW_Descrizione_EN] = @Original_SW_Descrizione_EN)) AND ((@IsNull_SW_Vers" +
-                "ione = 1 AND [SW_Versione] IS NULL) OR ([SW_Versione] = @Original_SW_Versione)) " +
-                "AND ((@IsNull_SW_Revisione = 1 AND [SW_Revisione] IS NULL) OR ([SW_Revisione] = " +
-                "@Original_SW_Revisione)) AND ([SW_Standard] = @Original_SW_Standard) AND ([SW_P_" +
-                "Opt_RF] = @Original_SW_P_Opt_RF) AND ([SW_P_Opt_Use_Oled] = @Original_SW_P_Opt_U" +
-                "se_Oled) AND ([SW_P_Opt_Use_EmButt] = @Original_SW_P_Opt_Use_EmButt) AND ([SW_P_" +
-                "Opt_Use_Backlight] = @Original_SW_P_Opt_Use_Backlight) AND ([SW_P_Opt_ShiftPage]" +
-                " = @Original_SW_P_Opt_ShiftPage) AND ([SW_P_Opt_Use_Accel] = @Original_SW_P_Opt_" +
-                "Use_Accel) AND ([SW_P_Opt_Use_SP] = @Original_SW_P_Opt_Use_SP) AND ([SW_P_Opt_Us" +
-                "e_Buzzer] = @Original_SW_P_Opt_Use_Buzzer) AND ([SW_P_Opt_Use_Vibracall] = @Orig" +
-                "inal_SW_P_Opt_Use_Vibracall) AND ([SW_P_Opt_Use_LedTorch] = @Original_SW_P_Opt_U" +
-                "se_LedTorch) AND ((@IsNull_SW_P_Opt_MaxPairDevices = 1 AND [SW_P_Opt_MaxPairDevi" +
-                "ces] IS NULL) OR ([SW_P_Opt_MaxPairDevices] = @Original_SW_P_Opt_MaxPairDevices)" +
-                ") AND ([SW_R_Opt_RF] = @Original_SW_R_Opt_RF) AND ([SW_R_Opt_Plug_Exp] = @Origin" +
-                "al_SW_R_Opt_Plug_Exp) AND ([SW_R_Opt_Plug_Ple] = @Original_SW_R_Opt_Plug_Ple) AN" +
-                "D ([SW_R_Opt_Em_Keyb] = @Original_SW_R_Opt_Em_Keyb) AND ([SW_R_Opt_Can] = @Origi" +
-                "nal_SW_R_Opt_Can) AND ([SW_R_Opt_Prop_Out] = @Original_SW_R_Opt_Prop_Out) AND ([" +
-                "SW_R_Opt_TimeOut] = @Original_SW_R_Opt_TimeOut) AND ((@IsNull_SW_R_Opt_Cont_Keys" +
-                " = 1 AND [SW_R_Opt_Cont_Keys] IS NULL) OR ([SW_R_Opt_Cont_Keys] = @Original_SW_R" +
-                "_Opt_Cont_Keys)) AND ([SW_R_Opt_LockSameRow] = @Original_SW_R_Opt_LockSameRow) A" +
-                "ND ([SW_R_Opt_Use_SP] = @Original_SW_R_Opt_Use_SP) AND ((@IsNull_SW_R_Opt_MaxPai" +
-                "rDevices = 1 AND [SW_R_Opt_MaxPairDevices] IS NULL) OR ([SW_R_Opt_MaxPairDevices" +
-                "] = @Original_SW_R_Opt_MaxPairDevices)) AND ([SW_R_Opt_ShiftPage] = @Original_SW" +
-                "_R_Opt_ShiftPage) AND ((@IsNull_SW_R_Opt_Output_No = 1 AND [SW_R_Opt_Output_No] " +
-                "IS NULL) OR ([SW_R_Opt_Output_No] = @Original_SW_R_Opt_Output_No)) AND ((@IsNull" +
-                "_SW_R_Opt_Dig_Input_No = 1 AND [SW_R_Opt_Dig_Input_No] IS NULL) OR ([SW_R_Opt_Di" +
-                "g_Input_No] = @Original_SW_R_Opt_Dig_Input_No)) AND ((@IsNull_SW_R_Opt_Ana_Input" +
-                "_No = 1 AND [SW_R_Opt_Ana_Input_No] IS NULL) OR ([SW_R_Opt_Ana_Input_No] = @Orig" +
-                "inal_SW_R_Opt_Ana_Input_No)) AND ([SW_Obsolete_ver] = @Original_SW_Obsolete_ver)" +
-                " AND ((@IsNull_SW_Obsolete_ver_from_date = 1 AND [SW_Obsolete_ver_from_date] IS " +
-                "NULL) OR ([SW_Obsolete_ver_from_date] = @Original_SW_Obsolete_ver_from_date)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Firmware] WHERE (([Id] = @Original_Id) AND ([SW_Code] = @Original_SW" +
+                "_Code) AND ([SW_TipoDevice] = @Original_SW_TipoDevice) AND ((@IsNull_SW_Descrizi" +
+                "one = 1 AND [SW_Descrizione] IS NULL) OR ([SW_Descrizione] = @Original_SW_Descri" +
+                "zione)) AND ((@IsNull_SW_Descrizione_EN = 1 AND [SW_Descrizione_EN] IS NULL) OR " +
+                "([SW_Descrizione_EN] = @Original_SW_Descrizione_EN)) AND ((@IsNull_SW_Versione =" +
+                " 1 AND [SW_Versione] IS NULL) OR ([SW_Versione] = @Original_SW_Versione)) AND ((" +
+                "@IsNull_SW_Revisione = 1 AND [SW_Revisione] IS NULL) OR ([SW_Revisione] = @Origi" +
+                "nal_SW_Revisione)) AND ([SW_Standard] = @Original_SW_Standard) AND ([SW_P_Opt_RF" +
+                "] = @Original_SW_P_Opt_RF) AND ([SW_P_Opt_Use_Oled] = @Original_SW_P_Opt_Use_Ole" +
+                "d) AND ([SW_P_Opt_Use_EmButt] = @Original_SW_P_Opt_Use_EmButt) AND ([SW_P_Opt_Us" +
+                "e_Backlight] = @Original_SW_P_Opt_Use_Backlight) AND ([SW_P_Opt_ShiftPage] = @Or" +
+                "iginal_SW_P_Opt_ShiftPage) AND ([SW_P_Opt_Use_Accel] = @Original_SW_P_Opt_Use_Ac" +
+                "cel) AND ([SW_P_Opt_Use_SP] = @Original_SW_P_Opt_Use_SP) AND ([SW_P_Opt_Use_Buzz" +
+                "er] = @Original_SW_P_Opt_Use_Buzzer) AND ([SW_P_Opt_Use_Vibracall] = @Original_S" +
+                "W_P_Opt_Use_Vibracall) AND ([SW_P_Opt_Use_LedTorch] = @Original_SW_P_Opt_Use_Led" +
+                "Torch) AND ((@IsNull_SW_P_Opt_MaxPairDevices = 1 AND [SW_P_Opt_MaxPairDevices] I" +
+                "S NULL) OR ([SW_P_Opt_MaxPairDevices] = @Original_SW_P_Opt_MaxPairDevices)) AND " +
+                "([SW_R_Opt_RF] = @Original_SW_R_Opt_RF) AND ([SW_R_Opt_Plug_Exp] = @Original_SW_" +
+                "R_Opt_Plug_Exp) AND ([SW_R_Opt_Plug_Ple] = @Original_SW_R_Opt_Plug_Ple) AND ([SW" +
+                "_R_Opt_Em_Keyb] = @Original_SW_R_Opt_Em_Keyb) AND ([SW_R_Opt_Can] = @Original_SW" +
+                "_R_Opt_Can) AND ([SW_R_Opt_Prop_Out] = @Original_SW_R_Opt_Prop_Out) AND ([SW_R_O" +
+                "pt_TimeOut] = @Original_SW_R_Opt_TimeOut) AND ((@IsNull_SW_R_Opt_Cont_Keys = 1 A" +
+                "ND [SW_R_Opt_Cont_Keys] IS NULL) OR ([SW_R_Opt_Cont_Keys] = @Original_SW_R_Opt_C" +
+                "ont_Keys)) AND ([SW_R_Opt_LockSameRow] = @Original_SW_R_Opt_LockSameRow) AND ([S" +
+                "W_R_Opt_Use_SP] = @Original_SW_R_Opt_Use_SP) AND ((@IsNull_SW_R_Opt_MaxPairDevic" +
+                "es = 1 AND [SW_R_Opt_MaxPairDevices] IS NULL) OR ([SW_R_Opt_MaxPairDevices] = @O" +
+                "riginal_SW_R_Opt_MaxPairDevices)) AND ([SW_R_Opt_ShiftPage] = @Original_SW_R_Opt" +
+                "_ShiftPage) AND ((@IsNull_SW_R_Opt_Output_No = 1 AND [SW_R_Opt_Output_No] IS NUL" +
+                "L) OR ([SW_R_Opt_Output_No] = @Original_SW_R_Opt_Output_No)) AND ((@IsNull_SW_R_" +
+                "Opt_Dig_Input_No = 1 AND [SW_R_Opt_Dig_Input_No] IS NULL) OR ([SW_R_Opt_Dig_Inpu" +
+                "t_No] = @Original_SW_R_Opt_Dig_Input_No)) AND ((@IsNull_SW_R_Opt_Ana_Input_No = " +
+                "1 AND [SW_R_Opt_Ana_Input_No] IS NULL) OR ([SW_R_Opt_Ana_Input_No] = @Original_S" +
+                "W_R_Opt_Ana_Input_No)) AND ([SW_Obsolete_ver] = @Original_SW_Obsolete_ver) AND (" +
+                "(@IsNull_SW_Obsolete_ver_from_date = 1 AND [SW_Obsolete_ver_from_date] IS NULL) " +
+                "OR ([SW_Obsolete_ver_from_date] = @Original_SW_Obsolete_ver_from_date)) AND ((@I" +
+                "sNull_SW_P_Lock = 1 AND [SW_P_Lock] IS NULL) OR ([SW_P_Lock] = @Original_SW_P_Lo" +
+                "ck)) AND ((@IsNull_SW_R_Lock = 1 AND [SW_R_Lock] IS NULL) OR ([SW_R_Lock] = @Ori" +
+                "ginal_SW_R_Lock)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_Code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Code", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -16618,37 +16844,42 @@ SELECT Id, Ser_Kit, Ser_ID_Cli, Ser_Device, Ser_Device_ID_Code, Ser_OfficialSeri
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_Obsolete_ver", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Obsolete_ver", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_Obsolete_ver_from_date", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Obsolete_ver_from_date", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_Obsolete_ver_from_date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Obsolete_ver_from_date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_P_Lock", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Lock", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_P_Lock", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Lock", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_R_Lock", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Lock", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_R_Lock", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Lock", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Firmware] ([SW_Code], [SW_TipoDevice], [SW_Descrizione], [SW_D" +
-                "escrizione_EN], [SW_Versione], [SW_Revisione], [SW_Standard], [SW_P_Opt_RF], [SW" +
-                "_P_Opt_Use_Oled], [SW_P_Opt_Use_EmButt], [SW_P_Opt_Use_Backlight], [SW_P_Opt_Shi" +
-                "ftPage], [SW_P_Opt_Use_Accel], [SW_P_Opt_Use_SP], [SW_P_Opt_Use_Buzzer], [SW_P_O" +
-                "pt_Use_Vibracall], [SW_P_Opt_Use_LedTorch], [SW_P_Opt_MaxPairDevices], [SW_R_Opt" +
-                "_RF], [SW_R_Opt_Plug_Exp], [SW_R_Opt_Plug_Ple], [SW_R_Opt_Em_Keyb], [SW_R_Opt_Ca" +
-                "n], [SW_R_Opt_Prop_Out], [SW_R_Opt_TimeOut], [SW_R_Opt_Cont_Keys], [SW_R_Opt_Loc" +
-                "kSameRow], [SW_R_Opt_Use_SP], [SW_R_Opt_MaxPairDevices], [SW_R_Opt_ShiftPage], [" +
-                "SW_R_Opt_Output_No], [SW_R_Opt_Dig_Input_No], [SW_R_Opt_Ana_Input_No], [SW_Revis" +
-                "ioni], [SW_Funzionamento], [SW_Config], [SW_Obsolete_ver], [SW_Obsolete_ver_from" +
-                "_date]) VALUES (@SW_Code, @SW_TipoDevice, @SW_Descrizione, @SW_Descrizione_EN, @" +
-                "SW_Versione, @SW_Revisione, @SW_Standard, @SW_P_Opt_RF, @SW_P_Opt_Use_Oled, @SW_" +
-                "P_Opt_Use_EmButt, @SW_P_Opt_Use_Backlight, @SW_P_Opt_ShiftPage, @SW_P_Opt_Use_Ac" +
-                "cel, @SW_P_Opt_Use_SP, @SW_P_Opt_Use_Buzzer, @SW_P_Opt_Use_Vibracall, @SW_P_Opt_" +
-                "Use_LedTorch, @SW_P_Opt_MaxPairDevices, @SW_R_Opt_RF, @SW_R_Opt_Plug_Exp, @SW_R_" +
-                "Opt_Plug_Ple, @SW_R_Opt_Em_Keyb, @SW_R_Opt_Can, @SW_R_Opt_Prop_Out, @SW_R_Opt_Ti" +
-                "meOut, @SW_R_Opt_Cont_Keys, @SW_R_Opt_LockSameRow, @SW_R_Opt_Use_SP, @SW_R_Opt_M" +
-                "axPairDevices, @SW_R_Opt_ShiftPage, @SW_R_Opt_Output_No, @SW_R_Opt_Dig_Input_No," +
-                " @SW_R_Opt_Ana_Input_No, @SW_Revisioni, @SW_Funzionamento, @SW_Config, @SW_Obsol" +
-                "ete_ver, @SW_Obsolete_ver_from_date);\r\nSELECT Id, SW_Code, SW_TipoDevice, SW_Des" +
-                "crizione, SW_Descrizione_EN, SW_Versione, SW_Revisione, SW_Standard, SW_P_Opt_RF" +
-                ", SW_P_Opt_Use_Oled, SW_P_Opt_Use_EmButt, SW_P_Opt_Use_Backlight, SW_P_Opt_Shift" +
-                "Page, SW_P_Opt_Use_Accel, SW_P_Opt_Use_SP, SW_P_Opt_Use_Buzzer, SW_P_Opt_Use_Vib" +
-                "racall, SW_P_Opt_Use_LedTorch, SW_P_Opt_MaxPairDevices, SW_R_Opt_RF, SW_R_Opt_Pl" +
-                "ug_Exp, SW_R_Opt_Plug_Ple, SW_R_Opt_Em_Keyb, SW_R_Opt_Can, SW_R_Opt_Prop_Out, SW" +
-                "_R_Opt_TimeOut, SW_R_Opt_Cont_Keys, SW_R_Opt_LockSameRow, SW_R_Opt_Use_SP, SW_R_" +
-                "Opt_MaxPairDevices, SW_R_Opt_ShiftPage, SW_R_Opt_Output_No, SW_R_Opt_Dig_Input_N" +
-                "o, SW_R_Opt_Ana_Input_No, SW_Revisioni, SW_Funzionamento, SW_Config, SW_Obsolete" +
-                "_ver, SW_Obsolete_ver_from_date FROM Firmware WHERE (Id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [Firmware] ([SW_Code], [SW_TipoDevice], [SW_Descrizione], [SW_Descriz" +
+                "ione_EN], [SW_Versione], [SW_Revisione], [SW_Standard], [SW_P_Opt_RF], [SW_P_Opt" +
+                "_Use_Oled], [SW_P_Opt_Use_EmButt], [SW_P_Opt_Use_Backlight], [SW_P_Opt_ShiftPage" +
+                "], [SW_P_Opt_Use_Accel], [SW_P_Opt_Use_SP], [SW_P_Opt_Use_Buzzer], [SW_P_Opt_Use" +
+                "_Vibracall], [SW_P_Opt_Use_LedTorch], [SW_P_Opt_MaxPairDevices], [SW_R_Opt_RF], " +
+                "[SW_R_Opt_Plug_Exp], [SW_R_Opt_Plug_Ple], [SW_R_Opt_Em_Keyb], [SW_R_Opt_Can], [S" +
+                "W_R_Opt_Prop_Out], [SW_R_Opt_TimeOut], [SW_R_Opt_Cont_Keys], [SW_R_Opt_LockSameR" +
+                "ow], [SW_R_Opt_Use_SP], [SW_R_Opt_MaxPairDevices], [SW_R_Opt_ShiftPage], [SW_R_O" +
+                "pt_Output_No], [SW_R_Opt_Dig_Input_No], [SW_R_Opt_Ana_Input_No], [SW_Revisioni]," +
+                " [SW_Funzionamento], [SW_Config], [SW_Obsolete_ver], [SW_Obsolete_ver_from_date]" +
+                ", [SW_P_Lock], [SW_R_Lock]) VALUES (@SW_Code, @SW_TipoDevice, @SW_Descrizione, @" +
+                "SW_Descrizione_EN, @SW_Versione, @SW_Revisione, @SW_Standard, @SW_P_Opt_RF, @SW_" +
+                "P_Opt_Use_Oled, @SW_P_Opt_Use_EmButt, @SW_P_Opt_Use_Backlight, @SW_P_Opt_ShiftPa" +
+                "ge, @SW_P_Opt_Use_Accel, @SW_P_Opt_Use_SP, @SW_P_Opt_Use_Buzzer, @SW_P_Opt_Use_V" +
+                "ibracall, @SW_P_Opt_Use_LedTorch, @SW_P_Opt_MaxPairDevices, @SW_R_Opt_RF, @SW_R_" +
+                "Opt_Plug_Exp, @SW_R_Opt_Plug_Ple, @SW_R_Opt_Em_Keyb, @SW_R_Opt_Can, @SW_R_Opt_Pr" +
+                "op_Out, @SW_R_Opt_TimeOut, @SW_R_Opt_Cont_Keys, @SW_R_Opt_LockSameRow, @SW_R_Opt" +
+                "_Use_SP, @SW_R_Opt_MaxPairDevices, @SW_R_Opt_ShiftPage, @SW_R_Opt_Output_No, @SW" +
+                "_R_Opt_Dig_Input_No, @SW_R_Opt_Ana_Input_No, @SW_Revisioni, @SW_Funzionamento, @" +
+                "SW_Config, @SW_Obsolete_ver, @SW_Obsolete_ver_from_date, @SW_P_Lock, @SW_R_Lock)" +
+                ";\r\nSELECT Id, SW_Code, SW_TipoDevice, SW_Descrizione, SW_Descrizione_EN, SW_Vers" +
+                "ione, SW_Revisione, SW_Standard, SW_P_Opt_RF, SW_P_Opt_Use_Oled, SW_P_Opt_Use_Em" +
+                "Butt, SW_P_Opt_Use_Backlight, SW_P_Opt_ShiftPage, SW_P_Opt_Use_Accel, SW_P_Opt_U" +
+                "se_SP, SW_P_Opt_Use_Buzzer, SW_P_Opt_Use_Vibracall, SW_P_Opt_Use_LedTorch, SW_P_" +
+                "Opt_MaxPairDevices, SW_R_Opt_RF, SW_R_Opt_Plug_Exp, SW_R_Opt_Plug_Ple, SW_R_Opt_" +
+                "Em_Keyb, SW_R_Opt_Can, SW_R_Opt_Prop_Out, SW_R_Opt_TimeOut, SW_R_Opt_Cont_Keys, " +
+                "SW_R_Opt_LockSameRow, SW_R_Opt_Use_SP, SW_R_Opt_MaxPairDevices, SW_R_Opt_ShiftPa" +
+                "ge, SW_R_Opt_Output_No, SW_R_Opt_Dig_Input_No, SW_R_Opt_Ana_Input_No, SW_Revisio" +
+                "ni, SW_Funzionamento, SW_Config, SW_Obsolete_ver, SW_Obsolete_ver_from_date, SW_" +
+                "P_Lock, SW_R_Lock FROM Firmware WHERE (Id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_TipoDevice", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_TipoDevice", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -16688,72 +16919,77 @@ SELECT Id, Ser_Kit, Ser_ID_Cli, Ser_Device, Ser_Device_ID_Code, Ser_OfficialSeri
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Config", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Config", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Obsolete_ver", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Obsolete_ver", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Obsolete_ver_from_date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Obsolete_ver_from_date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Lock", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Lock", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Lock", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Lock", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Firmware] SET [SW_Code] = @SW_Code, [SW_TipoDevice] = @SW_TipoDevic" +
-                "e, [SW_Descrizione] = @SW_Descrizione, [SW_Descrizione_EN] = @SW_Descrizione_EN," +
-                " [SW_Versione] = @SW_Versione, [SW_Revisione] = @SW_Revisione, [SW_Standard] = @" +
-                "SW_Standard, [SW_P_Opt_RF] = @SW_P_Opt_RF, [SW_P_Opt_Use_Oled] = @SW_P_Opt_Use_O" +
-                "led, [SW_P_Opt_Use_EmButt] = @SW_P_Opt_Use_EmButt, [SW_P_Opt_Use_Backlight] = @S" +
-                "W_P_Opt_Use_Backlight, [SW_P_Opt_ShiftPage] = @SW_P_Opt_ShiftPage, [SW_P_Opt_Use" +
-                "_Accel] = @SW_P_Opt_Use_Accel, [SW_P_Opt_Use_SP] = @SW_P_Opt_Use_SP, [SW_P_Opt_U" +
-                "se_Buzzer] = @SW_P_Opt_Use_Buzzer, [SW_P_Opt_Use_Vibracall] = @SW_P_Opt_Use_Vibr" +
-                "acall, [SW_P_Opt_Use_LedTorch] = @SW_P_Opt_Use_LedTorch, [SW_P_Opt_MaxPairDevice" +
-                "s] = @SW_P_Opt_MaxPairDevices, [SW_R_Opt_RF] = @SW_R_Opt_RF, [SW_R_Opt_Plug_Exp]" +
-                " = @SW_R_Opt_Plug_Exp, [SW_R_Opt_Plug_Ple] = @SW_R_Opt_Plug_Ple, [SW_R_Opt_Em_Ke" +
-                "yb] = @SW_R_Opt_Em_Keyb, [SW_R_Opt_Can] = @SW_R_Opt_Can, [SW_R_Opt_Prop_Out] = @" +
-                "SW_R_Opt_Prop_Out, [SW_R_Opt_TimeOut] = @SW_R_Opt_TimeOut, [SW_R_Opt_Cont_Keys] " +
-                "= @SW_R_Opt_Cont_Keys, [SW_R_Opt_LockSameRow] = @SW_R_Opt_LockSameRow, [SW_R_Opt" +
-                "_Use_SP] = @SW_R_Opt_Use_SP, [SW_R_Opt_MaxPairDevices] = @SW_R_Opt_MaxPairDevice" +
-                "s, [SW_R_Opt_ShiftPage] = @SW_R_Opt_ShiftPage, [SW_R_Opt_Output_No] = @SW_R_Opt_" +
-                "Output_No, [SW_R_Opt_Dig_Input_No] = @SW_R_Opt_Dig_Input_No, [SW_R_Opt_Ana_Input" +
-                "_No] = @SW_R_Opt_Ana_Input_No, [SW_Revisioni] = @SW_Revisioni, [SW_Funzionamento" +
-                "] = @SW_Funzionamento, [SW_Config] = @SW_Config, [SW_Obsolete_ver] = @SW_Obsolet" +
-                "e_ver, [SW_Obsolete_ver_from_date] = @SW_Obsolete_ver_from_date WHERE (([Id] = @" +
-                "Original_Id) AND ([SW_Code] = @Original_SW_Code) AND ([SW_TipoDevice] = @Origina" +
-                "l_SW_TipoDevice) AND ((@IsNull_SW_Descrizione = 1 AND [SW_Descrizione] IS NULL) " +
-                "OR ([SW_Descrizione] = @Original_SW_Descrizione)) AND ((@IsNull_SW_Descrizione_E" +
-                "N = 1 AND [SW_Descrizione_EN] IS NULL) OR ([SW_Descrizione_EN] = @Original_SW_De" +
-                "scrizione_EN)) AND ((@IsNull_SW_Versione = 1 AND [SW_Versione] IS NULL) OR ([SW_" +
-                "Versione] = @Original_SW_Versione)) AND ((@IsNull_SW_Revisione = 1 AND [SW_Revis" +
-                "ione] IS NULL) OR ([SW_Revisione] = @Original_SW_Revisione)) AND ([SW_Standard] " +
-                "= @Original_SW_Standard) AND ([SW_P_Opt_RF] = @Original_SW_P_Opt_RF) AND ([SW_P_" +
-                "Opt_Use_Oled] = @Original_SW_P_Opt_Use_Oled) AND ([SW_P_Opt_Use_EmButt] = @Origi" +
-                "nal_SW_P_Opt_Use_EmButt) AND ([SW_P_Opt_Use_Backlight] = @Original_SW_P_Opt_Use_" +
-                "Backlight) AND ([SW_P_Opt_ShiftPage] = @Original_SW_P_Opt_ShiftPage) AND ([SW_P_" +
-                "Opt_Use_Accel] = @Original_SW_P_Opt_Use_Accel) AND ([SW_P_Opt_Use_SP] = @Origina" +
-                "l_SW_P_Opt_Use_SP) AND ([SW_P_Opt_Use_Buzzer] = @Original_SW_P_Opt_Use_Buzzer) A" +
-                "ND ([SW_P_Opt_Use_Vibracall] = @Original_SW_P_Opt_Use_Vibracall) AND ([SW_P_Opt_" +
-                "Use_LedTorch] = @Original_SW_P_Opt_Use_LedTorch) AND ((@IsNull_SW_P_Opt_MaxPairD" +
-                "evices = 1 AND [SW_P_Opt_MaxPairDevices] IS NULL) OR ([SW_P_Opt_MaxPairDevices] " +
-                "= @Original_SW_P_Opt_MaxPairDevices)) AND ([SW_R_Opt_RF] = @Original_SW_R_Opt_RF" +
-                ") AND ([SW_R_Opt_Plug_Exp] = @Original_SW_R_Opt_Plug_Exp) AND ([SW_R_Opt_Plug_Pl" +
-                "e] = @Original_SW_R_Opt_Plug_Ple) AND ([SW_R_Opt_Em_Keyb] = @Original_SW_R_Opt_E" +
-                "m_Keyb) AND ([SW_R_Opt_Can] = @Original_SW_R_Opt_Can) AND ([SW_R_Opt_Prop_Out] =" +
-                " @Original_SW_R_Opt_Prop_Out) AND ([SW_R_Opt_TimeOut] = @Original_SW_R_Opt_TimeO" +
-                "ut) AND ((@IsNull_SW_R_Opt_Cont_Keys = 1 AND [SW_R_Opt_Cont_Keys] IS NULL) OR ([" +
-                "SW_R_Opt_Cont_Keys] = @Original_SW_R_Opt_Cont_Keys)) AND ([SW_R_Opt_LockSameRow]" +
-                " = @Original_SW_R_Opt_LockSameRow) AND ([SW_R_Opt_Use_SP] = @Original_SW_R_Opt_U" +
-                "se_SP) AND ((@IsNull_SW_R_Opt_MaxPairDevices = 1 AND [SW_R_Opt_MaxPairDevices] I" +
-                "S NULL) OR ([SW_R_Opt_MaxPairDevices] = @Original_SW_R_Opt_MaxPairDevices)) AND " +
-                "([SW_R_Opt_ShiftPage] = @Original_SW_R_Opt_ShiftPage) AND ((@IsNull_SW_R_Opt_Out" +
-                "put_No = 1 AND [SW_R_Opt_Output_No] IS NULL) OR ([SW_R_Opt_Output_No] = @Origina" +
-                "l_SW_R_Opt_Output_No)) AND ((@IsNull_SW_R_Opt_Dig_Input_No = 1 AND [SW_R_Opt_Dig" +
-                "_Input_No] IS NULL) OR ([SW_R_Opt_Dig_Input_No] = @Original_SW_R_Opt_Dig_Input_N" +
-                "o)) AND ((@IsNull_SW_R_Opt_Ana_Input_No = 1 AND [SW_R_Opt_Ana_Input_No] IS NULL)" +
-                " OR ([SW_R_Opt_Ana_Input_No] = @Original_SW_R_Opt_Ana_Input_No)) AND ([SW_Obsole" +
-                "te_ver] = @Original_SW_Obsolete_ver) AND ((@IsNull_SW_Obsolete_ver_from_date = 1" +
-                " AND [SW_Obsolete_ver_from_date] IS NULL) OR ([SW_Obsolete_ver_from_date] = @Ori" +
-                "ginal_SW_Obsolete_ver_from_date)));\r\nSELECT Id, SW_Code, SW_TipoDevice, SW_Descr" +
-                "izione, SW_Descrizione_EN, SW_Versione, SW_Revisione, SW_Standard, SW_P_Opt_RF, " +
-                "SW_P_Opt_Use_Oled, SW_P_Opt_Use_EmButt, SW_P_Opt_Use_Backlight, SW_P_Opt_ShiftPa" +
-                "ge, SW_P_Opt_Use_Accel, SW_P_Opt_Use_SP, SW_P_Opt_Use_Buzzer, SW_P_Opt_Use_Vibra" +
-                "call, SW_P_Opt_Use_LedTorch, SW_P_Opt_MaxPairDevices, SW_R_Opt_RF, SW_R_Opt_Plug" +
-                "_Exp, SW_R_Opt_Plug_Ple, SW_R_Opt_Em_Keyb, SW_R_Opt_Can, SW_R_Opt_Prop_Out, SW_R" +
-                "_Opt_TimeOut, SW_R_Opt_Cont_Keys, SW_R_Opt_LockSameRow, SW_R_Opt_Use_SP, SW_R_Op" +
-                "t_MaxPairDevices, SW_R_Opt_ShiftPage, SW_R_Opt_Output_No, SW_R_Opt_Dig_Input_No," +
-                " SW_R_Opt_Ana_Input_No, SW_Revisioni, SW_Funzionamento, SW_Config, SW_Obsolete_v" +
-                "er, SW_Obsolete_ver_from_date FROM Firmware WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [Firmware] SET [SW_Code] = @SW_Code, [SW_TipoDevice] = @SW_TipoDevice, [SW" +
+                "_Descrizione] = @SW_Descrizione, [SW_Descrizione_EN] = @SW_Descrizione_EN, [SW_V" +
+                "ersione] = @SW_Versione, [SW_Revisione] = @SW_Revisione, [SW_Standard] = @SW_Sta" +
+                "ndard, [SW_P_Opt_RF] = @SW_P_Opt_RF, [SW_P_Opt_Use_Oled] = @SW_P_Opt_Use_Oled, [" +
+                "SW_P_Opt_Use_EmButt] = @SW_P_Opt_Use_EmButt, [SW_P_Opt_Use_Backlight] = @SW_P_Op" +
+                "t_Use_Backlight, [SW_P_Opt_ShiftPage] = @SW_P_Opt_ShiftPage, [SW_P_Opt_Use_Accel" +
+                "] = @SW_P_Opt_Use_Accel, [SW_P_Opt_Use_SP] = @SW_P_Opt_Use_SP, [SW_P_Opt_Use_Buz" +
+                "zer] = @SW_P_Opt_Use_Buzzer, [SW_P_Opt_Use_Vibracall] = @SW_P_Opt_Use_Vibracall," +
+                " [SW_P_Opt_Use_LedTorch] = @SW_P_Opt_Use_LedTorch, [SW_P_Opt_MaxPairDevices] = @" +
+                "SW_P_Opt_MaxPairDevices, [SW_R_Opt_RF] = @SW_R_Opt_RF, [SW_R_Opt_Plug_Exp] = @SW" +
+                "_R_Opt_Plug_Exp, [SW_R_Opt_Plug_Ple] = @SW_R_Opt_Plug_Ple, [SW_R_Opt_Em_Keyb] = " +
+                "@SW_R_Opt_Em_Keyb, [SW_R_Opt_Can] = @SW_R_Opt_Can, [SW_R_Opt_Prop_Out] = @SW_R_O" +
+                "pt_Prop_Out, [SW_R_Opt_TimeOut] = @SW_R_Opt_TimeOut, [SW_R_Opt_Cont_Keys] = @SW_" +
+                "R_Opt_Cont_Keys, [SW_R_Opt_LockSameRow] = @SW_R_Opt_LockSameRow, [SW_R_Opt_Use_S" +
+                "P] = @SW_R_Opt_Use_SP, [SW_R_Opt_MaxPairDevices] = @SW_R_Opt_MaxPairDevices, [SW" +
+                "_R_Opt_ShiftPage] = @SW_R_Opt_ShiftPage, [SW_R_Opt_Output_No] = @SW_R_Opt_Output" +
+                "_No, [SW_R_Opt_Dig_Input_No] = @SW_R_Opt_Dig_Input_No, [SW_R_Opt_Ana_Input_No] =" +
+                " @SW_R_Opt_Ana_Input_No, [SW_Revisioni] = @SW_Revisioni, [SW_Funzionamento] = @S" +
+                "W_Funzionamento, [SW_Config] = @SW_Config, [SW_Obsolete_ver] = @SW_Obsolete_ver," +
+                " [SW_Obsolete_ver_from_date] = @SW_Obsolete_ver_from_date, [SW_P_Lock] = @SW_P_L" +
+                "ock, [SW_R_Lock] = @SW_R_Lock WHERE (([Id] = @Original_Id) AND ([SW_Code] = @Ori" +
+                "ginal_SW_Code) AND ([SW_TipoDevice] = @Original_SW_TipoDevice) AND ((@IsNull_SW_" +
+                "Descrizione = 1 AND [SW_Descrizione] IS NULL) OR ([SW_Descrizione] = @Original_S" +
+                "W_Descrizione)) AND ((@IsNull_SW_Descrizione_EN = 1 AND [SW_Descrizione_EN] IS N" +
+                "ULL) OR ([SW_Descrizione_EN] = @Original_SW_Descrizione_EN)) AND ((@IsNull_SW_Ve" +
+                "rsione = 1 AND [SW_Versione] IS NULL) OR ([SW_Versione] = @Original_SW_Versione)" +
+                ") AND ((@IsNull_SW_Revisione = 1 AND [SW_Revisione] IS NULL) OR ([SW_Revisione] " +
+                "= @Original_SW_Revisione)) AND ([SW_Standard] = @Original_SW_Standard) AND ([SW_" +
+                "P_Opt_RF] = @Original_SW_P_Opt_RF) AND ([SW_P_Opt_Use_Oled] = @Original_SW_P_Opt" +
+                "_Use_Oled) AND ([SW_P_Opt_Use_EmButt] = @Original_SW_P_Opt_Use_EmButt) AND ([SW_" +
+                "P_Opt_Use_Backlight] = @Original_SW_P_Opt_Use_Backlight) AND ([SW_P_Opt_ShiftPag" +
+                "e] = @Original_SW_P_Opt_ShiftPage) AND ([SW_P_Opt_Use_Accel] = @Original_SW_P_Op" +
+                "t_Use_Accel) AND ([SW_P_Opt_Use_SP] = @Original_SW_P_Opt_Use_SP) AND ([SW_P_Opt_" +
+                "Use_Buzzer] = @Original_SW_P_Opt_Use_Buzzer) AND ([SW_P_Opt_Use_Vibracall] = @Or" +
+                "iginal_SW_P_Opt_Use_Vibracall) AND ([SW_P_Opt_Use_LedTorch] = @Original_SW_P_Opt" +
+                "_Use_LedTorch) AND ((@IsNull_SW_P_Opt_MaxPairDevices = 1 AND [SW_P_Opt_MaxPairDe" +
+                "vices] IS NULL) OR ([SW_P_Opt_MaxPairDevices] = @Original_SW_P_Opt_MaxPairDevice" +
+                "s)) AND ([SW_R_Opt_RF] = @Original_SW_R_Opt_RF) AND ([SW_R_Opt_Plug_Exp] = @Orig" +
+                "inal_SW_R_Opt_Plug_Exp) AND ([SW_R_Opt_Plug_Ple] = @Original_SW_R_Opt_Plug_Ple) " +
+                "AND ([SW_R_Opt_Em_Keyb] = @Original_SW_R_Opt_Em_Keyb) AND ([SW_R_Opt_Can] = @Ori" +
+                "ginal_SW_R_Opt_Can) AND ([SW_R_Opt_Prop_Out] = @Original_SW_R_Opt_Prop_Out) AND " +
+                "([SW_R_Opt_TimeOut] = @Original_SW_R_Opt_TimeOut) AND ((@IsNull_SW_R_Opt_Cont_Ke" +
+                "ys = 1 AND [SW_R_Opt_Cont_Keys] IS NULL) OR ([SW_R_Opt_Cont_Keys] = @Original_SW" +
+                "_R_Opt_Cont_Keys)) AND ([SW_R_Opt_LockSameRow] = @Original_SW_R_Opt_LockSameRow)" +
+                " AND ([SW_R_Opt_Use_SP] = @Original_SW_R_Opt_Use_SP) AND ((@IsNull_SW_R_Opt_MaxP" +
+                "airDevices = 1 AND [SW_R_Opt_MaxPairDevices] IS NULL) OR ([SW_R_Opt_MaxPairDevic" +
+                "es] = @Original_SW_R_Opt_MaxPairDevices)) AND ([SW_R_Opt_ShiftPage] = @Original_" +
+                "SW_R_Opt_ShiftPage) AND ((@IsNull_SW_R_Opt_Output_No = 1 AND [SW_R_Opt_Output_No" +
+                "] IS NULL) OR ([SW_R_Opt_Output_No] = @Original_SW_R_Opt_Output_No)) AND ((@IsNu" +
+                "ll_SW_R_Opt_Dig_Input_No = 1 AND [SW_R_Opt_Dig_Input_No] IS NULL) OR ([SW_R_Opt_" +
+                "Dig_Input_No] = @Original_SW_R_Opt_Dig_Input_No)) AND ((@IsNull_SW_R_Opt_Ana_Inp" +
+                "ut_No = 1 AND [SW_R_Opt_Ana_Input_No] IS NULL) OR ([SW_R_Opt_Ana_Input_No] = @Or" +
+                "iginal_SW_R_Opt_Ana_Input_No)) AND ([SW_Obsolete_ver] = @Original_SW_Obsolete_ve" +
+                "r) AND ((@IsNull_SW_Obsolete_ver_from_date = 1 AND [SW_Obsolete_ver_from_date] I" +
+                "S NULL) OR ([SW_Obsolete_ver_from_date] = @Original_SW_Obsolete_ver_from_date)) " +
+                "AND ((@IsNull_SW_P_Lock = 1 AND [SW_P_Lock] IS NULL) OR ([SW_P_Lock] = @Original" +
+                "_SW_P_Lock)) AND ((@IsNull_SW_R_Lock = 1 AND [SW_R_Lock] IS NULL) OR ([SW_R_Lock" +
+                "] = @Original_SW_R_Lock)));\r\nSELECT Id, SW_Code, SW_TipoDevice, SW_Descrizione, " +
+                "SW_Descrizione_EN, SW_Versione, SW_Revisione, SW_Standard, SW_P_Opt_RF, SW_P_Opt" +
+                "_Use_Oled, SW_P_Opt_Use_EmButt, SW_P_Opt_Use_Backlight, SW_P_Opt_ShiftPage, SW_P" +
+                "_Opt_Use_Accel, SW_P_Opt_Use_SP, SW_P_Opt_Use_Buzzer, SW_P_Opt_Use_Vibracall, SW" +
+                "_P_Opt_Use_LedTorch, SW_P_Opt_MaxPairDevices, SW_R_Opt_RF, SW_R_Opt_Plug_Exp, SW" +
+                "_R_Opt_Plug_Ple, SW_R_Opt_Em_Keyb, SW_R_Opt_Can, SW_R_Opt_Prop_Out, SW_R_Opt_Tim" +
+                "eOut, SW_R_Opt_Cont_Keys, SW_R_Opt_LockSameRow, SW_R_Opt_Use_SP, SW_R_Opt_MaxPai" +
+                "rDevices, SW_R_Opt_ShiftPage, SW_R_Opt_Output_No, SW_R_Opt_Dig_Input_No, SW_R_Op" +
+                "t_Ana_Input_No, SW_Revisioni, SW_Funzionamento, SW_Config, SW_Obsolete_ver, SW_O" +
+                "bsolete_ver_from_date, SW_P_Lock, SW_R_Lock FROM Firmware WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_TipoDevice", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_TipoDevice", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -16793,6 +17029,8 @@ SELECT Id, Ser_Kit, Ser_ID_Cli, Ser_Device, Ser_Device_ID_Code, Ser_OfficialSeri
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Config", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Config", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Obsolete_ver", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Obsolete_ver", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Obsolete_ver_from_date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Obsolete_ver_from_date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Lock", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Lock", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Lock", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Lock", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_Code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Code", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_TipoDevice", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_TipoDevice", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -16840,6 +17078,10 @@ SELECT Id, Ser_Kit, Ser_ID_Cli, Ser_Device, Ser_Device_ID_Code, Ser_OfficialSeri
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_Obsolete_ver", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Obsolete_ver", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_Obsolete_ver_from_date", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Obsolete_ver_from_date", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_Obsolete_ver_from_date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Obsolete_ver_from_date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_P_Lock", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Lock", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_P_Lock", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Lock", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_R_Lock", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Lock", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_R_Lock", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Lock", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -16856,16 +17098,16 @@ SELECT Id, Ser_Kit, Ser_ID_Cli, Ser_Device, Ser_Device_ID_Code, Ser_OfficialSeri
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT Id, SW_Code, SW_TipoDevice, SW_Descrizione, SW_Descrizione_EN, SW_Versione, SW_Revisione, SW_Standard, SW_P_Opt_RF, SW_P_Opt_Use_Oled, SW_P_Opt_Use_EmButt, SW_P_Opt_Use_Backlight, SW_P_Opt_ShiftPage, SW_P_Opt_Use_Accel, SW_P_Opt_Use_SP, SW_P_Opt_Use_Buzzer, SW_P_Opt_Use_Vibracall, SW_P_Opt_Use_LedTorch, SW_P_Opt_MaxPairDevices, SW_R_Opt_RF, SW_R_Opt_Plug_Exp, SW_R_Opt_Plug_Ple, SW_R_Opt_Em_Keyb, SW_R_Opt_Can, SW_R_Opt_Prop_Out, SW_R_Opt_TimeOut, SW_R_Opt_Cont_Keys, SW_R_Opt_LockSameRow, SW_R_Opt_Use_SP, SW_R_Opt_MaxPairDevices, SW_R_Opt_ShiftPage, SW_R_Opt_Output_No, SW_R_Opt_Dig_Input_No, SW_R_Opt_Ana_Input_No, SW_Revisioni, SW_Funzionamento, SW_Config, SW_Obsolete_ver, SW_Obsolete_ver_from_date FROM dbo.Firmware";
+            this._commandCollection[0].CommandText = @"SELECT        Id, SW_Code, SW_TipoDevice, SW_Descrizione, SW_Descrizione_EN, SW_Versione, SW_Revisione, SW_Standard, SW_P_Opt_RF, SW_P_Opt_Use_Oled, SW_P_Opt_Use_EmButt, SW_P_Opt_Use_Backlight, 
+                         SW_P_Opt_ShiftPage, SW_P_Opt_Use_Accel, SW_P_Opt_Use_SP, SW_P_Opt_Use_Buzzer, SW_P_Opt_Use_Vibracall, SW_P_Opt_Use_LedTorch, SW_P_Opt_MaxPairDevices, SW_R_Opt_RF, SW_R_Opt_Plug_Exp, 
+                         SW_R_Opt_Plug_Ple, SW_R_Opt_Em_Keyb, SW_R_Opt_Can, SW_R_Opt_Prop_Out, SW_R_Opt_TimeOut, SW_R_Opt_Cont_Keys, SW_R_Opt_LockSameRow, SW_R_Opt_Use_SP, SW_R_Opt_MaxPairDevices, 
+                         SW_R_Opt_ShiftPage, SW_R_Opt_Output_No, SW_R_Opt_Dig_Input_No, SW_R_Opt_Ana_Input_No, SW_Revisioni, SW_Funzionamento, SW_Config, SW_Obsolete_ver, SW_Obsolete_ver_from_date, SW_P_Lock, 
+                         SW_R_Lock
+FROM            Firmware";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"SELECT        Id, SW_Code, SW_Config, SW_Descrizione, SW_Descrizione_EN, SW_Funzionamento, SW_Obsolete_ver, SW_Obsolete_ver_from_date, SW_P_Opt_MaxPairDevices, SW_P_Opt_RF, SW_P_Opt_ShiftPage, 
-                         SW_P_Opt_Use_Accel, SW_P_Opt_Use_Backlight, SW_P_Opt_Use_Buzzer, SW_P_Opt_Use_EmButt, SW_P_Opt_Use_LedTorch, SW_P_Opt_Use_Oled, SW_P_Opt_Use_SP, SW_P_Opt_Use_Vibracall, 
-                         SW_R_Opt_Ana_Input_No, SW_R_Opt_Can, SW_R_Opt_Cont_Keys, SW_R_Opt_Dig_Input_No, SW_R_Opt_Em_Keyb, SW_R_Opt_LockSameRow, SW_R_Opt_MaxPairDevices, SW_R_Opt_Output_No, SW_R_Opt_Plug_Exp, 
-                         SW_R_Opt_Plug_Ple, SW_R_Opt_Prop_Out, SW_R_Opt_RF, SW_R_Opt_ShiftPage, SW_R_Opt_TimeOut, SW_R_Opt_Use_SP, SW_Revisione, SW_Revisioni, SW_Standard, SW_TipoDevice, SW_Versione
-FROM            Firmware
-WHERE        (SW_Code = @SW_Code) AND (SW_Obsolete_ver = 0)";
+            this._commandCollection[1].CommandText = @"SELECT Id, SW_Code, SW_Config, SW_Descrizione, SW_Descrizione_EN, SW_Funzionamento, SW_Obsolete_ver, SW_Obsolete_ver_from_date, SW_P_Lock, SW_P_Opt_MaxPairDevices, SW_P_Opt_RF, SW_P_Opt_ShiftPage, SW_P_Opt_Use_Accel, SW_P_Opt_Use_Backlight, SW_P_Opt_Use_Buzzer, SW_P_Opt_Use_EmButt, SW_P_Opt_Use_LedTorch, SW_P_Opt_Use_Oled, SW_P_Opt_Use_SP, SW_P_Opt_Use_Vibracall, SW_R_Lock, SW_R_Opt_Ana_Input_No, SW_R_Opt_Can, SW_R_Opt_Cont_Keys, SW_R_Opt_Dig_Input_No, SW_R_Opt_Em_Keyb, SW_R_Opt_LockSameRow, SW_R_Opt_MaxPairDevices, SW_R_Opt_Output_No, SW_R_Opt_Plug_Exp, SW_R_Opt_Plug_Ple, SW_R_Opt_Prop_Out, SW_R_Opt_RF, SW_R_Opt_ShiftPage, SW_R_Opt_TimeOut, SW_R_Opt_Use_SP, SW_Revisione, SW_Revisioni, SW_Standard, SW_TipoDevice, SW_Versione FROM Firmware WHERE (SW_Code = @SW_Code) AND (SW_Obsolete_ver = 0)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Code", global::System.Data.SqlDbType.VarChar, 25, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -16999,7 +17241,9 @@ WHERE        (SW_Code = @SW_Code) AND (SW_Obsolete_ver = 0)";
                     global::System.Nullable<int> Original_SW_R_Opt_Dig_Input_No, 
                     global::System.Nullable<int> Original_SW_R_Opt_Ana_Input_No, 
                     bool Original_SW_Obsolete_ver, 
-                    global::System.Nullable<global::System.DateTime> Original_SW_Obsolete_ver_from_date) {
+                    global::System.Nullable<global::System.DateTime> Original_SW_Obsolete_ver_from_date, 
+                    global::System.Nullable<int> Original_SW_P_Lock, 
+                    global::System.Nullable<int> Original_SW_R_Lock) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
             if ((Original_SW_Code == null)) {
                 throw new global::System.ArgumentNullException("Original_SW_Code");
@@ -17138,6 +17382,22 @@ WHERE        (SW_Code = @SW_Code) AND (SW_Obsolete_ver = 0)";
                 this.Adapter.DeleteCommand.Parameters[45].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[46].Value = global::System.DBNull.Value;
             }
+            if ((Original_SW_P_Lock.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[47].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[48].Value = ((int)(Original_SW_P_Lock.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[47].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[48].Value = global::System.DBNull.Value;
+            }
+            if ((Original_SW_R_Lock.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[49].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[50].Value = ((int)(Original_SW_R_Lock.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[49].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[50].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -17196,7 +17456,9 @@ WHERE        (SW_Code = @SW_Code) AND (SW_Obsolete_ver = 0)";
                     string SW_Funzionamento, 
                     string SW_Config, 
                     bool SW_Obsolete_ver, 
-                    global::System.Nullable<global::System.DateTime> SW_Obsolete_ver_from_date) {
+                    global::System.Nullable<global::System.DateTime> SW_Obsolete_ver_from_date, 
+                    global::System.Nullable<int> SW_P_Lock, 
+                    global::System.Nullable<int> SW_R_Lock) {
             if ((SW_Code == null)) {
                 throw new global::System.ArgumentNullException("SW_Code");
             }
@@ -17330,6 +17592,18 @@ WHERE        (SW_Code = @SW_Code) AND (SW_Obsolete_ver = 0)";
             else {
                 this.Adapter.InsertCommand.Parameters[37].Value = global::System.DBNull.Value;
             }
+            if ((SW_P_Lock.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[38].Value = ((int)(SW_P_Lock.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[38].Value = global::System.DBNull.Value;
+            }
+            if ((SW_R_Lock.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[39].Value = ((int)(SW_R_Lock.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[39].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -17389,6 +17663,8 @@ WHERE        (SW_Code = @SW_Code) AND (SW_Obsolete_ver = 0)";
                     string SW_Config, 
                     bool SW_Obsolete_ver, 
                     global::System.Nullable<global::System.DateTime> SW_Obsolete_ver_from_date, 
+                    global::System.Nullable<int> SW_P_Lock, 
+                    global::System.Nullable<int> SW_R_Lock, 
                     int Original_Id, 
                     string Original_SW_Code, 
                     string Original_SW_TipoDevice, 
@@ -17425,6 +17701,8 @@ WHERE        (SW_Code = @SW_Code) AND (SW_Obsolete_ver = 0)";
                     global::System.Nullable<int> Original_SW_R_Opt_Ana_Input_No, 
                     bool Original_SW_Obsolete_ver, 
                     global::System.Nullable<global::System.DateTime> Original_SW_Obsolete_ver_from_date, 
+                    global::System.Nullable<int> Original_SW_P_Lock, 
+                    global::System.Nullable<int> Original_SW_R_Lock, 
                     int Id) {
             if ((SW_Code == null)) {
                 throw new global::System.ArgumentNullException("SW_Code");
@@ -17559,145 +17837,173 @@ WHERE        (SW_Code = @SW_Code) AND (SW_Obsolete_ver = 0)";
             else {
                 this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[38].Value = ((int)(Original_Id));
+            if ((SW_P_Lock.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((int)(SW_P_Lock.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
+            }
+            if ((SW_R_Lock.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((int)(SW_R_Lock.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[40].Value = ((int)(Original_Id));
             if ((Original_SW_Code == null)) {
                 throw new global::System.ArgumentNullException("Original_SW_Code");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((string)(Original_SW_Code));
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((string)(Original_SW_Code));
             }
             if ((Original_SW_TipoDevice == null)) {
                 throw new global::System.ArgumentNullException("Original_SW_TipoDevice");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((string)(Original_SW_TipoDevice));
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((string)(Original_SW_TipoDevice));
             }
             if ((Original_SW_Descrizione == null)) {
-                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[42].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((string)(Original_SW_Descrizione));
-            }
-            if ((Original_SW_Descrizione_EN == null)) {
                 this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[44].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[44].Value = ((string)(Original_SW_Descrizione_EN));
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((string)(Original_SW_Descrizione));
             }
-            if ((Original_SW_Versione == null)) {
+            if ((Original_SW_Descrizione_EN == null)) {
                 this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[46].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[46].Value = ((string)(Original_SW_Versione));
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((string)(Original_SW_Descrizione_EN));
             }
-            if ((Original_SW_Revisione == null)) {
+            if ((Original_SW_Versione == null)) {
                 this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[48].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[48].Value = ((string)(Original_SW_Revisione));
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((string)(Original_SW_Versione));
             }
-            this.Adapter.UpdateCommand.Parameters[49].Value = ((bool)(Original_SW_Standard));
+            if ((Original_SW_Revisione == null)) {
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[50].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[50].Value = ((string)(Original_SW_Revisione));
+            }
+            this.Adapter.UpdateCommand.Parameters[51].Value = ((bool)(Original_SW_Standard));
             if ((Original_SW_P_Opt_RF == null)) {
                 throw new global::System.ArgumentNullException("Original_SW_P_Opt_RF");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[50].Value = ((string)(Original_SW_P_Opt_RF));
+                this.Adapter.UpdateCommand.Parameters[52].Value = ((string)(Original_SW_P_Opt_RF));
             }
-            this.Adapter.UpdateCommand.Parameters[51].Value = ((bool)(Original_SW_P_Opt_Use_Oled));
-            this.Adapter.UpdateCommand.Parameters[52].Value = ((bool)(Original_SW_P_Opt_Use_EmButt));
-            this.Adapter.UpdateCommand.Parameters[53].Value = ((bool)(Original_SW_P_Opt_Use_Backlight));
-            this.Adapter.UpdateCommand.Parameters[54].Value = ((bool)(Original_SW_P_Opt_ShiftPage));
-            this.Adapter.UpdateCommand.Parameters[55].Value = ((bool)(Original_SW_P_Opt_Use_Accel));
-            this.Adapter.UpdateCommand.Parameters[56].Value = ((bool)(Original_SW_P_Opt_Use_SP));
-            this.Adapter.UpdateCommand.Parameters[57].Value = ((bool)(Original_SW_P_Opt_Use_Buzzer));
-            this.Adapter.UpdateCommand.Parameters[58].Value = ((bool)(Original_SW_P_Opt_Use_Vibracall));
-            this.Adapter.UpdateCommand.Parameters[59].Value = ((bool)(Original_SW_P_Opt_Use_LedTorch));
+            this.Adapter.UpdateCommand.Parameters[53].Value = ((bool)(Original_SW_P_Opt_Use_Oled));
+            this.Adapter.UpdateCommand.Parameters[54].Value = ((bool)(Original_SW_P_Opt_Use_EmButt));
+            this.Adapter.UpdateCommand.Parameters[55].Value = ((bool)(Original_SW_P_Opt_Use_Backlight));
+            this.Adapter.UpdateCommand.Parameters[56].Value = ((bool)(Original_SW_P_Opt_ShiftPage));
+            this.Adapter.UpdateCommand.Parameters[57].Value = ((bool)(Original_SW_P_Opt_Use_Accel));
+            this.Adapter.UpdateCommand.Parameters[58].Value = ((bool)(Original_SW_P_Opt_Use_SP));
+            this.Adapter.UpdateCommand.Parameters[59].Value = ((bool)(Original_SW_P_Opt_Use_Buzzer));
+            this.Adapter.UpdateCommand.Parameters[60].Value = ((bool)(Original_SW_P_Opt_Use_Vibracall));
+            this.Adapter.UpdateCommand.Parameters[61].Value = ((bool)(Original_SW_P_Opt_Use_LedTorch));
             if ((Original_SW_P_Opt_MaxPairDevices.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[60].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[61].Value = ((int)(Original_SW_P_Opt_MaxPairDevices.Value));
+                this.Adapter.UpdateCommand.Parameters[62].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[63].Value = ((int)(Original_SW_P_Opt_MaxPairDevices.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[60].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[61].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[62].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[63].Value = global::System.DBNull.Value;
             }
             if ((Original_SW_R_Opt_RF == null)) {
                 throw new global::System.ArgumentNullException("Original_SW_R_Opt_RF");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[62].Value = ((string)(Original_SW_R_Opt_RF));
+                this.Adapter.UpdateCommand.Parameters[64].Value = ((string)(Original_SW_R_Opt_RF));
             }
-            this.Adapter.UpdateCommand.Parameters[63].Value = ((bool)(Original_SW_R_Opt_Plug_Exp));
-            this.Adapter.UpdateCommand.Parameters[64].Value = ((bool)(Original_SW_R_Opt_Plug_Ple));
-            this.Adapter.UpdateCommand.Parameters[65].Value = ((bool)(Original_SW_R_Opt_Em_Keyb));
-            this.Adapter.UpdateCommand.Parameters[66].Value = ((bool)(Original_SW_R_Opt_Can));
-            this.Adapter.UpdateCommand.Parameters[67].Value = ((bool)(Original_SW_R_Opt_Prop_Out));
+            this.Adapter.UpdateCommand.Parameters[65].Value = ((bool)(Original_SW_R_Opt_Plug_Exp));
+            this.Adapter.UpdateCommand.Parameters[66].Value = ((bool)(Original_SW_R_Opt_Plug_Ple));
+            this.Adapter.UpdateCommand.Parameters[67].Value = ((bool)(Original_SW_R_Opt_Em_Keyb));
+            this.Adapter.UpdateCommand.Parameters[68].Value = ((bool)(Original_SW_R_Opt_Can));
+            this.Adapter.UpdateCommand.Parameters[69].Value = ((bool)(Original_SW_R_Opt_Prop_Out));
             if ((Original_SW_R_Opt_TimeOut == null)) {
                 throw new global::System.ArgumentNullException("Original_SW_R_Opt_TimeOut");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[68].Value = ((string)(Original_SW_R_Opt_TimeOut));
+                this.Adapter.UpdateCommand.Parameters[70].Value = ((string)(Original_SW_R_Opt_TimeOut));
             }
             if ((Original_SW_R_Opt_Cont_Keys.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[69].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[70].Value = ((int)(Original_SW_R_Opt_Cont_Keys.Value));
+                this.Adapter.UpdateCommand.Parameters[71].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[72].Value = ((int)(Original_SW_R_Opt_Cont_Keys.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[69].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[70].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[71].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[72].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[71].Value = ((bool)(Original_SW_R_Opt_LockSameRow));
-            this.Adapter.UpdateCommand.Parameters[72].Value = ((bool)(Original_SW_R_Opt_Use_SP));
+            this.Adapter.UpdateCommand.Parameters[73].Value = ((bool)(Original_SW_R_Opt_LockSameRow));
+            this.Adapter.UpdateCommand.Parameters[74].Value = ((bool)(Original_SW_R_Opt_Use_SP));
             if ((Original_SW_R_Opt_MaxPairDevices.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[73].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[74].Value = ((int)(Original_SW_R_Opt_MaxPairDevices.Value));
+                this.Adapter.UpdateCommand.Parameters[75].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[76].Value = ((int)(Original_SW_R_Opt_MaxPairDevices.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[73].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[74].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[75].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[76].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[75].Value = ((bool)(Original_SW_R_Opt_ShiftPage));
+            this.Adapter.UpdateCommand.Parameters[77].Value = ((bool)(Original_SW_R_Opt_ShiftPage));
             if ((Original_SW_R_Opt_Output_No.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[76].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[77].Value = ((int)(Original_SW_R_Opt_Output_No.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[76].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[77].Value = global::System.DBNull.Value;
-            }
-            if ((Original_SW_R_Opt_Dig_Input_No.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[78].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[79].Value = ((int)(Original_SW_R_Opt_Dig_Input_No.Value));
+                this.Adapter.UpdateCommand.Parameters[79].Value = ((int)(Original_SW_R_Opt_Output_No.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[78].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[79].Value = global::System.DBNull.Value;
             }
-            if ((Original_SW_R_Opt_Ana_Input_No.HasValue == true)) {
+            if ((Original_SW_R_Opt_Dig_Input_No.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[80].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[81].Value = ((int)(Original_SW_R_Opt_Ana_Input_No.Value));
+                this.Adapter.UpdateCommand.Parameters[81].Value = ((int)(Original_SW_R_Opt_Dig_Input_No.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[80].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[81].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[82].Value = ((bool)(Original_SW_Obsolete_ver));
-            if ((Original_SW_Obsolete_ver_from_date.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[83].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[84].Value = ((System.DateTime)(Original_SW_Obsolete_ver_from_date.Value));
+            if ((Original_SW_R_Opt_Ana_Input_No.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[82].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[83].Value = ((int)(Original_SW_R_Opt_Ana_Input_No.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[83].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[84].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[82].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[83].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[85].Value = ((int)(Id));
+            this.Adapter.UpdateCommand.Parameters[84].Value = ((bool)(Original_SW_Obsolete_ver));
+            if ((Original_SW_Obsolete_ver_from_date.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[85].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[86].Value = ((System.DateTime)(Original_SW_Obsolete_ver_from_date.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[85].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[86].Value = global::System.DBNull.Value;
+            }
+            if ((Original_SW_P_Lock.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[87].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[88].Value = ((int)(Original_SW_P_Lock.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[87].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[88].Value = global::System.DBNull.Value;
+            }
+            if ((Original_SW_R_Lock.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[89].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[90].Value = ((int)(Original_SW_R_Lock.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[89].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[90].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[91].Value = ((int)(Id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -17757,6 +18063,8 @@ WHERE        (SW_Code = @SW_Code) AND (SW_Obsolete_ver = 0)";
                     string SW_Config, 
                     bool SW_Obsolete_ver, 
                     global::System.Nullable<global::System.DateTime> SW_Obsolete_ver_from_date, 
+                    global::System.Nullable<int> SW_P_Lock, 
+                    global::System.Nullable<int> SW_R_Lock, 
                     int Original_Id, 
                     string Original_SW_Code, 
                     string Original_SW_TipoDevice, 
@@ -17792,8 +18100,10 @@ WHERE        (SW_Code = @SW_Code) AND (SW_Obsolete_ver = 0)";
                     global::System.Nullable<int> Original_SW_R_Opt_Dig_Input_No, 
                     global::System.Nullable<int> Original_SW_R_Opt_Ana_Input_No, 
                     bool Original_SW_Obsolete_ver, 
-                    global::System.Nullable<global::System.DateTime> Original_SW_Obsolete_ver_from_date) {
-            return this.Update(SW_Code, SW_TipoDevice, SW_Descrizione, SW_Descrizione_EN, SW_Versione, SW_Revisione, SW_Standard, SW_P_Opt_RF, SW_P_Opt_Use_Oled, SW_P_Opt_Use_EmButt, SW_P_Opt_Use_Backlight, SW_P_Opt_ShiftPage, SW_P_Opt_Use_Accel, SW_P_Opt_Use_SP, SW_P_Opt_Use_Buzzer, SW_P_Opt_Use_Vibracall, SW_P_Opt_Use_LedTorch, SW_P_Opt_MaxPairDevices, SW_R_Opt_RF, SW_R_Opt_Plug_Exp, SW_R_Opt_Plug_Ple, SW_R_Opt_Em_Keyb, SW_R_Opt_Can, SW_R_Opt_Prop_Out, SW_R_Opt_TimeOut, SW_R_Opt_Cont_Keys, SW_R_Opt_LockSameRow, SW_R_Opt_Use_SP, SW_R_Opt_MaxPairDevices, SW_R_Opt_ShiftPage, SW_R_Opt_Output_No, SW_R_Opt_Dig_Input_No, SW_R_Opt_Ana_Input_No, SW_Revisioni, SW_Funzionamento, SW_Config, SW_Obsolete_ver, SW_Obsolete_ver_from_date, Original_Id, Original_SW_Code, Original_SW_TipoDevice, Original_SW_Descrizione, Original_SW_Descrizione_EN, Original_SW_Versione, Original_SW_Revisione, Original_SW_Standard, Original_SW_P_Opt_RF, Original_SW_P_Opt_Use_Oled, Original_SW_P_Opt_Use_EmButt, Original_SW_P_Opt_Use_Backlight, Original_SW_P_Opt_ShiftPage, Original_SW_P_Opt_Use_Accel, Original_SW_P_Opt_Use_SP, Original_SW_P_Opt_Use_Buzzer, Original_SW_P_Opt_Use_Vibracall, Original_SW_P_Opt_Use_LedTorch, Original_SW_P_Opt_MaxPairDevices, Original_SW_R_Opt_RF, Original_SW_R_Opt_Plug_Exp, Original_SW_R_Opt_Plug_Ple, Original_SW_R_Opt_Em_Keyb, Original_SW_R_Opt_Can, Original_SW_R_Opt_Prop_Out, Original_SW_R_Opt_TimeOut, Original_SW_R_Opt_Cont_Keys, Original_SW_R_Opt_LockSameRow, Original_SW_R_Opt_Use_SP, Original_SW_R_Opt_MaxPairDevices, Original_SW_R_Opt_ShiftPage, Original_SW_R_Opt_Output_No, Original_SW_R_Opt_Dig_Input_No, Original_SW_R_Opt_Ana_Input_No, Original_SW_Obsolete_ver, Original_SW_Obsolete_ver_from_date, Original_Id);
+                    global::System.Nullable<global::System.DateTime> Original_SW_Obsolete_ver_from_date, 
+                    global::System.Nullable<int> Original_SW_P_Lock, 
+                    global::System.Nullable<int> Original_SW_R_Lock) {
+            return this.Update(SW_Code, SW_TipoDevice, SW_Descrizione, SW_Descrizione_EN, SW_Versione, SW_Revisione, SW_Standard, SW_P_Opt_RF, SW_P_Opt_Use_Oled, SW_P_Opt_Use_EmButt, SW_P_Opt_Use_Backlight, SW_P_Opt_ShiftPage, SW_P_Opt_Use_Accel, SW_P_Opt_Use_SP, SW_P_Opt_Use_Buzzer, SW_P_Opt_Use_Vibracall, SW_P_Opt_Use_LedTorch, SW_P_Opt_MaxPairDevices, SW_R_Opt_RF, SW_R_Opt_Plug_Exp, SW_R_Opt_Plug_Ple, SW_R_Opt_Em_Keyb, SW_R_Opt_Can, SW_R_Opt_Prop_Out, SW_R_Opt_TimeOut, SW_R_Opt_Cont_Keys, SW_R_Opt_LockSameRow, SW_R_Opt_Use_SP, SW_R_Opt_MaxPairDevices, SW_R_Opt_ShiftPage, SW_R_Opt_Output_No, SW_R_Opt_Dig_Input_No, SW_R_Opt_Ana_Input_No, SW_Revisioni, SW_Funzionamento, SW_Config, SW_Obsolete_ver, SW_Obsolete_ver_from_date, SW_P_Lock, SW_R_Lock, Original_Id, Original_SW_Code, Original_SW_TipoDevice, Original_SW_Descrizione, Original_SW_Descrizione_EN, Original_SW_Versione, Original_SW_Revisione, Original_SW_Standard, Original_SW_P_Opt_RF, Original_SW_P_Opt_Use_Oled, Original_SW_P_Opt_Use_EmButt, Original_SW_P_Opt_Use_Backlight, Original_SW_P_Opt_ShiftPage, Original_SW_P_Opt_Use_Accel, Original_SW_P_Opt_Use_SP, Original_SW_P_Opt_Use_Buzzer, Original_SW_P_Opt_Use_Vibracall, Original_SW_P_Opt_Use_LedTorch, Original_SW_P_Opt_MaxPairDevices, Original_SW_R_Opt_RF, Original_SW_R_Opt_Plug_Exp, Original_SW_R_Opt_Plug_Ple, Original_SW_R_Opt_Em_Keyb, Original_SW_R_Opt_Can, Original_SW_R_Opt_Prop_Out, Original_SW_R_Opt_TimeOut, Original_SW_R_Opt_Cont_Keys, Original_SW_R_Opt_LockSameRow, Original_SW_R_Opt_Use_SP, Original_SW_R_Opt_MaxPairDevices, Original_SW_R_Opt_ShiftPage, Original_SW_R_Opt_Output_No, Original_SW_R_Opt_Dig_Input_No, Original_SW_R_Opt_Ana_Input_No, Original_SW_Obsolete_ver, Original_SW_Obsolete_ver_from_date, Original_SW_P_Lock, Original_SW_R_Lock, Original_Id);
         }
     }
     
@@ -17935,10 +18245,11 @@ WHERE        (SW_Code = @SW_Code) AND (SW_Obsolete_ver = 0)";
             tableMapping.ColumnMappings.Add("Ser_Substition_ID_ReadSerial", "Ser_Substition_ID_ReadSerial");
             tableMapping.ColumnMappings.Add("Ser_Note", "Ser_Note");
             tableMapping.ColumnMappings.Add("Ser_ObsoleteFromDate", "Ser_ObsoleteFromDate");
+            tableMapping.ColumnMappings.Add("Ser_LockLevel", "Ser_LockLevel");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [SerialNumbers_Obsolete] ([Ser_Kit], [Ser_ID_Cli], [Ser_Device], [Ser_Device_ID_Code], [Ser_OfficialSerial], [Ser_ReadSerial], [Ser_SW_Code], [Ser_SW_Code_Rev], [Ser_SW_Std_Type], [Ser_SN_prod], [Ser_Commessa], [Ser_DateProduction], [Ser_Spedito], [Ser_Data_Spedito], [Ser_Substition_ID_ReadSerial], [Ser_Note], [Ser_ObsoleteFromDate]) VALUES (@Ser_Kit, @Ser_ID_Cli, @Ser_Device, @Ser_Device_ID_Code, @Ser_OfficialSerial, @Ser_ReadSerial, @Ser_SW_Code, @Ser_SW_Code_Rev, @Ser_SW_Std_Type, @Ser_SN_prod, @Ser_Commessa, @Ser_DateProduction, @Ser_Spedito, @Ser_Data_Spedito, @Ser_Substition_ID_ReadSerial, @Ser_Note, @Ser_ObsoleteFromDate)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [SerialNumbers_Obsolete] ([Ser_Kit], [Ser_ID_Cli], [Ser_Device], [Ser_Device_ID_Code], [Ser_OfficialSerial], [Ser_ReadSerial], [Ser_SW_Code], [Ser_SW_Code_Rev], [Ser_SW_Std_Type], [Ser_SN_prod], [Ser_Commessa], [Ser_DateProduction], [Ser_Spedito], [Ser_Data_Spedito], [Ser_Substition_ID_ReadSerial], [Ser_Note], [Ser_ObsoleteFromDate], [Ser_LockLevel]) VALUES (@Ser_Kit, @Ser_ID_Cli, @Ser_Device, @Ser_Device_ID_Code, @Ser_OfficialSerial, @Ser_ReadSerial, @Ser_SW_Code, @Ser_SW_Code_Rev, @Ser_SW_Std_Type, @Ser_SN_prod, @Ser_Commessa, @Ser_DateProduction, @Ser_Spedito, @Ser_Data_Spedito, @Ser_Substition_ID_ReadSerial, @Ser_Note, @Ser_ObsoleteFromDate, @Ser_LockLevel)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Kit", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Kit", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_ID_Cli", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_ID_Cli", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -17957,6 +18268,7 @@ WHERE        (SW_Code = @SW_Code) AND (SW_Obsolete_ver = 0)";
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Substition_ID_ReadSerial", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Substition_ID_ReadSerial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Note", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Note", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_ObsoleteFromDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_ObsoleteFromDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_LockLevel", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_LockLevel", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -17973,7 +18285,7 @@ WHERE        (SW_Code = @SW_Code) AND (SW_Obsolete_ver = 0)";
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT        Ser_Kit, Ser_ID_Cli, Ser_Device, Ser_Device_ID_Code, Ser_OfficialSerial, Ser_ReadSerial, Ser_SW_Code, Ser_SW_Code_Rev, Ser_SW_Std_Type, Ser_SN_prod, Ser_Commessa, Ser_DateProduction, Ser_Spedito, 
-                         Ser_Data_Spedito, Ser_Substition_ID_ReadSerial, Ser_Note, Ser_ObsoleteFromDate
+                         Ser_Data_Spedito, Ser_Substition_ID_ReadSerial, Ser_Note, Ser_ObsoleteFromDate, Ser_LockLevel
 FROM            SerialNumbers_Obsolete";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
@@ -18052,7 +18364,8 @@ FROM            SerialNumbers_Obsolete";
                     global::System.Nullable<global::System.DateTime> Ser_Data_Spedito, 
                     string Ser_Substition_ID_ReadSerial, 
                     string Ser_Note, 
-                    global::System.Nullable<global::System.DateTime> Ser_ObsoleteFromDate) {
+                    global::System.Nullable<global::System.DateTime> Ser_ObsoleteFromDate, 
+                    global::System.Nullable<int> Ser_LockLevel) {
             if ((Ser_Kit == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -18149,6 +18462,12 @@ FROM            SerialNumbers_Obsolete";
             }
             else {
                 this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            if ((Ser_LockLevel.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[17].Value = ((int)(Ser_LockLevel.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 

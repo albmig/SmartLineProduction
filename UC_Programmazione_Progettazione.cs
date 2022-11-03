@@ -42,6 +42,8 @@ namespace SmartLineProduction
         public string glob_tag_1 = string.Empty;
         public string glob_tag_2 = string.Empty;
 
+        public int glob_LockLevel = 0;
+
         //Riposizionamento
         public int glob_selectedrecord = 0;
 
@@ -257,6 +259,10 @@ namespace SmartLineProduction
             DataRow getRev = ds_Prototipi.Firmware.Rows.Find(fw_key_id);
             string Fw_Rev = getRev["SW_Revisione"].ToString();
 
+            string tipodev = getRev["SW_TipoDevice"].ToString();
+            if (tipodev == "P") { glob_LockLevel = (int)getRev["SW_P_Lock"]; }
+            if (tipodev == "R") { glob_LockLevel = (int)getRev["SW_R_Lock"]; }
+
             // Verifica se nuovo SN o già esistente
             bool newrecord = false;
             string sel = "Ser_ReadSerial = " + "'" + serial_read + "'";
@@ -295,6 +301,7 @@ namespace SmartLineProduction
             newrow["Ser_Kit"] = Kit;
             newrow["Ser_ID_Cli"] = ID_Cli;
             newrow["Ser_Device"] = Item;
+            newrow["Ser_LockLevel"] = glob_LockLevel;
 
             //riga modificata il 20/05/2021 per programmare i custom ma consentire di vedere anche gli altri firmware
             //newrow["Ser_SW_Std_Type"] = Fw_isStandard;

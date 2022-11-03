@@ -38,6 +38,8 @@ namespace SmartLineProduction
         public static string glob_FW_folder = "";
         public static string glob_Commander_path = "";
 
+        public int glob_LockLevel = 0;
+
         public UC_Programmazione_Clona()
         {
             InitializeComponent();
@@ -790,6 +792,11 @@ namespace SmartLineProduction
                 foreach (DataRowView row in dv_fw)
                 {
                     updated_fw_revisione = row["SW_Revisione"].ToString();
+
+                    string tipodev = row["SW_TipoDevice"].ToString();
+                    if (tipodev == "P") { glob_LockLevel = (int)row["SW_P_Lock"]; }
+                    if (tipodev == "R") { glob_LockLevel = (int)row["SW_R_Lock"]; }
+
                 }
                 if (updated_fw_revisione != record_fw_rev)
                 {
@@ -825,6 +832,8 @@ namespace SmartLineProduction
                         obsrow["Ser_Substition_ID_ReadSerial"] = DROW_SN["Ser_Substition_ID_ReadSerial"];
                         obsrow["Ser_Note"] = DROW_SN["Ser_Note"];
                         obsrow["Ser_ObsoleteFromDate"] = DateTime.Now;
+                        obsrow["Ser_LockLevel"] = DROW_SN["Ser_LockLevel"];
+
                         ds_Programmazione.SerialNumbers_Obsolete.Rows.Add(obsrow);
 
                         try
@@ -850,6 +859,8 @@ namespace SmartLineProduction
                 if (record_read_serial != serial_read) { editrow["Ser_ReadSerial"] = serial_read; }
 
                 editrow["Ser_DateProduction"] = DateTime.Now;
+                editrow["Ser_LockLevel"] = glob_LockLevel;
+
 
                 editrow.EndEdit();
 

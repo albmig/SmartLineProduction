@@ -35,6 +35,7 @@ namespace SmartLineProduction
         public string WEB_path_image = Properties.Settings.Default.Doc_folder;
         public string glob_tipo_progr = ""; //C-Commessa K-Kit D-Device L-Libera
         public string glob_ID_cli = "";
+        public int glob_LockLevel = 0;
 
         public bool glob_show_evasi = true;
         public int glob_selectedrecord = 0;
@@ -1472,6 +1473,11 @@ namespace SmartLineProduction
                 DataRowCollection rowCol = this.ds_Programmazione.dt_Firmware_lookupCommesseSL.Rows;
                 Fw_isStandard = (bool)rowCol[0]["SW_Standard"];
                 Fw_Rev = rowCol[0]["SW_Revisione"].ToString();
+
+                //Ottengo LockLevel
+                string tipodev = rowCol[0]["SW_TipoDevice"].ToString();
+                if (tipodev == "P") { glob_LockLevel = (int)rowCol[0]["SW_P_Lock"]; }
+                if (tipodev == "R") { glob_LockLevel = (int)rowCol[0]["SW_R_Lock"]; }
             }
 
             // Verifica se nuovo SN o già esistente
@@ -1509,6 +1515,7 @@ namespace SmartLineProduction
             newrow["Ser_SW_Code"] = codice_fw;
             newrow["Ser_Spedito"] = false;
             newrow["Ser_DateProduction"] = DateTime.Now;
+            newrow["Ser_LockLevel"] = glob_LockLevel;
 
             if (glob_tipo_progr == "C") //C-Commessa K-Kit D-Device L-Libera
             {

@@ -352,6 +352,7 @@
             this.firmwareListBindingSource.DataMember = "Firmware_List";
             this.firmwareListBindingSource.DataSource = this.ds_Prototipi;
             this.firmwareListBindingSource.Filter = "(SW_TipoDevice = \'R\') AND (SW_Obsolete_ver = 0)";
+            this.firmwareListBindingSource.Sort = "SW_Versione desc";
             this.firmwareListBindingSource.CurrentChanged += new System.EventHandler(this.firmwareListBindingSource_CurrentChanged);
             // 
             // ds_Prototipi
@@ -609,7 +610,7 @@
             this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.metroLabel6.Location = new System.Drawing.Point(0, 71);
             this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(89, 19);
+            this.metroLabel6.Size = new System.Drawing.Size(80, 19);
             this.metroLabel6.Style = MetroFramework.MetroColorStyle.Red;
             this.metroLabel6.TabIndex = 49;
             this.metroLabel6.Text = "Tastiera Em.";
@@ -622,7 +623,7 @@
             this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.metroLabel7.Location = new System.Drawing.Point(0, 35);
             this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(69, 19);
+            this.metroLabel7.Size = new System.Drawing.Size(65, 19);
             this.metroLabel7.Style = MetroFramework.MetroColorStyle.Red;
             this.metroLabel7.TabIndex = 48;
             this.metroLabel7.Text = "Plug PLD";
