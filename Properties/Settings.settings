@@ -5,10 +5,10 @@
     <Setting Name="SISTEMATICA_FACTORYConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=192.168.0.8\SQLEXPRESS;Initial Catalog=SISTEMATICA_FACTORY;Persist Security Info=True;User ID=sa;Password=aavesp19;&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=SERVER208\SQLEXPRESS;Initial Catalog=SISTEMATICA_FACTORY;Persist Security Info=True;User ID=sa;Password=aavesp19!;&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=192.168.0.8\SQLEXPRESS;Initial Catalog=SISTEMATICA_FACTORY;Persist Security Info=True;User ID=sa;Password=aavesp19;</Value>
+      <Value Profile="(Default)">Data Source=SERVER208\SQLEXPRESS;Initial Catalog=SISTEMATICA_FACTORY;Persist Security Info=True;User ID=sa;Password=aavesp19!;</Value>
     </Setting>
     <Setting Name="FW_folder" Type="System.String" Scope="User">
       <Value Profile="(Default)">\\192.168.0.8\sistematica\AREA_FIRMWARE\SmartLine\Compilati</Value>

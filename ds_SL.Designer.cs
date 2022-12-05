@@ -34089,9 +34089,11 @@ SELECT Id, Fam_Prefix, Fam_Name, Fam_Label, Fam_Tipo, Fam_IsDevice, Fam_ToCommes
             this._commandCollection[9].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[10] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[10].Connection = this.Connection;
-            this._commandCollection[10].CommandText = "SELECT Articolo, Descrizione, DescrizioneEstesa, Modello, Prefix_3, Prefix_5, SUB" +
-                "STRING(Articolo, 5, 2) AS SiglaCli_Kit FROM SF_Articoli WHERE (Articolo LIKE \'XK" +
-                "IT%_L\') ORDER BY Articolo";
+            this._commandCollection[10].CommandText = @"SELECT        Articolo, Descrizione, DescrizioneEstesa, Modello, Prefix_3, Prefix_5, SUBSTRING(Articolo, 5, 2) AS SiglaCli_Kit
+FROM            SF_Articoli
+WHERE        (Articolo LIKE 'XKIT%_L') OR
+                         (Articolo LIKE 'XKIT%_H')
+ORDER BY Articolo";
             this._commandCollection[10].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[11] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[11].Connection = this.Connection;

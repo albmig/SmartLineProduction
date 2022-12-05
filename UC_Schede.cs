@@ -55,6 +55,7 @@ namespace SmartLineProduction
             radio_FW_all.Checked = true;
             radio_FW_standard.Checked = false;
             radio_FW_custom.Checked = false;
+            tb_search.Text = string.Empty;
 
             SetView();
         }
@@ -323,7 +324,7 @@ namespace SmartLineProduction
                     break;
             }
 
-            tb_search.Text = "";
+            tb_search.Text = string.Empty;
         }
 
         private void copiaIlValoreNellaClipboardToolStripMenuItem_Click(object sender, EventArgs e)
@@ -338,9 +339,9 @@ namespace SmartLineProduction
 
         private void FiltraArticoliCliente()
         {
-            string filtro = "";
-            string filtrocli = "";
-            string filtro_tb_search = "";
+            string filtro = string.Empty;
+            string filtrocli = string.Empty;
+            string filtro_tb_search = string.Empty;
 
             DataRowView drview = (DataRowView)tabSiglacliBindingSource.Current;
             if (drview == null) { return; }
@@ -355,22 +356,24 @@ namespace SmartLineProduction
             }
             else
             {
-                filtrocli = "";
+                filtrocli = string.Empty;
             }
 
             //Aggiungo filtro su tb_search
-            if (tb_search.Text != "")
+            if (tb_search.Text != string.Empty)
             {
                 filtro_tb_search = string.Format("Articolo LIKE '%{0}%'", tb_search.Text);
             }
 
             //Applico filtro
-            if ((filtrocli != "") && (filtro_tb_search != "")) { filtro = filtrocli + " AND " + filtro_tb_search; }
+            if ((filtrocli != string.Empty) && (filtro_tb_search != string.Empty)) { filtro = filtrocli + " AND " + filtro_tb_search; }
             else
             {
-                if (filtrocli != "") { filtro = filtrocli; }
-                if (filtro_tb_search != "") { filtro = filtro_tb_search; }
+                if (filtrocli != string.Empty) { filtro = filtrocli; }
+                if (filtro_tb_search != string.Empty) { filtro = filtro_tb_search; }
             }
+
+            //this.ds_SL.SF_ArticoliSchede.DefaultView.RowFilter = null;
 
             this.ds_SL.SF_ArticoliSchede.DefaultView.RowFilter = filtro;
 

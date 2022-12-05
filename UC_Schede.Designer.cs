@@ -475,8 +475,7 @@
             this.tb_search.Dock = System.Windows.Forms.DockStyle.Top;
             this.tb_search.Icon = global::SmartLineProduction.Properties.Resources.Lente;
             this.tb_search.IconRight = true;
-            this.tb_search.Lines = new string[] {
-        "metroTextBox1"};
+            this.tb_search.Lines = new string[0];
             this.tb_search.Location = new System.Drawing.Point(0, 0);
             this.tb_search.MaxLength = 32767;
             this.tb_search.Name = "tb_search";
@@ -489,7 +488,6 @@
             this.tb_search.ShortcutsEnabled = true;
             this.tb_search.Size = new System.Drawing.Size(194, 23);
             this.tb_search.TabIndex = 2;
-            this.tb_search.Text = "metroTextBox1";
             this.tb_search.UseCustomBackColor = true;
             this.tb_search.UseSelectable = true;
             this.tb_search.WaterMark = "ricerca";
