@@ -102,6 +102,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.miniToolStrip = new System.Windows.Forms.MenuStrip();
             this.Brother_timer = new System.Windows.Forms.Timer(this.components);
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.layout_Menu.SuspendLayout();
             this.layout_orizz_menu.SuspendLayout();
             this.MainMenuStrip.SuspendLayout();
@@ -559,6 +560,7 @@
             this.MainPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MainPanel.BackgroundImage")));
             this.MainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.layout_Menu.SetColumnSpan(this.MainPanel, 16);
+            this.MainPanel.Controls.Add(this.metroLabel4);
             this.MainPanel.Controls.Add(this.docker_printers);
             this.MainPanel.Controls.Add(this.lab_resources_path);
             this.MainPanel.Controls.Add(this.pictureBox1);
@@ -907,6 +909,15 @@
             this.Brother_timer.Interval = 1000;
             this.Brother_timer.Tick += new System.EventHandler(this.Brother_timer_Tick);
             // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Location = new System.Drawing.Point(137, 263);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(83, 19);
+            this.metroLabel4.TabIndex = 6;
+            this.metroLabel4.Text = "metroLabel4";
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1018,6 +1029,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel lab_Brother_Default;
         private DevExpress.XtraEditors.ToggleSwitch tog_Printers;
+        private MetroFramework.Controls.MetroLabel metroLabel4;
     }
 }
 
