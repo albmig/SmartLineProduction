@@ -1,0 +1,83 @@
+[
+  {
+    "SolutionSetting": [
+      {
+        "id": "5c8b6606-3714-46da-a390-f503a1a152f8",
+        "slnid": "4a5e7210-6457-40ac-9979-1d1fcb8c6754",
+        "NamingOptions": {
+          "namingoption": 3,
+          "customname": null
+        },
+        "ZipOptions": {
+          "zipbackup": true,
+          "zippasswordprotect": false,
+          "zipbackuppasswordvalue": "",
+          "zipbackupsize": false,
+          "zipbackupsizevalue": 0
+        },
+        "BackupOptions": {
+          "Destination": null
+        },
+        "BackupLocationOptions": {
+          "locationoption": 2,
+          "customlocation": "C:\\Users\\albmi\\Desktop\\_CoDiNg_\\_BackupFolder_"
+        },
+        "RestoreLocationOptions": {
+          "locationoption": 0,
+          "customlocation": null
+        },
+        "createdatetime": "2022-04-26T12:15:23.7876219+02:00",
+        "backup": [
+          {
+            "id": "00000000-0000-0000-0000-000000000000",
+            "backupdatetime": "0001-01-01T00:00:00",
+            "settingid": "00000000-0000-0000-0000-000000000000",
+            "backedupsolutionpath": null,
+            "backeduppath": null,
+            "backupname": null,
+            "source": null,
+            "type": null,
+            "note": null,
+            "createddatetime": "0001-01-01T00:00:00"
+          },
+          {
+            "id": "babb1b3b-22ae-4289-a0d7-43683b59f758",
+            "backupdatetime": "2022-04-26T12:16:17.3442715+02:00",
+            "settingid": "5c8b6606-3714-46da-a390-f503a1a152f8",
+            "backedupsolutionpath": "C:/Users/albmi/Desktop/_CoDiNg_/_BackupFolder_/BleSistematica_26042022_2022_4_26_12_16_16/Users/albmi/Desktop/_CoDiNg_/BLE_Sistematica/BLE_Sistematica.sln",
+            "backeduppath": "C:/Users/albmi/Desktop/_CoDiNg_/_BackupFolder_/BleSistematica_26042022_2022_4_26_12_16_16.zip",
+            "backupname": "BleSistematica_26042022_2022_4_26_12_16_16",
+            "source": "C:/Users/albmi/Desktop/_CoDiNg_/BLE_Sistematica",
+            "type": "ZipFile",
+            "note": null,
+            "createddatetime": "2022-04-26T12:16:17.3452721+02:00"
+          },
+          {
+            "id": "c6d129dc-9d27-4de2-bd14-b4be7a46b54e",
+            "backupdatetime": "2022-04-26T12:16:42.0663433+02:00",
+            "settingid": "5c8b6606-3714-46da-a390-f503a1a152f8",
+            "backedupsolutionpath": "C:/Users/albmi/Desktop/_CoDiNg_/_BackupFolder_/BleSistematica_2022_4_26_12_16_41/Users/albmi/Desktop/_CoDiNg_/BLE_Sistematica/BLE_Sistematica.sln",
+            "backeduppath": "C:/Users/albmi/Desktop/_CoDiNg_/_BackupFolder_/BleSistematica_2022_4_26_12_16_41.zip",
+            "backupname": "BleSistematica_2022_4_26_12_16_41",
+            "source": "C:/Users/albmi/Desktop/_CoDiNg_/BLE_Sistematica",
+            "type": "ZipFile",
+            "note": null,
+            "createddatetime": "2022-04-26T12:16:42.0663433+02:00"
+          },
+          {
+            "id": "a899c5a4-0a93-43d5-9ebd-02493925135d",
+            "backupdatetime": "2022-04-27T12:21:03.5517942+02:00",
+            "settingid": "5c8b6606-3714-46da-a390-f503a1a152f8",
+            "backedupsolutionpath": "C:/Users/albmi/Desktop/_CoDiNg_/_BackupFolder_/BleSistematica_2022_4_27_12_21_3/Users/albmi/Desktop/_CoDiNg_/BLE_Sistematica/BLE_Sistematica.sln",
+            "backeduppath": "C:/Users/albmi/Desktop/_CoDiNg_/_BackupFolder_/BleSistematica_2022_4_27_12_21_3.zip",
+            "backupname": "BleSistematica_2022_4_27_12_21_3",
+            "source": "C:/Users/albmi/Desktop/_CoDiNg_/BLE_Sistematica",
+            "type": "ZipFile",
+            "note": null,
+            "createddatetime": "2022-04-27T12:21:03.5527946+02:00"
+          }
+        ]
+      }
+    ]
+  }
+]
