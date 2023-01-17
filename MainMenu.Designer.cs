@@ -48,6 +48,8 @@
             this.verificaSensoriRFìdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestioneDelFirmwareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.classicLineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fWPalmariToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fWRicevitoriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.smartLineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fWPalmariToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.fWRicevitoriToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -81,6 +83,7 @@
             this.pan_Menu_exit = new System.Windows.Forms.MenuStrip();
             this.menu_sw_exit = new System.Windows.Forms.ToolStripMenuItem();
             this.MainPanel = new MetroFramework.Controls.MetroPanel();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.docker_printers = new System.Windows.Forms.TableLayoutPanel();
             this.layout_BrotherPrinters = new System.Windows.Forms.TableLayoutPanel();
             this.Brother_Antiman_pos_y = new MetroFramework.Controls.MetroLabel();
@@ -102,7 +105,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.miniToolStrip = new System.Windows.Forms.MenuStrip();
             this.Brother_timer = new System.Windows.Forms.Timer(this.components);
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.layout_Menu.SuspendLayout();
             this.layout_orizz_menu.SuspendLayout();
             this.MainMenuStrip.SuspendLayout();
@@ -305,9 +307,26 @@
             // 
             // classicLineToolStripMenuItem
             // 
+            this.classicLineToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fWPalmariToolStripMenuItem,
+            this.fWRicevitoriToolStripMenuItem});
             this.classicLineToolStripMenuItem.Name = "classicLineToolStripMenuItem";
-            this.classicLineToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.classicLineToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.classicLineToolStripMenuItem.Text = "- Classic Line -";
+            // 
+            // fWPalmariToolStripMenuItem
+            // 
+            this.fWPalmariToolStripMenuItem.Name = "fWPalmariToolStripMenuItem";
+            this.fWPalmariToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fWPalmariToolStripMenuItem.Text = "FW Palmari";
+            this.fWPalmariToolStripMenuItem.Click += new System.EventHandler(this.fWPalmariToolStripMenuItem_Click);
+            // 
+            // fWRicevitoriToolStripMenuItem
+            // 
+            this.fWRicevitoriToolStripMenuItem.Name = "fWRicevitoriToolStripMenuItem";
+            this.fWRicevitoriToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fWRicevitoriToolStripMenuItem.Text = "FW Ricevitori";
+            this.fWRicevitoriToolStripMenuItem.Click += new System.EventHandler(this.fWRicevitoriToolStripMenuItem_Click);
             // 
             // smartLineToolStripMenuItem
             // 
@@ -319,7 +338,7 @@
             this.toolStripSeparator8,
             this.messaggiRealTimeAppToolStripMenuItem});
             this.smartLineToolStripMenuItem.Name = "smartLineToolStripMenuItem";
-            this.smartLineToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.smartLineToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.smartLineToolStripMenuItem.Text = "- Smart Line -";
             // 
             // fWPalmariToolStripMenuItem1
@@ -575,6 +594,14 @@
             this.MainPanel.VerticalScrollbarBarColor = true;
             this.MainPanel.VerticalScrollbarHighlightOnWheel = false;
             this.MainPanel.VerticalScrollbarSize = 10;
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Location = new System.Drawing.Point(137, 263);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(0, 0);
+            this.metroLabel4.TabIndex = 6;
             // 
             // docker_printers
             // 
@@ -909,15 +936,6 @@
             this.Brother_timer.Interval = 1000;
             this.Brother_timer.Tick += new System.EventHandler(this.Brother_timer_Tick);
             // 
-            // metroLabel4
-            // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(137, 263);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(83, 19);
-            this.metroLabel4.TabIndex = 6;
-            this.metroLabel4.Text = "metroLabel4";
-            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1030,6 +1048,8 @@
         private MetroFramework.Controls.MetroLabel lab_Brother_Default;
         private DevExpress.XtraEditors.ToggleSwitch tog_Printers;
         private MetroFramework.Controls.MetroLabel metroLabel4;
+        private System.Windows.Forms.ToolStripMenuItem fWPalmariToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fWRicevitoriToolStripMenuItem;
     }
 }
 
