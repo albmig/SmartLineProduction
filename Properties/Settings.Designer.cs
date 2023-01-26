@@ -23,17 +23,6 @@ namespace SmartLineProduction.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.0.8\\SQLEXPRESS;Initial Catalog=SISTEMATICA_FACTORY;Persist Se" +
-            "curity Info=True;User ID=sa;Password=aavesp19;")]
-        public string SISTEMATICA_FACTORYConnectionString {
-            get {
-                return ((string)(this["SISTEMATICA_FACTORYConnectionString"]));
-            }
-        }
-        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("\\\\192.168.0.8\\sistematica\\AREA_FIRMWARE\\SmartLine\\Compilati")]
@@ -103,6 +92,28 @@ namespace SmartLineProduction.Properties {
             }
             set {
                 this["Settings_Brother_Default"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=SERVER208\\SQLEXPRESS;Initial Catalog=SISTEMATICA_FACTORY;Persist Secu" +
+            "rity Info=True;User ID=sa;Password=aavesp19!;")]
+        public string SISTEMATICA_FACTORYConnectionString {
+            get {
+                return ((string)(this["SISTEMATICA_FACTORYConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.0.208\\SQLEXPRESS;Initial Catalog=SISTEMATICA_FACTORY;Persist " +
+            "Security Info=True;User ID=sa;Password=aavesp19!")]
+        public string SISTEMATICA_FACTORYConnectionString1 {
+            get {
+                return ((string)(this["SISTEMATICA_FACTORYConnectionString1"]));
             }
         }
     }
