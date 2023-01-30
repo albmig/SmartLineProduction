@@ -28,6 +28,8 @@ namespace SmartLineProduction {
         
         private FW_CL_PalmariDataTable tableFW_CL_Palmari;
         
+        private FW_CL_RicevitoriDataTable tableFW_CL_Ricevitori;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -61,6 +63,9 @@ namespace SmartLineProduction {
                 }
                 if ((ds.Tables["FW_CL_Palmari"] != null)) {
                     base.Tables.Add(new FW_CL_PalmariDataTable(ds.Tables["FW_CL_Palmari"]));
+                }
+                if ((ds.Tables["FW_CL_Ricevitori"] != null)) {
+                    base.Tables.Add(new FW_CL_RicevitoriDataTable(ds.Tables["FW_CL_Ricevitori"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -97,6 +102,16 @@ namespace SmartLineProduction {
         public FW_CL_PalmariDataTable FW_CL_Palmari {
             get {
                 return this.tableFW_CL_Palmari;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public FW_CL_RicevitoriDataTable FW_CL_Ricevitori {
+            get {
+                return this.tableFW_CL_Ricevitori;
             }
         }
         
@@ -173,6 +188,9 @@ namespace SmartLineProduction {
                 if ((ds.Tables["FW_CL_Palmari"] != null)) {
                     base.Tables.Add(new FW_CL_PalmariDataTable(ds.Tables["FW_CL_Palmari"]));
                 }
+                if ((ds.Tables["FW_CL_Ricevitori"] != null)) {
+                    base.Tables.Add(new FW_CL_RicevitoriDataTable(ds.Tables["FW_CL_Ricevitori"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -218,6 +236,12 @@ namespace SmartLineProduction {
                     this.tableFW_CL_Palmari.InitVars();
                 }
             }
+            this.tableFW_CL_Ricevitori = ((FW_CL_RicevitoriDataTable)(base.Tables["FW_CL_Ricevitori"]));
+            if ((initTable == true)) {
+                if ((this.tableFW_CL_Ricevitori != null)) {
+                    this.tableFW_CL_Ricevitori.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -232,6 +256,8 @@ namespace SmartLineProduction {
             base.Tables.Add(this.tableFW_CL_Famiglie);
             this.tableFW_CL_Palmari = new FW_CL_PalmariDataTable();
             base.Tables.Add(this.tableFW_CL_Palmari);
+            this.tableFW_CL_Ricevitori = new FW_CL_RicevitoriDataTable();
+            base.Tables.Add(this.tableFW_CL_Ricevitori);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -243,6 +269,12 @@ namespace SmartLineProduction {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private bool ShouldSerializeFW_CL_Palmari() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializeFW_CL_Ricevitori() {
             return false;
         }
         
@@ -306,6 +338,9 @@ namespace SmartLineProduction {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void FW_CL_PalmariRowChangeEventHandler(object sender, FW_CL_PalmariRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void FW_CL_RicevitoriRowChangeEventHandler(object sender, FW_CL_RicevitoriRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -1234,6 +1269,734 @@ namespace SmartLineProduction {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class FW_CL_RicevitoriDataTable : global::System.Data.TypedTableBase<FW_CL_RicevitoriRow> {
+            
+            private global::System.Data.DataColumn columnFW_CL_R_ID;
+            
+            private global::System.Data.DataColumn columnFW_CL_R_SW_Code;
+            
+            private global::System.Data.DataColumn columnFW_CL_R_SW_Versione;
+            
+            private global::System.Data.DataColumn columnFW_CL_R_SW_Revisione;
+            
+            private global::System.Data.DataColumn columnFW_CL_R_TipoDev;
+            
+            private global::System.Data.DataColumn columnFW_CL_R_Freq;
+            
+            private global::System.Data.DataColumn columnFW_CL_R_CanBus;
+            
+            private global::System.Data.DataColumn columnFW_CL_R_SPAttivo;
+            
+            private global::System.Data.DataColumn columnFW_CL_R_SPPassivo;
+            
+            private global::System.Data.DataColumn columnFW_CL_R_CambioPag;
+            
+            private global::System.Data.DataColumn columnFW_CL_R_CambioRic;
+            
+            private global::System.Data.DataColumn columnFW_CL_R_MotRim;
+            
+            private global::System.Data.DataColumn columnFW_CL_R_FwPAbbinato;
+            
+            private global::System.Data.DataColumn columnFW_CL_R_NumPalmari;
+            
+            private global::System.Data.DataColumn columnFW_CL_R_MasterOutput;
+            
+            private global::System.Data.DataColumn columnFW_CL_R_EmergencyOutput;
+            
+            private global::System.Data.DataColumn columnFW_CL_R_ProportionalOutput;
+            
+            private global::System.Data.DataColumn columnFW_CL_R_NumOutput;
+            
+            private global::System.Data.DataColumn columnFW_CL_R_NumInputAn;
+            
+            private global::System.Data.DataColumn columnFW_CL_R_NumInputDig;
+            
+            private global::System.Data.DataColumn columnFW_CL_R_TimeOut;
+            
+            private global::System.Data.DataColumn columnFW_CL_R_ContempTasti;
+            
+            private global::System.Data.DataColumn columnFW_CL_R_PlugConfig;
+            
+            private global::System.Data.DataColumn columnFW_CL_R_Golden;
+            
+            private global::System.Data.DataColumn columnFW_CL_R_AutoPairing;
+            
+            private global::System.Data.DataColumn columnFW_CL_R_IdentificazioneRic;
+            
+            private global::System.Data.DataColumn columnFW_CL_R_Obsolete_ver;
+            
+            private global::System.Data.DataColumn columnFW_CL_R_Obsolete_ver_from_date;
+            
+            private global::System.Data.DataColumn columnFW_CL_R_Revisioni;
+            
+            private global::System.Data.DataColumn columnFW_CL_R_Funzionamento;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public FW_CL_RicevitoriDataTable() {
+                this.TableName = "FW_CL_Ricevitori";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal FW_CL_RicevitoriDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected FW_CL_RicevitoriDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FW_CL_R_IDColumn {
+                get {
+                    return this.columnFW_CL_R_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FW_CL_R_SW_CodeColumn {
+                get {
+                    return this.columnFW_CL_R_SW_Code;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FW_CL_R_SW_VersioneColumn {
+                get {
+                    return this.columnFW_CL_R_SW_Versione;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FW_CL_R_SW_RevisioneColumn {
+                get {
+                    return this.columnFW_CL_R_SW_Revisione;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FW_CL_R_TipoDevColumn {
+                get {
+                    return this.columnFW_CL_R_TipoDev;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FW_CL_R_FreqColumn {
+                get {
+                    return this.columnFW_CL_R_Freq;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FW_CL_R_CanBusColumn {
+                get {
+                    return this.columnFW_CL_R_CanBus;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FW_CL_R_SPAttivoColumn {
+                get {
+                    return this.columnFW_CL_R_SPAttivo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FW_CL_R_SPPassivoColumn {
+                get {
+                    return this.columnFW_CL_R_SPPassivo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FW_CL_R_CambioPagColumn {
+                get {
+                    return this.columnFW_CL_R_CambioPag;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FW_CL_R_CambioRicColumn {
+                get {
+                    return this.columnFW_CL_R_CambioRic;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FW_CL_R_MotRimColumn {
+                get {
+                    return this.columnFW_CL_R_MotRim;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FW_CL_R_FwPAbbinatoColumn {
+                get {
+                    return this.columnFW_CL_R_FwPAbbinato;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FW_CL_R_NumPalmariColumn {
+                get {
+                    return this.columnFW_CL_R_NumPalmari;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FW_CL_R_MasterOutputColumn {
+                get {
+                    return this.columnFW_CL_R_MasterOutput;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FW_CL_R_EmergencyOutputColumn {
+                get {
+                    return this.columnFW_CL_R_EmergencyOutput;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FW_CL_R_ProportionalOutputColumn {
+                get {
+                    return this.columnFW_CL_R_ProportionalOutput;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FW_CL_R_NumOutputColumn {
+                get {
+                    return this.columnFW_CL_R_NumOutput;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FW_CL_R_NumInputAnColumn {
+                get {
+                    return this.columnFW_CL_R_NumInputAn;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FW_CL_R_NumInputDigColumn {
+                get {
+                    return this.columnFW_CL_R_NumInputDig;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FW_CL_R_TimeOutColumn {
+                get {
+                    return this.columnFW_CL_R_TimeOut;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FW_CL_R_ContempTastiColumn {
+                get {
+                    return this.columnFW_CL_R_ContempTasti;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FW_CL_R_PlugConfigColumn {
+                get {
+                    return this.columnFW_CL_R_PlugConfig;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FW_CL_R_GoldenColumn {
+                get {
+                    return this.columnFW_CL_R_Golden;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FW_CL_R_AutoPairingColumn {
+                get {
+                    return this.columnFW_CL_R_AutoPairing;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FW_CL_R_IdentificazioneRicColumn {
+                get {
+                    return this.columnFW_CL_R_IdentificazioneRic;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FW_CL_R_Obsolete_verColumn {
+                get {
+                    return this.columnFW_CL_R_Obsolete_ver;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FW_CL_R_Obsolete_ver_from_dateColumn {
+                get {
+                    return this.columnFW_CL_R_Obsolete_ver_from_date;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FW_CL_R_RevisioniColumn {
+                get {
+                    return this.columnFW_CL_R_Revisioni;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FW_CL_R_FunzionamentoColumn {
+                get {
+                    return this.columnFW_CL_R_Funzionamento;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public FW_CL_RicevitoriRow this[int index] {
+                get {
+                    return ((FW_CL_RicevitoriRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event FW_CL_RicevitoriRowChangeEventHandler FW_CL_RicevitoriRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event FW_CL_RicevitoriRowChangeEventHandler FW_CL_RicevitoriRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event FW_CL_RicevitoriRowChangeEventHandler FW_CL_RicevitoriRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event FW_CL_RicevitoriRowChangeEventHandler FW_CL_RicevitoriRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddFW_CL_RicevitoriRow(FW_CL_RicevitoriRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public FW_CL_RicevitoriRow AddFW_CL_RicevitoriRow(
+                        string FW_CL_R_SW_Code, 
+                        string FW_CL_R_SW_Versione, 
+                        string FW_CL_R_SW_Revisione, 
+                        int FW_CL_R_TipoDev, 
+                        string FW_CL_R_Freq, 
+                        bool FW_CL_R_CanBus, 
+                        bool FW_CL_R_SPAttivo, 
+                        bool FW_CL_R_SPPassivo, 
+                        bool FW_CL_R_CambioPag, 
+                        bool FW_CL_R_CambioRic, 
+                        bool FW_CL_R_MotRim, 
+                        string FW_CL_R_FwPAbbinato, 
+                        int FW_CL_R_NumPalmari, 
+                        bool FW_CL_R_MasterOutput, 
+                        bool FW_CL_R_EmergencyOutput, 
+                        bool FW_CL_R_ProportionalOutput, 
+                        int FW_CL_R_NumOutput, 
+                        int FW_CL_R_NumInputAn, 
+                        int FW_CL_R_NumInputDig, 
+                        int FW_CL_R_TimeOut, 
+                        int FW_CL_R_ContempTasti, 
+                        bool FW_CL_R_PlugConfig, 
+                        bool FW_CL_R_Golden, 
+                        bool FW_CL_R_AutoPairing, 
+                        int FW_CL_R_IdentificazioneRic, 
+                        bool FW_CL_R_Obsolete_ver, 
+                        System.DateTime FW_CL_R_Obsolete_ver_from_date, 
+                        string FW_CL_R_Revisioni, 
+                        string FW_CL_R_Funzionamento) {
+                FW_CL_RicevitoriRow rowFW_CL_RicevitoriRow = ((FW_CL_RicevitoriRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        FW_CL_R_SW_Code,
+                        FW_CL_R_SW_Versione,
+                        FW_CL_R_SW_Revisione,
+                        FW_CL_R_TipoDev,
+                        FW_CL_R_Freq,
+                        FW_CL_R_CanBus,
+                        FW_CL_R_SPAttivo,
+                        FW_CL_R_SPPassivo,
+                        FW_CL_R_CambioPag,
+                        FW_CL_R_CambioRic,
+                        FW_CL_R_MotRim,
+                        FW_CL_R_FwPAbbinato,
+                        FW_CL_R_NumPalmari,
+                        FW_CL_R_MasterOutput,
+                        FW_CL_R_EmergencyOutput,
+                        FW_CL_R_ProportionalOutput,
+                        FW_CL_R_NumOutput,
+                        FW_CL_R_NumInputAn,
+                        FW_CL_R_NumInputDig,
+                        FW_CL_R_TimeOut,
+                        FW_CL_R_ContempTasti,
+                        FW_CL_R_PlugConfig,
+                        FW_CL_R_Golden,
+                        FW_CL_R_AutoPairing,
+                        FW_CL_R_IdentificazioneRic,
+                        FW_CL_R_Obsolete_ver,
+                        FW_CL_R_Obsolete_ver_from_date,
+                        FW_CL_R_Revisioni,
+                        FW_CL_R_Funzionamento};
+                rowFW_CL_RicevitoriRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowFW_CL_RicevitoriRow);
+                return rowFW_CL_RicevitoriRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public FW_CL_RicevitoriRow FindByFW_CL_R_ID(long FW_CL_R_ID) {
+                return ((FW_CL_RicevitoriRow)(this.Rows.Find(new object[] {
+                            FW_CL_R_ID})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                FW_CL_RicevitoriDataTable cln = ((FW_CL_RicevitoriDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new FW_CL_RicevitoriDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnFW_CL_R_ID = base.Columns["FW_CL_R_ID"];
+                this.columnFW_CL_R_SW_Code = base.Columns["FW_CL_R_SW_Code"];
+                this.columnFW_CL_R_SW_Versione = base.Columns["FW_CL_R_SW_Versione"];
+                this.columnFW_CL_R_SW_Revisione = base.Columns["FW_CL_R_SW_Revisione"];
+                this.columnFW_CL_R_TipoDev = base.Columns["FW_CL_R_TipoDev"];
+                this.columnFW_CL_R_Freq = base.Columns["FW_CL_R_Freq"];
+                this.columnFW_CL_R_CanBus = base.Columns["FW_CL_R_CanBus"];
+                this.columnFW_CL_R_SPAttivo = base.Columns["FW_CL_R_SPAttivo"];
+                this.columnFW_CL_R_SPPassivo = base.Columns["FW_CL_R_SPPassivo"];
+                this.columnFW_CL_R_CambioPag = base.Columns["FW_CL_R_CambioPag"];
+                this.columnFW_CL_R_CambioRic = base.Columns["FW_CL_R_CambioRic"];
+                this.columnFW_CL_R_MotRim = base.Columns["FW_CL_R_MotRim"];
+                this.columnFW_CL_R_FwPAbbinato = base.Columns["FW_CL_R_FwPAbbinato"];
+                this.columnFW_CL_R_NumPalmari = base.Columns["FW_CL_R_NumPalmari"];
+                this.columnFW_CL_R_MasterOutput = base.Columns["FW_CL_R_MasterOutput"];
+                this.columnFW_CL_R_EmergencyOutput = base.Columns["FW_CL_R_EmergencyOutput"];
+                this.columnFW_CL_R_ProportionalOutput = base.Columns["FW_CL_R_ProportionalOutput"];
+                this.columnFW_CL_R_NumOutput = base.Columns["FW_CL_R_NumOutput"];
+                this.columnFW_CL_R_NumInputAn = base.Columns["FW_CL_R_NumInputAn"];
+                this.columnFW_CL_R_NumInputDig = base.Columns["FW_CL_R_NumInputDig"];
+                this.columnFW_CL_R_TimeOut = base.Columns["FW_CL_R_TimeOut"];
+                this.columnFW_CL_R_ContempTasti = base.Columns["FW_CL_R_ContempTasti"];
+                this.columnFW_CL_R_PlugConfig = base.Columns["FW_CL_R_PlugConfig"];
+                this.columnFW_CL_R_Golden = base.Columns["FW_CL_R_Golden"];
+                this.columnFW_CL_R_AutoPairing = base.Columns["FW_CL_R_AutoPairing"];
+                this.columnFW_CL_R_IdentificazioneRic = base.Columns["FW_CL_R_IdentificazioneRic"];
+                this.columnFW_CL_R_Obsolete_ver = base.Columns["FW_CL_R_Obsolete_ver"];
+                this.columnFW_CL_R_Obsolete_ver_from_date = base.Columns["FW_CL_R_Obsolete_ver_from_date"];
+                this.columnFW_CL_R_Revisioni = base.Columns["FW_CL_R_Revisioni"];
+                this.columnFW_CL_R_Funzionamento = base.Columns["FW_CL_R_Funzionamento"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnFW_CL_R_ID = new global::System.Data.DataColumn("FW_CL_R_ID", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFW_CL_R_ID);
+                this.columnFW_CL_R_SW_Code = new global::System.Data.DataColumn("FW_CL_R_SW_Code", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFW_CL_R_SW_Code);
+                this.columnFW_CL_R_SW_Versione = new global::System.Data.DataColumn("FW_CL_R_SW_Versione", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFW_CL_R_SW_Versione);
+                this.columnFW_CL_R_SW_Revisione = new global::System.Data.DataColumn("FW_CL_R_SW_Revisione", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFW_CL_R_SW_Revisione);
+                this.columnFW_CL_R_TipoDev = new global::System.Data.DataColumn("FW_CL_R_TipoDev", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFW_CL_R_TipoDev);
+                this.columnFW_CL_R_Freq = new global::System.Data.DataColumn("FW_CL_R_Freq", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFW_CL_R_Freq);
+                this.columnFW_CL_R_CanBus = new global::System.Data.DataColumn("FW_CL_R_CanBus", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFW_CL_R_CanBus);
+                this.columnFW_CL_R_SPAttivo = new global::System.Data.DataColumn("FW_CL_R_SPAttivo", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFW_CL_R_SPAttivo);
+                this.columnFW_CL_R_SPPassivo = new global::System.Data.DataColumn("FW_CL_R_SPPassivo", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFW_CL_R_SPPassivo);
+                this.columnFW_CL_R_CambioPag = new global::System.Data.DataColumn("FW_CL_R_CambioPag", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFW_CL_R_CambioPag);
+                this.columnFW_CL_R_CambioRic = new global::System.Data.DataColumn("FW_CL_R_CambioRic", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFW_CL_R_CambioRic);
+                this.columnFW_CL_R_MotRim = new global::System.Data.DataColumn("FW_CL_R_MotRim", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFW_CL_R_MotRim);
+                this.columnFW_CL_R_FwPAbbinato = new global::System.Data.DataColumn("FW_CL_R_FwPAbbinato", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFW_CL_R_FwPAbbinato);
+                this.columnFW_CL_R_NumPalmari = new global::System.Data.DataColumn("FW_CL_R_NumPalmari", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFW_CL_R_NumPalmari);
+                this.columnFW_CL_R_MasterOutput = new global::System.Data.DataColumn("FW_CL_R_MasterOutput", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFW_CL_R_MasterOutput);
+                this.columnFW_CL_R_EmergencyOutput = new global::System.Data.DataColumn("FW_CL_R_EmergencyOutput", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFW_CL_R_EmergencyOutput);
+                this.columnFW_CL_R_ProportionalOutput = new global::System.Data.DataColumn("FW_CL_R_ProportionalOutput", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFW_CL_R_ProportionalOutput);
+                this.columnFW_CL_R_NumOutput = new global::System.Data.DataColumn("FW_CL_R_NumOutput", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFW_CL_R_NumOutput);
+                this.columnFW_CL_R_NumInputAn = new global::System.Data.DataColumn("FW_CL_R_NumInputAn", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFW_CL_R_NumInputAn);
+                this.columnFW_CL_R_NumInputDig = new global::System.Data.DataColumn("FW_CL_R_NumInputDig", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFW_CL_R_NumInputDig);
+                this.columnFW_CL_R_TimeOut = new global::System.Data.DataColumn("FW_CL_R_TimeOut", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFW_CL_R_TimeOut);
+                this.columnFW_CL_R_ContempTasti = new global::System.Data.DataColumn("FW_CL_R_ContempTasti", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFW_CL_R_ContempTasti);
+                this.columnFW_CL_R_PlugConfig = new global::System.Data.DataColumn("FW_CL_R_PlugConfig", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFW_CL_R_PlugConfig);
+                this.columnFW_CL_R_Golden = new global::System.Data.DataColumn("FW_CL_R_Golden", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFW_CL_R_Golden);
+                this.columnFW_CL_R_AutoPairing = new global::System.Data.DataColumn("FW_CL_R_AutoPairing", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFW_CL_R_AutoPairing);
+                this.columnFW_CL_R_IdentificazioneRic = new global::System.Data.DataColumn("FW_CL_R_IdentificazioneRic", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFW_CL_R_IdentificazioneRic);
+                this.columnFW_CL_R_Obsolete_ver = new global::System.Data.DataColumn("FW_CL_R_Obsolete_ver", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFW_CL_R_Obsolete_ver);
+                this.columnFW_CL_R_Obsolete_ver_from_date = new global::System.Data.DataColumn("FW_CL_R_Obsolete_ver_from_date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFW_CL_R_Obsolete_ver_from_date);
+                this.columnFW_CL_R_Revisioni = new global::System.Data.DataColumn("FW_CL_R_Revisioni", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFW_CL_R_Revisioni);
+                this.columnFW_CL_R_Funzionamento = new global::System.Data.DataColumn("FW_CL_R_Funzionamento", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFW_CL_R_Funzionamento);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnFW_CL_R_ID}, true));
+                this.columnFW_CL_R_ID.AutoIncrement = true;
+                this.columnFW_CL_R_ID.AutoIncrementSeed = -1;
+                this.columnFW_CL_R_ID.AutoIncrementStep = -1;
+                this.columnFW_CL_R_ID.AllowDBNull = false;
+                this.columnFW_CL_R_ID.ReadOnly = true;
+                this.columnFW_CL_R_ID.Unique = true;
+                this.columnFW_CL_R_SW_Code.AllowDBNull = false;
+                this.columnFW_CL_R_SW_Code.MaxLength = 25;
+                this.columnFW_CL_R_SW_Versione.AllowDBNull = false;
+                this.columnFW_CL_R_SW_Versione.MaxLength = 6;
+                this.columnFW_CL_R_SW_Revisione.AllowDBNull = false;
+                this.columnFW_CL_R_SW_Revisione.MaxLength = 3;
+                this.columnFW_CL_R_TipoDev.AllowDBNull = false;
+                this.columnFW_CL_R_Freq.AllowDBNull = false;
+                this.columnFW_CL_R_Freq.MaxLength = 1;
+                this.columnFW_CL_R_CanBus.AllowDBNull = false;
+                this.columnFW_CL_R_SPAttivo.AllowDBNull = false;
+                this.columnFW_CL_R_SPPassivo.AllowDBNull = false;
+                this.columnFW_CL_R_CambioPag.AllowDBNull = false;
+                this.columnFW_CL_R_CambioRic.AllowDBNull = false;
+                this.columnFW_CL_R_FwPAbbinato.MaxLength = 2147483647;
+                this.columnFW_CL_R_NumPalmari.AllowDBNull = false;
+                this.columnFW_CL_R_MasterOutput.AllowDBNull = false;
+                this.columnFW_CL_R_EmergencyOutput.AllowDBNull = false;
+                this.columnFW_CL_R_ProportionalOutput.AllowDBNull = false;
+                this.columnFW_CL_R_NumOutput.AllowDBNull = false;
+                this.columnFW_CL_R_NumInputAn.AllowDBNull = false;
+                this.columnFW_CL_R_NumInputDig.AllowDBNull = false;
+                this.columnFW_CL_R_TimeOut.AllowDBNull = false;
+                this.columnFW_CL_R_ContempTasti.AllowDBNull = false;
+                this.columnFW_CL_R_PlugConfig.AllowDBNull = false;
+                this.columnFW_CL_R_Golden.AllowDBNull = false;
+                this.columnFW_CL_R_AutoPairing.AllowDBNull = false;
+                this.columnFW_CL_R_IdentificazioneRic.AllowDBNull = false;
+                this.columnFW_CL_R_Obsolete_ver.AllowDBNull = false;
+                this.columnFW_CL_R_Revisioni.MaxLength = 2147483647;
+                this.columnFW_CL_R_Funzionamento.MaxLength = 2147483647;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public FW_CL_RicevitoriRow NewFW_CL_RicevitoriRow() {
+                return ((FW_CL_RicevitoriRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new FW_CL_RicevitoriRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(FW_CL_RicevitoriRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.FW_CL_RicevitoriRowChanged != null)) {
+                    this.FW_CL_RicevitoriRowChanged(this, new FW_CL_RicevitoriRowChangeEvent(((FW_CL_RicevitoriRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.FW_CL_RicevitoriRowChanging != null)) {
+                    this.FW_CL_RicevitoriRowChanging(this, new FW_CL_RicevitoriRowChangeEvent(((FW_CL_RicevitoriRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.FW_CL_RicevitoriRowDeleted != null)) {
+                    this.FW_CL_RicevitoriRowDeleted(this, new FW_CL_RicevitoriRowChangeEvent(((FW_CL_RicevitoriRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.FW_CL_RicevitoriRowDeleting != null)) {
+                    this.FW_CL_RicevitoriRowDeleting(this, new FW_CL_RicevitoriRowChangeEvent(((FW_CL_RicevitoriRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemoveFW_CL_RicevitoriRow(FW_CL_RicevitoriRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                ds_CL_Firmware ds = new ds_CL_Firmware();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "FW_CL_RicevitoriDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class FW_CL_FamiglieRow : global::System.Data.DataRow {
@@ -1651,6 +2414,441 @@ namespace SmartLineProduction {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class FW_CL_RicevitoriRow : global::System.Data.DataRow {
+            
+            private FW_CL_RicevitoriDataTable tableFW_CL_Ricevitori;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal FW_CL_RicevitoriRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableFW_CL_Ricevitori = ((FW_CL_RicevitoriDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public long FW_CL_R_ID {
+                get {
+                    return ((long)(this[this.tableFW_CL_Ricevitori.FW_CL_R_IDColumn]));
+                }
+                set {
+                    this[this.tableFW_CL_Ricevitori.FW_CL_R_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string FW_CL_R_SW_Code {
+                get {
+                    return ((string)(this[this.tableFW_CL_Ricevitori.FW_CL_R_SW_CodeColumn]));
+                }
+                set {
+                    this[this.tableFW_CL_Ricevitori.FW_CL_R_SW_CodeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string FW_CL_R_SW_Versione {
+                get {
+                    return ((string)(this[this.tableFW_CL_Ricevitori.FW_CL_R_SW_VersioneColumn]));
+                }
+                set {
+                    this[this.tableFW_CL_Ricevitori.FW_CL_R_SW_VersioneColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string FW_CL_R_SW_Revisione {
+                get {
+                    return ((string)(this[this.tableFW_CL_Ricevitori.FW_CL_R_SW_RevisioneColumn]));
+                }
+                set {
+                    this[this.tableFW_CL_Ricevitori.FW_CL_R_SW_RevisioneColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int FW_CL_R_TipoDev {
+                get {
+                    return ((int)(this[this.tableFW_CL_Ricevitori.FW_CL_R_TipoDevColumn]));
+                }
+                set {
+                    this[this.tableFW_CL_Ricevitori.FW_CL_R_TipoDevColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string FW_CL_R_Freq {
+                get {
+                    return ((string)(this[this.tableFW_CL_Ricevitori.FW_CL_R_FreqColumn]));
+                }
+                set {
+                    this[this.tableFW_CL_Ricevitori.FW_CL_R_FreqColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool FW_CL_R_CanBus {
+                get {
+                    return ((bool)(this[this.tableFW_CL_Ricevitori.FW_CL_R_CanBusColumn]));
+                }
+                set {
+                    this[this.tableFW_CL_Ricevitori.FW_CL_R_CanBusColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool FW_CL_R_SPAttivo {
+                get {
+                    return ((bool)(this[this.tableFW_CL_Ricevitori.FW_CL_R_SPAttivoColumn]));
+                }
+                set {
+                    this[this.tableFW_CL_Ricevitori.FW_CL_R_SPAttivoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool FW_CL_R_SPPassivo {
+                get {
+                    return ((bool)(this[this.tableFW_CL_Ricevitori.FW_CL_R_SPPassivoColumn]));
+                }
+                set {
+                    this[this.tableFW_CL_Ricevitori.FW_CL_R_SPPassivoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool FW_CL_R_CambioPag {
+                get {
+                    return ((bool)(this[this.tableFW_CL_Ricevitori.FW_CL_R_CambioPagColumn]));
+                }
+                set {
+                    this[this.tableFW_CL_Ricevitori.FW_CL_R_CambioPagColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool FW_CL_R_CambioRic {
+                get {
+                    return ((bool)(this[this.tableFW_CL_Ricevitori.FW_CL_R_CambioRicColumn]));
+                }
+                set {
+                    this[this.tableFW_CL_Ricevitori.FW_CL_R_CambioRicColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool FW_CL_R_MotRim {
+                get {
+                    try {
+                        return ((bool)(this[this.tableFW_CL_Ricevitori.FW_CL_R_MotRimColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'FW_CL_R_MotRim\' nella tabella \'FW_CL_Ricevitori\' è DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tableFW_CL_Ricevitori.FW_CL_R_MotRimColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string FW_CL_R_FwPAbbinato {
+                get {
+                    try {
+                        return ((string)(this[this.tableFW_CL_Ricevitori.FW_CL_R_FwPAbbinatoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'FW_CL_R_FwPAbbinato\' nella tabella \'FW_CL_Ricevitori\' è " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFW_CL_Ricevitori.FW_CL_R_FwPAbbinatoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int FW_CL_R_NumPalmari {
+                get {
+                    return ((int)(this[this.tableFW_CL_Ricevitori.FW_CL_R_NumPalmariColumn]));
+                }
+                set {
+                    this[this.tableFW_CL_Ricevitori.FW_CL_R_NumPalmariColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool FW_CL_R_MasterOutput {
+                get {
+                    return ((bool)(this[this.tableFW_CL_Ricevitori.FW_CL_R_MasterOutputColumn]));
+                }
+                set {
+                    this[this.tableFW_CL_Ricevitori.FW_CL_R_MasterOutputColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool FW_CL_R_EmergencyOutput {
+                get {
+                    return ((bool)(this[this.tableFW_CL_Ricevitori.FW_CL_R_EmergencyOutputColumn]));
+                }
+                set {
+                    this[this.tableFW_CL_Ricevitori.FW_CL_R_EmergencyOutputColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool FW_CL_R_ProportionalOutput {
+                get {
+                    return ((bool)(this[this.tableFW_CL_Ricevitori.FW_CL_R_ProportionalOutputColumn]));
+                }
+                set {
+                    this[this.tableFW_CL_Ricevitori.FW_CL_R_ProportionalOutputColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int FW_CL_R_NumOutput {
+                get {
+                    return ((int)(this[this.tableFW_CL_Ricevitori.FW_CL_R_NumOutputColumn]));
+                }
+                set {
+                    this[this.tableFW_CL_Ricevitori.FW_CL_R_NumOutputColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int FW_CL_R_NumInputAn {
+                get {
+                    return ((int)(this[this.tableFW_CL_Ricevitori.FW_CL_R_NumInputAnColumn]));
+                }
+                set {
+                    this[this.tableFW_CL_Ricevitori.FW_CL_R_NumInputAnColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int FW_CL_R_NumInputDig {
+                get {
+                    return ((int)(this[this.tableFW_CL_Ricevitori.FW_CL_R_NumInputDigColumn]));
+                }
+                set {
+                    this[this.tableFW_CL_Ricevitori.FW_CL_R_NumInputDigColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int FW_CL_R_TimeOut {
+                get {
+                    return ((int)(this[this.tableFW_CL_Ricevitori.FW_CL_R_TimeOutColumn]));
+                }
+                set {
+                    this[this.tableFW_CL_Ricevitori.FW_CL_R_TimeOutColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int FW_CL_R_ContempTasti {
+                get {
+                    return ((int)(this[this.tableFW_CL_Ricevitori.FW_CL_R_ContempTastiColumn]));
+                }
+                set {
+                    this[this.tableFW_CL_Ricevitori.FW_CL_R_ContempTastiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool FW_CL_R_PlugConfig {
+                get {
+                    return ((bool)(this[this.tableFW_CL_Ricevitori.FW_CL_R_PlugConfigColumn]));
+                }
+                set {
+                    this[this.tableFW_CL_Ricevitori.FW_CL_R_PlugConfigColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool FW_CL_R_Golden {
+                get {
+                    return ((bool)(this[this.tableFW_CL_Ricevitori.FW_CL_R_GoldenColumn]));
+                }
+                set {
+                    this[this.tableFW_CL_Ricevitori.FW_CL_R_GoldenColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool FW_CL_R_AutoPairing {
+                get {
+                    return ((bool)(this[this.tableFW_CL_Ricevitori.FW_CL_R_AutoPairingColumn]));
+                }
+                set {
+                    this[this.tableFW_CL_Ricevitori.FW_CL_R_AutoPairingColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int FW_CL_R_IdentificazioneRic {
+                get {
+                    return ((int)(this[this.tableFW_CL_Ricevitori.FW_CL_R_IdentificazioneRicColumn]));
+                }
+                set {
+                    this[this.tableFW_CL_Ricevitori.FW_CL_R_IdentificazioneRicColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool FW_CL_R_Obsolete_ver {
+                get {
+                    return ((bool)(this[this.tableFW_CL_Ricevitori.FW_CL_R_Obsolete_verColumn]));
+                }
+                set {
+                    this[this.tableFW_CL_Ricevitori.FW_CL_R_Obsolete_verColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime FW_CL_R_Obsolete_ver_from_date {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableFW_CL_Ricevitori.FW_CL_R_Obsolete_ver_from_dateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'FW_CL_R_Obsolete_ver_from_date\' nella tabella \'FW_CL_Ric" +
+                                "evitori\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFW_CL_Ricevitori.FW_CL_R_Obsolete_ver_from_dateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string FW_CL_R_Revisioni {
+                get {
+                    try {
+                        return ((string)(this[this.tableFW_CL_Ricevitori.FW_CL_R_RevisioniColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'FW_CL_R_Revisioni\' nella tabella \'FW_CL_Ricevitori\' è DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableFW_CL_Ricevitori.FW_CL_R_RevisioniColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string FW_CL_R_Funzionamento {
+                get {
+                    try {
+                        return ((string)(this[this.tableFW_CL_Ricevitori.FW_CL_R_FunzionamentoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'FW_CL_R_Funzionamento\' nella tabella \'FW_CL_Ricevitori\' " +
+                                "è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFW_CL_Ricevitori.FW_CL_R_FunzionamentoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsFW_CL_R_MotRimNull() {
+                return this.IsNull(this.tableFW_CL_Ricevitori.FW_CL_R_MotRimColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetFW_CL_R_MotRimNull() {
+                this[this.tableFW_CL_Ricevitori.FW_CL_R_MotRimColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsFW_CL_R_FwPAbbinatoNull() {
+                return this.IsNull(this.tableFW_CL_Ricevitori.FW_CL_R_FwPAbbinatoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetFW_CL_R_FwPAbbinatoNull() {
+                this[this.tableFW_CL_Ricevitori.FW_CL_R_FwPAbbinatoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsFW_CL_R_Obsolete_ver_from_dateNull() {
+                return this.IsNull(this.tableFW_CL_Ricevitori.FW_CL_R_Obsolete_ver_from_dateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetFW_CL_R_Obsolete_ver_from_dateNull() {
+                this[this.tableFW_CL_Ricevitori.FW_CL_R_Obsolete_ver_from_dateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsFW_CL_R_RevisioniNull() {
+                return this.IsNull(this.tableFW_CL_Ricevitori.FW_CL_R_RevisioniColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetFW_CL_R_RevisioniNull() {
+                this[this.tableFW_CL_Ricevitori.FW_CL_R_RevisioniColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsFW_CL_R_FunzionamentoNull() {
+                return this.IsNull(this.tableFW_CL_Ricevitori.FW_CL_R_FunzionamentoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetFW_CL_R_FunzionamentoNull() {
+                this[this.tableFW_CL_Ricevitori.FW_CL_R_FunzionamentoColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -1704,6 +2902,40 @@ namespace SmartLineProduction {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public FW_CL_PalmariRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class FW_CL_RicevitoriRowChangeEvent : global::System.EventArgs {
+            
+            private FW_CL_RicevitoriRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public FW_CL_RicevitoriRowChangeEvent(FW_CL_RicevitoriRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public FW_CL_RicevitoriRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -2847,6 +4079,963 @@ SELECT FW_CL_P_ID, FW_CL_P_SW_Code, FW_CL_P_SW_Versione, FW_CL_P_SW_Revisione, F
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class FW_CL_RicevitoriTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public FW_CL_RicevitoriTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "FW_CL_Ricevitori";
+            tableMapping.ColumnMappings.Add("FW_CL_R_ID", "FW_CL_R_ID");
+            tableMapping.ColumnMappings.Add("FW_CL_R_SW_Code", "FW_CL_R_SW_Code");
+            tableMapping.ColumnMappings.Add("FW_CL_R_SW_Versione", "FW_CL_R_SW_Versione");
+            tableMapping.ColumnMappings.Add("FW_CL_R_SW_Revisione", "FW_CL_R_SW_Revisione");
+            tableMapping.ColumnMappings.Add("FW_CL_R_TipoDev", "FW_CL_R_TipoDev");
+            tableMapping.ColumnMappings.Add("FW_CL_R_Freq", "FW_CL_R_Freq");
+            tableMapping.ColumnMappings.Add("FW_CL_R_CanBus", "FW_CL_R_CanBus");
+            tableMapping.ColumnMappings.Add("FW_CL_R_SPAttivo", "FW_CL_R_SPAttivo");
+            tableMapping.ColumnMappings.Add("FW_CL_R_SPPassivo", "FW_CL_R_SPPassivo");
+            tableMapping.ColumnMappings.Add("FW_CL_R_CambioPag", "FW_CL_R_CambioPag");
+            tableMapping.ColumnMappings.Add("FW_CL_R_CambioRic", "FW_CL_R_CambioRic");
+            tableMapping.ColumnMappings.Add("FW_CL_R_MotRim", "FW_CL_R_MotRim");
+            tableMapping.ColumnMappings.Add("FW_CL_R_FwPAbbinato", "FW_CL_R_FwPAbbinato");
+            tableMapping.ColumnMappings.Add("FW_CL_R_NumPalmari", "FW_CL_R_NumPalmari");
+            tableMapping.ColumnMappings.Add("FW_CL_R_MasterOutput", "FW_CL_R_MasterOutput");
+            tableMapping.ColumnMappings.Add("FW_CL_R_EmergencyOutput", "FW_CL_R_EmergencyOutput");
+            tableMapping.ColumnMappings.Add("FW_CL_R_ProportionalOutput", "FW_CL_R_ProportionalOutput");
+            tableMapping.ColumnMappings.Add("FW_CL_R_NumOutput", "FW_CL_R_NumOutput");
+            tableMapping.ColumnMappings.Add("FW_CL_R_NumInputAn", "FW_CL_R_NumInputAn");
+            tableMapping.ColumnMappings.Add("FW_CL_R_NumInputDig", "FW_CL_R_NumInputDig");
+            tableMapping.ColumnMappings.Add("FW_CL_R_TimeOut", "FW_CL_R_TimeOut");
+            tableMapping.ColumnMappings.Add("FW_CL_R_ContempTasti", "FW_CL_R_ContempTasti");
+            tableMapping.ColumnMappings.Add("FW_CL_R_PlugConfig", "FW_CL_R_PlugConfig");
+            tableMapping.ColumnMappings.Add("FW_CL_R_Golden", "FW_CL_R_Golden");
+            tableMapping.ColumnMappings.Add("FW_CL_R_AutoPairing", "FW_CL_R_AutoPairing");
+            tableMapping.ColumnMappings.Add("FW_CL_R_IdentificazioneRic", "FW_CL_R_IdentificazioneRic");
+            tableMapping.ColumnMappings.Add("FW_CL_R_Obsolete_ver", "FW_CL_R_Obsolete_ver");
+            tableMapping.ColumnMappings.Add("FW_CL_R_Obsolete_ver_from_date", "FW_CL_R_Obsolete_ver_from_date");
+            tableMapping.ColumnMappings.Add("FW_CL_R_Revisioni", "FW_CL_R_Revisioni");
+            tableMapping.ColumnMappings.Add("FW_CL_R_Funzionamento", "FW_CL_R_Funzionamento");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[FW_CL_Ricevitori] WHERE (([FW_CL_R_ID] = @Original_FW_CL_R_ID)" +
+                " AND ([FW_CL_R_SW_Code] = @Original_FW_CL_R_SW_Code) AND ([FW_CL_R_SW_Versione] " +
+                "= @Original_FW_CL_R_SW_Versione) AND ([FW_CL_R_SW_Revisione] = @Original_FW_CL_R" +
+                "_SW_Revisione) AND ([FW_CL_R_TipoDev] = @Original_FW_CL_R_TipoDev) AND ([FW_CL_R" +
+                "_Freq] = @Original_FW_CL_R_Freq) AND ([FW_CL_R_CanBus] = @Original_FW_CL_R_CanBu" +
+                "s) AND ([FW_CL_R_SPAttivo] = @Original_FW_CL_R_SPAttivo) AND ([FW_CL_R_SPPassivo" +
+                "] = @Original_FW_CL_R_SPPassivo) AND ([FW_CL_R_CambioPag] = @Original_FW_CL_R_Ca" +
+                "mbioPag) AND ([FW_CL_R_CambioRic] = @Original_FW_CL_R_CambioRic) AND ((@IsNull_F" +
+                "W_CL_R_MotRim = 1 AND [FW_CL_R_MotRim] IS NULL) OR ([FW_CL_R_MotRim] = @Original" +
+                "_FW_CL_R_MotRim)) AND ([FW_CL_R_NumPalmari] = @Original_FW_CL_R_NumPalmari) AND " +
+                "([FW_CL_R_MasterOutput] = @Original_FW_CL_R_MasterOutput) AND ([FW_CL_R_Emergenc" +
+                "yOutput] = @Original_FW_CL_R_EmergencyOutput) AND ([FW_CL_R_ProportionalOutput] " +
+                "= @Original_FW_CL_R_ProportionalOutput) AND ([FW_CL_R_NumOutput] = @Original_FW_" +
+                "CL_R_NumOutput) AND ([FW_CL_R_NumInputAn] = @Original_FW_CL_R_NumInputAn) AND ([" +
+                "FW_CL_R_NumInputDig] = @Original_FW_CL_R_NumInputDig) AND ([FW_CL_R_TimeOut] = @" +
+                "Original_FW_CL_R_TimeOut) AND ([FW_CL_R_ContempTasti] = @Original_FW_CL_R_Contem" +
+                "pTasti) AND ([FW_CL_R_PlugConfig] = @Original_FW_CL_R_PlugConfig) AND ([FW_CL_R_" +
+                "Golden] = @Original_FW_CL_R_Golden) AND ([FW_CL_R_AutoPairing] = @Original_FW_CL" +
+                "_R_AutoPairing) AND ([FW_CL_R_IdentificazioneRic] = @Original_FW_CL_R_Identifica" +
+                "zioneRic) AND ([FW_CL_R_Obsolete_ver] = @Original_FW_CL_R_Obsolete_ver) AND ((@I" +
+                "sNull_FW_CL_R_Obsolete_ver_from_date = 1 AND [FW_CL_R_Obsolete_ver_from_date] IS" +
+                " NULL) OR ([FW_CL_R_Obsolete_ver_from_date] = @Original_FW_CL_R_Obsolete_ver_fro" +
+                "m_date)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_ID", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_SW_Code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_SW_Code", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_SW_Versione", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_SW_Versione", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_SW_Revisione", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_SW_Revisione", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_TipoDev", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_TipoDev", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_Freq", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_Freq", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_CanBus", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_CanBus", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_SPAttivo", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_SPAttivo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_SPPassivo", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_SPPassivo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_CambioPag", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_CambioPag", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_CambioRic", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_CambioRic", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FW_CL_R_MotRim", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_MotRim", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_MotRim", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_MotRim", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_NumPalmari", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_NumPalmari", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_MasterOutput", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_MasterOutput", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_EmergencyOutput", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_EmergencyOutput", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_ProportionalOutput", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_ProportionalOutput", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_NumOutput", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_NumOutput", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_NumInputAn", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_NumInputAn", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_NumInputDig", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_NumInputDig", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_TimeOut", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_TimeOut", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_ContempTasti", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_ContempTasti", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_PlugConfig", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_PlugConfig", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_Golden", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_Golden", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_AutoPairing", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_AutoPairing", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_IdentificazioneRic", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_IdentificazioneRic", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_Obsolete_ver", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_Obsolete_ver", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FW_CL_R_Obsolete_ver_from_date", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_Obsolete_ver_from_date", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_Obsolete_ver_from_date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_Obsolete_ver_from_date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[FW_CL_Ricevitori] ([FW_CL_R_SW_Code], [FW_CL_R_SW_Versione], [" +
+                "FW_CL_R_SW_Revisione], [FW_CL_R_TipoDev], [FW_CL_R_Freq], [FW_CL_R_CanBus], [FW_" +
+                "CL_R_SPAttivo], [FW_CL_R_SPPassivo], [FW_CL_R_CambioPag], [FW_CL_R_CambioRic], [" +
+                "FW_CL_R_MotRim], [FW_CL_R_FwPAbbinato], [FW_CL_R_NumPalmari], [FW_CL_R_MasterOut" +
+                "put], [FW_CL_R_EmergencyOutput], [FW_CL_R_ProportionalOutput], [FW_CL_R_NumOutpu" +
+                "t], [FW_CL_R_NumInputAn], [FW_CL_R_NumInputDig], [FW_CL_R_TimeOut], [FW_CL_R_Con" +
+                "tempTasti], [FW_CL_R_PlugConfig], [FW_CL_R_Golden], [FW_CL_R_AutoPairing], [FW_C" +
+                "L_R_IdentificazioneRic], [FW_CL_R_Obsolete_ver], [FW_CL_R_Obsolete_ver_from_date" +
+                "], [FW_CL_R_Revisioni], [FW_CL_R_Funzionamento]) VALUES (@FW_CL_R_SW_Code, @FW_C" +
+                "L_R_SW_Versione, @FW_CL_R_SW_Revisione, @FW_CL_R_TipoDev, @FW_CL_R_Freq, @FW_CL_" +
+                "R_CanBus, @FW_CL_R_SPAttivo, @FW_CL_R_SPPassivo, @FW_CL_R_CambioPag, @FW_CL_R_Ca" +
+                "mbioRic, @FW_CL_R_MotRim, @FW_CL_R_FwPAbbinato, @FW_CL_R_NumPalmari, @FW_CL_R_Ma" +
+                "sterOutput, @FW_CL_R_EmergencyOutput, @FW_CL_R_ProportionalOutput, @FW_CL_R_NumO" +
+                "utput, @FW_CL_R_NumInputAn, @FW_CL_R_NumInputDig, @FW_CL_R_TimeOut, @FW_CL_R_Con" +
+                "tempTasti, @FW_CL_R_PlugConfig, @FW_CL_R_Golden, @FW_CL_R_AutoPairing, @FW_CL_R_" +
+                "IdentificazioneRic, @FW_CL_R_Obsolete_ver, @FW_CL_R_Obsolete_ver_from_date, @FW_" +
+                "CL_R_Revisioni, @FW_CL_R_Funzionamento);\r\nSELECT FW_CL_R_ID, FW_CL_R_SW_Code, FW" +
+                "_CL_R_SW_Versione, FW_CL_R_SW_Revisione, FW_CL_R_TipoDev, FW_CL_R_Freq, FW_CL_R_" +
+                "CanBus, FW_CL_R_SPAttivo, FW_CL_R_SPPassivo, FW_CL_R_CambioPag, FW_CL_R_CambioRi" +
+                "c, FW_CL_R_MotRim, FW_CL_R_FwPAbbinato, FW_CL_R_NumPalmari, FW_CL_R_MasterOutput" +
+                ", FW_CL_R_EmergencyOutput, FW_CL_R_ProportionalOutput, FW_CL_R_NumOutput, FW_CL_" +
+                "R_NumInputAn, FW_CL_R_NumInputDig, FW_CL_R_TimeOut, FW_CL_R_ContempTasti, FW_CL_" +
+                "R_PlugConfig, FW_CL_R_Golden, FW_CL_R_AutoPairing, FW_CL_R_IdentificazioneRic, F" +
+                "W_CL_R_Obsolete_ver, FW_CL_R_Obsolete_ver_from_date, FW_CL_R_Revisioni, FW_CL_R_" +
+                "Funzionamento FROM FW_CL_Ricevitori WHERE (FW_CL_R_ID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_SW_Code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_SW_Code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_SW_Versione", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_SW_Versione", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_SW_Revisione", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_SW_Revisione", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_TipoDev", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_TipoDev", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_Freq", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_Freq", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_CanBus", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_CanBus", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_SPAttivo", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_SPAttivo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_SPPassivo", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_SPPassivo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_CambioPag", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_CambioPag", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_CambioRic", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_CambioRic", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_MotRim", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_MotRim", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_FwPAbbinato", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_FwPAbbinato", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_NumPalmari", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_NumPalmari", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_MasterOutput", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_MasterOutput", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_EmergencyOutput", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_EmergencyOutput", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_ProportionalOutput", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_ProportionalOutput", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_NumOutput", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_NumOutput", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_NumInputAn", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_NumInputAn", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_NumInputDig", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_NumInputDig", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_TimeOut", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_TimeOut", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_ContempTasti", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_ContempTasti", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_PlugConfig", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_PlugConfig", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_Golden", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_Golden", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_AutoPairing", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_AutoPairing", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_IdentificazioneRic", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_IdentificazioneRic", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_Obsolete_ver", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_Obsolete_ver", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_Obsolete_ver_from_date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_Obsolete_ver_from_date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_Revisioni", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_Revisioni", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_Funzionamento", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_Funzionamento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[FW_CL_Ricevitori] SET [FW_CL_R_SW_Code] = @FW_CL_R_SW_Code, [FW_CL_" +
+                "R_SW_Versione] = @FW_CL_R_SW_Versione, [FW_CL_R_SW_Revisione] = @FW_CL_R_SW_Revi" +
+                "sione, [FW_CL_R_TipoDev] = @FW_CL_R_TipoDev, [FW_CL_R_Freq] = @FW_CL_R_Freq, [FW" +
+                "_CL_R_CanBus] = @FW_CL_R_CanBus, [FW_CL_R_SPAttivo] = @FW_CL_R_SPAttivo, [FW_CL_" +
+                "R_SPPassivo] = @FW_CL_R_SPPassivo, [FW_CL_R_CambioPag] = @FW_CL_R_CambioPag, [FW" +
+                "_CL_R_CambioRic] = @FW_CL_R_CambioRic, [FW_CL_R_MotRim] = @FW_CL_R_MotRim, [FW_C" +
+                "L_R_FwPAbbinato] = @FW_CL_R_FwPAbbinato, [FW_CL_R_NumPalmari] = @FW_CL_R_NumPalm" +
+                "ari, [FW_CL_R_MasterOutput] = @FW_CL_R_MasterOutput, [FW_CL_R_EmergencyOutput] =" +
+                " @FW_CL_R_EmergencyOutput, [FW_CL_R_ProportionalOutput] = @FW_CL_R_ProportionalO" +
+                "utput, [FW_CL_R_NumOutput] = @FW_CL_R_NumOutput, [FW_CL_R_NumInputAn] = @FW_CL_R" +
+                "_NumInputAn, [FW_CL_R_NumInputDig] = @FW_CL_R_NumInputDig, [FW_CL_R_TimeOut] = @" +
+                "FW_CL_R_TimeOut, [FW_CL_R_ContempTasti] = @FW_CL_R_ContempTasti, [FW_CL_R_PlugCo" +
+                "nfig] = @FW_CL_R_PlugConfig, [FW_CL_R_Golden] = @FW_CL_R_Golden, [FW_CL_R_AutoPa" +
+                "iring] = @FW_CL_R_AutoPairing, [FW_CL_R_IdentificazioneRic] = @FW_CL_R_Identific" +
+                "azioneRic, [FW_CL_R_Obsolete_ver] = @FW_CL_R_Obsolete_ver, [FW_CL_R_Obsolete_ver" +
+                "_from_date] = @FW_CL_R_Obsolete_ver_from_date, [FW_CL_R_Revisioni] = @FW_CL_R_Re" +
+                "visioni, [FW_CL_R_Funzionamento] = @FW_CL_R_Funzionamento WHERE (([FW_CL_R_ID] =" +
+                " @Original_FW_CL_R_ID) AND ([FW_CL_R_SW_Code] = @Original_FW_CL_R_SW_Code) AND (" +
+                "[FW_CL_R_SW_Versione] = @Original_FW_CL_R_SW_Versione) AND ([FW_CL_R_SW_Revision" +
+                "e] = @Original_FW_CL_R_SW_Revisione) AND ([FW_CL_R_TipoDev] = @Original_FW_CL_R_" +
+                "TipoDev) AND ([FW_CL_R_Freq] = @Original_FW_CL_R_Freq) AND ([FW_CL_R_CanBus] = @" +
+                "Original_FW_CL_R_CanBus) AND ([FW_CL_R_SPAttivo] = @Original_FW_CL_R_SPAttivo) A" +
+                "ND ([FW_CL_R_SPPassivo] = @Original_FW_CL_R_SPPassivo) AND ([FW_CL_R_CambioPag] " +
+                "= @Original_FW_CL_R_CambioPag) AND ([FW_CL_R_CambioRic] = @Original_FW_CL_R_Camb" +
+                "ioRic) AND ((@IsNull_FW_CL_R_MotRim = 1 AND [FW_CL_R_MotRim] IS NULL) OR ([FW_CL" +
+                "_R_MotRim] = @Original_FW_CL_R_MotRim)) AND ([FW_CL_R_NumPalmari] = @Original_FW" +
+                "_CL_R_NumPalmari) AND ([FW_CL_R_MasterOutput] = @Original_FW_CL_R_MasterOutput) " +
+                "AND ([FW_CL_R_EmergencyOutput] = @Original_FW_CL_R_EmergencyOutput) AND ([FW_CL_" +
+                "R_ProportionalOutput] = @Original_FW_CL_R_ProportionalOutput) AND ([FW_CL_R_NumO" +
+                "utput] = @Original_FW_CL_R_NumOutput) AND ([FW_CL_R_NumInputAn] = @Original_FW_C" +
+                "L_R_NumInputAn) AND ([FW_CL_R_NumInputDig] = @Original_FW_CL_R_NumInputDig) AND " +
+                "([FW_CL_R_TimeOut] = @Original_FW_CL_R_TimeOut) AND ([FW_CL_R_ContempTasti] = @O" +
+                "riginal_FW_CL_R_ContempTasti) AND ([FW_CL_R_PlugConfig] = @Original_FW_CL_R_Plug" +
+                "Config) AND ([FW_CL_R_Golden] = @Original_FW_CL_R_Golden) AND ([FW_CL_R_AutoPair" +
+                "ing] = @Original_FW_CL_R_AutoPairing) AND ([FW_CL_R_IdentificazioneRic] = @Origi" +
+                "nal_FW_CL_R_IdentificazioneRic) AND ([FW_CL_R_Obsolete_ver] = @Original_FW_CL_R_" +
+                "Obsolete_ver) AND ((@IsNull_FW_CL_R_Obsolete_ver_from_date = 1 AND [FW_CL_R_Obso" +
+                "lete_ver_from_date] IS NULL) OR ([FW_CL_R_Obsolete_ver_from_date] = @Original_FW" +
+                "_CL_R_Obsolete_ver_from_date)));\r\nSELECT FW_CL_R_ID, FW_CL_R_SW_Code, FW_CL_R_SW" +
+                "_Versione, FW_CL_R_SW_Revisione, FW_CL_R_TipoDev, FW_CL_R_Freq, FW_CL_R_CanBus, " +
+                "FW_CL_R_SPAttivo, FW_CL_R_SPPassivo, FW_CL_R_CambioPag, FW_CL_R_CambioRic, FW_CL" +
+                "_R_MotRim, FW_CL_R_FwPAbbinato, FW_CL_R_NumPalmari, FW_CL_R_MasterOutput, FW_CL_" +
+                "R_EmergencyOutput, FW_CL_R_ProportionalOutput, FW_CL_R_NumOutput, FW_CL_R_NumInp" +
+                "utAn, FW_CL_R_NumInputDig, FW_CL_R_TimeOut, FW_CL_R_ContempTasti, FW_CL_R_PlugCo" +
+                "nfig, FW_CL_R_Golden, FW_CL_R_AutoPairing, FW_CL_R_IdentificazioneRic, FW_CL_R_O" +
+                "bsolete_ver, FW_CL_R_Obsolete_ver_from_date, FW_CL_R_Revisioni, FW_CL_R_Funziona" +
+                "mento FROM FW_CL_Ricevitori WHERE (FW_CL_R_ID = @FW_CL_R_ID)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_SW_Code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_SW_Code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_SW_Versione", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_SW_Versione", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_SW_Revisione", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_SW_Revisione", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_TipoDev", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_TipoDev", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_Freq", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_Freq", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_CanBus", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_CanBus", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_SPAttivo", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_SPAttivo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_SPPassivo", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_SPPassivo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_CambioPag", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_CambioPag", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_CambioRic", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_CambioRic", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_MotRim", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_MotRim", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_FwPAbbinato", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_FwPAbbinato", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_NumPalmari", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_NumPalmari", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_MasterOutput", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_MasterOutput", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_EmergencyOutput", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_EmergencyOutput", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_ProportionalOutput", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_ProportionalOutput", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_NumOutput", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_NumOutput", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_NumInputAn", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_NumInputAn", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_NumInputDig", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_NumInputDig", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_TimeOut", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_TimeOut", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_ContempTasti", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_ContempTasti", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_PlugConfig", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_PlugConfig", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_Golden", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_Golden", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_AutoPairing", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_AutoPairing", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_IdentificazioneRic", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_IdentificazioneRic", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_Obsolete_ver", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_Obsolete_ver", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_Obsolete_ver_from_date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_Obsolete_ver_from_date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_Revisioni", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_Revisioni", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_Funzionamento", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_Funzionamento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_ID", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_SW_Code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_SW_Code", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_SW_Versione", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_SW_Versione", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_SW_Revisione", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_SW_Revisione", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_TipoDev", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_TipoDev", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_Freq", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_Freq", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_CanBus", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_CanBus", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_SPAttivo", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_SPAttivo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_SPPassivo", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_SPPassivo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_CambioPag", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_CambioPag", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_CambioRic", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_CambioRic", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FW_CL_R_MotRim", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_MotRim", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_MotRim", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_MotRim", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_NumPalmari", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_NumPalmari", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_MasterOutput", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_MasterOutput", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_EmergencyOutput", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_EmergencyOutput", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_ProportionalOutput", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_ProportionalOutput", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_NumOutput", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_NumOutput", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_NumInputAn", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_NumInputAn", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_NumInputDig", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_NumInputDig", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_TimeOut", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_TimeOut", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_ContempTasti", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_ContempTasti", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_PlugConfig", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_PlugConfig", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_Golden", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_Golden", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_AutoPairing", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_AutoPairing", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_IdentificazioneRic", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_IdentificazioneRic", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_Obsolete_ver", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_Obsolete_ver", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FW_CL_R_Obsolete_ver_from_date", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_Obsolete_ver_from_date", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FW_CL_R_Obsolete_ver_from_date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_Obsolete_ver_from_date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FW_CL_R_ID", global::System.Data.SqlDbType.BigInt, 8, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionString1;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT FW_CL_R_ID, FW_CL_R_SW_Code, FW_CL_R_SW_Versione, FW_CL_R_SW_Revisione, FW_CL_R_TipoDev, FW_CL_R_Freq, FW_CL_R_CanBus, FW_CL_R_SPAttivo, FW_CL_R_SPPassivo, FW_CL_R_CambioPag, FW_CL_R_CambioRic, FW_CL_R_MotRim, FW_CL_R_FwPAbbinato, FW_CL_R_NumPalmari, FW_CL_R_MasterOutput, FW_CL_R_EmergencyOutput, FW_CL_R_ProportionalOutput, FW_CL_R_NumOutput, FW_CL_R_NumInputAn, FW_CL_R_NumInputDig, FW_CL_R_TimeOut, FW_CL_R_ContempTasti, FW_CL_R_PlugConfig, FW_CL_R_Golden, FW_CL_R_AutoPairing, FW_CL_R_IdentificazioneRic, FW_CL_R_Obsolete_ver, FW_CL_R_Obsolete_ver_from_date, FW_CL_R_Revisioni, FW_CL_R_Funzionamento FROM dbo.FW_CL_Ricevitori";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(ds_CL_Firmware.FW_CL_RicevitoriDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual ds_CL_Firmware.FW_CL_RicevitoriDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            ds_CL_Firmware.FW_CL_RicevitoriDataTable dataTable = new ds_CL_Firmware.FW_CL_RicevitoriDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(ds_CL_Firmware.FW_CL_RicevitoriDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(ds_CL_Firmware dataSet) {
+            return this.Adapter.Update(dataSet, "FW_CL_Ricevitori");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(
+                    long Original_FW_CL_R_ID, 
+                    string Original_FW_CL_R_SW_Code, 
+                    string Original_FW_CL_R_SW_Versione, 
+                    string Original_FW_CL_R_SW_Revisione, 
+                    int Original_FW_CL_R_TipoDev, 
+                    string Original_FW_CL_R_Freq, 
+                    bool Original_FW_CL_R_CanBus, 
+                    bool Original_FW_CL_R_SPAttivo, 
+                    bool Original_FW_CL_R_SPPassivo, 
+                    bool Original_FW_CL_R_CambioPag, 
+                    bool Original_FW_CL_R_CambioRic, 
+                    global::System.Nullable<bool> Original_FW_CL_R_MotRim, 
+                    int Original_FW_CL_R_NumPalmari, 
+                    bool Original_FW_CL_R_MasterOutput, 
+                    bool Original_FW_CL_R_EmergencyOutput, 
+                    bool Original_FW_CL_R_ProportionalOutput, 
+                    int Original_FW_CL_R_NumOutput, 
+                    int Original_FW_CL_R_NumInputAn, 
+                    int Original_FW_CL_R_NumInputDig, 
+                    int Original_FW_CL_R_TimeOut, 
+                    int Original_FW_CL_R_ContempTasti, 
+                    bool Original_FW_CL_R_PlugConfig, 
+                    bool Original_FW_CL_R_Golden, 
+                    bool Original_FW_CL_R_AutoPairing, 
+                    int Original_FW_CL_R_IdentificazioneRic, 
+                    bool Original_FW_CL_R_Obsolete_ver, 
+                    global::System.Nullable<global::System.DateTime> Original_FW_CL_R_Obsolete_ver_from_date) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((long)(Original_FW_CL_R_ID));
+            if ((Original_FW_CL_R_SW_Code == null)) {
+                throw new global::System.ArgumentNullException("Original_FW_CL_R_SW_Code");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_FW_CL_R_SW_Code));
+            }
+            if ((Original_FW_CL_R_SW_Versione == null)) {
+                throw new global::System.ArgumentNullException("Original_FW_CL_R_SW_Versione");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_FW_CL_R_SW_Versione));
+            }
+            if ((Original_FW_CL_R_SW_Revisione == null)) {
+                throw new global::System.ArgumentNullException("Original_FW_CL_R_SW_Revisione");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_FW_CL_R_SW_Revisione));
+            }
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_FW_CL_R_TipoDev));
+            if ((Original_FW_CL_R_Freq == null)) {
+                throw new global::System.ArgumentNullException("Original_FW_CL_R_Freq");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_FW_CL_R_Freq));
+            }
+            this.Adapter.DeleteCommand.Parameters[6].Value = ((bool)(Original_FW_CL_R_CanBus));
+            this.Adapter.DeleteCommand.Parameters[7].Value = ((bool)(Original_FW_CL_R_SPAttivo));
+            this.Adapter.DeleteCommand.Parameters[8].Value = ((bool)(Original_FW_CL_R_SPPassivo));
+            this.Adapter.DeleteCommand.Parameters[9].Value = ((bool)(Original_FW_CL_R_CambioPag));
+            this.Adapter.DeleteCommand.Parameters[10].Value = ((bool)(Original_FW_CL_R_CambioRic));
+            if ((Original_FW_CL_R_MotRim.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((bool)(Original_FW_CL_R_MotRim.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.DeleteCommand.Parameters[13].Value = ((int)(Original_FW_CL_R_NumPalmari));
+            this.Adapter.DeleteCommand.Parameters[14].Value = ((bool)(Original_FW_CL_R_MasterOutput));
+            this.Adapter.DeleteCommand.Parameters[15].Value = ((bool)(Original_FW_CL_R_EmergencyOutput));
+            this.Adapter.DeleteCommand.Parameters[16].Value = ((bool)(Original_FW_CL_R_ProportionalOutput));
+            this.Adapter.DeleteCommand.Parameters[17].Value = ((int)(Original_FW_CL_R_NumOutput));
+            this.Adapter.DeleteCommand.Parameters[18].Value = ((int)(Original_FW_CL_R_NumInputAn));
+            this.Adapter.DeleteCommand.Parameters[19].Value = ((int)(Original_FW_CL_R_NumInputDig));
+            this.Adapter.DeleteCommand.Parameters[20].Value = ((int)(Original_FW_CL_R_TimeOut));
+            this.Adapter.DeleteCommand.Parameters[21].Value = ((int)(Original_FW_CL_R_ContempTasti));
+            this.Adapter.DeleteCommand.Parameters[22].Value = ((bool)(Original_FW_CL_R_PlugConfig));
+            this.Adapter.DeleteCommand.Parameters[23].Value = ((bool)(Original_FW_CL_R_Golden));
+            this.Adapter.DeleteCommand.Parameters[24].Value = ((bool)(Original_FW_CL_R_AutoPairing));
+            this.Adapter.DeleteCommand.Parameters[25].Value = ((int)(Original_FW_CL_R_IdentificazioneRic));
+            this.Adapter.DeleteCommand.Parameters[26].Value = ((bool)(Original_FW_CL_R_Obsolete_ver));
+            if ((Original_FW_CL_R_Obsolete_ver_from_date.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[28].Value = ((System.DateTime)(Original_FW_CL_R_Obsolete_ver_from_date.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(
+                    string FW_CL_R_SW_Code, 
+                    string FW_CL_R_SW_Versione, 
+                    string FW_CL_R_SW_Revisione, 
+                    int FW_CL_R_TipoDev, 
+                    string FW_CL_R_Freq, 
+                    bool FW_CL_R_CanBus, 
+                    bool FW_CL_R_SPAttivo, 
+                    bool FW_CL_R_SPPassivo, 
+                    bool FW_CL_R_CambioPag, 
+                    bool FW_CL_R_CambioRic, 
+                    global::System.Nullable<bool> FW_CL_R_MotRim, 
+                    string FW_CL_R_FwPAbbinato, 
+                    int FW_CL_R_NumPalmari, 
+                    bool FW_CL_R_MasterOutput, 
+                    bool FW_CL_R_EmergencyOutput, 
+                    bool FW_CL_R_ProportionalOutput, 
+                    int FW_CL_R_NumOutput, 
+                    int FW_CL_R_NumInputAn, 
+                    int FW_CL_R_NumInputDig, 
+                    int FW_CL_R_TimeOut, 
+                    int FW_CL_R_ContempTasti, 
+                    bool FW_CL_R_PlugConfig, 
+                    bool FW_CL_R_Golden, 
+                    bool FW_CL_R_AutoPairing, 
+                    int FW_CL_R_IdentificazioneRic, 
+                    bool FW_CL_R_Obsolete_ver, 
+                    global::System.Nullable<global::System.DateTime> FW_CL_R_Obsolete_ver_from_date, 
+                    string FW_CL_R_Revisioni, 
+                    string FW_CL_R_Funzionamento) {
+            if ((FW_CL_R_SW_Code == null)) {
+                throw new global::System.ArgumentNullException("FW_CL_R_SW_Code");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(FW_CL_R_SW_Code));
+            }
+            if ((FW_CL_R_SW_Versione == null)) {
+                throw new global::System.ArgumentNullException("FW_CL_R_SW_Versione");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(FW_CL_R_SW_Versione));
+            }
+            if ((FW_CL_R_SW_Revisione == null)) {
+                throw new global::System.ArgumentNullException("FW_CL_R_SW_Revisione");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(FW_CL_R_SW_Revisione));
+            }
+            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(FW_CL_R_TipoDev));
+            if ((FW_CL_R_Freq == null)) {
+                throw new global::System.ArgumentNullException("FW_CL_R_Freq");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(FW_CL_R_Freq));
+            }
+            this.Adapter.InsertCommand.Parameters[5].Value = ((bool)(FW_CL_R_CanBus));
+            this.Adapter.InsertCommand.Parameters[6].Value = ((bool)(FW_CL_R_SPAttivo));
+            this.Adapter.InsertCommand.Parameters[7].Value = ((bool)(FW_CL_R_SPPassivo));
+            this.Adapter.InsertCommand.Parameters[8].Value = ((bool)(FW_CL_R_CambioPag));
+            this.Adapter.InsertCommand.Parameters[9].Value = ((bool)(FW_CL_R_CambioRic));
+            if ((FW_CL_R_MotRim.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((bool)(FW_CL_R_MotRim.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((FW_CL_R_FwPAbbinato == null)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(FW_CL_R_FwPAbbinato));
+            }
+            this.Adapter.InsertCommand.Parameters[12].Value = ((int)(FW_CL_R_NumPalmari));
+            this.Adapter.InsertCommand.Parameters[13].Value = ((bool)(FW_CL_R_MasterOutput));
+            this.Adapter.InsertCommand.Parameters[14].Value = ((bool)(FW_CL_R_EmergencyOutput));
+            this.Adapter.InsertCommand.Parameters[15].Value = ((bool)(FW_CL_R_ProportionalOutput));
+            this.Adapter.InsertCommand.Parameters[16].Value = ((int)(FW_CL_R_NumOutput));
+            this.Adapter.InsertCommand.Parameters[17].Value = ((int)(FW_CL_R_NumInputAn));
+            this.Adapter.InsertCommand.Parameters[18].Value = ((int)(FW_CL_R_NumInputDig));
+            this.Adapter.InsertCommand.Parameters[19].Value = ((int)(FW_CL_R_TimeOut));
+            this.Adapter.InsertCommand.Parameters[20].Value = ((int)(FW_CL_R_ContempTasti));
+            this.Adapter.InsertCommand.Parameters[21].Value = ((bool)(FW_CL_R_PlugConfig));
+            this.Adapter.InsertCommand.Parameters[22].Value = ((bool)(FW_CL_R_Golden));
+            this.Adapter.InsertCommand.Parameters[23].Value = ((bool)(FW_CL_R_AutoPairing));
+            this.Adapter.InsertCommand.Parameters[24].Value = ((int)(FW_CL_R_IdentificazioneRic));
+            this.Adapter.InsertCommand.Parameters[25].Value = ((bool)(FW_CL_R_Obsolete_ver));
+            if ((FW_CL_R_Obsolete_ver_from_date.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[26].Value = ((System.DateTime)(FW_CL_R_Obsolete_ver_from_date.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            if ((FW_CL_R_Revisioni == null)) {
+                this.Adapter.InsertCommand.Parameters[27].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[27].Value = ((string)(FW_CL_R_Revisioni));
+            }
+            if ((FW_CL_R_Funzionamento == null)) {
+                this.Adapter.InsertCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[28].Value = ((string)(FW_CL_R_Funzionamento));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    string FW_CL_R_SW_Code, 
+                    string FW_CL_R_SW_Versione, 
+                    string FW_CL_R_SW_Revisione, 
+                    int FW_CL_R_TipoDev, 
+                    string FW_CL_R_Freq, 
+                    bool FW_CL_R_CanBus, 
+                    bool FW_CL_R_SPAttivo, 
+                    bool FW_CL_R_SPPassivo, 
+                    bool FW_CL_R_CambioPag, 
+                    bool FW_CL_R_CambioRic, 
+                    global::System.Nullable<bool> FW_CL_R_MotRim, 
+                    string FW_CL_R_FwPAbbinato, 
+                    int FW_CL_R_NumPalmari, 
+                    bool FW_CL_R_MasterOutput, 
+                    bool FW_CL_R_EmergencyOutput, 
+                    bool FW_CL_R_ProportionalOutput, 
+                    int FW_CL_R_NumOutput, 
+                    int FW_CL_R_NumInputAn, 
+                    int FW_CL_R_NumInputDig, 
+                    int FW_CL_R_TimeOut, 
+                    int FW_CL_R_ContempTasti, 
+                    bool FW_CL_R_PlugConfig, 
+                    bool FW_CL_R_Golden, 
+                    bool FW_CL_R_AutoPairing, 
+                    int FW_CL_R_IdentificazioneRic, 
+                    bool FW_CL_R_Obsolete_ver, 
+                    global::System.Nullable<global::System.DateTime> FW_CL_R_Obsolete_ver_from_date, 
+                    string FW_CL_R_Revisioni, 
+                    string FW_CL_R_Funzionamento, 
+                    long Original_FW_CL_R_ID, 
+                    string Original_FW_CL_R_SW_Code, 
+                    string Original_FW_CL_R_SW_Versione, 
+                    string Original_FW_CL_R_SW_Revisione, 
+                    int Original_FW_CL_R_TipoDev, 
+                    string Original_FW_CL_R_Freq, 
+                    bool Original_FW_CL_R_CanBus, 
+                    bool Original_FW_CL_R_SPAttivo, 
+                    bool Original_FW_CL_R_SPPassivo, 
+                    bool Original_FW_CL_R_CambioPag, 
+                    bool Original_FW_CL_R_CambioRic, 
+                    global::System.Nullable<bool> Original_FW_CL_R_MotRim, 
+                    int Original_FW_CL_R_NumPalmari, 
+                    bool Original_FW_CL_R_MasterOutput, 
+                    bool Original_FW_CL_R_EmergencyOutput, 
+                    bool Original_FW_CL_R_ProportionalOutput, 
+                    int Original_FW_CL_R_NumOutput, 
+                    int Original_FW_CL_R_NumInputAn, 
+                    int Original_FW_CL_R_NumInputDig, 
+                    int Original_FW_CL_R_TimeOut, 
+                    int Original_FW_CL_R_ContempTasti, 
+                    bool Original_FW_CL_R_PlugConfig, 
+                    bool Original_FW_CL_R_Golden, 
+                    bool Original_FW_CL_R_AutoPairing, 
+                    int Original_FW_CL_R_IdentificazioneRic, 
+                    bool Original_FW_CL_R_Obsolete_ver, 
+                    global::System.Nullable<global::System.DateTime> Original_FW_CL_R_Obsolete_ver_from_date, 
+                    long FW_CL_R_ID) {
+            if ((FW_CL_R_SW_Code == null)) {
+                throw new global::System.ArgumentNullException("FW_CL_R_SW_Code");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(FW_CL_R_SW_Code));
+            }
+            if ((FW_CL_R_SW_Versione == null)) {
+                throw new global::System.ArgumentNullException("FW_CL_R_SW_Versione");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(FW_CL_R_SW_Versione));
+            }
+            if ((FW_CL_R_SW_Revisione == null)) {
+                throw new global::System.ArgumentNullException("FW_CL_R_SW_Revisione");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(FW_CL_R_SW_Revisione));
+            }
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(FW_CL_R_TipoDev));
+            if ((FW_CL_R_Freq == null)) {
+                throw new global::System.ArgumentNullException("FW_CL_R_Freq");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(FW_CL_R_Freq));
+            }
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((bool)(FW_CL_R_CanBus));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((bool)(FW_CL_R_SPAttivo));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((bool)(FW_CL_R_SPPassivo));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((bool)(FW_CL_R_CambioPag));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((bool)(FW_CL_R_CambioRic));
+            if ((FW_CL_R_MotRim.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((bool)(FW_CL_R_MotRim.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((FW_CL_R_FwPAbbinato == null)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(FW_CL_R_FwPAbbinato));
+            }
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(FW_CL_R_NumPalmari));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((bool)(FW_CL_R_MasterOutput));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((bool)(FW_CL_R_EmergencyOutput));
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((bool)(FW_CL_R_ProportionalOutput));
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(FW_CL_R_NumOutput));
+            this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(FW_CL_R_NumInputAn));
+            this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(FW_CL_R_NumInputDig));
+            this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(FW_CL_R_TimeOut));
+            this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(FW_CL_R_ContempTasti));
+            this.Adapter.UpdateCommand.Parameters[21].Value = ((bool)(FW_CL_R_PlugConfig));
+            this.Adapter.UpdateCommand.Parameters[22].Value = ((bool)(FW_CL_R_Golden));
+            this.Adapter.UpdateCommand.Parameters[23].Value = ((bool)(FW_CL_R_AutoPairing));
+            this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(FW_CL_R_IdentificazioneRic));
+            this.Adapter.UpdateCommand.Parameters[25].Value = ((bool)(FW_CL_R_Obsolete_ver));
+            if ((FW_CL_R_Obsolete_ver_from_date.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((System.DateTime)(FW_CL_R_Obsolete_ver_from_date.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            if ((FW_CL_R_Revisioni == null)) {
+                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(FW_CL_R_Revisioni));
+            }
+            if ((FW_CL_R_Funzionamento == null)) {
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(FW_CL_R_Funzionamento));
+            }
+            this.Adapter.UpdateCommand.Parameters[29].Value = ((long)(Original_FW_CL_R_ID));
+            if ((Original_FW_CL_R_SW_Code == null)) {
+                throw new global::System.ArgumentNullException("Original_FW_CL_R_SW_Code");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((string)(Original_FW_CL_R_SW_Code));
+            }
+            if ((Original_FW_CL_R_SW_Versione == null)) {
+                throw new global::System.ArgumentNullException("Original_FW_CL_R_SW_Versione");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((string)(Original_FW_CL_R_SW_Versione));
+            }
+            if ((Original_FW_CL_R_SW_Revisione == null)) {
+                throw new global::System.ArgumentNullException("Original_FW_CL_R_SW_Revisione");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((string)(Original_FW_CL_R_SW_Revisione));
+            }
+            this.Adapter.UpdateCommand.Parameters[33].Value = ((int)(Original_FW_CL_R_TipoDev));
+            if ((Original_FW_CL_R_Freq == null)) {
+                throw new global::System.ArgumentNullException("Original_FW_CL_R_Freq");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((string)(Original_FW_CL_R_Freq));
+            }
+            this.Adapter.UpdateCommand.Parameters[35].Value = ((bool)(Original_FW_CL_R_CanBus));
+            this.Adapter.UpdateCommand.Parameters[36].Value = ((bool)(Original_FW_CL_R_SPAttivo));
+            this.Adapter.UpdateCommand.Parameters[37].Value = ((bool)(Original_FW_CL_R_SPPassivo));
+            this.Adapter.UpdateCommand.Parameters[38].Value = ((bool)(Original_FW_CL_R_CambioPag));
+            this.Adapter.UpdateCommand.Parameters[39].Value = ((bool)(Original_FW_CL_R_CambioRic));
+            if ((Original_FW_CL_R_MotRim.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((bool)(Original_FW_CL_R_MotRim.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[41].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[42].Value = ((int)(Original_FW_CL_R_NumPalmari));
+            this.Adapter.UpdateCommand.Parameters[43].Value = ((bool)(Original_FW_CL_R_MasterOutput));
+            this.Adapter.UpdateCommand.Parameters[44].Value = ((bool)(Original_FW_CL_R_EmergencyOutput));
+            this.Adapter.UpdateCommand.Parameters[45].Value = ((bool)(Original_FW_CL_R_ProportionalOutput));
+            this.Adapter.UpdateCommand.Parameters[46].Value = ((int)(Original_FW_CL_R_NumOutput));
+            this.Adapter.UpdateCommand.Parameters[47].Value = ((int)(Original_FW_CL_R_NumInputAn));
+            this.Adapter.UpdateCommand.Parameters[48].Value = ((int)(Original_FW_CL_R_NumInputDig));
+            this.Adapter.UpdateCommand.Parameters[49].Value = ((int)(Original_FW_CL_R_TimeOut));
+            this.Adapter.UpdateCommand.Parameters[50].Value = ((int)(Original_FW_CL_R_ContempTasti));
+            this.Adapter.UpdateCommand.Parameters[51].Value = ((bool)(Original_FW_CL_R_PlugConfig));
+            this.Adapter.UpdateCommand.Parameters[52].Value = ((bool)(Original_FW_CL_R_Golden));
+            this.Adapter.UpdateCommand.Parameters[53].Value = ((bool)(Original_FW_CL_R_AutoPairing));
+            this.Adapter.UpdateCommand.Parameters[54].Value = ((int)(Original_FW_CL_R_IdentificazioneRic));
+            this.Adapter.UpdateCommand.Parameters[55].Value = ((bool)(Original_FW_CL_R_Obsolete_ver));
+            if ((Original_FW_CL_R_Obsolete_ver_from_date.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[56].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[57].Value = ((System.DateTime)(Original_FW_CL_R_Obsolete_ver_from_date.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[56].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[57].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[58].Value = ((long)(FW_CL_R_ID));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    string FW_CL_R_SW_Code, 
+                    string FW_CL_R_SW_Versione, 
+                    string FW_CL_R_SW_Revisione, 
+                    int FW_CL_R_TipoDev, 
+                    string FW_CL_R_Freq, 
+                    bool FW_CL_R_CanBus, 
+                    bool FW_CL_R_SPAttivo, 
+                    bool FW_CL_R_SPPassivo, 
+                    bool FW_CL_R_CambioPag, 
+                    bool FW_CL_R_CambioRic, 
+                    global::System.Nullable<bool> FW_CL_R_MotRim, 
+                    string FW_CL_R_FwPAbbinato, 
+                    int FW_CL_R_NumPalmari, 
+                    bool FW_CL_R_MasterOutput, 
+                    bool FW_CL_R_EmergencyOutput, 
+                    bool FW_CL_R_ProportionalOutput, 
+                    int FW_CL_R_NumOutput, 
+                    int FW_CL_R_NumInputAn, 
+                    int FW_CL_R_NumInputDig, 
+                    int FW_CL_R_TimeOut, 
+                    int FW_CL_R_ContempTasti, 
+                    bool FW_CL_R_PlugConfig, 
+                    bool FW_CL_R_Golden, 
+                    bool FW_CL_R_AutoPairing, 
+                    int FW_CL_R_IdentificazioneRic, 
+                    bool FW_CL_R_Obsolete_ver, 
+                    global::System.Nullable<global::System.DateTime> FW_CL_R_Obsolete_ver_from_date, 
+                    string FW_CL_R_Revisioni, 
+                    string FW_CL_R_Funzionamento, 
+                    long Original_FW_CL_R_ID, 
+                    string Original_FW_CL_R_SW_Code, 
+                    string Original_FW_CL_R_SW_Versione, 
+                    string Original_FW_CL_R_SW_Revisione, 
+                    int Original_FW_CL_R_TipoDev, 
+                    string Original_FW_CL_R_Freq, 
+                    bool Original_FW_CL_R_CanBus, 
+                    bool Original_FW_CL_R_SPAttivo, 
+                    bool Original_FW_CL_R_SPPassivo, 
+                    bool Original_FW_CL_R_CambioPag, 
+                    bool Original_FW_CL_R_CambioRic, 
+                    global::System.Nullable<bool> Original_FW_CL_R_MotRim, 
+                    int Original_FW_CL_R_NumPalmari, 
+                    bool Original_FW_CL_R_MasterOutput, 
+                    bool Original_FW_CL_R_EmergencyOutput, 
+                    bool Original_FW_CL_R_ProportionalOutput, 
+                    int Original_FW_CL_R_NumOutput, 
+                    int Original_FW_CL_R_NumInputAn, 
+                    int Original_FW_CL_R_NumInputDig, 
+                    int Original_FW_CL_R_TimeOut, 
+                    int Original_FW_CL_R_ContempTasti, 
+                    bool Original_FW_CL_R_PlugConfig, 
+                    bool Original_FW_CL_R_Golden, 
+                    bool Original_FW_CL_R_AutoPairing, 
+                    int Original_FW_CL_R_IdentificazioneRic, 
+                    bool Original_FW_CL_R_Obsolete_ver, 
+                    global::System.Nullable<global::System.DateTime> Original_FW_CL_R_Obsolete_ver_from_date) {
+            return this.Update(FW_CL_R_SW_Code, FW_CL_R_SW_Versione, FW_CL_R_SW_Revisione, FW_CL_R_TipoDev, FW_CL_R_Freq, FW_CL_R_CanBus, FW_CL_R_SPAttivo, FW_CL_R_SPPassivo, FW_CL_R_CambioPag, FW_CL_R_CambioRic, FW_CL_R_MotRim, FW_CL_R_FwPAbbinato, FW_CL_R_NumPalmari, FW_CL_R_MasterOutput, FW_CL_R_EmergencyOutput, FW_CL_R_ProportionalOutput, FW_CL_R_NumOutput, FW_CL_R_NumInputAn, FW_CL_R_NumInputDig, FW_CL_R_TimeOut, FW_CL_R_ContempTasti, FW_CL_R_PlugConfig, FW_CL_R_Golden, FW_CL_R_AutoPairing, FW_CL_R_IdentificazioneRic, FW_CL_R_Obsolete_ver, FW_CL_R_Obsolete_ver_from_date, FW_CL_R_Revisioni, FW_CL_R_Funzionamento, Original_FW_CL_R_ID, Original_FW_CL_R_SW_Code, Original_FW_CL_R_SW_Versione, Original_FW_CL_R_SW_Revisione, Original_FW_CL_R_TipoDev, Original_FW_CL_R_Freq, Original_FW_CL_R_CanBus, Original_FW_CL_R_SPAttivo, Original_FW_CL_R_SPPassivo, Original_FW_CL_R_CambioPag, Original_FW_CL_R_CambioRic, Original_FW_CL_R_MotRim, Original_FW_CL_R_NumPalmari, Original_FW_CL_R_MasterOutput, Original_FW_CL_R_EmergencyOutput, Original_FW_CL_R_ProportionalOutput, Original_FW_CL_R_NumOutput, Original_FW_CL_R_NumInputAn, Original_FW_CL_R_NumInputDig, Original_FW_CL_R_TimeOut, Original_FW_CL_R_ContempTasti, Original_FW_CL_R_PlugConfig, Original_FW_CL_R_Golden, Original_FW_CL_R_AutoPairing, Original_FW_CL_R_IdentificazioneRic, Original_FW_CL_R_Obsolete_ver, Original_FW_CL_R_Obsolete_ver_from_date, Original_FW_CL_R_ID);
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2861,6 +5050,8 @@ SELECT FW_CL_P_ID, FW_CL_P_SW_Code, FW_CL_P_SW_Versione, FW_CL_P_SW_Revisione, F
         private FW_CL_FamiglieTableAdapter _fW_CL_FamiglieTableAdapter;
         
         private FW_CL_PalmariTableAdapter _fW_CL_PalmariTableAdapter;
+        
+        private FW_CL_RicevitoriTableAdapter _fW_CL_RicevitoriTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -2907,6 +5098,20 @@ SELECT FW_CL_P_ID, FW_CL_P_SW_Code, FW_CL_P_SW_Versione, FW_CL_P_SW_Revisione, F
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public FW_CL_RicevitoriTableAdapter FW_CL_RicevitoriTableAdapter {
+            get {
+                return this._fW_CL_RicevitoriTableAdapter;
+            }
+            set {
+                this._fW_CL_RicevitoriTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -2932,6 +5137,10 @@ SELECT FW_CL_P_ID, FW_CL_P_SW_Code, FW_CL_P_SW_Versione, FW_CL_P_SW_Revisione, F
                             && (this._fW_CL_PalmariTableAdapter.Connection != null))) {
                     return this._fW_CL_PalmariTableAdapter.Connection;
                 }
+                if (((this._fW_CL_RicevitoriTableAdapter != null) 
+                            && (this._fW_CL_RicevitoriTableAdapter.Connection != null))) {
+                    return this._fW_CL_RicevitoriTableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -2949,6 +5158,9 @@ SELECT FW_CL_P_ID, FW_CL_P_SW_Code, FW_CL_P_SW_Versione, FW_CL_P_SW_Revisione, F
                     count = (count + 1);
                 }
                 if ((this._fW_CL_PalmariTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._fW_CL_RicevitoriTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -2980,6 +5192,15 @@ SELECT FW_CL_P_ID, FW_CL_P_SW_Code, FW_CL_P_SW_Versione, FW_CL_P_SW_Revisione, F
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._fW_CL_RicevitoriTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.FW_CL_Ricevitori.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._fW_CL_RicevitoriTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -3006,6 +5227,14 @@ SELECT FW_CL_P_ID, FW_CL_P_SW_Code, FW_CL_P_SW_Versione, FW_CL_P_SW_Revisione, F
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._fW_CL_RicevitoriTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.FW_CL_Ricevitori.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._fW_CL_RicevitoriTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -3016,6 +5245,14 @@ SELECT FW_CL_P_ID, FW_CL_P_SW_Code, FW_CL_P_SW_Versione, FW_CL_P_SW_Revisione, F
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateDeletedRows(ds_CL_Firmware dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._fW_CL_RicevitoriTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.FW_CL_Ricevitori.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._fW_CL_RicevitoriTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._fW_CL_PalmariTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.FW_CL_Palmari.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -3081,6 +5318,11 @@ SELECT FW_CL_P_ID, FW_CL_P_SW_Code, FW_CL_P_SW_Versione, FW_CL_P_SW_Revisione, F
                 throw new global::System.ArgumentException("Tutti gli oggetti TableAdapter gestiti da TableAdapterManager devono utilizzare l" +
                         "a stessa stringa di connessione.");
             }
+            if (((this._fW_CL_RicevitoriTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._fW_CL_RicevitoriTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("Tutti gli oggetti TableAdapter gestiti da TableAdapterManager devono utilizzare l" +
+                        "a stessa stringa di connessione.");
+            }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
                 throw new global::System.ApplicationException("TableAdapterManager non contiene informazioni di connessione. Impostare la propri" +
@@ -3130,6 +5372,15 @@ SELECT FW_CL_P_ID, FW_CL_P_SW_Code, FW_CL_P_SW_Versione, FW_CL_P_SW_Revisione, F
                     if (this._fW_CL_PalmariTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._fW_CL_PalmariTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._fW_CL_PalmariTableAdapter.Adapter);
+                    }
+                }
+                if ((this._fW_CL_RicevitoriTableAdapter != null)) {
+                    revertConnections.Add(this._fW_CL_RicevitoriTableAdapter, this._fW_CL_RicevitoriTableAdapter.Connection);
+                    this._fW_CL_RicevitoriTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._fW_CL_RicevitoriTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._fW_CL_RicevitoriTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._fW_CL_RicevitoriTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._fW_CL_RicevitoriTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -3197,6 +5448,10 @@ SELECT FW_CL_P_ID, FW_CL_P_SW_Code, FW_CL_P_SW_Versione, FW_CL_P_SW_Revisione, F
                 if ((this._fW_CL_PalmariTableAdapter != null)) {
                     this._fW_CL_PalmariTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._fW_CL_PalmariTableAdapter]));
                     this._fW_CL_PalmariTableAdapter.Transaction = null;
+                }
+                if ((this._fW_CL_RicevitoriTableAdapter != null)) {
+                    this._fW_CL_RicevitoriTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._fW_CL_RicevitoriTableAdapter]));
+                    this._fW_CL_RicevitoriTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

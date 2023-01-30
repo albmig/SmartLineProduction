@@ -334,6 +334,11 @@
     <Compile Include="Prova.designer.cs">
       <DependentUpon>Prova.cs</DependentUpon>
     </Compile>
+    <Compile Include="SISTEMATICA_FACTORYDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SISTEMATICA_FACTORYDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Splash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -972,6 +977,17 @@
     </None>
     <None Include="Resources\Pdf_notpresent.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SISTEMATICA_FACTORYDataSet.xsc">
+      <DependentUpon>SISTEMATICA_FACTORYDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SISTEMATICA_FACTORYDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SISTEMATICA_FACTORYDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SISTEMATICA_FACTORYDataSet.xss">
+      <DependentUpon>SISTEMATICA_FACTORYDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

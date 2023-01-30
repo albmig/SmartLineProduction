@@ -18,7 +18,7 @@ namespace SmartLineProduction
     {
         private string displayform = "V"; // V-View/INV-InsertNewVersion/INR-InsertNewRelease/CLO-CloneFirmware
 
-        private string filtroincorso = "";
+        private string filtroincorso = "FW_CL_P_Obsolete_ver = 0";
 
         //private int LockLevel = 0;
 
@@ -36,7 +36,7 @@ namespace SmartLineProduction
             SetFilter();
             this.Firmware_BindingSource.Filter = filtroincorso;
 
-            this.Firmware_BindingSource.Sort = "FW_CL_P_SW_Versione Desc";
+            this.Firmware_BindingSource.Sort = "FW_CL_P_SW_Versione ASC";
             this.Firmware_BindingSource.ResetBindings(false);
             gv_FW_P.Refresh();
 
@@ -313,6 +313,7 @@ namespace SmartLineProduction
                 case "B": cb_433.Checked = true; break;
                 case "N": cb_filo.Checked = true; break;
                 case "C": cb_can.Checked = true; break;
+                default: break;
             }
             tog_CambioPag.Checked = (bool)myRow["FW_CL_P_CambioPag"];
             tog_CambioRic.Checked = (bool)myRow["FW_CL_P_CambioRic"];
@@ -422,11 +423,12 @@ namespace SmartLineProduction
         {
             if (radio_FW_active.Checked) 
             {
-                filtroincorso = "NOT FW_CL_P_Obsolete_ver";
+                filtroincorso = "FW_CL_P_Obsolete_ver = 0";
             }
             if (radio_FW_obsoleti.Checked)
             {
-                filtroincorso = string.Empty;
+                filtroincorso = "FW_CL_P_Obsolete_ver = 0 OR FW_CL_P_Obsolete_ver = 1";
+                //filtroincorso = "FW_CL_P_Obsolete_ver = 1";
             }
         }
 
@@ -540,9 +542,10 @@ namespace SmartLineProduction
             rtb_Revisioni.Refresh();
         }
 
-        private void firmwareBindingSource_CurrentChanged(object sender, EventArgs e)
+        private void Firmware_BindingSource_CurrentChanged(object sender, EventArgs e)
         {
             DB2Riga();
+            
         }
 
         private void menu_sw_clona_Click(object sender, EventArgs e)
@@ -658,54 +661,9 @@ namespace SmartLineProduction
         {
             SetView();
         }
-
-        private void metroLabel10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroLabel12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        //private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        //{
-
-        //}
-
-        //private void metroToggle7_CheckedChanged(object sender, EventArgs e)
-        //{
-        //            }
-
-        //private void tb_gv_MaxPair_Click(object sender, EventArgs e)
-        //{
-
-        //}
-
-        private void rtb_Revisioni_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void radio_FW_Obsoleti_Click(object sender, EventArgs e)
         {
-            SetFilter();
-        }
-
-        private void panel_dati_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tog_Buzzer_CheckedChanged(object sender, EventArgs e)
-        {
-
+            SetView();
         }
 
     }
