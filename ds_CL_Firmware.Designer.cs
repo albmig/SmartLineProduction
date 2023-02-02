@@ -4463,11 +4463,16 @@ SELECT FW_CL_P_ID, FW_CL_P_SW_Code, FW_CL_P_SW_Versione, FW_CL_P_SW_Revisione, F
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT FW_CL_R_ID, FW_CL_R_SW_Code, FW_CL_R_SW_Versione, FW_CL_R_SW_Revisione, FW_CL_R_TipoDev, FW_CL_R_Freq, FW_CL_R_CanBus, FW_CL_R_SPAttivo, FW_CL_R_SPPassivo, FW_CL_R_CambioPag, FW_CL_R_CambioRic, FW_CL_R_MotRim, FW_CL_R_FwPAbbinato, FW_CL_R_NumPalmari, FW_CL_R_MasterOutput, FW_CL_R_EmergencyOutput, FW_CL_R_ProportionalOutput, FW_CL_R_NumOutput, FW_CL_R_NumInputAn, FW_CL_R_NumInputDig, FW_CL_R_TimeOut, FW_CL_R_ContempTasti, FW_CL_R_PlugConfig, FW_CL_R_Golden, FW_CL_R_AutoPairing, FW_CL_R_IdentificazioneRic, FW_CL_R_Obsolete_ver, FW_CL_R_Obsolete_ver_from_date, FW_CL_R_Revisioni, FW_CL_R_Funzionamento FROM dbo.FW_CL_Ricevitori";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT        MAX(FW_CL_R_SW_Versione) AS Expr1\r\nFROM            FW_CL_Ricevitori" +
+                "";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5032,6 +5037,34 @@ SELECT FW_CL_P_ID, FW_CL_P_SW_Code, FW_CL_P_SW_Versione, FW_CL_P_SW_Revisione, F
                     bool Original_FW_CL_R_Obsolete_ver, 
                     global::System.Nullable<global::System.DateTime> Original_FW_CL_R_Obsolete_ver_from_date) {
             return this.Update(FW_CL_R_SW_Code, FW_CL_R_SW_Versione, FW_CL_R_SW_Revisione, FW_CL_R_TipoDev, FW_CL_R_Freq, FW_CL_R_CanBus, FW_CL_R_SPAttivo, FW_CL_R_SPPassivo, FW_CL_R_CambioPag, FW_CL_R_CambioRic, FW_CL_R_MotRim, FW_CL_R_FwPAbbinato, FW_CL_R_NumPalmari, FW_CL_R_MasterOutput, FW_CL_R_EmergencyOutput, FW_CL_R_ProportionalOutput, FW_CL_R_NumOutput, FW_CL_R_NumInputAn, FW_CL_R_NumInputDig, FW_CL_R_TimeOut, FW_CL_R_ContempTasti, FW_CL_R_PlugConfig, FW_CL_R_Golden, FW_CL_R_AutoPairing, FW_CL_R_IdentificazioneRic, FW_CL_R_Obsolete_ver, FW_CL_R_Obsolete_ver_from_date, FW_CL_R_Revisioni, FW_CL_R_Funzionamento, Original_FW_CL_R_ID, Original_FW_CL_R_SW_Code, Original_FW_CL_R_SW_Versione, Original_FW_CL_R_SW_Revisione, Original_FW_CL_R_TipoDev, Original_FW_CL_R_Freq, Original_FW_CL_R_CanBus, Original_FW_CL_R_SPAttivo, Original_FW_CL_R_SPPassivo, Original_FW_CL_R_CambioPag, Original_FW_CL_R_CambioRic, Original_FW_CL_R_MotRim, Original_FW_CL_R_NumPalmari, Original_FW_CL_R_MasterOutput, Original_FW_CL_R_EmergencyOutput, Original_FW_CL_R_ProportionalOutput, Original_FW_CL_R_NumOutput, Original_FW_CL_R_NumInputAn, Original_FW_CL_R_NumInputDig, Original_FW_CL_R_TimeOut, Original_FW_CL_R_ContempTasti, Original_FW_CL_R_PlugConfig, Original_FW_CL_R_Golden, Original_FW_CL_R_AutoPairing, Original_FW_CL_R_IdentificazioneRic, Original_FW_CL_R_Obsolete_ver, Original_FW_CL_R_Obsolete_ver_from_date, Original_FW_CL_R_ID);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual string getMaxVersione() {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((string)(returnValue));
+            }
         }
     }
     

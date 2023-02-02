@@ -395,7 +395,17 @@ SELECT FW_CL_R_ID, FW_CL_R_SW_Code, FW_CL_R_SW_Versione, FW_CL_R_SW_Revisione, F
               <Mapping SourceColumn="FW_CL_R_Revisioni" DataSetColumn="FW_CL_R_Revisioni" />
               <Mapping SourceColumn="FW_CL_R_Funzionamento" DataSetColumn="FW_CL_R_Funzionamento" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionString1 (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="getMaxVersione" Modifier="Public" Name="getMaxVersione" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="getMaxVersione">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        MAX(FW_CL_R_SW_Versione) AS Expr1
+FROM            FW_CL_Ricevitori</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />
@@ -405,7 +415,7 @@ SELECT FW_CL_R_ID, FW_CL_R_SW_Code, FW_CL_R_SW_Versione, FW_CL_R_SW_Revisione, F
   <xs:element name="ds_CL_Firmware" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ds_CL_Firmware" msprop:Generator_UserDSName="ds_CL_Firmware">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="FW_CL_Famiglie" msprop:Generator_TableClassName="FW_CL_FamiglieDataTable" msprop:Generator_TableVarName="tableFW_CL_Famiglie" msprop:Generator_RowChangedName="FW_CL_FamiglieRowChanged" msprop:Generator_TablePropName="FW_CL_Famiglie" msprop:Generator_RowDeletingName="FW_CL_FamiglieRowDeleting" msprop:Generator_RowChangingName="FW_CL_FamiglieRowChanging" msprop:Generator_RowEvHandlerName="FW_CL_FamiglieRowChangeEventHandler" msprop:Generator_RowDeletedName="FW_CL_FamiglieRowDeleted" msprop:Generator_RowClassName="FW_CL_FamiglieRow" msprop:Generator_UserTableName="FW_CL_Famiglie" msprop:Generator_RowEvArgName="FW_CL_FamiglieRowChangeEvent">
+        <xs:element name="FW_CL_Famiglie" msprop:Generator_TableClassName="FW_CL_FamiglieDataTable" msprop:Generator_TableVarName="tableFW_CL_Famiglie" msprop:Generator_TablePropName="FW_CL_Famiglie" msprop:Generator_RowDeletingName="FW_CL_FamiglieRowDeleting" msprop:Generator_RowChangingName="FW_CL_FamiglieRowChanging" msprop:Generator_RowEvHandlerName="FW_CL_FamiglieRowChangeEventHandler" msprop:Generator_RowDeletedName="FW_CL_FamiglieRowDeleted" msprop:Generator_UserTableName="FW_CL_Famiglie" msprop:Generator_RowChangedName="FW_CL_FamiglieRowChanged" msprop:Generator_RowEvArgName="FW_CL_FamiglieRowChangeEvent" msprop:Generator_RowClassName="FW_CL_FamiglieRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="FW_CL_Fam_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnFW_CL_Fam_ID" msprop:Generator_ColumnPropNameInRow="FW_CL_Fam_ID" msprop:Generator_ColumnPropNameInTable="FW_CL_Fam_IDColumn" msprop:Generator_UserColumnName="FW_CL_Fam_ID" type="xs:long" />
@@ -426,7 +436,7 @@ SELECT FW_CL_R_ID, FW_CL_R_SW_Code, FW_CL_R_SW_Versione, FW_CL_R_SW_Revisione, F
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="FW_CL_Palmari" msprop:Generator_TableClassName="FW_CL_PalmariDataTable" msprop:Generator_TableVarName="tableFW_CL_Palmari" msprop:Generator_RowChangedName="FW_CL_PalmariRowChanged" msprop:Generator_TablePropName="FW_CL_Palmari" msprop:Generator_RowDeletingName="FW_CL_PalmariRowDeleting" msprop:Generator_RowChangingName="FW_CL_PalmariRowChanging" msprop:Generator_RowEvHandlerName="FW_CL_PalmariRowChangeEventHandler" msprop:Generator_RowDeletedName="FW_CL_PalmariRowDeleted" msprop:Generator_RowClassName="FW_CL_PalmariRow" msprop:Generator_UserTableName="FW_CL_Palmari" msprop:Generator_RowEvArgName="FW_CL_PalmariRowChangeEvent">
+        <xs:element name="FW_CL_Palmari" msprop:Generator_TableClassName="FW_CL_PalmariDataTable" msprop:Generator_TableVarName="tableFW_CL_Palmari" msprop:Generator_TablePropName="FW_CL_Palmari" msprop:Generator_RowDeletingName="FW_CL_PalmariRowDeleting" msprop:Generator_RowChangingName="FW_CL_PalmariRowChanging" msprop:Generator_RowEvHandlerName="FW_CL_PalmariRowChangeEventHandler" msprop:Generator_RowDeletedName="FW_CL_PalmariRowDeleted" msprop:Generator_UserTableName="FW_CL_Palmari" msprop:Generator_RowChangedName="FW_CL_PalmariRowChanged" msprop:Generator_RowEvArgName="FW_CL_PalmariRowChangeEvent" msprop:Generator_RowClassName="FW_CL_PalmariRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="FW_CL_P_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnFW_CL_P_ID" msprop:Generator_ColumnPropNameInRow="FW_CL_P_ID" msprop:Generator_ColumnPropNameInTable="FW_CL_P_IDColumn" msprop:Generator_UserColumnName="FW_CL_P_ID" type="xs:long" />
@@ -498,7 +508,7 @@ SELECT FW_CL_R_ID, FW_CL_R_SW_Code, FW_CL_R_SW_Versione, FW_CL_R_SW_Revisione, F
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="FW_CL_Ricevitori" msprop:Generator_TableClassName="FW_CL_RicevitoriDataTable" msprop:Generator_TableVarName="tableFW_CL_Ricevitori" msprop:Generator_TablePropName="FW_CL_Ricevitori" msprop:Generator_RowDeletingName="FW_CL_RicevitoriRowDeleting" msprop:Generator_RowChangingName="FW_CL_RicevitoriRowChanging" msprop:Generator_RowEvHandlerName="FW_CL_RicevitoriRowChangeEventHandler" msprop:Generator_RowDeletedName="FW_CL_RicevitoriRowDeleted" msprop:Generator_UserTableName="FW_CL_Ricevitori" msprop:Generator_RowChangedName="FW_CL_RicevitoriRowChanged" msprop:Generator_RowEvArgName="FW_CL_RicevitoriRowChangeEvent" msprop:Generator_RowClassName="FW_CL_RicevitoriRow">
+        <xs:element name="FW_CL_Ricevitori" msprop:Generator_TableClassName="FW_CL_RicevitoriDataTable" msprop:Generator_TableVarName="tableFW_CL_Ricevitori" msprop:Generator_RowChangedName="FW_CL_RicevitoriRowChanged" msprop:Generator_TablePropName="FW_CL_Ricevitori" msprop:Generator_RowDeletingName="FW_CL_RicevitoriRowDeleting" msprop:Generator_RowChangingName="FW_CL_RicevitoriRowChanging" msprop:Generator_RowEvHandlerName="FW_CL_RicevitoriRowChangeEventHandler" msprop:Generator_RowDeletedName="FW_CL_RicevitoriRowDeleted" msprop:Generator_RowClassName="FW_CL_RicevitoriRow" msprop:Generator_UserTableName="FW_CL_Ricevitori" msprop:Generator_RowEvArgName="FW_CL_RicevitoriRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="FW_CL_R_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnFW_CL_R_ID" msprop:Generator_ColumnPropNameInRow="FW_CL_R_ID" msprop:Generator_ColumnPropNameInTable="FW_CL_R_IDColumn" msprop:Generator_UserColumnName="FW_CL_R_ID" type="xs:long" />
