@@ -637,5 +637,19 @@ namespace SmartLineProduction
             if (!(bool)tog_Printers.EditValue) { Properties.Settings.Default.Settings_Brother_Default = tog_Printers.Properties.OffText; }
             Properties.Settings.Default.Save();
         }
+
+        private void fWPalmariClassicToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GVar.CloseSplash = false;
+            Splash SplashDB = new Splash();
+            SplashDB.Show();
+
+            UC_FW_P_Classic uC_FW_P_Classic = new UC_FW_P_Classic();
+            SplashDB.Close();
+            uC_FW_P_Classic.MdiParent = this;
+            uC_FW_P_Classic.Dock = DockStyle.Fill;
+            uC_FW_P_Classic.Show();
+
+        }
     }
 }

@@ -48,6 +48,9 @@
             this.verificaSensoriRFìdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestioneDelFirmwareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.classicLineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fWPalmariClassicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.fWRicevitoriClassicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.smartLineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fWPalmariToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.fWRicevitoriToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -102,7 +105,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.miniToolStrip = new System.Windows.Forms.MenuStrip();
             this.Brother_timer = new System.Windows.Forms.Timer(this.components);
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.layout_Menu.SuspendLayout();
             this.layout_orizz_menu.SuspendLayout();
             this.MainMenuStrip.SuspendLayout();
@@ -305,9 +307,31 @@
             // 
             // classicLineToolStripMenuItem
             // 
+            this.classicLineToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fWPalmariClassicToolStripMenuItem,
+            this.toolStripSeparator7,
+            this.fWRicevitoriClassicToolStripMenuItem});
             this.classicLineToolStripMenuItem.Name = "classicLineToolStripMenuItem";
             this.classicLineToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.classicLineToolStripMenuItem.Text = "- Classic Line -";
+            // 
+            // fWPalmariClassicToolStripMenuItem
+            // 
+            this.fWPalmariClassicToolStripMenuItem.Name = "fWPalmariClassicToolStripMenuItem";
+            this.fWPalmariClassicToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.fWPalmariClassicToolStripMenuItem.Text = "FW Palmari - Classic";
+            this.fWPalmariClassicToolStripMenuItem.Click += new System.EventHandler(this.fWPalmariClassicToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(187, 6);
+            // 
+            // fWRicevitoriClassicToolStripMenuItem
+            // 
+            this.fWRicevitoriClassicToolStripMenuItem.Name = "fWRicevitoriClassicToolStripMenuItem";
+            this.fWRicevitoriClassicToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.fWRicevitoriClassicToolStripMenuItem.Text = "FW Ricevitori - Classic";
             // 
             // smartLineToolStripMenuItem
             // 
@@ -560,7 +584,6 @@
             this.MainPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MainPanel.BackgroundImage")));
             this.MainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.layout_Menu.SetColumnSpan(this.MainPanel, 16);
-            this.MainPanel.Controls.Add(this.metroLabel4);
             this.MainPanel.Controls.Add(this.docker_printers);
             this.MainPanel.Controls.Add(this.lab_resources_path);
             this.MainPanel.Controls.Add(this.pictureBox1);
@@ -909,15 +932,6 @@
             this.Brother_timer.Interval = 1000;
             this.Brother_timer.Tick += new System.EventHandler(this.Brother_timer_Tick);
             // 
-            // metroLabel4
-            // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(137, 263);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(83, 19);
-            this.metroLabel4.TabIndex = 6;
-            this.metroLabel4.Text = "metroLabel4";
-            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1029,7 +1043,9 @@
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel lab_Brother_Default;
         private DevExpress.XtraEditors.ToggleSwitch tog_Printers;
-        private MetroFramework.Controls.MetroLabel metroLabel4;
+        private System.Windows.Forms.ToolStripMenuItem fWPalmariClassicToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStripMenuItem fWRicevitoriClassicToolStripMenuItem;
     }
 }
 

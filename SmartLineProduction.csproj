@@ -207,6 +207,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ds_ClassicDS.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ds_CL_Firmware.cs">
+      <DependentUpon>ds_CL_Firmware.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_CL_Firmware.Designer.cs">
+      <DependentUpon>ds_CL_Firmware.cs</DependentUpon>
+    </Compile>
     <Compile Include="ds_Eventi.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -349,6 +355,18 @@
     </Compile>
     <Compile Include="UC_ConfirmTAG.Designer.cs">
       <DependentUpon>UC_ConfirmTAG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_FW_P_Classic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_FW_P_Classic.designer.cs">
+      <DependentUpon>UC_FW_P_Classic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_FW_R_Classic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_FW_R_Classic.designer.cs">
+      <DependentUpon>UC_FW_R_Classic.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_ViewConfig.cs">
       <SubType>Form</SubType>
@@ -637,6 +655,12 @@
     <EmbeddedResource Include="UC_ConfirmTAG.resx">
       <DependentUpon>UC_ConfirmTAG.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_FW_P_Classic.resx">
+      <DependentUpon>UC_FW_P_Classic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_FW_R_Classic.resx">
+      <DependentUpon>UC_FW_R_Classic.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_ViewConfig.resx">
       <DependentUpon>UC_ViewConfig.cs</DependentUpon>
     </EmbeddedResource>
@@ -777,6 +801,10 @@
     <None Include="ds_ClassicDS.xss">
       <DependentUpon>ds_ClassicDS.xsd</DependentUpon>
     </None>
+    <None Include="ds_CL_Firmware.xsc">
+      <DependentUpon>ds_CL_Firmware.xsd</DependentUpon>
+    </None>
+    <None Include="ds_CL_Firmware.xsd" />
     <None Include="ds_Eventi.xsc">
       <DependentUpon>ds_Eventi.xsd</DependentUpon>
     </None>
