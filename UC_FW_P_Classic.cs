@@ -33,11 +33,13 @@ namespace SmartLineProduction
 
         private void AbilitaForm()
         {
-            SetFilter();
-            this.Firmware_BindingSource.Filter = filtroincorso;
+            gv_FW_P.RowTemplate.MinimumHeight = 30;
 
-            this.Firmware_BindingSource.Sort = "FW_CL_P_SW_Versione ASC";
-            this.Firmware_BindingSource.ResetBindings(false);
+            SetFilter();
+            this.CL_Palmari_BindingSource.Filter = filtroincorso;
+
+            this.CL_Palmari_BindingSource.Sort = "FW_CL_P_SW_Versione ASC";
+            this.CL_Palmari_BindingSource.ResetBindings(false);
             gv_FW_P.Refresh();
 
             if (displayform == "V")
@@ -109,9 +111,11 @@ namespace SmartLineProduction
 
             if (displayform == "INV")
             {
+                panel_intestazione.Enabled = true;
                 panel_dati.Enabled = true;
                 panel_revisioni.Enabled = true;
                 panel_funzionamento.Enabled = true;
+
                 tb_gv_Code.Enabled = false;
 
                 tb_gv_Code.Text = "";
@@ -151,11 +155,11 @@ namespace SmartLineProduction
 
         private void menu_sw_annulla_Click(object sender, EventArgs e)
         {
-            Firmware_BindingSource.SuspendBinding();
-            Firmware_TableAdapter.Fill(this.ds_CL_Firmware.FW_CL_Palmari);
-            Firmware_BindingSource.ResumeBinding();
+            CL_Palmari_BindingSource.SuspendBinding();
+            this.CL_Palmari_TableAdapter.Fill(this.ds_CL_Firmware.FW_CL_Palmari);
+            CL_Palmari_BindingSource.ResumeBinding();
 
-            Firmware_BindingSource.MoveFirst();
+            CL_Palmari_BindingSource.MoveFirst();
 
             displayform = "V";
             DB2Riga();
@@ -169,11 +173,11 @@ namespace SmartLineProduction
         {
             Riga2DB();
 
-            Firmware_BindingSource.SuspendBinding();
-            Firmware_TableAdapter.Fill(this.ds_CL_Firmware.FW_CL_Palmari);
-            Firmware_BindingSource.ResumeBinding();
+            CL_Palmari_BindingSource.SuspendBinding();
+            this.CL_Palmari_TableAdapter.Fill(this.ds_CL_Firmware.FW_CL_Palmari);
+            CL_Palmari_BindingSource.ResumeBinding();
 
-            Firmware_BindingSource.MoveFirst();
+            CL_Palmari_BindingSource.MoveFirst();
 
             displayform = "V";
             DB2Riga();
@@ -218,14 +222,14 @@ namespace SmartLineProduction
             newrow["FW_CL_P_NumRicevitori"] = tB_NRicevCom.Text;
 
             ds_CL_Firmware.FW_CL_Palmari.Rows.Add(newrow);
-            Firmware_TableAdapter.Update(newrow);
+            CL_Palmari_TableAdapter.Update(newrow);
         }
 
         private void DB2Riga()
         {
-            if (Firmware_BindingSource.Current != null)
+            if (CL_Palmari_BindingSource.Current != null)
             {
-                DataRowView myRow = (DataRowView)Firmware_BindingSource.Current;
+                DataRowView myRow = (DataRowView)CL_Palmari_BindingSource.Current;
 
                 tb_gv_Code.Text = myRow["FW_CL_P_SW_Code"].ToString();
                 tb_gv_Versione.Text = myRow["FW_CL_P_SW_Versione"].ToString();
@@ -240,7 +244,7 @@ namespace SmartLineProduction
 
                 //Locate Famiglia Bindingsource
                 int fam_id = (int)myRow["FW_CL_P_TipoDev"];
-                int foundIndex = fWCLFamiglieBindingSource.Find("FW_CL_Fam_ID", fam_id);
+                int foundIndex = CL_Famiglie_BindingSource.Find("FW_CL_Fam_ID", fam_id);
                 cb_Famiglia.SelectedIndex = foundIndex;
                 cb_Famiglia.Refresh();
 
@@ -296,10 +300,10 @@ namespace SmartLineProduction
         private void SetView()
         {
             SetFilter();
-            Firmware_BindingSource.Filter = filtroincorso;
+            CL_Palmari_BindingSource.Filter = filtroincorso;
 
-            Firmware_BindingSource.MoveFirst();
-            if (Firmware_BindingSource.Current != null)
+            CL_Palmari_BindingSource.MoveFirst();
+            if (CL_Palmari_BindingSource.Current != null)
             {
                 DB2Riga();
             }
@@ -330,14 +334,13 @@ namespace SmartLineProduction
 
         private void UC_FW_P_Classic_Load(object sender, EventArgs e)
         {
-            // TODO: questa riga di codice carica i dati nella tabella 'ds_CL_Firmware.FW_CL_Palmari'. È possibile spostarla o rimuoverla se necessario.
-            this.Firmware_TableAdapter.Fill(this.ds_CL_Firmware.FW_CL_Palmari);
             // TODO: questa riga di codice carica i dati nella tabella 'ds_CL_Firmware.FW_CL_Ricevitori'. È possibile spostarla o rimuoverla se necessario.
-            this.fW_CL_RicevitoriTableAdapter.Fill(this.ds_CL_Firmware.FW_CL_Ricevitori);
-            // TODO: questa riga di codice carica i dati nella tabella 'ds_CL_Firmware.FW_CL_Palmari'. È possibile spostarla o rimuoverla se necessario.
-            this.Firmware_TableAdapter.Fill(this.ds_CL_Firmware.FW_CL_Palmari);
+            this.CL_Ricevitori_TableAdapter.Fill(this.ds_CL_Firmware.FW_CL_Ricevitori);
             // TODO: questa riga di codice carica i dati nella tabella 'ds_CL_Firmware.FW_CL_Famiglie'. È possibile spostarla o rimuoverla se necessario.
-            this.fW_CL_FamiglieTableAdapter.Fill(this.ds_CL_Firmware.FW_CL_Famiglie);
+            this.CL_Famiglie_TableAdapter.Fill(this.ds_CL_Firmware.FW_CL_Famiglie);
+            // TODO: questa riga di codice carica i dati nella tabella 'ds_CL_Firmware.FW_CL_Palmari'. È possibile spostarla o rimuoverla se necessario.
+            this.CL_Palmari_TableAdapter.Fill(this.ds_CL_Firmware.FW_CL_Palmari);
+
 
             GVar.formclosing = false;
 
@@ -347,8 +350,8 @@ namespace SmartLineProduction
             radio_FW_active.Checked = true;
             radio_FW_obsoleti.Checked = false;
 
-            Firmware_BindingSource.MoveFirst();
-            if (Firmware_BindingSource.Current != null)
+            CL_Palmari_BindingSource.MoveFirst();
+            if (CL_Palmari_BindingSource.Current != null)
             {
                 DB2Riga();
             }
@@ -358,16 +361,6 @@ namespace SmartLineProduction
         private void menu_sw_exit_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void gv_FW_P_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
-        {
-            if (GVar.formclosing) { return; }
-
-            foreach (DataGridViewRow x in gv_FW_P.Rows)
-            {
-                x.MinimumHeight = 30;
-            }
         }
 
         private void UC_FW_P_Classic_FormClosing(object sender, FormClosingEventArgs e)
@@ -381,7 +374,7 @@ namespace SmartLineProduction
             AbilitaForm();
 
             //Modifico valori iniziali
-            var sourceRow = ((DataRowView)Firmware_BindingSource.Current).Row;
+            var sourceRow = ((DataRowView)CL_Palmari_BindingSource.Current).Row;
             int rev = Convert.ToInt32(sourceRow["FW_CL_P_SW_Revisione"].ToString());
             rev++;
             tb_gv_Revisione.Text = rev.ToString();
@@ -397,17 +390,12 @@ namespace SmartLineProduction
             rtb_Revisioni.Refresh();
         }
 
-        private void Firmware_BindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-            DB2Riga();
-        }
-
         private void menu_sw_clona_Click(object sender, EventArgs e)
         {
             displayform = "CLO";
 
             //Modifico valori iniziali
-            var sourceRow = ((DataRowView)Firmware_BindingSource.Current).Row;
+            var sourceRow = ((DataRowView)CL_Palmari_BindingSource.Current).Row;
             AbilitaForm();
             tb_gv_Versione.Focus();
         }
@@ -513,6 +501,11 @@ namespace SmartLineProduction
         private void radio_FW_Obsoleti_Click(object sender, EventArgs e)
         {
             SetView();
+        }
+
+        private void CL_Palmari_BindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+            DB2Riga();
         }
     }
 }
