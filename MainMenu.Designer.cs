@@ -105,6 +105,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.miniToolStrip = new System.Windows.Forms.MenuStrip();
             this.Brother_timer = new System.Windows.Forms.Timer(this.components);
+            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.layout_Menu.SuspendLayout();
             this.layout_orizz_menu.SuspendLayout();
             this.MainMenuStrip.SuspendLayout();
@@ -300,6 +301,7 @@
             // 
             this.gestioneDelFirmwareToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.classicLineToolStripMenuItem,
+            this.toolStripSeparator9,
             this.smartLineToolStripMenuItem});
             this.gestioneDelFirmwareToolStripMenuItem.Name = "gestioneDelFirmwareToolStripMenuItem";
             this.gestioneDelFirmwareToolStripMenuItem.Size = new System.Drawing.Size(136, 21);
@@ -312,7 +314,7 @@
             this.toolStripSeparator7,
             this.fWRicevitoriClassicToolStripMenuItem});
             this.classicLineToolStripMenuItem.Name = "classicLineToolStripMenuItem";
-            this.classicLineToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.classicLineToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.classicLineToolStripMenuItem.Text = "- Classic Line -";
             // 
             // fWPalmariClassicToolStripMenuItem
@@ -332,6 +334,7 @@
             this.fWRicevitoriClassicToolStripMenuItem.Name = "fWRicevitoriClassicToolStripMenuItem";
             this.fWRicevitoriClassicToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.fWRicevitoriClassicToolStripMenuItem.Text = "FW Ricevitori - Classic";
+            this.fWRicevitoriClassicToolStripMenuItem.Click += new System.EventHandler(this.fWRicevitoriClassicToolStripMenuItem_Click);
             // 
             // smartLineToolStripMenuItem
             // 
@@ -343,7 +346,7 @@
             this.toolStripSeparator8,
             this.messaggiRealTimeAppToolStripMenuItem});
             this.smartLineToolStripMenuItem.Name = "smartLineToolStripMenuItem";
-            this.smartLineToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.smartLineToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.smartLineToolStripMenuItem.Text = "- Smart Line -";
             // 
             // fWPalmariToolStripMenuItem1
@@ -932,6 +935,11 @@
             this.Brother_timer.Interval = 1000;
             this.Brother_timer.Tick += new System.EventHandler(this.Brother_timer_Tick);
             // 
+            // toolStripSeparator9
+            // 
+            this.toolStripSeparator9.Name = "toolStripSeparator9";
+            this.toolStripSeparator9.Size = new System.Drawing.Size(177, 6);
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1046,6 +1054,7 @@
         private System.Windows.Forms.ToolStripMenuItem fWPalmariClassicToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripMenuItem fWRicevitoriClassicToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
     }
 }
 

@@ -48,6 +48,7 @@ namespace SmartLineProduction
 
             if (displayform == "V")
             {
+                panel_intestazione.Enabled = false;
                 panel_dati.Enabled = false;
                 panel_revisioni.Enabled = false;
                 panel_funzionamento.Enabled = false;
@@ -61,6 +62,7 @@ namespace SmartLineProduction
 
             if (displayform == "INV")
             {
+                panel_intestazione.Enabled = true;
                 panel_dati.Enabled = true;
                 panel_revisioni.Enabled = true;
                 panel_funzionamento.Enabled = true;
@@ -94,7 +96,7 @@ namespace SmartLineProduction
                 tog_EmergencyOutput.Checked = false;
                 tb_IdentifRic.Text = "";
                 cb_FwAbbinato.Text = "";
-                cb_TipoDev.Text = "";
+                cb_Famiglia.Text = "";
                 
 
                 rtb_Revisioni.Text = "";
@@ -113,8 +115,9 @@ namespace SmartLineProduction
             }
 
             if (displayform == "INR")
-            {   
+            {
                 //heading
+                panel_intestazione.Enabled = true;
                 panel_dati.Enabled = true;
                 panel_revisioni.Enabled = true;
                 panel_funzionamento.Enabled = true;
@@ -165,6 +168,7 @@ namespace SmartLineProduction
 
             if (displayform == "CLO")
             {
+                panel_intestazione.Enabled = true;   
                 panel_dati.Enabled = true;
                 panel_revisioni.Enabled = true;
                 panel_funzionamento.Enabled = true;
@@ -176,7 +180,6 @@ namespace SmartLineProduction
                 tb_gv_Versione.Enabled = true;
                 tb_gv_Revisione.Text = "";
                 tb_gv_Revisione.Enabled = true;
-
 
                 rtb_Revisioni.Text = "";
                 rtb_Funzionamento.Text = "";
@@ -203,7 +206,7 @@ namespace SmartLineProduction
             newrow["FW_CL_R_SW_Code"] = tb_gv_Code.Text;
             newrow["FW_CL_R_SW_Versione"] = tb_gv_Versione.Text;
             newrow["FW_CL_R_SW_Revisione"] = tb_gv_Revisione.Text;
-            newrow["FW_CL_R_TipoDev"] = cb_TipoDev.SelectedValue;
+            newrow["FW_CL_R_TipoDev"] = cb_Famiglia.SelectedValue;
 
             if (cb_868.Checked) { newrow["FW_CL_R_Freq"] = "X"; }
             if (cb_433.Checked) { newrow["FW_CL_R_Freq"] = "A"; }
@@ -270,7 +273,7 @@ namespace SmartLineProduction
             tb_gv_Code.Text = myRow["FW_CL_R_SW_Code"].ToString();
             tb_gv_Versione.Text = myRow["FW_CL_R_SW_Versione"].ToString();
             tb_gv_Revisione.Text = myRow["FW_CL_R_SW_Revisione"].ToString();
-            cb_TipoDev.Text = myRow["FW_CL_R_TipoDev"].ToString();
+            cb_Famiglia.Text = myRow["FW_CL_R_TipoDev"].ToString();
 
           
             cb_868.Checked = false;
@@ -278,6 +281,16 @@ namespace SmartLineProduction
             cb_915.Checked = false;
             cb_filo.Checked = false;
             cb_can.Checked = false;
+
+            ////Locate Famiglia Bindingsource
+            int fam_id = (int)myRow["FW_CL_R_TipoDev"];
+            int foundIndex = fWCLFamiglieBindingSource.Find("FW_CL_Fam_ID", fam_id);
+            //string filtro = "FW_CL_Fam_ID = " + fam_id.ToString();
+            //fWCLFamiglieBindingSource.Filter = filtro;
+            //fWCLFamiglieBindingSource.MoveFirst();
+            cb_Famiglia.SelectedIndex = foundIndex;
+            //cb_Famiglia.SelectedItem
+            cb_Famiglia.Refresh();
 
             switch (myRow["FW_CL_R_Freq"].ToString())
             {
@@ -379,8 +392,6 @@ namespace SmartLineProduction
 
         }
 
-      
-
         ////////////////////////////////////////////////////////////////////////////////
         /// Generated functions
         ////////////////////////////////////////////////////////////////////////////////
@@ -392,16 +403,13 @@ namespace SmartLineProduction
 
         private void UC_FW_R_Classic_Load(object sender, EventArgs e)
         {
+            // TODO: questa riga di codice carica i dati nella tabella 'ds_CL_Firmware.FW_CL_Famiglie'. È possibile spostarla o rimuoverla se necessario.
+            this.fW_CL_FamiglieTableAdapter.Fill(this.ds_CL_Firmware.FW_CL_Famiglie);
             // TODO: questa riga di codice carica i dati nella tabella 'ds_CL_Firmware.FW_CL_Palmari'. È possibile spostarla o rimuoverla se necessario.
             this.fW_CL_PalmariTableAdapter.Fill(this.ds_CL_Firmware.FW_CL_Palmari);
             //// TODO: questa riga di codice carica i dati nella tabella 'ds_CL_Firmware.FW_CL_Ricevitori'. È possibile spostarla o rimuoverla se necessario.
             this.fW_CL_RicevitoriTableAdapter.Fill(this.ds_CL_Firmware.FW_CL_Ricevitori);
-            //// TODO: questa riga di codice carica i dati nella tabella 'ds_SL.Fam_Prod'. È possibile spostarla o rimuoverla se necessario.
-            
-            this.fW_CL_FamiglieTableAdapter.Fill(this.ds_CL_Firmware.FW_CL_Famiglie);
 
-            //// TODO: questa riga di codice carica i dati nella tabella 'ds_SL.Firmware'. È possibile spostarla o rimuoverla se necessario.
-            //this.firmwareTableAdapter.Fill(this.ds_Programmazione.Firmware);
 
             GVar.formclosing = false;
 
@@ -432,7 +440,6 @@ namespace SmartLineProduction
         {
             GVar.formclosing = true;
         }
-
 
         private void menu_sw_exit_Click(object sender, EventArgs e)
         {
@@ -553,11 +560,6 @@ namespace SmartLineProduction
             AbilitaForm();
         }
 
-        private void fWCLRicevitoriBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-            DB2Riga();
-        }
-
         private void menu_sw_clona_Click(object sender, EventArgs e)
         {
             displayform = "CLO";
@@ -651,7 +653,6 @@ namespace SmartLineProduction
             CreaCodice();
         }
         
-
         private void menu_sw_new_Click(object sender, EventArgs e)
         {
 
@@ -674,8 +675,6 @@ namespace SmartLineProduction
 
         }
 
-        
-
         private void tb_IdentifRic_MouseHover(object sender, EventArgs e)
         {
             toolTip1.SetToolTip(tb_IdentifRic, "Opzioni: 0-Input, 1-DipSwitch, 2-FW Specifico, 3-Attivo");
@@ -691,5 +690,9 @@ namespace SmartLineProduction
             toolTip1.SetToolTip(tb_ContTasti, "Opzioni: 0-Nessuna, 1-Non in riga, 2-Altro");
         }
 
+        private void fWCLRicevitoriBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+                DB2Riga();
+        }
     }
 }

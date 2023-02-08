@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_FW_R_Classic));
             this.panel_FW_R = new MetroFramework.Controls.MetroPanel();
             this.gv_FW_R = new MetroFramework.Controls.MetroGrid();
@@ -50,6 +50,8 @@
             this.tb_gv_Code = new MetroFramework.Controls.MetroTextBox();
             this.panel_dati = new MetroFramework.Controls.MetroPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.box_Separatore_01 = new MetroFramework.Controls.MetroPanel();
             this.tb_NumInpAn = new System.Windows.Forms.TextBox();
             this.tb_NumOutput = new System.Windows.Forms.TextBox();
             this.tog_ProportionalOutput = new MetroFramework.Controls.MetroToggle();
@@ -89,9 +91,8 @@
             this.metroLabel25 = new MetroFramework.Controls.MetroLabel();
             this.cb_FwAbbinato = new System.Windows.Forms.ComboBox();
             this.fWCLPalmariBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.cb_TipoDev = new System.Windows.Forms.ComboBox();
-            this.fWCLFamiglieBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tb_gv_Versione = new MetroFramework.Controls.MetroTextBox();
             this.tb_gv_Revisione = new MetroFramework.Controls.MetroTextBox();
             this.panel_freq = new MetroFramework.Controls.MetroPanel();
@@ -100,15 +101,18 @@
             this.cb_433 = new MetroFramework.Controls.MetroCheckBox();
             this.cb_915 = new MetroFramework.Controls.MetroCheckBox();
             this.cb_868 = new MetroFramework.Controls.MetroCheckBox();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.layout_dati = new System.Windows.Forms.TableLayoutPanel();
-            this.panel_funzionamento = new MetroFramework.Controls.MetroPanel();
-            this.rtb_Funzionamento = new System.Windows.Forms.RichTextBox();
-            this.metroLabel20 = new MetroFramework.Controls.MetroLabel();
+            this.panel_intestazione = new MetroFramework.Controls.MetroPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.cb_Famiglia = new System.Windows.Forms.ComboBox();
+            this.fWCLFamiglieBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel_revisioni = new MetroFramework.Controls.MetroPanel();
             this.rtb_Revisioni = new System.Windows.Forms.RichTextBox();
             this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
+            this.panel_funzionamento = new MetroFramework.Controls.MetroPanel();
+            this.rtb_Funzionamento = new System.Windows.Forms.RichTextBox();
+            this.metroLabel20 = new MetroFramework.Controls.MetroLabel();
             this.pan_Menu_comandi = new System.Windows.Forms.MenuStrip();
             this.menu_sw_new = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_sw_div01 = new System.Windows.Forms.ToolStripMenuItem();
@@ -124,8 +128,8 @@
             this.layout_menu = new System.Windows.Forms.TableLayoutPanel();
             this.fW_CL_RicevitoriTableAdapter = new SmartLineProduction.ds_CL_FirmwareTableAdapters.FW_CL_RicevitoriTableAdapter();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.fW_CL_FamiglieTableAdapter = new SmartLineProduction.ds_CL_FirmwareTableAdapters.FW_CL_FamiglieTableAdapter();
             this.fW_CL_PalmariTableAdapter = new SmartLineProduction.ds_CL_FirmwareTableAdapters.FW_CL_PalmariTableAdapter();
+            this.fW_CL_FamiglieTableAdapter = new SmartLineProduction.ds_CL_FirmwareTableAdapters.FW_CL_FamiglieTableAdapter();
             this.panel_FW_R.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv_FW_R)).BeginInit();
             this.gv_FW_R_MenuStrip.SuspendLayout();
@@ -135,11 +139,13 @@
             this.panel_dati.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fWCLPalmariBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fWCLFamiglieBindingSource)).BeginInit();
             this.panel_freq.SuspendLayout();
             this.layout_dati.SuspendLayout();
-            this.panel_funzionamento.SuspendLayout();
+            this.panel_intestazione.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fWCLFamiglieBindingSource)).BeginInit();
             this.panel_revisioni.SuspendLayout();
+            this.panel_funzionamento.SuspendLayout();
             this.pan_Menu_comandi.SuspendLayout();
             this.pan_Menu_salva.SuspendLayout();
             this.pan_Menu_exit.SuspendLayout();
@@ -157,7 +163,7 @@
             this.panel_FW_R.HorizontalScrollbarSize = 10;
             this.panel_FW_R.Location = new System.Drawing.Point(20, 55);
             this.panel_FW_R.Name = "panel_FW_R";
-            this.panel_FW_R.Size = new System.Drawing.Size(150, 817);
+            this.panel_FW_R.Size = new System.Drawing.Size(150, 1027);
             this.panel_FW_R.TabIndex = 72;
             this.panel_FW_R.VerticalScrollbarBarColor = true;
             this.panel_FW_R.VerticalScrollbarHighlightOnWheel = false;
@@ -169,36 +175,36 @@
             this.gv_FW_R.AllowUserToDeleteRows = false;
             this.gv_FW_R.AllowUserToOrderColumns = true;
             this.gv_FW_R.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.gv_FW_R.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.gv_FW_R.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.gv_FW_R.AutoGenerateColumns = false;
             this.gv_FW_R.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.gv_FW_R.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.gv_FW_R.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gv_FW_R.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.gv_FW_R.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gv_FW_R.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gv_FW_R.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.gv_FW_R.ColumnHeadersHeight = 40;
             this.gv_FW_R.ColumnHeadersVisible = false;
             this.gv_FW_R.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.fWCLRSWCodeDataGridViewTextBoxColumn});
             this.gv_FW_R.ContextMenuStrip = this.gv_FW_R_MenuStrip;
             this.gv_FW_R.DataSource = this.fWCLRicevitoriBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gv_FW_R.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gv_FW_R.DefaultCellStyle = dataGridViewCellStyle7;
             this.gv_FW_R.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gv_FW_R.EnableHeadersVisualStyles = false;
             this.gv_FW_R.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -208,21 +214,21 @@
             this.gv_FW_R.Name = "gv_FW_R";
             this.gv_FW_R.ReadOnly = true;
             this.gv_FW_R.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gv_FW_R.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gv_FW_R.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.gv_FW_R.RowHeadersVisible = false;
             this.gv_FW_R.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.gv_FW_R.RowTemplate.DividerHeight = 1;
             this.gv_FW_R.RowTemplate.Height = 30;
             this.gv_FW_R.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.gv_FW_R.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gv_FW_R.Size = new System.Drawing.Size(148, 767);
+            this.gv_FW_R.Size = new System.Drawing.Size(148, 977);
             this.gv_FW_R.Style = MetroFramework.MetroColorStyle.Red;
             this.gv_FW_R.TabIndex = 2;
             this.gv_FW_R.UseCustomBackColor = true;
@@ -271,6 +277,7 @@
             // 
             this.fWCLRicevitoriBindingSource.DataMember = "FW_CL_Ricevitori";
             this.fWCLRicevitoriBindingSource.DataSource = this.ds_CL_Firmware;
+            this.fWCLRicevitoriBindingSource.CurrentChanged += new System.EventHandler(this.fWCLRicevitoriBindingSource_CurrentChanged);
             // 
             // ds_CL_Firmware
             // 
@@ -328,8 +335,9 @@
             // 
             // metroLabel1
             // 
+            this.metroLabel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(27, 9);
+            this.metroLabel1.Location = new System.Drawing.Point(3, 9);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(109, 19);
             this.metroLabel1.TabIndex = 73;
@@ -337,11 +345,12 @@
             // 
             // tb_gv_Code
             // 
+            this.tb_gv_Code.Anchor = System.Windows.Forms.AnchorStyles.Left;
             // 
             // 
             // 
             this.tb_gv_Code.CustomButton.Image = null;
-            this.tb_gv_Code.CustomButton.Location = new System.Drawing.Point(116, 1);
+            this.tb_gv_Code.CustomButton.Location = new System.Drawing.Point(151, 1);
             this.tb_gv_Code.CustomButton.Name = "";
             this.tb_gv_Code.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.tb_gv_Code.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -351,7 +360,7 @@
             this.tb_gv_Code.CustomButton.Visible = false;
             this.tb_gv_Code.Lines = new string[] {
         " "};
-            this.tb_gv_Code.Location = new System.Drawing.Point(167, 9);
+            this.tb_gv_Code.Location = new System.Drawing.Point(118, 7);
             this.tb_gv_Code.MaxLength = 32767;
             this.tb_gv_Code.Name = "tb_gv_Code";
             this.tb_gv_Code.PasswordChar = '\0';
@@ -360,7 +369,7 @@
             this.tb_gv_Code.SelectionLength = 0;
             this.tb_gv_Code.SelectionStart = 0;
             this.tb_gv_Code.ShortcutsEnabled = true;
-            this.tb_gv_Code.Size = new System.Drawing.Size(138, 23);
+            this.tb_gv_Code.Size = new System.Drawing.Size(173, 23);
             this.tb_gv_Code.Style = MetroFramework.MetroColorStyle.Red;
             this.tb_gv_Code.TabIndex = 1;
             this.tb_gv_Code.Text = " ";
@@ -374,22 +383,14 @@
             this.panel_dati.AutoSize = true;
             this.layout_dati.SetColumnSpan(this.panel_dati, 2);
             this.panel_dati.Controls.Add(this.tableLayoutPanel1);
-            this.panel_dati.Controls.Add(this.metroLabel3);
-            this.panel_dati.Controls.Add(this.cb_TipoDev);
-            this.panel_dati.Controls.Add(this.tb_gv_Code);
-            this.panel_dati.Controls.Add(this.tb_gv_Versione);
-            this.panel_dati.Controls.Add(this.tb_gv_Revisione);
-            this.panel_dati.Controls.Add(this.panel_freq);
             this.panel_dati.Controls.Add(this.metroLabel4);
-            this.panel_dati.Controls.Add(this.metroLabel2);
-            this.panel_dati.Controls.Add(this.metroLabel1);
             this.panel_dati.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_dati.HorizontalScrollbarBarColor = true;
             this.panel_dati.HorizontalScrollbarHighlightOnWheel = false;
             this.panel_dati.HorizontalScrollbarSize = 10;
-            this.panel_dati.Location = new System.Drawing.Point(3, 3);
+            this.panel_dati.Location = new System.Drawing.Point(3, 86);
             this.panel_dati.Name = "panel_dati";
-            this.panel_dati.Size = new System.Drawing.Size(1095, 489);
+            this.panel_dati.Size = new System.Drawing.Size(1146, 630);
             this.panel_dati.TabIndex = 77;
             this.panel_dati.VerticalScrollbar = true;
             this.panel_dati.VerticalScrollbarBarColor = true;
@@ -398,70 +399,110 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 6;
+            this.tableLayoutPanel1.ColumnCount = 8;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.Controls.Add(this.tb_NumInpAn, 5, 4);
-            this.tableLayoutPanel1.Controls.Add(this.tb_NumOutput, 5, 3);
-            this.tableLayoutPanel1.Controls.Add(this.tog_ProportionalOutput, 5, 2);
-            this.tableLayoutPanel1.Controls.Add(this.tog_EmergencyOutput, 5, 1);
-            this.tableLayoutPanel1.Controls.Add(this.tog_MasterOutput, 5, 0);
-            this.tableLayoutPanel1.Controls.Add(this.tog_Pair, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.tog_Golden, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.tog_SPAttivo, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.tog_SPPassivo, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.tog_PlugConfig, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel5, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel6, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel7, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel8, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel9, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel10, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.tog_CambioRicevitore, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.tog_MotRim, 3, 2);
-            this.tableLayoutPanel1.Controls.Add(this.tog_CambioPagina, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel11, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel18, 4, 3);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel12, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel17, 4, 2);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel13, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel16, 4, 1);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel14, 2, 4);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel15, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel21, 4, 4);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel22, 4, 5);
-            this.tableLayoutPanel1.Controls.Add(this.tb_NumPalmari, 3, 4);
-            this.tableLayoutPanel1.Controls.Add(this.tb_NumInpDig, 5, 5);
-            this.tableLayoutPanel1.Controls.Add(this.tb_IdentifRic, 3, 3);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel23, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.tb_ContTasti, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel24, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.tb_TimeOut, 1, 7);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel25, 2, 6);
-            this.tableLayoutPanel1.Controls.Add(this.cb_FwAbbinato, 3, 6);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 87);
+            this.tableLayoutPanel1.Controls.Add(this.metroPanel1, 5, 1);
+            this.tableLayoutPanel1.Controls.Add(this.box_Separatore_01, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tb_NumInpAn, 7, 5);
+            this.tableLayoutPanel1.Controls.Add(this.tb_NumOutput, 7, 4);
+            this.tableLayoutPanel1.Controls.Add(this.tog_ProportionalOutput, 7, 3);
+            this.tableLayoutPanel1.Controls.Add(this.tog_EmergencyOutput, 7, 2);
+            this.tableLayoutPanel1.Controls.Add(this.tog_MasterOutput, 7, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tog_Pair, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tog_Golden, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.tog_SPAttivo, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.tog_SPPassivo, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.tog_PlugConfig, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel5, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel6, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel7, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel8, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel9, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel10, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tog_CambioRicevitore, 4, 2);
+            this.tableLayoutPanel1.Controls.Add(this.tog_MotRim, 4, 3);
+            this.tableLayoutPanel1.Controls.Add(this.tog_CambioPagina, 4, 1);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel11, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel18, 6, 4);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel12, 3, 3);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel17, 6, 3);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel13, 3, 4);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel16, 6, 2);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel14, 3, 5);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel15, 6, 1);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel21, 6, 5);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel22, 6, 6);
+            this.tableLayoutPanel1.Controls.Add(this.tb_NumPalmari, 4, 5);
+            this.tableLayoutPanel1.Controls.Add(this.tb_NumInpDig, 7, 6);
+            this.tableLayoutPanel1.Controls.Add(this.tb_IdentifRic, 4, 4);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel23, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.tb_ContTasti, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel24, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.tb_TimeOut, 1, 8);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel25, 3, 7);
+            this.tableLayoutPanel1.Controls.Add(this.cb_FwAbbinato, 4, 7);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 8;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowCount = 10;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1029, 399);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1146, 630);
             this.tableLayoutPanel1.TabIndex = 119;
+            // 
+            // metroPanel1
+            // 
+            this.metroPanel1.BackColor = System.Drawing.Color.Red;
+            this.metroPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroPanel1.HorizontalScrollbarBarColor = true;
+            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.HorizontalScrollbarSize = 10;
+            this.metroPanel1.Location = new System.Drawing.Point(764, 13);
+            this.metroPanel1.Name = "metroPanel1";
+            this.tableLayoutPanel1.SetRowSpan(this.metroPanel1, 8);
+            this.metroPanel1.Size = new System.Drawing.Size(1, 194);
+            this.metroPanel1.TabIndex = 143;
+            this.metroPanel1.UseCustomBackColor = true;
+            this.metroPanel1.VerticalScrollbarBarColor = true;
+            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // box_Separatore_01
+            // 
+            this.box_Separatore_01.BackColor = System.Drawing.Color.Red;
+            this.box_Separatore_01.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.box_Separatore_01.HorizontalScrollbarBarColor = true;
+            this.box_Separatore_01.HorizontalScrollbarHighlightOnWheel = false;
+            this.box_Separatore_01.HorizontalScrollbarSize = 10;
+            this.box_Separatore_01.Location = new System.Drawing.Point(381, 13);
+            this.box_Separatore_01.Name = "box_Separatore_01";
+            this.tableLayoutPanel1.SetRowSpan(this.box_Separatore_01, 8);
+            this.box_Separatore_01.Size = new System.Drawing.Size(1, 194);
+            this.box_Separatore_01.TabIndex = 142;
+            this.box_Separatore_01.UseCustomBackColor = true;
+            this.box_Separatore_01.VerticalScrollbarBarColor = true;
+            this.box_Separatore_01.VerticalScrollbarHighlightOnWheel = false;
+            this.box_Separatore_01.VerticalScrollbarSize = 10;
             // 
             // tb_NumInpAn
             // 
             this.tb_NumInpAn.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tb_NumInpAn.Location = new System.Drawing.Point(858, 210);
+            this.tb_NumInpAn.Location = new System.Drawing.Point(958, 108);
             this.tb_NumInpAn.Name = "tb_NumInpAn";
             this.tb_NumInpAn.Size = new System.Drawing.Size(112, 20);
             this.tb_NumInpAn.TabIndex = 131;
@@ -469,7 +510,7 @@
             // tb_NumOutput
             // 
             this.tb_NumOutput.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tb_NumOutput.Location = new System.Drawing.Point(858, 161);
+            this.tb_NumOutput.Location = new System.Drawing.Point(958, 82);
             this.tb_NumOutput.Name = "tb_NumOutput";
             this.tb_NumOutput.Size = new System.Drawing.Size(112, 20);
             this.tb_NumOutput.TabIndex = 130;
@@ -478,7 +519,7 @@
             // 
             this.tog_ProportionalOutput.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tog_ProportionalOutput.AutoSize = true;
-            this.tog_ProportionalOutput.Location = new System.Drawing.Point(858, 114);
+            this.tog_ProportionalOutput.Location = new System.Drawing.Point(958, 59);
             this.tog_ProportionalOutput.Name = "tog_ProportionalOutput";
             this.tog_ProportionalOutput.Size = new System.Drawing.Size(80, 17);
             this.tog_ProportionalOutput.Style = MetroFramework.MetroColorStyle.Red;
@@ -490,7 +531,7 @@
             // 
             this.tog_EmergencyOutput.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tog_EmergencyOutput.AutoSize = true;
-            this.tog_EmergencyOutput.Location = new System.Drawing.Point(858, 65);
+            this.tog_EmergencyOutput.Location = new System.Drawing.Point(958, 36);
             this.tog_EmergencyOutput.Name = "tog_EmergencyOutput";
             this.tog_EmergencyOutput.Size = new System.Drawing.Size(80, 17);
             this.tog_EmergencyOutput.Style = MetroFramework.MetroColorStyle.Red;
@@ -502,7 +543,7 @@
             // 
             this.tog_MasterOutput.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tog_MasterOutput.AutoSize = true;
-            this.tog_MasterOutput.Location = new System.Drawing.Point(858, 16);
+            this.tog_MasterOutput.Location = new System.Drawing.Point(958, 13);
             this.tog_MasterOutput.Name = "tog_MasterOutput";
             this.tog_MasterOutput.Size = new System.Drawing.Size(80, 17);
             this.tog_MasterOutput.Style = MetroFramework.MetroColorStyle.Red;
@@ -514,7 +555,7 @@
             // 
             this.tog_Pair.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tog_Pair.AutoSize = true;
-            this.tog_Pair.Location = new System.Drawing.Point(174, 16);
+            this.tog_Pair.Location = new System.Drawing.Point(192, 13);
             this.tog_Pair.Name = "tog_Pair";
             this.tog_Pair.Size = new System.Drawing.Size(80, 17);
             this.tog_Pair.Style = MetroFramework.MetroColorStyle.Red;
@@ -526,7 +567,7 @@
             // 
             this.tog_Golden.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tog_Golden.AutoSize = true;
-            this.tog_Golden.Location = new System.Drawing.Point(174, 65);
+            this.tog_Golden.Location = new System.Drawing.Point(192, 36);
             this.tog_Golden.Name = "tog_Golden";
             this.tog_Golden.Size = new System.Drawing.Size(80, 17);
             this.tog_Golden.Style = MetroFramework.MetroColorStyle.Red;
@@ -538,7 +579,7 @@
             // 
             this.tog_SPAttivo.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tog_SPAttivo.AutoSize = true;
-            this.tog_SPAttivo.Location = new System.Drawing.Point(174, 114);
+            this.tog_SPAttivo.Location = new System.Drawing.Point(192, 59);
             this.tog_SPAttivo.Name = "tog_SPAttivo";
             this.tog_SPAttivo.Size = new System.Drawing.Size(80, 17);
             this.tog_SPAttivo.Style = MetroFramework.MetroColorStyle.Red;
@@ -550,7 +591,7 @@
             // 
             this.tog_SPPassivo.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tog_SPPassivo.AutoSize = true;
-            this.tog_SPPassivo.Location = new System.Drawing.Point(174, 163);
+            this.tog_SPPassivo.Location = new System.Drawing.Point(192, 83);
             this.tog_SPPassivo.Name = "tog_SPPassivo";
             this.tog_SPPassivo.Size = new System.Drawing.Size(80, 17);
             this.tog_SPPassivo.Style = MetroFramework.MetroColorStyle.Red;
@@ -562,7 +603,7 @@
             // 
             this.tog_PlugConfig.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tog_PlugConfig.AutoSize = true;
-            this.tog_PlugConfig.Location = new System.Drawing.Point(174, 212);
+            this.tog_PlugConfig.Location = new System.Drawing.Point(192, 109);
             this.tog_PlugConfig.Name = "tog_PlugConfig";
             this.tog_PlugConfig.Size = new System.Drawing.Size(80, 17);
             this.tog_PlugConfig.Style = MetroFramework.MetroColorStyle.Red;
@@ -572,9 +613,9 @@
             // 
             // metroLabel5
             // 
-            this.metroLabel5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(45, 15);
+            this.metroLabel5.Location = new System.Drawing.Point(3, 12);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(81, 19);
             this.metroLabel5.TabIndex = 92;
@@ -582,9 +623,9 @@
             // 
             // metroLabel6
             // 
-            this.metroLabel6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(60, 64);
+            this.metroLabel6.Location = new System.Drawing.Point(3, 35);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(51, 19);
             this.metroLabel6.TabIndex = 94;
@@ -592,9 +633,9 @@
             // 
             // metroLabel7
             // 
-            this.metroLabel7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel7.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(54, 113);
+            this.metroLabel7.Location = new System.Drawing.Point(3, 58);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(62, 19);
             this.metroLabel7.TabIndex = 97;
@@ -602,9 +643,9 @@
             // 
             // metroLabel8
             // 
-            this.metroLabel8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel8.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Location = new System.Drawing.Point(51, 162);
+            this.metroLabel8.Location = new System.Drawing.Point(3, 82);
             this.metroLabel8.Name = "metroLabel8";
             this.metroLabel8.Size = new System.Drawing.Size(69, 19);
             this.metroLabel8.TabIndex = 98;
@@ -612,9 +653,9 @@
             // 
             // metroLabel9
             // 
-            this.metroLabel9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel9.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(46, 211);
+            this.metroLabel9.Location = new System.Drawing.Point(3, 108);
             this.metroLabel9.Name = "metroLabel9";
             this.metroLabel9.Size = new System.Drawing.Size(78, 19);
             this.metroLabel9.TabIndex = 99;
@@ -622,9 +663,9 @@
             // 
             // metroLabel10
             // 
-            this.metroLabel10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel10.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel10.AutoSize = true;
-            this.metroLabel10.Location = new System.Drawing.Point(378, 15);
+            this.metroLabel10.Location = new System.Drawing.Point(386, 12);
             this.metroLabel10.Name = "metroLabel10";
             this.metroLabel10.Size = new System.Drawing.Size(99, 19);
             this.metroLabel10.TabIndex = 100;
@@ -634,7 +675,7 @@
             // 
             this.tog_CambioRicevitore.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tog_CambioRicevitore.AutoSize = true;
-            this.tog_CambioRicevitore.Location = new System.Drawing.Point(516, 65);
+            this.tog_CambioRicevitore.Location = new System.Drawing.Point(575, 36);
             this.tog_CambioRicevitore.Name = "tog_CambioRicevitore";
             this.tog_CambioRicevitore.Size = new System.Drawing.Size(80, 17);
             this.tog_CambioRicevitore.Style = MetroFramework.MetroColorStyle.Red;
@@ -646,7 +687,7 @@
             // 
             this.tog_MotRim.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tog_MotRim.AutoSize = true;
-            this.tog_MotRim.Location = new System.Drawing.Point(516, 114);
+            this.tog_MotRim.Location = new System.Drawing.Point(575, 59);
             this.tog_MotRim.Name = "tog_MotRim";
             this.tog_MotRim.Size = new System.Drawing.Size(80, 17);
             this.tog_MotRim.Style = MetroFramework.MetroColorStyle.Red;
@@ -658,7 +699,7 @@
             // 
             this.tog_CambioPagina.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tog_CambioPagina.AutoSize = true;
-            this.tog_CambioPagina.Location = new System.Drawing.Point(516, 16);
+            this.tog_CambioPagina.Location = new System.Drawing.Point(575, 13);
             this.tog_CambioPagina.Name = "tog_CambioPagina";
             this.tog_CambioPagina.Size = new System.Drawing.Size(80, 17);
             this.tog_CambioPagina.Style = MetroFramework.MetroColorStyle.Red;
@@ -668,9 +709,9 @@
             // 
             // metroLabel11
             // 
-            this.metroLabel11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel11.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel11.AutoSize = true;
-            this.metroLabel11.Location = new System.Drawing.Point(369, 64);
+            this.metroLabel11.Location = new System.Drawing.Point(386, 35);
             this.metroLabel11.Name = "metroLabel11";
             this.metroLabel11.Size = new System.Drawing.Size(117, 19);
             this.metroLabel11.TabIndex = 102;
@@ -678,9 +719,9 @@
             // 
             // metroLabel18
             // 
-            this.metroLabel18.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel18.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel18.AutoSize = true;
-            this.metroLabel18.Location = new System.Drawing.Point(718, 162);
+            this.metroLabel18.Location = new System.Drawing.Point(769, 82);
             this.metroLabel18.Name = "metroLabel18";
             this.metroLabel18.Size = new System.Drawing.Size(103, 19);
             this.metroLabel18.TabIndex = 116;
@@ -688,9 +729,9 @@
             // 
             // metroLabel12
             // 
-            this.metroLabel12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel12.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel12.AutoSize = true;
-            this.metroLabel12.Location = new System.Drawing.Point(397, 113);
+            this.metroLabel12.Location = new System.Drawing.Point(386, 58);
             this.metroLabel12.Name = "metroLabel12";
             this.metroLabel12.Size = new System.Drawing.Size(61, 19);
             this.metroLabel12.TabIndex = 104;
@@ -698,9 +739,9 @@
             // 
             // metroLabel17
             // 
-            this.metroLabel17.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel17.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel17.AutoSize = true;
-            this.metroLabel17.Location = new System.Drawing.Point(705, 113);
+            this.metroLabel17.Location = new System.Drawing.Point(769, 58);
             this.metroLabel17.Name = "metroLabel17";
             this.metroLabel17.Size = new System.Drawing.Size(129, 19);
             this.metroLabel17.TabIndex = 114;
@@ -708,9 +749,9 @@
             // 
             // metroLabel13
             // 
-            this.metroLabel13.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel13.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel13.AutoSize = true;
-            this.metroLabel13.Location = new System.Drawing.Point(371, 162);
+            this.metroLabel13.Location = new System.Drawing.Point(386, 82);
             this.metroLabel13.Name = "metroLabel13";
             this.metroLabel13.Size = new System.Drawing.Size(113, 19);
             this.metroLabel13.TabIndex = 107;
@@ -718,9 +759,9 @@
             // 
             // metroLabel16
             // 
-            this.metroLabel16.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel16.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel16.AutoSize = true;
-            this.metroLabel16.Location = new System.Drawing.Point(710, 64);
+            this.metroLabel16.Location = new System.Drawing.Point(769, 35);
             this.metroLabel16.Name = "metroLabel16";
             this.metroLabel16.Size = new System.Drawing.Size(119, 19);
             this.metroLabel16.TabIndex = 112;
@@ -728,9 +769,9 @@
             // 
             // metroLabel14
             // 
-            this.metroLabel14.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel14.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel14.AutoSize = true;
-            this.metroLabel14.Location = new System.Drawing.Point(374, 211);
+            this.metroLabel14.Location = new System.Drawing.Point(386, 108);
             this.metroLabel14.Name = "metroLabel14";
             this.metroLabel14.Size = new System.Drawing.Size(106, 19);
             this.metroLabel14.TabIndex = 108;
@@ -738,9 +779,9 @@
             // 
             // metroLabel15
             // 
-            this.metroLabel15.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel15.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel15.AutoSize = true;
-            this.metroLabel15.Location = new System.Drawing.Point(722, 15);
+            this.metroLabel15.Location = new System.Drawing.Point(769, 12);
             this.metroLabel15.Name = "metroLabel15";
             this.metroLabel15.Size = new System.Drawing.Size(94, 19);
             this.metroLabel15.TabIndex = 111;
@@ -748,9 +789,9 @@
             // 
             // metroLabel21
             // 
-            this.metroLabel21.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel21.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel21.AutoSize = true;
-            this.metroLabel21.Location = new System.Drawing.Point(713, 211);
+            this.metroLabel21.Location = new System.Drawing.Point(769, 108);
             this.metroLabel21.Name = "metroLabel21";
             this.metroLabel21.Size = new System.Drawing.Size(113, 19);
             this.metroLabel21.TabIndex = 117;
@@ -758,9 +799,9 @@
             // 
             // metroLabel22
             // 
-            this.metroLabel22.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel22.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel22.AutoSize = true;
-            this.metroLabel22.Location = new System.Drawing.Point(720, 260);
+            this.metroLabel22.Location = new System.Drawing.Point(769, 134);
             this.metroLabel22.Name = "metroLabel22";
             this.metroLabel22.Size = new System.Drawing.Size(99, 19);
             this.metroLabel22.TabIndex = 118;
@@ -769,7 +810,7 @@
             // tb_NumPalmari
             // 
             this.tb_NumPalmari.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tb_NumPalmari.Location = new System.Drawing.Point(516, 210);
+            this.tb_NumPalmari.Location = new System.Drawing.Point(575, 108);
             this.tb_NumPalmari.Name = "tb_NumPalmari";
             this.tb_NumPalmari.Size = new System.Drawing.Size(112, 20);
             this.tb_NumPalmari.TabIndex = 129;
@@ -778,7 +819,7 @@
             // tb_NumInpDig
             // 
             this.tb_NumInpDig.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tb_NumInpDig.Location = new System.Drawing.Point(858, 259);
+            this.tb_NumInpDig.Location = new System.Drawing.Point(958, 134);
             this.tb_NumInpDig.Name = "tb_NumInpDig";
             this.tb_NumInpDig.Size = new System.Drawing.Size(112, 20);
             this.tb_NumInpDig.TabIndex = 132;
@@ -786,7 +827,7 @@
             // tb_IdentifRic
             // 
             this.tb_IdentifRic.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tb_IdentifRic.Location = new System.Drawing.Point(516, 161);
+            this.tb_IdentifRic.Location = new System.Drawing.Point(575, 82);
             this.tb_IdentifRic.Name = "tb_IdentifRic";
             this.tb_IdentifRic.Size = new System.Drawing.Size(112, 20);
             this.tb_IdentifRic.TabIndex = 133;
@@ -794,9 +835,9 @@
             // 
             // metroLabel23
             // 
-            this.metroLabel23.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel23.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel23.AutoSize = true;
-            this.metroLabel23.Location = new System.Drawing.Point(15, 309);
+            this.metroLabel23.Location = new System.Drawing.Point(3, 161);
             this.metroLabel23.Name = "metroLabel23";
             this.metroLabel23.Size = new System.Drawing.Size(140, 19);
             this.metroLabel23.TabIndex = 119;
@@ -805,7 +846,7 @@
             // tb_ContTasti
             // 
             this.tb_ContTasti.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tb_ContTasti.Location = new System.Drawing.Point(174, 308);
+            this.tb_ContTasti.Location = new System.Drawing.Point(192, 160);
             this.tb_ContTasti.Name = "tb_ContTasti";
             this.tb_ContTasti.Size = new System.Drawing.Size(112, 20);
             this.tb_ContTasti.TabIndex = 134;
@@ -813,9 +854,9 @@
             // 
             // metroLabel24
             // 
-            this.metroLabel24.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel24.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel24.AutoSize = true;
-            this.metroLabel24.Location = new System.Drawing.Point(55, 361);
+            this.metroLabel24.Location = new System.Drawing.Point(3, 187);
             this.metroLabel24.Name = "metroLabel24";
             this.metroLabel24.Size = new System.Drawing.Size(60, 19);
             this.metroLabel24.TabIndex = 120;
@@ -824,16 +865,16 @@
             // tb_TimeOut
             // 
             this.tb_TimeOut.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tb_TimeOut.Location = new System.Drawing.Point(174, 361);
+            this.tb_TimeOut.Location = new System.Drawing.Point(192, 187);
             this.tb_TimeOut.Name = "tb_TimeOut";
             this.tb_TimeOut.Size = new System.Drawing.Size(112, 20);
             this.tb_TimeOut.TabIndex = 135;
             // 
             // metroLabel25
             // 
-            this.metroLabel25.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel25.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel25.AutoSize = true;
-            this.metroLabel25.Location = new System.Drawing.Point(358, 309);
+            this.metroLabel25.Location = new System.Drawing.Point(386, 161);
             this.metroLabel25.Name = "metroLabel25";
             this.metroLabel25.Size = new System.Drawing.Size(139, 19);
             this.metroLabel25.TabIndex = 121;
@@ -845,7 +886,7 @@
             this.cb_FwAbbinato.DataSource = this.fWCLPalmariBindingSource;
             this.cb_FwAbbinato.DisplayMember = "FW_CL_P_SW_Code";
             this.cb_FwAbbinato.FormattingEnabled = true;
-            this.cb_FwAbbinato.Location = new System.Drawing.Point(516, 308);
+            this.cb_FwAbbinato.Location = new System.Drawing.Point(575, 160);
             this.cb_FwAbbinato.Name = "cb_FwAbbinato";
             this.cb_FwAbbinato.Size = new System.Drawing.Size(162, 21);
             this.cb_FwAbbinato.TabIndex = 128;
@@ -856,35 +897,27 @@
             this.fWCLPalmariBindingSource.DataMember = "FW_CL_Palmari";
             this.fWCLPalmariBindingSource.DataSource = this.ds_CL_Firmware;
             // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Location = new System.Drawing.Point(6, 105);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(0, 0);
+            this.metroLabel4.TabIndex = 91;
+            // 
             // metroLabel3
             // 
+            this.metroLabel3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(543, 47);
+            this.metroLabel3.Location = new System.Drawing.Point(463, 48);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(58, 19);
             this.metroLabel3.TabIndex = 118;
             this.metroLabel3.Text = "Famiglia";
             // 
-            // cb_TipoDev
-            // 
-            this.cb_TipoDev.DataSource = this.fWCLFamiglieBindingSource;
-            this.cb_TipoDev.DisplayMember = "FW_CL_Fam_Des";
-            this.cb_TipoDev.FormattingEnabled = true;
-            this.cb_TipoDev.Location = new System.Drawing.Point(607, 46);
-            this.cb_TipoDev.Name = "cb_TipoDev";
-            this.cb_TipoDev.Size = new System.Drawing.Size(121, 21);
-            this.cb_TipoDev.TabIndex = 117;
-            this.cb_TipoDev.ValueMember = "FW_CL_Fam_ID";
-            // 
-            // fWCLFamiglieBindingSource
-            // 
-            this.fWCLFamiglieBindingSource.DataMember = "FW_CL_Famiglie";
-            this.fWCLFamiglieBindingSource.DataSource = this.ds_CL_Firmware;
-            this.fWCLFamiglieBindingSource.Filter = "FW_CL_Fam_TipoDev = \'R\'";
-            this.fWCLFamiglieBindingSource.Sort = "FW_CL_Fam_Des ASC";
-            // 
             // tb_gv_Versione
             // 
+            this.tb_gv_Versione.Anchor = System.Windows.Forms.AnchorStyles.Left;
             // 
             // 
             // 
@@ -898,7 +931,7 @@
             this.tb_gv_Versione.CustomButton.UseSelectable = true;
             this.tb_gv_Versione.CustomButton.Visible = false;
             this.tb_gv_Versione.Lines = new string[0];
-            this.tb_gv_Versione.Location = new System.Drawing.Point(367, 9);
+            this.tb_gv_Versione.Location = new System.Drawing.Point(297, 7);
             this.tb_gv_Versione.MaxLength = 32767;
             this.tb_gv_Versione.Name = "tb_gv_Versione";
             this.tb_gv_Versione.PasswordChar = '\0';
@@ -919,6 +952,7 @@
             // 
             // tb_gv_Revisione
             // 
+            this.tb_gv_Revisione.Anchor = System.Windows.Forms.AnchorStyles.Left;
             // 
             // 
             // 
@@ -932,7 +966,7 @@
             this.tb_gv_Revisione.CustomButton.UseSelectable = true;
             this.tb_gv_Revisione.CustomButton.Visible = false;
             this.tb_gv_Revisione.Lines = new string[0];
-            this.tb_gv_Revisione.Location = new System.Drawing.Point(443, 9);
+            this.tb_gv_Revisione.Location = new System.Drawing.Point(373, 7);
             this.tb_gv_Revisione.MaxLength = 32767;
             this.tb_gv_Revisione.Name = "tb_gv_Revisione";
             this.tb_gv_Revisione.PasswordChar = '\0';
@@ -952,6 +986,8 @@
             // 
             // panel_freq
             // 
+            this.panel_freq.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tableLayoutPanel2.SetColumnSpan(this.panel_freq, 3);
             this.panel_freq.Controls.Add(this.cb_can);
             this.panel_freq.Controls.Add(this.cb_filo);
             this.panel_freq.Controls.Add(this.cb_433);
@@ -960,7 +996,7 @@
             this.panel_freq.HorizontalScrollbarBarColor = true;
             this.panel_freq.HorizontalScrollbarHighlightOnWheel = false;
             this.panel_freq.HorizontalScrollbarSize = 10;
-            this.panel_freq.Location = new System.Drawing.Point(168, 49);
+            this.panel_freq.Location = new System.Drawing.Point(118, 48);
             this.panel_freq.Name = "panel_freq";
             this.panel_freq.Size = new System.Drawing.Size(339, 18);
             this.panel_freq.TabIndex = 7;
@@ -1033,18 +1069,11 @@
             this.cb_868.UseStyleColors = true;
             this.cb_868.CheckedChanged += new System.EventHandler(this.cb_868_CheckedChanged);
             // 
-            // metroLabel4
-            // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(6, 105);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(0, 0);
-            this.metroLabel4.TabIndex = 91;
-            // 
             // metroLabel2
             // 
+            this.metroLabel2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(28, 47);
+            this.metroLabel2.Location = new System.Drawing.Point(3, 48);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(70, 19);
             this.metroLabel2.TabIndex = 89;
@@ -1055,56 +1084,80 @@
             this.layout_dati.ColumnCount = 2;
             this.layout_dati.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.layout_dati.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.layout_dati.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.layout_dati.Controls.Add(this.panel_funzionamento, 1, 1);
-            this.layout_dati.Controls.Add(this.panel_dati, 0, 0);
-            this.layout_dati.Controls.Add(this.panel_revisioni, 0, 1);
+            this.layout_dati.Controls.Add(this.panel_intestazione, 0, 0);
+            this.layout_dati.Controls.Add(this.panel_dati, 0, 1);
+            this.layout_dati.Controls.Add(this.panel_revisioni, 0, 2);
+            this.layout_dati.Controls.Add(this.panel_funzionamento, 1, 2);
             this.layout_dati.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layout_dati.Location = new System.Drawing.Point(170, 55);
             this.layout_dati.Name = "layout_dati";
-            this.layout_dati.RowCount = 2;
-            this.layout_dati.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.layout_dati.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.layout_dati.Size = new System.Drawing.Size(1101, 817);
+            this.layout_dati.RowCount = 3;
+            this.layout_dati.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 83F));
+            this.layout_dati.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.layout_dati.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 308F));
+            this.layout_dati.Size = new System.Drawing.Size(1152, 1027);
             this.layout_dati.TabIndex = 78;
             // 
-            // panel_funzionamento
+            // panel_intestazione
             // 
-            this.panel_funzionamento.Controls.Add(this.rtb_Funzionamento);
-            this.panel_funzionamento.Controls.Add(this.metroLabel20);
-            this.panel_funzionamento.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_funzionamento.HorizontalScrollbarBarColor = true;
-            this.panel_funzionamento.HorizontalScrollbarHighlightOnWheel = false;
-            this.panel_funzionamento.HorizontalScrollbarSize = 10;
-            this.panel_funzionamento.Location = new System.Drawing.Point(553, 498);
-            this.panel_funzionamento.Name = "panel_funzionamento";
-            this.panel_funzionamento.Size = new System.Drawing.Size(545, 316);
-            this.panel_funzionamento.TabIndex = 80;
-            this.panel_funzionamento.VerticalScrollbarBarColor = true;
-            this.panel_funzionamento.VerticalScrollbarHighlightOnWheel = false;
-            this.panel_funzionamento.VerticalScrollbarSize = 10;
+            this.layout_dati.SetColumnSpan(this.panel_intestazione, 2);
+            this.panel_intestazione.Controls.Add(this.tableLayoutPanel2);
+            this.panel_intestazione.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_intestazione.HorizontalScrollbarBarColor = true;
+            this.panel_intestazione.HorizontalScrollbarHighlightOnWheel = false;
+            this.panel_intestazione.HorizontalScrollbarSize = 10;
+            this.panel_intestazione.Location = new System.Drawing.Point(3, 3);
+            this.panel_intestazione.Name = "panel_intestazione";
+            this.panel_intestazione.Size = new System.Drawing.Size(1146, 77);
+            this.panel_intestazione.TabIndex = 121;
+            this.panel_intestazione.VerticalScrollbarBarColor = true;
+            this.panel_intestazione.VerticalScrollbarHighlightOnWheel = false;
+            this.panel_intestazione.VerticalScrollbarSize = 10;
             // 
-            // rtb_Funzionamento
+            // tableLayoutPanel2
             // 
-            this.rtb_Funzionamento.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rtb_Funzionamento.Location = new System.Drawing.Point(0, 19);
-            this.rtb_Funzionamento.Name = "rtb_Funzionamento";
-            this.rtb_Funzionamento.Size = new System.Drawing.Size(545, 297);
-            this.rtb_Funzionamento.TabIndex = 0;
-            this.rtb_Funzionamento.Text = "";
+            this.tableLayoutPanel2.ColumnCount = 6;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.Controls.Add(this.cb_Famiglia, 5, 1);
+            this.tableLayoutPanel2.Controls.Add(this.metroLabel1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.tb_gv_Code, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.tb_gv_Versione, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.panel_freq, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.metroLabel3, 4, 1);
+            this.tableLayoutPanel2.Controls.Add(this.tb_gv_Revisione, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.metroLabel2, 0, 1);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1146, 77);
+            this.tableLayoutPanel2.TabIndex = 2;
             // 
-            // metroLabel20
+            // cb_Famiglia
             // 
-            this.metroLabel20.AutoSize = true;
-            this.metroLabel20.Dock = System.Windows.Forms.DockStyle.Top;
-            this.metroLabel20.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel20.Location = new System.Drawing.Point(0, 0);
-            this.metroLabel20.Name = "metroLabel20";
-            this.metroLabel20.Size = new System.Drawing.Size(104, 19);
-            this.metroLabel20.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroLabel20.TabIndex = 6;
-            this.metroLabel20.Text = "Funzionamento";
-            this.metroLabel20.UseStyleColors = true;
+            this.cb_Famiglia.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cb_Famiglia.DataSource = this.fWCLFamiglieBindingSource;
+            this.cb_Famiglia.DisplayMember = "FW_CL_Fam_Des";
+            this.cb_Famiglia.FormattingEnabled = true;
+            this.cb_Famiglia.Location = new System.Drawing.Point(527, 47);
+            this.cb_Famiglia.Name = "cb_Famiglia";
+            this.cb_Famiglia.Size = new System.Drawing.Size(263, 21);
+            this.cb_Famiglia.TabIndex = 119;
+            // 
+            // fWCLFamiglieBindingSource
+            // 
+            this.fWCLFamiglieBindingSource.DataMember = "FW_CL_Famiglie";
+            this.fWCLFamiglieBindingSource.DataSource = this.ds_CL_Firmware;
+            this.fWCLFamiglieBindingSource.Filter = "FW_CL_Fam_TipoDev = \'R\'";
+            this.fWCLFamiglieBindingSource.Sort = "FW_CL_Fam_Des ASC";
             // 
             // panel_revisioni
             // 
@@ -1114,9 +1167,9 @@
             this.panel_revisioni.HorizontalScrollbarBarColor = true;
             this.panel_revisioni.HorizontalScrollbarHighlightOnWheel = false;
             this.panel_revisioni.HorizontalScrollbarSize = 10;
-            this.panel_revisioni.Location = new System.Drawing.Point(3, 498);
+            this.panel_revisioni.Location = new System.Drawing.Point(3, 722);
             this.panel_revisioni.Name = "panel_revisioni";
-            this.panel_revisioni.Size = new System.Drawing.Size(544, 316);
+            this.panel_revisioni.Size = new System.Drawing.Size(570, 302);
             this.panel_revisioni.TabIndex = 79;
             this.panel_revisioni.VerticalScrollbarBarColor = true;
             this.panel_revisioni.VerticalScrollbarHighlightOnWheel = false;
@@ -1127,7 +1180,7 @@
             this.rtb_Revisioni.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rtb_Revisioni.Location = new System.Drawing.Point(0, 19);
             this.rtb_Revisioni.Name = "rtb_Revisioni";
-            this.rtb_Revisioni.Size = new System.Drawing.Size(544, 297);
+            this.rtb_Revisioni.Size = new System.Drawing.Size(570, 283);
             this.rtb_Revisioni.TabIndex = 0;
             this.rtb_Revisioni.Text = "";
             // 
@@ -1144,6 +1197,44 @@
             this.metroLabel19.Text = "Revision History";
             this.metroLabel19.UseStyleColors = true;
             // 
+            // panel_funzionamento
+            // 
+            this.panel_funzionamento.Controls.Add(this.rtb_Funzionamento);
+            this.panel_funzionamento.Controls.Add(this.metroLabel20);
+            this.panel_funzionamento.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_funzionamento.HorizontalScrollbarBarColor = true;
+            this.panel_funzionamento.HorizontalScrollbarHighlightOnWheel = false;
+            this.panel_funzionamento.HorizontalScrollbarSize = 10;
+            this.panel_funzionamento.Location = new System.Drawing.Point(579, 722);
+            this.panel_funzionamento.Name = "panel_funzionamento";
+            this.panel_funzionamento.Size = new System.Drawing.Size(570, 302);
+            this.panel_funzionamento.TabIndex = 80;
+            this.panel_funzionamento.VerticalScrollbarBarColor = true;
+            this.panel_funzionamento.VerticalScrollbarHighlightOnWheel = false;
+            this.panel_funzionamento.VerticalScrollbarSize = 10;
+            // 
+            // rtb_Funzionamento
+            // 
+            this.rtb_Funzionamento.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtb_Funzionamento.Location = new System.Drawing.Point(0, 19);
+            this.rtb_Funzionamento.Name = "rtb_Funzionamento";
+            this.rtb_Funzionamento.Size = new System.Drawing.Size(570, 283);
+            this.rtb_Funzionamento.TabIndex = 0;
+            this.rtb_Funzionamento.Text = "";
+            // 
+            // metroLabel20
+            // 
+            this.metroLabel20.AutoSize = true;
+            this.metroLabel20.Dock = System.Windows.Forms.DockStyle.Top;
+            this.metroLabel20.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel20.Location = new System.Drawing.Point(0, 0);
+            this.metroLabel20.Name = "metroLabel20";
+            this.metroLabel20.Size = new System.Drawing.Size(104, 19);
+            this.metroLabel20.Style = MetroFramework.MetroColorStyle.Red;
+            this.metroLabel20.TabIndex = 6;
+            this.metroLabel20.Text = "Funzionamento";
+            this.metroLabel20.UseStyleColors = true;
+            // 
             // pan_Menu_comandi
             // 
             this.pan_Menu_comandi.BackColor = System.Drawing.Color.Gainsboro;
@@ -1157,7 +1248,7 @@
             this.creaRevisioneToolStripMenuItem});
             this.pan_Menu_comandi.Location = new System.Drawing.Point(0, 0);
             this.pan_Menu_comandi.Name = "pan_Menu_comandi";
-            this.pan_Menu_comandi.Size = new System.Drawing.Size(625, 25);
+            this.pan_Menu_comandi.Size = new System.Drawing.Size(650, 25);
             this.pan_Menu_comandi.TabIndex = 80;
             this.pan_Menu_comandi.Text = "menuStrip1";
             // 
@@ -1209,7 +1300,7 @@
             this.menu_sw_salva,
             this.menu_sw_div12,
             this.menu_sw_annulla});
-            this.pan_Menu_salva.Location = new System.Drawing.Point(791, 0);
+            this.pan_Menu_salva.Location = new System.Drawing.Point(826, 0);
             this.pan_Menu_salva.Name = "pan_Menu_salva";
             this.pan_Menu_salva.Size = new System.Drawing.Size(168, 24);
             this.pan_Menu_salva.TabIndex = 81;
@@ -1246,7 +1337,7 @@
             this.pan_Menu_exit.Dock = System.Windows.Forms.DockStyle.None;
             this.pan_Menu_exit.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menu_sw_exit});
-            this.pan_Menu_exit.Location = new System.Drawing.Point(1176, 0);
+            this.pan_Menu_exit.Location = new System.Drawing.Point(1227, 0);
             this.pan_Menu_exit.Name = "pan_Menu_exit";
             this.pan_Menu_exit.Size = new System.Drawing.Size(75, 24);
             this.pan_Menu_exit.TabIndex = 82;
@@ -1283,7 +1374,7 @@
             this.layout_menu.RowCount = 1;
             this.layout_menu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.layout_menu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.layout_menu.Size = new System.Drawing.Size(1251, 25);
+            this.layout_menu.Size = new System.Drawing.Size(1302, 25);
             this.layout_menu.TabIndex = 118;
             // 
             // fW_CL_RicevitoriTableAdapter
@@ -1295,13 +1386,13 @@
             this.toolTip1.IsBalloon = true;
             this.toolTip1.ShowAlways = true;
             // 
-            // fW_CL_FamiglieTableAdapter
-            // 
-            this.fW_CL_FamiglieTableAdapter.ClearBeforeFill = true;
-            // 
             // fW_CL_PalmariTableAdapter
             // 
             this.fW_CL_PalmariTableAdapter.ClearBeforeFill = true;
+            // 
+            // fW_CL_FamiglieTableAdapter
+            // 
+            this.fW_CL_FamiglieTableAdapter.ClearBeforeFill = true;
             // 
             // UC_FW_R_Classic
             // 
@@ -1310,7 +1401,7 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1291, 892);
+            this.ClientSize = new System.Drawing.Size(1342, 1102);
             this.ControlBox = false;
             this.Controls.Add(this.layout_dati);
             this.Controls.Add(this.panel_FW_R);
@@ -1335,15 +1426,18 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fWCLPalmariBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fWCLFamiglieBindingSource)).EndInit();
             this.panel_freq.ResumeLayout(false);
             this.panel_freq.PerformLayout();
             this.layout_dati.ResumeLayout(false);
             this.layout_dati.PerformLayout();
-            this.panel_funzionamento.ResumeLayout(false);
-            this.panel_funzionamento.PerformLayout();
+            this.panel_intestazione.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fWCLFamiglieBindingSource)).EndInit();
             this.panel_revisioni.ResumeLayout(false);
             this.panel_revisioni.PerformLayout();
+            this.panel_funzionamento.ResumeLayout(false);
+            this.panel_funzionamento.PerformLayout();
             this.pan_Menu_comandi.ResumeLayout(false);
             this.pan_Menu_comandi.PerformLayout();
             this.pan_Menu_salva.ResumeLayout(false);
@@ -1423,11 +1517,8 @@
         private ds_CL_Firmware ds_CL_Firmware;
         private System.Windows.Forms.BindingSource fWCLRicevitoriBindingSource;
         private ds_CL_FirmwareTableAdapters.FW_CL_RicevitoriTableAdapter fW_CL_RicevitoriTableAdapter;
-        private System.Windows.Forms.ComboBox cb_TipoDev;
         private System.Windows.Forms.ToolTip toolTip1;
         private MetroFramework.Controls.MetroLabel metroLabel3;
-        private System.Windows.Forms.BindingSource fWCLFamiglieBindingSource;
-        private ds_CL_FirmwareTableAdapters.FW_CL_FamiglieTableAdapter fW_CL_FamiglieTableAdapter;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private MetroFramework.Controls.MetroToggle tog_ProportionalOutput;
         private MetroFramework.Controls.MetroToggle tog_EmergencyOutput;
@@ -1449,5 +1540,12 @@
         private System.Windows.Forms.BindingSource fWCLPalmariBindingSource;
         private ds_CL_FirmwareTableAdapters.FW_CL_PalmariTableAdapter fW_CL_PalmariTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn fWCLRSWCodeDataGridViewTextBoxColumn;
+        private MetroFramework.Controls.MetroPanel panel_intestazione;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private MetroFramework.Controls.MetroPanel box_Separatore_01;
+        private MetroFramework.Controls.MetroPanel metroPanel1;
+        private System.Windows.Forms.ComboBox cb_Famiglia;
+        private System.Windows.Forms.BindingSource fWCLFamiglieBindingSource;
+        private ds_CL_FirmwareTableAdapters.FW_CL_FamiglieTableAdapter fW_CL_FamiglieTableAdapter;
     }
 }

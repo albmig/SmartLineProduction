@@ -332,6 +332,10 @@ namespace SmartLineProduction
         {
             // TODO: questa riga di codice carica i dati nella tabella 'ds_CL_Firmware.FW_CL_Palmari'. È possibile spostarla o rimuoverla se necessario.
             this.Firmware_TableAdapter.Fill(this.ds_CL_Firmware.FW_CL_Palmari);
+            // TODO: questa riga di codice carica i dati nella tabella 'ds_CL_Firmware.FW_CL_Ricevitori'. È possibile spostarla o rimuoverla se necessario.
+            this.fW_CL_RicevitoriTableAdapter.Fill(this.ds_CL_Firmware.FW_CL_Ricevitori);
+            // TODO: questa riga di codice carica i dati nella tabella 'ds_CL_Firmware.FW_CL_Palmari'. È possibile spostarla o rimuoverla se necessario.
+            this.Firmware_TableAdapter.Fill(this.ds_CL_Firmware.FW_CL_Palmari);
             // TODO: questa riga di codice carica i dati nella tabella 'ds_CL_Firmware.FW_CL_Famiglie'. È possibile spostarla o rimuoverla se necessario.
             this.fW_CL_FamiglieTableAdapter.Fill(this.ds_CL_Firmware.FW_CL_Famiglie);
 

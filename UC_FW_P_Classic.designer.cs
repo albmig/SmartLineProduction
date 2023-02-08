@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_FW_P_Classic));
             this.layout_dati = new System.Windows.Forms.TableLayoutPanel();
             this.panel_intestazione = new MetroFramework.Controls.MetroPanel();
@@ -54,7 +54,6 @@
             this.tb_gv_Revisione = new MetroFramework.Controls.MetroTextBox();
             this.panel_dati = new MetroFramework.Controls.MetroPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.metroLabel28 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
@@ -83,6 +82,7 @@
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.tb_fwAbbinato = new MetroFramework.Controls.MetroTextBox();
             this.box_Separatore_01 = new MetroFramework.Controls.MetroPanel();
+            this.box_Separatore_02 = new MetroFramework.Controls.MetroPanel();
             this.panel_revisioni = new MetroFramework.Controls.MetroPanel();
             this.rtb_Revisioni = new System.Windows.Forms.RichTextBox();
             this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
@@ -91,6 +91,26 @@
             this.metroLabel20 = new MetroFramework.Controls.MetroLabel();
             this.panel_FW_P = new MetroFramework.Controls.MetroPanel();
             this.gv_FW_P = new MetroFramework.Controls.MetroGrid();
+            this.Firmware_BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.panel_filter_FW = new MetroFramework.Controls.MetroPanel();
+            this.radio_FW_active = new MetroFramework.Controls.MetroRadioButton();
+            this.radio_FW_obsoleti = new MetroFramework.Controls.MetroRadioButton();
+            this.layout_menu = new System.Windows.Forms.TableLayoutPanel();
+            this.pan_Menu_comandi = new System.Windows.Forms.MenuStrip();
+            this.menu_sw_new = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_sw_div01 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_sw_clona = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_sw_div02 = new System.Windows.Forms.ToolStripMenuItem();
+            this.creaRevisioneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pan_Menu_salva = new System.Windows.Forms.MenuStrip();
+            this.menu_sw_salva = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_sw_div12 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_sw_annulla = new System.Windows.Forms.ToolStripMenuItem();
+            this.pan_Menu_exit = new System.Windows.Forms.MenuStrip();
+            this.menu_sw_exit = new System.Windows.Forms.ToolStripMenuItem();
+            this.fW_CL_FamiglieTableAdapter = new SmartLineProduction.ds_CL_FirmwareTableAdapters.FW_CL_FamiglieTableAdapter();
+            this.Firmware_TableAdapter = new SmartLineProduction.ds_CL_FirmwareTableAdapters.FW_CL_PalmariTableAdapter();
+            this.fW_CL_RicevitoriTableAdapter = new SmartLineProduction.ds_CL_FirmwareTableAdapters.FW_CL_RicevitoriTableAdapter();
             this.fWCLPIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fWCLPSWCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fWCLPSWVersioneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -115,25 +135,6 @@
             this.fWCLPObsoleteverfromdateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fWCLPRevisioniDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fWCLPFunzionamentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Firmware_BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.panel_filter_FW = new MetroFramework.Controls.MetroPanel();
-            this.radio_FW_active = new MetroFramework.Controls.MetroRadioButton();
-            this.radio_FW_obsoleti = new MetroFramework.Controls.MetroRadioButton();
-            this.layout_menu = new System.Windows.Forms.TableLayoutPanel();
-            this.pan_Menu_comandi = new System.Windows.Forms.MenuStrip();
-            this.menu_sw_new = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu_sw_div01 = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu_sw_clona = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu_sw_div02 = new System.Windows.Forms.ToolStripMenuItem();
-            this.creaRevisioneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pan_Menu_salva = new System.Windows.Forms.MenuStrip();
-            this.menu_sw_salva = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu_sw_div12 = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu_sw_annulla = new System.Windows.Forms.ToolStripMenuItem();
-            this.pan_Menu_exit = new System.Windows.Forms.MenuStrip();
-            this.menu_sw_exit = new System.Windows.Forms.ToolStripMenuItem();
-            this.fW_CL_FamiglieTableAdapter = new SmartLineProduction.ds_CL_FirmwareTableAdapters.FW_CL_FamiglieTableAdapter();
-            this.Firmware_TableAdapter = new SmartLineProduction.ds_CL_FirmwareTableAdapters.FW_CL_PalmariTableAdapter();
             this.layout_dati.SuspendLayout();
             this.panel_intestazione.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -242,7 +243,7 @@
             this.cb_Famiglia.DataSource = this.fWCLFamiglieBindingSource;
             this.cb_Famiglia.DisplayMember = "FW_CL_Fam_Des";
             this.cb_Famiglia.FormattingEnabled = true;
-            this.cb_Famiglia.Location = new System.Drawing.Point(719, 45);
+            this.cb_Famiglia.Location = new System.Drawing.Point(719, 43);
             this.cb_Famiglia.Name = "cb_Famiglia";
             this.cb_Famiglia.Size = new System.Drawing.Size(263, 25);
             this.cb_Famiglia.TabIndex = 90;
@@ -486,7 +487,6 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.Controls.Add(this.metroPanel1, 5, 1);
             this.tableLayoutPanel1.Controls.Add(this.metroLabel28, 6, 6);
             this.tableLayoutPanel1.Controls.Add(this.metroLabel4, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.metroLabel7, 0, 2);
@@ -515,6 +515,7 @@
             this.tableLayoutPanel1.Controls.Add(this.metroLabel9, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.tb_fwAbbinato, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.box_Separatore_01, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.box_Separatore_02, 5, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -527,25 +528,12 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1077, 365);
             this.tableLayoutPanel1.TabIndex = 133;
-            // 
-            // metroPanel1
-            // 
-            this.metroPanel1.BackColor = System.Drawing.Color.Red;
-            this.metroPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroPanel1.HorizontalScrollbarBarColor = true;
-            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(759, 13);
-            this.metroPanel1.Name = "metroPanel1";
-            this.tableLayoutPanel1.SetRowSpan(this.metroPanel1, 5);
-            this.metroPanel1.Size = new System.Drawing.Size(1, 133);
-            this.metroPanel1.TabIndex = 142;
-            this.metroPanel1.UseCustomBackColor = true;
-            this.metroPanel1.VerticalScrollbarBarColor = true;
-            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 10;
             // 
             // metroLabel28
             // 
@@ -897,6 +885,23 @@
             this.box_Separatore_01.VerticalScrollbarHighlightOnWheel = false;
             this.box_Separatore_01.VerticalScrollbarSize = 10;
             // 
+            // box_Separatore_02
+            // 
+            this.box_Separatore_02.BackColor = System.Drawing.Color.Red;
+            this.box_Separatore_02.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.box_Separatore_02.HorizontalScrollbarBarColor = true;
+            this.box_Separatore_02.HorizontalScrollbarHighlightOnWheel = false;
+            this.box_Separatore_02.HorizontalScrollbarSize = 10;
+            this.box_Separatore_02.Location = new System.Drawing.Point(759, 13);
+            this.box_Separatore_02.Name = "box_Separatore_02";
+            this.tableLayoutPanel1.SetRowSpan(this.box_Separatore_02, 5);
+            this.box_Separatore_02.Size = new System.Drawing.Size(1, 133);
+            this.box_Separatore_02.TabIndex = 142;
+            this.box_Separatore_02.UseCustomBackColor = true;
+            this.box_Separatore_02.VerticalScrollbarBarColor = true;
+            this.box_Separatore_02.VerticalScrollbarHighlightOnWheel = false;
+            this.box_Separatore_02.VerticalScrollbarSize = 10;
+            // 
             // panel_revisioni
             // 
             this.panel_revisioni.Controls.Add(this.rtb_Revisioni);
@@ -996,22 +1001,22 @@
             this.gv_FW_P.AllowUserToDeleteRows = false;
             this.gv_FW_P.AllowUserToOrderColumns = true;
             this.gv_FW_P.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.gv_FW_P.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.gv_FW_P.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.gv_FW_P.AutoGenerateColumns = false;
             this.gv_FW_P.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.gv_FW_P.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.gv_FW_P.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gv_FW_P.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.gv_FW_P.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gv_FW_P.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gv_FW_P.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.gv_FW_P.ColumnHeadersHeight = 40;
             this.gv_FW_P.ColumnHeadersVisible = false;
             this.gv_FW_P.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1040,14 +1045,14 @@
             this.fWCLPRevisioniDataGridViewTextBoxColumn,
             this.fWCLPFunzionamentoDataGridViewTextBoxColumn});
             this.gv_FW_P.DataSource = this.Firmware_BindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gv_FW_P.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gv_FW_P.DefaultCellStyle = dataGridViewCellStyle7;
             this.gv_FW_P.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gv_FW_P.EnableHeadersVisualStyles = false;
             this.gv_FW_P.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -1057,14 +1062,14 @@
             this.gv_FW_P.Name = "gv_FW_P";
             this.gv_FW_P.ReadOnly = true;
             this.gv_FW_P.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gv_FW_P.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gv_FW_P.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.gv_FW_P.RowHeadersVisible = false;
             this.gv_FW_P.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.gv_FW_P.RowTemplate.DividerHeight = 1;
@@ -1078,198 +1083,6 @@
             this.gv_FW_P.UseCustomForeColor = true;
             this.gv_FW_P.UseStyleColors = true;
             this.gv_FW_P.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.gv_FW_P_CellPainting);
-            // 
-            // fWCLPIDDataGridViewTextBoxColumn
-            // 
-            this.fWCLPIDDataGridViewTextBoxColumn.DataPropertyName = "FW_CL_P_ID";
-            this.fWCLPIDDataGridViewTextBoxColumn.HeaderText = "FW_CL_P_ID";
-            this.fWCLPIDDataGridViewTextBoxColumn.Name = "fWCLPIDDataGridViewTextBoxColumn";
-            this.fWCLPIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fWCLPIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // fWCLPSWCodeDataGridViewTextBoxColumn
-            // 
-            this.fWCLPSWCodeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.fWCLPSWCodeDataGridViewTextBoxColumn.DataPropertyName = "FW_CL_P_SW_Code";
-            this.fWCLPSWCodeDataGridViewTextBoxColumn.HeaderText = "FW_CL_P_SW_Code";
-            this.fWCLPSWCodeDataGridViewTextBoxColumn.Name = "fWCLPSWCodeDataGridViewTextBoxColumn";
-            this.fWCLPSWCodeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fWCLPSWVersioneDataGridViewTextBoxColumn
-            // 
-            this.fWCLPSWVersioneDataGridViewTextBoxColumn.DataPropertyName = "FW_CL_P_SW_Versione";
-            this.fWCLPSWVersioneDataGridViewTextBoxColumn.HeaderText = "FW_CL_P_SW_Versione";
-            this.fWCLPSWVersioneDataGridViewTextBoxColumn.Name = "fWCLPSWVersioneDataGridViewTextBoxColumn";
-            this.fWCLPSWVersioneDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fWCLPSWVersioneDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // fWCLPSWRevisioneDataGridViewTextBoxColumn
-            // 
-            this.fWCLPSWRevisioneDataGridViewTextBoxColumn.DataPropertyName = "FW_CL_P_SW_Revisione";
-            this.fWCLPSWRevisioneDataGridViewTextBoxColumn.HeaderText = "FW_CL_P_SW_Revisione";
-            this.fWCLPSWRevisioneDataGridViewTextBoxColumn.Name = "fWCLPSWRevisioneDataGridViewTextBoxColumn";
-            this.fWCLPSWRevisioneDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fWCLPSWRevisioneDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // fWCLPTipoDevDataGridViewTextBoxColumn
-            // 
-            this.fWCLPTipoDevDataGridViewTextBoxColumn.DataPropertyName = "FW_CL_P_TipoDev";
-            this.fWCLPTipoDevDataGridViewTextBoxColumn.HeaderText = "FW_CL_P_TipoDev";
-            this.fWCLPTipoDevDataGridViewTextBoxColumn.Name = "fWCLPTipoDevDataGridViewTextBoxColumn";
-            this.fWCLPTipoDevDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fWCLPTipoDevDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // fWCLPFreqDataGridViewTextBoxColumn
-            // 
-            this.fWCLPFreqDataGridViewTextBoxColumn.DataPropertyName = "FW_CL_P_Freq";
-            this.fWCLPFreqDataGridViewTextBoxColumn.HeaderText = "FW_CL_P_Freq";
-            this.fWCLPFreqDataGridViewTextBoxColumn.Name = "fWCLPFreqDataGridViewTextBoxColumn";
-            this.fWCLPFreqDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fWCLPFreqDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // fWCLPCanBusDataGridViewCheckBoxColumn
-            // 
-            this.fWCLPCanBusDataGridViewCheckBoxColumn.DataPropertyName = "FW_CL_P_CanBus";
-            this.fWCLPCanBusDataGridViewCheckBoxColumn.HeaderText = "FW_CL_P_CanBus";
-            this.fWCLPCanBusDataGridViewCheckBoxColumn.Name = "fWCLPCanBusDataGridViewCheckBoxColumn";
-            this.fWCLPCanBusDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.fWCLPCanBusDataGridViewCheckBoxColumn.Visible = false;
-            // 
-            // fWCLPRetroillDataGridViewCheckBoxColumn
-            // 
-            this.fWCLPRetroillDataGridViewCheckBoxColumn.DataPropertyName = "FW_CL_P_Retroill";
-            this.fWCLPRetroillDataGridViewCheckBoxColumn.HeaderText = "FW_CL_P_Retroill";
-            this.fWCLPRetroillDataGridViewCheckBoxColumn.Name = "fWCLPRetroillDataGridViewCheckBoxColumn";
-            this.fWCLPRetroillDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.fWCLPRetroillDataGridViewCheckBoxColumn.Visible = false;
-            // 
-            // fWCLPSPAttivoDataGridViewCheckBoxColumn
-            // 
-            this.fWCLPSPAttivoDataGridViewCheckBoxColumn.DataPropertyName = "FW_CL_P_SPAttivo";
-            this.fWCLPSPAttivoDataGridViewCheckBoxColumn.HeaderText = "FW_CL_P_SPAttivo";
-            this.fWCLPSPAttivoDataGridViewCheckBoxColumn.Name = "fWCLPSPAttivoDataGridViewCheckBoxColumn";
-            this.fWCLPSPAttivoDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.fWCLPSPAttivoDataGridViewCheckBoxColumn.Visible = false;
-            // 
-            // fWCLPSPPassivoDataGridViewCheckBoxColumn
-            // 
-            this.fWCLPSPPassivoDataGridViewCheckBoxColumn.DataPropertyName = "FW_CL_P_SPPassivo";
-            this.fWCLPSPPassivoDataGridViewCheckBoxColumn.HeaderText = "FW_CL_P_SPPassivo";
-            this.fWCLPSPPassivoDataGridViewCheckBoxColumn.Name = "fWCLPSPPassivoDataGridViewCheckBoxColumn";
-            this.fWCLPSPPassivoDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.fWCLPSPPassivoDataGridViewCheckBoxColumn.Visible = false;
-            // 
-            // fWCLPAccelDataGridViewCheckBoxColumn
-            // 
-            this.fWCLPAccelDataGridViewCheckBoxColumn.DataPropertyName = "FW_CL_P_Accel";
-            this.fWCLPAccelDataGridViewCheckBoxColumn.HeaderText = "FW_CL_P_Accel";
-            this.fWCLPAccelDataGridViewCheckBoxColumn.Name = "fWCLPAccelDataGridViewCheckBoxColumn";
-            this.fWCLPAccelDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.fWCLPAccelDataGridViewCheckBoxColumn.Visible = false;
-            // 
-            // fWCLPBuzzerDataGridViewCheckBoxColumn
-            // 
-            this.fWCLPBuzzerDataGridViewCheckBoxColumn.DataPropertyName = "FW_CL_P_Buzzer";
-            this.fWCLPBuzzerDataGridViewCheckBoxColumn.HeaderText = "FW_CL_P_Buzzer";
-            this.fWCLPBuzzerDataGridViewCheckBoxColumn.Name = "fWCLPBuzzerDataGridViewCheckBoxColumn";
-            this.fWCLPBuzzerDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.fWCLPBuzzerDataGridViewCheckBoxColumn.Visible = false;
-            // 
-            // fWCLPVibracallDataGridViewCheckBoxColumn
-            // 
-            this.fWCLPVibracallDataGridViewCheckBoxColumn.DataPropertyName = "FW_CL_P_Vibracall";
-            this.fWCLPVibracallDataGridViewCheckBoxColumn.HeaderText = "FW_CL_P_Vibracall";
-            this.fWCLPVibracallDataGridViewCheckBoxColumn.Name = "fWCLPVibracallDataGridViewCheckBoxColumn";
-            this.fWCLPVibracallDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.fWCLPVibracallDataGridViewCheckBoxColumn.Visible = false;
-            // 
-            // fWCLPTorciaDataGridViewCheckBoxColumn
-            // 
-            this.fWCLPTorciaDataGridViewCheckBoxColumn.DataPropertyName = "FW_CL_P_Torcia";
-            this.fWCLPTorciaDataGridViewCheckBoxColumn.HeaderText = "FW_CL_P_Torcia";
-            this.fWCLPTorciaDataGridViewCheckBoxColumn.Name = "fWCLPTorciaDataGridViewCheckBoxColumn";
-            this.fWCLPTorciaDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.fWCLPTorciaDataGridViewCheckBoxColumn.Visible = false;
-            // 
-            // fWCLPCambioPagDataGridViewCheckBoxColumn
-            // 
-            this.fWCLPCambioPagDataGridViewCheckBoxColumn.DataPropertyName = "FW_CL_P_CambioPag";
-            this.fWCLPCambioPagDataGridViewCheckBoxColumn.HeaderText = "FW_CL_P_CambioPag";
-            this.fWCLPCambioPagDataGridViewCheckBoxColumn.Name = "fWCLPCambioPagDataGridViewCheckBoxColumn";
-            this.fWCLPCambioPagDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.fWCLPCambioPagDataGridViewCheckBoxColumn.Visible = false;
-            // 
-            // fWCLPCambioRicDataGridViewCheckBoxColumn
-            // 
-            this.fWCLPCambioRicDataGridViewCheckBoxColumn.DataPropertyName = "FW_CL_P_CambioRic";
-            this.fWCLPCambioRicDataGridViewCheckBoxColumn.HeaderText = "FW_CL_P_CambioRic";
-            this.fWCLPCambioRicDataGridViewCheckBoxColumn.Name = "fWCLPCambioRicDataGridViewCheckBoxColumn";
-            this.fWCLPCambioRicDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.fWCLPCambioRicDataGridViewCheckBoxColumn.Visible = false;
-            // 
-            // fWCLPIVLedDataGridViewCheckBoxColumn
-            // 
-            this.fWCLPIVLedDataGridViewCheckBoxColumn.DataPropertyName = "FW_CL_P_IVLed";
-            this.fWCLPIVLedDataGridViewCheckBoxColumn.HeaderText = "FW_CL_P_IVLed";
-            this.fWCLPIVLedDataGridViewCheckBoxColumn.Name = "fWCLPIVLedDataGridViewCheckBoxColumn";
-            this.fWCLPIVLedDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.fWCLPIVLedDataGridViewCheckBoxColumn.Visible = false;
-            // 
-            // fWCLPMotRimDataGridViewCheckBoxColumn
-            // 
-            this.fWCLPMotRimDataGridViewCheckBoxColumn.DataPropertyName = "FW_CL_P_MotRim";
-            this.fWCLPMotRimDataGridViewCheckBoxColumn.HeaderText = "FW_CL_P_MotRim";
-            this.fWCLPMotRimDataGridViewCheckBoxColumn.Name = "fWCLPMotRimDataGridViewCheckBoxColumn";
-            this.fWCLPMotRimDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.fWCLPMotRimDataGridViewCheckBoxColumn.Visible = false;
-            // 
-            // fWCLPFwRAbbinatoDataGridViewTextBoxColumn
-            // 
-            this.fWCLPFwRAbbinatoDataGridViewTextBoxColumn.DataPropertyName = "FW_CL_P_FwRAbbinato";
-            this.fWCLPFwRAbbinatoDataGridViewTextBoxColumn.HeaderText = "FW_CL_P_FwRAbbinato";
-            this.fWCLPFwRAbbinatoDataGridViewTextBoxColumn.Name = "fWCLPFwRAbbinatoDataGridViewTextBoxColumn";
-            this.fWCLPFwRAbbinatoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fWCLPFwRAbbinatoDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // fWCLPNumRicevitoriDataGridViewTextBoxColumn
-            // 
-            this.fWCLPNumRicevitoriDataGridViewTextBoxColumn.DataPropertyName = "FW_CL_P_NumRicevitori";
-            this.fWCLPNumRicevitoriDataGridViewTextBoxColumn.HeaderText = "FW_CL_P_NumRicevitori";
-            this.fWCLPNumRicevitoriDataGridViewTextBoxColumn.Name = "fWCLPNumRicevitoriDataGridViewTextBoxColumn";
-            this.fWCLPNumRicevitoriDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fWCLPNumRicevitoriDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // fWCLPObsoleteverDataGridViewCheckBoxColumn
-            // 
-            this.fWCLPObsoleteverDataGridViewCheckBoxColumn.DataPropertyName = "FW_CL_P_Obsolete_ver";
-            this.fWCLPObsoleteverDataGridViewCheckBoxColumn.HeaderText = "FW_CL_P_Obsolete_ver";
-            this.fWCLPObsoleteverDataGridViewCheckBoxColumn.Name = "fWCLPObsoleteverDataGridViewCheckBoxColumn";
-            this.fWCLPObsoleteverDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.fWCLPObsoleteverDataGridViewCheckBoxColumn.Visible = false;
-            // 
-            // fWCLPObsoleteverfromdateDataGridViewTextBoxColumn
-            // 
-            this.fWCLPObsoleteverfromdateDataGridViewTextBoxColumn.DataPropertyName = "FW_CL_P_Obsolete_ver_from_date";
-            this.fWCLPObsoleteverfromdateDataGridViewTextBoxColumn.HeaderText = "FW_CL_P_Obsolete_ver_from_date";
-            this.fWCLPObsoleteverfromdateDataGridViewTextBoxColumn.Name = "fWCLPObsoleteverfromdateDataGridViewTextBoxColumn";
-            this.fWCLPObsoleteverfromdateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fWCLPObsoleteverfromdateDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // fWCLPRevisioniDataGridViewTextBoxColumn
-            // 
-            this.fWCLPRevisioniDataGridViewTextBoxColumn.DataPropertyName = "FW_CL_P_Revisioni";
-            this.fWCLPRevisioniDataGridViewTextBoxColumn.HeaderText = "FW_CL_P_Revisioni";
-            this.fWCLPRevisioniDataGridViewTextBoxColumn.Name = "fWCLPRevisioniDataGridViewTextBoxColumn";
-            this.fWCLPRevisioniDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fWCLPRevisioniDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // fWCLPFunzionamentoDataGridViewTextBoxColumn
-            // 
-            this.fWCLPFunzionamentoDataGridViewTextBoxColumn.DataPropertyName = "FW_CL_P_Funzionamento";
-            this.fWCLPFunzionamentoDataGridViewTextBoxColumn.HeaderText = "FW_CL_P_Funzionamento";
-            this.fWCLPFunzionamentoDataGridViewTextBoxColumn.Name = "fWCLPFunzionamentoDataGridViewTextBoxColumn";
-            this.fWCLPFunzionamentoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fWCLPFunzionamentoDataGridViewTextBoxColumn.Visible = false;
             // 
             // Firmware_BindingSource
             // 
@@ -1476,6 +1289,178 @@
             // 
             this.Firmware_TableAdapter.ClearBeforeFill = true;
             // 
+            // fW_CL_RicevitoriTableAdapter
+            // 
+            this.fW_CL_RicevitoriTableAdapter.ClearBeforeFill = true;
+            // 
+            // fWCLPIDDataGridViewTextBoxColumn
+            // 
+            this.fWCLPIDDataGridViewTextBoxColumn.DataPropertyName = "FW_CL_P_ID";
+            this.fWCLPIDDataGridViewTextBoxColumn.HeaderText = "FW_CL_P_ID";
+            this.fWCLPIDDataGridViewTextBoxColumn.Name = "fWCLPIDDataGridViewTextBoxColumn";
+            this.fWCLPIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fWCLPSWCodeDataGridViewTextBoxColumn
+            // 
+            this.fWCLPSWCodeDataGridViewTextBoxColumn.DataPropertyName = "FW_CL_P_SW_Code";
+            this.fWCLPSWCodeDataGridViewTextBoxColumn.HeaderText = "FW_CL_P_SW_Code";
+            this.fWCLPSWCodeDataGridViewTextBoxColumn.Name = "fWCLPSWCodeDataGridViewTextBoxColumn";
+            this.fWCLPSWCodeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fWCLPSWVersioneDataGridViewTextBoxColumn
+            // 
+            this.fWCLPSWVersioneDataGridViewTextBoxColumn.DataPropertyName = "FW_CL_P_SW_Versione";
+            this.fWCLPSWVersioneDataGridViewTextBoxColumn.HeaderText = "FW_CL_P_SW_Versione";
+            this.fWCLPSWVersioneDataGridViewTextBoxColumn.Name = "fWCLPSWVersioneDataGridViewTextBoxColumn";
+            this.fWCLPSWVersioneDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fWCLPSWRevisioneDataGridViewTextBoxColumn
+            // 
+            this.fWCLPSWRevisioneDataGridViewTextBoxColumn.DataPropertyName = "FW_CL_P_SW_Revisione";
+            this.fWCLPSWRevisioneDataGridViewTextBoxColumn.HeaderText = "FW_CL_P_SW_Revisione";
+            this.fWCLPSWRevisioneDataGridViewTextBoxColumn.Name = "fWCLPSWRevisioneDataGridViewTextBoxColumn";
+            this.fWCLPSWRevisioneDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fWCLPTipoDevDataGridViewTextBoxColumn
+            // 
+            this.fWCLPTipoDevDataGridViewTextBoxColumn.DataPropertyName = "FW_CL_P_TipoDev";
+            this.fWCLPTipoDevDataGridViewTextBoxColumn.HeaderText = "FW_CL_P_TipoDev";
+            this.fWCLPTipoDevDataGridViewTextBoxColumn.Name = "fWCLPTipoDevDataGridViewTextBoxColumn";
+            this.fWCLPTipoDevDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fWCLPFreqDataGridViewTextBoxColumn
+            // 
+            this.fWCLPFreqDataGridViewTextBoxColumn.DataPropertyName = "FW_CL_P_Freq";
+            this.fWCLPFreqDataGridViewTextBoxColumn.HeaderText = "FW_CL_P_Freq";
+            this.fWCLPFreqDataGridViewTextBoxColumn.Name = "fWCLPFreqDataGridViewTextBoxColumn";
+            this.fWCLPFreqDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fWCLPCanBusDataGridViewCheckBoxColumn
+            // 
+            this.fWCLPCanBusDataGridViewCheckBoxColumn.DataPropertyName = "FW_CL_P_CanBus";
+            this.fWCLPCanBusDataGridViewCheckBoxColumn.HeaderText = "FW_CL_P_CanBus";
+            this.fWCLPCanBusDataGridViewCheckBoxColumn.Name = "fWCLPCanBusDataGridViewCheckBoxColumn";
+            this.fWCLPCanBusDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
+            // fWCLPRetroillDataGridViewCheckBoxColumn
+            // 
+            this.fWCLPRetroillDataGridViewCheckBoxColumn.DataPropertyName = "FW_CL_P_Retroill";
+            this.fWCLPRetroillDataGridViewCheckBoxColumn.HeaderText = "FW_CL_P_Retroill";
+            this.fWCLPRetroillDataGridViewCheckBoxColumn.Name = "fWCLPRetroillDataGridViewCheckBoxColumn";
+            this.fWCLPRetroillDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
+            // fWCLPSPAttivoDataGridViewCheckBoxColumn
+            // 
+            this.fWCLPSPAttivoDataGridViewCheckBoxColumn.DataPropertyName = "FW_CL_P_SPAttivo";
+            this.fWCLPSPAttivoDataGridViewCheckBoxColumn.HeaderText = "FW_CL_P_SPAttivo";
+            this.fWCLPSPAttivoDataGridViewCheckBoxColumn.Name = "fWCLPSPAttivoDataGridViewCheckBoxColumn";
+            this.fWCLPSPAttivoDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
+            // fWCLPSPPassivoDataGridViewCheckBoxColumn
+            // 
+            this.fWCLPSPPassivoDataGridViewCheckBoxColumn.DataPropertyName = "FW_CL_P_SPPassivo";
+            this.fWCLPSPPassivoDataGridViewCheckBoxColumn.HeaderText = "FW_CL_P_SPPassivo";
+            this.fWCLPSPPassivoDataGridViewCheckBoxColumn.Name = "fWCLPSPPassivoDataGridViewCheckBoxColumn";
+            this.fWCLPSPPassivoDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
+            // fWCLPAccelDataGridViewCheckBoxColumn
+            // 
+            this.fWCLPAccelDataGridViewCheckBoxColumn.DataPropertyName = "FW_CL_P_Accel";
+            this.fWCLPAccelDataGridViewCheckBoxColumn.HeaderText = "FW_CL_P_Accel";
+            this.fWCLPAccelDataGridViewCheckBoxColumn.Name = "fWCLPAccelDataGridViewCheckBoxColumn";
+            this.fWCLPAccelDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
+            // fWCLPBuzzerDataGridViewCheckBoxColumn
+            // 
+            this.fWCLPBuzzerDataGridViewCheckBoxColumn.DataPropertyName = "FW_CL_P_Buzzer";
+            this.fWCLPBuzzerDataGridViewCheckBoxColumn.HeaderText = "FW_CL_P_Buzzer";
+            this.fWCLPBuzzerDataGridViewCheckBoxColumn.Name = "fWCLPBuzzerDataGridViewCheckBoxColumn";
+            this.fWCLPBuzzerDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
+            // fWCLPVibracallDataGridViewCheckBoxColumn
+            // 
+            this.fWCLPVibracallDataGridViewCheckBoxColumn.DataPropertyName = "FW_CL_P_Vibracall";
+            this.fWCLPVibracallDataGridViewCheckBoxColumn.HeaderText = "FW_CL_P_Vibracall";
+            this.fWCLPVibracallDataGridViewCheckBoxColumn.Name = "fWCLPVibracallDataGridViewCheckBoxColumn";
+            this.fWCLPVibracallDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
+            // fWCLPTorciaDataGridViewCheckBoxColumn
+            // 
+            this.fWCLPTorciaDataGridViewCheckBoxColumn.DataPropertyName = "FW_CL_P_Torcia";
+            this.fWCLPTorciaDataGridViewCheckBoxColumn.HeaderText = "FW_CL_P_Torcia";
+            this.fWCLPTorciaDataGridViewCheckBoxColumn.Name = "fWCLPTorciaDataGridViewCheckBoxColumn";
+            this.fWCLPTorciaDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
+            // fWCLPCambioPagDataGridViewCheckBoxColumn
+            // 
+            this.fWCLPCambioPagDataGridViewCheckBoxColumn.DataPropertyName = "FW_CL_P_CambioPag";
+            this.fWCLPCambioPagDataGridViewCheckBoxColumn.HeaderText = "FW_CL_P_CambioPag";
+            this.fWCLPCambioPagDataGridViewCheckBoxColumn.Name = "fWCLPCambioPagDataGridViewCheckBoxColumn";
+            this.fWCLPCambioPagDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
+            // fWCLPCambioRicDataGridViewCheckBoxColumn
+            // 
+            this.fWCLPCambioRicDataGridViewCheckBoxColumn.DataPropertyName = "FW_CL_P_CambioRic";
+            this.fWCLPCambioRicDataGridViewCheckBoxColumn.HeaderText = "FW_CL_P_CambioRic";
+            this.fWCLPCambioRicDataGridViewCheckBoxColumn.Name = "fWCLPCambioRicDataGridViewCheckBoxColumn";
+            this.fWCLPCambioRicDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
+            // fWCLPIVLedDataGridViewCheckBoxColumn
+            // 
+            this.fWCLPIVLedDataGridViewCheckBoxColumn.DataPropertyName = "FW_CL_P_IVLed";
+            this.fWCLPIVLedDataGridViewCheckBoxColumn.HeaderText = "FW_CL_P_IVLed";
+            this.fWCLPIVLedDataGridViewCheckBoxColumn.Name = "fWCLPIVLedDataGridViewCheckBoxColumn";
+            this.fWCLPIVLedDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
+            // fWCLPMotRimDataGridViewCheckBoxColumn
+            // 
+            this.fWCLPMotRimDataGridViewCheckBoxColumn.DataPropertyName = "FW_CL_P_MotRim";
+            this.fWCLPMotRimDataGridViewCheckBoxColumn.HeaderText = "FW_CL_P_MotRim";
+            this.fWCLPMotRimDataGridViewCheckBoxColumn.Name = "fWCLPMotRimDataGridViewCheckBoxColumn";
+            this.fWCLPMotRimDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
+            // fWCLPFwRAbbinatoDataGridViewTextBoxColumn
+            // 
+            this.fWCLPFwRAbbinatoDataGridViewTextBoxColumn.DataPropertyName = "FW_CL_P_FwRAbbinato";
+            this.fWCLPFwRAbbinatoDataGridViewTextBoxColumn.HeaderText = "FW_CL_P_FwRAbbinato";
+            this.fWCLPFwRAbbinatoDataGridViewTextBoxColumn.Name = "fWCLPFwRAbbinatoDataGridViewTextBoxColumn";
+            this.fWCLPFwRAbbinatoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fWCLPNumRicevitoriDataGridViewTextBoxColumn
+            // 
+            this.fWCLPNumRicevitoriDataGridViewTextBoxColumn.DataPropertyName = "FW_CL_P_NumRicevitori";
+            this.fWCLPNumRicevitoriDataGridViewTextBoxColumn.HeaderText = "FW_CL_P_NumRicevitori";
+            this.fWCLPNumRicevitoriDataGridViewTextBoxColumn.Name = "fWCLPNumRicevitoriDataGridViewTextBoxColumn";
+            this.fWCLPNumRicevitoriDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fWCLPObsoleteverDataGridViewCheckBoxColumn
+            // 
+            this.fWCLPObsoleteverDataGridViewCheckBoxColumn.DataPropertyName = "FW_CL_P_Obsolete_ver";
+            this.fWCLPObsoleteverDataGridViewCheckBoxColumn.HeaderText = "FW_CL_P_Obsolete_ver";
+            this.fWCLPObsoleteverDataGridViewCheckBoxColumn.Name = "fWCLPObsoleteverDataGridViewCheckBoxColumn";
+            this.fWCLPObsoleteverDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
+            // fWCLPObsoleteverfromdateDataGridViewTextBoxColumn
+            // 
+            this.fWCLPObsoleteverfromdateDataGridViewTextBoxColumn.DataPropertyName = "FW_CL_P_Obsolete_ver_from_date";
+            this.fWCLPObsoleteverfromdateDataGridViewTextBoxColumn.HeaderText = "FW_CL_P_Obsolete_ver_from_date";
+            this.fWCLPObsoleteverfromdateDataGridViewTextBoxColumn.Name = "fWCLPObsoleteverfromdateDataGridViewTextBoxColumn";
+            this.fWCLPObsoleteverfromdateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fWCLPRevisioniDataGridViewTextBoxColumn
+            // 
+            this.fWCLPRevisioniDataGridViewTextBoxColumn.DataPropertyName = "FW_CL_P_Revisioni";
+            this.fWCLPRevisioniDataGridViewTextBoxColumn.HeaderText = "FW_CL_P_Revisioni";
+            this.fWCLPRevisioniDataGridViewTextBoxColumn.Name = "fWCLPRevisioniDataGridViewTextBoxColumn";
+            this.fWCLPRevisioniDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fWCLPFunzionamentoDataGridViewTextBoxColumn
+            // 
+            this.fWCLPFunzionamentoDataGridViewTextBoxColumn.DataPropertyName = "FW_CL_P_Funzionamento";
+            this.fWCLPFunzionamentoDataGridViewTextBoxColumn.HeaderText = "FW_CL_P_Funzionamento";
+            this.fWCLPFunzionamentoDataGridViewTextBoxColumn.Name = "fWCLPFunzionamentoDataGridViewTextBoxColumn";
+            this.fWCLPFunzionamentoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // UC_FW_P_Classic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1600,6 +1585,9 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private MetroFramework.Controls.MetroLabel metroLabel9;
         private MetroFramework.Controls.MetroTextBox tb_fwAbbinato;
+        private MetroFramework.Controls.MetroPanel box_Separatore_01;
+        private MetroFramework.Controls.MetroPanel box_Separatore_02;
+        private ds_CL_FirmwareTableAdapters.FW_CL_RicevitoriTableAdapter fW_CL_RicevitoriTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn fWCLPIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fWCLPSWCodeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fWCLPSWVersioneDataGridViewTextBoxColumn;
@@ -1624,7 +1612,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fWCLPObsoleteverfromdateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fWCLPRevisioniDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fWCLPFunzionamentoDataGridViewTextBoxColumn;
-        private MetroFramework.Controls.MetroPanel box_Separatore_01;
-        private MetroFramework.Controls.MetroPanel metroPanel1;
     }
 }

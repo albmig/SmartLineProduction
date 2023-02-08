@@ -805,6 +805,9 @@
       <DependentUpon>ds_CL_Firmware.xsd</DependentUpon>
     </None>
     <None Include="ds_CL_Firmware.xsd" />
+    <None Include="ds_CL_Firmware.xss">
+      <DependentUpon>ds_CL_Firmware.xsd</DependentUpon>
+    </None>
     <None Include="ds_Eventi.xsc">
       <DependentUpon>ds_Eventi.xsd</DependentUpon>
     </None>

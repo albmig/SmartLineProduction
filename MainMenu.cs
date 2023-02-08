@@ -649,7 +649,19 @@ namespace SmartLineProduction
             uC_FW_P_Classic.MdiParent = this;
             uC_FW_P_Classic.Dock = DockStyle.Fill;
             uC_FW_P_Classic.Show();
+        }
 
+        private void fWRicevitoriClassicToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GVar.CloseSplash = false;
+            Splash SplashDB = new Splash();
+            SplashDB.Show();
+
+            UC_FW_R_Classic uC_FW_R_Classic = new UC_FW_R_Classic();
+            SplashDB.Close();
+            uC_FW_R_Classic.MdiParent = this;
+            uC_FW_R_Classic.Dock = DockStyle.Fill;
+            uC_FW_R_Classic.Show();
         }
     }
 }
