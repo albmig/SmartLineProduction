@@ -91,6 +91,8 @@
             this.metroLabel20 = new MetroFramework.Controls.MetroLabel();
             this.panel_FW_P = new MetroFramework.Controls.MetroPanel();
             this.gv_FW_P = new MetroFramework.Controls.MetroGrid();
+            this.fWCLPSWCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FW_CL_P_SW_Revisione = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CL_Palmari_BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel_filter_FW = new MetroFramework.Controls.MetroPanel();
             this.radio_FW_active = new MetroFramework.Controls.MetroRadioButton();
@@ -112,8 +114,6 @@
             this.CL_Famiglie_TableAdapter = new SmartLineProduction.ds_CL_FirmwareTableAdapters.FW_CL_FamiglieTableAdapter();
             this.CL_Ricevitori_BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.CL_Ricevitori_TableAdapter = new SmartLineProduction.ds_CL_FirmwareTableAdapters.FW_CL_RicevitoriTableAdapter();
-            this.fWCLPSWCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FW_CL_P_SW_Revisione = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.layout_dati.SuspendLayout();
             this.panel_intestazione.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -1041,6 +1041,23 @@
             this.gv_FW_P.UseCustomForeColor = true;
             this.gv_FW_P.UseStyleColors = true;
             // 
+            // fWCLPSWCodeDataGridViewTextBoxColumn
+            // 
+            this.fWCLPSWCodeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.fWCLPSWCodeDataGridViewTextBoxColumn.DataPropertyName = "FW_CL_P_SW_Code";
+            this.fWCLPSWCodeDataGridViewTextBoxColumn.HeaderText = "FW_CL_P_SW_Code";
+            this.fWCLPSWCodeDataGridViewTextBoxColumn.Name = "fWCLPSWCodeDataGridViewTextBoxColumn";
+            this.fWCLPSWCodeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // FW_CL_P_SW_Revisione
+            // 
+            this.FW_CL_P_SW_Revisione.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.FW_CL_P_SW_Revisione.DataPropertyName = "FW_CL_P_SW_Revisione";
+            this.FW_CL_P_SW_Revisione.HeaderText = "FW_CL_P_SW_Revisione";
+            this.FW_CL_P_SW_Revisione.Name = "FW_CL_P_SW_Revisione";
+            this.FW_CL_P_SW_Revisione.ReadOnly = true;
+            this.FW_CL_P_SW_Revisione.Width = 5;
+            // 
             // CL_Palmari_BindingSource
             // 
             this.CL_Palmari_BindingSource.DataMember = "FW_CL_Palmari";
@@ -1255,23 +1272,6 @@
             // CL_Ricevitori_TableAdapter
             // 
             this.CL_Ricevitori_TableAdapter.ClearBeforeFill = true;
-            // 
-            // fWCLPSWCodeDataGridViewTextBoxColumn
-            // 
-            this.fWCLPSWCodeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.fWCLPSWCodeDataGridViewTextBoxColumn.DataPropertyName = "FW_CL_P_SW_Code";
-            this.fWCLPSWCodeDataGridViewTextBoxColumn.HeaderText = "FW_CL_P_SW_Code";
-            this.fWCLPSWCodeDataGridViewTextBoxColumn.Name = "fWCLPSWCodeDataGridViewTextBoxColumn";
-            this.fWCLPSWCodeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // FW_CL_P_SW_Revisione
-            // 
-            this.FW_CL_P_SW_Revisione.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.FW_CL_P_SW_Revisione.DataPropertyName = "FW_CL_P_SW_Revisione";
-            this.FW_CL_P_SW_Revisione.HeaderText = "FW_CL_P_SW_Revisione";
-            this.FW_CL_P_SW_Revisione.Name = "FW_CL_P_SW_Revisione";
-            this.FW_CL_P_SW_Revisione.ReadOnly = true;
-            this.FW_CL_P_SW_Revisione.Width = 5;
             // 
             // UC_FW_P_Classic
             // 

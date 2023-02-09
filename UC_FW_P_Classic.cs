@@ -409,6 +409,10 @@ namespace SmartLineProduction
             if (ver.Length > 5) { MessageBox.Show("Errore di digitazione! La versione non può essere superiore a 5 caratteri!"); tb_gv_Versione.Focus(); return; }
             if (ver.Length < 5) { string padded = ver.PadLeft(5, '0'); tb_gv_Versione.Text = padded; tb_gv_Versione.Refresh(); }
 
+            //Verifica se già presente
+            int contarec = (int)this.CL_Palmari_TableAdapter.Get_Version_Exists(tb_gv_Versione.Text);
+            if (contarec != 0) { MessageBox.Show("Questa versione di firmware è già presente!"); tb_gv_Versione.Text = string.Empty; tb_gv_Versione.Focus(); return; }
+
             CreaCodice();
         }
 

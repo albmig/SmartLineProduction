@@ -207,11 +207,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ds_ClassicDS.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ds_CL_Firmware.cs">
-      <DependentUpon>ds_CL_Firmware.xsd</DependentUpon>
-    </Compile>
     <Compile Include="ds_CL_Firmware.Designer.cs">
-      <DependentUpon>ds_CL_Firmware.cs</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_CL_Firmware.xsd</DependentUpon>
     </Compile>
     <Compile Include="ds_Eventi.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -804,7 +803,11 @@
     <None Include="ds_CL_Firmware.xsc">
       <DependentUpon>ds_CL_Firmware.xsd</DependentUpon>
     </None>
-    <None Include="ds_CL_Firmware.xsd" />
+    <None Include="ds_CL_Firmware.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_CL_Firmware.Designer.cs</LastGenOutput>
+    </None>
     <None Include="ds_CL_Firmware.xss">
       <DependentUpon>ds_CL_Firmware.xsd</DependentUpon>
     </None>

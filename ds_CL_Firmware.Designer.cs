@@ -3590,11 +3590,17 @@ SELECT FW_CL_P_ID, FW_CL_P_SW_Code, FW_CL_P_SW_Versione, FW_CL_P_SW_Revisione, F
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT FW_CL_P_ID, FW_CL_P_SW_Code, FW_CL_P_SW_Versione, FW_CL_P_SW_Revisione, FW_CL_P_TipoDev, FW_CL_P_Freq, FW_CL_P_CanBus, FW_CL_P_Retroill, FW_CL_P_SPAttivo, FW_CL_P_SPPassivo, FW_CL_P_Accel, FW_CL_P_Buzzer, FW_CL_P_Vibracall, FW_CL_P_Torcia, FW_CL_P_CambioPag, FW_CL_P_CambioRic, FW_CL_P_IVLed, FW_CL_P_MotRim, FW_CL_P_FwRAbbinato, FW_CL_P_NumRicevitori, FW_CL_P_Obsolete_ver, FW_CL_P_Obsolete_ver_from_date, FW_CL_P_Revisioni, FW_CL_P_Funzionamento FROM dbo.FW_CL_Palmari";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT        COUNT(*) AS Expr1\r\nFROM            FW_CL_Palmari\r\nWHERE        (FW_" +
+                "CL_P_SW_Versione = @CodVersione)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodVersione", global::System.Data.SqlDbType.VarChar, 6, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_P_SW_Versione", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4076,6 +4082,40 @@ SELECT FW_CL_P_ID, FW_CL_P_SW_Code, FW_CL_P_SW_Versione, FW_CL_P_SW_Revisione, F
                     global::System.Nullable<global::System.DateTime> Original_FW_CL_P_Obsolete_ver_from_date) {
             return this.Update(FW_CL_P_SW_Code, FW_CL_P_SW_Versione, FW_CL_P_SW_Revisione, FW_CL_P_TipoDev, FW_CL_P_Freq, FW_CL_P_CanBus, FW_CL_P_Retroill, FW_CL_P_SPAttivo, FW_CL_P_SPPassivo, FW_CL_P_Accel, FW_CL_P_Buzzer, FW_CL_P_Vibracall, FW_CL_P_Torcia, FW_CL_P_CambioPag, FW_CL_P_CambioRic, FW_CL_P_IVLed, FW_CL_P_MotRim, FW_CL_P_FwRAbbinato, FW_CL_P_NumRicevitori, FW_CL_P_Obsolete_ver, FW_CL_P_Obsolete_ver_from_date, FW_CL_P_Revisioni, FW_CL_P_Funzionamento, Original_FW_CL_P_ID, Original_FW_CL_P_SW_Code, Original_FW_CL_P_SW_Versione, Original_FW_CL_P_SW_Revisione, Original_FW_CL_P_TipoDev, Original_FW_CL_P_Freq, Original_FW_CL_P_CanBus, Original_FW_CL_P_Retroill, Original_FW_CL_P_SPAttivo, Original_FW_CL_P_SPPassivo, Original_FW_CL_P_Accel, Original_FW_CL_P_Buzzer, Original_FW_CL_P_Vibracall, Original_FW_CL_P_Torcia, Original_FW_CL_P_CambioPag, Original_FW_CL_P_CambioRic, Original_FW_CL_P_IVLed, Original_FW_CL_P_MotRim, Original_FW_CL_P_NumRicevitori, Original_FW_CL_P_Obsolete_ver, Original_FW_CL_P_Obsolete_ver_from_date, Original_FW_CL_P_ID);
         }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual global::System.Nullable<int> Get_Version_Exists(string CodVersione) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            if ((CodVersione == null)) {
+                throw new global::System.ArgumentNullException("CodVersione");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(CodVersione));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return new global::System.Nullable<int>();
+            }
+            else {
+                return new global::System.Nullable<int>(((int)(returnValue)));
+            }
+        }
     }
     
     /// <summary>
@@ -4470,9 +4510,10 @@ SELECT FW_CL_P_ID, FW_CL_P_SW_Code, FW_CL_P_SW_Versione, FW_CL_P_SW_Revisione, F
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        MAX(FW_CL_R_SW_Versione) AS Expr1\r\nFROM            FW_CL_Ricevitori" +
-                "";
+            this._commandCollection[1].CommandText = "SELECT COUNT(*) FROM FW_CL_Ricevitori\r\nWHERE        (FW_CL_R_SW_Versione = @CodVe" +
+                "rsione)\r\n";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodVersione", global::System.Data.SqlDbType.VarChar, 6, global::System.Data.ParameterDirection.Input, 0, 0, "FW_CL_R_SW_Versione", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5042,8 +5083,14 @@ SELECT FW_CL_P_ID, FW_CL_P_SW_Code, FW_CL_P_SW_Versione, FW_CL_P_SW_Revisione, F
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual string getMaxVersione() {
+        public virtual global::System.Nullable<int> Get_Version_Exists(string CodVersione) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            if ((CodVersione == null)) {
+                throw new global::System.ArgumentNullException("CodVersione");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(CodVersione));
+            }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5060,10 +5107,10 @@ SELECT FW_CL_P_ID, FW_CL_P_SW_Code, FW_CL_P_SW_Versione, FW_CL_P_SW_Revisione, F
             }
             if (((returnValue == null) 
                         || (returnValue.GetType() == typeof(global::System.DBNull)))) {
-                return null;
+                return new global::System.Nullable<int>();
             }
             else {
-                return ((string)(returnValue));
+                return new global::System.Nullable<int>(((int)(returnValue)));
             }
         }
     }

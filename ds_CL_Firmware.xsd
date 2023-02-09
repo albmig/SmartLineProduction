@@ -4,12 +4,12 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SISTEMATICA_FACTORYConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SISTEMATICA_FACTORYConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SmartLineProduction.Properties.Settings.GlobalReference.Default.SISTEMATICA_FACTORYConnectionString1" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SISTEMATICA_FACTORYConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SISTEMATICA_FACTORYConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SmartLineProduction.Properties.Settings.GlobalReference.Default.SISTEMATICA_FACTORYConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FW_CL_FamiglieTableAdapter" GeneratorDataComponentClassName="FW_CL_FamiglieTableAdapter" Name="FW_CL_Famiglie" UserDataComponentName="FW_CL_FamiglieTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionString1 (Settings)" DbObjectName="SISTEMATICA_FACTORY.dbo.FW_CL_Famiglie" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionString (Settings)" DbObjectName="SISTEMATICA_FACTORY.dbo.FW_CL_Famiglie" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[FW_CL_Famiglie] WHERE (([FW_CL_Fam_ID] = @Original_FW_CL_Fam_ID) AND ((@IsNull_FW_CL_Fam_TipoDev = 1 AND [FW_CL_Fam_TipoDev] IS NULL) OR ([FW_CL_Fam_TipoDev] = @Original_FW_CL_Fam_TipoDev)))</CommandText>
@@ -61,7 +61,7 @@ SELECT FW_CL_Fam_ID, FW_CL_Fam_Des, FW_CL_Fam_TipoDev FROM FW_CL_Famiglie WHERE 
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FW_CL_PalmariTableAdapter" GeneratorDataComponentClassName="FW_CL_PalmariTableAdapter" Name="FW_CL_Palmari" UserDataComponentName="FW_CL_PalmariTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionString1 (Settings)" DbObjectName="SISTEMATICA_FACTORY.dbo.FW_CL_Palmari" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionString (Settings)" DbObjectName="SISTEMATICA_FACTORY.dbo.FW_CL_Palmari" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[FW_CL_Palmari] WHERE (([FW_CL_P_ID] = @Original_FW_CL_P_ID) AND ([FW_CL_P_SW_Code] = @Original_FW_CL_P_SW_Code) AND ([FW_CL_P_SW_Versione] = @Original_FW_CL_P_SW_Versione) AND ([FW_CL_P_SW_Revisione] = @Original_FW_CL_P_SW_Revisione) AND ([FW_CL_P_TipoDev] = @Original_FW_CL_P_TipoDev) AND ([FW_CL_P_Freq] = @Original_FW_CL_P_Freq) AND ([FW_CL_P_CanBus] = @Original_FW_CL_P_CanBus) AND ([FW_CL_P_Retroill] = @Original_FW_CL_P_Retroill) AND ([FW_CL_P_SPAttivo] = @Original_FW_CL_P_SPAttivo) AND ([FW_CL_P_SPPassivo] = @Original_FW_CL_P_SPPassivo) AND ([FW_CL_P_Accel] = @Original_FW_CL_P_Accel) AND ([FW_CL_P_Buzzer] = @Original_FW_CL_P_Buzzer) AND ([FW_CL_P_Vibracall] = @Original_FW_CL_P_Vibracall) AND ([FW_CL_P_Torcia] = @Original_FW_CL_P_Torcia) AND ([FW_CL_P_CambioPag] = @Original_FW_CL_P_CambioPag) AND ([FW_CL_P_CambioRic] = @Original_FW_CL_P_CambioRic) AND ([FW_CL_P_IVLed] = @Original_FW_CL_P_IVLed) AND ([FW_CL_P_MotRim] = @Original_FW_CL_P_MotRim) AND ([FW_CL_P_NumRicevitori] = @Original_FW_CL_P_NumRicevitori) AND ([FW_CL_P_Obsolete_ver] = @Original_FW_CL_P_Obsolete_ver) AND ((@IsNull_FW_CL_P_Obsolete_ver_from_date = 1 AND [FW_CL_P_Obsolete_ver_from_date] IS NULL) OR ([FW_CL_P_Obsolete_ver_from_date] = @Original_FW_CL_P_Obsolete_ver_from_date)))</CommandText>
@@ -210,11 +210,24 @@ SELECT FW_CL_P_ID, FW_CL_P_SW_Code, FW_CL_P_SW_Versione, FW_CL_P_SW_Revisione, F
               <Mapping SourceColumn="FW_CL_P_Revisioni" DataSetColumn="FW_CL_P_Revisioni" />
               <Mapping SourceColumn="FW_CL_P_Funzionamento" DataSetColumn="FW_CL_P_Funzionamento" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Get_Version_Exists" Modifier="Public" Name="Get_Version_Exists" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="Get_Version_Exists">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        COUNT(*) AS Expr1
+FROM            FW_CL_Palmari
+WHERE        (FW_CL_P_SW_Versione = @CodVersione)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="CodVersione" ColumnName="FW_CL_P_SW_Versione" DataSourceName="SISTEMATICA_FACTORY.dbo.FW_CL_Palmari" DataTypeServer="varchar(6)" DbType="AnsiString" Direction="Input" ParameterName="@CodVersione" Precision="0" ProviderType="VarChar" Scale="0" Size="6" SourceColumn="FW_CL_P_SW_Versione" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FW_CL_RicevitoriTableAdapter" GeneratorDataComponentClassName="FW_CL_RicevitoriTableAdapter" Name="FW_CL_Ricevitori" UserDataComponentName="FW_CL_RicevitoriTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionString1 (Settings)" DbObjectName="SISTEMATICA_FACTORY.dbo.FW_CL_Ricevitori" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionString (Settings)" DbObjectName="SISTEMATICA_FACTORY.dbo.FW_CL_Ricevitori" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[FW_CL_Ricevitori] WHERE (([FW_CL_R_ID] = @Original_FW_CL_R_ID) AND ([FW_CL_R_SW_Code] = @Original_FW_CL_R_SW_Code) AND ([FW_CL_R_SW_Versione] = @Original_FW_CL_R_SW_Versione) AND ([FW_CL_R_SW_Revisione] = @Original_FW_CL_R_SW_Revisione) AND ([FW_CL_R_TipoDev] = @Original_FW_CL_R_TipoDev) AND ([FW_CL_R_Freq] = @Original_FW_CL_R_Freq) AND ([FW_CL_R_CanBus] = @Original_FW_CL_R_CanBus) AND ([FW_CL_R_SPAttivo] = @Original_FW_CL_R_SPAttivo) AND ([FW_CL_R_SPPassivo] = @Original_FW_CL_R_SPPassivo) AND ([FW_CL_R_CambioPag] = @Original_FW_CL_R_CambioPag) AND ([FW_CL_R_CambioRic] = @Original_FW_CL_R_CambioRic) AND ((@IsNull_FW_CL_R_MotRim = 1 AND [FW_CL_R_MotRim] IS NULL) OR ([FW_CL_R_MotRim] = @Original_FW_CL_R_MotRim)) AND ([FW_CL_R_NumPalmari] = @Original_FW_CL_R_NumPalmari) AND ([FW_CL_R_MasterOutput] = @Original_FW_CL_R_MasterOutput) AND ([FW_CL_R_EmergencyOutput] = @Original_FW_CL_R_EmergencyOutput) AND ([FW_CL_R_ProportionalOutput] = @Original_FW_CL_R_ProportionalOutput) AND ([FW_CL_R_NumOutput] = @Original_FW_CL_R_NumOutput) AND ([FW_CL_R_NumInputAn] = @Original_FW_CL_R_NumInputAn) AND ([FW_CL_R_NumInputDig] = @Original_FW_CL_R_NumInputDig) AND ([FW_CL_R_TimeOut] = @Original_FW_CL_R_TimeOut) AND ([FW_CL_R_ContempTasti] = @Original_FW_CL_R_ContempTasti) AND ([FW_CL_R_PlugConfig] = @Original_FW_CL_R_PlugConfig) AND ([FW_CL_R_Golden] = @Original_FW_CL_R_Golden) AND ([FW_CL_R_AutoPairing] = @Original_FW_CL_R_AutoPairing) AND ([FW_CL_R_IdentificazioneRic] = @Original_FW_CL_R_IdentificazioneRic) AND ([FW_CL_R_Obsolete_ver] = @Original_FW_CL_R_Obsolete_ver) AND ((@IsNull_FW_CL_R_Obsolete_ver_from_date = 1 AND [FW_CL_R_Obsolete_ver_from_date] IS NULL) OR ([FW_CL_R_Obsolete_ver_from_date] = @Original_FW_CL_R_Obsolete_ver_from_date)))</CommandText>
@@ -396,12 +409,15 @@ SELECT FW_CL_R_ID, FW_CL_R_SW_Code, FW_CL_R_SW_Versione, FW_CL_R_SW_Revisione, F
               <Mapping SourceColumn="FW_CL_R_Funzionamento" DataSetColumn="FW_CL_R_Funzionamento" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionString1 (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="getMaxVersione" Modifier="Public" Name="getMaxVersione" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="getMaxVersione">
+              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Get_Version_Exists" Modifier="Public" Name="Get_Version_Exists" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="Get_Version_Exists">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        MAX(FW_CL_R_SW_Versione) AS Expr1
-FROM            FW_CL_Ricevitori</CommandText>
-                    <Parameters />
+                    <CommandText>SELECT COUNT(*) FROM FW_CL_Ricevitori
+WHERE        (FW_CL_R_SW_Versione = @CodVersione)
+</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="CodVersione" ColumnName="FW_CL_R_SW_Versione" DataSourceName="SISTEMATICA_FACTORY.dbo.FW_CL_Ricevitori" DataTypeServer="varchar(6)" DbType="AnsiString" Direction="Input" ParameterName="@CodVersione" Precision="0" ProviderType="VarChar" Scale="0" Size="6" SourceColumn="FW_CL_R_SW_Versione" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
@@ -508,7 +524,7 @@ FROM            FW_CL_Ricevitori</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="FW_CL_Ricevitori" msprop:Generator_TableClassName="FW_CL_RicevitoriDataTable" msprop:Generator_TableVarName="tableFW_CL_Ricevitori" msprop:Generator_RowChangedName="FW_CL_RicevitoriRowChanged" msprop:Generator_TablePropName="FW_CL_Ricevitori" msprop:Generator_RowDeletingName="FW_CL_RicevitoriRowDeleting" msprop:Generator_RowChangingName="FW_CL_RicevitoriRowChanging" msprop:Generator_RowEvHandlerName="FW_CL_RicevitoriRowChangeEventHandler" msprop:Generator_RowDeletedName="FW_CL_RicevitoriRowDeleted" msprop:Generator_RowClassName="FW_CL_RicevitoriRow" msprop:Generator_UserTableName="FW_CL_Ricevitori" msprop:Generator_RowEvArgName="FW_CL_RicevitoriRowChangeEvent">
+        <xs:element name="FW_CL_Ricevitori" msprop:Generator_TableClassName="FW_CL_RicevitoriDataTable" msprop:Generator_TableVarName="tableFW_CL_Ricevitori" msprop:Generator_TablePropName="FW_CL_Ricevitori" msprop:Generator_RowDeletingName="FW_CL_RicevitoriRowDeleting" msprop:Generator_RowChangingName="FW_CL_RicevitoriRowChanging" msprop:Generator_RowEvHandlerName="FW_CL_RicevitoriRowChangeEventHandler" msprop:Generator_RowDeletedName="FW_CL_RicevitoriRowDeleted" msprop:Generator_UserTableName="FW_CL_Ricevitori" msprop:Generator_RowChangedName="FW_CL_RicevitoriRowChanged" msprop:Generator_RowEvArgName="FW_CL_RicevitoriRowChangeEvent" msprop:Generator_RowClassName="FW_CL_RicevitoriRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="FW_CL_R_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnFW_CL_R_ID" msprop:Generator_ColumnPropNameInRow="FW_CL_R_ID" msprop:Generator_ColumnPropNameInTable="FW_CL_R_IDColumn" msprop:Generator_UserColumnName="FW_CL_R_ID" type="xs:long" />
