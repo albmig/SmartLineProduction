@@ -153,40 +153,6 @@ namespace SmartLineProduction
             }
         }
 
-        private void menu_sw_annulla_Click(object sender, EventArgs e)
-        {
-            CL_Palmari_BindingSource.SuspendBinding();
-            this.CL_Palmari_TableAdapter.Fill(this.ds_CL_Firmware.FW_CL_Palmari);
-            CL_Palmari_BindingSource.ResumeBinding();
-
-            CL_Palmari_BindingSource.MoveFirst();
-
-            displayform = "V";
-            DB2Riga();
-
-            gv_FW_P.Refresh();
-
-            AbilitaForm();
-        }
-
-        private void menu_sw_salva_Click(object sender, EventArgs e)
-        {
-            Riga2DB();
-
-            CL_Palmari_BindingSource.SuspendBinding();
-            this.CL_Palmari_TableAdapter.Fill(this.ds_CL_Firmware.FW_CL_Palmari);
-            CL_Palmari_BindingSource.ResumeBinding();
-
-            CL_Palmari_BindingSource.MoveFirst();
-
-            displayform = "V";
-            DB2Riga();
-
-            gv_FW_P.Refresh();
-
-            AbilitaForm();
-        }
-
         private void Riga2DB()
         {
             var newrow = ds_CL_Firmware.FW_CL_Palmari.NewRow();
@@ -313,7 +279,7 @@ namespace SmartLineProduction
 
         private void SetFilter()
         {
-            if (radio_FW_active.Checked) 
+            if (radio_FW_active.Checked)
             {
                 filtroincorso = "FW_CL_P_Obsolete_ver = 0";
             }
@@ -341,7 +307,6 @@ namespace SmartLineProduction
             // TODO: questa riga di codice carica i dati nella tabella 'ds_CL_Firmware.FW_CL_Palmari'. È possibile spostarla o rimuoverla se necessario.
             this.CL_Palmari_TableAdapter.Fill(this.ds_CL_Firmware.FW_CL_Palmari);
 
-
             GVar.formclosing = false;
 
             displayform = "V";
@@ -358,14 +323,14 @@ namespace SmartLineProduction
 
         }
 
-        private void menu_sw_exit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void UC_FW_P_Classic_FormClosing(object sender, FormClosingEventArgs e)
         {
             GVar.formclosing = true;
+        }
+
+        private void menu_sw_exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void creaRevisioneToolStripMenuItem_Click(object sender, EventArgs e)
@@ -388,6 +353,40 @@ namespace SmartLineProduction
             string line2 = result + "\r\n";
             rtb_Revisioni.Text = line1 + line2 + rtb_Revisioni.Text;
             rtb_Revisioni.Refresh();
+        }
+
+        private void menu_sw_annulla_Click(object sender, EventArgs e)
+        {
+            CL_Palmari_BindingSource.SuspendBinding();
+            this.CL_Palmari_TableAdapter.Fill(this.ds_CL_Firmware.FW_CL_Palmari);
+            CL_Palmari_BindingSource.ResumeBinding();
+
+            CL_Palmari_BindingSource.MoveFirst();
+
+            displayform = "V";
+            DB2Riga();
+
+            gv_FW_P.Refresh();
+
+            AbilitaForm();
+        }
+
+        private void menu_sw_salva_Click(object sender, EventArgs e)
+        {
+            Riga2DB();
+
+            CL_Palmari_BindingSource.SuspendBinding();
+            this.CL_Palmari_TableAdapter.Fill(this.ds_CL_Firmware.FW_CL_Palmari);
+            CL_Palmari_BindingSource.ResumeBinding();
+
+            CL_Palmari_BindingSource.MoveFirst();
+
+            displayform = "V";
+            DB2Riga();
+
+            gv_FW_P.Refresh();
+
+            AbilitaForm();
         }
 
         private void menu_sw_clona_Click(object sender, EventArgs e)
@@ -419,14 +418,9 @@ namespace SmartLineProduction
         private void tb_gv_Revisione_Validating(object sender, CancelEventArgs e)
         {
             string rev = tb_gv_Revisione.Text;
-            if (rev.Length > 3) { MessageBox.Show("Errore di digitazione! La versione non può essere superiore a 3 caratteri!"); tb_gv_Revisione.Focus(); return; }
+            if (rev.Length > 3) { MessageBox.Show("Errore di digitazione! La revisione non può essere superiore a 3 caratteri!"); tb_gv_Revisione.Focus(); return; }
             if (rev.Length < 3) { string padded = rev.PadLeft(3, '0'); tb_gv_Revisione.Text = padded; tb_gv_Revisione.Refresh(); }
 
-            CreaCodice();
-        }
-
-        private void cbox_SoftwareStandard_Click(object sender, EventArgs e)
-        {
             CreaCodice();
         }
 

@@ -37,11 +37,12 @@
             this.panel_FW_R = new MetroFramework.Controls.MetroPanel();
             this.gv_FW_R = new MetroFramework.Controls.MetroGrid();
             this.fWCLRSWCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FW_CL_R_SW_Revisione = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gv_FW_R_MenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.versioneToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.revisioneToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.aggiungiRevisioneAllelementoSelezionatoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fWCLRicevitoriBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.CL_Ricevitori_BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ds_CL_Firmware = new SmartLineProduction.ds_CL_Firmware();
             this.panel_filter_FW = new MetroFramework.Controls.MetroPanel();
             this.radio_FW_attivi = new MetroFramework.Controls.MetroRadioButton();
@@ -90,7 +91,7 @@
             this.tb_TimeOut = new System.Windows.Forms.TextBox();
             this.metroLabel25 = new MetroFramework.Controls.MetroLabel();
             this.cb_FwAbbinato = new System.Windows.Forms.ComboBox();
-            this.fWCLPalmariBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.CL_Palmari_BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.tb_gv_Versione = new MetroFramework.Controls.MetroTextBox();
@@ -106,7 +107,7 @@
             this.panel_intestazione = new MetroFramework.Controls.MetroPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.cb_Famiglia = new System.Windows.Forms.ComboBox();
-            this.fWCLFamiglieBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.CL_Famiglie_BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel_revisioni = new MetroFramework.Controls.MetroPanel();
             this.rtb_Revisioni = new System.Windows.Forms.RichTextBox();
             this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
@@ -126,24 +127,24 @@
             this.pan_Menu_exit = new System.Windows.Forms.MenuStrip();
             this.menu_sw_exit = new System.Windows.Forms.ToolStripMenuItem();
             this.layout_menu = new System.Windows.Forms.TableLayoutPanel();
-            this.fW_CL_RicevitoriTableAdapter = new SmartLineProduction.ds_CL_FirmwareTableAdapters.FW_CL_RicevitoriTableAdapter();
+            this.CL_Ricevitori_TableAdapter = new SmartLineProduction.ds_CL_FirmwareTableAdapters.FW_CL_RicevitoriTableAdapter();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.fW_CL_PalmariTableAdapter = new SmartLineProduction.ds_CL_FirmwareTableAdapters.FW_CL_PalmariTableAdapter();
-            this.fW_CL_FamiglieTableAdapter = new SmartLineProduction.ds_CL_FirmwareTableAdapters.FW_CL_FamiglieTableAdapter();
+            this.CL_Palmari_TableAdapter = new SmartLineProduction.ds_CL_FirmwareTableAdapters.FW_CL_PalmariTableAdapter();
+            this.CL_Famiglie_TableAdapter = new SmartLineProduction.ds_CL_FirmwareTableAdapters.FW_CL_FamiglieTableAdapter();
             this.panel_FW_R.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv_FW_R)).BeginInit();
             this.gv_FW_R_MenuStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fWCLRicevitoriBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CL_Ricevitori_BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ds_CL_Firmware)).BeginInit();
             this.panel_filter_FW.SuspendLayout();
             this.panel_dati.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fWCLPalmariBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CL_Palmari_BindingSource)).BeginInit();
             this.panel_freq.SuspendLayout();
             this.layout_dati.SuspendLayout();
             this.panel_intestazione.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fWCLFamiglieBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CL_Famiglie_BindingSource)).BeginInit();
             this.panel_revisioni.SuspendLayout();
             this.panel_funzionamento.SuspendLayout();
             this.pan_Menu_comandi.SuspendLayout();
@@ -194,9 +195,10 @@
             this.gv_FW_R.ColumnHeadersHeight = 40;
             this.gv_FW_R.ColumnHeadersVisible = false;
             this.gv_FW_R.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.fWCLRSWCodeDataGridViewTextBoxColumn});
+            this.fWCLRSWCodeDataGridViewTextBoxColumn,
+            this.FW_CL_R_SW_Revisione});
             this.gv_FW_R.ContextMenuStrip = this.gv_FW_R_MenuStrip;
-            this.gv_FW_R.DataSource = this.fWCLRicevitoriBindingSource;
+            this.gv_FW_R.DataSource = this.CL_Ricevitori_BindingSource;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -234,7 +236,6 @@
             this.gv_FW_R.UseCustomBackColor = true;
             this.gv_FW_R.UseCustomForeColor = true;
             this.gv_FW_R.UseStyleColors = true;
-            this.gv_FW_R.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.gv_FW_R_CellPainting);
             // 
             // fWCLRSWCodeDataGridViewTextBoxColumn
             // 
@@ -243,6 +244,15 @@
             this.fWCLRSWCodeDataGridViewTextBoxColumn.HeaderText = "FW_CL_R_SW_Code";
             this.fWCLRSWCodeDataGridViewTextBoxColumn.Name = "fWCLRSWCodeDataGridViewTextBoxColumn";
             this.fWCLRSWCodeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // FW_CL_R_SW_Revisione
+            // 
+            this.FW_CL_R_SW_Revisione.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.FW_CL_R_SW_Revisione.DataPropertyName = "FW_CL_R_SW_Revisione";
+            this.FW_CL_R_SW_Revisione.HeaderText = "FW_CL_R_SW_Revisione";
+            this.FW_CL_R_SW_Revisione.Name = "FW_CL_R_SW_Revisione";
+            this.FW_CL_R_SW_Revisione.ReadOnly = true;
+            this.FW_CL_R_SW_Revisione.Width = 5;
             // 
             // gv_FW_R_MenuStrip
             // 
@@ -273,11 +283,11 @@
             this.aggiungiRevisioneAllelementoSelezionatoToolStripMenuItem.Text = "Aggiungi Revisione all\'elemento selezionato";
             this.aggiungiRevisioneAllelementoSelezionatoToolStripMenuItem.Click += new System.EventHandler(this.creaRevisioneToolStripMenuItem_Click);
             // 
-            // fWCLRicevitoriBindingSource
+            // CL_Ricevitori_BindingSource
             // 
-            this.fWCLRicevitoriBindingSource.DataMember = "FW_CL_Ricevitori";
-            this.fWCLRicevitoriBindingSource.DataSource = this.ds_CL_Firmware;
-            this.fWCLRicevitoriBindingSource.CurrentChanged += new System.EventHandler(this.fWCLRicevitoriBindingSource_CurrentChanged);
+            this.CL_Ricevitori_BindingSource.DataMember = "FW_CL_Ricevitori";
+            this.CL_Ricevitori_BindingSource.DataSource = this.ds_CL_Firmware;
+            this.CL_Ricevitori_BindingSource.CurrentChanged += new System.EventHandler(this.CL_Ricevitori_BindingSource_CurrentChanged);
             // 
             // ds_CL_Firmware
             // 
@@ -883,7 +893,7 @@
             // cb_FwAbbinato
             // 
             this.cb_FwAbbinato.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.cb_FwAbbinato.DataSource = this.fWCLPalmariBindingSource;
+            this.cb_FwAbbinato.DataSource = this.CL_Palmari_BindingSource;
             this.cb_FwAbbinato.DisplayMember = "FW_CL_P_SW_Code";
             this.cb_FwAbbinato.FormattingEnabled = true;
             this.cb_FwAbbinato.Location = new System.Drawing.Point(575, 160);
@@ -892,10 +902,10 @@
             this.cb_FwAbbinato.TabIndex = 128;
             this.cb_FwAbbinato.ValueMember = "FW_CL_P_ID";
             // 
-            // fWCLPalmariBindingSource
+            // CL_Palmari_BindingSource
             // 
-            this.fWCLPalmariBindingSource.DataMember = "FW_CL_Palmari";
-            this.fWCLPalmariBindingSource.DataSource = this.ds_CL_Firmware;
+            this.CL_Palmari_BindingSource.DataMember = "FW_CL_Palmari";
+            this.CL_Palmari_BindingSource.DataSource = this.ds_CL_Firmware;
             // 
             // metroLabel4
             // 
@@ -1144,20 +1154,22 @@
             // cb_Famiglia
             // 
             this.cb_Famiglia.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.cb_Famiglia.DataSource = this.fWCLFamiglieBindingSource;
+            this.cb_Famiglia.DataSource = this.CL_Famiglie_BindingSource;
             this.cb_Famiglia.DisplayMember = "FW_CL_Fam_Des";
+            this.cb_Famiglia.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.cb_Famiglia.FormattingEnabled = true;
-            this.cb_Famiglia.Location = new System.Drawing.Point(527, 47);
+            this.cb_Famiglia.Location = new System.Drawing.Point(527, 45);
             this.cb_Famiglia.Name = "cb_Famiglia";
-            this.cb_Famiglia.Size = new System.Drawing.Size(263, 21);
+            this.cb_Famiglia.Size = new System.Drawing.Size(263, 25);
             this.cb_Famiglia.TabIndex = 119;
+            this.cb_Famiglia.ValueMember = "FW_CL_Fam_ID";
             // 
-            // fWCLFamiglieBindingSource
+            // CL_Famiglie_BindingSource
             // 
-            this.fWCLFamiglieBindingSource.DataMember = "FW_CL_Famiglie";
-            this.fWCLFamiglieBindingSource.DataSource = this.ds_CL_Firmware;
-            this.fWCLFamiglieBindingSource.Filter = "FW_CL_Fam_TipoDev = \'R\'";
-            this.fWCLFamiglieBindingSource.Sort = "FW_CL_Fam_Des ASC";
+            this.CL_Famiglie_BindingSource.DataMember = "FW_CL_Famiglie";
+            this.CL_Famiglie_BindingSource.DataSource = this.ds_CL_Firmware;
+            this.CL_Famiglie_BindingSource.Filter = "FW_CL_Fam_TipoDev = \'R\'";
+            this.CL_Famiglie_BindingSource.Sort = "FW_CL_Fam_Des asc";
             // 
             // panel_revisioni
             // 
@@ -1377,22 +1389,22 @@
             this.layout_menu.Size = new System.Drawing.Size(1302, 25);
             this.layout_menu.TabIndex = 118;
             // 
-            // fW_CL_RicevitoriTableAdapter
+            // CL_Ricevitori_TableAdapter
             // 
-            this.fW_CL_RicevitoriTableAdapter.ClearBeforeFill = true;
+            this.CL_Ricevitori_TableAdapter.ClearBeforeFill = true;
             // 
             // toolTip1
             // 
             this.toolTip1.IsBalloon = true;
             this.toolTip1.ShowAlways = true;
             // 
-            // fW_CL_PalmariTableAdapter
+            // CL_Palmari_TableAdapter
             // 
-            this.fW_CL_PalmariTableAdapter.ClearBeforeFill = true;
+            this.CL_Palmari_TableAdapter.ClearBeforeFill = true;
             // 
-            // fW_CL_FamiglieTableAdapter
+            // CL_Famiglie_TableAdapter
             // 
-            this.fW_CL_FamiglieTableAdapter.ClearBeforeFill = true;
+            this.CL_Famiglie_TableAdapter.ClearBeforeFill = true;
             // 
             // UC_FW_R_Classic
             // 
@@ -1417,7 +1429,7 @@
             this.panel_FW_R.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gv_FW_R)).EndInit();
             this.gv_FW_R_MenuStrip.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.fWCLRicevitoriBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CL_Ricevitori_BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ds_CL_Firmware)).EndInit();
             this.panel_filter_FW.ResumeLayout(false);
             this.panel_filter_FW.PerformLayout();
@@ -1425,7 +1437,7 @@
             this.panel_dati.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fWCLPalmariBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CL_Palmari_BindingSource)).EndInit();
             this.panel_freq.ResumeLayout(false);
             this.panel_freq.PerformLayout();
             this.layout_dati.ResumeLayout(false);
@@ -1433,7 +1445,7 @@
             this.panel_intestazione.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fWCLFamiglieBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CL_Famiglie_BindingSource)).EndInit();
             this.panel_revisioni.ResumeLayout(false);
             this.panel_revisioni.PerformLayout();
             this.panel_funzionamento.ResumeLayout(false);
@@ -1515,8 +1527,8 @@
         private MetroFramework.Controls.MetroRadioButton radio_FW_attivi;
         private MetroFramework.Controls.MetroRadioButton radio_FW_obsolete;
         private ds_CL_Firmware ds_CL_Firmware;
-        private System.Windows.Forms.BindingSource fWCLRicevitoriBindingSource;
-        private ds_CL_FirmwareTableAdapters.FW_CL_RicevitoriTableAdapter fW_CL_RicevitoriTableAdapter;
+        private System.Windows.Forms.BindingSource CL_Ricevitori_BindingSource;
+        private ds_CL_FirmwareTableAdapters.FW_CL_RicevitoriTableAdapter CL_Ricevitori_TableAdapter;
         private System.Windows.Forms.ToolTip toolTip1;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
@@ -1537,15 +1549,16 @@
         private System.Windows.Forms.TextBox tb_IdentifRic;
         private System.Windows.Forms.TextBox tb_ContTasti;
         private System.Windows.Forms.TextBox tb_TimeOut;
-        private System.Windows.Forms.BindingSource fWCLPalmariBindingSource;
-        private ds_CL_FirmwareTableAdapters.FW_CL_PalmariTableAdapter fW_CL_PalmariTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fWCLRSWCodeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource CL_Palmari_BindingSource;
+        private ds_CL_FirmwareTableAdapters.FW_CL_PalmariTableAdapter CL_Palmari_TableAdapter;
         private MetroFramework.Controls.MetroPanel panel_intestazione;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private MetroFramework.Controls.MetroPanel box_Separatore_01;
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private System.Windows.Forms.ComboBox cb_Famiglia;
-        private System.Windows.Forms.BindingSource fWCLFamiglieBindingSource;
-        private ds_CL_FirmwareTableAdapters.FW_CL_FamiglieTableAdapter fW_CL_FamiglieTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fWCLRSWCodeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FW_CL_R_SW_Revisione;
+        private System.Windows.Forms.BindingSource CL_Famiglie_BindingSource;
+        private ds_CL_FirmwareTableAdapters.FW_CL_FamiglieTableAdapter CL_Famiglie_TableAdapter;
     }
 }

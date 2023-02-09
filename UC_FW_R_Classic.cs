@@ -21,8 +21,6 @@ namespace SmartLineProduction
         private string displayform = "V"; // V-View/INV-InsertNewVersion/INR-InsertNewRelease/CLO-CloneFirmware
         private string filtroincorso = "FW_CL_R_Obsolete_ver = 0";
 
-      
-
         public UC_FW_R_Classic()
         {
             InitializeComponent();
@@ -34,13 +32,13 @@ namespace SmartLineProduction
 
         private void AbilitaForm()
         {
-            SetFilter();
-            //this.firmwareBindingSource.Filter = filtroincorso;
-            this.fWCLRicevitoriBindingSource.Filter = filtroincorso;
+            gv_FW_R.RowTemplate.MinimumHeight = 30;
 
-            //this.firmwareBindingSource.Sort = "SW_Code Desc";
-            this.fWCLRicevitoriBindingSource.Sort = "FW_CL_R_SW_Versione DESC";
-            this.fWCLRicevitoriBindingSource.ResetBindings(false);
+            SetFilter();
+            this.CL_Ricevitori_BindingSource.Filter = filtroincorso;
+
+            this.CL_Ricevitori_BindingSource.Sort = "FW_CL_R_SW_Versione DESC";
+            this.CL_Ricevitori_BindingSource.ResetBindings(false);
             gv_FW_R.Refresh();
 
             radio_FW_attivi.Checked = true;
@@ -97,7 +95,7 @@ namespace SmartLineProduction
                 tb_IdentifRic.Text = "";
                 cb_FwAbbinato.Text = "";
                 cb_Famiglia.Text = "";
-                
+
 
                 rtb_Revisioni.Text = "";
                 rtb_Funzionamento.Text = "";
@@ -110,8 +108,6 @@ namespace SmartLineProduction
                 tb_gv_Revisione.Focus();
 
                 gv_FW_R.Enabled = false;
-
-                
             }
 
             if (displayform == "INR")
@@ -161,14 +157,12 @@ namespace SmartLineProduction
                 pan_Menu_exit.Enabled = false;
                 pan_Menu_salva.Enabled = true;
 
-                
-
                 gv_FW_R.Enabled = false;
             }
 
             if (displayform == "CLO")
             {
-                panel_intestazione.Enabled = true;   
+                panel_intestazione.Enabled = true;
                 panel_dati.Enabled = true;
                 panel_revisioni.Enabled = true;
                 panel_funzionamento.Enabled = true;
@@ -193,15 +187,11 @@ namespace SmartLineProduction
 
                 gv_FW_R.Enabled = false;
             }
-
-            
-
         }
 
         private void Riga2DB()
         {
             var newrow = ds_CL_Firmware.FW_CL_Ricevitori.NewRow();
-
 
             newrow["FW_CL_R_SW_Code"] = tb_gv_Code.Text;
             newrow["FW_CL_R_SW_Versione"] = tb_gv_Versione.Text;
@@ -214,13 +204,12 @@ namespace SmartLineProduction
             if (cb_filo.Checked) { newrow["FW_CL_R_Freq"] = "N"; }
             if (cb_can.Checked) { newrow["FW_CL_R_Freq"] = "C"; }
 
-
             if (tog_Pair.Checked) { newrow["FW_CL_R_AutoPairing"] = true; } else { newrow["FW_CL_R_AutoPairing"] = false; }
             if (tog_Golden.Checked) { newrow["FW_CL_R_Golden"] = true; } else { newrow["FW_CL_R_Golden"] = false; }
             if (tog_SPAttivo.Checked) { newrow["FW_CL_R_SPAttivo"] = true; } else { newrow["FW_CL_R_SPAttivo"] = false; }
             if (tog_SPPassivo.Checked) { newrow["FW_CL_R_SPPassivo"] = true; } else { newrow["FW_CL_R_SPPassivo"] = false; }
             if (tog_PlugConfig.Checked) { newrow["FW_CL_R_PlugConfig"] = true; } else { newrow["FW_CL_R_PlugConfig"] = false; }
-            if (tog_CambioPagina.Checked) { newrow["FW_CL_R_CambioPag"] = true;  } else { newrow["FW_CL_R_CambioPag"] = false; }
+            if (tog_CambioPagina.Checked) { newrow["FW_CL_R_CambioPag"] = true; } else { newrow["FW_CL_R_CambioPag"] = false; }
             if (tog_CambioRicevitore.Checked) { newrow["FW_CL_R_CambioRic"] = true; } else { newrow["FW_CL_R_CambioRic"] = false; }
             if (tog_MotRim.Checked) { newrow["FW_CL_R_MotRim"] = true; } else { newrow["FW_CL_R_MotRim"] = false; }
             if (tog_MasterOutput.Checked) { newrow["FW_CL_R_MasterOutput"] = true; } else { newrow["FW_CL_R_MasterOutput"] = false; }
@@ -235,12 +224,8 @@ namespace SmartLineProduction
             newrow["FW_CL_R_ContempTasti"] = Int32.Parse(tb_ContTasti.Text);
             newrow["FW_CL_R_TimeOut"] = Int32.Parse(tb_TimeOut.Text);
 
-            
             newrow["FW_CL_R_Revisioni"] = rtb_Revisioni.Text;
             newrow["FW_CL_R_Funzionamento"] = rtb_Funzionamento.Text;
-
-
-
 
             //Campi da riempire NOT NULL
             //newrow["SW_P_Opt_RF"] = newrow["SW_R_Opt_RF"];
@@ -259,93 +244,76 @@ namespace SmartLineProduction
             //////
             ///
             newrow["FW_CL_R_Obsolete_ver"] = false;
-           
+
             newrow["FW_CL_R_CanBus"] = false;
-            
+
             ds_CL_Firmware.FW_CL_Ricevitori.Rows.Add(newrow);
-            fW_CL_RicevitoriTableAdapter.Update(newrow);
+            CL_Ricevitori_TableAdapter.Update(newrow);
         }
 
         private void DB2Riga()
         {
-            DataRowView myRow = (DataRowView)fWCLRicevitoriBindingSource.Current;
-
-            tb_gv_Code.Text = myRow["FW_CL_R_SW_Code"].ToString();
-            tb_gv_Versione.Text = myRow["FW_CL_R_SW_Versione"].ToString();
-            tb_gv_Revisione.Text = myRow["FW_CL_R_SW_Revisione"].ToString();
-            cb_Famiglia.Text = myRow["FW_CL_R_TipoDev"].ToString();
-
-          
-            cb_868.Checked = false;
-            cb_433.Checked = false;
-            cb_915.Checked = false;
-            cb_filo.Checked = false;
-            cb_can.Checked = false;
-
-            ////Locate Famiglia Bindingsource
-            int fam_id = (int)myRow["FW_CL_R_TipoDev"];
-            int foundIndex = fWCLFamiglieBindingSource.Find("FW_CL_Fam_ID", fam_id);
-            //string filtro = "FW_CL_Fam_ID = " + fam_id.ToString();
-            //fWCLFamiglieBindingSource.Filter = filtro;
-            //fWCLFamiglieBindingSource.MoveFirst();
-            cb_Famiglia.SelectedIndex = foundIndex;
-            //cb_Famiglia.SelectedItem
-            cb_Famiglia.Refresh();
-
-            switch (myRow["FW_CL_R_Freq"].ToString())
+            if (CL_Ricevitori_BindingSource.Current != null)
             {
-                case "X": cb_868.Checked = true; break;
-                case "A": cb_915.Checked = true; break;
-                case "B": cb_433.Checked = true; break;
-                case "C": cb_can.Checked = true; break;
-                case "N": cb_filo.Checked = true; break;
-                default: break;
+                DataRowView myRow = (DataRowView)CL_Ricevitori_BindingSource.Current;
+
+                tb_gv_Code.Text = myRow["FW_CL_R_SW_Code"].ToString();
+                tb_gv_Versione.Text = myRow["FW_CL_R_SW_Versione"].ToString();
+                tb_gv_Revisione.Text = myRow["FW_CL_R_SW_Revisione"].ToString();
+                cb_Famiglia.Text = myRow["FW_CL_R_TipoDev"].ToString();
+
+                cb_868.Checked = false;
+                cb_433.Checked = false;
+                cb_915.Checked = false;
+                cb_filo.Checked = false;
+                cb_can.Checked = false;
+
+                //Locate Famiglia Bindingsource
+                int fam_id = (int)myRow["FW_CL_R_TipoDev"];
+                int foundIndex = CL_Famiglie_BindingSource.Find("FW_CL_Fam_ID", fam_id);
+                cb_Famiglia.SelectedIndex = foundIndex;
+                cb_Famiglia.Refresh();
+
+                switch (myRow["FW_CL_R_Freq"].ToString())
+                {
+                    case "X": cb_868.Checked = true; break;
+                    case "A": cb_915.Checked = true; break;
+                    case "B": cb_433.Checked = true; break;
+                    case "C": cb_can.Checked = true; break;
+                    case "N": cb_filo.Checked = true; break;
+                    default: break;
+                }
+
+                tog_Pair.Checked = (bool)myRow["FW_CL_R_AutoPairing"];
+                tog_Golden.Checked = (bool)myRow["FW_CL_R_Golden"];
+                tog_SPAttivo.Checked = (bool)myRow["FW_CL_R_SPAttivo"];
+                tog_SPPassivo.Checked = (bool)myRow["FW_CL_R_SPPassivo"];
+                tog_PlugConfig.Checked = (bool)myRow["FW_CL_R_PlugConfig"];
+                tog_CambioPagina.Checked = (bool)myRow["FW_CL_R_CambioPag"];
+                tog_CambioRicevitore.Checked = (bool)myRow["FW_CL_R_CambioRic"];
+                tog_MotRim.Checked = (bool)myRow["FW_CL_R_MotRim"];
+                tog_MasterOutput.Checked = (bool)myRow["FW_CL_R_MasterOutput"];
+                tog_EmergencyOutput.Checked = (bool)myRow["FW_CL_R_EmergencyOutput"];
+                tog_ProportionalOutput.Checked = (bool)myRow["FW_CL_R_ProportionalOutput"];
+
+                tb_IdentifRic.Text = myRow["FW_CL_R_IdentificazioneRic"].ToString();
+                tb_NumPalmari.Text = myRow["FW_CL_R_NumPalmari"].ToString();
+                tb_NumOutput.Text = myRow["FW_CL_R_NumOutput"].ToString();
+                tb_NumInpAn.Text = myRow["FW_CL_R_NumInputAn"].ToString();
+                tb_NumInpDig.Text = myRow["FW_CL_R_NumInputDig"].ToString();
+                tb_ContTasti.Text = myRow["FW_CL_R_ContempTasti"].ToString();
+                tb_TimeOut.Text = myRow["FW_CL_R_TimeOut"].ToString();
+
+                rtb_Revisioni.Text = myRow["FW_CL_R_Revisioni"].ToString();
+                rtb_Funzionamento.Text = myRow["FW_CL_R_Funzionamento"].ToString();
             }
-
-            tog_Pair.Checked = (bool)myRow["FW_CL_R_AutoPairing"];
-            tog_Golden.Checked = (bool)myRow["FW_CL_R_Golden"];
-            tog_SPAttivo.Checked = (bool)myRow["FW_CL_R_SPAttivo"];
-            tog_SPPassivo.Checked = (bool)myRow["FW_CL_R_SPPassivo"];
-            tog_PlugConfig.Checked = (bool)myRow["FW_CL_R_PlugConfig"];
-            tog_CambioPagina.Checked = (bool)myRow["FW_CL_R_CambioPag"];
-            tog_CambioRicevitore.Checked = (bool)myRow["FW_CL_R_CambioRic"];
-            tog_MotRim.Checked = (bool)myRow["FW_CL_R_MotRim"];
-            tog_MasterOutput.Checked = (bool)myRow["FW_CL_R_MasterOutput"];
-            tog_EmergencyOutput.Checked = (bool)myRow["FW_CL_R_EmergencyOutput"];
-            tog_ProportionalOutput.Checked = (bool)myRow["FW_CL_R_ProportionalOutput"];
-
-            
-            tb_IdentifRic.Text = myRow["FW_CL_R_IdentificazioneRic"].ToString();
-            tb_NumPalmari.Text = myRow["FW_CL_R_NumPalmari"].ToString();
-            tb_NumOutput.Text = myRow["FW_CL_R_NumOutput"].ToString();
-            tb_NumInpAn.Text = myRow["FW_CL_R_NumInputAn"].ToString();
-            tb_NumInpDig.Text = myRow["FW_CL_R_NumInputDig"].ToString();
-            tb_ContTasti.Text = myRow["FW_CL_R_ContempTasti"].ToString();
-            tb_TimeOut.Text = myRow["FW_CL_R_TimeOut"].ToString();
-
-
-            rtb_Revisioni.Text = myRow["FW_CL_R_Revisioni"].ToString();
-            rtb_Funzionamento.Text = myRow["FW_CL_R_Funzionamento"].ToString();
-           
-
-
-            //Crea grid History
-            //string filtrohistory = "SW_TipoDevice = 'R' and SW_Obsolete_ver and SW_Code = '" + myRow["SW_Code"].ToString() + "'";
-            //DataView dv_R_history = new DataView(ds_Programmazione.Firmware);
-            //dv_R_history.RowFilter = filtrohistory;
-            //dv_R_history.Sort = "SW_Obsolete_ver_from_date DESC";
-            ///////////////////////////////////
-
-
         }
 
         private void CreaCodice()
         {
             if ((tb_gv_Versione.Text != "") && (tb_gv_Revisione.Text != ""))
             {
-
                 string code = "XSWR";
-
 
                 code = code + tb_gv_Versione.Text.ToUpper() + tb_gv_Revisione.Text.ToUpper();
 
@@ -365,15 +333,13 @@ namespace SmartLineProduction
         private void SetView()
         {
             SetFilter();
-            fWCLRicevitoriBindingSource.Filter = filtroincorso;
+            CL_Ricevitori_BindingSource.Filter = filtroincorso;
 
-            fWCLRicevitoriBindingSource.MoveFirst();
-            DB2Riga();
-            //if (fWCLRicevitoriBindingSource.Current != null)
-            //{
-            //    DB2Riga();
-            //}
-            
+            CL_Ricevitori_BindingSource.MoveFirst();
+            if (CL_Ricevitori_BindingSource.Current != null)
+            {
+                DB2Riga();
+            }
 
             gv_FW_R.Refresh();
         }
@@ -387,9 +353,8 @@ namespace SmartLineProduction
             }
             if (radio_FW_obsolete.Checked)
             {
-                filtroincorso = string.Empty;
+                filtroincorso = "FW_CL_R_Obsolete_ver = 0 OR FW_CL_R_Obsolete_ver = 1";
             }
-
         }
 
         ////////////////////////////////////////////////////////////////////////////////
@@ -403,13 +368,12 @@ namespace SmartLineProduction
 
         private void UC_FW_R_Classic_Load(object sender, EventArgs e)
         {
-            // TODO: questa riga di codice carica i dati nella tabella 'ds_CL_Firmware.FW_CL_Famiglie'. È possibile spostarla o rimuoverla se necessario.
-            this.fW_CL_FamiglieTableAdapter.Fill(this.ds_CL_Firmware.FW_CL_Famiglie);
-            // TODO: questa riga di codice carica i dati nella tabella 'ds_CL_Firmware.FW_CL_Palmari'. È possibile spostarla o rimuoverla se necessario.
-            this.fW_CL_PalmariTableAdapter.Fill(this.ds_CL_Firmware.FW_CL_Palmari);
             //// TODO: questa riga di codice carica i dati nella tabella 'ds_CL_Firmware.FW_CL_Ricevitori'. È possibile spostarla o rimuoverla se necessario.
-            this.fW_CL_RicevitoriTableAdapter.Fill(this.ds_CL_Firmware.FW_CL_Ricevitori);
-
+            this.CL_Ricevitori_TableAdapter.Fill(this.ds_CL_Firmware.FW_CL_Ricevitori);
+            // TODO: questa riga di codice carica i dati nella tabella 'ds_CL_Firmware.FW_CL_Famiglie'. È possibile spostarla o rimuoverla se necessario.
+            this.CL_Famiglie_TableAdapter.Fill(this.ds_CL_Firmware.FW_CL_Famiglie);
+            // TODO: questa riga di codice carica i dati nella tabella 'ds_CL_Firmware.FW_CL_Palmari'. È possibile spostarla o rimuoverla se necessario.
+            this.CL_Palmari_TableAdapter.Fill(this.ds_CL_Firmware.FW_CL_Palmari);
 
             GVar.formclosing = false;
 
@@ -419,20 +383,10 @@ namespace SmartLineProduction
             radio_FW_attivi.Checked = true;
             radio_FW_obsolete.Checked = false;
 
-            fWCLRicevitoriBindingSource.MoveFirst();
-            if (fWCLRicevitoriBindingSource.Current != null)
+            CL_Ricevitori_BindingSource.MoveFirst();
+            if (CL_Ricevitori_BindingSource.Current != null)
             {
                 DB2Riga();
-            }
-        }
-
-        private void gv_FW_R_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
-        {
-            if (GVar.formclosing) { return; }
-
-            foreach (DataGridViewRow x in gv_FW_R.Rows)
-            {
-                x.MinimumHeight = 30;
             }
         }
 
@@ -452,7 +406,7 @@ namespace SmartLineProduction
             AbilitaForm();
 
             //Modifico valori iniziali
-            var sourceRow = ((DataRowView)fWCLRicevitoriBindingSource.Current).Row;
+            var sourceRow = ((DataRowView)CL_Ricevitori_BindingSource.Current).Row;
             int rev = Convert.ToInt32(sourceRow["FW_CL_R_SW_Revisione"].ToString());
             rev++;
             tb_gv_Revisione.Text = rev.ToString();
@@ -466,15 +420,15 @@ namespace SmartLineProduction
             string line2 = result + "\r\n";
             rtb_Revisioni.Text = line1 + line2 + rtb_Revisioni.Text;
             rtb_Revisioni.Refresh();
-
         }
 
         private void menu_sw_annulla_Click(object sender, EventArgs e)
         {
-            fWCLRicevitoriBindingSource.SuspendBinding();
-            fWCLRicevitoriBindingSource.ResumeBinding();
+            CL_Ricevitori_BindingSource.SuspendBinding();
+            this.CL_Ricevitori_TableAdapter.Fill(this.ds_CL_Firmware.FW_CL_Ricevitori);
+            CL_Ricevitori_BindingSource.ResumeBinding();
 
-            fWCLRicevitoriBindingSource.MoveFirst();
+            CL_Ricevitori_BindingSource.MoveFirst();
 
             displayform = "V";
             DB2Riga();
@@ -484,7 +438,7 @@ namespace SmartLineProduction
             AbilitaForm();
         }
 
-        private void menu_sw_salva_Click(object sender, EventArgs e) 
+        private void menu_sw_salva_Click(object sender, EventArgs e)
         {
 
             int myInt = 0;
@@ -547,10 +501,11 @@ namespace SmartLineProduction
 
             Riga2DB();
 
-            fWCLRicevitoriBindingSource.SuspendBinding();
-            fWCLRicevitoriBindingSource.ResumeBinding();
+            CL_Ricevitori_BindingSource.SuspendBinding();
+            this.CL_Ricevitori_TableAdapter.Fill(this.ds_CL_Firmware.FW_CL_Ricevitori);
+            CL_Ricevitori_BindingSource.ResumeBinding();
 
-            fWCLRicevitoriBindingSource.MoveFirst();
+            CL_Ricevitori_BindingSource.MoveFirst();
 
             displayform = "V";
             DB2Riga();
@@ -565,19 +520,22 @@ namespace SmartLineProduction
             displayform = "CLO";
 
             //Modifico valori iniziali
-            var sourceRow = ((DataRowView)fWCLRicevitoriBindingSource.Current).Row;
+            var sourceRow = ((DataRowView)CL_Ricevitori_BindingSource.Current).Row;
             AbilitaForm();
             tb_gv_Versione.Focus();
         }
 
         private void tb_gv_Versione_Validating(object sender, CancelEventArgs e)
         {
+            tb_gv_Versione.Text = tb_gv_Versione.Text.ToUpper();
+            tb_gv_Versione.Refresh();
             string ver = tb_gv_Versione.Text;
+
             if (ver.Length > 5) { MessageBox.Show("Errore di digitazione! La versione non può essere superiore a 5 caratteri!"); tb_gv_Versione.Focus(); return; }
             if (ver.Length < 5) { string padded = ver.PadLeft(5, '0'); tb_gv_Versione.Text = padded; tb_gv_Versione.Refresh(); }
 
             //Verifica se già presente
-            int contarec = (int)this.fW_CL_RicevitoriTableAdapter.Get_Version_Exists(tb_gv_Versione.Text);
+            int contarec = (int)this.CL_Ricevitori_TableAdapter.Get_Version_Exists(tb_gv_Versione.Text);
             if (contarec != 0) { MessageBox.Show("Questa versione di firmware è già presente!"); tb_gv_Versione.Text = string.Empty; tb_gv_Versione.Focus(); return; }
 
             CreaCodice();
@@ -586,14 +544,9 @@ namespace SmartLineProduction
         private void tb_gv_Revisione_Validating(object sender, CancelEventArgs e)
         {
             string rev = tb_gv_Revisione.Text;
-            if (rev.Length > 3) { MessageBox.Show("Errore di digitazione! La versione non può essere superiore a 3 caratteri!"); tb_gv_Revisione.Focus(); return; }
+            if (rev.Length > 3) { MessageBox.Show("Errore di digitazione! La revisione non può essere superiore a 3 caratteri!"); tb_gv_Revisione.Focus(); return; }
             if (rev.Length < 3) { string padded = rev.PadLeft(3, '0'); tb_gv_Revisione.Text = padded; tb_gv_Revisione.Refresh(); }
 
-            CreaCodice();
-        }
-
-        private void cbox_SoftwareStandard_Click(object sender, EventArgs e)
-        {
             CreaCodice();
         }
 
@@ -656,7 +609,7 @@ namespace SmartLineProduction
             }
             CreaCodice();
         }
-        
+
         private void menu_sw_new_Click(object sender, EventArgs e)
         {
 
@@ -669,14 +622,12 @@ namespace SmartLineProduction
         {
             GVar.gl_tipofiltro_FW_R = "A";
             SetView();
-
         }
 
         private void radio_FW_obsolete_Click(object sender, EventArgs e)
         {
             GVar.gl_tipofiltro_FW_R = "O";
             SetView();
-
         }
 
         private void tb_IdentifRic_MouseHover(object sender, EventArgs e)
@@ -694,9 +645,9 @@ namespace SmartLineProduction
             toolTip1.SetToolTip(tb_ContTasti, "Opzioni: 0-Nessuna, 1-Non in riga, 2-Altro");
         }
 
-        private void fWCLRicevitoriBindingSource_CurrentChanged(object sender, EventArgs e)
+        private void CL_Ricevitori_BindingSource_CurrentChanged(object sender, EventArgs e)
         {
-                DB2Riga();
+            DB2Riga();
         }
     }
 }
