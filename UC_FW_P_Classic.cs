@@ -70,7 +70,7 @@ namespace SmartLineProduction
                 tog_MotRim.Enabled = true;
                 tog_Retroill.Enabled = true;
                 tog_SPAttivo.Enabled = true;
-                
+
                 pan_Menu_comandi.Enabled = false;
                 pan_Menu_exit.Enabled = false;
                 pan_Menu_salva.Enabled = true;
@@ -136,7 +136,7 @@ namespace SmartLineProduction
                 tog_IVLed.Checked = false;
                 tog_Accel.Checked = false;
                 tog_Buzzer.Checked = false;
-                
+
                 rtb_Revisioni.Text = "";
                 rtb_Funzionamento.Text = "";
 
@@ -201,7 +201,6 @@ namespace SmartLineProduction
                 tb_gv_Versione.Text = myRow["FW_CL_P_SW_Versione"].ToString();
                 tb_gv_Revisione.Text = myRow["FW_CL_P_SW_Revisione"].ToString();
 
-
                 cb_868.Checked = false;
                 cb_433.Checked = false;
                 cb_915.Checked = false;
@@ -211,8 +210,13 @@ namespace SmartLineProduction
                 //Locate Famiglia Bindingsource
                 int fam_id = (int)myRow["FW_CL_P_TipoDev"];
                 int foundIndex = CL_Famiglie_BindingSource.Find("FW_CL_Fam_ID", fam_id);
-                cb_Famiglia.SelectedIndex = foundIndex;
-                cb_Famiglia.Refresh();
+                if (foundIndex > -1)
+                {
+                    CL_Famiglie_BindingSource.Position = foundIndex;
+                    DataRowView row = (DataRowView)CL_Famiglie_BindingSource.Current;
+                    cb_Famiglia.SelectedItem = row["FW_CL_Fam_Des"].ToString();
+                    cb_Famiglia.Refresh();
+                }
 
                 switch (myRow["FW_CL_P_Freq"].ToString())
                 {
@@ -409,8 +413,11 @@ namespace SmartLineProduction
             if (ver.Length < 5) { string padded = ver.PadLeft(5, '0'); tb_gv_Versione.Text = padded; tb_gv_Versione.Refresh(); }
 
             //Verifica se già presente
-            int contarec = (int)this.CL_Palmari_TableAdapter.Get_Version_Exists(tb_gv_Versione.Text);
-            if (contarec != 0) { MessageBox.Show("Questa versione di firmware è già presente!"); tb_gv_Versione.Text = string.Empty; tb_gv_Versione.Focus(); return; }
+            if (displayform == "INV")
+            {
+                int contarec = (int)this.CL_Palmari_TableAdapter.Get_Version_Exists(tb_gv_Versione.Text);
+                if (contarec != 0) { MessageBox.Show("Questa versione di firmware è già presente!"); tb_gv_Versione.Text = string.Empty; tb_gv_Versione.Focus(); return; }
+            }
 
             CreaCodice();
         }
