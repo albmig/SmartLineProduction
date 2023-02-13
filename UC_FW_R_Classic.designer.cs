@@ -90,8 +90,6 @@
             this.metroLabel24 = new MetroFramework.Controls.MetroLabel();
             this.tb_TimeOut = new System.Windows.Forms.TextBox();
             this.metroLabel25 = new MetroFramework.Controls.MetroLabel();
-            this.cb_FwAbbinato = new System.Windows.Forms.ComboBox();
-            this.CL_Palmari_BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.tb_gv_Versione = new MetroFramework.Controls.MetroTextBox();
@@ -129,8 +127,8 @@
             this.layout_menu = new System.Windows.Forms.TableLayoutPanel();
             this.CL_Ricevitori_TableAdapter = new SmartLineProduction.ds_CL_FirmwareTableAdapters.FW_CL_RicevitoriTableAdapter();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.CL_Palmari_TableAdapter = new SmartLineProduction.ds_CL_FirmwareTableAdapters.FW_CL_PalmariTableAdapter();
             this.CL_Famiglie_TableAdapter = new SmartLineProduction.ds_CL_FirmwareTableAdapters.FW_CL_FamiglieTableAdapter();
+            this.tb_FwAbbinato = new MetroFramework.Controls.MetroTextBox();
             this.panel_FW_R.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv_FW_R)).BeginInit();
             this.gv_FW_R_MenuStrip.SuspendLayout();
@@ -139,7 +137,6 @@
             this.panel_filter_FW.SuspendLayout();
             this.panel_dati.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CL_Palmari_BindingSource)).BeginInit();
             this.panel_freq.SuspendLayout();
             this.layout_dati.SuspendLayout();
             this.panel_intestazione.SuspendLayout();
@@ -418,6 +415,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.Controls.Add(this.tb_FwAbbinato, 4, 7);
             this.tableLayoutPanel1.Controls.Add(this.metroPanel1, 5, 1);
             this.tableLayoutPanel1.Controls.Add(this.box_Separatore_01, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.tb_NumInpAn, 7, 5);
@@ -457,7 +455,6 @@
             this.tableLayoutPanel1.Controls.Add(this.metroLabel24, 0, 8);
             this.tableLayoutPanel1.Controls.Add(this.tb_TimeOut, 1, 8);
             this.tableLayoutPanel1.Controls.Add(this.metroLabel25, 3, 7);
-            this.tableLayoutPanel1.Controls.Add(this.cb_FwAbbinato, 4, 7);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -485,7 +482,7 @@
             this.metroPanel1.Location = new System.Drawing.Point(764, 13);
             this.metroPanel1.Name = "metroPanel1";
             this.tableLayoutPanel1.SetRowSpan(this.metroPanel1, 8);
-            this.metroPanel1.Size = new System.Drawing.Size(1, 194);
+            this.metroPanel1.Size = new System.Drawing.Size(1, 196);
             this.metroPanel1.TabIndex = 143;
             this.metroPanel1.UseCustomBackColor = true;
             this.metroPanel1.VerticalScrollbarBarColor = true;
@@ -502,7 +499,7 @@
             this.box_Separatore_01.Location = new System.Drawing.Point(381, 13);
             this.box_Separatore_01.Name = "box_Separatore_01";
             this.tableLayoutPanel1.SetRowSpan(this.box_Separatore_01, 8);
-            this.box_Separatore_01.Size = new System.Drawing.Size(1, 194);
+            this.box_Separatore_01.Size = new System.Drawing.Size(1, 196);
             this.box_Separatore_01.TabIndex = 142;
             this.box_Separatore_01.UseCustomBackColor = true;
             this.box_Separatore_01.VerticalScrollbarBarColor = true;
@@ -842,12 +839,13 @@
             this.tb_IdentifRic.Size = new System.Drawing.Size(112, 20);
             this.tb_IdentifRic.TabIndex = 133;
             this.tb_IdentifRic.MouseHover += new System.EventHandler(this.tb_IdentifRic_MouseHover);
+            this.tb_IdentifRic.Validating += new System.ComponentModel.CancelEventHandler(this.tb_IdentifRic_Validating);
             // 
             // metroLabel23
             // 
             this.metroLabel23.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel23.AutoSize = true;
-            this.metroLabel23.Location = new System.Drawing.Point(3, 161);
+            this.metroLabel23.Location = new System.Drawing.Point(3, 162);
             this.metroLabel23.Name = "metroLabel23";
             this.metroLabel23.Size = new System.Drawing.Size(140, 19);
             this.metroLabel23.TabIndex = 119;
@@ -856,17 +854,18 @@
             // tb_ContTasti
             // 
             this.tb_ContTasti.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tb_ContTasti.Location = new System.Drawing.Point(192, 160);
+            this.tb_ContTasti.Location = new System.Drawing.Point(192, 161);
             this.tb_ContTasti.Name = "tb_ContTasti";
             this.tb_ContTasti.Size = new System.Drawing.Size(112, 20);
             this.tb_ContTasti.TabIndex = 134;
             this.tb_ContTasti.MouseHover += new System.EventHandler(this.tb_ContTasti_MouseHover);
+            this.tb_ContTasti.Validating += new System.ComponentModel.CancelEventHandler(this.tb_ContTasti_Validating);
             // 
             // metroLabel24
             // 
             this.metroLabel24.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel24.AutoSize = true;
-            this.metroLabel24.Location = new System.Drawing.Point(3, 187);
+            this.metroLabel24.Location = new System.Drawing.Point(3, 189);
             this.metroLabel24.Name = "metroLabel24";
             this.metroLabel24.Size = new System.Drawing.Size(60, 19);
             this.metroLabel24.TabIndex = 120;
@@ -875,7 +874,7 @@
             // tb_TimeOut
             // 
             this.tb_TimeOut.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tb_TimeOut.Location = new System.Drawing.Point(192, 187);
+            this.tb_TimeOut.Location = new System.Drawing.Point(192, 189);
             this.tb_TimeOut.Name = "tb_TimeOut";
             this.tb_TimeOut.Size = new System.Drawing.Size(112, 20);
             this.tb_TimeOut.TabIndex = 135;
@@ -884,28 +883,11 @@
             // 
             this.metroLabel25.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel25.AutoSize = true;
-            this.metroLabel25.Location = new System.Drawing.Point(386, 161);
+            this.metroLabel25.Location = new System.Drawing.Point(386, 162);
             this.metroLabel25.Name = "metroLabel25";
             this.metroLabel25.Size = new System.Drawing.Size(139, 19);
             this.metroLabel25.TabIndex = 121;
             this.metroLabel25.Text = "FW Palmare Abbinato";
-            // 
-            // cb_FwAbbinato
-            // 
-            this.cb_FwAbbinato.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.cb_FwAbbinato.DataSource = this.CL_Palmari_BindingSource;
-            this.cb_FwAbbinato.DisplayMember = "FW_CL_P_SW_Code";
-            this.cb_FwAbbinato.FormattingEnabled = true;
-            this.cb_FwAbbinato.Location = new System.Drawing.Point(575, 160);
-            this.cb_FwAbbinato.Name = "cb_FwAbbinato";
-            this.cb_FwAbbinato.Size = new System.Drawing.Size(162, 21);
-            this.cb_FwAbbinato.TabIndex = 128;
-            this.cb_FwAbbinato.ValueMember = "FW_CL_P_ID";
-            // 
-            // CL_Palmari_BindingSource
-            // 
-            this.CL_Palmari_BindingSource.DataMember = "FW_CL_Palmari";
-            this.CL_Palmari_BindingSource.DataSource = this.ds_CL_Firmware;
             // 
             // metroLabel4
             // 
@@ -1398,13 +1380,40 @@
             this.toolTip1.IsBalloon = true;
             this.toolTip1.ShowAlways = true;
             // 
-            // CL_Palmari_TableAdapter
-            // 
-            this.CL_Palmari_TableAdapter.ClearBeforeFill = true;
-            // 
             // CL_Famiglie_TableAdapter
             // 
             this.CL_Famiglie_TableAdapter.ClearBeforeFill = true;
+            // 
+            // tb_FwAbbinato
+            // 
+            this.tb_FwAbbinato.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            // 
+            // 
+            // 
+            this.tb_FwAbbinato.CustomButton.Image = null;
+            this.tb_FwAbbinato.CustomButton.Location = new System.Drawing.Point(161, 1);
+            this.tb_FwAbbinato.CustomButton.Name = "";
+            this.tb_FwAbbinato.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.tb_FwAbbinato.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.tb_FwAbbinato.CustomButton.TabIndex = 1;
+            this.tb_FwAbbinato.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.tb_FwAbbinato.CustomButton.UseSelectable = true;
+            this.tb_FwAbbinato.CustomButton.Visible = false;
+            this.tb_FwAbbinato.Lines = new string[0];
+            this.tb_FwAbbinato.Location = new System.Drawing.Point(575, 160);
+            this.tb_FwAbbinato.MaxLength = 32767;
+            this.tb_FwAbbinato.Name = "tb_FwAbbinato";
+            this.tb_FwAbbinato.PasswordChar = '\0';
+            this.tb_FwAbbinato.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tb_FwAbbinato.SelectedText = "";
+            this.tb_FwAbbinato.SelectionLength = 0;
+            this.tb_FwAbbinato.SelectionStart = 0;
+            this.tb_FwAbbinato.ShortcutsEnabled = true;
+            this.tb_FwAbbinato.Size = new System.Drawing.Size(183, 23);
+            this.tb_FwAbbinato.TabIndex = 144;
+            this.tb_FwAbbinato.UseSelectable = true;
+            this.tb_FwAbbinato.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.tb_FwAbbinato.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // UC_FW_R_Classic
             // 
@@ -1437,7 +1446,6 @@
             this.panel_dati.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CL_Palmari_BindingSource)).EndInit();
             this.panel_freq.ResumeLayout(false);
             this.panel_freq.PerformLayout();
             this.layout_dati.ResumeLayout(false);
@@ -1543,14 +1551,11 @@
         private MetroFramework.Controls.MetroLabel metroLabel25;
         private System.Windows.Forms.TextBox tb_NumInpAn;
         private System.Windows.Forms.TextBox tb_NumOutput;
-        private System.Windows.Forms.ComboBox cb_FwAbbinato;
         private System.Windows.Forms.TextBox tb_NumPalmari;
         private System.Windows.Forms.TextBox tb_NumInpDig;
         private System.Windows.Forms.TextBox tb_IdentifRic;
         private System.Windows.Forms.TextBox tb_ContTasti;
         private System.Windows.Forms.TextBox tb_TimeOut;
-        private System.Windows.Forms.BindingSource CL_Palmari_BindingSource;
-        private ds_CL_FirmwareTableAdapters.FW_CL_PalmariTableAdapter CL_Palmari_TableAdapter;
         private MetroFramework.Controls.MetroPanel panel_intestazione;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private MetroFramework.Controls.MetroPanel box_Separatore_01;
@@ -1560,5 +1565,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn FW_CL_R_SW_Revisione;
         private System.Windows.Forms.BindingSource CL_Famiglie_BindingSource;
         private ds_CL_FirmwareTableAdapters.FW_CL_FamiglieTableAdapter CL_Famiglie_TableAdapter;
+        private MetroFramework.Controls.MetroTextBox tb_FwAbbinato;
     }
 }

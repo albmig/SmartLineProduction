@@ -304,8 +304,6 @@ namespace SmartLineProduction
 
         private void UC_FW_P_Classic_Load(object sender, EventArgs e)
         {
-            // TODO: questa riga di codice carica i dati nella tabella 'ds_CL_Firmware.FW_CL_Ricevitori'. È possibile spostarla o rimuoverla se necessario.
-            this.CL_Ricevitori_TableAdapter.Fill(this.ds_CL_Firmware.FW_CL_Ricevitori);
             // TODO: questa riga di codice carica i dati nella tabella 'ds_CL_Firmware.FW_CL_Famiglie'. È possibile spostarla o rimuoverla se necessario.
             this.CL_Famiglie_TableAdapter.Fill(this.ds_CL_Firmware.FW_CL_Famiglie);
             // TODO: questa riga di codice carica i dati nella tabella 'ds_CL_Firmware.FW_CL_Palmari'. È possibile spostarla o rimuoverla se necessario.
@@ -377,6 +375,13 @@ namespace SmartLineProduction
 
         private void menu_sw_salva_Click(object sender, EventArgs e)
         {
+            if (cb_Famiglia.Text == string.Empty)
+            {
+                MessageBox.Show("Si prega di compilare correttamente il campo Famiglia. \nNon può essere vuoto!");
+                cb_Famiglia.Focus();
+                return;
+            }
+
             Riga2DB();
 
             CL_Palmari_BindingSource.SuspendBinding();
@@ -413,7 +418,7 @@ namespace SmartLineProduction
             if (ver.Length < 5) { string padded = ver.PadLeft(5, '0'); tb_gv_Versione.Text = padded; tb_gv_Versione.Refresh(); }
 
             //Verifica se già presente
-            if (displayform == "INV")
+            if ((displayform == "INV") || (displayform == "CLO"))
             {
                 int contarec = (int)this.CL_Palmari_TableAdapter.Get_Version_Exists(tb_gv_Versione.Text);
                 if (contarec != 0) { MessageBox.Show("Questa versione di firmware è già presente!"); tb_gv_Versione.Text = string.Empty; tb_gv_Versione.Focus(); return; }

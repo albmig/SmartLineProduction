@@ -81,19 +81,19 @@ namespace SmartLineProduction
                 tog_SPPassivo.Checked = false;
                 tog_PlugConfig.Checked = false;
                 tb_TimeOut.Text = "120";
-                tb_ContTasti.Text = "1";
+                tb_ContTasti.Text = "0";
                 tog_CambioPagina.Checked = false;
                 tog_CambioRicevitore.Checked = false;
                 tb_NumPalmari.Text = "1";
                 tog_MotRim.Checked = false;
                 tb_NumOutput.Text = "";
-                tb_NumInpDig.Text = "";
-                tb_NumInpAn.Text = "";
+                tb_NumInpDig.Text = "0";
+                tb_NumInpAn.Text = "0";
                 tog_ProportionalOutput.Checked = false;
                 tog_MasterOutput.Checked = false;
                 tog_EmergencyOutput.Checked = false;
                 tb_IdentifRic.Text = "";
-                cb_FwAbbinato.Text = "";
+                tb_FwAbbinato.Text = "";
                 cb_Famiglia.Text = "";
 
 
@@ -146,7 +146,7 @@ namespace SmartLineProduction
                 //seconda riga
                 tb_ContTasti.Enabled = false;
                 tb_TimeOut.Enabled = false;
-                cb_FwAbbinato.Enabled = false;
+                tb_FwAbbinato.Enabled = false;
 
                 //pannelli
                 panel_FW_R.Enabled = false;
@@ -376,8 +376,6 @@ namespace SmartLineProduction
             this.CL_Famiglie_TableAdapter.Fill(this.ds_CL_Firmware.FW_CL_Famiglie);
             //// TODO: questa riga di codice carica i dati nella tabella 'ds_CL_Firmware.FW_CL_Ricevitori'. È possibile spostarla o rimuoverla se necessario.
             this.CL_Ricevitori_TableAdapter.Fill(this.ds_CL_Firmware.FW_CL_Ricevitori);
-            // TODO: questa riga di codice carica i dati nella tabella 'ds_CL_Firmware.FW_CL_Palmari'. È possibile spostarla o rimuoverla se necessario.
-            this.CL_Palmari_TableAdapter.Fill(this.ds_CL_Firmware.FW_CL_Palmari);
 
             GVar.formclosing = false;
 
@@ -444,6 +442,12 @@ namespace SmartLineProduction
 
         private void menu_sw_salva_Click(object sender, EventArgs e)
         {
+            if (cb_Famiglia.Text == string.Empty)
+            {
+                MessageBox.Show("Si prega di compilare correttamente il campo Famiglia. \nNon può essere vuoto!");
+                cb_Famiglia.Focus();
+                return;
+            }
 
             int myInt = 0;
             bool isNumerical = int.TryParse(tb_NumOutput.Text, out myInt);
@@ -474,15 +478,9 @@ namespace SmartLineProduction
 
             myInt = 0;
             isNumerical = int.TryParse(tb_IdentifRic.Text, out myInt);
-            if (!isNumerical)
+            if ((!isNumerical) && (tb_IdentifRic.Text != string.Empty))
             {
                 MessageBox.Show("Si prega di compilare correttamente il tipo di Identificazione Ricevitore. \nNon può essere vuoto o con caratteri alfabetici!");
-                tb_IdentifRic.Focus();
-                return;
-            }
-            if (myInt > 3)
-            {
-                MessageBox.Show("I valori accettati  per il tipo di Identificazione sono solo 0, 1, 2 e 3. \nSi prega di controllare e correggere.");
                 tb_IdentifRic.Focus();
                 return;
             }
@@ -495,13 +493,6 @@ namespace SmartLineProduction
                 tb_ContTasti.Focus();
                 return;
             }
-            if (myInt > 2)
-            {
-                MessageBox.Show("I valori accettati  per la tipologia di Contemporaneità dei Tasti sono solo 0, 1 e 2. \nSi prega di controllare e correggere.");
-                tb_ContTasti.Focus();
-                return;
-            }
-
 
             Riga2DB();
 
@@ -539,7 +530,7 @@ namespace SmartLineProduction
             if (ver.Length < 5) { string padded = ver.PadLeft(5, '0'); tb_gv_Versione.Text = padded; tb_gv_Versione.Refresh(); }
 
             //Verifica se già presente
-            if (displayform == "INV")
+            if ((displayform == "INV") || (displayform == "CLO"))
             {
                 int contarec = (int)this.CL_Ricevitori_TableAdapter.Get_Version_Exists(tb_gv_Versione.Text);
                 if (contarec != 0) { MessageBox.Show("Questa versione di firmware è già presente!"); tb_gv_Versione.Text = string.Empty; tb_gv_Versione.Focus(); return; }
@@ -619,7 +610,6 @@ namespace SmartLineProduction
 
         private void menu_sw_new_Click(object sender, EventArgs e)
         {
-
             displayform = "INV";
             AbilitaForm();
             tb_gv_Versione.Focus();
@@ -655,6 +645,27 @@ namespace SmartLineProduction
         private void CL_Ricevitori_BindingSource_CurrentChanged(object sender, EventArgs e)
         {
             DB2Riga();
+        }
+
+        private void tb_IdentifRic_Validating(object sender, CancelEventArgs e)
+        {
+            if ((tb_IdentifRic.Text != "0") && (tb_IdentifRic.Text != "1") && (tb_IdentifRic.Text != "2") && (tb_IdentifRic.Text != "3") && (tb_IdentifRic.Text != string.Empty))
+            {
+                MessageBox.Show("Sono accettati solo valori da 0 a 3 o vuoto");
+                tb_IdentifRic.Text = string.Empty;
+                tb_IdentifRic.Focus();
+            }
+        }
+
+        private void tb_ContTasti_Validating(object sender, CancelEventArgs e)
+        {
+            if ((tb_ContTasti.Text != "0") && (tb_ContTasti.Text != "1") && (tb_ContTasti.Text != "2") && (tb_ContTasti.Text != string.Empty))
+            {
+                MessageBox.Show("Sono accettati solo valori da 0 a 2 o vuoto");
+                tb_ContTasti.Text = string.Empty;
+                tb_ContTasti.Focus();
+            }
+
         }
     }
 }
