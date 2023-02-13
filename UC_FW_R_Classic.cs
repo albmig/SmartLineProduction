@@ -216,8 +216,9 @@ namespace SmartLineProduction
             if (tog_EmergencyOutput.Checked) { newrow["FW_CL_R_EmergencyOutput"] = true; } else { newrow["FW_CL_R_EmergencyOutput"] = false; }
             if (tog_ProportionalOutput.Checked) { newrow["FW_CL_R_ProportionalOutput"] = true; } else { newrow["FW_CL_R_ProportionalOutput"] = false; }
 
-            newrow["FW_CL_R_IdentificazioneRic"] = Int32.Parse(tb_IdentifRic.Text);
+            if (tb_IdentifRic.Text != string.Empty) { newrow["FW_CL_R_IdentificazioneRic"] = Int32.Parse(tb_IdentifRic.Text); }
             newrow["FW_CL_R_NumPalmari"] = Int32.Parse(tb_NumPalmari.Text);
+            newrow["FW_CL_R_FwPAbbinato"] = tb_FwAbbinato.Text;
             newrow["FW_CL_R_NumOutput"] = Int32.Parse(tb_NumOutput.Text);
             newrow["FW_CL_R_NumInputAn"] = Int32.Parse(tb_NumInpAn.Text);
             newrow["FW_CL_R_NumInputDig"] = Int32.Parse(tb_NumInpDig.Text);
@@ -300,8 +301,9 @@ namespace SmartLineProduction
                 tog_EmergencyOutput.Checked = (bool)myRow["FW_CL_R_EmergencyOutput"];
                 tog_ProportionalOutput.Checked = (bool)myRow["FW_CL_R_ProportionalOutput"];
 
-                tb_IdentifRic.Text = myRow["FW_CL_R_IdentificazioneRic"].ToString();
+                if (myRow["FW_CL_R_IdentificazioneRic"].ToString() != string.Empty) { tb_IdentifRic.Text = myRow["FW_CL_R_IdentificazioneRic"].ToString(); } else { tb_IdentifRic.Text = string.Empty; }
                 tb_NumPalmari.Text = myRow["FW_CL_R_NumPalmari"].ToString();
+                tb_FwAbbinato.Text = myRow["FW_CL_R_FwPAbbinato"].ToString();
                 tb_NumOutput.Text = myRow["FW_CL_R_NumOutput"].ToString();
                 tb_NumInpAn.Text = myRow["FW_CL_R_NumInputAn"].ToString();
                 tb_NumInpDig.Text = myRow["FW_CL_R_NumInputDig"].ToString();

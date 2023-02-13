@@ -1866,7 +1866,6 @@ namespace SmartLineProduction {
                 this.columnFW_CL_R_PlugConfig.AllowDBNull = false;
                 this.columnFW_CL_R_Golden.AllowDBNull = false;
                 this.columnFW_CL_R_AutoPairing.AllowDBNull = false;
-                this.columnFW_CL_R_IdentificazioneRic.AllowDBNull = false;
                 this.columnFW_CL_R_Obsolete_ver.AllowDBNull = false;
                 this.columnFW_CL_R_Revisioni.MaxLength = 2147483647;
                 this.columnFW_CL_R_Funzionamento.MaxLength = 2147483647;
@@ -2718,7 +2717,13 @@ namespace SmartLineProduction {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int FW_CL_R_IdentificazioneRic {
                 get {
-                    return ((int)(this[this.tableFW_CL_Ricevitori.FW_CL_R_IdentificazioneRicColumn]));
+                    try {
+                        return ((int)(this[this.tableFW_CL_Ricevitori.FW_CL_R_IdentificazioneRicColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'FW_CL_R_IdentificazioneRic\' nella tabella \'FW_CL_Ricevit" +
+                                "ori\' è DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableFW_CL_Ricevitori.FW_CL_R_IdentificazioneRicColumn] = value;
@@ -2809,6 +2814,18 @@ namespace SmartLineProduction {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetFW_CL_R_FwPAbbinatoNull() {
                 this[this.tableFW_CL_Ricevitori.FW_CL_R_FwPAbbinatoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsFW_CL_R_IdentificazioneRicNull() {
+                return this.IsNull(this.tableFW_CL_Ricevitori.FW_CL_R_IdentificazioneRicColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetFW_CL_R_IdentificazioneRicNull() {
+                this[this.tableFW_CL_Ricevitori.FW_CL_R_IdentificazioneRicColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4598,7 +4615,7 @@ SELECT FW_CL_P_ID, FW_CL_P_SW_Code, FW_CL_P_SW_Versione, FW_CL_P_SW_Revisione, F
                     bool Original_FW_CL_R_PlugConfig, 
                     bool Original_FW_CL_R_Golden, 
                     bool Original_FW_CL_R_AutoPairing, 
-                    int Original_FW_CL_R_IdentificazioneRic, 
+                    global::System.Nullable<int> Original_FW_CL_R_IdentificazioneRic, 
                     bool Original_FW_CL_R_Obsolete_ver, 
                     global::System.Nullable<global::System.DateTime> Original_FW_CL_R_Obsolete_ver_from_date) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((long)(Original_FW_CL_R_ID));
@@ -4652,7 +4669,12 @@ SELECT FW_CL_P_ID, FW_CL_P_SW_Code, FW_CL_P_SW_Versione, FW_CL_P_SW_Revisione, F
             this.Adapter.DeleteCommand.Parameters[22].Value = ((bool)(Original_FW_CL_R_PlugConfig));
             this.Adapter.DeleteCommand.Parameters[23].Value = ((bool)(Original_FW_CL_R_Golden));
             this.Adapter.DeleteCommand.Parameters[24].Value = ((bool)(Original_FW_CL_R_AutoPairing));
-            this.Adapter.DeleteCommand.Parameters[25].Value = ((int)(Original_FW_CL_R_IdentificazioneRic));
+            if ((Original_FW_CL_R_IdentificazioneRic.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[25].Value = ((int)(Original_FW_CL_R_IdentificazioneRic.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[25].Value = global::System.DBNull.Value;
+            }
             this.Adapter.DeleteCommand.Parameters[26].Value = ((bool)(Original_FW_CL_R_Obsolete_ver));
             if ((Original_FW_CL_R_Obsolete_ver_from_date.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(0));
@@ -4707,7 +4729,7 @@ SELECT FW_CL_P_ID, FW_CL_P_SW_Code, FW_CL_P_SW_Versione, FW_CL_P_SW_Revisione, F
                     bool FW_CL_R_PlugConfig, 
                     bool FW_CL_R_Golden, 
                     bool FW_CL_R_AutoPairing, 
-                    int FW_CL_R_IdentificazioneRic, 
+                    global::System.Nullable<int> FW_CL_R_IdentificazioneRic, 
                     bool FW_CL_R_Obsolete_ver, 
                     global::System.Nullable<global::System.DateTime> FW_CL_R_Obsolete_ver_from_date, 
                     string FW_CL_R_Revisioni, 
@@ -4766,7 +4788,12 @@ SELECT FW_CL_P_ID, FW_CL_P_SW_Code, FW_CL_P_SW_Versione, FW_CL_P_SW_Revisione, F
             this.Adapter.InsertCommand.Parameters[21].Value = ((bool)(FW_CL_R_PlugConfig));
             this.Adapter.InsertCommand.Parameters[22].Value = ((bool)(FW_CL_R_Golden));
             this.Adapter.InsertCommand.Parameters[23].Value = ((bool)(FW_CL_R_AutoPairing));
-            this.Adapter.InsertCommand.Parameters[24].Value = ((int)(FW_CL_R_IdentificazioneRic));
+            if ((FW_CL_R_IdentificazioneRic.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[24].Value = ((int)(FW_CL_R_IdentificazioneRic.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
             this.Adapter.InsertCommand.Parameters[25].Value = ((bool)(FW_CL_R_Obsolete_ver));
             if ((FW_CL_R_Obsolete_ver_from_date.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[26].Value = ((System.DateTime)(FW_CL_R_Obsolete_ver_from_date.Value));
@@ -4831,7 +4858,7 @@ SELECT FW_CL_P_ID, FW_CL_P_SW_Code, FW_CL_P_SW_Versione, FW_CL_P_SW_Revisione, F
                     bool FW_CL_R_PlugConfig, 
                     bool FW_CL_R_Golden, 
                     bool FW_CL_R_AutoPairing, 
-                    int FW_CL_R_IdentificazioneRic, 
+                    global::System.Nullable<int> FW_CL_R_IdentificazioneRic, 
                     bool FW_CL_R_Obsolete_ver, 
                     global::System.Nullable<global::System.DateTime> FW_CL_R_Obsolete_ver_from_date, 
                     string FW_CL_R_Revisioni, 
@@ -4860,7 +4887,7 @@ SELECT FW_CL_P_ID, FW_CL_P_SW_Code, FW_CL_P_SW_Versione, FW_CL_P_SW_Revisione, F
                     bool Original_FW_CL_R_PlugConfig, 
                     bool Original_FW_CL_R_Golden, 
                     bool Original_FW_CL_R_AutoPairing, 
-                    int Original_FW_CL_R_IdentificazioneRic, 
+                    global::System.Nullable<int> Original_FW_CL_R_IdentificazioneRic, 
                     bool Original_FW_CL_R_Obsolete_ver, 
                     global::System.Nullable<global::System.DateTime> Original_FW_CL_R_Obsolete_ver_from_date, 
                     long FW_CL_R_ID) {
@@ -4918,7 +4945,12 @@ SELECT FW_CL_P_ID, FW_CL_P_SW_Code, FW_CL_P_SW_Versione, FW_CL_P_SW_Revisione, F
             this.Adapter.UpdateCommand.Parameters[21].Value = ((bool)(FW_CL_R_PlugConfig));
             this.Adapter.UpdateCommand.Parameters[22].Value = ((bool)(FW_CL_R_Golden));
             this.Adapter.UpdateCommand.Parameters[23].Value = ((bool)(FW_CL_R_AutoPairing));
-            this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(FW_CL_R_IdentificazioneRic));
+            if ((FW_CL_R_IdentificazioneRic.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(FW_CL_R_IdentificazioneRic.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
             this.Adapter.UpdateCommand.Parameters[25].Value = ((bool)(FW_CL_R_Obsolete_ver));
             if ((FW_CL_R_Obsolete_ver_from_date.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[26].Value = ((System.DateTime)(FW_CL_R_Obsolete_ver_from_date.Value));
@@ -4989,7 +5021,12 @@ SELECT FW_CL_P_ID, FW_CL_P_SW_Code, FW_CL_P_SW_Versione, FW_CL_P_SW_Revisione, F
             this.Adapter.UpdateCommand.Parameters[51].Value = ((bool)(Original_FW_CL_R_PlugConfig));
             this.Adapter.UpdateCommand.Parameters[52].Value = ((bool)(Original_FW_CL_R_Golden));
             this.Adapter.UpdateCommand.Parameters[53].Value = ((bool)(Original_FW_CL_R_AutoPairing));
-            this.Adapter.UpdateCommand.Parameters[54].Value = ((int)(Original_FW_CL_R_IdentificazioneRic));
+            if ((Original_FW_CL_R_IdentificazioneRic.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[54].Value = ((int)(Original_FW_CL_R_IdentificazioneRic.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[54].Value = global::System.DBNull.Value;
+            }
             this.Adapter.UpdateCommand.Parameters[55].Value = ((bool)(Original_FW_CL_R_Obsolete_ver));
             if ((Original_FW_CL_R_Obsolete_ver_from_date.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[56].Value = ((object)(0));
@@ -5045,7 +5082,7 @@ SELECT FW_CL_P_ID, FW_CL_P_SW_Code, FW_CL_P_SW_Versione, FW_CL_P_SW_Revisione, F
                     bool FW_CL_R_PlugConfig, 
                     bool FW_CL_R_Golden, 
                     bool FW_CL_R_AutoPairing, 
-                    int FW_CL_R_IdentificazioneRic, 
+                    global::System.Nullable<int> FW_CL_R_IdentificazioneRic, 
                     bool FW_CL_R_Obsolete_ver, 
                     global::System.Nullable<global::System.DateTime> FW_CL_R_Obsolete_ver_from_date, 
                     string FW_CL_R_Revisioni, 
@@ -5074,7 +5111,7 @@ SELECT FW_CL_P_ID, FW_CL_P_SW_Code, FW_CL_P_SW_Versione, FW_CL_P_SW_Revisione, F
                     bool Original_FW_CL_R_PlugConfig, 
                     bool Original_FW_CL_R_Golden, 
                     bool Original_FW_CL_R_AutoPairing, 
-                    int Original_FW_CL_R_IdentificazioneRic, 
+                    global::System.Nullable<int> Original_FW_CL_R_IdentificazioneRic, 
                     bool Original_FW_CL_R_Obsolete_ver, 
                     global::System.Nullable<global::System.DateTime> Original_FW_CL_R_Obsolete_ver_from_date) {
             return this.Update(FW_CL_R_SW_Code, FW_CL_R_SW_Versione, FW_CL_R_SW_Revisione, FW_CL_R_TipoDev, FW_CL_R_Freq, FW_CL_R_CanBus, FW_CL_R_SPAttivo, FW_CL_R_SPPassivo, FW_CL_R_CambioPag, FW_CL_R_CambioRic, FW_CL_R_MotRim, FW_CL_R_FwPAbbinato, FW_CL_R_NumPalmari, FW_CL_R_MasterOutput, FW_CL_R_EmergencyOutput, FW_CL_R_ProportionalOutput, FW_CL_R_NumOutput, FW_CL_R_NumInputAn, FW_CL_R_NumInputDig, FW_CL_R_TimeOut, FW_CL_R_ContempTasti, FW_CL_R_PlugConfig, FW_CL_R_Golden, FW_CL_R_AutoPairing, FW_CL_R_IdentificazioneRic, FW_CL_R_Obsolete_ver, FW_CL_R_Obsolete_ver_from_date, FW_CL_R_Revisioni, FW_CL_R_Funzionamento, Original_FW_CL_R_ID, Original_FW_CL_R_SW_Code, Original_FW_CL_R_SW_Versione, Original_FW_CL_R_SW_Revisione, Original_FW_CL_R_TipoDev, Original_FW_CL_R_Freq, Original_FW_CL_R_CanBus, Original_FW_CL_R_SPAttivo, Original_FW_CL_R_SPPassivo, Original_FW_CL_R_CambioPag, Original_FW_CL_R_CambioRic, Original_FW_CL_R_MotRim, Original_FW_CL_R_NumPalmari, Original_FW_CL_R_MasterOutput, Original_FW_CL_R_EmergencyOutput, Original_FW_CL_R_ProportionalOutput, Original_FW_CL_R_NumOutput, Original_FW_CL_R_NumInputAn, Original_FW_CL_R_NumInputDig, Original_FW_CL_R_TimeOut, Original_FW_CL_R_ContempTasti, Original_FW_CL_R_PlugConfig, Original_FW_CL_R_Golden, Original_FW_CL_R_AutoPairing, Original_FW_CL_R_IdentificazioneRic, Original_FW_CL_R_Obsolete_ver, Original_FW_CL_R_Obsolete_ver_from_date, Original_FW_CL_R_ID);
