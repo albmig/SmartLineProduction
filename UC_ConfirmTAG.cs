@@ -125,7 +125,26 @@ namespace SmartLineProduction
             }
             else
             {
-                btn_Invia.Focus();
+                //Modifica del 28.02.2023 - Anzichè attendere su btn_Invia, conferma direttamente
+                //btn_Invia.Focus();
+
+                //il codice successivo è l'evento btn_Invia_Click
+                tag_1 = tb_Tag1.Text;
+                tag_2 = tb_Tag2.Text;
+                if (tb_Tag1.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("Impossibile proseguire, inserire valore TAG # 1!");
+                    tb_Tag1.Focus();
+                    return;
+                }
+                if (tb_Tag2.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("Impossibile proseguire, inserire valore TAG # 2!");
+                    tb_Tag2.Focus();
+                    return;
+                }
+
+                this.DialogResult = DialogResult.OK;
             }
         }
 

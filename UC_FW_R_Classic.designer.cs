@@ -91,6 +91,8 @@
             this.metroLabel24 = new MetroFramework.Controls.MetroLabel();
             this.tb_TimeOut = new System.Windows.Forms.TextBox();
             this.metroLabel25 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel26 = new MetroFramework.Controls.MetroLabel();
+            this.tog_CloseLink = new MetroFramework.Controls.MetroToggle();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.tb_gv_Versione = new MetroFramework.Controls.MetroTextBox();
@@ -455,6 +457,8 @@
             this.tableLayoutPanel1.Controls.Add(this.metroLabel24, 0, 8);
             this.tableLayoutPanel1.Controls.Add(this.tb_TimeOut, 1, 8);
             this.tableLayoutPanel1.Controls.Add(this.metroLabel25, 3, 7);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel26, 6, 8);
+            this.tableLayoutPanel1.Controls.Add(this.tog_CloseLink, 7, 8);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -919,6 +923,28 @@
             this.metroLabel25.Size = new System.Drawing.Size(139, 19);
             this.metroLabel25.TabIndex = 121;
             this.metroLabel25.Text = "FW Palmare Abbinato";
+            // 
+            // metroLabel26
+            // 
+            this.metroLabel26.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.metroLabel26.AutoSize = true;
+            this.metroLabel26.Location = new System.Drawing.Point(769, 189);
+            this.metroLabel26.Name = "metroLabel26";
+            this.metroLabel26.Size = new System.Drawing.Size(67, 19);
+            this.metroLabel26.TabIndex = 145;
+            this.metroLabel26.Text = "Close Link";
+            // 
+            // tog_CloseLink
+            // 
+            this.tog_CloseLink.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tog_CloseLink.AutoSize = true;
+            this.tog_CloseLink.Location = new System.Drawing.Point(958, 190);
+            this.tog_CloseLink.Name = "tog_CloseLink";
+            this.tog_CloseLink.Size = new System.Drawing.Size(80, 17);
+            this.tog_CloseLink.Style = MetroFramework.MetroColorStyle.Red;
+            this.tog_CloseLink.TabIndex = 146;
+            this.tog_CloseLink.Text = "Off";
+            this.tog_CloseLink.UseSelectable = true;
             // 
             // metroLabel4
             // 
@@ -1566,5 +1592,7 @@
         private System.Windows.Forms.BindingSource CL_Famiglie_BindingSource;
         private ds_CL_FirmwareTableAdapters.FW_CL_FamiglieTableAdapter CL_Famiglie_TableAdapter;
         private MetroFramework.Controls.MetroTextBox tb_FwAbbinato;
+        private MetroFramework.Controls.MetroLabel metroLabel26;
+        private MetroFramework.Controls.MetroToggle tog_CloseLink;
     }
 }

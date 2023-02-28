@@ -123,6 +123,7 @@ namespace SmartLineProduction
                 read_nfc = temp_str_Nfc;
 
                 int err = LeggiNoteNfc();
+
                 switch (err)
                 {
                     case 0:
@@ -374,6 +375,7 @@ namespace SmartLineProduction
             {
                 pic_Result.Image = SmartLineProduction.Properties.Resources.Icona_OK;
                 pic_Result.Show();
+
                 if (!WriteTable()) { MessageBox.Show("Errore di scrittura sul DataBase!"); }
                 SettaForm();
             }

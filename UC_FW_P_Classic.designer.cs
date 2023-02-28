@@ -112,6 +112,8 @@
             this.menu_sw_exit = new System.Windows.Forms.ToolStripMenuItem();
             this.CL_Palmari_TableAdapter = new SmartLineProduction.ds_CL_FirmwareTableAdapters.FW_CL_PalmariTableAdapter();
             this.CL_Famiglie_TableAdapter = new SmartLineProduction.ds_CL_FirmwareTableAdapters.FW_CL_FamiglieTableAdapter();
+            this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
+            this.tog_CloseLink = new MetroFramework.Controls.MetroToggle();
             this.layout_dati.SuspendLayout();
             this.panel_intestazione.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -220,7 +222,7 @@
             this.cb_Famiglia.DataSource = this.CL_Famiglie_BindingSource;
             this.cb_Famiglia.DisplayMember = "FW_CL_Fam_Des";
             this.cb_Famiglia.FormattingEnabled = true;
-            this.cb_Famiglia.Location = new System.Drawing.Point(719, 43);
+            this.cb_Famiglia.Location = new System.Drawing.Point(719, 45);
             this.cb_Famiglia.Name = "cb_Famiglia";
             this.cb_Famiglia.Size = new System.Drawing.Size(263, 25);
             this.cb_Famiglia.TabIndex = 90;
@@ -493,6 +495,8 @@
             this.tableLayoutPanel1.Controls.Add(this.tb_fwAbbinato, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.box_Separatore_01, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.box_Separatore_02, 5, 1);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel14, 6, 5);
+            this.tableLayoutPanel1.Controls.Add(this.tog_CloseLink, 7, 5);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -1261,6 +1265,28 @@
             // 
             this.CL_Famiglie_TableAdapter.ClearBeforeFill = true;
             // 
+            // metroLabel14
+            // 
+            this.metroLabel14.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.metroLabel14.AutoSize = true;
+            this.metroLabel14.Location = new System.Drawing.Point(764, 125);
+            this.metroLabel14.Name = "metroLabel14";
+            this.metroLabel14.Size = new System.Drawing.Size(63, 19);
+            this.metroLabel14.TabIndex = 143;
+            this.metroLabel14.Text = "CloseLink";
+            // 
+            // tog_CloseLink
+            // 
+            this.tog_CloseLink.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tog_CloseLink.AutoSize = true;
+            this.tog_CloseLink.Location = new System.Drawing.Point(994, 124);
+            this.tog_CloseLink.Name = "tog_CloseLink";
+            this.tog_CloseLink.Size = new System.Drawing.Size(80, 21);
+            this.tog_CloseLink.Style = MetroFramework.MetroColorStyle.Red;
+            this.tog_CloseLink.TabIndex = 144;
+            this.tog_CloseLink.Text = "Off";
+            this.tog_CloseLink.UseSelectable = true;
+            // 
             // UC_FW_P_Classic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1389,5 +1415,7 @@
         private ds_CL_FirmwareTableAdapters.FW_CL_FamiglieTableAdapter CL_Famiglie_TableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn fWCLPSWCodeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn FW_CL_P_SW_Revisione;
+        private MetroFramework.Controls.MetroLabel metroLabel14;
+        private MetroFramework.Controls.MetroToggle tog_CloseLink;
     }
 }

@@ -95,7 +95,7 @@ namespace SmartLineProduction
                 tb_IdentifRic.Text = "";
                 tb_FwAbbinato.Text = "";
                 cb_Famiglia.Text = "";
-
+                tog_CloseLink.Checked = true;
 
                 rtb_Revisioni.Text = "";
                 rtb_Funzionamento.Text = "";
@@ -215,6 +215,7 @@ namespace SmartLineProduction
             if (tog_MasterOutput.Checked) { newrow["FW_CL_R_MasterOutput"] = true; } else { newrow["FW_CL_R_MasterOutput"] = false; }
             if (tog_EmergencyOutput.Checked) { newrow["FW_CL_R_EmergencyOutput"] = true; } else { newrow["FW_CL_R_EmergencyOutput"] = false; }
             if (tog_ProportionalOutput.Checked) { newrow["FW_CL_R_ProportionalOutput"] = true; } else { newrow["FW_CL_R_ProportionalOutput"] = false; }
+            if (tog_CloseLink.Checked) { newrow["FW_CL_R_CloseLink"] = true; } else { newrow["FW_CL_R_CloseLink"] = false; }
 
             if (tb_IdentifRic.Text != string.Empty) { newrow["FW_CL_R_IdentificazioneRic"] = Int32.Parse(tb_IdentifRic.Text); }
             newrow["FW_CL_R_NumPalmari"] = Int32.Parse(tb_NumPalmari.Text);
@@ -300,6 +301,7 @@ namespace SmartLineProduction
                 tog_MasterOutput.Checked = (bool)myRow["FW_CL_R_MasterOutput"];
                 tog_EmergencyOutput.Checked = (bool)myRow["FW_CL_R_EmergencyOutput"];
                 tog_ProportionalOutput.Checked = (bool)myRow["FW_CL_R_ProportionalOutput"];
+                tog_CloseLink.Checked = (bool)myRow["FW_CL_R_CloseLink"];
 
                 if (myRow["FW_CL_R_IdentificazioneRic"].ToString() != string.Empty) { tb_IdentifRic.Text = myRow["FW_CL_R_IdentificazioneRic"].ToString(); } else { tb_IdentifRic.Text = string.Empty; }
                 tb_NumPalmari.Text = myRow["FW_CL_R_NumPalmari"].ToString();

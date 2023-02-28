@@ -136,6 +136,7 @@ namespace SmartLineProduction
                 tog_IVLed.Checked = false;
                 tog_Accel.Checked = false;
                 tog_Buzzer.Checked = false;
+                tog_CloseLink.Checked = true;
 
                 rtb_Revisioni.Text = "";
                 rtb_Funzionamento.Text = "";
@@ -172,6 +173,8 @@ namespace SmartLineProduction
             if (tog_Vibracall.Checked) { newrow["FW_CL_P_Vibracall"] = true; } else { newrow["FW_CL_P_Vibracall"] = false; }
             if (tog_Torcia.Checked) { newrow["FW_CL_P_Torcia"] = true; } else { newrow["FW_CL_P_Torcia"] = false; }
             if (tog_IVLed.Checked) { newrow["FW_CL_P_IVLed"] = true; } else { newrow["FW_CL_P_IVLed"] = false; }
+            if (tog_CloseLink.Checked) { newrow["FW_CL_P_CloseLink"] = true; } else { newrow["FW_CL_P_CloseLink"] = false; }
+
 
             if (cb_868.Checked) { newrow["FW_CL_P_Freq"] = "X"; }
             if (cb_433.Checked) { newrow["FW_CL_P_Freq"] = "B"; }
@@ -238,6 +241,7 @@ namespace SmartLineProduction
                 tog_Vibracall.Checked = (bool)myRow["FW_CL_P_Vibracall"];
                 tog_Torcia.Checked = (bool)myRow["FW_CL_P_Torcia"];
                 tog_IVLed.Checked = (bool)myRow["FW_CL_P_IVLed"];
+                tog_CloseLink.Checked = (bool)myRow["FW_CL_P_CloseLink"];
 
                 tB_NRicevCom.Text = myRow["FW_CL_P_NumRicevitori"].ToString();
                 tb_fwAbbinato.Text = myRow["FW_CL_P_FwRAbbinato"].ToString();
