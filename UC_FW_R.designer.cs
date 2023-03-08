@@ -173,6 +173,8 @@
             this.layout_menu = new System.Windows.Forms.TableLayoutPanel();
             this.fam_ProdTableAdapter = new SmartLineProduction.ds_SLTableAdapters.Fam_ProdTableAdapter();
             this.firmwareTableAdapter = new SmartLineProduction.ds_ProgrammazioneTableAdapters.FirmwareTableAdapter();
+            this.tog_Delay = new MetroFramework.Controls.MetroToggle();
+            this.metroLabel41 = new MetroFramework.Controls.MetroLabel();
             this.panel_FW_R.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv_FW_R)).BeginInit();
             this.gv_FW_R_MenuStrip.SuspendLayout();
@@ -509,6 +511,8 @@
             // panel_dati
             // 
             this.layout_dati.SetColumnSpan(this.panel_dati, 2);
+            this.panel_dati.Controls.Add(this.tog_Delay);
+            this.panel_dati.Controls.Add(this.metroLabel41);
             this.panel_dati.Controls.Add(this.group_Lock);
             this.panel_dati.Controls.Add(this.tog_PIC);
             this.panel_dati.Controls.Add(this.metroLabel39);
@@ -2043,6 +2047,27 @@
             // 
             this.firmwareTableAdapter.ClearBeforeFill = true;
             // 
+            // tog_Delay
+            // 
+            this.tog_Delay.AutoSize = true;
+            this.tog_Delay.Location = new System.Drawing.Point(394, 566);
+            this.tog_Delay.Name = "tog_Delay";
+            this.tog_Delay.Size = new System.Drawing.Size(80, 17);
+            this.tog_Delay.Style = MetroFramework.MetroColorStyle.Red;
+            this.tog_Delay.TabIndex = 138;
+            this.tog_Delay.Text = "Off";
+            this.tog_Delay.UseSelectable = true;
+            // 
+            // metroLabel41
+            // 
+            this.metroLabel41.AutoSize = true;
+            this.metroLabel41.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel41.Location = new System.Drawing.Point(247, 564);
+            this.metroLabel41.Name = "metroLabel41";
+            this.metroLabel41.Size = new System.Drawing.Size(120, 19);
+            this.metroLabel41.TabIndex = 137;
+            this.metroLabel41.Text = "Rilascio a cliente";
+            // 
             // UC_FW_R
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -2235,5 +2260,7 @@
         private System.Windows.Forms.CheckBox cb_Lock_1;
         private System.Windows.Forms.CheckBox cb_Lock_0;
         private MetroFramework.Controls.MetroLabel metroLabel40;
+        private MetroFramework.Controls.MetroToggle tog_Delay;
+        private MetroFramework.Controls.MetroLabel metroLabel41;
     }
 }

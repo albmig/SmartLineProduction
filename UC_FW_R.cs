@@ -87,6 +87,7 @@ namespace SmartLineProduction
                 tb_gv_AnaInputN.Enabled = false;
                 tog_Radius.Enabled = false;
                 tog_PIC.Enabled = false;
+                tog_Delay.Enabled = false;
 
                 pan_Menu_comandi.Enabled = false;
                 pan_Menu_exit.Enabled = false;
@@ -167,6 +168,7 @@ namespace SmartLineProduction
                 tb_gv_AnaInputN.Text = "";
                 tog_Radius.Checked = false;
                 tog_PIC.Checked = false;
+                tog_Delay.Checked = false;
 
                 rtb_Revisioni.Text = "";
                 rtb_Funzionamento.Text = "";
@@ -219,6 +221,8 @@ namespace SmartLineProduction
             newrow["SW_Revisioni"] = rtb_Revisioni.Text;
             newrow["SW_Funzionamento"] = rtb_Funzionamento.Text;
             if (tog_PIC.Checked) { newrow["SW_CustomPIC"] = true; } else { newrow["SW_CustomPIC"] = false; }
+            if (tog_Delay.Checked) { newrow["SW_IsPublic"] = true; } else { newrow["SW_IsPublic"] = false; }
+
 
             if (cb_868.Checked) { newrow["SW_R_Opt_RF"] = "868|24"; }
             if (cb_433.Checked) { newrow["SW_R_Opt_RF"] = "433"; }
@@ -310,6 +314,7 @@ namespace SmartLineProduction
             rtb_Revisioni.Text = myRow["SW_Revisioni"].ToString();
             rtb_Funzionamento.Text = myRow["SW_Funzionamento"].ToString();
             tog_PIC.Checked = (bool)myRow["SW_CustomPIC"];
+            tog_Delay.Checked= (bool)myRow["SW_IsPublic"];
 
             LockLevel = (int)myRow["SW_R_Lock"];
             ManageLock(LockLevel);
