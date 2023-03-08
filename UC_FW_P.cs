@@ -77,6 +77,7 @@ namespace SmartLineProduction
                 tog_PLD.Enabled = false;
                 tog_SP.Enabled = false;
                 tb_gv_MaxPair.Enabled = false;
+                tog_Delay.Enabled = false;
 
                 pan_Menu_comandi.Enabled = false;
                 pan_Menu_exit.Enabled = false;
@@ -151,6 +152,7 @@ namespace SmartLineProduction
                 tog_Torch.Checked = false;
                 tog_PLD.Checked = false;
                 tog_SP.Checked = false;
+                tog_Delay.Checked = false;
                 tb_gv_MaxPair.Text = "1";
 
                 rtb_Revisioni.Text = "";
@@ -244,6 +246,8 @@ namespace SmartLineProduction
             if (tog_Torch.Checked) { newrow["SW_P_Opt_Use_LedTorch"] = true; } else { newrow["SW_P_Opt_Use_LedTorch"] = false; }
             if (tog_PLD.Checked) { newrow["SW_P_PLD"] = true; } else { newrow["SW_P_PLD"] = false; }
             if (tog_SP.Checked) { newrow["SW_P_Opt_Use_SP"] = true; } else { newrow["SW_P_Opt_Use_SP"] = false; }
+            if (tog_Delay.Checked) { newrow["SW_IsPublic"] = true; } else { newrow["SW_IsPublic"] = false; }
+
             newrow["SW_P_Opt_MaxPairDevices"] = tb_gv_MaxPair.Text;
 
             if (cb_868.Checked) { newrow["SW_P_Opt_RF"] = "868|24"; }
@@ -337,6 +341,7 @@ namespace SmartLineProduction
             tog_Torch.Checked = (bool)myRow["SW_P_Opt_Use_LedTorch"];
             tog_PLD.Checked = (bool)myRow["SW_P_PLD"];
             tog_SP.Checked = (bool)myRow["SW_P_Opt_Use_SP"];
+            tog_Delay.Checked = (bool)myRow["SW_IsPublic"];
             tb_gv_MaxPair.Text = myRow["SW_P_Opt_MaxPairDevices"].ToString();
             rtb_Revisioni.Text = myRow["SW_Revisioni"].ToString();
             rtb_Funzionamento.Text = myRow["SW_Funzionamento"].ToString();
