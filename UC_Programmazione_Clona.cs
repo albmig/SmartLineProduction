@@ -89,6 +89,13 @@ namespace SmartLineProduction
                 {
                     but_Programma.Focus();
                 }
+                else
+                {
+                    MessageBox.Show("Errore grave! Impossibile trovare il numero di serie indicato!");
+
+                    tbx_ReadLabel_Device.Text = string.Empty;
+                    tbx_ReadLabel_Device.Focus();
+                }
             }
         }
 
@@ -118,6 +125,10 @@ namespace SmartLineProduction
                     qr_Commessa = rowView["Ser_Commessa"].ToString();
                     qr_Kit = rowView["Ser_Kit"].ToString();
                 }
+            }
+            else
+            {
+                return false;
             }
 
             lab_read_SN.Text = qr_sn;

@@ -77,6 +77,7 @@ namespace SmartLineProduction
                 tog_PLD.Enabled = false;
                 tog_SP.Enabled = false;
                 tb_gv_MaxPair.Enabled = false;
+                tog_Delay.Checked = false;
                 tog_Delay.Enabled = false;
 
                 pan_Menu_comandi.Enabled = false;
@@ -121,6 +122,10 @@ namespace SmartLineProduction
 
                 gv_FW_P.Enabled = false;
                 group_Lock.Enabled = true;
+
+                tog_Delay.Checked = false;
+                tog_Delay.Enabled = true;
+
             }
 
             if (displayform == "INV")
@@ -153,6 +158,7 @@ namespace SmartLineProduction
                 tog_PLD.Checked = false;
                 tog_SP.Checked = false;
                 tog_Delay.Checked = false;
+                tog_Delay.Enabled = true;
                 tb_gv_MaxPair.Text = "1";
 
                 rtb_Revisioni.Text = "";

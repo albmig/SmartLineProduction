@@ -87,6 +87,7 @@ namespace SmartLineProduction
                 tb_gv_AnaInputN.Enabled = false;
                 tog_Radius.Enabled = false;
                 tog_PIC.Enabled = false;
+                tog_Delay.Checked = false;
                 tog_Delay.Enabled = false;
 
                 pan_Menu_comandi.Enabled = false;
@@ -131,6 +132,9 @@ namespace SmartLineProduction
 
                 gv_FW_R.Enabled = false;
                 group_Lock.Enabled = true;
+
+                tog_Delay.Checked = false;
+                tog_Delay.Enabled = true;
             }
 
             if (displayform == "INV")
@@ -184,6 +188,10 @@ namespace SmartLineProduction
 
                 LockLevel = 0;
                 group_Lock.Enabled = true;
+
+                tog_Delay.Checked = false;
+                tog_Delay.Enabled = true;
+
             }
 
             ManageLock(LockLevel);
