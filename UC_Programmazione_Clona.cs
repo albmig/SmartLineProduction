@@ -40,6 +40,8 @@ namespace SmartLineProduction
 
         public int glob_LockLevel = 0;
 
+        //Alberto 27/03/2023
+
         public UC_Programmazione_Clona()
         {
             InitializeComponent();
