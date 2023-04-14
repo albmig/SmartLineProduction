@@ -13,6 +13,9 @@ namespace SmartLineProduction
         public static bool CloseSplash = false;
         public static bool formclosing = false;
 
+        public static bool Form_Edit = false;
+        public static int BS_Position_01 = 0;
+
         public static string gl_commessa = "";
         public static string gl_ragsoc = "";
         public static string gl_articolo = "";

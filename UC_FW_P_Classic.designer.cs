@@ -83,6 +83,8 @@
             this.tb_fwAbbinato = new MetroFramework.Controls.MetroTextBox();
             this.box_Separatore_01 = new MetroFramework.Controls.MetroPanel();
             this.box_Separatore_02 = new MetroFramework.Controls.MetroPanel();
+            this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
+            this.tog_CloseLink = new MetroFramework.Controls.MetroToggle();
             this.panel_revisioni = new MetroFramework.Controls.MetroPanel();
             this.rtb_Revisioni = new System.Windows.Forms.RichTextBox();
             this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
@@ -112,8 +114,6 @@
             this.menu_sw_exit = new System.Windows.Forms.ToolStripMenuItem();
             this.CL_Palmari_TableAdapter = new SmartLineProduction.ds_CL_FirmwareTableAdapters.FW_CL_PalmariTableAdapter();
             this.CL_Famiglie_TableAdapter = new SmartLineProduction.ds_CL_FirmwareTableAdapters.FW_CL_FamiglieTableAdapter();
-            this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
-            this.tog_CloseLink = new MetroFramework.Controls.MetroToggle();
             this.layout_dati.SuspendLayout();
             this.panel_intestazione.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -883,6 +883,28 @@
             this.box_Separatore_02.VerticalScrollbarHighlightOnWheel = false;
             this.box_Separatore_02.VerticalScrollbarSize = 10;
             // 
+            // metroLabel14
+            // 
+            this.metroLabel14.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.metroLabel14.AutoSize = true;
+            this.metroLabel14.Location = new System.Drawing.Point(764, 125);
+            this.metroLabel14.Name = "metroLabel14";
+            this.metroLabel14.Size = new System.Drawing.Size(63, 19);
+            this.metroLabel14.TabIndex = 143;
+            this.metroLabel14.Text = "CloseLink";
+            // 
+            // tog_CloseLink
+            // 
+            this.tog_CloseLink.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tog_CloseLink.AutoSize = true;
+            this.tog_CloseLink.Location = new System.Drawing.Point(994, 124);
+            this.tog_CloseLink.Name = "tog_CloseLink";
+            this.tog_CloseLink.Size = new System.Drawing.Size(80, 21);
+            this.tog_CloseLink.Style = MetroFramework.MetroColorStyle.Red;
+            this.tog_CloseLink.TabIndex = 144;
+            this.tog_CloseLink.Text = "Off";
+            this.tog_CloseLink.UseSelectable = true;
+            // 
             // panel_revisioni
             // 
             this.panel_revisioni.Controls.Add(this.rtb_Revisioni);
@@ -1264,28 +1286,6 @@
             // CL_Famiglie_TableAdapter
             // 
             this.CL_Famiglie_TableAdapter.ClearBeforeFill = true;
-            // 
-            // metroLabel14
-            // 
-            this.metroLabel14.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.metroLabel14.AutoSize = true;
-            this.metroLabel14.Location = new System.Drawing.Point(764, 125);
-            this.metroLabel14.Name = "metroLabel14";
-            this.metroLabel14.Size = new System.Drawing.Size(63, 19);
-            this.metroLabel14.TabIndex = 143;
-            this.metroLabel14.Text = "CloseLink";
-            // 
-            // tog_CloseLink
-            // 
-            this.tog_CloseLink.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tog_CloseLink.AutoSize = true;
-            this.tog_CloseLink.Location = new System.Drawing.Point(994, 124);
-            this.tog_CloseLink.Name = "tog_CloseLink";
-            this.tog_CloseLink.Size = new System.Drawing.Size(80, 21);
-            this.tog_CloseLink.Style = MetroFramework.MetroColorStyle.Red;
-            this.tog_CloseLink.TabIndex = 144;
-            this.tog_CloseLink.Text = "Off";
-            this.tog_CloseLink.UseSelectable = true;
             // 
             // UC_FW_P_Classic
             // 

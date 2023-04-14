@@ -51,6 +51,8 @@
             this.fWPalmariClassicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.fWRicevitoriClassicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
+            this.queryFWOrdinatoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.smartLineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fWPalmariToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -312,7 +314,9 @@
             this.classicLineToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fWPalmariClassicToolStripMenuItem,
             this.toolStripSeparator7,
-            this.fWRicevitoriClassicToolStripMenuItem});
+            this.fWRicevitoriClassicToolStripMenuItem,
+            this.toolStripSeparator10,
+            this.queryFWOrdinatoToolStripMenuItem});
             this.classicLineToolStripMenuItem.Name = "classicLineToolStripMenuItem";
             this.classicLineToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.classicLineToolStripMenuItem.Text = "- Classic Line -";
@@ -335,6 +339,18 @@
             this.fWRicevitoriClassicToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.fWRicevitoriClassicToolStripMenuItem.Text = "FW Ricevitori - Classic";
             this.fWRicevitoriClassicToolStripMenuItem.Click += new System.EventHandler(this.fWRicevitoriClassicToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator10
+            // 
+            this.toolStripSeparator10.Name = "toolStripSeparator10";
+            this.toolStripSeparator10.Size = new System.Drawing.Size(187, 6);
+            // 
+            // queryFWOrdinatoToolStripMenuItem
+            // 
+            this.queryFWOrdinatoToolStripMenuItem.Name = "queryFWOrdinatoToolStripMenuItem";
+            this.queryFWOrdinatoToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.queryFWOrdinatoToolStripMenuItem.Text = "Query FW Ordinato";
+            this.queryFWOrdinatoToolStripMenuItem.Click += new System.EventHandler(this.queryFWOrdinatoToolStripMenuItem_Click);
             // 
             // toolStripSeparator9
             // 
@@ -1057,6 +1073,8 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripMenuItem fWRicevitoriClassicToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
+        private System.Windows.Forms.ToolStripMenuItem queryFWOrdinatoToolStripMenuItem;
     }
 }
 

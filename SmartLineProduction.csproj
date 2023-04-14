@@ -212,6 +212,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ds_CL_Firmware.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ds_CL_FW_Query.cs">
+      <DependentUpon>ds_CL_FW_Query.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_CL_FW_Query.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_CL_FW_Query.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ds_Eventi.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -348,6 +356,12 @@
     </Compile>
     <Compile Include="UC_Avanzamento.Designer.cs">
       <DependentUpon>UC_Avanzamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Classic_XSWR_Query.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_Classic_XSWR_Query.designer.cs">
+      <DependentUpon>UC_Classic_XSWR_Query.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_ConfirmTAG.cs">
       <SubType>Form</SubType>
@@ -651,6 +665,9 @@
     <EmbeddedResource Include="UC_Avanzamento.resx">
       <DependentUpon>UC_Avanzamento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_Classic_XSWR_Query.resx">
+      <DependentUpon>UC_Classic_XSWR_Query.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_ConfirmTAG.resx">
       <DependentUpon>UC_ConfirmTAG.cs</DependentUpon>
     </EmbeddedResource>
@@ -810,6 +827,17 @@
     </None>
     <None Include="ds_CL_Firmware.xss">
       <DependentUpon>ds_CL_Firmware.xsd</DependentUpon>
+    </None>
+    <None Include="ds_CL_FW_Query.xsc">
+      <DependentUpon>ds_CL_FW_Query.xsd</DependentUpon>
+    </None>
+    <None Include="ds_CL_FW_Query.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_CL_FW_Query.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds_CL_FW_Query.xss">
+      <DependentUpon>ds_CL_FW_Query.xsd</DependentUpon>
     </None>
     <None Include="ds_Eventi.xsc">
       <DependentUpon>ds_Eventi.xsd</DependentUpon>
