@@ -69,6 +69,8 @@ namespace SmartLineProduction
             this.tE_Excl_CustomersTableAdapter.Fill(this.ds_CL_FW_Query.TE_Excl_Customers);
             // TODO: questa riga di codice carica i dati nella tabella 'ds_CL_FW_Query1.TE_view_XSWR_Clients_Excl'. È possibile spostarla o rimuoverla se necessario.
             this.tE_view_XSWR_Clients_ExclTableAdapter.Fill(this.ds_CL_FW_Query.TE_view_XSWR_Clients_Excl);
+            // TODO: questa riga di codice carica i dati nella tabella 'ds_CL_FW_Query.Find_Kit'. È possibile spostarla o rimuoverla se necessario.
+            this.find_KitTableAdapter.Fill(this.ds_CL_FW_Query.Find_Kit);
 
 
             // NOTA: modificato valore MaxLenght in dataset
@@ -80,10 +82,17 @@ namespace SmartLineProduction
             newAnno["AnnoOrdine"] = "- Select -";
             ds_CL_FW_Query.Find_Anno.Rows.Add(newAnno);
 
+            DataRow newKit = ds_CL_FW_Query.Find_Kit.NewRow();
+            newKit["Kit"] = "- Select -";
+            ds_CL_FW_Query.Find_Kit.Rows.Add(newKit);
+
             int pos_dev = this.findDeviceBindingSource.Find("TipoDevice", "- Select -");
             int pos_anno = this.findAnnoBindingSource.Find("AnnoOrdine", "- Select -");
+            int pos_kit = this.findKitBindingSource.Find("Kit", "- Select -");
+
             this.findDeviceBindingSource.Position = pos_dev;
             this.findAnnoBindingSource.Position = pos_anno;
+            this.findKitBindingSource.Position = pos_kit;
         }
 
         private void DiscardChanges()
@@ -183,26 +192,74 @@ namespace SmartLineProduction
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string path = @"C:\Users\Sistematica\Desktop\output.xlsx";
-            gv_FW.ExportToXlsx(path);
+            SaveFileDialog SaveFileDial = new SaveFileDialog();
+            SaveFileDial.DefaultExt = "xlsx";
+            SaveFileDial.Filter = "Excel files (*.xlsx)|*.xlsx";
+            SaveFileDial.FileName = "FW - Query del " + DateTime.Today.Day + DateTime.Today.Month + DateTime.Today.Year;
+            if (SaveFileDial.ShowDialog() == DialogResult.OK)
+            {
+                string nomefile = SaveFileDial.FileName;
+                gv_FW.ExportToXlsx(nomefile);
+            }
+            //string path = @"C:\Users\Sistematica\Desktop\output.xlsx";
         }
 
         private void but_filter_Click(object sender, EventArgs e)
         {
-            string filtro = string.Empty;
+            string filtro_Anno = string.Empty;
+            string filtro_Device = string.Empty;
+            string filtro_Kit = string.Empty;
+
             if (cb_Sel_Anno.Text != "- Select -")
             {
-                filtro = "AnnoOrdine = " + "'" + cb_Sel_Anno.Text + "'";
-                ColumnView view = gridView_gv_FW;
-                view.ActiveFilter.Add(view.Columns["colAnnoOrdine"], new ColumnFilterInfo(filtro, ""));
+                filtro_Anno = "[AnnoOrdine] = " + cb_Sel_Anno.Text;
+                //gridView_gv_FW.SetRowCellValue(GridControl.AutoFilterRowHandle, gridView_gv_FW.Columns["colAnnoOrdine"], filtro_Anno);
+                //gridView_gv_FW.ActiveFilterCriteria = new DevExpress.Data.Filtering.CriteriaOperator. BinaryOperator("colAnnoOrdine", cb_Sel_Anno.Text);
+
+                //ColumnView view = gridView_gv_FW;
+                //view.ActiveFilter.Add(view.Columns["colAnnoOrdine"], new ColumnFilterInfo(filtro_Anno, ""));
             }
 
             if (cb_Sel_Device.Text != "- Select -")
             {
-                filtro = "TipoDevice = " + "'" + cb_Sel_Device.Text + "'";
-                ColumnView view = gridView_gv_FW;
-                view.ActiveFilter.Add(view.Columns["colTipoDevice"], new ColumnFilterInfo(filtro, ""));
+                filtro_Device = "TipoDevice = " + "'" + cb_Sel_Device.Text + "'";
+                //gridView_gv_FW.SetRowCellValue(GridControl.AutoFilterRowHandle, gridView_gv_FW.Columns["colTipoDevice"], filtro_Device);
+
+                //ColumnView view = gridView_gv_FW;
+                //view.ActiveFilter.Add(view.Columns["colTipoDevice"], new ColumnFilterInfo(filtro_Device, ""));
             }
+
+            if (cb_Sel_Kit.Text != "- Select -")
+            {
+                filtro_Kit = "KIT = " + "'" + cb_Sel_Kit.Text + "'";
+                //gridView_gv_FW.SetRowCellValue(GridControl.AutoFilterRowHandle, gridView_gv_FW.Columns["colKIT"], filtro_Anno);
+
+                //ColumnView view = gridView_gv_FW;
+                //view.ActiveFilter.Add(view.Columns["colKIT"], new ColumnFilterInfo(filtro_Kit, ""));
+            }
+
+
+
+            string filtro = string.Empty;
+            if (filtro_Anno != string.Empty) { filtro = filtro_Anno; }
+
+            if (filtro_Device != string.Empty)
+            {
+                if (filtro != string.Empty) { filtro = filtro + " AND "; }
+                filtro = filtro + filtro_Device;
+            }
+
+            if (filtro_Kit != string.Empty)
+            {
+                if (filtro != string.Empty) { filtro = filtro + " AND "; }
+                filtro = filtro + filtro_Kit;
+            }
+
+            //gridView_gv_FW.ActiveFilterString = "[AnnoOrdine] =  2022";            
+            gridView_gv_FW.ActiveFilterString = filtro;
+
+            //ColumnView view = gridView_gv_FW;
+            //view.ActiveFilter.Add(view.Columns["colAnnoOrdine"], new ColumnFilterInfo(filtro, ""));
 
 
             gv_FW.Refresh();
@@ -215,8 +272,11 @@ namespace SmartLineProduction
 
             int pos_dev = this.findDeviceBindingSource.Find("TipoDevice", "- Select -");
             int pos_anno = this.findAnnoBindingSource.Find("AnnoOrdine", "- Select -");
+            int pos_kit = this.findKitBindingSource.Find("Kit", "- Select -");
+
             this.findDeviceBindingSource.Position = pos_dev;
             this.findAnnoBindingSource.Position = pos_anno;
+            this.findKitBindingSource.Position = pos_kit;
         }
     }
 }

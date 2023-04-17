@@ -105,7 +105,7 @@ FROM            TE_view_XSWR</CommandText>
               <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionString (Settings)" DbObjectName="SISTEMATICA_FACTORY.dbo.TE_view_XSWR_Clients_Excl" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT DISTINCT KIT, TipoDevice
+                    <CommandText>SELECT DISTINCT KIT
 FROM            TE_view_XSWR_Clients_Excl</CommandText>
                     <Parameters />
                   </DbCommand>
@@ -113,7 +113,6 @@ FROM            TE_view_XSWR_Clients_Excl</CommandText>
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="TipoDevice" DataSetColumn="TipoDevice" />
               <Mapping SourceColumn="KIT" DataSetColumn="KIT" />
             </Mappings>
             <Sources />
@@ -126,7 +125,7 @@ FROM            TE_view_XSWR_Clients_Excl</CommandText>
   <xs:element name="ds_CL_FW_Query" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ds_CL_FW_Query" msprop:Generator_UserDSName="ds_CL_FW_Query">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Find_Device" msprop:Generator_TableClassName="Find_DeviceDataTable" msprop:Generator_TableVarName="tableFind_Device" msprop:Generator_TablePropName="Find_Device" msprop:Generator_RowDeletingName="Find_DeviceRowDeleting" msprop:Generator_RowChangingName="Find_DeviceRowChanging" msprop:Generator_RowEvHandlerName="Find_DeviceRowChangeEventHandler" msprop:Generator_RowDeletedName="Find_DeviceRowDeleted" msprop:Generator_UserTableName="Find_Device" msprop:Generator_RowChangedName="Find_DeviceRowChanged" msprop:Generator_RowEvArgName="Find_DeviceRowChangeEvent" msprop:Generator_RowClassName="Find_DeviceRow">
+        <xs:element name="Find_Device" msprop:Generator_TableClassName="Find_DeviceDataTable" msprop:Generator_TableVarName="tableFind_Device" msprop:Generator_RowChangedName="Find_DeviceRowChanged" msprop:Generator_TablePropName="Find_Device" msprop:Generator_RowDeletingName="Find_DeviceRowDeleting" msprop:Generator_RowChangingName="Find_DeviceRowChanging" msprop:Generator_RowEvHandlerName="Find_DeviceRowChangeEventHandler" msprop:Generator_RowDeletedName="Find_DeviceRowDeleted" msprop:Generator_RowClassName="Find_DeviceRow" msprop:Generator_UserTableName="Find_Device" msprop:Generator_RowEvArgName="Find_DeviceRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TipoDevice" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTipoDevice" msprop:Generator_ColumnPropNameInRow="TipoDevice" msprop:Generator_ColumnPropNameInTable="TipoDeviceColumn" msprop:Generator_UserColumnName="TipoDevice" minOccurs="0">
@@ -139,7 +138,7 @@ FROM            TE_view_XSWR_Clients_Excl</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Find_Anno" msprop:Generator_TableClassName="Find_AnnoDataTable" msprop:Generator_TableVarName="tableFind_Anno" msprop:Generator_TablePropName="Find_Anno" msprop:Generator_RowDeletingName="Find_AnnoRowDeleting" msprop:Generator_RowChangingName="Find_AnnoRowChanging" msprop:Generator_RowEvHandlerName="Find_AnnoRowChangeEventHandler" msprop:Generator_RowDeletedName="Find_AnnoRowDeleted" msprop:Generator_UserTableName="Find_Anno" msprop:Generator_RowChangedName="Find_AnnoRowChanged" msprop:Generator_RowEvArgName="Find_AnnoRowChangeEvent" msprop:Generator_RowClassName="Find_AnnoRow">
+        <xs:element name="Find_Anno" msprop:Generator_TableClassName="Find_AnnoDataTable" msprop:Generator_TableVarName="tableFind_Anno" msprop:Generator_RowChangedName="Find_AnnoRowChanged" msprop:Generator_TablePropName="Find_Anno" msprop:Generator_RowDeletingName="Find_AnnoRowDeleting" msprop:Generator_RowChangingName="Find_AnnoRowChanging" msprop:Generator_RowEvHandlerName="Find_AnnoRowChangeEventHandler" msprop:Generator_RowDeletedName="Find_AnnoRowDeleted" msprop:Generator_RowClassName="Find_AnnoRow" msprop:Generator_UserTableName="Find_Anno" msprop:Generator_RowEvArgName="Find_AnnoRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="AnnoOrdine" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAnnoOrdine" msprop:Generator_ColumnPropNameInRow="AnnoOrdine" msprop:Generator_ColumnPropNameInTable="AnnoOrdineColumn" msprop:Generator_UserColumnName="AnnoOrdine" minOccurs="0">
@@ -152,7 +151,7 @@ FROM            TE_view_XSWR_Clients_Excl</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="TE_Excl_Customers" msprop:Generator_TableClassName="TE_Excl_CustomersDataTable" msprop:Generator_TableVarName="tableTE_Excl_Customers" msprop:Generator_RowChangedName="TE_Excl_CustomersRowChanged" msprop:Generator_TablePropName="TE_Excl_Customers" msprop:Generator_RowDeletingName="TE_Excl_CustomersRowDeleting" msprop:Generator_RowChangingName="TE_Excl_CustomersRowChanging" msprop:Generator_RowEvHandlerName="TE_Excl_CustomersRowChangeEventHandler" msprop:Generator_RowDeletedName="TE_Excl_CustomersRowDeleted" msprop:Generator_RowClassName="TE_Excl_CustomersRow" msprop:Generator_UserTableName="TE_Excl_Customers" msprop:Generator_RowEvArgName="TE_Excl_CustomersRowChangeEvent">
+        <xs:element name="TE_Excl_Customers" msprop:Generator_TableClassName="TE_Excl_CustomersDataTable" msprop:Generator_TableVarName="tableTE_Excl_Customers" msprop:Generator_TablePropName="TE_Excl_Customers" msprop:Generator_RowDeletingName="TE_Excl_CustomersRowDeleting" msprop:Generator_RowChangingName="TE_Excl_CustomersRowChanging" msprop:Generator_RowEvHandlerName="TE_Excl_CustomersRowChangeEventHandler" msprop:Generator_RowDeletedName="TE_Excl_CustomersRowDeleted" msprop:Generator_UserTableName="TE_Excl_Customers" msprop:Generator_RowChangedName="TE_Excl_CustomersRowChanged" msprop:Generator_RowEvArgName="TE_Excl_CustomersRowChangeEvent" msprop:Generator_RowClassName="TE_Excl_CustomersRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Mastro" msprop:Generator_ColumnVarNameInTable="columnMastro" msprop:Generator_ColumnPropNameInRow="Mastro" msprop:Generator_ColumnPropNameInTable="MastroColumn" msprop:Generator_UserColumnName="Mastro" type="xs:short" minOccurs="0" />
@@ -161,7 +160,7 @@ FROM            TE_view_XSWR_Clients_Excl</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="TE_view_XSWR_Clients_Excl" msprop:Generator_TableClassName="TE_view_XSWR_Clients_ExclDataTable" msprop:Generator_TableVarName="tableTE_view_XSWR_Clients_Excl" msprop:Generator_TablePropName="TE_view_XSWR_Clients_Excl" msprop:Generator_RowDeletingName="TE_view_XSWR_Clients_ExclRowDeleting" msprop:Generator_RowChangingName="TE_view_XSWR_Clients_ExclRowChanging" msprop:Generator_RowEvHandlerName="TE_view_XSWR_Clients_ExclRowChangeEventHandler" msprop:Generator_RowDeletedName="TE_view_XSWR_Clients_ExclRowDeleted" msprop:Generator_UserTableName="TE_view_XSWR_Clients_Excl" msprop:Generator_RowChangedName="TE_view_XSWR_Clients_ExclRowChanged" msprop:Generator_RowEvArgName="TE_view_XSWR_Clients_ExclRowChangeEvent" msprop:Generator_RowClassName="TE_view_XSWR_Clients_ExclRow">
+        <xs:element name="TE_view_XSWR_Clients_Excl" msprop:Generator_TableClassName="TE_view_XSWR_Clients_ExclDataTable" msprop:Generator_TableVarName="tableTE_view_XSWR_Clients_Excl" msprop:Generator_RowChangedName="TE_view_XSWR_Clients_ExclRowChanged" msprop:Generator_TablePropName="TE_view_XSWR_Clients_Excl" msprop:Generator_RowDeletingName="TE_view_XSWR_Clients_ExclRowDeleting" msprop:Generator_RowChangingName="TE_view_XSWR_Clients_ExclRowChanging" msprop:Generator_RowEvHandlerName="TE_view_XSWR_Clients_ExclRowChangeEventHandler" msprop:Generator_RowDeletedName="TE_view_XSWR_Clients_ExclRowDeleted" msprop:Generator_RowClassName="TE_view_XSWR_Clients_ExclRow" msprop:Generator_UserTableName="TE_view_XSWR_Clients_Excl" msprop:Generator_RowEvArgName="TE_view_XSWR_Clients_ExclRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TIPO_ORDINE" msprop:Generator_ColumnVarNameInTable="columnTIPO_ORDINE" msprop:Generator_ColumnPropNameInRow="TIPO_ORDINE" msprop:Generator_ColumnPropNameInTable="TIPO_ORDINEColumn" msprop:Generator_UserColumnName="TIPO_ORDINE" minOccurs="0">
@@ -237,16 +236,9 @@ FROM            TE_view_XSWR_Clients_Excl</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Find_Kit" msprop:Generator_TableClassName="Find_KitDataTable" msprop:Generator_TableVarName="tableFind_Kit" msprop:Generator_TablePropName="Find_Kit" msprop:Generator_RowDeletingName="Find_KitRowDeleting" msprop:Generator_RowChangingName="Find_KitRowChanging" msprop:Generator_RowEvHandlerName="Find_KitRowChangeEventHandler" msprop:Generator_RowDeletedName="Find_KitRowDeleted" msprop:Generator_UserTableName="Find_Kit" msprop:Generator_RowChangedName="Find_KitRowChanged" msprop:Generator_RowEvArgName="Find_KitRowChangeEvent" msprop:Generator_RowClassName="Find_KitRow">
+        <xs:element name="Find_Kit" msprop:Generator_TableClassName="Find_KitDataTable" msprop:Generator_TableVarName="tableFind_Kit" msprop:Generator_RowChangedName="Find_KitRowChanged" msprop:Generator_TablePropName="Find_Kit" msprop:Generator_RowDeletingName="Find_KitRowDeleting" msprop:Generator_RowChangingName="Find_KitRowChanging" msprop:Generator_RowEvHandlerName="Find_KitRowChangeEventHandler" msprop:Generator_RowDeletedName="Find_KitRowDeleted" msprop:Generator_RowClassName="Find_KitRow" msprop:Generator_UserTableName="Find_Kit" msprop:Generator_RowEvArgName="Find_KitRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="TipoDevice" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTipoDevice" msprop:Generator_ColumnPropNameInRow="TipoDevice" msprop:Generator_ColumnPropNameInTable="TipoDeviceColumn" msprop:Generator_UserColumnName="TipoDevice" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="1" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
               <xs:element name="KIT" msprop:Generator_ColumnVarNameInTable="columnKIT" msprop:Generator_ColumnPropNameInRow="KIT" msprop:Generator_ColumnPropNameInTable="KITColumn" msprop:Generator_UserColumnName="KIT" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">

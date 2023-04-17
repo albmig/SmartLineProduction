@@ -64,6 +64,10 @@ namespace SmartLineProduction
             this.link_Abort = new MetroFramework.Controls.MetroLink();
             this.link_Exit = new MetroFramework.Controls.MetroLink();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.cb_Sel_Kit = new System.Windows.Forms.ComboBox();
+            this.findKitBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.but_delete_filter = new System.Windows.Forms.Button();
             this.but_filter = new System.Windows.Forms.Button();
             this.but_Export = new System.Windows.Forms.Button();
             this.cb_Sel_Device = new System.Windows.Forms.ComboBox();
@@ -78,7 +82,7 @@ namespace SmartLineProduction
             this.tEExclCustomersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tE_Excl_CustomersTableAdapter = new SmartLineProduction.ds_CL_FW_QueryTableAdapters.TE_Excl_CustomersTableAdapter();
             this.tE_view_XSWR_Clients_ExclTableAdapter = new SmartLineProduction.ds_CL_FW_QueryTableAdapters.TE_view_XSWR_Clients_ExclTableAdapter();
-            this.but_delete_filter = new System.Windows.Forms.Button();
+            this.find_KitTableAdapter = new SmartLineProduction.ds_CL_FW_QueryTableAdapters.Find_KitTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.gv_FW)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tEviewXSWRClientsExclBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ds_CL_FW_Query)).BeginInit();
@@ -88,6 +92,7 @@ namespace SmartLineProduction
             this.layout_voci_menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.metroPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.findKitBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.findDeviceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.findAnnoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tEExclCustomersBindingSource)).BeginInit();
@@ -133,22 +138,22 @@ namespace SmartLineProduction
             this.gridView_gv_FW.Appearance.GroupRow.Options.UseFont = true;
             this.gridView_gv_FW.Appearance.GroupRow.Options.UseForeColor = true;
             this.gridView_gv_FW.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colTIPO_ORDINE,
+            this.colAnnoOrdine,
             this.colORDINE_CLIENTE,
-            this.colRIGA,
+            this.colRagSocCognome,
             this.colKIT,
             this.colSISTEMA,
-            this.colQTA_SISTEMA,
             this.colArticoloComponente,
-            this.colData_Start_FW,
-            this.colData_End_FW,
+            this.colQTA_SISTEMA,
             this.colTipoDevice,
             this.colMastroCli,
             this.colCapocCli,
             this.colContoCli,
             this.colSottocCli,
-            this.colRagSocCognome,
-            this.colAnnoOrdine});
+            this.colTIPO_ORDINE,
+            this.colRIGA,
+            this.colData_Start_FW,
+            this.colData_End_FW});
             this.gridView_gv_FW.GridControl = this.gv_FW;
             this.gridView_gv_FW.GroupCount = 1;
             this.gridView_gv_FW.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
@@ -158,7 +163,7 @@ namespace SmartLineProduction
             this.gridView_gv_FW.OptionsBehavior.KeepFocusedRowOnUpdate = false;
             this.gridView_gv_FW.OptionsDetail.DetailMode = DevExpress.XtraGrid.Views.Grid.DetailMode.Embedded;
             this.gridView_gv_FW.OptionsMenu.ShowFooterItem = true;
-            this.gridView_gv_FW.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.Never;
+            this.gridView_gv_FW.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.ShowAlways;
             this.gridView_gv_FW.OptionsView.ShowIndicator = false;
             this.gridView_gv_FW.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colArticoloComponente, DevExpress.Data.ColumnSortOrder.Ascending)});
@@ -168,8 +173,6 @@ namespace SmartLineProduction
             // 
             this.colTIPO_ORDINE.FieldName = "TIPO_ORDINE";
             this.colTIPO_ORDINE.Name = "colTIPO_ORDINE";
-            this.colTIPO_ORDINE.Visible = true;
-            this.colTIPO_ORDINE.VisibleIndex = 0;
             // 
             // colORDINE_CLIENTE
             // 
@@ -177,13 +180,12 @@ namespace SmartLineProduction
             this.colORDINE_CLIENTE.Name = "colORDINE_CLIENTE";
             this.colORDINE_CLIENTE.Visible = true;
             this.colORDINE_CLIENTE.VisibleIndex = 1;
+            this.colORDINE_CLIENTE.Width = 148;
             // 
             // colRIGA
             // 
             this.colRIGA.FieldName = "RIGA";
             this.colRIGA.Name = "colRIGA";
-            this.colRIGA.Visible = true;
-            this.colRIGA.VisibleIndex = 2;
             // 
             // colKIT
             // 
@@ -191,6 +193,7 @@ namespace SmartLineProduction
             this.colKIT.Name = "colKIT";
             this.colKIT.Visible = true;
             this.colKIT.VisibleIndex = 3;
+            this.colKIT.Width = 94;
             // 
             // colSISTEMA
             // 
@@ -198,6 +201,7 @@ namespace SmartLineProduction
             this.colSISTEMA.Name = "colSISTEMA";
             this.colSISTEMA.Visible = true;
             this.colSISTEMA.VisibleIndex = 4;
+            this.colSISTEMA.Width = 89;
             // 
             // colQTA_SISTEMA
             // 
@@ -205,76 +209,75 @@ namespace SmartLineProduction
             this.colQTA_SISTEMA.Name = "colQTA_SISTEMA";
             this.colQTA_SISTEMA.Visible = true;
             this.colQTA_SISTEMA.VisibleIndex = 5;
+            this.colQTA_SISTEMA.Width = 94;
             // 
             // colArticoloComponente
             // 
             this.colArticoloComponente.FieldName = "ArticoloComponente";
             this.colArticoloComponente.Name = "colArticoloComponente";
             this.colArticoloComponente.Visible = true;
-            this.colArticoloComponente.VisibleIndex = 6;
+            this.colArticoloComponente.VisibleIndex = 4;
+            this.colArticoloComponente.Width = 100;
             // 
             // colData_Start_FW
             // 
             this.colData_Start_FW.FieldName = "Data_Start_FW";
             this.colData_Start_FW.Name = "colData_Start_FW";
-            this.colData_Start_FW.Visible = true;
-            this.colData_Start_FW.VisibleIndex = 6;
+            this.colData_Start_FW.Width = 50;
             // 
             // colData_End_FW
             // 
             this.colData_End_FW.FieldName = "Data_End_FW";
             this.colData_End_FW.Name = "colData_End_FW";
-            this.colData_End_FW.Visible = true;
-            this.colData_End_FW.VisibleIndex = 7;
+            this.colData_End_FW.Width = 50;
             // 
             // colTipoDevice
             // 
             this.colTipoDevice.FieldName = "TipoDevice";
             this.colTipoDevice.Name = "colTipoDevice";
             this.colTipoDevice.Visible = true;
-            this.colTipoDevice.VisibleIndex = 8;
+            this.colTipoDevice.VisibleIndex = 6;
+            this.colTipoDevice.Width = 51;
             // 
             // colMastroCli
             // 
             this.colMastroCli.FieldName = "MastroCli";
             this.colMastroCli.Name = "colMastroCli";
-            this.colMastroCli.Visible = true;
-            this.colMastroCli.VisibleIndex = 9;
+            this.colMastroCli.Width = 50;
             // 
             // colCapocCli
             // 
             this.colCapocCli.FieldName = "CapocCli";
             this.colCapocCli.Name = "colCapocCli";
-            this.colCapocCli.Visible = true;
-            this.colCapocCli.VisibleIndex = 10;
+            this.colCapocCli.Width = 50;
             // 
             // colContoCli
             // 
             this.colContoCli.FieldName = "ContoCli";
             this.colContoCli.Name = "colContoCli";
-            this.colContoCli.Visible = true;
-            this.colContoCli.VisibleIndex = 11;
+            this.colContoCli.Width = 50;
             // 
             // colSottocCli
             // 
             this.colSottocCli.FieldName = "SottocCli";
             this.colSottocCli.Name = "colSottocCli";
-            this.colSottocCli.Visible = true;
-            this.colSottocCli.VisibleIndex = 12;
+            this.colSottocCli.Width = 50;
             // 
             // colRagSocCognome
             // 
             this.colRagSocCognome.FieldName = "RagSocCognome";
             this.colRagSocCognome.Name = "colRagSocCognome";
             this.colRagSocCognome.Visible = true;
-            this.colRagSocCognome.VisibleIndex = 13;
+            this.colRagSocCognome.VisibleIndex = 2;
+            this.colRagSocCognome.Width = 300;
             // 
             // colAnnoOrdine
             // 
             this.colAnnoOrdine.FieldName = "AnnoOrdine";
             this.colAnnoOrdine.Name = "colAnnoOrdine";
             this.colAnnoOrdine.Visible = true;
-            this.colAnnoOrdine.VisibleIndex = 14;
+            this.colAnnoOrdine.VisibleIndex = 0;
+            this.colAnnoOrdine.Width = 148;
             // 
             // tableLayoutPanel1
             // 
@@ -493,6 +496,8 @@ namespace SmartLineProduction
             // 
             this.metroPanel1.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel1.SetColumnSpan(this.metroPanel1, 2);
+            this.metroPanel1.Controls.Add(this.cb_Sel_Kit);
+            this.metroPanel1.Controls.Add(this.metroLabel3);
             this.metroPanel1.Controls.Add(this.but_delete_filter);
             this.metroPanel1.Controls.Add(this.but_filter);
             this.metroPanel1.Controls.Add(this.but_Export);
@@ -513,9 +518,46 @@ namespace SmartLineProduction
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
+            // cb_Sel_Kit
+            // 
+            this.cb_Sel_Kit.DataSource = this.findKitBindingSource;
+            this.cb_Sel_Kit.DisplayMember = "KIT";
+            this.cb_Sel_Kit.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_Sel_Kit.FormattingEnabled = true;
+            this.cb_Sel_Kit.Location = new System.Drawing.Point(93, 62);
+            this.cb_Sel_Kit.Name = "cb_Sel_Kit";
+            this.cb_Sel_Kit.Size = new System.Drawing.Size(128, 21);
+            this.cb_Sel_Kit.TabIndex = 134;
+            // 
+            // findKitBindingSource
+            // 
+            this.findKitBindingSource.DataMember = "Find_Kit";
+            this.findKitBindingSource.DataSource = this.ds_CL_FW_Query;
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(7, 62);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(26, 19);
+            this.metroLabel3.TabIndex = 133;
+            this.metroLabel3.Text = "Kit:";
+            this.metroLabel3.UseCustomBackColor = true;
+            // 
+            // but_delete_filter
+            // 
+            this.but_delete_filter.Location = new System.Drawing.Point(432, 58);
+            this.but_delete_filter.Name = "but_delete_filter";
+            this.but_delete_filter.Size = new System.Drawing.Size(131, 23);
+            this.but_delete_filter.TabIndex = 132;
+            this.but_delete_filter.Text = "Annulla Filtro";
+            this.but_delete_filter.UseVisualStyleBackColor = true;
+            this.but_delete_filter.Click += new System.EventHandler(this.but_delete_filter_Click);
+            // 
             // but_filter
             // 
-            this.but_filter.Location = new System.Drawing.Point(7, 62);
+            this.but_filter.Location = new System.Drawing.Point(295, 58);
             this.but_filter.Name = "but_filter";
             this.but_filter.Size = new System.Drawing.Size(131, 23);
             this.but_filter.TabIndex = 131;
@@ -541,7 +583,7 @@ namespace SmartLineProduction
             this.cb_Sel_Device.FormattingEnabled = true;
             this.cb_Sel_Device.Location = new System.Drawing.Point(93, 35);
             this.cb_Sel_Device.Name = "cb_Sel_Device";
-            this.cb_Sel_Device.Size = new System.Drawing.Size(99, 21);
+            this.cb_Sel_Device.Size = new System.Drawing.Size(128, 21);
             this.cb_Sel_Device.TabIndex = 95;
             // 
             // findDeviceBindingSource
@@ -569,7 +611,7 @@ namespace SmartLineProduction
             this.cb_Sel_Anno.FormattingEnabled = true;
             this.cb_Sel_Anno.Location = new System.Drawing.Point(92, 8);
             this.cb_Sel_Anno.Name = "cb_Sel_Anno";
-            this.cb_Sel_Anno.Size = new System.Drawing.Size(99, 21);
+            this.cb_Sel_Anno.Size = new System.Drawing.Size(129, 21);
             this.cb_Sel_Anno.TabIndex = 93;
             // 
             // findAnnoBindingSource
@@ -617,15 +659,9 @@ namespace SmartLineProduction
             // 
             this.tE_view_XSWR_Clients_ExclTableAdapter.ClearBeforeFill = true;
             // 
-            // but_delete_filter
+            // find_KitTableAdapter
             // 
-            this.but_delete_filter.Location = new System.Drawing.Point(144, 62);
-            this.but_delete_filter.Name = "but_delete_filter";
-            this.but_delete_filter.Size = new System.Drawing.Size(131, 23);
-            this.but_delete_filter.TabIndex = 132;
-            this.but_delete_filter.Text = "Annulla Filtro";
-            this.but_delete_filter.UseVisualStyleBackColor = true;
-            this.but_delete_filter.Click += new System.EventHandler(this.but_delete_filter_Click);
+            this.find_KitTableAdapter.ClearBeforeFill = true;
             // 
             // UC_Classic_XSWR_Query
             // 
@@ -657,6 +693,7 @@ namespace SmartLineProduction
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.findKitBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.findDeviceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.findAnnoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tEExclCustomersBindingSource)).EndInit();
@@ -714,5 +751,9 @@ namespace SmartLineProduction
         private DevExpress.XtraGrid.Columns.GridColumn colRagSocCognome;
         private DevExpress.XtraGrid.Columns.GridColumn colAnnoOrdine;
         private System.Windows.Forms.Button but_delete_filter;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private System.Windows.Forms.ComboBox cb_Sel_Kit;
+        private System.Windows.Forms.BindingSource findKitBindingSource;
+        private ds_CL_FW_QueryTableAdapters.Find_KitTableAdapter find_KitTableAdapter;
     }
 }

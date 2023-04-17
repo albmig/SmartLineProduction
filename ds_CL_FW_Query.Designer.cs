@@ -1679,8 +1679,6 @@ namespace SmartLineProduction {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class Find_KitDataTable : global::System.Data.TypedTableBase<Find_KitRow> {
             
-            private global::System.Data.DataColumn columnTipoDevice;
-            
             private global::System.Data.DataColumn columnKIT;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1714,14 +1712,6 @@ namespace SmartLineProduction {
             protected Find_KitDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn TipoDeviceColumn {
-                get {
-                    return this.columnTipoDevice;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1769,10 +1759,9 @@ namespace SmartLineProduction {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Find_KitRow AddFind_KitRow(string TipoDevice, string KIT) {
+            public Find_KitRow AddFind_KitRow(string KIT) {
                 Find_KitRow rowFind_KitRow = ((Find_KitRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        TipoDevice,
                         KIT};
                 rowFind_KitRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFind_KitRow);
@@ -1796,19 +1785,14 @@ namespace SmartLineProduction {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnTipoDevice = base.Columns["TipoDevice"];
                 this.columnKIT = base.Columns["KIT"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnTipoDevice = new global::System.Data.DataColumn("TipoDevice", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTipoDevice);
                 this.columnKIT = new global::System.Data.DataColumn("KIT", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnKIT);
-                this.columnTipoDevice.ReadOnly = true;
-                this.columnTipoDevice.MaxLength = 1;
                 this.columnKIT.MaxLength = 25;
             }
             
@@ -2616,22 +2600,6 @@ namespace SmartLineProduction {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string TipoDevice {
-                get {
-                    try {
-                        return ((string)(this[this.tableFind_Kit.TipoDeviceColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'TipoDevice\' nella tabella \'Find_Kit\' è DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableFind_Kit.TipoDeviceColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string KIT {
                 get {
                     try {
@@ -2644,18 +2612,6 @@ namespace SmartLineProduction {
                 set {
                     this[this.tableFind_Kit.KITColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsTipoDeviceNull() {
-                return this.IsNull(this.tableFind_Kit.TipoDeviceColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetTipoDeviceNull() {
-                this[this.tableFind_Kit.TipoDeviceColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3729,7 +3685,6 @@ namespace SmartLineProduction.ds_CL_FW_QueryTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Find_Kit";
-            tableMapping.ColumnMappings.Add("TipoDevice", "TipoDevice");
             tableMapping.ColumnMappings.Add("KIT", "KIT");
             this._adapter.TableMappings.Add(tableMapping);
         }
@@ -3747,7 +3702,7 @@ namespace SmartLineProduction.ds_CL_FW_QueryTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT DISTINCT KIT, TipoDevice\r\nFROM            TE_view_XSWR_Clients_Excl";
+            this._commandCollection[0].CommandText = "SELECT DISTINCT KIT\r\nFROM            TE_view_XSWR_Clients_Excl";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
