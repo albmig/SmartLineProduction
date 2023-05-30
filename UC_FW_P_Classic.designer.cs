@@ -222,7 +222,7 @@
             this.cb_Famiglia.DataSource = this.CL_Famiglie_BindingSource;
             this.cb_Famiglia.DisplayMember = "FW_CL_Fam_Des";
             this.cb_Famiglia.FormattingEnabled = true;
-            this.cb_Famiglia.Location = new System.Drawing.Point(719, 45);
+            this.cb_Famiglia.Location = new System.Drawing.Point(719, 43);
             this.cb_Famiglia.Name = "cb_Famiglia";
             this.cb_Famiglia.Size = new System.Drawing.Size(263, 25);
             this.cb_Famiglia.TabIndex = 90;

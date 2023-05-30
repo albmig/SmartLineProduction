@@ -159,6 +159,8 @@
             this.menu_sw_exit = new System.Windows.Forms.ToolStripMenuItem();
             this.fam_ProdTableAdapter = new SmartLineProduction.ds_SLTableAdapters.Fam_ProdTableAdapter();
             this.firmwareTableAdapter = new SmartLineProduction.ds_ProgrammazioneTableAdapters.FirmwareTableAdapter();
+            this.fWRevisioniBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fW_RevisioniTableAdapter = new SmartLineProduction.ds_ProgrammazioneTableAdapters.FW_RevisioniTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.ds_SL)).BeginInit();
             this.layout_dati.SuspendLayout();
             this.panel_funzionamento.SuspendLayout();
@@ -181,6 +183,7 @@
             this.pan_Menu_comandi.SuspendLayout();
             this.pan_Menu_salva.SuspendLayout();
             this.pan_Menu_exit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fWRevisioniBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // ds_SL
@@ -1187,7 +1190,7 @@
             this.metroLabel22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.metroLabel22.Location = new System.Drawing.Point(689, 13);
             this.metroLabel22.Name = "metroLabel22";
-            this.metroLabel22.Size = new System.Drawing.Size(2, 470);
+            this.metroLabel22.Size = new System.Drawing.Size(2, 510);
             this.metroLabel22.TabIndex = 120;
             this.metroLabel22.Text = "metroLabel22";
             this.metroLabel22.UseCustomBackColor = true;
@@ -1278,7 +1281,7 @@
             this.history_Code,
             this.history_Revision,
             this.history_FromDate});
-            this.gv_history.DataSource = this.firmwareBindingSource;
+            this.gv_history.DataSource = this.fWRevisioniBindingSource;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -1777,6 +1780,15 @@
             // 
             this.firmwareTableAdapter.ClearBeforeFill = true;
             // 
+            // fWRevisioniBindingSource
+            // 
+            this.fWRevisioniBindingSource.DataMember = "FW_Revisioni";
+            this.fWRevisioniBindingSource.DataSource = this.ds_Programmazione;
+            // 
+            // fW_RevisioniTableAdapter
+            // 
+            this.fW_RevisioniTableAdapter.ClearBeforeFill = true;
+            // 
             // UC_FW_P
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1829,6 +1841,7 @@
             this.pan_Menu_salva.PerformLayout();
             this.pan_Menu_exit.ResumeLayout(false);
             this.pan_Menu_exit.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fWRevisioniBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1953,5 +1966,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel32;
         private MetroFramework.Controls.MetroToggle tog_Delay;
         private MetroFramework.Controls.MetroLabel metroLabel41;
+        private System.Windows.Forms.BindingSource fWRevisioniBindingSource;
+        private ds_ProgrammazioneTableAdapters.FW_RevisioniTableAdapter fW_RevisioniTableAdapter;
     }
 }

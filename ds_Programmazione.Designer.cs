@@ -48,6 +48,8 @@ namespace SmartLineProduction {
         
         private Fam_ProdDataTable tableFam_Prod;
         
+        private FW_RevisioniDataTable tableFW_Revisioni;
+        
         private dt_Tmp_ProgrammaDataTable tabledt_Tmp_Programma;
         
         private dt_Tmp_FwDataTable tabledt_Tmp_Fw;
@@ -125,6 +127,9 @@ namespace SmartLineProduction {
                 }
                 if ((ds.Tables["Fam_Prod"] != null)) {
                     base.Tables.Add(new Fam_ProdDataTable(ds.Tables["Fam_Prod"]));
+                }
+                if ((ds.Tables["FW_Revisioni"] != null)) {
+                    base.Tables.Add(new FW_RevisioniDataTable(ds.Tables["FW_Revisioni"]));
                 }
                 if ((ds.Tables["dt_Tmp_Programma"] != null)) {
                     base.Tables.Add(new dt_Tmp_ProgrammaDataTable(ds.Tables["dt_Tmp_Programma"]));
@@ -274,6 +279,16 @@ namespace SmartLineProduction {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public FW_RevisioniDataTable FW_Revisioni {
+            get {
+                return this.tableFW_Revisioni;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public dt_Tmp_ProgrammaDataTable dt_Tmp_Programma {
             get {
                 return this.tabledt_Tmp_Programma;
@@ -393,6 +408,9 @@ namespace SmartLineProduction {
                 if ((ds.Tables["Fam_Prod"] != null)) {
                     base.Tables.Add(new Fam_ProdDataTable(ds.Tables["Fam_Prod"]));
                 }
+                if ((ds.Tables["FW_Revisioni"] != null)) {
+                    base.Tables.Add(new FW_RevisioniDataTable(ds.Tables["FW_Revisioni"]));
+                }
                 if ((ds.Tables["dt_Tmp_Programma"] != null)) {
                     base.Tables.Add(new dt_Tmp_ProgrammaDataTable(ds.Tables["dt_Tmp_Programma"]));
                 }
@@ -504,6 +522,12 @@ namespace SmartLineProduction {
                     this.tableFam_Prod.InitVars();
                 }
             }
+            this.tableFW_Revisioni = ((FW_RevisioniDataTable)(base.Tables["FW_Revisioni"]));
+            if ((initTable == true)) {
+                if ((this.tableFW_Revisioni != null)) {
+                    this.tableFW_Revisioni.InitVars();
+                }
+            }
             this.tabledt_Tmp_Programma = ((dt_Tmp_ProgrammaDataTable)(base.Tables["dt_Tmp_Programma"]));
             if ((initTable == true)) {
                 if ((this.tabledt_Tmp_Programma != null)) {
@@ -555,6 +579,8 @@ namespace SmartLineProduction {
             base.Tables.Add(this.tableSafetyPointRFID);
             this.tableFam_Prod = new Fam_ProdDataTable();
             base.Tables.Add(this.tableFam_Prod);
+            this.tableFW_Revisioni = new FW_RevisioniDataTable();
+            base.Tables.Add(this.tableFW_Revisioni);
             this.tabledt_Tmp_Programma = new dt_Tmp_ProgrammaDataTable();
             base.Tables.Add(this.tabledt_Tmp_Programma);
             this.tabledt_Tmp_Fw = new dt_Tmp_FwDataTable();
@@ -654,6 +680,12 @@ namespace SmartLineProduction {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private bool ShouldSerializeFam_Prod() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializeFW_Revisioni() {
             return false;
         }
         
@@ -759,6 +791,9 @@ namespace SmartLineProduction {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void Fam_ProdRowChangeEventHandler(object sender, Fam_ProdRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void FW_RevisioniRowChangeEventHandler(object sender, FW_RevisioniRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void dt_Tmp_ProgrammaRowChangeEventHandler(object sender, dt_Tmp_ProgrammaRowChangeEvent e);
@@ -6597,6 +6632,1014 @@ namespace SmartLineProduction {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class FW_RevisioniDataTable : global::System.Data.TypedTableBase<FW_RevisioniRow> {
+            
+            private global::System.Data.DataColumn columnId;
+            
+            private global::System.Data.DataColumn columnSW_Code;
+            
+            private global::System.Data.DataColumn columnSW_TipoDevice;
+            
+            private global::System.Data.DataColumn columnSW_Descrizione;
+            
+            private global::System.Data.DataColumn columnSW_Descrizione_EN;
+            
+            private global::System.Data.DataColumn columnSW_Versione;
+            
+            private global::System.Data.DataColumn columnSW_Revisione;
+            
+            private global::System.Data.DataColumn columnSW_Standard;
+            
+            private global::System.Data.DataColumn columnSW_FamProd;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_RF;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_Use_Oled;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_Use_EmButt;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_Use_Backlight;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_ShiftPage;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_Use_Accel;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_Use_SP;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_Use_Buzzer;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_Use_Vibracall;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_Use_LedTorch;
+            
+            private global::System.Data.DataColumn columnSW_P_PLD;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_MaxPairDevices;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_RF;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Plug_Exp;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Plug_Ple;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Em_Keyb;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Can;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Prop_Out;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_TimeOut;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Cont_Keys;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_LockSameRow;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Use_SP;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_MaxPairDevices;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_ShiftPage;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Output_No;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Dig_Input_No;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Ana_Input_No;
+            
+            private global::System.Data.DataColumn columnSW_Revisioni;
+            
+            private global::System.Data.DataColumn columnSW_Funzionamento;
+            
+            private global::System.Data.DataColumn columnSW_Config;
+            
+            private global::System.Data.DataColumn columnSW_Obsolete_ver;
+            
+            private global::System.Data.DataColumn columnSW_Obsolete_ver_from_date;
+            
+            private global::System.Data.DataColumn columnSW_Order;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Use_Radius;
+            
+            private global::System.Data.DataColumn columnSW_CustomPIC;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_Use_Radius;
+            
+            private global::System.Data.DataColumn columnSW_P_Lock;
+            
+            private global::System.Data.DataColumn columnSW_R_Lock;
+            
+            private global::System.Data.DataColumn columnSW_IsPublic;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public FW_RevisioniDataTable() {
+                this.TableName = "FW_Revisioni";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal FW_RevisioniDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected FW_RevisioniDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn IdColumn {
+                get {
+                    return this.columnId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_CodeColumn {
+                get {
+                    return this.columnSW_Code;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_TipoDeviceColumn {
+                get {
+                    return this.columnSW_TipoDevice;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_DescrizioneColumn {
+                get {
+                    return this.columnSW_Descrizione;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_Descrizione_ENColumn {
+                get {
+                    return this.columnSW_Descrizione_EN;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_VersioneColumn {
+                get {
+                    return this.columnSW_Versione;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_RevisioneColumn {
+                get {
+                    return this.columnSW_Revisione;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_StandardColumn {
+                get {
+                    return this.columnSW_Standard;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_FamProdColumn {
+                get {
+                    return this.columnSW_FamProd;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_RFColumn {
+                get {
+                    return this.columnSW_P_Opt_RF;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_Use_OledColumn {
+                get {
+                    return this.columnSW_P_Opt_Use_Oled;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_Use_EmButtColumn {
+                get {
+                    return this.columnSW_P_Opt_Use_EmButt;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_Use_BacklightColumn {
+                get {
+                    return this.columnSW_P_Opt_Use_Backlight;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_ShiftPageColumn {
+                get {
+                    return this.columnSW_P_Opt_ShiftPage;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_Use_AccelColumn {
+                get {
+                    return this.columnSW_P_Opt_Use_Accel;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_Use_SPColumn {
+                get {
+                    return this.columnSW_P_Opt_Use_SP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_Use_BuzzerColumn {
+                get {
+                    return this.columnSW_P_Opt_Use_Buzzer;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_Use_VibracallColumn {
+                get {
+                    return this.columnSW_P_Opt_Use_Vibracall;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_Use_LedTorchColumn {
+                get {
+                    return this.columnSW_P_Opt_Use_LedTorch;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_PLDColumn {
+                get {
+                    return this.columnSW_P_PLD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_MaxPairDevicesColumn {
+                get {
+                    return this.columnSW_P_Opt_MaxPairDevices;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_RFColumn {
+                get {
+                    return this.columnSW_R_Opt_RF;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_Plug_ExpColumn {
+                get {
+                    return this.columnSW_R_Opt_Plug_Exp;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_Plug_PleColumn {
+                get {
+                    return this.columnSW_R_Opt_Plug_Ple;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_Em_KeybColumn {
+                get {
+                    return this.columnSW_R_Opt_Em_Keyb;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_CanColumn {
+                get {
+                    return this.columnSW_R_Opt_Can;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_Prop_OutColumn {
+                get {
+                    return this.columnSW_R_Opt_Prop_Out;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_TimeOutColumn {
+                get {
+                    return this.columnSW_R_Opt_TimeOut;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_Cont_KeysColumn {
+                get {
+                    return this.columnSW_R_Opt_Cont_Keys;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_LockSameRowColumn {
+                get {
+                    return this.columnSW_R_Opt_LockSameRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_Use_SPColumn {
+                get {
+                    return this.columnSW_R_Opt_Use_SP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_MaxPairDevicesColumn {
+                get {
+                    return this.columnSW_R_Opt_MaxPairDevices;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_ShiftPageColumn {
+                get {
+                    return this.columnSW_R_Opt_ShiftPage;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_Output_NoColumn {
+                get {
+                    return this.columnSW_R_Opt_Output_No;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_Dig_Input_NoColumn {
+                get {
+                    return this.columnSW_R_Opt_Dig_Input_No;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_Ana_Input_NoColumn {
+                get {
+                    return this.columnSW_R_Opt_Ana_Input_No;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_RevisioniColumn {
+                get {
+                    return this.columnSW_Revisioni;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_FunzionamentoColumn {
+                get {
+                    return this.columnSW_Funzionamento;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_ConfigColumn {
+                get {
+                    return this.columnSW_Config;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_Obsolete_verColumn {
+                get {
+                    return this.columnSW_Obsolete_ver;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_Obsolete_ver_from_dateColumn {
+                get {
+                    return this.columnSW_Obsolete_ver_from_date;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_OrderColumn {
+                get {
+                    return this.columnSW_Order;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_Use_RadiusColumn {
+                get {
+                    return this.columnSW_R_Opt_Use_Radius;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_CustomPICColumn {
+                get {
+                    return this.columnSW_CustomPIC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_Use_RadiusColumn {
+                get {
+                    return this.columnSW_P_Opt_Use_Radius;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_LockColumn {
+                get {
+                    return this.columnSW_P_Lock;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_LockColumn {
+                get {
+                    return this.columnSW_R_Lock;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_IsPublicColumn {
+                get {
+                    return this.columnSW_IsPublic;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public FW_RevisioniRow this[int index] {
+                get {
+                    return ((FW_RevisioniRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event FW_RevisioniRowChangeEventHandler FW_RevisioniRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event FW_RevisioniRowChangeEventHandler FW_RevisioniRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event FW_RevisioniRowChangeEventHandler FW_RevisioniRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event FW_RevisioniRowChangeEventHandler FW_RevisioniRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddFW_RevisioniRow(FW_RevisioniRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public FW_RevisioniRow AddFW_RevisioniRow(
+                        string SW_Code, 
+                        string SW_TipoDevice, 
+                        string SW_Descrizione, 
+                        string SW_Descrizione_EN, 
+                        string SW_Versione, 
+                        string SW_Revisione, 
+                        bool SW_Standard, 
+                        string SW_FamProd, 
+                        string SW_P_Opt_RF, 
+                        bool SW_P_Opt_Use_Oled, 
+                        bool SW_P_Opt_Use_EmButt, 
+                        bool SW_P_Opt_Use_Backlight, 
+                        bool SW_P_Opt_ShiftPage, 
+                        bool SW_P_Opt_Use_Accel, 
+                        bool SW_P_Opt_Use_SP, 
+                        bool SW_P_Opt_Use_Buzzer, 
+                        bool SW_P_Opt_Use_Vibracall, 
+                        bool SW_P_Opt_Use_LedTorch, 
+                        bool SW_P_PLD, 
+                        int SW_P_Opt_MaxPairDevices, 
+                        string SW_R_Opt_RF, 
+                        bool SW_R_Opt_Plug_Exp, 
+                        bool SW_R_Opt_Plug_Ple, 
+                        bool SW_R_Opt_Em_Keyb, 
+                        bool SW_R_Opt_Can, 
+                        bool SW_R_Opt_Prop_Out, 
+                        string SW_R_Opt_TimeOut, 
+                        int SW_R_Opt_Cont_Keys, 
+                        bool SW_R_Opt_LockSameRow, 
+                        bool SW_R_Opt_Use_SP, 
+                        int SW_R_Opt_MaxPairDevices, 
+                        bool SW_R_Opt_ShiftPage, 
+                        int SW_R_Opt_Output_No, 
+                        int SW_R_Opt_Dig_Input_No, 
+                        int SW_R_Opt_Ana_Input_No, 
+                        string SW_Revisioni, 
+                        string SW_Funzionamento, 
+                        string SW_Config, 
+                        bool SW_Obsolete_ver, 
+                        System.DateTime SW_Obsolete_ver_from_date, 
+                        string SW_Order, 
+                        bool SW_R_Opt_Use_Radius, 
+                        bool SW_CustomPIC, 
+                        bool SW_P_Opt_Use_Radius, 
+                        int SW_P_Lock, 
+                        int SW_R_Lock, 
+                        bool SW_IsPublic) {
+                FW_RevisioniRow rowFW_RevisioniRow = ((FW_RevisioniRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        SW_Code,
+                        SW_TipoDevice,
+                        SW_Descrizione,
+                        SW_Descrizione_EN,
+                        SW_Versione,
+                        SW_Revisione,
+                        SW_Standard,
+                        SW_FamProd,
+                        SW_P_Opt_RF,
+                        SW_P_Opt_Use_Oled,
+                        SW_P_Opt_Use_EmButt,
+                        SW_P_Opt_Use_Backlight,
+                        SW_P_Opt_ShiftPage,
+                        SW_P_Opt_Use_Accel,
+                        SW_P_Opt_Use_SP,
+                        SW_P_Opt_Use_Buzzer,
+                        SW_P_Opt_Use_Vibracall,
+                        SW_P_Opt_Use_LedTorch,
+                        SW_P_PLD,
+                        SW_P_Opt_MaxPairDevices,
+                        SW_R_Opt_RF,
+                        SW_R_Opt_Plug_Exp,
+                        SW_R_Opt_Plug_Ple,
+                        SW_R_Opt_Em_Keyb,
+                        SW_R_Opt_Can,
+                        SW_R_Opt_Prop_Out,
+                        SW_R_Opt_TimeOut,
+                        SW_R_Opt_Cont_Keys,
+                        SW_R_Opt_LockSameRow,
+                        SW_R_Opt_Use_SP,
+                        SW_R_Opt_MaxPairDevices,
+                        SW_R_Opt_ShiftPage,
+                        SW_R_Opt_Output_No,
+                        SW_R_Opt_Dig_Input_No,
+                        SW_R_Opt_Ana_Input_No,
+                        SW_Revisioni,
+                        SW_Funzionamento,
+                        SW_Config,
+                        SW_Obsolete_ver,
+                        SW_Obsolete_ver_from_date,
+                        SW_Order,
+                        SW_R_Opt_Use_Radius,
+                        SW_CustomPIC,
+                        SW_P_Opt_Use_Radius,
+                        SW_P_Lock,
+                        SW_R_Lock,
+                        SW_IsPublic};
+                rowFW_RevisioniRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowFW_RevisioniRow);
+                return rowFW_RevisioniRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public FW_RevisioniRow FindById(int Id) {
+                return ((FW_RevisioniRow)(this.Rows.Find(new object[] {
+                            Id})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                FW_RevisioniDataTable cln = ((FW_RevisioniDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new FW_RevisioniDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnId = base.Columns["Id"];
+                this.columnSW_Code = base.Columns["SW_Code"];
+                this.columnSW_TipoDevice = base.Columns["SW_TipoDevice"];
+                this.columnSW_Descrizione = base.Columns["SW_Descrizione"];
+                this.columnSW_Descrizione_EN = base.Columns["SW_Descrizione_EN"];
+                this.columnSW_Versione = base.Columns["SW_Versione"];
+                this.columnSW_Revisione = base.Columns["SW_Revisione"];
+                this.columnSW_Standard = base.Columns["SW_Standard"];
+                this.columnSW_FamProd = base.Columns["SW_FamProd"];
+                this.columnSW_P_Opt_RF = base.Columns["SW_P_Opt_RF"];
+                this.columnSW_P_Opt_Use_Oled = base.Columns["SW_P_Opt_Use_Oled"];
+                this.columnSW_P_Opt_Use_EmButt = base.Columns["SW_P_Opt_Use_EmButt"];
+                this.columnSW_P_Opt_Use_Backlight = base.Columns["SW_P_Opt_Use_Backlight"];
+                this.columnSW_P_Opt_ShiftPage = base.Columns["SW_P_Opt_ShiftPage"];
+                this.columnSW_P_Opt_Use_Accel = base.Columns["SW_P_Opt_Use_Accel"];
+                this.columnSW_P_Opt_Use_SP = base.Columns["SW_P_Opt_Use_SP"];
+                this.columnSW_P_Opt_Use_Buzzer = base.Columns["SW_P_Opt_Use_Buzzer"];
+                this.columnSW_P_Opt_Use_Vibracall = base.Columns["SW_P_Opt_Use_Vibracall"];
+                this.columnSW_P_Opt_Use_LedTorch = base.Columns["SW_P_Opt_Use_LedTorch"];
+                this.columnSW_P_PLD = base.Columns["SW_P_PLD"];
+                this.columnSW_P_Opt_MaxPairDevices = base.Columns["SW_P_Opt_MaxPairDevices"];
+                this.columnSW_R_Opt_RF = base.Columns["SW_R_Opt_RF"];
+                this.columnSW_R_Opt_Plug_Exp = base.Columns["SW_R_Opt_Plug_Exp"];
+                this.columnSW_R_Opt_Plug_Ple = base.Columns["SW_R_Opt_Plug_Ple"];
+                this.columnSW_R_Opt_Em_Keyb = base.Columns["SW_R_Opt_Em_Keyb"];
+                this.columnSW_R_Opt_Can = base.Columns["SW_R_Opt_Can"];
+                this.columnSW_R_Opt_Prop_Out = base.Columns["SW_R_Opt_Prop_Out"];
+                this.columnSW_R_Opt_TimeOut = base.Columns["SW_R_Opt_TimeOut"];
+                this.columnSW_R_Opt_Cont_Keys = base.Columns["SW_R_Opt_Cont_Keys"];
+                this.columnSW_R_Opt_LockSameRow = base.Columns["SW_R_Opt_LockSameRow"];
+                this.columnSW_R_Opt_Use_SP = base.Columns["SW_R_Opt_Use_SP"];
+                this.columnSW_R_Opt_MaxPairDevices = base.Columns["SW_R_Opt_MaxPairDevices"];
+                this.columnSW_R_Opt_ShiftPage = base.Columns["SW_R_Opt_ShiftPage"];
+                this.columnSW_R_Opt_Output_No = base.Columns["SW_R_Opt_Output_No"];
+                this.columnSW_R_Opt_Dig_Input_No = base.Columns["SW_R_Opt_Dig_Input_No"];
+                this.columnSW_R_Opt_Ana_Input_No = base.Columns["SW_R_Opt_Ana_Input_No"];
+                this.columnSW_Revisioni = base.Columns["SW_Revisioni"];
+                this.columnSW_Funzionamento = base.Columns["SW_Funzionamento"];
+                this.columnSW_Config = base.Columns["SW_Config"];
+                this.columnSW_Obsolete_ver = base.Columns["SW_Obsolete_ver"];
+                this.columnSW_Obsolete_ver_from_date = base.Columns["SW_Obsolete_ver_from_date"];
+                this.columnSW_Order = base.Columns["SW_Order"];
+                this.columnSW_R_Opt_Use_Radius = base.Columns["SW_R_Opt_Use_Radius"];
+                this.columnSW_CustomPIC = base.Columns["SW_CustomPIC"];
+                this.columnSW_P_Opt_Use_Radius = base.Columns["SW_P_Opt_Use_Radius"];
+                this.columnSW_P_Lock = base.Columns["SW_P_Lock"];
+                this.columnSW_R_Lock = base.Columns["SW_R_Lock"];
+                this.columnSW_IsPublic = base.Columns["SW_IsPublic"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId);
+                this.columnSW_Code = new global::System.Data.DataColumn("SW_Code", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Code);
+                this.columnSW_TipoDevice = new global::System.Data.DataColumn("SW_TipoDevice", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_TipoDevice);
+                this.columnSW_Descrizione = new global::System.Data.DataColumn("SW_Descrizione", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Descrizione);
+                this.columnSW_Descrizione_EN = new global::System.Data.DataColumn("SW_Descrizione_EN", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Descrizione_EN);
+                this.columnSW_Versione = new global::System.Data.DataColumn("SW_Versione", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Versione);
+                this.columnSW_Revisione = new global::System.Data.DataColumn("SW_Revisione", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Revisione);
+                this.columnSW_Standard = new global::System.Data.DataColumn("SW_Standard", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Standard);
+                this.columnSW_FamProd = new global::System.Data.DataColumn("SW_FamProd", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_FamProd);
+                this.columnSW_P_Opt_RF = new global::System.Data.DataColumn("SW_P_Opt_RF", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_RF);
+                this.columnSW_P_Opt_Use_Oled = new global::System.Data.DataColumn("SW_P_Opt_Use_Oled", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_Use_Oled);
+                this.columnSW_P_Opt_Use_EmButt = new global::System.Data.DataColumn("SW_P_Opt_Use_EmButt", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_Use_EmButt);
+                this.columnSW_P_Opt_Use_Backlight = new global::System.Data.DataColumn("SW_P_Opt_Use_Backlight", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_Use_Backlight);
+                this.columnSW_P_Opt_ShiftPage = new global::System.Data.DataColumn("SW_P_Opt_ShiftPage", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_ShiftPage);
+                this.columnSW_P_Opt_Use_Accel = new global::System.Data.DataColumn("SW_P_Opt_Use_Accel", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_Use_Accel);
+                this.columnSW_P_Opt_Use_SP = new global::System.Data.DataColumn("SW_P_Opt_Use_SP", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_Use_SP);
+                this.columnSW_P_Opt_Use_Buzzer = new global::System.Data.DataColumn("SW_P_Opt_Use_Buzzer", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_Use_Buzzer);
+                this.columnSW_P_Opt_Use_Vibracall = new global::System.Data.DataColumn("SW_P_Opt_Use_Vibracall", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_Use_Vibracall);
+                this.columnSW_P_Opt_Use_LedTorch = new global::System.Data.DataColumn("SW_P_Opt_Use_LedTorch", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_Use_LedTorch);
+                this.columnSW_P_PLD = new global::System.Data.DataColumn("SW_P_PLD", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_PLD);
+                this.columnSW_P_Opt_MaxPairDevices = new global::System.Data.DataColumn("SW_P_Opt_MaxPairDevices", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_MaxPairDevices);
+                this.columnSW_R_Opt_RF = new global::System.Data.DataColumn("SW_R_Opt_RF", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_RF);
+                this.columnSW_R_Opt_Plug_Exp = new global::System.Data.DataColumn("SW_R_Opt_Plug_Exp", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Plug_Exp);
+                this.columnSW_R_Opt_Plug_Ple = new global::System.Data.DataColumn("SW_R_Opt_Plug_Ple", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Plug_Ple);
+                this.columnSW_R_Opt_Em_Keyb = new global::System.Data.DataColumn("SW_R_Opt_Em_Keyb", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Em_Keyb);
+                this.columnSW_R_Opt_Can = new global::System.Data.DataColumn("SW_R_Opt_Can", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Can);
+                this.columnSW_R_Opt_Prop_Out = new global::System.Data.DataColumn("SW_R_Opt_Prop_Out", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Prop_Out);
+                this.columnSW_R_Opt_TimeOut = new global::System.Data.DataColumn("SW_R_Opt_TimeOut", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_TimeOut);
+                this.columnSW_R_Opt_Cont_Keys = new global::System.Data.DataColumn("SW_R_Opt_Cont_Keys", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Cont_Keys);
+                this.columnSW_R_Opt_LockSameRow = new global::System.Data.DataColumn("SW_R_Opt_LockSameRow", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_LockSameRow);
+                this.columnSW_R_Opt_Use_SP = new global::System.Data.DataColumn("SW_R_Opt_Use_SP", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Use_SP);
+                this.columnSW_R_Opt_MaxPairDevices = new global::System.Data.DataColumn("SW_R_Opt_MaxPairDevices", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_MaxPairDevices);
+                this.columnSW_R_Opt_ShiftPage = new global::System.Data.DataColumn("SW_R_Opt_ShiftPage", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_ShiftPage);
+                this.columnSW_R_Opt_Output_No = new global::System.Data.DataColumn("SW_R_Opt_Output_No", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Output_No);
+                this.columnSW_R_Opt_Dig_Input_No = new global::System.Data.DataColumn("SW_R_Opt_Dig_Input_No", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Dig_Input_No);
+                this.columnSW_R_Opt_Ana_Input_No = new global::System.Data.DataColumn("SW_R_Opt_Ana_Input_No", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Ana_Input_No);
+                this.columnSW_Revisioni = new global::System.Data.DataColumn("SW_Revisioni", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Revisioni);
+                this.columnSW_Funzionamento = new global::System.Data.DataColumn("SW_Funzionamento", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Funzionamento);
+                this.columnSW_Config = new global::System.Data.DataColumn("SW_Config", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Config);
+                this.columnSW_Obsolete_ver = new global::System.Data.DataColumn("SW_Obsolete_ver", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Obsolete_ver);
+                this.columnSW_Obsolete_ver_from_date = new global::System.Data.DataColumn("SW_Obsolete_ver_from_date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Obsolete_ver_from_date);
+                this.columnSW_Order = new global::System.Data.DataColumn("SW_Order", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Order);
+                this.columnSW_R_Opt_Use_Radius = new global::System.Data.DataColumn("SW_R_Opt_Use_Radius", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Use_Radius);
+                this.columnSW_CustomPIC = new global::System.Data.DataColumn("SW_CustomPIC", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_CustomPIC);
+                this.columnSW_P_Opt_Use_Radius = new global::System.Data.DataColumn("SW_P_Opt_Use_Radius", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_Use_Radius);
+                this.columnSW_P_Lock = new global::System.Data.DataColumn("SW_P_Lock", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Lock);
+                this.columnSW_R_Lock = new global::System.Data.DataColumn("SW_R_Lock", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Lock);
+                this.columnSW_IsPublic = new global::System.Data.DataColumn("SW_IsPublic", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_IsPublic);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnId}, true));
+                this.columnId.AutoIncrement = true;
+                this.columnId.AutoIncrementSeed = -1;
+                this.columnId.AutoIncrementStep = -1;
+                this.columnId.AllowDBNull = false;
+                this.columnId.ReadOnly = true;
+                this.columnId.Unique = true;
+                this.columnSW_Code.AllowDBNull = false;
+                this.columnSW_Code.MaxLength = 25;
+                this.columnSW_TipoDevice.AllowDBNull = false;
+                this.columnSW_TipoDevice.MaxLength = 1;
+                this.columnSW_Descrizione.MaxLength = 255;
+                this.columnSW_Descrizione_EN.MaxLength = 255;
+                this.columnSW_Versione.MaxLength = 6;
+                this.columnSW_Revisione.MaxLength = 3;
+                this.columnSW_Standard.AllowDBNull = false;
+                this.columnSW_FamProd.MaxLength = 20;
+                this.columnSW_P_Opt_RF.AllowDBNull = false;
+                this.columnSW_P_Opt_RF.MaxLength = 10;
+                this.columnSW_P_Opt_Use_Oled.AllowDBNull = false;
+                this.columnSW_P_Opt_Use_EmButt.AllowDBNull = false;
+                this.columnSW_P_Opt_Use_Backlight.AllowDBNull = false;
+                this.columnSW_P_Opt_ShiftPage.AllowDBNull = false;
+                this.columnSW_P_Opt_Use_Accel.AllowDBNull = false;
+                this.columnSW_P_Opt_Use_SP.AllowDBNull = false;
+                this.columnSW_P_Opt_Use_Buzzer.AllowDBNull = false;
+                this.columnSW_P_Opt_Use_Vibracall.AllowDBNull = false;
+                this.columnSW_P_Opt_Use_LedTorch.AllowDBNull = false;
+                this.columnSW_P_PLD.AllowDBNull = false;
+                this.columnSW_R_Opt_RF.AllowDBNull = false;
+                this.columnSW_R_Opt_RF.MaxLength = 10;
+                this.columnSW_R_Opt_Plug_Exp.AllowDBNull = false;
+                this.columnSW_R_Opt_Plug_Ple.AllowDBNull = false;
+                this.columnSW_R_Opt_Em_Keyb.AllowDBNull = false;
+                this.columnSW_R_Opt_Can.AllowDBNull = false;
+                this.columnSW_R_Opt_Prop_Out.AllowDBNull = false;
+                this.columnSW_R_Opt_TimeOut.AllowDBNull = false;
+                this.columnSW_R_Opt_TimeOut.MaxLength = 10;
+                this.columnSW_R_Opt_LockSameRow.AllowDBNull = false;
+                this.columnSW_R_Opt_Use_SP.AllowDBNull = false;
+                this.columnSW_R_Opt_ShiftPage.AllowDBNull = false;
+                this.columnSW_Revisioni.MaxLength = 2147483647;
+                this.columnSW_Funzionamento.MaxLength = 2147483647;
+                this.columnSW_Config.MaxLength = 2147483647;
+                this.columnSW_Obsolete_ver.AllowDBNull = false;
+                this.columnSW_Order.ReadOnly = true;
+                this.columnSW_Order.MaxLength = 6;
+                this.columnSW_R_Opt_Use_Radius.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public FW_RevisioniRow NewFW_RevisioniRow() {
+                return ((FW_RevisioniRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new FW_RevisioniRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(FW_RevisioniRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.FW_RevisioniRowChanged != null)) {
+                    this.FW_RevisioniRowChanged(this, new FW_RevisioniRowChangeEvent(((FW_RevisioniRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.FW_RevisioniRowChanging != null)) {
+                    this.FW_RevisioniRowChanging(this, new FW_RevisioniRowChangeEvent(((FW_RevisioniRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.FW_RevisioniRowDeleted != null)) {
+                    this.FW_RevisioniRowDeleted(this, new FW_RevisioniRowChangeEvent(((FW_RevisioniRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.FW_RevisioniRowDeleting != null)) {
+                    this.FW_RevisioniRowDeleting(this, new FW_RevisioniRowChangeEvent(((FW_RevisioniRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemoveFW_RevisioniRow(FW_RevisioniRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                ds_Programmazione ds = new ds_Programmazione();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "FW_RevisioniDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class dt_Tmp_ProgrammaDataTable : global::System.Data.TypedTableBase<dt_Tmp_ProgrammaRow> {
             
             private global::System.Data.DataColumn columntmp_prog_id;
@@ -11790,6 +12833,916 @@ namespace SmartLineProduction {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
+        public partial class FW_RevisioniRow : global::System.Data.DataRow {
+            
+            private FW_RevisioniDataTable tableFW_Revisioni;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal FW_RevisioniRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableFW_Revisioni = ((FW_RevisioniDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Id {
+                get {
+                    return ((int)(this[this.tableFW_Revisioni.IdColumn]));
+                }
+                set {
+                    this[this.tableFW_Revisioni.IdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_Code {
+                get {
+                    return ((string)(this[this.tableFW_Revisioni.SW_CodeColumn]));
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_CodeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_TipoDevice {
+                get {
+                    return ((string)(this[this.tableFW_Revisioni.SW_TipoDeviceColumn]));
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_TipoDeviceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_Descrizione {
+                get {
+                    try {
+                        return ((string)(this[this.tableFW_Revisioni.SW_DescrizioneColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_Descrizione\' nella tabella \'FW_Revisioni\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_DescrizioneColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_Descrizione_EN {
+                get {
+                    try {
+                        return ((string)(this[this.tableFW_Revisioni.SW_Descrizione_ENColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_Descrizione_EN\' nella tabella \'FW_Revisioni\' è DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_Descrizione_ENColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_Versione {
+                get {
+                    try {
+                        return ((string)(this[this.tableFW_Revisioni.SW_VersioneColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_Versione\' nella tabella \'FW_Revisioni\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_VersioneColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_Revisione {
+                get {
+                    try {
+                        return ((string)(this[this.tableFW_Revisioni.SW_RevisioneColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_Revisione\' nella tabella \'FW_Revisioni\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_RevisioneColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_Standard {
+                get {
+                    return ((bool)(this[this.tableFW_Revisioni.SW_StandardColumn]));
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_StandardColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_FamProd {
+                get {
+                    try {
+                        return ((string)(this[this.tableFW_Revisioni.SW_FamProdColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_FamProd\' nella tabella \'FW_Revisioni\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_FamProdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_P_Opt_RF {
+                get {
+                    return ((string)(this[this.tableFW_Revisioni.SW_P_Opt_RFColumn]));
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_P_Opt_RFColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_Opt_Use_Oled {
+                get {
+                    return ((bool)(this[this.tableFW_Revisioni.SW_P_Opt_Use_OledColumn]));
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_P_Opt_Use_OledColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_Opt_Use_EmButt {
+                get {
+                    return ((bool)(this[this.tableFW_Revisioni.SW_P_Opt_Use_EmButtColumn]));
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_P_Opt_Use_EmButtColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_Opt_Use_Backlight {
+                get {
+                    return ((bool)(this[this.tableFW_Revisioni.SW_P_Opt_Use_BacklightColumn]));
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_P_Opt_Use_BacklightColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_Opt_ShiftPage {
+                get {
+                    return ((bool)(this[this.tableFW_Revisioni.SW_P_Opt_ShiftPageColumn]));
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_P_Opt_ShiftPageColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_Opt_Use_Accel {
+                get {
+                    return ((bool)(this[this.tableFW_Revisioni.SW_P_Opt_Use_AccelColumn]));
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_P_Opt_Use_AccelColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_Opt_Use_SP {
+                get {
+                    return ((bool)(this[this.tableFW_Revisioni.SW_P_Opt_Use_SPColumn]));
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_P_Opt_Use_SPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_Opt_Use_Buzzer {
+                get {
+                    return ((bool)(this[this.tableFW_Revisioni.SW_P_Opt_Use_BuzzerColumn]));
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_P_Opt_Use_BuzzerColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_Opt_Use_Vibracall {
+                get {
+                    return ((bool)(this[this.tableFW_Revisioni.SW_P_Opt_Use_VibracallColumn]));
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_P_Opt_Use_VibracallColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_Opt_Use_LedTorch {
+                get {
+                    return ((bool)(this[this.tableFW_Revisioni.SW_P_Opt_Use_LedTorchColumn]));
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_P_Opt_Use_LedTorchColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_PLD {
+                get {
+                    return ((bool)(this[this.tableFW_Revisioni.SW_P_PLDColumn]));
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_P_PLDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int SW_P_Opt_MaxPairDevices {
+                get {
+                    try {
+                        return ((int)(this[this.tableFW_Revisioni.SW_P_Opt_MaxPairDevicesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_P_Opt_MaxPairDevices\' nella tabella \'FW_Revisioni\' è " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_P_Opt_MaxPairDevicesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_R_Opt_RF {
+                get {
+                    return ((string)(this[this.tableFW_Revisioni.SW_R_Opt_RFColumn]));
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_R_Opt_RFColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_R_Opt_Plug_Exp {
+                get {
+                    return ((bool)(this[this.tableFW_Revisioni.SW_R_Opt_Plug_ExpColumn]));
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_R_Opt_Plug_ExpColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_R_Opt_Plug_Ple {
+                get {
+                    return ((bool)(this[this.tableFW_Revisioni.SW_R_Opt_Plug_PleColumn]));
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_R_Opt_Plug_PleColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_R_Opt_Em_Keyb {
+                get {
+                    return ((bool)(this[this.tableFW_Revisioni.SW_R_Opt_Em_KeybColumn]));
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_R_Opt_Em_KeybColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_R_Opt_Can {
+                get {
+                    return ((bool)(this[this.tableFW_Revisioni.SW_R_Opt_CanColumn]));
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_R_Opt_CanColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_R_Opt_Prop_Out {
+                get {
+                    return ((bool)(this[this.tableFW_Revisioni.SW_R_Opt_Prop_OutColumn]));
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_R_Opt_Prop_OutColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_R_Opt_TimeOut {
+                get {
+                    return ((string)(this[this.tableFW_Revisioni.SW_R_Opt_TimeOutColumn]));
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_R_Opt_TimeOutColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int SW_R_Opt_Cont_Keys {
+                get {
+                    try {
+                        return ((int)(this[this.tableFW_Revisioni.SW_R_Opt_Cont_KeysColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_R_Opt_Cont_Keys\' nella tabella \'FW_Revisioni\' è DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_R_Opt_Cont_KeysColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_R_Opt_LockSameRow {
+                get {
+                    return ((bool)(this[this.tableFW_Revisioni.SW_R_Opt_LockSameRowColumn]));
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_R_Opt_LockSameRowColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_R_Opt_Use_SP {
+                get {
+                    return ((bool)(this[this.tableFW_Revisioni.SW_R_Opt_Use_SPColumn]));
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_R_Opt_Use_SPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int SW_R_Opt_MaxPairDevices {
+                get {
+                    try {
+                        return ((int)(this[this.tableFW_Revisioni.SW_R_Opt_MaxPairDevicesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_R_Opt_MaxPairDevices\' nella tabella \'FW_Revisioni\' è " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_R_Opt_MaxPairDevicesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_R_Opt_ShiftPage {
+                get {
+                    return ((bool)(this[this.tableFW_Revisioni.SW_R_Opt_ShiftPageColumn]));
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_R_Opt_ShiftPageColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int SW_R_Opt_Output_No {
+                get {
+                    try {
+                        return ((int)(this[this.tableFW_Revisioni.SW_R_Opt_Output_NoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_R_Opt_Output_No\' nella tabella \'FW_Revisioni\' è DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_R_Opt_Output_NoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int SW_R_Opt_Dig_Input_No {
+                get {
+                    try {
+                        return ((int)(this[this.tableFW_Revisioni.SW_R_Opt_Dig_Input_NoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_R_Opt_Dig_Input_No\' nella tabella \'FW_Revisioni\' è DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_R_Opt_Dig_Input_NoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int SW_R_Opt_Ana_Input_No {
+                get {
+                    try {
+                        return ((int)(this[this.tableFW_Revisioni.SW_R_Opt_Ana_Input_NoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_R_Opt_Ana_Input_No\' nella tabella \'FW_Revisioni\' è DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_R_Opt_Ana_Input_NoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_Revisioni {
+                get {
+                    try {
+                        return ((string)(this[this.tableFW_Revisioni.SW_RevisioniColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_Revisioni\' nella tabella \'FW_Revisioni\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_RevisioniColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_Funzionamento {
+                get {
+                    try {
+                        return ((string)(this[this.tableFW_Revisioni.SW_FunzionamentoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_Funzionamento\' nella tabella \'FW_Revisioni\' è DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_FunzionamentoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_Config {
+                get {
+                    try {
+                        return ((string)(this[this.tableFW_Revisioni.SW_ConfigColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_Config\' nella tabella \'FW_Revisioni\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_ConfigColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_Obsolete_ver {
+                get {
+                    return ((bool)(this[this.tableFW_Revisioni.SW_Obsolete_verColumn]));
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_Obsolete_verColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime SW_Obsolete_ver_from_date {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableFW_Revisioni.SW_Obsolete_ver_from_dateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_Obsolete_ver_from_date\' nella tabella \'FW_Revisioni\' " +
+                                "è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_Obsolete_ver_from_dateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_Order {
+                get {
+                    try {
+                        return ((string)(this[this.tableFW_Revisioni.SW_OrderColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_Order\' nella tabella \'FW_Revisioni\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_OrderColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_R_Opt_Use_Radius {
+                get {
+                    return ((bool)(this[this.tableFW_Revisioni.SW_R_Opt_Use_RadiusColumn]));
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_R_Opt_Use_RadiusColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_CustomPIC {
+                get {
+                    try {
+                        return ((bool)(this[this.tableFW_Revisioni.SW_CustomPICColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_CustomPIC\' nella tabella \'FW_Revisioni\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_CustomPICColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_Opt_Use_Radius {
+                get {
+                    try {
+                        return ((bool)(this[this.tableFW_Revisioni.SW_P_Opt_Use_RadiusColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_P_Opt_Use_Radius\' nella tabella \'FW_Revisioni\' è DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_P_Opt_Use_RadiusColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int SW_P_Lock {
+                get {
+                    try {
+                        return ((int)(this[this.tableFW_Revisioni.SW_P_LockColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_P_Lock\' nella tabella \'FW_Revisioni\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_P_LockColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int SW_R_Lock {
+                get {
+                    try {
+                        return ((int)(this[this.tableFW_Revisioni.SW_R_LockColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_R_Lock\' nella tabella \'FW_Revisioni\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_R_LockColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_IsPublic {
+                get {
+                    try {
+                        return ((bool)(this[this.tableFW_Revisioni.SW_IsPublicColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_IsPublic\' nella tabella \'FW_Revisioni\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFW_Revisioni.SW_IsPublicColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_DescrizioneNull() {
+                return this.IsNull(this.tableFW_Revisioni.SW_DescrizioneColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_DescrizioneNull() {
+                this[this.tableFW_Revisioni.SW_DescrizioneColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_Descrizione_ENNull() {
+                return this.IsNull(this.tableFW_Revisioni.SW_Descrizione_ENColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_Descrizione_ENNull() {
+                this[this.tableFW_Revisioni.SW_Descrizione_ENColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_VersioneNull() {
+                return this.IsNull(this.tableFW_Revisioni.SW_VersioneColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_VersioneNull() {
+                this[this.tableFW_Revisioni.SW_VersioneColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_RevisioneNull() {
+                return this.IsNull(this.tableFW_Revisioni.SW_RevisioneColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_RevisioneNull() {
+                this[this.tableFW_Revisioni.SW_RevisioneColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_FamProdNull() {
+                return this.IsNull(this.tableFW_Revisioni.SW_FamProdColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_FamProdNull() {
+                this[this.tableFW_Revisioni.SW_FamProdColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_P_Opt_MaxPairDevicesNull() {
+                return this.IsNull(this.tableFW_Revisioni.SW_P_Opt_MaxPairDevicesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_P_Opt_MaxPairDevicesNull() {
+                this[this.tableFW_Revisioni.SW_P_Opt_MaxPairDevicesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_R_Opt_Cont_KeysNull() {
+                return this.IsNull(this.tableFW_Revisioni.SW_R_Opt_Cont_KeysColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_R_Opt_Cont_KeysNull() {
+                this[this.tableFW_Revisioni.SW_R_Opt_Cont_KeysColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_R_Opt_MaxPairDevicesNull() {
+                return this.IsNull(this.tableFW_Revisioni.SW_R_Opt_MaxPairDevicesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_R_Opt_MaxPairDevicesNull() {
+                this[this.tableFW_Revisioni.SW_R_Opt_MaxPairDevicesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_R_Opt_Output_NoNull() {
+                return this.IsNull(this.tableFW_Revisioni.SW_R_Opt_Output_NoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_R_Opt_Output_NoNull() {
+                this[this.tableFW_Revisioni.SW_R_Opt_Output_NoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_R_Opt_Dig_Input_NoNull() {
+                return this.IsNull(this.tableFW_Revisioni.SW_R_Opt_Dig_Input_NoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_R_Opt_Dig_Input_NoNull() {
+                this[this.tableFW_Revisioni.SW_R_Opt_Dig_Input_NoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_R_Opt_Ana_Input_NoNull() {
+                return this.IsNull(this.tableFW_Revisioni.SW_R_Opt_Ana_Input_NoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_R_Opt_Ana_Input_NoNull() {
+                this[this.tableFW_Revisioni.SW_R_Opt_Ana_Input_NoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_RevisioniNull() {
+                return this.IsNull(this.tableFW_Revisioni.SW_RevisioniColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_RevisioniNull() {
+                this[this.tableFW_Revisioni.SW_RevisioniColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_FunzionamentoNull() {
+                return this.IsNull(this.tableFW_Revisioni.SW_FunzionamentoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_FunzionamentoNull() {
+                this[this.tableFW_Revisioni.SW_FunzionamentoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_ConfigNull() {
+                return this.IsNull(this.tableFW_Revisioni.SW_ConfigColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_ConfigNull() {
+                this[this.tableFW_Revisioni.SW_ConfigColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_Obsolete_ver_from_dateNull() {
+                return this.IsNull(this.tableFW_Revisioni.SW_Obsolete_ver_from_dateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_Obsolete_ver_from_dateNull() {
+                this[this.tableFW_Revisioni.SW_Obsolete_ver_from_dateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_OrderNull() {
+                return this.IsNull(this.tableFW_Revisioni.SW_OrderColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_OrderNull() {
+                this[this.tableFW_Revisioni.SW_OrderColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_CustomPICNull() {
+                return this.IsNull(this.tableFW_Revisioni.SW_CustomPICColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_CustomPICNull() {
+                this[this.tableFW_Revisioni.SW_CustomPICColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_P_Opt_Use_RadiusNull() {
+                return this.IsNull(this.tableFW_Revisioni.SW_P_Opt_Use_RadiusColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_P_Opt_Use_RadiusNull() {
+                this[this.tableFW_Revisioni.SW_P_Opt_Use_RadiusColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_P_LockNull() {
+                return this.IsNull(this.tableFW_Revisioni.SW_P_LockColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_P_LockNull() {
+                this[this.tableFW_Revisioni.SW_P_LockColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_R_LockNull() {
+                return this.IsNull(this.tableFW_Revisioni.SW_R_LockColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_R_LockNull() {
+                this[this.tableFW_Revisioni.SW_R_LockColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_IsPublicNull() {
+                return this.IsNull(this.tableFW_Revisioni.SW_IsPublicColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_IsPublicNull() {
+                this[this.tableFW_Revisioni.SW_IsPublicColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
         public partial class dt_Tmp_ProgrammaRow : global::System.Data.DataRow {
             
             private dt_Tmp_ProgrammaDataTable tabledt_Tmp_Programma;
@@ -12659,6 +14612,40 @@ namespace SmartLineProduction {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public Fam_ProdRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class FW_RevisioniRowChangeEvent : global::System.EventArgs {
+            
+            private FW_RevisioniRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public FW_RevisioniRowChangeEvent(FW_RevisioniRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public FW_RevisioniRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -19667,6 +21654,1696 @@ SELECT Id, Fam_Prefix, Fam_Name, Fam_Label, Fam_Tipo, Fam_IsDevice, Fam_ToCommes
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class FW_RevisioniTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public FW_RevisioniTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "FW_Revisioni";
+            tableMapping.ColumnMappings.Add("Id", "Id");
+            tableMapping.ColumnMappings.Add("SW_Code", "SW_Code");
+            tableMapping.ColumnMappings.Add("SW_TipoDevice", "SW_TipoDevice");
+            tableMapping.ColumnMappings.Add("SW_Descrizione", "SW_Descrizione");
+            tableMapping.ColumnMappings.Add("SW_Descrizione_EN", "SW_Descrizione_EN");
+            tableMapping.ColumnMappings.Add("SW_Versione", "SW_Versione");
+            tableMapping.ColumnMappings.Add("SW_Revisione", "SW_Revisione");
+            tableMapping.ColumnMappings.Add("SW_Standard", "SW_Standard");
+            tableMapping.ColumnMappings.Add("SW_FamProd", "SW_FamProd");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_RF", "SW_P_Opt_RF");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_Use_Oled", "SW_P_Opt_Use_Oled");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_Use_EmButt", "SW_P_Opt_Use_EmButt");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_Use_Backlight", "SW_P_Opt_Use_Backlight");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_ShiftPage", "SW_P_Opt_ShiftPage");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_Use_Accel", "SW_P_Opt_Use_Accel");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_Use_SP", "SW_P_Opt_Use_SP");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_Use_Buzzer", "SW_P_Opt_Use_Buzzer");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_Use_Vibracall", "SW_P_Opt_Use_Vibracall");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_Use_LedTorch", "SW_P_Opt_Use_LedTorch");
+            tableMapping.ColumnMappings.Add("SW_P_PLD", "SW_P_PLD");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_MaxPairDevices", "SW_P_Opt_MaxPairDevices");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_RF", "SW_R_Opt_RF");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Plug_Exp", "SW_R_Opt_Plug_Exp");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Plug_Ple", "SW_R_Opt_Plug_Ple");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Em_Keyb", "SW_R_Opt_Em_Keyb");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Can", "SW_R_Opt_Can");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Prop_Out", "SW_R_Opt_Prop_Out");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_TimeOut", "SW_R_Opt_TimeOut");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Cont_Keys", "SW_R_Opt_Cont_Keys");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_LockSameRow", "SW_R_Opt_LockSameRow");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Use_SP", "SW_R_Opt_Use_SP");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_MaxPairDevices", "SW_R_Opt_MaxPairDevices");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_ShiftPage", "SW_R_Opt_ShiftPage");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Output_No", "SW_R_Opt_Output_No");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Dig_Input_No", "SW_R_Opt_Dig_Input_No");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Ana_Input_No", "SW_R_Opt_Ana_Input_No");
+            tableMapping.ColumnMappings.Add("SW_Revisioni", "SW_Revisioni");
+            tableMapping.ColumnMappings.Add("SW_Funzionamento", "SW_Funzionamento");
+            tableMapping.ColumnMappings.Add("SW_Config", "SW_Config");
+            tableMapping.ColumnMappings.Add("SW_Obsolete_ver", "SW_Obsolete_ver");
+            tableMapping.ColumnMappings.Add("SW_Obsolete_ver_from_date", "SW_Obsolete_ver_from_date");
+            tableMapping.ColumnMappings.Add("SW_Order", "SW_Order");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Use_Radius", "SW_R_Opt_Use_Radius");
+            tableMapping.ColumnMappings.Add("SW_CustomPIC", "SW_CustomPIC");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_Use_Radius", "SW_P_Opt_Use_Radius");
+            tableMapping.ColumnMappings.Add("SW_P_Lock", "SW_P_Lock");
+            tableMapping.ColumnMappings.Add("SW_R_Lock", "SW_R_Lock");
+            tableMapping.ColumnMappings.Add("SW_IsPublic", "SW_IsPublic");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Firmware] WHERE (([Id] = @Original_Id) AND ([SW_Code] = @Original_SW" +
+                "_Code) AND ([SW_TipoDevice] = @Original_SW_TipoDevice) AND ((@IsNull_SW_Descrizi" +
+                "one = 1 AND [SW_Descrizione] IS NULL) OR ([SW_Descrizione] = @Original_SW_Descri" +
+                "zione)) AND ((@IsNull_SW_Descrizione_EN = 1 AND [SW_Descrizione_EN] IS NULL) OR " +
+                "([SW_Descrizione_EN] = @Original_SW_Descrizione_EN)) AND ((@IsNull_SW_Versione =" +
+                " 1 AND [SW_Versione] IS NULL) OR ([SW_Versione] = @Original_SW_Versione)) AND ((" +
+                "@IsNull_SW_Revisione = 1 AND [SW_Revisione] IS NULL) OR ([SW_Revisione] = @Origi" +
+                "nal_SW_Revisione)) AND ([SW_Standard] = @Original_SW_Standard) AND ((@IsNull_SW_" +
+                "FamProd = 1 AND [SW_FamProd] IS NULL) OR ([SW_FamProd] = @Original_SW_FamProd)) " +
+                "AND ([SW_P_Opt_RF] = @Original_SW_P_Opt_RF) AND ([SW_P_Opt_Use_Oled] = @Original" +
+                "_SW_P_Opt_Use_Oled) AND ([SW_P_Opt_Use_EmButt] = @Original_SW_P_Opt_Use_EmButt) " +
+                "AND ([SW_P_Opt_Use_Backlight] = @Original_SW_P_Opt_Use_Backlight) AND ([SW_P_Opt" +
+                "_ShiftPage] = @Original_SW_P_Opt_ShiftPage) AND ([SW_P_Opt_Use_Accel] = @Origina" +
+                "l_SW_P_Opt_Use_Accel) AND ([SW_P_Opt_Use_SP] = @Original_SW_P_Opt_Use_SP) AND ([" +
+                "SW_P_Opt_Use_Buzzer] = @Original_SW_P_Opt_Use_Buzzer) AND ([SW_P_Opt_Use_Vibraca" +
+                "ll] = @Original_SW_P_Opt_Use_Vibracall) AND ([SW_P_Opt_Use_LedTorch] = @Original" +
+                "_SW_P_Opt_Use_LedTorch) AND ([SW_P_PLD] = @Original_SW_P_PLD) AND ((@IsNull_SW_P" +
+                "_Opt_MaxPairDevices = 1 AND [SW_P_Opt_MaxPairDevices] IS NULL) OR ([SW_P_Opt_Max" +
+                "PairDevices] = @Original_SW_P_Opt_MaxPairDevices)) AND ([SW_R_Opt_RF] = @Origina" +
+                "l_SW_R_Opt_RF) AND ([SW_R_Opt_Plug_Exp] = @Original_SW_R_Opt_Plug_Exp) AND ([SW_" +
+                "R_Opt_Plug_Ple] = @Original_SW_R_Opt_Plug_Ple) AND ([SW_R_Opt_Em_Keyb] = @Origin" +
+                "al_SW_R_Opt_Em_Keyb) AND ([SW_R_Opt_Can] = @Original_SW_R_Opt_Can) AND ([SW_R_Op" +
+                "t_Prop_Out] = @Original_SW_R_Opt_Prop_Out) AND ([SW_R_Opt_TimeOut] = @Original_S" +
+                "W_R_Opt_TimeOut) AND ((@IsNull_SW_R_Opt_Cont_Keys = 1 AND [SW_R_Opt_Cont_Keys] I" +
+                "S NULL) OR ([SW_R_Opt_Cont_Keys] = @Original_SW_R_Opt_Cont_Keys)) AND ([SW_R_Opt" +
+                "_LockSameRow] = @Original_SW_R_Opt_LockSameRow) AND ([SW_R_Opt_Use_SP] = @Origin" +
+                "al_SW_R_Opt_Use_SP) AND ((@IsNull_SW_R_Opt_MaxPairDevices = 1 AND [SW_R_Opt_MaxP" +
+                "airDevices] IS NULL) OR ([SW_R_Opt_MaxPairDevices] = @Original_SW_R_Opt_MaxPairD" +
+                "evices)) AND ([SW_R_Opt_ShiftPage] = @Original_SW_R_Opt_ShiftPage) AND ((@IsNull" +
+                "_SW_R_Opt_Output_No = 1 AND [SW_R_Opt_Output_No] IS NULL) OR ([SW_R_Opt_Output_N" +
+                "o] = @Original_SW_R_Opt_Output_No)) AND ((@IsNull_SW_R_Opt_Dig_Input_No = 1 AND " +
+                "[SW_R_Opt_Dig_Input_No] IS NULL) OR ([SW_R_Opt_Dig_Input_No] = @Original_SW_R_Op" +
+                "t_Dig_Input_No)) AND ((@IsNull_SW_R_Opt_Ana_Input_No = 1 AND [SW_R_Opt_Ana_Input" +
+                "_No] IS NULL) OR ([SW_R_Opt_Ana_Input_No] = @Original_SW_R_Opt_Ana_Input_No)) AN" +
+                "D ([SW_Obsolete_ver] = @Original_SW_Obsolete_ver) AND ((@IsNull_SW_Obsolete_ver_" +
+                "from_date = 1 AND [SW_Obsolete_ver_from_date] IS NULL) OR ([SW_Obsolete_ver_from" +
+                "_date] = @Original_SW_Obsolete_ver_from_date)) AND ([SW_R_Opt_Use_Radius] = @Ori" +
+                "ginal_SW_R_Opt_Use_Radius) AND ((@IsNull_SW_CustomPIC = 1 AND [SW_CustomPIC] IS " +
+                "NULL) OR ([SW_CustomPIC] = @Original_SW_CustomPIC)) AND ((@IsNull_SW_P_Opt_Use_R" +
+                "adius = 1 AND [SW_P_Opt_Use_Radius] IS NULL) OR ([SW_P_Opt_Use_Radius] = @Origin" +
+                "al_SW_P_Opt_Use_Radius)) AND ((@IsNull_SW_P_Lock = 1 AND [SW_P_Lock] IS NULL) OR" +
+                " ([SW_P_Lock] = @Original_SW_P_Lock)) AND ((@IsNull_SW_R_Lock = 1 AND [SW_R_Lock" +
+                "] IS NULL) OR ([SW_R_Lock] = @Original_SW_R_Lock)) AND ((@IsNull_SW_IsPublic = 1" +
+                " AND [SW_IsPublic] IS NULL) OR ([SW_IsPublic] = @Original_SW_IsPublic)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_Code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Code", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_TipoDevice", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_TipoDevice", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_Descrizione", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Descrizione", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_Descrizione", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Descrizione", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_Descrizione_EN", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Descrizione_EN", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_Descrizione_EN", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Descrizione_EN", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_Versione", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Versione", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_Versione", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Versione", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_Revisione", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Revisione", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_Revisione", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Revisione", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_Standard", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Standard", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_FamProd", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_FamProd", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_FamProd", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_FamProd", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_P_Opt_RF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_RF", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_P_Opt_Use_Oled", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_Oled", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_P_Opt_Use_EmButt", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_EmButt", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_P_Opt_Use_Backlight", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_Backlight", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_P_Opt_ShiftPage", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_ShiftPage", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_P_Opt_Use_Accel", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_Accel", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_P_Opt_Use_SP", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_SP", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_P_Opt_Use_Buzzer", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_Buzzer", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_P_Opt_Use_Vibracall", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_Vibracall", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_P_Opt_Use_LedTorch", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_LedTorch", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_P_PLD", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_PLD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_P_Opt_MaxPairDevices", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_MaxPairDevices", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_P_Opt_MaxPairDevices", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_MaxPairDevices", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_R_Opt_RF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_RF", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_R_Opt_Plug_Exp", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Plug_Exp", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_R_Opt_Plug_Ple", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Plug_Ple", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_R_Opt_Em_Keyb", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Em_Keyb", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_R_Opt_Can", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Can", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_R_Opt_Prop_Out", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Prop_Out", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_R_Opt_TimeOut", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_TimeOut", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_R_Opt_Cont_Keys", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Cont_Keys", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_R_Opt_Cont_Keys", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Cont_Keys", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_R_Opt_LockSameRow", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_LockSameRow", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_R_Opt_Use_SP", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Use_SP", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_R_Opt_MaxPairDevices", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_MaxPairDevices", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_R_Opt_MaxPairDevices", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_MaxPairDevices", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_R_Opt_ShiftPage", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_ShiftPage", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_R_Opt_Output_No", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Output_No", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_R_Opt_Output_No", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Output_No", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_R_Opt_Dig_Input_No", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Dig_Input_No", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_R_Opt_Dig_Input_No", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Dig_Input_No", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_R_Opt_Ana_Input_No", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Ana_Input_No", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_R_Opt_Ana_Input_No", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Ana_Input_No", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_Obsolete_ver", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Obsolete_ver", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_Obsolete_ver_from_date", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Obsolete_ver_from_date", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_Obsolete_ver_from_date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Obsolete_ver_from_date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_R_Opt_Use_Radius", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Use_Radius", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_CustomPIC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_CustomPIC", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_CustomPIC", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_CustomPIC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_P_Opt_Use_Radius", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_Radius", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_P_Opt_Use_Radius", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_Radius", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_P_Lock", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Lock", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_P_Lock", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Lock", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_R_Lock", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Lock", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_R_Lock", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Lock", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_IsPublic", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_IsPublic", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_IsPublic", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_IsPublic", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [Firmware] ([SW_Code], [SW_TipoDevice], [SW_Descrizione], [SW_Descriz" +
+                "ione_EN], [SW_Versione], [SW_Revisione], [SW_Standard], [SW_FamProd], [SW_P_Opt_" +
+                "RF], [SW_P_Opt_Use_Oled], [SW_P_Opt_Use_EmButt], [SW_P_Opt_Use_Backlight], [SW_P" +
+                "_Opt_ShiftPage], [SW_P_Opt_Use_Accel], [SW_P_Opt_Use_SP], [SW_P_Opt_Use_Buzzer]," +
+                " [SW_P_Opt_Use_Vibracall], [SW_P_Opt_Use_LedTorch], [SW_P_PLD], [SW_P_Opt_MaxPai" +
+                "rDevices], [SW_R_Opt_RF], [SW_R_Opt_Plug_Exp], [SW_R_Opt_Plug_Ple], [SW_R_Opt_Em" +
+                "_Keyb], [SW_R_Opt_Can], [SW_R_Opt_Prop_Out], [SW_R_Opt_TimeOut], [SW_R_Opt_Cont_" +
+                "Keys], [SW_R_Opt_LockSameRow], [SW_R_Opt_Use_SP], [SW_R_Opt_MaxPairDevices], [SW" +
+                "_R_Opt_ShiftPage], [SW_R_Opt_Output_No], [SW_R_Opt_Dig_Input_No], [SW_R_Opt_Ana_" +
+                "Input_No], [SW_Revisioni], [SW_Funzionamento], [SW_Config], [SW_Obsolete_ver], [" +
+                "SW_Obsolete_ver_from_date], [SW_R_Opt_Use_Radius], [SW_CustomPIC], [SW_P_Opt_Use" +
+                "_Radius], [SW_P_Lock], [SW_R_Lock], [SW_IsPublic]) VALUES (@SW_Code, @SW_TipoDev" +
+                "ice, @SW_Descrizione, @SW_Descrizione_EN, @SW_Versione, @SW_Revisione, @SW_Stand" +
+                "ard, @SW_FamProd, @SW_P_Opt_RF, @SW_P_Opt_Use_Oled, @SW_P_Opt_Use_EmButt, @SW_P_" +
+                "Opt_Use_Backlight, @SW_P_Opt_ShiftPage, @SW_P_Opt_Use_Accel, @SW_P_Opt_Use_SP, @" +
+                "SW_P_Opt_Use_Buzzer, @SW_P_Opt_Use_Vibracall, @SW_P_Opt_Use_LedTorch, @SW_P_PLD," +
+                " @SW_P_Opt_MaxPairDevices, @SW_R_Opt_RF, @SW_R_Opt_Plug_Exp, @SW_R_Opt_Plug_Ple," +
+                " @SW_R_Opt_Em_Keyb, @SW_R_Opt_Can, @SW_R_Opt_Prop_Out, @SW_R_Opt_TimeOut, @SW_R_" +
+                "Opt_Cont_Keys, @SW_R_Opt_LockSameRow, @SW_R_Opt_Use_SP, @SW_R_Opt_MaxPairDevices" +
+                ", @SW_R_Opt_ShiftPage, @SW_R_Opt_Output_No, @SW_R_Opt_Dig_Input_No, @SW_R_Opt_An" +
+                "a_Input_No, @SW_Revisioni, @SW_Funzionamento, @SW_Config, @SW_Obsolete_ver, @SW_" +
+                "Obsolete_ver_from_date, @SW_R_Opt_Use_Radius, @SW_CustomPIC, @SW_P_Opt_Use_Radiu" +
+                "s, @SW_P_Lock, @SW_R_Lock, @SW_IsPublic);\r\nSELECT Id, SW_Code, SW_TipoDevice, SW" +
+                "_Descrizione, SW_Descrizione_EN, SW_Versione, SW_Revisione, SW_Standard, SW_FamP" +
+                "rod, SW_P_Opt_RF, SW_P_Opt_Use_Oled, SW_P_Opt_Use_EmButt, SW_P_Opt_Use_Backlight" +
+                ", SW_P_Opt_ShiftPage, SW_P_Opt_Use_Accel, SW_P_Opt_Use_SP, SW_P_Opt_Use_Buzzer, " +
+                "SW_P_Opt_Use_Vibracall, SW_P_Opt_Use_LedTorch, SW_P_PLD, SW_P_Opt_MaxPairDevices" +
+                ", SW_R_Opt_RF, SW_R_Opt_Plug_Exp, SW_R_Opt_Plug_Ple, SW_R_Opt_Em_Keyb, SW_R_Opt_" +
+                "Can, SW_R_Opt_Prop_Out, SW_R_Opt_TimeOut, SW_R_Opt_Cont_Keys, SW_R_Opt_LockSameR" +
+                "ow, SW_R_Opt_Use_SP, SW_R_Opt_MaxPairDevices, SW_R_Opt_ShiftPage, SW_R_Opt_Outpu" +
+                "t_No, SW_R_Opt_Dig_Input_No, SW_R_Opt_Ana_Input_No, SW_Revisioni, SW_Funzionamen" +
+                "to, SW_Config, SW_Obsolete_ver, SW_Obsolete_ver_from_date, SUBSTRING(SW_Code, 7," +
+                " 6) AS SW_Order, SW_R_Opt_Use_Radius, SW_CustomPIC, SW_P_Opt_Use_Radius, SW_P_Lo" +
+                "ck, SW_R_Lock, SW_IsPublic FROM Firmware WHERE (Id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_TipoDevice", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_TipoDevice", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Descrizione", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Descrizione", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Descrizione_EN", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Descrizione_EN", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Versione", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Versione", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Revisione", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Revisione", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Standard", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Standard", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_FamProd", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_FamProd", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_RF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_RF", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_Use_Oled", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_Oled", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_Use_EmButt", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_EmButt", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_Use_Backlight", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_Backlight", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_ShiftPage", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_ShiftPage", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_Use_Accel", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_Accel", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_Use_SP", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_SP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_Use_Buzzer", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_Buzzer", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_Use_Vibracall", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_Vibracall", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_Use_LedTorch", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_LedTorch", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_PLD", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_PLD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_MaxPairDevices", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_MaxPairDevices", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_RF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_RF", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Plug_Exp", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Plug_Exp", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Plug_Ple", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Plug_Ple", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Em_Keyb", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Em_Keyb", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Can", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Can", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Prop_Out", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Prop_Out", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_TimeOut", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_TimeOut", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Cont_Keys", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Cont_Keys", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_LockSameRow", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_LockSameRow", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Use_SP", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Use_SP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_MaxPairDevices", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_MaxPairDevices", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_ShiftPage", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_ShiftPage", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Output_No", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Output_No", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Dig_Input_No", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Dig_Input_No", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Ana_Input_No", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Ana_Input_No", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Revisioni", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Revisioni", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Funzionamento", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Funzionamento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Config", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Config", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Obsolete_ver", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Obsolete_ver", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Obsolete_ver_from_date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Obsolete_ver_from_date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Use_Radius", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Use_Radius", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_CustomPIC", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_CustomPIC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_Use_Radius", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_Radius", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Lock", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Lock", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Lock", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Lock", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_IsPublic", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_IsPublic", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = "UPDATE [Firmware] SET [SW_Code] = @SW_Code, [SW_TipoDevice] = @SW_TipoDevice, [SW" +
+                "_Descrizione] = @SW_Descrizione, [SW_Descrizione_EN] = @SW_Descrizione_EN, [SW_V" +
+                "ersione] = @SW_Versione, [SW_Revisione] = @SW_Revisione, [SW_Standard] = @SW_Sta" +
+                "ndard, [SW_FamProd] = @SW_FamProd, [SW_P_Opt_RF] = @SW_P_Opt_RF, [SW_P_Opt_Use_O" +
+                "led] = @SW_P_Opt_Use_Oled, [SW_P_Opt_Use_EmButt] = @SW_P_Opt_Use_EmButt, [SW_P_O" +
+                "pt_Use_Backlight] = @SW_P_Opt_Use_Backlight, [SW_P_Opt_ShiftPage] = @SW_P_Opt_Sh" +
+                "iftPage, [SW_P_Opt_Use_Accel] = @SW_P_Opt_Use_Accel, [SW_P_Opt_Use_SP] = @SW_P_O" +
+                "pt_Use_SP, [SW_P_Opt_Use_Buzzer] = @SW_P_Opt_Use_Buzzer, [SW_P_Opt_Use_Vibracall" +
+                "] = @SW_P_Opt_Use_Vibracall, [SW_P_Opt_Use_LedTorch] = @SW_P_Opt_Use_LedTorch, [" +
+                "SW_P_PLD] = @SW_P_PLD, [SW_P_Opt_MaxPairDevices] = @SW_P_Opt_MaxPairDevices, [SW" +
+                "_R_Opt_RF] = @SW_R_Opt_RF, [SW_R_Opt_Plug_Exp] = @SW_R_Opt_Plug_Exp, [SW_R_Opt_P" +
+                "lug_Ple] = @SW_R_Opt_Plug_Ple, [SW_R_Opt_Em_Keyb] = @SW_R_Opt_Em_Keyb, [SW_R_Opt" +
+                "_Can] = @SW_R_Opt_Can, [SW_R_Opt_Prop_Out] = @SW_R_Opt_Prop_Out, [SW_R_Opt_TimeO" +
+                "ut] = @SW_R_Opt_TimeOut, [SW_R_Opt_Cont_Keys] = @SW_R_Opt_Cont_Keys, [SW_R_Opt_L" +
+                "ockSameRow] = @SW_R_Opt_LockSameRow, [SW_R_Opt_Use_SP] = @SW_R_Opt_Use_SP, [SW_R" +
+                "_Opt_MaxPairDevices] = @SW_R_Opt_MaxPairDevices, [SW_R_Opt_ShiftPage] = @SW_R_Op" +
+                "t_ShiftPage, [SW_R_Opt_Output_No] = @SW_R_Opt_Output_No, [SW_R_Opt_Dig_Input_No]" +
+                " = @SW_R_Opt_Dig_Input_No, [SW_R_Opt_Ana_Input_No] = @SW_R_Opt_Ana_Input_No, [SW" +
+                "_Revisioni] = @SW_Revisioni, [SW_Funzionamento] = @SW_Funzionamento, [SW_Config]" +
+                " = @SW_Config, [SW_Obsolete_ver] = @SW_Obsolete_ver, [SW_Obsolete_ver_from_date]" +
+                " = @SW_Obsolete_ver_from_date, [SW_R_Opt_Use_Radius] = @SW_R_Opt_Use_Radius, [SW" +
+                "_CustomPIC] = @SW_CustomPIC, [SW_P_Opt_Use_Radius] = @SW_P_Opt_Use_Radius, [SW_P" +
+                "_Lock] = @SW_P_Lock, [SW_R_Lock] = @SW_R_Lock, [SW_IsPublic] = @SW_IsPublic WHER" +
+                "E (([Id] = @Original_Id) AND ([SW_Code] = @Original_SW_Code) AND ([SW_TipoDevice" +
+                "] = @Original_SW_TipoDevice) AND ((@IsNull_SW_Descrizione = 1 AND [SW_Descrizion" +
+                "e] IS NULL) OR ([SW_Descrizione] = @Original_SW_Descrizione)) AND ((@IsNull_SW_D" +
+                "escrizione_EN = 1 AND [SW_Descrizione_EN] IS NULL) OR ([SW_Descrizione_EN] = @Or" +
+                "iginal_SW_Descrizione_EN)) AND ((@IsNull_SW_Versione = 1 AND [SW_Versione] IS NU" +
+                "LL) OR ([SW_Versione] = @Original_SW_Versione)) AND ((@IsNull_SW_Revisione = 1 A" +
+                "ND [SW_Revisione] IS NULL) OR ([SW_Revisione] = @Original_SW_Revisione)) AND ([S" +
+                "W_Standard] = @Original_SW_Standard) AND ((@IsNull_SW_FamProd = 1 AND [SW_FamPro" +
+                "d] IS NULL) OR ([SW_FamProd] = @Original_SW_FamProd)) AND ([SW_P_Opt_RF] = @Orig" +
+                "inal_SW_P_Opt_RF) AND ([SW_P_Opt_Use_Oled] = @Original_SW_P_Opt_Use_Oled) AND ([" +
+                "SW_P_Opt_Use_EmButt] = @Original_SW_P_Opt_Use_EmButt) AND ([SW_P_Opt_Use_Backlig" +
+                "ht] = @Original_SW_P_Opt_Use_Backlight) AND ([SW_P_Opt_ShiftPage] = @Original_SW" +
+                "_P_Opt_ShiftPage) AND ([SW_P_Opt_Use_Accel] = @Original_SW_P_Opt_Use_Accel) AND " +
+                "([SW_P_Opt_Use_SP] = @Original_SW_P_Opt_Use_SP) AND ([SW_P_Opt_Use_Buzzer] = @Or" +
+                "iginal_SW_P_Opt_Use_Buzzer) AND ([SW_P_Opt_Use_Vibracall] = @Original_SW_P_Opt_U" +
+                "se_Vibracall) AND ([SW_P_Opt_Use_LedTorch] = @Original_SW_P_Opt_Use_LedTorch) AN" +
+                "D ([SW_P_PLD] = @Original_SW_P_PLD) AND ((@IsNull_SW_P_Opt_MaxPairDevices = 1 AN" +
+                "D [SW_P_Opt_MaxPairDevices] IS NULL) OR ([SW_P_Opt_MaxPairDevices] = @Original_S" +
+                "W_P_Opt_MaxPairDevices)) AND ([SW_R_Opt_RF] = @Original_SW_R_Opt_RF) AND ([SW_R_" +
+                "Opt_Plug_Exp] = @Original_SW_R_Opt_Plug_Exp) AND ([SW_R_Opt_Plug_Ple] = @Origina" +
+                "l_SW_R_Opt_Plug_Ple) AND ([SW_R_Opt_Em_Keyb] = @Original_SW_R_Opt_Em_Keyb) AND (" +
+                "[SW_R_Opt_Can] = @Original_SW_R_Opt_Can) AND ([SW_R_Opt_Prop_Out] = @Original_SW" +
+                "_R_Opt_Prop_Out) AND ([SW_R_Opt_TimeOut] = @Original_SW_R_Opt_TimeOut) AND ((@Is" +
+                "Null_SW_R_Opt_Cont_Keys = 1 AND [SW_R_Opt_Cont_Keys] IS NULL) OR ([SW_R_Opt_Cont" +
+                "_Keys] = @Original_SW_R_Opt_Cont_Keys)) AND ([SW_R_Opt_LockSameRow] = @Original_" +
+                "SW_R_Opt_LockSameRow) AND ([SW_R_Opt_Use_SP] = @Original_SW_R_Opt_Use_SP) AND ((" +
+                "@IsNull_SW_R_Opt_MaxPairDevices = 1 AND [SW_R_Opt_MaxPairDevices] IS NULL) OR ([" +
+                "SW_R_Opt_MaxPairDevices] = @Original_SW_R_Opt_MaxPairDevices)) AND ([SW_R_Opt_Sh" +
+                "iftPage] = @Original_SW_R_Opt_ShiftPage) AND ((@IsNull_SW_R_Opt_Output_No = 1 AN" +
+                "D [SW_R_Opt_Output_No] IS NULL) OR ([SW_R_Opt_Output_No] = @Original_SW_R_Opt_Ou" +
+                "tput_No)) AND ((@IsNull_SW_R_Opt_Dig_Input_No = 1 AND [SW_R_Opt_Dig_Input_No] IS" +
+                " NULL) OR ([SW_R_Opt_Dig_Input_No] = @Original_SW_R_Opt_Dig_Input_No)) AND ((@Is" +
+                "Null_SW_R_Opt_Ana_Input_No = 1 AND [SW_R_Opt_Ana_Input_No] IS NULL) OR ([SW_R_Op" +
+                "t_Ana_Input_No] = @Original_SW_R_Opt_Ana_Input_No)) AND ([SW_Obsolete_ver] = @Or" +
+                "iginal_SW_Obsolete_ver) AND ((@IsNull_SW_Obsolete_ver_from_date = 1 AND [SW_Obso" +
+                "lete_ver_from_date] IS NULL) OR ([SW_Obsolete_ver_from_date] = @Original_SW_Obso" +
+                "lete_ver_from_date)) AND ([SW_R_Opt_Use_Radius] = @Original_SW_R_Opt_Use_Radius)" +
+                " AND ((@IsNull_SW_CustomPIC = 1 AND [SW_CustomPIC] IS NULL) OR ([SW_CustomPIC] =" +
+                " @Original_SW_CustomPIC)) AND ((@IsNull_SW_P_Opt_Use_Radius = 1 AND [SW_P_Opt_Us" +
+                "e_Radius] IS NULL) OR ([SW_P_Opt_Use_Radius] = @Original_SW_P_Opt_Use_Radius)) A" +
+                "ND ((@IsNull_SW_P_Lock = 1 AND [SW_P_Lock] IS NULL) OR ([SW_P_Lock] = @Original_" +
+                "SW_P_Lock)) AND ((@IsNull_SW_R_Lock = 1 AND [SW_R_Lock] IS NULL) OR ([SW_R_Lock]" +
+                " = @Original_SW_R_Lock)) AND ((@IsNull_SW_IsPublic = 1 AND [SW_IsPublic] IS NULL" +
+                ") OR ([SW_IsPublic] = @Original_SW_IsPublic)));\r\nSELECT Id, SW_Code, SW_TipoDevi" +
+                "ce, SW_Descrizione, SW_Descrizione_EN, SW_Versione, SW_Revisione, SW_Standard, S" +
+                "W_FamProd, SW_P_Opt_RF, SW_P_Opt_Use_Oled, SW_P_Opt_Use_EmButt, SW_P_Opt_Use_Bac" +
+                "klight, SW_P_Opt_ShiftPage, SW_P_Opt_Use_Accel, SW_P_Opt_Use_SP, SW_P_Opt_Use_Bu" +
+                "zzer, SW_P_Opt_Use_Vibracall, SW_P_Opt_Use_LedTorch, SW_P_PLD, SW_P_Opt_MaxPairD" +
+                "evices, SW_R_Opt_RF, SW_R_Opt_Plug_Exp, SW_R_Opt_Plug_Ple, SW_R_Opt_Em_Keyb, SW_" +
+                "R_Opt_Can, SW_R_Opt_Prop_Out, SW_R_Opt_TimeOut, SW_R_Opt_Cont_Keys, SW_R_Opt_Loc" +
+                "kSameRow, SW_R_Opt_Use_SP, SW_R_Opt_MaxPairDevices, SW_R_Opt_ShiftPage, SW_R_Opt" +
+                "_Output_No, SW_R_Opt_Dig_Input_No, SW_R_Opt_Ana_Input_No, SW_Revisioni, SW_Funzi" +
+                "onamento, SW_Config, SW_Obsolete_ver, SW_Obsolete_ver_from_date, SUBSTRING(SW_Co" +
+                "de, 7, 6) AS SW_Order, SW_R_Opt_Use_Radius, SW_CustomPIC, SW_P_Opt_Use_Radius, S" +
+                "W_P_Lock, SW_R_Lock, SW_IsPublic FROM Firmware WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_TipoDevice", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_TipoDevice", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Descrizione", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Descrizione", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Descrizione_EN", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Descrizione_EN", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Versione", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Versione", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Revisione", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Revisione", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Standard", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Standard", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_FamProd", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_FamProd", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_RF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_RF", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_Use_Oled", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_Oled", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_Use_EmButt", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_EmButt", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_Use_Backlight", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_Backlight", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_ShiftPage", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_ShiftPage", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_Use_Accel", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_Accel", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_Use_SP", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_SP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_Use_Buzzer", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_Buzzer", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_Use_Vibracall", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_Vibracall", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_Use_LedTorch", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_LedTorch", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_PLD", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_PLD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_MaxPairDevices", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_MaxPairDevices", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_RF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_RF", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Plug_Exp", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Plug_Exp", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Plug_Ple", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Plug_Ple", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Em_Keyb", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Em_Keyb", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Can", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Can", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Prop_Out", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Prop_Out", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_TimeOut", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_TimeOut", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Cont_Keys", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Cont_Keys", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_LockSameRow", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_LockSameRow", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Use_SP", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Use_SP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_MaxPairDevices", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_MaxPairDevices", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_ShiftPage", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_ShiftPage", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Output_No", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Output_No", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Dig_Input_No", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Dig_Input_No", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Ana_Input_No", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Ana_Input_No", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Revisioni", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Revisioni", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Funzionamento", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Funzionamento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Config", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Config", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Obsolete_ver", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Obsolete_ver", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Obsolete_ver_from_date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Obsolete_ver_from_date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Use_Radius", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Use_Radius", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_CustomPIC", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_CustomPIC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_Use_Radius", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_Radius", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Lock", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Lock", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Lock", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Lock", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_IsPublic", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_IsPublic", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_Code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Code", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_TipoDevice", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_TipoDevice", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_Descrizione", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Descrizione", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_Descrizione", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Descrizione", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_Descrizione_EN", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Descrizione_EN", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_Descrizione_EN", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Descrizione_EN", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_Versione", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Versione", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_Versione", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Versione", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_Revisione", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Revisione", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_Revisione", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Revisione", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_Standard", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Standard", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_FamProd", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_FamProd", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_FamProd", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_FamProd", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_P_Opt_RF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_RF", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_P_Opt_Use_Oled", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_Oled", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_P_Opt_Use_EmButt", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_EmButt", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_P_Opt_Use_Backlight", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_Backlight", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_P_Opt_ShiftPage", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_ShiftPage", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_P_Opt_Use_Accel", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_Accel", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_P_Opt_Use_SP", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_SP", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_P_Opt_Use_Buzzer", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_Buzzer", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_P_Opt_Use_Vibracall", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_Vibracall", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_P_Opt_Use_LedTorch", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_LedTorch", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_P_PLD", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_PLD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_P_Opt_MaxPairDevices", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_MaxPairDevices", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_P_Opt_MaxPairDevices", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_MaxPairDevices", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_R_Opt_RF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_RF", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_R_Opt_Plug_Exp", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Plug_Exp", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_R_Opt_Plug_Ple", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Plug_Ple", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_R_Opt_Em_Keyb", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Em_Keyb", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_R_Opt_Can", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Can", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_R_Opt_Prop_Out", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Prop_Out", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_R_Opt_TimeOut", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_TimeOut", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_R_Opt_Cont_Keys", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Cont_Keys", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_R_Opt_Cont_Keys", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Cont_Keys", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_R_Opt_LockSameRow", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_LockSameRow", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_R_Opt_Use_SP", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Use_SP", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_R_Opt_MaxPairDevices", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_MaxPairDevices", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_R_Opt_MaxPairDevices", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_MaxPairDevices", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_R_Opt_ShiftPage", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_ShiftPage", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_R_Opt_Output_No", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Output_No", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_R_Opt_Output_No", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Output_No", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_R_Opt_Dig_Input_No", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Dig_Input_No", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_R_Opt_Dig_Input_No", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Dig_Input_No", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_R_Opt_Ana_Input_No", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Ana_Input_No", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_R_Opt_Ana_Input_No", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Ana_Input_No", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_Obsolete_ver", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Obsolete_ver", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_Obsolete_ver_from_date", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Obsolete_ver_from_date", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_Obsolete_ver_from_date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Obsolete_ver_from_date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_R_Opt_Use_Radius", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Use_Radius", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_CustomPIC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_CustomPIC", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_CustomPIC", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_CustomPIC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_P_Opt_Use_Radius", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_Radius", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_P_Opt_Use_Radius", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_Radius", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_P_Lock", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Lock", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_P_Lock", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Lock", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_R_Lock", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Lock", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_R_Lock", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Lock", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SW_IsPublic", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_IsPublic", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SW_IsPublic", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_IsPublic", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT        Id, SW_Code, SW_TipoDevice, SW_Descrizione, SW_Descrizione_EN, SW_Versione, SW_Revisione, SW_Standard, SW_FamProd, SW_P_Opt_RF, SW_P_Opt_Use_Oled, SW_P_Opt_Use_EmButt, SW_P_Opt_Use_Backlight, 
+                         SW_P_Opt_ShiftPage, SW_P_Opt_Use_Accel, SW_P_Opt_Use_SP, SW_P_Opt_Use_Buzzer, SW_P_Opt_Use_Vibracall, SW_P_Opt_Use_LedTorch, SW_P_PLD, SW_P_Opt_MaxPairDevices, SW_R_Opt_RF, 
+                         SW_R_Opt_Plug_Exp, SW_R_Opt_Plug_Ple, SW_R_Opt_Em_Keyb, SW_R_Opt_Can, SW_R_Opt_Prop_Out, SW_R_Opt_TimeOut, SW_R_Opt_Cont_Keys, SW_R_Opt_LockSameRow, SW_R_Opt_Use_SP, 
+                         SW_R_Opt_MaxPairDevices, SW_R_Opt_ShiftPage, SW_R_Opt_Output_No, SW_R_Opt_Dig_Input_No, SW_R_Opt_Ana_Input_No, SW_Revisioni, SW_Funzionamento, SW_Config, SW_Obsolete_ver, 
+                         SW_Obsolete_ver_from_date, SUBSTRING(SW_Code, 7, 6) AS SW_Order, SW_R_Opt_Use_Radius, SW_CustomPIC, SW_P_Opt_Use_Radius, SW_P_Lock, SW_R_Lock, SW_IsPublic
+FROM            Firmware
+WHERE        (SW_Obsolete_ver = 1)";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(ds_Programmazione.FW_RevisioniDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual ds_Programmazione.FW_RevisioniDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            ds_Programmazione.FW_RevisioniDataTable dataTable = new ds_Programmazione.FW_RevisioniDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(ds_Programmazione.FW_RevisioniDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(ds_Programmazione dataSet) {
+            return this.Adapter.Update(dataSet, "FW_Revisioni");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(
+                    int Original_Id, 
+                    string Original_SW_Code, 
+                    string Original_SW_TipoDevice, 
+                    string Original_SW_Descrizione, 
+                    string Original_SW_Descrizione_EN, 
+                    string Original_SW_Versione, 
+                    string Original_SW_Revisione, 
+                    bool Original_SW_Standard, 
+                    string Original_SW_FamProd, 
+                    string Original_SW_P_Opt_RF, 
+                    bool Original_SW_P_Opt_Use_Oled, 
+                    bool Original_SW_P_Opt_Use_EmButt, 
+                    bool Original_SW_P_Opt_Use_Backlight, 
+                    bool Original_SW_P_Opt_ShiftPage, 
+                    bool Original_SW_P_Opt_Use_Accel, 
+                    bool Original_SW_P_Opt_Use_SP, 
+                    bool Original_SW_P_Opt_Use_Buzzer, 
+                    bool Original_SW_P_Opt_Use_Vibracall, 
+                    bool Original_SW_P_Opt_Use_LedTorch, 
+                    bool Original_SW_P_PLD, 
+                    global::System.Nullable<int> Original_SW_P_Opt_MaxPairDevices, 
+                    string Original_SW_R_Opt_RF, 
+                    bool Original_SW_R_Opt_Plug_Exp, 
+                    bool Original_SW_R_Opt_Plug_Ple, 
+                    bool Original_SW_R_Opt_Em_Keyb, 
+                    bool Original_SW_R_Opt_Can, 
+                    bool Original_SW_R_Opt_Prop_Out, 
+                    string Original_SW_R_Opt_TimeOut, 
+                    global::System.Nullable<int> Original_SW_R_Opt_Cont_Keys, 
+                    bool Original_SW_R_Opt_LockSameRow, 
+                    bool Original_SW_R_Opt_Use_SP, 
+                    global::System.Nullable<int> Original_SW_R_Opt_MaxPairDevices, 
+                    bool Original_SW_R_Opt_ShiftPage, 
+                    global::System.Nullable<int> Original_SW_R_Opt_Output_No, 
+                    global::System.Nullable<int> Original_SW_R_Opt_Dig_Input_No, 
+                    global::System.Nullable<int> Original_SW_R_Opt_Ana_Input_No, 
+                    bool Original_SW_Obsolete_ver, 
+                    global::System.Nullable<global::System.DateTime> Original_SW_Obsolete_ver_from_date, 
+                    bool Original_SW_R_Opt_Use_Radius, 
+                    global::System.Nullable<bool> Original_SW_CustomPIC, 
+                    global::System.Nullable<bool> Original_SW_P_Opt_Use_Radius, 
+                    global::System.Nullable<int> Original_SW_P_Lock, 
+                    global::System.Nullable<int> Original_SW_R_Lock, 
+                    global::System.Nullable<bool> Original_SW_IsPublic) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
+            if ((Original_SW_Code == null)) {
+                throw new global::System.ArgumentNullException("Original_SW_Code");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_SW_Code));
+            }
+            if ((Original_SW_TipoDevice == null)) {
+                throw new global::System.ArgumentNullException("Original_SW_TipoDevice");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_SW_TipoDevice));
+            }
+            if ((Original_SW_Descrizione == null)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_SW_Descrizione));
+            }
+            if ((Original_SW_Descrizione_EN == null)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_SW_Descrizione_EN));
+            }
+            if ((Original_SW_Versione == null)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_SW_Versione));
+            }
+            if ((Original_SW_Revisione == null)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_SW_Revisione));
+            }
+            this.Adapter.DeleteCommand.Parameters[11].Value = ((bool)(Original_SW_Standard));
+            if ((Original_SW_FamProd == null)) {
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((string)(Original_SW_FamProd));
+            }
+            if ((Original_SW_P_Opt_RF == null)) {
+                throw new global::System.ArgumentNullException("Original_SW_P_Opt_RF");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_SW_P_Opt_RF));
+            }
+            this.Adapter.DeleteCommand.Parameters[15].Value = ((bool)(Original_SW_P_Opt_Use_Oled));
+            this.Adapter.DeleteCommand.Parameters[16].Value = ((bool)(Original_SW_P_Opt_Use_EmButt));
+            this.Adapter.DeleteCommand.Parameters[17].Value = ((bool)(Original_SW_P_Opt_Use_Backlight));
+            this.Adapter.DeleteCommand.Parameters[18].Value = ((bool)(Original_SW_P_Opt_ShiftPage));
+            this.Adapter.DeleteCommand.Parameters[19].Value = ((bool)(Original_SW_P_Opt_Use_Accel));
+            this.Adapter.DeleteCommand.Parameters[20].Value = ((bool)(Original_SW_P_Opt_Use_SP));
+            this.Adapter.DeleteCommand.Parameters[21].Value = ((bool)(Original_SW_P_Opt_Use_Buzzer));
+            this.Adapter.DeleteCommand.Parameters[22].Value = ((bool)(Original_SW_P_Opt_Use_Vibracall));
+            this.Adapter.DeleteCommand.Parameters[23].Value = ((bool)(Original_SW_P_Opt_Use_LedTorch));
+            this.Adapter.DeleteCommand.Parameters[24].Value = ((bool)(Original_SW_P_PLD));
+            if ((Original_SW_P_Opt_MaxPairDevices.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[26].Value = ((int)(Original_SW_P_Opt_MaxPairDevices.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            if ((Original_SW_R_Opt_RF == null)) {
+                throw new global::System.ArgumentNullException("Original_SW_R_Opt_RF");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[27].Value = ((string)(Original_SW_R_Opt_RF));
+            }
+            this.Adapter.DeleteCommand.Parameters[28].Value = ((bool)(Original_SW_R_Opt_Plug_Exp));
+            this.Adapter.DeleteCommand.Parameters[29].Value = ((bool)(Original_SW_R_Opt_Plug_Ple));
+            this.Adapter.DeleteCommand.Parameters[30].Value = ((bool)(Original_SW_R_Opt_Em_Keyb));
+            this.Adapter.DeleteCommand.Parameters[31].Value = ((bool)(Original_SW_R_Opt_Can));
+            this.Adapter.DeleteCommand.Parameters[32].Value = ((bool)(Original_SW_R_Opt_Prop_Out));
+            if ((Original_SW_R_Opt_TimeOut == null)) {
+                throw new global::System.ArgumentNullException("Original_SW_R_Opt_TimeOut");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[33].Value = ((string)(Original_SW_R_Opt_TimeOut));
+            }
+            if ((Original_SW_R_Opt_Cont_Keys.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[34].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[35].Value = ((int)(Original_SW_R_Opt_Cont_Keys.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[34].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[35].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.DeleteCommand.Parameters[36].Value = ((bool)(Original_SW_R_Opt_LockSameRow));
+            this.Adapter.DeleteCommand.Parameters[37].Value = ((bool)(Original_SW_R_Opt_Use_SP));
+            if ((Original_SW_R_Opt_MaxPairDevices.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[38].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[39].Value = ((int)(Original_SW_R_Opt_MaxPairDevices.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[38].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[39].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.DeleteCommand.Parameters[40].Value = ((bool)(Original_SW_R_Opt_ShiftPage));
+            if ((Original_SW_R_Opt_Output_No.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[41].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[42].Value = ((int)(Original_SW_R_Opt_Output_No.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[41].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[42].Value = global::System.DBNull.Value;
+            }
+            if ((Original_SW_R_Opt_Dig_Input_No.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[43].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[44].Value = ((int)(Original_SW_R_Opt_Dig_Input_No.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[43].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[44].Value = global::System.DBNull.Value;
+            }
+            if ((Original_SW_R_Opt_Ana_Input_No.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[45].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[46].Value = ((int)(Original_SW_R_Opt_Ana_Input_No.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[45].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[46].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.DeleteCommand.Parameters[47].Value = ((bool)(Original_SW_Obsolete_ver));
+            if ((Original_SW_Obsolete_ver_from_date.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[48].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[49].Value = ((System.DateTime)(Original_SW_Obsolete_ver_from_date.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[48].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[49].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.DeleteCommand.Parameters[50].Value = ((bool)(Original_SW_R_Opt_Use_Radius));
+            if ((Original_SW_CustomPIC.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[51].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[52].Value = ((bool)(Original_SW_CustomPIC.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[51].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[52].Value = global::System.DBNull.Value;
+            }
+            if ((Original_SW_P_Opt_Use_Radius.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[53].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[54].Value = ((bool)(Original_SW_P_Opt_Use_Radius.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[53].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[54].Value = global::System.DBNull.Value;
+            }
+            if ((Original_SW_P_Lock.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[55].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[56].Value = ((int)(Original_SW_P_Lock.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[55].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[56].Value = global::System.DBNull.Value;
+            }
+            if ((Original_SW_R_Lock.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[57].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[58].Value = ((int)(Original_SW_R_Lock.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[57].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[58].Value = global::System.DBNull.Value;
+            }
+            if ((Original_SW_IsPublic.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[59].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[60].Value = ((bool)(Original_SW_IsPublic.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[59].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[60].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(
+                    string SW_Code, 
+                    string SW_TipoDevice, 
+                    string SW_Descrizione, 
+                    string SW_Descrizione_EN, 
+                    string SW_Versione, 
+                    string SW_Revisione, 
+                    bool SW_Standard, 
+                    string SW_FamProd, 
+                    string SW_P_Opt_RF, 
+                    bool SW_P_Opt_Use_Oled, 
+                    bool SW_P_Opt_Use_EmButt, 
+                    bool SW_P_Opt_Use_Backlight, 
+                    bool SW_P_Opt_ShiftPage, 
+                    bool SW_P_Opt_Use_Accel, 
+                    bool SW_P_Opt_Use_SP, 
+                    bool SW_P_Opt_Use_Buzzer, 
+                    bool SW_P_Opt_Use_Vibracall, 
+                    bool SW_P_Opt_Use_LedTorch, 
+                    bool SW_P_PLD, 
+                    global::System.Nullable<int> SW_P_Opt_MaxPairDevices, 
+                    string SW_R_Opt_RF, 
+                    bool SW_R_Opt_Plug_Exp, 
+                    bool SW_R_Opt_Plug_Ple, 
+                    bool SW_R_Opt_Em_Keyb, 
+                    bool SW_R_Opt_Can, 
+                    bool SW_R_Opt_Prop_Out, 
+                    string SW_R_Opt_TimeOut, 
+                    global::System.Nullable<int> SW_R_Opt_Cont_Keys, 
+                    bool SW_R_Opt_LockSameRow, 
+                    bool SW_R_Opt_Use_SP, 
+                    global::System.Nullable<int> SW_R_Opt_MaxPairDevices, 
+                    bool SW_R_Opt_ShiftPage, 
+                    global::System.Nullable<int> SW_R_Opt_Output_No, 
+                    global::System.Nullable<int> SW_R_Opt_Dig_Input_No, 
+                    global::System.Nullable<int> SW_R_Opt_Ana_Input_No, 
+                    string SW_Revisioni, 
+                    string SW_Funzionamento, 
+                    string SW_Config, 
+                    bool SW_Obsolete_ver, 
+                    global::System.Nullable<global::System.DateTime> SW_Obsolete_ver_from_date, 
+                    bool SW_R_Opt_Use_Radius, 
+                    global::System.Nullable<bool> SW_CustomPIC, 
+                    global::System.Nullable<bool> SW_P_Opt_Use_Radius, 
+                    global::System.Nullable<int> SW_P_Lock, 
+                    global::System.Nullable<int> SW_R_Lock, 
+                    global::System.Nullable<bool> SW_IsPublic) {
+            if ((SW_Code == null)) {
+                throw new global::System.ArgumentNullException("SW_Code");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(SW_Code));
+            }
+            if ((SW_TipoDevice == null)) {
+                throw new global::System.ArgumentNullException("SW_TipoDevice");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(SW_TipoDevice));
+            }
+            if ((SW_Descrizione == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(SW_Descrizione));
+            }
+            if ((SW_Descrizione_EN == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(SW_Descrizione_EN));
+            }
+            if ((SW_Versione == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(SW_Versione));
+            }
+            if ((SW_Revisione == null)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(SW_Revisione));
+            }
+            this.Adapter.InsertCommand.Parameters[6].Value = ((bool)(SW_Standard));
+            if ((SW_FamProd == null)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(SW_FamProd));
+            }
+            if ((SW_P_Opt_RF == null)) {
+                throw new global::System.ArgumentNullException("SW_P_Opt_RF");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(SW_P_Opt_RF));
+            }
+            this.Adapter.InsertCommand.Parameters[9].Value = ((bool)(SW_P_Opt_Use_Oled));
+            this.Adapter.InsertCommand.Parameters[10].Value = ((bool)(SW_P_Opt_Use_EmButt));
+            this.Adapter.InsertCommand.Parameters[11].Value = ((bool)(SW_P_Opt_Use_Backlight));
+            this.Adapter.InsertCommand.Parameters[12].Value = ((bool)(SW_P_Opt_ShiftPage));
+            this.Adapter.InsertCommand.Parameters[13].Value = ((bool)(SW_P_Opt_Use_Accel));
+            this.Adapter.InsertCommand.Parameters[14].Value = ((bool)(SW_P_Opt_Use_SP));
+            this.Adapter.InsertCommand.Parameters[15].Value = ((bool)(SW_P_Opt_Use_Buzzer));
+            this.Adapter.InsertCommand.Parameters[16].Value = ((bool)(SW_P_Opt_Use_Vibracall));
+            this.Adapter.InsertCommand.Parameters[17].Value = ((bool)(SW_P_Opt_Use_LedTorch));
+            this.Adapter.InsertCommand.Parameters[18].Value = ((bool)(SW_P_PLD));
+            if ((SW_P_Opt_MaxPairDevices.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[19].Value = ((int)(SW_P_Opt_MaxPairDevices.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            if ((SW_R_Opt_RF == null)) {
+                throw new global::System.ArgumentNullException("SW_R_Opt_RF");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[20].Value = ((string)(SW_R_Opt_RF));
+            }
+            this.Adapter.InsertCommand.Parameters[21].Value = ((bool)(SW_R_Opt_Plug_Exp));
+            this.Adapter.InsertCommand.Parameters[22].Value = ((bool)(SW_R_Opt_Plug_Ple));
+            this.Adapter.InsertCommand.Parameters[23].Value = ((bool)(SW_R_Opt_Em_Keyb));
+            this.Adapter.InsertCommand.Parameters[24].Value = ((bool)(SW_R_Opt_Can));
+            this.Adapter.InsertCommand.Parameters[25].Value = ((bool)(SW_R_Opt_Prop_Out));
+            if ((SW_R_Opt_TimeOut == null)) {
+                throw new global::System.ArgumentNullException("SW_R_Opt_TimeOut");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[26].Value = ((string)(SW_R_Opt_TimeOut));
+            }
+            if ((SW_R_Opt_Cont_Keys.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[27].Value = ((int)(SW_R_Opt_Cont_Keys.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[27].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.InsertCommand.Parameters[28].Value = ((bool)(SW_R_Opt_LockSameRow));
+            this.Adapter.InsertCommand.Parameters[29].Value = ((bool)(SW_R_Opt_Use_SP));
+            if ((SW_R_Opt_MaxPairDevices.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[30].Value = ((int)(SW_R_Opt_MaxPairDevices.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[30].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.InsertCommand.Parameters[31].Value = ((bool)(SW_R_Opt_ShiftPage));
+            if ((SW_R_Opt_Output_No.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[32].Value = ((int)(SW_R_Opt_Output_No.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            if ((SW_R_Opt_Dig_Input_No.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[33].Value = ((int)(SW_R_Opt_Dig_Input_No.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[33].Value = global::System.DBNull.Value;
+            }
+            if ((SW_R_Opt_Ana_Input_No.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[34].Value = ((int)(SW_R_Opt_Ana_Input_No.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[34].Value = global::System.DBNull.Value;
+            }
+            if ((SW_Revisioni == null)) {
+                this.Adapter.InsertCommand.Parameters[35].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[35].Value = ((string)(SW_Revisioni));
+            }
+            if ((SW_Funzionamento == null)) {
+                this.Adapter.InsertCommand.Parameters[36].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[36].Value = ((string)(SW_Funzionamento));
+            }
+            if ((SW_Config == null)) {
+                this.Adapter.InsertCommand.Parameters[37].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[37].Value = ((string)(SW_Config));
+            }
+            this.Adapter.InsertCommand.Parameters[38].Value = ((bool)(SW_Obsolete_ver));
+            if ((SW_Obsolete_ver_from_date.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[39].Value = ((System.DateTime)(SW_Obsolete_ver_from_date.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[39].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.InsertCommand.Parameters[40].Value = ((bool)(SW_R_Opt_Use_Radius));
+            if ((SW_CustomPIC.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[41].Value = ((bool)(SW_CustomPIC.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[41].Value = global::System.DBNull.Value;
+            }
+            if ((SW_P_Opt_Use_Radius.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[42].Value = ((bool)(SW_P_Opt_Use_Radius.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[42].Value = global::System.DBNull.Value;
+            }
+            if ((SW_P_Lock.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[43].Value = ((int)(SW_P_Lock.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[43].Value = global::System.DBNull.Value;
+            }
+            if ((SW_R_Lock.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[44].Value = ((int)(SW_R_Lock.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[44].Value = global::System.DBNull.Value;
+            }
+            if ((SW_IsPublic.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[45].Value = ((bool)(SW_IsPublic.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[45].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    string SW_Code, 
+                    string SW_TipoDevice, 
+                    string SW_Descrizione, 
+                    string SW_Descrizione_EN, 
+                    string SW_Versione, 
+                    string SW_Revisione, 
+                    bool SW_Standard, 
+                    string SW_FamProd, 
+                    string SW_P_Opt_RF, 
+                    bool SW_P_Opt_Use_Oled, 
+                    bool SW_P_Opt_Use_EmButt, 
+                    bool SW_P_Opt_Use_Backlight, 
+                    bool SW_P_Opt_ShiftPage, 
+                    bool SW_P_Opt_Use_Accel, 
+                    bool SW_P_Opt_Use_SP, 
+                    bool SW_P_Opt_Use_Buzzer, 
+                    bool SW_P_Opt_Use_Vibracall, 
+                    bool SW_P_Opt_Use_LedTorch, 
+                    bool SW_P_PLD, 
+                    global::System.Nullable<int> SW_P_Opt_MaxPairDevices, 
+                    string SW_R_Opt_RF, 
+                    bool SW_R_Opt_Plug_Exp, 
+                    bool SW_R_Opt_Plug_Ple, 
+                    bool SW_R_Opt_Em_Keyb, 
+                    bool SW_R_Opt_Can, 
+                    bool SW_R_Opt_Prop_Out, 
+                    string SW_R_Opt_TimeOut, 
+                    global::System.Nullable<int> SW_R_Opt_Cont_Keys, 
+                    bool SW_R_Opt_LockSameRow, 
+                    bool SW_R_Opt_Use_SP, 
+                    global::System.Nullable<int> SW_R_Opt_MaxPairDevices, 
+                    bool SW_R_Opt_ShiftPage, 
+                    global::System.Nullable<int> SW_R_Opt_Output_No, 
+                    global::System.Nullable<int> SW_R_Opt_Dig_Input_No, 
+                    global::System.Nullable<int> SW_R_Opt_Ana_Input_No, 
+                    string SW_Revisioni, 
+                    string SW_Funzionamento, 
+                    string SW_Config, 
+                    bool SW_Obsolete_ver, 
+                    global::System.Nullable<global::System.DateTime> SW_Obsolete_ver_from_date, 
+                    bool SW_R_Opt_Use_Radius, 
+                    global::System.Nullable<bool> SW_CustomPIC, 
+                    global::System.Nullable<bool> SW_P_Opt_Use_Radius, 
+                    global::System.Nullable<int> SW_P_Lock, 
+                    global::System.Nullable<int> SW_R_Lock, 
+                    global::System.Nullable<bool> SW_IsPublic, 
+                    int Original_Id, 
+                    string Original_SW_Code, 
+                    string Original_SW_TipoDevice, 
+                    string Original_SW_Descrizione, 
+                    string Original_SW_Descrizione_EN, 
+                    string Original_SW_Versione, 
+                    string Original_SW_Revisione, 
+                    bool Original_SW_Standard, 
+                    string Original_SW_FamProd, 
+                    string Original_SW_P_Opt_RF, 
+                    bool Original_SW_P_Opt_Use_Oled, 
+                    bool Original_SW_P_Opt_Use_EmButt, 
+                    bool Original_SW_P_Opt_Use_Backlight, 
+                    bool Original_SW_P_Opt_ShiftPage, 
+                    bool Original_SW_P_Opt_Use_Accel, 
+                    bool Original_SW_P_Opt_Use_SP, 
+                    bool Original_SW_P_Opt_Use_Buzzer, 
+                    bool Original_SW_P_Opt_Use_Vibracall, 
+                    bool Original_SW_P_Opt_Use_LedTorch, 
+                    bool Original_SW_P_PLD, 
+                    global::System.Nullable<int> Original_SW_P_Opt_MaxPairDevices, 
+                    string Original_SW_R_Opt_RF, 
+                    bool Original_SW_R_Opt_Plug_Exp, 
+                    bool Original_SW_R_Opt_Plug_Ple, 
+                    bool Original_SW_R_Opt_Em_Keyb, 
+                    bool Original_SW_R_Opt_Can, 
+                    bool Original_SW_R_Opt_Prop_Out, 
+                    string Original_SW_R_Opt_TimeOut, 
+                    global::System.Nullable<int> Original_SW_R_Opt_Cont_Keys, 
+                    bool Original_SW_R_Opt_LockSameRow, 
+                    bool Original_SW_R_Opt_Use_SP, 
+                    global::System.Nullable<int> Original_SW_R_Opt_MaxPairDevices, 
+                    bool Original_SW_R_Opt_ShiftPage, 
+                    global::System.Nullable<int> Original_SW_R_Opt_Output_No, 
+                    global::System.Nullable<int> Original_SW_R_Opt_Dig_Input_No, 
+                    global::System.Nullable<int> Original_SW_R_Opt_Ana_Input_No, 
+                    bool Original_SW_Obsolete_ver, 
+                    global::System.Nullable<global::System.DateTime> Original_SW_Obsolete_ver_from_date, 
+                    bool Original_SW_R_Opt_Use_Radius, 
+                    global::System.Nullable<bool> Original_SW_CustomPIC, 
+                    global::System.Nullable<bool> Original_SW_P_Opt_Use_Radius, 
+                    global::System.Nullable<int> Original_SW_P_Lock, 
+                    global::System.Nullable<int> Original_SW_R_Lock, 
+                    global::System.Nullable<bool> Original_SW_IsPublic, 
+                    int Id) {
+            if ((SW_Code == null)) {
+                throw new global::System.ArgumentNullException("SW_Code");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(SW_Code));
+            }
+            if ((SW_TipoDevice == null)) {
+                throw new global::System.ArgumentNullException("SW_TipoDevice");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(SW_TipoDevice));
+            }
+            if ((SW_Descrizione == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(SW_Descrizione));
+            }
+            if ((SW_Descrizione_EN == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(SW_Descrizione_EN));
+            }
+            if ((SW_Versione == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(SW_Versione));
+            }
+            if ((SW_Revisione == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(SW_Revisione));
+            }
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((bool)(SW_Standard));
+            if ((SW_FamProd == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(SW_FamProd));
+            }
+            if ((SW_P_Opt_RF == null)) {
+                throw new global::System.ArgumentNullException("SW_P_Opt_RF");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(SW_P_Opt_RF));
+            }
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((bool)(SW_P_Opt_Use_Oled));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((bool)(SW_P_Opt_Use_EmButt));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((bool)(SW_P_Opt_Use_Backlight));
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((bool)(SW_P_Opt_ShiftPage));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((bool)(SW_P_Opt_Use_Accel));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((bool)(SW_P_Opt_Use_SP));
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((bool)(SW_P_Opt_Use_Buzzer));
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((bool)(SW_P_Opt_Use_Vibracall));
+            this.Adapter.UpdateCommand.Parameters[17].Value = ((bool)(SW_P_Opt_Use_LedTorch));
+            this.Adapter.UpdateCommand.Parameters[18].Value = ((bool)(SW_P_PLD));
+            if ((SW_P_Opt_MaxPairDevices.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(SW_P_Opt_MaxPairDevices.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            if ((SW_R_Opt_RF == null)) {
+                throw new global::System.ArgumentNullException("SW_R_Opt_RF");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(SW_R_Opt_RF));
+            }
+            this.Adapter.UpdateCommand.Parameters[21].Value = ((bool)(SW_R_Opt_Plug_Exp));
+            this.Adapter.UpdateCommand.Parameters[22].Value = ((bool)(SW_R_Opt_Plug_Ple));
+            this.Adapter.UpdateCommand.Parameters[23].Value = ((bool)(SW_R_Opt_Em_Keyb));
+            this.Adapter.UpdateCommand.Parameters[24].Value = ((bool)(SW_R_Opt_Can));
+            this.Adapter.UpdateCommand.Parameters[25].Value = ((bool)(SW_R_Opt_Prop_Out));
+            if ((SW_R_Opt_TimeOut == null)) {
+                throw new global::System.ArgumentNullException("SW_R_Opt_TimeOut");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(SW_R_Opt_TimeOut));
+            }
+            if ((SW_R_Opt_Cont_Keys.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((int)(SW_R_Opt_Cont_Keys.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[28].Value = ((bool)(SW_R_Opt_LockSameRow));
+            this.Adapter.UpdateCommand.Parameters[29].Value = ((bool)(SW_R_Opt_Use_SP));
+            if ((SW_R_Opt_MaxPairDevices.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(SW_R_Opt_MaxPairDevices.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[31].Value = ((bool)(SW_R_Opt_ShiftPage));
+            if ((SW_R_Opt_Output_No.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((int)(SW_R_Opt_Output_No.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            if ((SW_R_Opt_Dig_Input_No.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((int)(SW_R_Opt_Dig_Input_No.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
+            }
+            if ((SW_R_Opt_Ana_Input_No.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((int)(SW_R_Opt_Ana_Input_No.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
+            }
+            if ((SW_Revisioni == null)) {
+                this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((string)(SW_Revisioni));
+            }
+            if ((SW_Funzionamento == null)) {
+                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((string)(SW_Funzionamento));
+            }
+            if ((SW_Config == null)) {
+                this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((string)(SW_Config));
+            }
+            this.Adapter.UpdateCommand.Parameters[38].Value = ((bool)(SW_Obsolete_ver));
+            if ((SW_Obsolete_ver_from_date.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((System.DateTime)(SW_Obsolete_ver_from_date.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[40].Value = ((bool)(SW_R_Opt_Use_Radius));
+            if ((SW_CustomPIC.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((bool)(SW_CustomPIC.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[41].Value = global::System.DBNull.Value;
+            }
+            if ((SW_P_Opt_Use_Radius.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((bool)(SW_P_Opt_Use_Radius.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[42].Value = global::System.DBNull.Value;
+            }
+            if ((SW_P_Lock.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((int)(SW_P_Lock.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[43].Value = global::System.DBNull.Value;
+            }
+            if ((SW_R_Lock.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((int)(SW_R_Lock.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[44].Value = global::System.DBNull.Value;
+            }
+            if ((SW_IsPublic.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((bool)(SW_IsPublic.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[45].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[46].Value = ((int)(Original_Id));
+            if ((Original_SW_Code == null)) {
+                throw new global::System.ArgumentNullException("Original_SW_Code");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((string)(Original_SW_Code));
+            }
+            if ((Original_SW_TipoDevice == null)) {
+                throw new global::System.ArgumentNullException("Original_SW_TipoDevice");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((string)(Original_SW_TipoDevice));
+            }
+            if ((Original_SW_Descrizione == null)) {
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[50].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[50].Value = ((string)(Original_SW_Descrizione));
+            }
+            if ((Original_SW_Descrizione_EN == null)) {
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[52].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[52].Value = ((string)(Original_SW_Descrizione_EN));
+            }
+            if ((Original_SW_Versione == null)) {
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[54].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[54].Value = ((string)(Original_SW_Versione));
+            }
+            if ((Original_SW_Revisione == null)) {
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[56].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[56].Value = ((string)(Original_SW_Revisione));
+            }
+            this.Adapter.UpdateCommand.Parameters[57].Value = ((bool)(Original_SW_Standard));
+            if ((Original_SW_FamProd == null)) {
+                this.Adapter.UpdateCommand.Parameters[58].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[59].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[58].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[59].Value = ((string)(Original_SW_FamProd));
+            }
+            if ((Original_SW_P_Opt_RF == null)) {
+                throw new global::System.ArgumentNullException("Original_SW_P_Opt_RF");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[60].Value = ((string)(Original_SW_P_Opt_RF));
+            }
+            this.Adapter.UpdateCommand.Parameters[61].Value = ((bool)(Original_SW_P_Opt_Use_Oled));
+            this.Adapter.UpdateCommand.Parameters[62].Value = ((bool)(Original_SW_P_Opt_Use_EmButt));
+            this.Adapter.UpdateCommand.Parameters[63].Value = ((bool)(Original_SW_P_Opt_Use_Backlight));
+            this.Adapter.UpdateCommand.Parameters[64].Value = ((bool)(Original_SW_P_Opt_ShiftPage));
+            this.Adapter.UpdateCommand.Parameters[65].Value = ((bool)(Original_SW_P_Opt_Use_Accel));
+            this.Adapter.UpdateCommand.Parameters[66].Value = ((bool)(Original_SW_P_Opt_Use_SP));
+            this.Adapter.UpdateCommand.Parameters[67].Value = ((bool)(Original_SW_P_Opt_Use_Buzzer));
+            this.Adapter.UpdateCommand.Parameters[68].Value = ((bool)(Original_SW_P_Opt_Use_Vibracall));
+            this.Adapter.UpdateCommand.Parameters[69].Value = ((bool)(Original_SW_P_Opt_Use_LedTorch));
+            this.Adapter.UpdateCommand.Parameters[70].Value = ((bool)(Original_SW_P_PLD));
+            if ((Original_SW_P_Opt_MaxPairDevices.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[71].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[72].Value = ((int)(Original_SW_P_Opt_MaxPairDevices.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[71].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[72].Value = global::System.DBNull.Value;
+            }
+            if ((Original_SW_R_Opt_RF == null)) {
+                throw new global::System.ArgumentNullException("Original_SW_R_Opt_RF");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[73].Value = ((string)(Original_SW_R_Opt_RF));
+            }
+            this.Adapter.UpdateCommand.Parameters[74].Value = ((bool)(Original_SW_R_Opt_Plug_Exp));
+            this.Adapter.UpdateCommand.Parameters[75].Value = ((bool)(Original_SW_R_Opt_Plug_Ple));
+            this.Adapter.UpdateCommand.Parameters[76].Value = ((bool)(Original_SW_R_Opt_Em_Keyb));
+            this.Adapter.UpdateCommand.Parameters[77].Value = ((bool)(Original_SW_R_Opt_Can));
+            this.Adapter.UpdateCommand.Parameters[78].Value = ((bool)(Original_SW_R_Opt_Prop_Out));
+            if ((Original_SW_R_Opt_TimeOut == null)) {
+                throw new global::System.ArgumentNullException("Original_SW_R_Opt_TimeOut");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[79].Value = ((string)(Original_SW_R_Opt_TimeOut));
+            }
+            if ((Original_SW_R_Opt_Cont_Keys.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[80].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[81].Value = ((int)(Original_SW_R_Opt_Cont_Keys.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[80].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[81].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[82].Value = ((bool)(Original_SW_R_Opt_LockSameRow));
+            this.Adapter.UpdateCommand.Parameters[83].Value = ((bool)(Original_SW_R_Opt_Use_SP));
+            if ((Original_SW_R_Opt_MaxPairDevices.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[84].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[85].Value = ((int)(Original_SW_R_Opt_MaxPairDevices.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[84].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[85].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[86].Value = ((bool)(Original_SW_R_Opt_ShiftPage));
+            if ((Original_SW_R_Opt_Output_No.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[87].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[88].Value = ((int)(Original_SW_R_Opt_Output_No.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[87].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[88].Value = global::System.DBNull.Value;
+            }
+            if ((Original_SW_R_Opt_Dig_Input_No.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[89].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[90].Value = ((int)(Original_SW_R_Opt_Dig_Input_No.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[89].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[90].Value = global::System.DBNull.Value;
+            }
+            if ((Original_SW_R_Opt_Ana_Input_No.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[91].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[92].Value = ((int)(Original_SW_R_Opt_Ana_Input_No.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[91].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[92].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[93].Value = ((bool)(Original_SW_Obsolete_ver));
+            if ((Original_SW_Obsolete_ver_from_date.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[94].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[95].Value = ((System.DateTime)(Original_SW_Obsolete_ver_from_date.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[94].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[95].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[96].Value = ((bool)(Original_SW_R_Opt_Use_Radius));
+            if ((Original_SW_CustomPIC.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[97].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[98].Value = ((bool)(Original_SW_CustomPIC.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[97].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[98].Value = global::System.DBNull.Value;
+            }
+            if ((Original_SW_P_Opt_Use_Radius.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[99].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[100].Value = ((bool)(Original_SW_P_Opt_Use_Radius.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[99].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[100].Value = global::System.DBNull.Value;
+            }
+            if ((Original_SW_P_Lock.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[101].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[102].Value = ((int)(Original_SW_P_Lock.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[101].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[102].Value = global::System.DBNull.Value;
+            }
+            if ((Original_SW_R_Lock.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[103].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[104].Value = ((int)(Original_SW_R_Lock.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[103].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[104].Value = global::System.DBNull.Value;
+            }
+            if ((Original_SW_IsPublic.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[105].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[106].Value = ((bool)(Original_SW_IsPublic.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[105].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[106].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[107].Value = ((int)(Id));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    string SW_Code, 
+                    string SW_TipoDevice, 
+                    string SW_Descrizione, 
+                    string SW_Descrizione_EN, 
+                    string SW_Versione, 
+                    string SW_Revisione, 
+                    bool SW_Standard, 
+                    string SW_FamProd, 
+                    string SW_P_Opt_RF, 
+                    bool SW_P_Opt_Use_Oled, 
+                    bool SW_P_Opt_Use_EmButt, 
+                    bool SW_P_Opt_Use_Backlight, 
+                    bool SW_P_Opt_ShiftPage, 
+                    bool SW_P_Opt_Use_Accel, 
+                    bool SW_P_Opt_Use_SP, 
+                    bool SW_P_Opt_Use_Buzzer, 
+                    bool SW_P_Opt_Use_Vibracall, 
+                    bool SW_P_Opt_Use_LedTorch, 
+                    bool SW_P_PLD, 
+                    global::System.Nullable<int> SW_P_Opt_MaxPairDevices, 
+                    string SW_R_Opt_RF, 
+                    bool SW_R_Opt_Plug_Exp, 
+                    bool SW_R_Opt_Plug_Ple, 
+                    bool SW_R_Opt_Em_Keyb, 
+                    bool SW_R_Opt_Can, 
+                    bool SW_R_Opt_Prop_Out, 
+                    string SW_R_Opt_TimeOut, 
+                    global::System.Nullable<int> SW_R_Opt_Cont_Keys, 
+                    bool SW_R_Opt_LockSameRow, 
+                    bool SW_R_Opt_Use_SP, 
+                    global::System.Nullable<int> SW_R_Opt_MaxPairDevices, 
+                    bool SW_R_Opt_ShiftPage, 
+                    global::System.Nullable<int> SW_R_Opt_Output_No, 
+                    global::System.Nullable<int> SW_R_Opt_Dig_Input_No, 
+                    global::System.Nullable<int> SW_R_Opt_Ana_Input_No, 
+                    string SW_Revisioni, 
+                    string SW_Funzionamento, 
+                    string SW_Config, 
+                    bool SW_Obsolete_ver, 
+                    global::System.Nullable<global::System.DateTime> SW_Obsolete_ver_from_date, 
+                    bool SW_R_Opt_Use_Radius, 
+                    global::System.Nullable<bool> SW_CustomPIC, 
+                    global::System.Nullable<bool> SW_P_Opt_Use_Radius, 
+                    global::System.Nullable<int> SW_P_Lock, 
+                    global::System.Nullable<int> SW_R_Lock, 
+                    global::System.Nullable<bool> SW_IsPublic, 
+                    int Original_Id, 
+                    string Original_SW_Code, 
+                    string Original_SW_TipoDevice, 
+                    string Original_SW_Descrizione, 
+                    string Original_SW_Descrizione_EN, 
+                    string Original_SW_Versione, 
+                    string Original_SW_Revisione, 
+                    bool Original_SW_Standard, 
+                    string Original_SW_FamProd, 
+                    string Original_SW_P_Opt_RF, 
+                    bool Original_SW_P_Opt_Use_Oled, 
+                    bool Original_SW_P_Opt_Use_EmButt, 
+                    bool Original_SW_P_Opt_Use_Backlight, 
+                    bool Original_SW_P_Opt_ShiftPage, 
+                    bool Original_SW_P_Opt_Use_Accel, 
+                    bool Original_SW_P_Opt_Use_SP, 
+                    bool Original_SW_P_Opt_Use_Buzzer, 
+                    bool Original_SW_P_Opt_Use_Vibracall, 
+                    bool Original_SW_P_Opt_Use_LedTorch, 
+                    bool Original_SW_P_PLD, 
+                    global::System.Nullable<int> Original_SW_P_Opt_MaxPairDevices, 
+                    string Original_SW_R_Opt_RF, 
+                    bool Original_SW_R_Opt_Plug_Exp, 
+                    bool Original_SW_R_Opt_Plug_Ple, 
+                    bool Original_SW_R_Opt_Em_Keyb, 
+                    bool Original_SW_R_Opt_Can, 
+                    bool Original_SW_R_Opt_Prop_Out, 
+                    string Original_SW_R_Opt_TimeOut, 
+                    global::System.Nullable<int> Original_SW_R_Opt_Cont_Keys, 
+                    bool Original_SW_R_Opt_LockSameRow, 
+                    bool Original_SW_R_Opt_Use_SP, 
+                    global::System.Nullable<int> Original_SW_R_Opt_MaxPairDevices, 
+                    bool Original_SW_R_Opt_ShiftPage, 
+                    global::System.Nullable<int> Original_SW_R_Opt_Output_No, 
+                    global::System.Nullable<int> Original_SW_R_Opt_Dig_Input_No, 
+                    global::System.Nullable<int> Original_SW_R_Opt_Ana_Input_No, 
+                    bool Original_SW_Obsolete_ver, 
+                    global::System.Nullable<global::System.DateTime> Original_SW_Obsolete_ver_from_date, 
+                    bool Original_SW_R_Opt_Use_Radius, 
+                    global::System.Nullable<bool> Original_SW_CustomPIC, 
+                    global::System.Nullable<bool> Original_SW_P_Opt_Use_Radius, 
+                    global::System.Nullable<int> Original_SW_P_Lock, 
+                    global::System.Nullable<int> Original_SW_R_Lock, 
+                    global::System.Nullable<bool> Original_SW_IsPublic) {
+            return this.Update(SW_Code, SW_TipoDevice, SW_Descrizione, SW_Descrizione_EN, SW_Versione, SW_Revisione, SW_Standard, SW_FamProd, SW_P_Opt_RF, SW_P_Opt_Use_Oled, SW_P_Opt_Use_EmButt, SW_P_Opt_Use_Backlight, SW_P_Opt_ShiftPage, SW_P_Opt_Use_Accel, SW_P_Opt_Use_SP, SW_P_Opt_Use_Buzzer, SW_P_Opt_Use_Vibracall, SW_P_Opt_Use_LedTorch, SW_P_PLD, SW_P_Opt_MaxPairDevices, SW_R_Opt_RF, SW_R_Opt_Plug_Exp, SW_R_Opt_Plug_Ple, SW_R_Opt_Em_Keyb, SW_R_Opt_Can, SW_R_Opt_Prop_Out, SW_R_Opt_TimeOut, SW_R_Opt_Cont_Keys, SW_R_Opt_LockSameRow, SW_R_Opt_Use_SP, SW_R_Opt_MaxPairDevices, SW_R_Opt_ShiftPage, SW_R_Opt_Output_No, SW_R_Opt_Dig_Input_No, SW_R_Opt_Ana_Input_No, SW_Revisioni, SW_Funzionamento, SW_Config, SW_Obsolete_ver, SW_Obsolete_ver_from_date, SW_R_Opt_Use_Radius, SW_CustomPIC, SW_P_Opt_Use_Radius, SW_P_Lock, SW_R_Lock, SW_IsPublic, Original_Id, Original_SW_Code, Original_SW_TipoDevice, Original_SW_Descrizione, Original_SW_Descrizione_EN, Original_SW_Versione, Original_SW_Revisione, Original_SW_Standard, Original_SW_FamProd, Original_SW_P_Opt_RF, Original_SW_P_Opt_Use_Oled, Original_SW_P_Opt_Use_EmButt, Original_SW_P_Opt_Use_Backlight, Original_SW_P_Opt_ShiftPage, Original_SW_P_Opt_Use_Accel, Original_SW_P_Opt_Use_SP, Original_SW_P_Opt_Use_Buzzer, Original_SW_P_Opt_Use_Vibracall, Original_SW_P_Opt_Use_LedTorch, Original_SW_P_PLD, Original_SW_P_Opt_MaxPairDevices, Original_SW_R_Opt_RF, Original_SW_R_Opt_Plug_Exp, Original_SW_R_Opt_Plug_Ple, Original_SW_R_Opt_Em_Keyb, Original_SW_R_Opt_Can, Original_SW_R_Opt_Prop_Out, Original_SW_R_Opt_TimeOut, Original_SW_R_Opt_Cont_Keys, Original_SW_R_Opt_LockSameRow, Original_SW_R_Opt_Use_SP, Original_SW_R_Opt_MaxPairDevices, Original_SW_R_Opt_ShiftPage, Original_SW_R_Opt_Output_No, Original_SW_R_Opt_Dig_Input_No, Original_SW_R_Opt_Ana_Input_No, Original_SW_Obsolete_ver, Original_SW_Obsolete_ver_from_date, Original_SW_R_Opt_Use_Radius, Original_SW_CustomPIC, Original_SW_P_Opt_Use_Radius, Original_SW_P_Lock, Original_SW_R_Lock, Original_SW_IsPublic, Original_Id);
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -19691,6 +23368,8 @@ SELECT Id, Fam_Prefix, Fam_Name, Fam_Label, Fam_Tipo, Fam_IsDevice, Fam_ToCommes
         private SafetyPointRFIDTableAdapter _safetyPointRFIDTableAdapter;
         
         private Fam_ProdTableAdapter _fam_ProdTableAdapter;
+        
+        private FW_RevisioniTableAdapter _fW_RevisioniTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -19807,6 +23486,20 @@ SELECT Id, Fam_Prefix, Fam_Name, Fam_Label, Fam_Tipo, Fam_IsDevice, Fam_ToCommes
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public FW_RevisioniTableAdapter FW_RevisioniTableAdapter {
+            get {
+                return this._fW_RevisioniTableAdapter;
+            }
+            set {
+                this._fW_RevisioniTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -19852,6 +23545,10 @@ SELECT Id, Fam_Prefix, Fam_Name, Fam_Label, Fam_Tipo, Fam_IsDevice, Fam_ToCommes
                             && (this._fam_ProdTableAdapter.Connection != null))) {
                     return this._fam_ProdTableAdapter.Connection;
                 }
+                if (((this._fW_RevisioniTableAdapter != null) 
+                            && (this._fW_RevisioniTableAdapter.Connection != null))) {
+                    return this._fW_RevisioniTableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -19884,6 +23581,9 @@ SELECT Id, Fam_Prefix, Fam_Name, Fam_Label, Fam_Tipo, Fam_IsDevice, Fam_ToCommes
                     count = (count + 1);
                 }
                 if ((this._fam_ProdTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._fW_RevisioniTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -19960,6 +23660,15 @@ SELECT Id, Fam_Prefix, Fam_Name, Fam_Label, Fam_Tipo, Fam_IsDevice, Fam_ToCommes
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._fW_RevisioniTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.FW_Revisioni.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._fW_RevisioniTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -20026,6 +23735,14 @@ SELECT Id, Fam_Prefix, Fam_Name, Fam_Label, Fam_Tipo, Fam_IsDevice, Fam_ToCommes
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._fW_RevisioniTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.FW_Revisioni.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._fW_RevisioniTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -20036,6 +23753,14 @@ SELECT Id, Fam_Prefix, Fam_Name, Fam_Label, Fam_Tipo, Fam_IsDevice, Fam_ToCommes
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateDeletedRows(ds_Programmazione dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._fW_RevisioniTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.FW_Revisioni.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._fW_RevisioniTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._fam_ProdTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Fam_Prod.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -20166,6 +23891,11 @@ SELECT Id, Fam_Prefix, Fam_Name, Fam_Label, Fam_Tipo, Fam_IsDevice, Fam_ToCommes
                 throw new global::System.ArgumentException("Tutti gli oggetti TableAdapter gestiti da TableAdapterManager devono utilizzare l" +
                         "a stessa stringa di connessione.");
             }
+            if (((this._fW_RevisioniTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._fW_RevisioniTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("Tutti gli oggetti TableAdapter gestiti da TableAdapterManager devono utilizzare l" +
+                        "a stessa stringa di connessione.");
+            }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
                 throw new global::System.ApplicationException("TableAdapterManager non contiene informazioni di connessione. Impostare la propri" +
@@ -20262,6 +23992,15 @@ SELECT Id, Fam_Prefix, Fam_Name, Fam_Label, Fam_Tipo, Fam_IsDevice, Fam_ToCommes
                         adaptersWithAcceptChangesDuringUpdate.Add(this._fam_ProdTableAdapter.Adapter);
                     }
                 }
+                if ((this._fW_RevisioniTableAdapter != null)) {
+                    revertConnections.Add(this._fW_RevisioniTableAdapter, this._fW_RevisioniTableAdapter.Connection);
+                    this._fW_RevisioniTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._fW_RevisioniTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._fW_RevisioniTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._fW_RevisioniTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._fW_RevisioniTableAdapter.Adapter);
+                    }
+                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -20347,6 +24086,10 @@ SELECT Id, Fam_Prefix, Fam_Name, Fam_Label, Fam_Tipo, Fam_IsDevice, Fam_ToCommes
                 if ((this._fam_ProdTableAdapter != null)) {
                     this._fam_ProdTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._fam_ProdTableAdapter]));
                     this._fam_ProdTableAdapter.Transaction = null;
+                }
+                if ((this._fW_RevisioniTableAdapter != null)) {
+                    this._fW_RevisioniTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._fW_RevisioniTableAdapter]));
+                    this._fW_RevisioniTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

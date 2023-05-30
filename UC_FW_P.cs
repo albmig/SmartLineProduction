@@ -357,10 +357,10 @@ namespace SmartLineProduction
 
             //Crea grid History
             string filtrohistory = "SW_TipoDevice = 'P' and SW_Obsolete_ver and SW_Code = '" + myRow["SW_Code"].ToString() + "'";
-            DataView dv_R_history = new DataView(ds_Programmazione.Firmware);
-            dv_R_history.RowFilter = filtrohistory;
-            gv_history.DataSource = dv_R_history;
-            dv_R_history.Sort = "SW_Obsolete_ver_from_date DESC";
+            DataView dv_P_history = new DataView(ds_Programmazione.FW_Revisioni);
+            dv_P_history.RowFilter = filtrohistory;
+            gv_history.DataSource = dv_P_history;
+            dv_P_history.Sort = "SW_Obsolete_ver_from_date DESC";
             gv_history.Refresh();
             ///////////////////////////////////
 
@@ -491,6 +491,8 @@ namespace SmartLineProduction
 
         private void UC_FW_P_Load(object sender, EventArgs e)
         {
+            // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione.FW_Revisioni'. È possibile spostarla o rimuoverla se necessario.
+            this.fW_RevisioniTableAdapter.Fill(this.ds_Programmazione.FW_Revisioni);
             // TODO: questa riga di codice carica i dati nella tabella 'ds_SL.Fam_Prod'. È possibile spostarla o rimuoverla se necessario.
             this.fam_ProdTableAdapter.FillBy_Famiglie_Fw_P(this.ds_SL.Fam_Prod);
 
