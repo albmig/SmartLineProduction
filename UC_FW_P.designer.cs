@@ -124,13 +124,14 @@
             this.history_Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.history_Revision = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.history_FromDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firmwareBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fWRevisioniBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ds_Programmazione = new SmartLineProduction.ds_Programmazione();
             this.panel_spacer = new MetroFramework.Controls.MetroPanel();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.panel_revisioni = new MetroFramework.Controls.MetroPanel();
             this.rtb_Revisioni = new System.Windows.Forms.RichTextBox();
             this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
+            this.firmwareBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel_FW_P = new MetroFramework.Controls.MetroPanel();
             this.gv_FW_P = new MetroFramework.Controls.MetroGrid();
             this.gv_Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -159,7 +160,6 @@
             this.menu_sw_exit = new System.Windows.Forms.ToolStripMenuItem();
             this.fam_ProdTableAdapter = new SmartLineProduction.ds_SLTableAdapters.Fam_ProdTableAdapter();
             this.firmwareTableAdapter = new SmartLineProduction.ds_ProgrammazioneTableAdapters.FirmwareTableAdapter();
-            this.fWRevisioniBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fW_RevisioniTableAdapter = new SmartLineProduction.ds_ProgrammazioneTableAdapters.FW_RevisioniTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.ds_SL)).BeginInit();
             this.layout_dati.SuspendLayout();
@@ -173,9 +173,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.famProdBindingSource)).BeginInit();
             this.panel_history.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv_history)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.firmwareBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fWRevisioniBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ds_Programmazione)).BeginInit();
             this.panel_revisioni.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.firmwareBindingSource)).BeginInit();
             this.panel_FW_P.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv_FW_P)).BeginInit();
             this.panel_filter_FW.SuspendLayout();
@@ -183,7 +184,6 @@
             this.pan_Menu_comandi.SuspendLayout();
             this.pan_Menu_salva.SuspendLayout();
             this.pan_Menu_exit.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fWRevisioniBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // ds_SL
@@ -207,7 +207,7 @@
             this.layout_dati.RowCount = 2;
             this.layout_dati.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.layout_dati.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.layout_dati.Size = new System.Drawing.Size(1101, 739);
+            this.layout_dati.Size = new System.Drawing.Size(1544, 739);
             this.layout_dati.TabIndex = 79;
             // 
             // panel_funzionamento
@@ -218,9 +218,9 @@
             this.panel_funzionamento.HorizontalScrollbarBarColor = true;
             this.panel_funzionamento.HorizontalScrollbarHighlightOnWheel = false;
             this.panel_funzionamento.HorizontalScrollbarSize = 10;
-            this.panel_funzionamento.Location = new System.Drawing.Point(443, 559);
+            this.panel_funzionamento.Location = new System.Drawing.Point(620, 559);
             this.panel_funzionamento.Name = "panel_funzionamento";
-            this.panel_funzionamento.Size = new System.Drawing.Size(434, 228);
+            this.panel_funzionamento.Size = new System.Drawing.Size(611, 228);
             this.panel_funzionamento.TabIndex = 80;
             this.panel_funzionamento.VerticalScrollbarBarColor = true;
             this.panel_funzionamento.VerticalScrollbarHighlightOnWheel = false;
@@ -231,7 +231,7 @@
             this.rtb_Funzionamento.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rtb_Funzionamento.Location = new System.Drawing.Point(0, 19);
             this.rtb_Funzionamento.Name = "rtb_Funzionamento";
-            this.rtb_Funzionamento.Size = new System.Drawing.Size(434, 209);
+            this.rtb_Funzionamento.Size = new System.Drawing.Size(611, 209);
             this.rtb_Funzionamento.TabIndex = 0;
             this.rtb_Funzionamento.Text = "";
             // 
@@ -287,7 +287,7 @@
             this.panel_dati.HorizontalScrollbarSize = 10;
             this.panel_dati.Location = new System.Drawing.Point(3, 3);
             this.panel_dati.Name = "panel_dati";
-            this.panel_dati.Size = new System.Drawing.Size(874, 550);
+            this.panel_dati.Size = new System.Drawing.Size(1228, 550);
             this.panel_dati.TabIndex = 77;
             this.panel_dati.VerticalScrollbarBarColor = true;
             this.panel_dati.VerticalScrollbarHighlightOnWheel = false;
@@ -688,7 +688,6 @@
             this.tb_gv_Code.TabIndex = 0;
             this.tb_gv_Code.Text = " ";
             this.tb_gv_Code.UseSelectable = true;
-            this.tb_gv_Code.UseStyleColors = true;
             this.tb_gv_Code.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tb_gv_Code.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
@@ -1249,10 +1248,10 @@
             this.panel_history.HorizontalScrollbarBarColor = true;
             this.panel_history.HorizontalScrollbarHighlightOnWheel = false;
             this.panel_history.HorizontalScrollbarSize = 10;
-            this.panel_history.Location = new System.Drawing.Point(883, 3);
+            this.panel_history.Location = new System.Drawing.Point(1237, 3);
             this.panel_history.Name = "panel_history";
             this.layout_dati.SetRowSpan(this.panel_history, 2);
-            this.panel_history.Size = new System.Drawing.Size(215, 784);
+            this.panel_history.Size = new System.Drawing.Size(304, 784);
             this.panel_history.TabIndex = 78;
             this.panel_history.VerticalScrollbarBarColor = true;
             this.panel_history.VerticalScrollbarHighlightOnWheel = false;
@@ -1309,7 +1308,7 @@
             this.gv_history.RowHeadersVisible = false;
             this.gv_history.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.gv_history.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gv_history.Size = new System.Drawing.Size(215, 746);
+            this.gv_history.Size = new System.Drawing.Size(304, 746);
             this.gv_history.Style = MetroFramework.MetroColorStyle.Red;
             this.gv_history.TabIndex = 4;
             this.gv_history.UseStyleColors = true;
@@ -1342,13 +1341,10 @@
             this.history_FromDate.Name = "history_FromDate";
             this.history_FromDate.ReadOnly = true;
             // 
-            // firmwareBindingSource
+            // fWRevisioniBindingSource
             // 
-            this.firmwareBindingSource.DataMember = "Firmware";
-            this.firmwareBindingSource.DataSource = this.ds_Programmazione;
-            this.firmwareBindingSource.Filter = "SW_TipoDevice = \'P\' and not SW_Obsolete_ver";
-            this.firmwareBindingSource.Sort = "";
-            this.firmwareBindingSource.CurrentChanged += new System.EventHandler(this.firmwareBindingSource_CurrentChanged);
+            this.fWRevisioniBindingSource.DataMember = "FW_Revisioni";
+            this.fWRevisioniBindingSource.DataSource = this.ds_Programmazione;
             // 
             // ds_Programmazione
             // 
@@ -1363,7 +1359,7 @@
             this.panel_spacer.HorizontalScrollbarSize = 10;
             this.panel_spacer.Location = new System.Drawing.Point(0, 19);
             this.panel_spacer.Name = "panel_spacer";
-            this.panel_spacer.Size = new System.Drawing.Size(215, 19);
+            this.panel_spacer.Size = new System.Drawing.Size(304, 19);
             this.panel_spacer.TabIndex = 5;
             this.panel_spacer.VerticalScrollbarBarColor = true;
             this.panel_spacer.VerticalScrollbarHighlightOnWheel = false;
@@ -1392,7 +1388,7 @@
             this.panel_revisioni.HorizontalScrollbarSize = 10;
             this.panel_revisioni.Location = new System.Drawing.Point(3, 559);
             this.panel_revisioni.Name = "panel_revisioni";
-            this.panel_revisioni.Size = new System.Drawing.Size(434, 228);
+            this.panel_revisioni.Size = new System.Drawing.Size(611, 228);
             this.panel_revisioni.TabIndex = 79;
             this.panel_revisioni.VerticalScrollbarBarColor = true;
             this.panel_revisioni.VerticalScrollbarHighlightOnWheel = false;
@@ -1403,7 +1399,7 @@
             this.rtb_Revisioni.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rtb_Revisioni.Location = new System.Drawing.Point(0, 19);
             this.rtb_Revisioni.Name = "rtb_Revisioni";
-            this.rtb_Revisioni.Size = new System.Drawing.Size(434, 209);
+            this.rtb_Revisioni.Size = new System.Drawing.Size(611, 209);
             this.rtb_Revisioni.TabIndex = 0;
             this.rtb_Revisioni.Text = "";
             // 
@@ -1419,6 +1415,14 @@
             this.metroLabel19.TabIndex = 4;
             this.metroLabel19.Text = "Revision History";
             this.metroLabel19.UseStyleColors = true;
+            // 
+            // firmwareBindingSource
+            // 
+            this.firmwareBindingSource.DataMember = "Firmware";
+            this.firmwareBindingSource.DataSource = this.ds_Programmazione;
+            this.firmwareBindingSource.Filter = "SW_TipoDevice = \'P\' and not SW_Obsolete_ver";
+            this.firmwareBindingSource.Sort = "";
+            this.firmwareBindingSource.CurrentChanged += new System.EventHandler(this.firmwareBindingSource_CurrentChanged);
             // 
             // panel_FW_P
             // 
@@ -1653,7 +1657,7 @@
             this.layout_menu.RowCount = 1;
             this.layout_menu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.layout_menu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.layout_menu.Size = new System.Drawing.Size(1251, 25);
+            this.layout_menu.Size = new System.Drawing.Size(1694, 25);
             this.layout_menu.TabIndex = 119;
             // 
             // pan_Menu_comandi
@@ -1669,7 +1673,7 @@
             this.creaRevisioneToolStripMenuItem});
             this.pan_Menu_comandi.Location = new System.Drawing.Point(0, 0);
             this.pan_Menu_comandi.Name = "pan_Menu_comandi";
-            this.pan_Menu_comandi.Size = new System.Drawing.Size(625, 25);
+            this.pan_Menu_comandi.Size = new System.Drawing.Size(845, 25);
             this.pan_Menu_comandi.TabIndex = 80;
             this.pan_Menu_comandi.Text = "menuStrip1";
             // 
@@ -1721,7 +1725,7 @@
             this.menu_sw_salva,
             this.menu_sw_div12,
             this.menu_sw_annulla});
-            this.pan_Menu_salva.Location = new System.Drawing.Point(791, 0);
+            this.pan_Menu_salva.Location = new System.Drawing.Point(1099, 0);
             this.pan_Menu_salva.Name = "pan_Menu_salva";
             this.pan_Menu_salva.Size = new System.Drawing.Size(168, 24);
             this.pan_Menu_salva.TabIndex = 81;
@@ -1758,7 +1762,7 @@
             this.pan_Menu_exit.Dock = System.Windows.Forms.DockStyle.None;
             this.pan_Menu_exit.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menu_sw_exit});
-            this.pan_Menu_exit.Location = new System.Drawing.Point(1176, 0);
+            this.pan_Menu_exit.Location = new System.Drawing.Point(1619, 0);
             this.pan_Menu_exit.Name = "pan_Menu_exit";
             this.pan_Menu_exit.Size = new System.Drawing.Size(75, 24);
             this.pan_Menu_exit.TabIndex = 82;
@@ -1780,11 +1784,6 @@
             // 
             this.firmwareTableAdapter.ClearBeforeFill = true;
             // 
-            // fWRevisioniBindingSource
-            // 
-            this.fWRevisioniBindingSource.DataMember = "FW_Revisioni";
-            this.fWRevisioniBindingSource.DataSource = this.ds_Programmazione;
-            // 
             // fW_RevisioniTableAdapter
             // 
             this.fW_RevisioniTableAdapter.ClearBeforeFill = true;
@@ -1793,7 +1792,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1291, 814);
+            this.ClientSize = new System.Drawing.Size(1734, 814);
             this.ControlBox = false;
             this.Controls.Add(this.layout_dati);
             this.Controls.Add(this.panel_FW_P);
@@ -1825,10 +1824,11 @@
             this.panel_history.ResumeLayout(false);
             this.panel_history.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv_history)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.firmwareBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fWRevisioniBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ds_Programmazione)).EndInit();
             this.panel_revisioni.ResumeLayout(false);
             this.panel_revisioni.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.firmwareBindingSource)).EndInit();
             this.panel_FW_P.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gv_FW_P)).EndInit();
             this.panel_filter_FW.ResumeLayout(false);
@@ -1841,7 +1841,6 @@
             this.pan_Menu_salva.PerformLayout();
             this.pan_Menu_exit.ResumeLayout(false);
             this.pan_Menu_exit.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fWRevisioniBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

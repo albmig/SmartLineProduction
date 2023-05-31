@@ -152,28 +152,6 @@
             this.metroLabel20 = new MetroFramework.Controls.MetroLabel();
             this.panel_history = new MetroFramework.Controls.MetroPanel();
             this.gv_history = new MetroFramework.Controls.MetroGrid();
-            this.fWRevisioniBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.panel_spacer = new MetroFramework.Controls.MetroPanel();
-            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
-            this.panel_revisioni = new MetroFramework.Controls.MetroPanel();
-            this.rtb_Revisioni = new System.Windows.Forms.RichTextBox();
-            this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
-            this.pan_Menu_comandi = new System.Windows.Forms.MenuStrip();
-            this.menu_sw_new = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu_sw_div01 = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu_sw_clona = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu_sw_div02 = new System.Windows.Forms.ToolStripMenuItem();
-            this.creaRevisioneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pan_Menu_salva = new System.Windows.Forms.MenuStrip();
-            this.menu_sw_salva = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu_sw_div12 = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu_sw_annulla = new System.Windows.Forms.ToolStripMenuItem();
-            this.pan_Menu_exit = new System.Windows.Forms.MenuStrip();
-            this.menu_sw_exit = new System.Windows.Forms.ToolStripMenuItem();
-            this.layout_menu = new System.Windows.Forms.TableLayoutPanel();
-            this.fam_ProdTableAdapter = new SmartLineProduction.ds_SLTableAdapters.Fam_ProdTableAdapter();
-            this.firmwareTableAdapter = new SmartLineProduction.ds_ProgrammazioneTableAdapters.FirmwareTableAdapter();
-            this.fW_RevisioniTableAdapter = new SmartLineProduction.ds_ProgrammazioneTableAdapters.FW_RevisioniTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sWCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sWTipoDeviceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -222,6 +200,28 @@
             this.sWPLockDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sWRLockDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sWIsPublicDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.fWRevisioniBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.panel_spacer = new MetroFramework.Controls.MetroPanel();
+            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
+            this.panel_revisioni = new MetroFramework.Controls.MetroPanel();
+            this.rtb_Revisioni = new System.Windows.Forms.RichTextBox();
+            this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
+            this.pan_Menu_comandi = new System.Windows.Forms.MenuStrip();
+            this.menu_sw_new = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_sw_div01 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_sw_clona = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_sw_div02 = new System.Windows.Forms.ToolStripMenuItem();
+            this.creaRevisioneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pan_Menu_salva = new System.Windows.Forms.MenuStrip();
+            this.menu_sw_salva = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_sw_div12 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_sw_annulla = new System.Windows.Forms.ToolStripMenuItem();
+            this.pan_Menu_exit = new System.Windows.Forms.MenuStrip();
+            this.menu_sw_exit = new System.Windows.Forms.ToolStripMenuItem();
+            this.layout_menu = new System.Windows.Forms.TableLayoutPanel();
+            this.fam_ProdTableAdapter = new SmartLineProduction.ds_SLTableAdapters.Fam_ProdTableAdapter();
+            this.firmwareTableAdapter = new SmartLineProduction.ds_ProgrammazioneTableAdapters.FirmwareTableAdapter();
+            this.fW_RevisioniTableAdapter = new SmartLineProduction.ds_ProgrammazioneTableAdapters.FW_RevisioniTableAdapter();
             this.panel_FW_R.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv_FW_R)).BeginInit();
             this.gv_FW_R_MenuStrip.SuspendLayout();
@@ -1937,230 +1937,6 @@
             this.gv_history.UseStyleColors = true;
             this.gv_history.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.gv_history_CellPainting);
             // 
-            // fWRevisioniBindingSource
-            // 
-            this.fWRevisioniBindingSource.DataMember = "FW_Revisioni";
-            this.fWRevisioniBindingSource.DataSource = this.ds_Programmazione;
-            // 
-            // panel_spacer
-            // 
-            this.panel_spacer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_spacer.HorizontalScrollbarBarColor = true;
-            this.panel_spacer.HorizontalScrollbarHighlightOnWheel = false;
-            this.panel_spacer.HorizontalScrollbarSize = 10;
-            this.panel_spacer.Location = new System.Drawing.Point(0, 19);
-            this.panel_spacer.Name = "panel_spacer";
-            this.panel_spacer.Size = new System.Drawing.Size(279, 19);
-            this.panel_spacer.TabIndex = 5;
-            this.panel_spacer.VerticalScrollbarBarColor = true;
-            this.panel_spacer.VerticalScrollbarHighlightOnWheel = false;
-            this.panel_spacer.VerticalScrollbarSize = 10;
-            // 
-            // metroLabel9
-            // 
-            this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.metroLabel9.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel9.Location = new System.Drawing.Point(0, 0);
-            this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(125, 19);
-            this.metroLabel9.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroLabel9.TabIndex = 3;
-            this.metroLabel9.Text = "Versioni precedenti";
-            this.metroLabel9.UseStyleColors = true;
-            // 
-            // panel_revisioni
-            // 
-            this.panel_revisioni.Controls.Add(this.rtb_Revisioni);
-            this.panel_revisioni.Controls.Add(this.metroLabel19);
-            this.panel_revisioni.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_revisioni.HorizontalScrollbarBarColor = true;
-            this.panel_revisioni.HorizontalScrollbarHighlightOnWheel = false;
-            this.panel_revisioni.HorizontalScrollbarSize = 10;
-            this.panel_revisioni.Location = new System.Drawing.Point(3, 639);
-            this.panel_revisioni.Name = "panel_revisioni";
-            this.panel_revisioni.Size = new System.Drawing.Size(560, 228);
-            this.panel_revisioni.TabIndex = 79;
-            this.panel_revisioni.VerticalScrollbarBarColor = true;
-            this.panel_revisioni.VerticalScrollbarHighlightOnWheel = false;
-            this.panel_revisioni.VerticalScrollbarSize = 10;
-            // 
-            // rtb_Revisioni
-            // 
-            this.rtb_Revisioni.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rtb_Revisioni.Location = new System.Drawing.Point(0, 19);
-            this.rtb_Revisioni.Name = "rtb_Revisioni";
-            this.rtb_Revisioni.Size = new System.Drawing.Size(560, 209);
-            this.rtb_Revisioni.TabIndex = 0;
-            this.rtb_Revisioni.Text = "";
-            // 
-            // metroLabel19
-            // 
-            this.metroLabel19.AutoSize = true;
-            this.metroLabel19.Dock = System.Windows.Forms.DockStyle.Top;
-            this.metroLabel19.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel19.Location = new System.Drawing.Point(0, 0);
-            this.metroLabel19.Name = "metroLabel19";
-            this.metroLabel19.Size = new System.Drawing.Size(107, 19);
-            this.metroLabel19.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroLabel19.TabIndex = 4;
-            this.metroLabel19.Text = "Revision History";
-            this.metroLabel19.UseStyleColors = true;
-            // 
-            // pan_Menu_comandi
-            // 
-            this.pan_Menu_comandi.BackColor = System.Drawing.Color.Gainsboro;
-            this.layout_menu.SetColumnSpan(this.pan_Menu_comandi, 5);
-            this.pan_Menu_comandi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pan_Menu_comandi.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menu_sw_new,
-            this.menu_sw_div01,
-            this.menu_sw_clona,
-            this.menu_sw_div02,
-            this.creaRevisioneToolStripMenuItem});
-            this.pan_Menu_comandi.Location = new System.Drawing.Point(0, 0);
-            this.pan_Menu_comandi.Name = "pan_Menu_comandi";
-            this.pan_Menu_comandi.Size = new System.Drawing.Size(780, 25);
-            this.pan_Menu_comandi.TabIndex = 80;
-            this.pan_Menu_comandi.Text = "menuStrip1";
-            // 
-            // menu_sw_new
-            // 
-            this.menu_sw_new.Image = ((System.Drawing.Image)(resources.GetObject("menu_sw_new.Image")));
-            this.menu_sw_new.Name = "menu_sw_new";
-            this.menu_sw_new.Size = new System.Drawing.Size(117, 21);
-            this.menu_sw_new.Text = "Nuova Versione";
-            this.menu_sw_new.Click += new System.EventHandler(this.menu_sw_new_Click);
-            // 
-            // menu_sw_div01
-            // 
-            this.menu_sw_div01.Enabled = false;
-            this.menu_sw_div01.Name = "menu_sw_div01";
-            this.menu_sw_div01.Size = new System.Drawing.Size(22, 21);
-            this.menu_sw_div01.Text = "|";
-            // 
-            // menu_sw_clona
-            // 
-            this.menu_sw_clona.Image = ((System.Drawing.Image)(resources.GetObject("menu_sw_clona.Image")));
-            this.menu_sw_clona.Name = "menu_sw_clona";
-            this.menu_sw_clona.Size = new System.Drawing.Size(290, 21);
-            this.menu_sw_clona.Text = "Nuova Versione da elemento selezionato (Clona)";
-            this.menu_sw_clona.Click += new System.EventHandler(this.menu_sw_clona_Click);
-            // 
-            // menu_sw_div02
-            // 
-            this.menu_sw_div02.Enabled = false;
-            this.menu_sw_div02.Name = "menu_sw_div02";
-            this.menu_sw_div02.Size = new System.Drawing.Size(22, 21);
-            this.menu_sw_div02.Text = "|";
-            // 
-            // creaRevisioneToolStripMenuItem
-            // 
-            this.creaRevisioneToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("creaRevisioneToolStripMenuItem.Image")));
-            this.creaRevisioneToolStripMenuItem.Name = "creaRevisioneToolStripMenuItem";
-            this.creaRevisioneToolStripMenuItem.Size = new System.Drawing.Size(112, 21);
-            this.creaRevisioneToolStripMenuItem.Text = "Crea Revisione";
-            this.creaRevisioneToolStripMenuItem.Click += new System.EventHandler(this.creaRevisioneToolStripMenuItem_Click);
-            // 
-            // pan_Menu_salva
-            // 
-            this.pan_Menu_salva.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pan_Menu_salva.BackColor = System.Drawing.Color.Gainsboro;
-            this.layout_menu.SetColumnSpan(this.pan_Menu_salva, 2);
-            this.pan_Menu_salva.Dock = System.Windows.Forms.DockStyle.None;
-            this.pan_Menu_salva.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menu_sw_salva,
-            this.menu_sw_div12,
-            this.menu_sw_annulla});
-            this.pan_Menu_salva.Location = new System.Drawing.Point(1008, 0);
-            this.pan_Menu_salva.Name = "pan_Menu_salva";
-            this.pan_Menu_salva.Size = new System.Drawing.Size(168, 24);
-            this.pan_Menu_salva.TabIndex = 81;
-            this.pan_Menu_salva.Text = "menuStrip1";
-            // 
-            // menu_sw_salva
-            // 
-            this.menu_sw_salva.Image = ((System.Drawing.Image)(resources.GetObject("menu_sw_salva.Image")));
-            this.menu_sw_salva.Name = "menu_sw_salva";
-            this.menu_sw_salva.Size = new System.Drawing.Size(62, 20);
-            this.menu_sw_salva.Text = "Salva";
-            this.menu_sw_salva.Click += new System.EventHandler(this.menu_sw_salva_Click);
-            // 
-            // menu_sw_div12
-            // 
-            this.menu_sw_div12.Enabled = false;
-            this.menu_sw_div12.Name = "menu_sw_div12";
-            this.menu_sw_div12.ShowShortcutKeys = false;
-            this.menu_sw_div12.Size = new System.Drawing.Size(22, 20);
-            this.menu_sw_div12.Text = "|";
-            // 
-            // menu_sw_annulla
-            // 
-            this.menu_sw_annulla.Image = ((System.Drawing.Image)(resources.GetObject("menu_sw_annulla.Image")));
-            this.menu_sw_annulla.Name = "menu_sw_annulla";
-            this.menu_sw_annulla.Size = new System.Drawing.Size(76, 20);
-            this.menu_sw_annulla.Text = "Annulla";
-            this.menu_sw_annulla.Click += new System.EventHandler(this.menu_sw_annulla_Click);
-            // 
-            // pan_Menu_exit
-            // 
-            this.pan_Menu_exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pan_Menu_exit.BackColor = System.Drawing.Color.Gainsboro;
-            this.pan_Menu_exit.Dock = System.Windows.Forms.DockStyle.None;
-            this.pan_Menu_exit.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menu_sw_exit});
-            this.pan_Menu_exit.Location = new System.Drawing.Point(1492, 0);
-            this.pan_Menu_exit.Name = "pan_Menu_exit";
-            this.pan_Menu_exit.Size = new System.Drawing.Size(75, 24);
-            this.pan_Menu_exit.TabIndex = 82;
-            this.pan_Menu_exit.Text = "menuStrip1";
-            // 
-            // menu_sw_exit
-            // 
-            this.menu_sw_exit.Image = ((System.Drawing.Image)(resources.GetObject("menu_sw_exit.Image")));
-            this.menu_sw_exit.Name = "menu_sw_exit";
-            this.menu_sw_exit.Size = new System.Drawing.Size(67, 20);
-            this.menu_sw_exit.Text = "Uscita";
-            this.menu_sw_exit.Click += new System.EventHandler(this.menu_sw_exit_Click);
-            // 
-            // layout_menu
-            // 
-            this.layout_menu.BackColor = System.Drawing.Color.Gainsboro;
-            this.layout_menu.ColumnCount = 10;
-            this.layout_menu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.layout_menu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.layout_menu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.layout_menu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.layout_menu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.layout_menu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.layout_menu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.layout_menu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.layout_menu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.layout_menu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.layout_menu.Controls.Add(this.pan_Menu_comandi, 0, 0);
-            this.layout_menu.Controls.Add(this.pan_Menu_salva, 6, 0);
-            this.layout_menu.Controls.Add(this.pan_Menu_exit, 10, 0);
-            this.layout_menu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.layout_menu.Location = new System.Drawing.Point(20, 30);
-            this.layout_menu.Name = "layout_menu";
-            this.layout_menu.RowCount = 1;
-            this.layout_menu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.layout_menu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.layout_menu.Size = new System.Drawing.Size(1567, 25);
-            this.layout_menu.TabIndex = 118;
-            // 
-            // fam_ProdTableAdapter
-            // 
-            this.fam_ProdTableAdapter.ClearBeforeFill = true;
-            // 
-            // firmwareTableAdapter
-            // 
-            this.firmwareTableAdapter.ClearBeforeFill = true;
-            // 
-            // fW_RevisioniTableAdapter
-            // 
-            this.fW_RevisioniTableAdapter.ClearBeforeFill = true;
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
@@ -2545,6 +2321,230 @@
             this.sWIsPublicDataGridViewCheckBoxColumn.Name = "sWIsPublicDataGridViewCheckBoxColumn";
             this.sWIsPublicDataGridViewCheckBoxColumn.ReadOnly = true;
             this.sWIsPublicDataGridViewCheckBoxColumn.Visible = false;
+            // 
+            // fWRevisioniBindingSource
+            // 
+            this.fWRevisioniBindingSource.DataMember = "FW_Revisioni";
+            this.fWRevisioniBindingSource.DataSource = this.ds_Programmazione;
+            // 
+            // panel_spacer
+            // 
+            this.panel_spacer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_spacer.HorizontalScrollbarBarColor = true;
+            this.panel_spacer.HorizontalScrollbarHighlightOnWheel = false;
+            this.panel_spacer.HorizontalScrollbarSize = 10;
+            this.panel_spacer.Location = new System.Drawing.Point(0, 19);
+            this.panel_spacer.Name = "panel_spacer";
+            this.panel_spacer.Size = new System.Drawing.Size(279, 19);
+            this.panel_spacer.TabIndex = 5;
+            this.panel_spacer.VerticalScrollbarBarColor = true;
+            this.panel_spacer.VerticalScrollbarHighlightOnWheel = false;
+            this.panel_spacer.VerticalScrollbarSize = 10;
+            // 
+            // metroLabel9
+            // 
+            this.metroLabel9.AutoSize = true;
+            this.metroLabel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.metroLabel9.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel9.Location = new System.Drawing.Point(0, 0);
+            this.metroLabel9.Name = "metroLabel9";
+            this.metroLabel9.Size = new System.Drawing.Size(125, 19);
+            this.metroLabel9.Style = MetroFramework.MetroColorStyle.Red;
+            this.metroLabel9.TabIndex = 3;
+            this.metroLabel9.Text = "Versioni precedenti";
+            this.metroLabel9.UseStyleColors = true;
+            // 
+            // panel_revisioni
+            // 
+            this.panel_revisioni.Controls.Add(this.rtb_Revisioni);
+            this.panel_revisioni.Controls.Add(this.metroLabel19);
+            this.panel_revisioni.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_revisioni.HorizontalScrollbarBarColor = true;
+            this.panel_revisioni.HorizontalScrollbarHighlightOnWheel = false;
+            this.panel_revisioni.HorizontalScrollbarSize = 10;
+            this.panel_revisioni.Location = new System.Drawing.Point(3, 639);
+            this.panel_revisioni.Name = "panel_revisioni";
+            this.panel_revisioni.Size = new System.Drawing.Size(560, 228);
+            this.panel_revisioni.TabIndex = 79;
+            this.panel_revisioni.VerticalScrollbarBarColor = true;
+            this.panel_revisioni.VerticalScrollbarHighlightOnWheel = false;
+            this.panel_revisioni.VerticalScrollbarSize = 10;
+            // 
+            // rtb_Revisioni
+            // 
+            this.rtb_Revisioni.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtb_Revisioni.Location = new System.Drawing.Point(0, 19);
+            this.rtb_Revisioni.Name = "rtb_Revisioni";
+            this.rtb_Revisioni.Size = new System.Drawing.Size(560, 209);
+            this.rtb_Revisioni.TabIndex = 0;
+            this.rtb_Revisioni.Text = "";
+            // 
+            // metroLabel19
+            // 
+            this.metroLabel19.AutoSize = true;
+            this.metroLabel19.Dock = System.Windows.Forms.DockStyle.Top;
+            this.metroLabel19.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel19.Location = new System.Drawing.Point(0, 0);
+            this.metroLabel19.Name = "metroLabel19";
+            this.metroLabel19.Size = new System.Drawing.Size(107, 19);
+            this.metroLabel19.Style = MetroFramework.MetroColorStyle.Red;
+            this.metroLabel19.TabIndex = 4;
+            this.metroLabel19.Text = "Revision History";
+            this.metroLabel19.UseStyleColors = true;
+            // 
+            // pan_Menu_comandi
+            // 
+            this.pan_Menu_comandi.BackColor = System.Drawing.Color.Gainsboro;
+            this.layout_menu.SetColumnSpan(this.pan_Menu_comandi, 5);
+            this.pan_Menu_comandi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pan_Menu_comandi.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menu_sw_new,
+            this.menu_sw_div01,
+            this.menu_sw_clona,
+            this.menu_sw_div02,
+            this.creaRevisioneToolStripMenuItem});
+            this.pan_Menu_comandi.Location = new System.Drawing.Point(0, 0);
+            this.pan_Menu_comandi.Name = "pan_Menu_comandi";
+            this.pan_Menu_comandi.Size = new System.Drawing.Size(780, 25);
+            this.pan_Menu_comandi.TabIndex = 80;
+            this.pan_Menu_comandi.Text = "menuStrip1";
+            // 
+            // menu_sw_new
+            // 
+            this.menu_sw_new.Image = ((System.Drawing.Image)(resources.GetObject("menu_sw_new.Image")));
+            this.menu_sw_new.Name = "menu_sw_new";
+            this.menu_sw_new.Size = new System.Drawing.Size(117, 21);
+            this.menu_sw_new.Text = "Nuova Versione";
+            this.menu_sw_new.Click += new System.EventHandler(this.menu_sw_new_Click);
+            // 
+            // menu_sw_div01
+            // 
+            this.menu_sw_div01.Enabled = false;
+            this.menu_sw_div01.Name = "menu_sw_div01";
+            this.menu_sw_div01.Size = new System.Drawing.Size(22, 21);
+            this.menu_sw_div01.Text = "|";
+            // 
+            // menu_sw_clona
+            // 
+            this.menu_sw_clona.Image = ((System.Drawing.Image)(resources.GetObject("menu_sw_clona.Image")));
+            this.menu_sw_clona.Name = "menu_sw_clona";
+            this.menu_sw_clona.Size = new System.Drawing.Size(290, 21);
+            this.menu_sw_clona.Text = "Nuova Versione da elemento selezionato (Clona)";
+            this.menu_sw_clona.Click += new System.EventHandler(this.menu_sw_clona_Click);
+            // 
+            // menu_sw_div02
+            // 
+            this.menu_sw_div02.Enabled = false;
+            this.menu_sw_div02.Name = "menu_sw_div02";
+            this.menu_sw_div02.Size = new System.Drawing.Size(22, 21);
+            this.menu_sw_div02.Text = "|";
+            // 
+            // creaRevisioneToolStripMenuItem
+            // 
+            this.creaRevisioneToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("creaRevisioneToolStripMenuItem.Image")));
+            this.creaRevisioneToolStripMenuItem.Name = "creaRevisioneToolStripMenuItem";
+            this.creaRevisioneToolStripMenuItem.Size = new System.Drawing.Size(112, 21);
+            this.creaRevisioneToolStripMenuItem.Text = "Crea Revisione";
+            this.creaRevisioneToolStripMenuItem.Click += new System.EventHandler(this.creaRevisioneToolStripMenuItem_Click);
+            // 
+            // pan_Menu_salva
+            // 
+            this.pan_Menu_salva.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pan_Menu_salva.BackColor = System.Drawing.Color.Gainsboro;
+            this.layout_menu.SetColumnSpan(this.pan_Menu_salva, 2);
+            this.pan_Menu_salva.Dock = System.Windows.Forms.DockStyle.None;
+            this.pan_Menu_salva.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menu_sw_salva,
+            this.menu_sw_div12,
+            this.menu_sw_annulla});
+            this.pan_Menu_salva.Location = new System.Drawing.Point(1008, 0);
+            this.pan_Menu_salva.Name = "pan_Menu_salva";
+            this.pan_Menu_salva.Size = new System.Drawing.Size(168, 24);
+            this.pan_Menu_salva.TabIndex = 81;
+            this.pan_Menu_salva.Text = "menuStrip1";
+            // 
+            // menu_sw_salva
+            // 
+            this.menu_sw_salva.Image = ((System.Drawing.Image)(resources.GetObject("menu_sw_salva.Image")));
+            this.menu_sw_salva.Name = "menu_sw_salva";
+            this.menu_sw_salva.Size = new System.Drawing.Size(62, 20);
+            this.menu_sw_salva.Text = "Salva";
+            this.menu_sw_salva.Click += new System.EventHandler(this.menu_sw_salva_Click);
+            // 
+            // menu_sw_div12
+            // 
+            this.menu_sw_div12.Enabled = false;
+            this.menu_sw_div12.Name = "menu_sw_div12";
+            this.menu_sw_div12.ShowShortcutKeys = false;
+            this.menu_sw_div12.Size = new System.Drawing.Size(22, 20);
+            this.menu_sw_div12.Text = "|";
+            // 
+            // menu_sw_annulla
+            // 
+            this.menu_sw_annulla.Image = ((System.Drawing.Image)(resources.GetObject("menu_sw_annulla.Image")));
+            this.menu_sw_annulla.Name = "menu_sw_annulla";
+            this.menu_sw_annulla.Size = new System.Drawing.Size(76, 20);
+            this.menu_sw_annulla.Text = "Annulla";
+            this.menu_sw_annulla.Click += new System.EventHandler(this.menu_sw_annulla_Click);
+            // 
+            // pan_Menu_exit
+            // 
+            this.pan_Menu_exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pan_Menu_exit.BackColor = System.Drawing.Color.Gainsboro;
+            this.pan_Menu_exit.Dock = System.Windows.Forms.DockStyle.None;
+            this.pan_Menu_exit.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menu_sw_exit});
+            this.pan_Menu_exit.Location = new System.Drawing.Point(1492, 0);
+            this.pan_Menu_exit.Name = "pan_Menu_exit";
+            this.pan_Menu_exit.Size = new System.Drawing.Size(75, 24);
+            this.pan_Menu_exit.TabIndex = 82;
+            this.pan_Menu_exit.Text = "menuStrip1";
+            // 
+            // menu_sw_exit
+            // 
+            this.menu_sw_exit.Image = ((System.Drawing.Image)(resources.GetObject("menu_sw_exit.Image")));
+            this.menu_sw_exit.Name = "menu_sw_exit";
+            this.menu_sw_exit.Size = new System.Drawing.Size(67, 20);
+            this.menu_sw_exit.Text = "Uscita";
+            this.menu_sw_exit.Click += new System.EventHandler(this.menu_sw_exit_Click);
+            // 
+            // layout_menu
+            // 
+            this.layout_menu.BackColor = System.Drawing.Color.Gainsboro;
+            this.layout_menu.ColumnCount = 10;
+            this.layout_menu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.layout_menu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.layout_menu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.layout_menu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.layout_menu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.layout_menu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.layout_menu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.layout_menu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.layout_menu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.layout_menu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.layout_menu.Controls.Add(this.pan_Menu_comandi, 0, 0);
+            this.layout_menu.Controls.Add(this.pan_Menu_salva, 6, 0);
+            this.layout_menu.Controls.Add(this.pan_Menu_exit, 10, 0);
+            this.layout_menu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.layout_menu.Location = new System.Drawing.Point(20, 30);
+            this.layout_menu.Name = "layout_menu";
+            this.layout_menu.RowCount = 1;
+            this.layout_menu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.layout_menu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.layout_menu.Size = new System.Drawing.Size(1567, 25);
+            this.layout_menu.TabIndex = 118;
+            // 
+            // fam_ProdTableAdapter
+            // 
+            this.fam_ProdTableAdapter.ClearBeforeFill = true;
+            // 
+            // firmwareTableAdapter
+            // 
+            this.firmwareTableAdapter.ClearBeforeFill = true;
+            // 
+            // fW_RevisioniTableAdapter
+            // 
+            this.fW_RevisioniTableAdapter.ClearBeforeFill = true;
             // 
             // UC_FW_R
             // 

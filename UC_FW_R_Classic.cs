@@ -18,7 +18,7 @@ namespace SmartLineProduction
 {
     public partial class UC_FW_R_Classic : MetroFramework.Forms.MetroForm
     {
-        private string displayform = "V"; // V-View/INV-InsertNewVersion/INR-InsertNewRelease/CLO-CloneFirmware
+        private string displayform = "V"; // V-View/INV-InsertNewVersion/INR-InsertNewRelease/CLO-CloneFirmware/E-Edit
         private string filtroincorso = "FW_CL_R_Obsolete_ver = 0";
 
         public UC_FW_R_Classic()
@@ -187,6 +187,28 @@ namespace SmartLineProduction
 
                 gv_FW_R.Enabled = false;
             }
+
+            if (displayform == "E")
+            {
+                panel_intestazione.Enabled = true;
+                panel_freq.Enabled = false;
+                tb_gv_Code.Enabled = false;
+                tb_gv_Versione.Enabled = false;
+                tb_gv_Revisione.Enabled = false;
+                cb_Famiglia.Enabled = true;
+                cb_Famiglia.Focus();
+
+                panel_dati.Enabled = true;
+                panel_revisioni.Enabled = true;
+                panel_funzionamento.Enabled = true;
+                panel_FW_R.Enabled = false;
+                pan_Menu_comandi.Enabled = false;
+                pan_Menu_exit.Enabled = false;
+                pan_Menu_salva.Enabled = true;
+
+                gv_FW_R.Enabled = false;
+            }
+
         }
 
         private void Riga2DB()
@@ -251,6 +273,81 @@ namespace SmartLineProduction
 
             ds_CL_Firmware.FW_CL_Ricevitori.Rows.Add(newrow);
             CL_Ricevitori_TableAdapter.Update(newrow);
+        }
+
+        private void Riga2DB_Edit()
+        {
+            DataRowView findrowview = this.CL_Ricevitori_BindingSource.Current as DataRowView;
+            DataRow findrow = (DataRow)findrowview.Row;
+
+            DataRow editrow = ds_CL_Firmware.FW_CL_Ricevitori.Rows.Find(findrow["FW_CL_R_ID"]);
+
+            editrow["FW_CL_R_SW_Code"] = tb_gv_Code.Text;
+            editrow["FW_CL_R_SW_Versione"] = tb_gv_Versione.Text;
+            editrow["FW_CL_R_SW_Revisione"] = tb_gv_Revisione.Text;
+            editrow["FW_CL_R_TipoDev"] = cb_Famiglia.SelectedValue;
+
+            if (cb_868.Checked) { editrow["FW_CL_R_Freq"] = "X"; }
+            if (cb_433.Checked) { editrow["FW_CL_R_Freq"] = "A"; }
+            if (cb_915.Checked) { editrow["FW_CL_R_Freq"] = "B"; }
+            if (cb_filo.Checked) { editrow["FW_CL_R_Freq"] = "N"; }
+            if (cb_can.Checked) { editrow["FW_CL_R_Freq"] = "C"; }
+
+            if (tog_Pair.Checked) { editrow["FW_CL_R_AutoPairing"] = true; } else { editrow["FW_CL_R_AutoPairing"] = false; }
+            if (tog_Golden.Checked) { editrow["FW_CL_R_Golden"] = true; } else { editrow["FW_CL_R_Golden"] = false; }
+            if (tog_SPAttivo.Checked) { editrow["FW_CL_R_SPAttivo"] = true; } else { editrow["FW_CL_R_SPAttivo"] = false; }
+            if (tog_SPPassivo.Checked) { editrow["FW_CL_R_SPPassivo"] = true; } else { editrow["FW_CL_R_SPPassivo"] = false; }
+            if (tog_PlugConfig.Checked) { editrow["FW_CL_R_PlugConfig"] = true; } else { editrow["FW_CL_R_PlugConfig"] = false; }
+            if (tog_CambioPagina.Checked) { editrow["FW_CL_R_CambioPag"] = true; } else { editrow["FW_CL_R_CambioPag"] = false; }
+            if (tog_CambioRicevitore.Checked) { editrow["FW_CL_R_CambioRic"] = true; } else { editrow["FW_CL_R_CambioRic"] = false; }
+            if (tog_MotRim.Checked) { editrow["FW_CL_R_MotRim"] = true; } else { editrow["FW_CL_R_MotRim"] = false; }
+            if (tog_MasterOutput.Checked) { editrow["FW_CL_R_MasterOutput"] = true; } else { editrow["FW_CL_R_MasterOutput"] = false; }
+            if (tog_EmergencyOutput.Checked) { editrow["FW_CL_R_EmergencyOutput"] = true; } else { editrow["FW_CL_R_EmergencyOutput"] = false; }
+            if (tog_ProportionalOutput.Checked) { editrow["FW_CL_R_ProportionalOutput"] = true; } else { editrow["FW_CL_R_ProportionalOutput"] = false; }
+            if (tog_CloseLink.Checked) { editrow["FW_CL_R_CloseLink"] = true; } else { editrow["FW_CL_R_CloseLink"] = false; }
+
+            if (tb_IdentifRic.Text != string.Empty) { editrow["FW_CL_R_IdentificazioneRic"] = Int32.Parse(tb_IdentifRic.Text); }
+            editrow["FW_CL_R_NumPalmari"] = Int32.Parse(tb_NumPalmari.Text);
+            editrow["FW_CL_R_FwPAbbinato"] = tb_FwAbbinato.Text;
+            editrow["FW_CL_R_NumOutput"] = Int32.Parse(tb_NumOutput.Text);
+            editrow["FW_CL_R_NumInputAn"] = Int32.Parse(tb_NumInpAn.Text);
+            editrow["FW_CL_R_NumInputDig"] = Int32.Parse(tb_NumInpDig.Text);
+            editrow["FW_CL_R_ContempTasti"] = Int32.Parse(tb_ContTasti.Text);
+            editrow["FW_CL_R_TimeOut"] = Int32.Parse(tb_TimeOut.Text);
+
+            editrow["FW_CL_R_Revisioni"] = rtb_Revisioni.Text;
+            editrow["FW_CL_R_Funzionamento"] = rtb_Funzionamento.Text;
+
+            //Campi da riempire NOT NULL
+            //newrow["SW_P_Opt_RF"] = newrow["SW_R_Opt_RF"];
+            //newrow["SW_P_Opt_Use_Oled"] = false;
+            //newrow["SW_P_Opt_Use_EmButt"] = false;
+            //newrow["SW_P_Opt_Use_Backlight"] = false;
+            //newrow["SW_P_Opt_ShiftPage"] = false;
+            //newrow["SW_P_Opt_Use_Accel"] = false;
+            //newrow["SW_P_Opt_Use_SP"] = false;
+            //newrow["SW_P_Opt_Use_Buzzer"] = false;
+            //newrow["SW_P_Opt_Use_Vibracall"] = false;
+            //newrow["SW_P_Opt_Use_LedTorch"] = false;
+            //newrow["SW_P_Opt_MaxPairDevices"] = "1";
+            //newrow["SW_P_PLD"] = false;
+            //newrow["SW_P_Opt_Use_Radius"] = false;
+            //////
+            ///
+            editrow["FW_CL_R_Obsolete_ver"] = false;
+
+            editrow["FW_CL_R_CanBus"] = false;
+
+            try
+            {
+                this.Validate();
+                this.CL_Ricevitori_BindingSource.EndEdit();
+                this.CL_Ricevitori_TableAdapter.Update(editrow);
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("Update failed");
+            }
         }
 
         private void DB2Riga()
@@ -498,7 +595,7 @@ namespace SmartLineProduction
                 return;
             }
 
-            Riga2DB();
+            if (displayform == "E") { Riga2DB_Edit(); } else { Riga2DB(); }
 
             CL_Ricevitori_BindingSource.SuspendBinding();
             this.CL_Ricevitori_TableAdapter.Fill(this.ds_CL_Firmware.FW_CL_Ricevitori);
@@ -670,6 +767,13 @@ namespace SmartLineProduction
                 tb_ContTasti.Focus();
             }
 
+        }
+
+        private void menu_sw_edit_Click(object sender, EventArgs e)
+        {
+            displayform = "E";
+            AbilitaForm();
+            tb_gv_Versione.Focus();
         }
     }
 }

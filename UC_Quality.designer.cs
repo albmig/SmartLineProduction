@@ -181,9 +181,9 @@
             this.menu_sw_salva,
             this.menu_sw_div12,
             this.menu_sw_annulla});
-            this.pan_Menu_salva.Location = new System.Drawing.Point(576, 0);
+            this.pan_Menu_salva.Location = new System.Drawing.Point(588, 0);
             this.pan_Menu_salva.Name = "pan_Menu_salva";
-            this.pan_Menu_salva.Size = new System.Drawing.Size(192, 24);
+            this.pan_Menu_salva.Size = new System.Drawing.Size(168, 24);
             this.pan_Menu_salva.TabIndex = 86;
             this.pan_Menu_salva.Text = "menuStrip1";
             // 

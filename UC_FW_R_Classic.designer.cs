@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_FW_R_Classic));
             this.panel_FW_R = new MetroFramework.Controls.MetroPanel();
             this.gv_FW_R = new MetroFramework.Controls.MetroGrid();
@@ -131,6 +131,8 @@
             this.CL_Ricevitori_TableAdapter = new SmartLineProduction.ds_CL_FirmwareTableAdapters.FW_CL_RicevitoriTableAdapter();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.CL_Famiglie_TableAdapter = new SmartLineProduction.ds_CL_FirmwareTableAdapters.FW_CL_FamiglieTableAdapter();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_sw_edit = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_FW_R.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv_FW_R)).BeginInit();
             this.gv_FW_R_MenuStrip.SuspendLayout();
@@ -163,7 +165,7 @@
             this.panel_FW_R.HorizontalScrollbarSize = 10;
             this.panel_FW_R.Location = new System.Drawing.Point(20, 55);
             this.panel_FW_R.Name = "panel_FW_R";
-            this.panel_FW_R.Size = new System.Drawing.Size(150, 1027);
+            this.panel_FW_R.Size = new System.Drawing.Size(150, 1025);
             this.panel_FW_R.TabIndex = 72;
             this.panel_FW_R.VerticalScrollbarBarColor = true;
             this.panel_FW_R.VerticalScrollbarHighlightOnWheel = false;
@@ -175,22 +177,22 @@
             this.gv_FW_R.AllowUserToDeleteRows = false;
             this.gv_FW_R.AllowUserToOrderColumns = true;
             this.gv_FW_R.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.gv_FW_R.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.gv_FW_R.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.gv_FW_R.AutoGenerateColumns = false;
             this.gv_FW_R.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.gv_FW_R.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.gv_FW_R.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gv_FW_R.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.gv_FW_R.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gv_FW_R.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gv_FW_R.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.gv_FW_R.ColumnHeadersHeight = 40;
             this.gv_FW_R.ColumnHeadersVisible = false;
             this.gv_FW_R.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -198,14 +200,14 @@
             this.FW_CL_R_SW_Revisione});
             this.gv_FW_R.ContextMenuStrip = this.gv_FW_R_MenuStrip;
             this.gv_FW_R.DataSource = this.CL_Ricevitori_BindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gv_FW_R.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gv_FW_R.DefaultCellStyle = dataGridViewCellStyle7;
             this.gv_FW_R.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gv_FW_R.EnableHeadersVisualStyles = false;
             this.gv_FW_R.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -215,21 +217,21 @@
             this.gv_FW_R.Name = "gv_FW_R";
             this.gv_FW_R.ReadOnly = true;
             this.gv_FW_R.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gv_FW_R.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gv_FW_R.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.gv_FW_R.RowHeadersVisible = false;
             this.gv_FW_R.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.gv_FW_R.RowTemplate.DividerHeight = 1;
             this.gv_FW_R.RowTemplate.Height = 30;
             this.gv_FW_R.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.gv_FW_R.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gv_FW_R.Size = new System.Drawing.Size(148, 977);
+            this.gv_FW_R.Size = new System.Drawing.Size(148, 975);
             this.gv_FW_R.Style = MetroFramework.MetroColorStyle.Red;
             this.gv_FW_R.TabIndex = 2;
             this.gv_FW_R.UseCustomBackColor = true;
@@ -399,7 +401,7 @@
             this.panel_dati.HorizontalScrollbarSize = 10;
             this.panel_dati.Location = new System.Drawing.Point(3, 86);
             this.panel_dati.Name = "panel_dati";
-            this.panel_dati.Size = new System.Drawing.Size(1146, 630);
+            this.panel_dati.Size = new System.Drawing.Size(1396, 628);
             this.panel_dati.TabIndex = 77;
             this.panel_dati.VerticalScrollbar = true;
             this.panel_dati.VerticalScrollbarBarColor = true;
@@ -473,7 +475,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1146, 630);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1396, 628);
             this.tableLayoutPanel1.TabIndex = 119;
             // 
             // tb_FwAbbinato
@@ -492,7 +494,7 @@
             this.tb_FwAbbinato.CustomButton.UseSelectable = true;
             this.tb_FwAbbinato.CustomButton.Visible = false;
             this.tb_FwAbbinato.Lines = new string[0];
-            this.tb_FwAbbinato.Location = new System.Drawing.Point(575, 160);
+            this.tb_FwAbbinato.Location = new System.Drawing.Point(698, 160);
             this.tb_FwAbbinato.MaxLength = 32767;
             this.tb_FwAbbinato.Name = "tb_FwAbbinato";
             this.tb_FwAbbinato.PasswordChar = '\0';
@@ -514,7 +516,7 @@
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(764, 13);
+            this.metroPanel1.Location = new System.Drawing.Point(928, 13);
             this.metroPanel1.Name = "metroPanel1";
             this.tableLayoutPanel1.SetRowSpan(this.metroPanel1, 8);
             this.metroPanel1.Size = new System.Drawing.Size(1, 196);
@@ -531,7 +533,7 @@
             this.box_Separatore_01.HorizontalScrollbarBarColor = true;
             this.box_Separatore_01.HorizontalScrollbarHighlightOnWheel = false;
             this.box_Separatore_01.HorizontalScrollbarSize = 10;
-            this.box_Separatore_01.Location = new System.Drawing.Point(381, 13);
+            this.box_Separatore_01.Location = new System.Drawing.Point(463, 13);
             this.box_Separatore_01.Name = "box_Separatore_01";
             this.tableLayoutPanel1.SetRowSpan(this.box_Separatore_01, 8);
             this.box_Separatore_01.Size = new System.Drawing.Size(1, 196);
@@ -544,7 +546,7 @@
             // tb_NumInpAn
             // 
             this.tb_NumInpAn.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tb_NumInpAn.Location = new System.Drawing.Point(958, 108);
+            this.tb_NumInpAn.Location = new System.Drawing.Point(1163, 108);
             this.tb_NumInpAn.Name = "tb_NumInpAn";
             this.tb_NumInpAn.Size = new System.Drawing.Size(112, 20);
             this.tb_NumInpAn.TabIndex = 131;
@@ -552,7 +554,7 @@
             // tb_NumOutput
             // 
             this.tb_NumOutput.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tb_NumOutput.Location = new System.Drawing.Point(958, 82);
+            this.tb_NumOutput.Location = new System.Drawing.Point(1163, 82);
             this.tb_NumOutput.Name = "tb_NumOutput";
             this.tb_NumOutput.Size = new System.Drawing.Size(112, 20);
             this.tb_NumOutput.TabIndex = 130;
@@ -561,7 +563,7 @@
             // 
             this.tog_ProportionalOutput.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tog_ProportionalOutput.AutoSize = true;
-            this.tog_ProportionalOutput.Location = new System.Drawing.Point(958, 59);
+            this.tog_ProportionalOutput.Location = new System.Drawing.Point(1163, 59);
             this.tog_ProportionalOutput.Name = "tog_ProportionalOutput";
             this.tog_ProportionalOutput.Size = new System.Drawing.Size(80, 17);
             this.tog_ProportionalOutput.Style = MetroFramework.MetroColorStyle.Red;
@@ -573,7 +575,7 @@
             // 
             this.tog_EmergencyOutput.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tog_EmergencyOutput.AutoSize = true;
-            this.tog_EmergencyOutput.Location = new System.Drawing.Point(958, 36);
+            this.tog_EmergencyOutput.Location = new System.Drawing.Point(1163, 36);
             this.tog_EmergencyOutput.Name = "tog_EmergencyOutput";
             this.tog_EmergencyOutput.Size = new System.Drawing.Size(80, 17);
             this.tog_EmergencyOutput.Style = MetroFramework.MetroColorStyle.Red;
@@ -585,7 +587,7 @@
             // 
             this.tog_MasterOutput.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tog_MasterOutput.AutoSize = true;
-            this.tog_MasterOutput.Location = new System.Drawing.Point(958, 13);
+            this.tog_MasterOutput.Location = new System.Drawing.Point(1163, 13);
             this.tog_MasterOutput.Name = "tog_MasterOutput";
             this.tog_MasterOutput.Size = new System.Drawing.Size(80, 17);
             this.tog_MasterOutput.Style = MetroFramework.MetroColorStyle.Red;
@@ -597,7 +599,7 @@
             // 
             this.tog_Pair.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tog_Pair.AutoSize = true;
-            this.tog_Pair.Location = new System.Drawing.Point(192, 13);
+            this.tog_Pair.Location = new System.Drawing.Point(233, 13);
             this.tog_Pair.Name = "tog_Pair";
             this.tog_Pair.Size = new System.Drawing.Size(80, 17);
             this.tog_Pair.Style = MetroFramework.MetroColorStyle.Red;
@@ -609,7 +611,7 @@
             // 
             this.tog_Golden.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tog_Golden.AutoSize = true;
-            this.tog_Golden.Location = new System.Drawing.Point(192, 36);
+            this.tog_Golden.Location = new System.Drawing.Point(233, 36);
             this.tog_Golden.Name = "tog_Golden";
             this.tog_Golden.Size = new System.Drawing.Size(80, 17);
             this.tog_Golden.Style = MetroFramework.MetroColorStyle.Red;
@@ -621,7 +623,7 @@
             // 
             this.tog_SPAttivo.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tog_SPAttivo.AutoSize = true;
-            this.tog_SPAttivo.Location = new System.Drawing.Point(192, 59);
+            this.tog_SPAttivo.Location = new System.Drawing.Point(233, 59);
             this.tog_SPAttivo.Name = "tog_SPAttivo";
             this.tog_SPAttivo.Size = new System.Drawing.Size(80, 17);
             this.tog_SPAttivo.Style = MetroFramework.MetroColorStyle.Red;
@@ -633,7 +635,7 @@
             // 
             this.tog_SPPassivo.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tog_SPPassivo.AutoSize = true;
-            this.tog_SPPassivo.Location = new System.Drawing.Point(192, 83);
+            this.tog_SPPassivo.Location = new System.Drawing.Point(233, 83);
             this.tog_SPPassivo.Name = "tog_SPPassivo";
             this.tog_SPPassivo.Size = new System.Drawing.Size(80, 17);
             this.tog_SPPassivo.Style = MetroFramework.MetroColorStyle.Red;
@@ -645,7 +647,7 @@
             // 
             this.tog_PlugConfig.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tog_PlugConfig.AutoSize = true;
-            this.tog_PlugConfig.Location = new System.Drawing.Point(192, 109);
+            this.tog_PlugConfig.Location = new System.Drawing.Point(233, 109);
             this.tog_PlugConfig.Name = "tog_PlugConfig";
             this.tog_PlugConfig.Size = new System.Drawing.Size(80, 17);
             this.tog_PlugConfig.Style = MetroFramework.MetroColorStyle.Red;
@@ -707,7 +709,7 @@
             // 
             this.metroLabel10.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel10.AutoSize = true;
-            this.metroLabel10.Location = new System.Drawing.Point(386, 12);
+            this.metroLabel10.Location = new System.Drawing.Point(468, 12);
             this.metroLabel10.Name = "metroLabel10";
             this.metroLabel10.Size = new System.Drawing.Size(99, 19);
             this.metroLabel10.TabIndex = 100;
@@ -717,7 +719,7 @@
             // 
             this.tog_CambioRicevitore.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tog_CambioRicevitore.AutoSize = true;
-            this.tog_CambioRicevitore.Location = new System.Drawing.Point(575, 36);
+            this.tog_CambioRicevitore.Location = new System.Drawing.Point(698, 36);
             this.tog_CambioRicevitore.Name = "tog_CambioRicevitore";
             this.tog_CambioRicevitore.Size = new System.Drawing.Size(80, 17);
             this.tog_CambioRicevitore.Style = MetroFramework.MetroColorStyle.Red;
@@ -729,7 +731,7 @@
             // 
             this.tog_MotRim.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tog_MotRim.AutoSize = true;
-            this.tog_MotRim.Location = new System.Drawing.Point(575, 59);
+            this.tog_MotRim.Location = new System.Drawing.Point(698, 59);
             this.tog_MotRim.Name = "tog_MotRim";
             this.tog_MotRim.Size = new System.Drawing.Size(80, 17);
             this.tog_MotRim.Style = MetroFramework.MetroColorStyle.Red;
@@ -741,7 +743,7 @@
             // 
             this.tog_CambioPagina.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tog_CambioPagina.AutoSize = true;
-            this.tog_CambioPagina.Location = new System.Drawing.Point(575, 13);
+            this.tog_CambioPagina.Location = new System.Drawing.Point(698, 13);
             this.tog_CambioPagina.Name = "tog_CambioPagina";
             this.tog_CambioPagina.Size = new System.Drawing.Size(80, 17);
             this.tog_CambioPagina.Style = MetroFramework.MetroColorStyle.Red;
@@ -753,7 +755,7 @@
             // 
             this.metroLabel11.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel11.AutoSize = true;
-            this.metroLabel11.Location = new System.Drawing.Point(386, 35);
+            this.metroLabel11.Location = new System.Drawing.Point(468, 35);
             this.metroLabel11.Name = "metroLabel11";
             this.metroLabel11.Size = new System.Drawing.Size(117, 19);
             this.metroLabel11.TabIndex = 102;
@@ -763,7 +765,7 @@
             // 
             this.metroLabel18.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel18.AutoSize = true;
-            this.metroLabel18.Location = new System.Drawing.Point(769, 82);
+            this.metroLabel18.Location = new System.Drawing.Point(933, 82);
             this.metroLabel18.Name = "metroLabel18";
             this.metroLabel18.Size = new System.Drawing.Size(103, 19);
             this.metroLabel18.TabIndex = 116;
@@ -773,7 +775,7 @@
             // 
             this.metroLabel12.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel12.AutoSize = true;
-            this.metroLabel12.Location = new System.Drawing.Point(386, 58);
+            this.metroLabel12.Location = new System.Drawing.Point(468, 58);
             this.metroLabel12.Name = "metroLabel12";
             this.metroLabel12.Size = new System.Drawing.Size(61, 19);
             this.metroLabel12.TabIndex = 104;
@@ -783,7 +785,7 @@
             // 
             this.metroLabel17.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel17.AutoSize = true;
-            this.metroLabel17.Location = new System.Drawing.Point(769, 58);
+            this.metroLabel17.Location = new System.Drawing.Point(933, 58);
             this.metroLabel17.Name = "metroLabel17";
             this.metroLabel17.Size = new System.Drawing.Size(129, 19);
             this.metroLabel17.TabIndex = 114;
@@ -793,7 +795,7 @@
             // 
             this.metroLabel13.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel13.AutoSize = true;
-            this.metroLabel13.Location = new System.Drawing.Point(386, 82);
+            this.metroLabel13.Location = new System.Drawing.Point(468, 82);
             this.metroLabel13.Name = "metroLabel13";
             this.metroLabel13.Size = new System.Drawing.Size(113, 19);
             this.metroLabel13.TabIndex = 107;
@@ -803,7 +805,7 @@
             // 
             this.metroLabel16.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel16.AutoSize = true;
-            this.metroLabel16.Location = new System.Drawing.Point(769, 35);
+            this.metroLabel16.Location = new System.Drawing.Point(933, 35);
             this.metroLabel16.Name = "metroLabel16";
             this.metroLabel16.Size = new System.Drawing.Size(119, 19);
             this.metroLabel16.TabIndex = 112;
@@ -813,7 +815,7 @@
             // 
             this.metroLabel14.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel14.AutoSize = true;
-            this.metroLabel14.Location = new System.Drawing.Point(386, 108);
+            this.metroLabel14.Location = new System.Drawing.Point(468, 108);
             this.metroLabel14.Name = "metroLabel14";
             this.metroLabel14.Size = new System.Drawing.Size(106, 19);
             this.metroLabel14.TabIndex = 108;
@@ -823,7 +825,7 @@
             // 
             this.metroLabel15.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel15.AutoSize = true;
-            this.metroLabel15.Location = new System.Drawing.Point(769, 12);
+            this.metroLabel15.Location = new System.Drawing.Point(933, 12);
             this.metroLabel15.Name = "metroLabel15";
             this.metroLabel15.Size = new System.Drawing.Size(94, 19);
             this.metroLabel15.TabIndex = 111;
@@ -833,7 +835,7 @@
             // 
             this.metroLabel21.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel21.AutoSize = true;
-            this.metroLabel21.Location = new System.Drawing.Point(769, 108);
+            this.metroLabel21.Location = new System.Drawing.Point(933, 108);
             this.metroLabel21.Name = "metroLabel21";
             this.metroLabel21.Size = new System.Drawing.Size(113, 19);
             this.metroLabel21.TabIndex = 117;
@@ -843,7 +845,7 @@
             // 
             this.metroLabel22.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel22.AutoSize = true;
-            this.metroLabel22.Location = new System.Drawing.Point(769, 134);
+            this.metroLabel22.Location = new System.Drawing.Point(933, 134);
             this.metroLabel22.Name = "metroLabel22";
             this.metroLabel22.Size = new System.Drawing.Size(99, 19);
             this.metroLabel22.TabIndex = 118;
@@ -852,7 +854,7 @@
             // tb_NumPalmari
             // 
             this.tb_NumPalmari.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tb_NumPalmari.Location = new System.Drawing.Point(575, 108);
+            this.tb_NumPalmari.Location = new System.Drawing.Point(698, 108);
             this.tb_NumPalmari.Name = "tb_NumPalmari";
             this.tb_NumPalmari.Size = new System.Drawing.Size(112, 20);
             this.tb_NumPalmari.TabIndex = 129;
@@ -861,7 +863,7 @@
             // tb_NumInpDig
             // 
             this.tb_NumInpDig.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tb_NumInpDig.Location = new System.Drawing.Point(958, 134);
+            this.tb_NumInpDig.Location = new System.Drawing.Point(1163, 134);
             this.tb_NumInpDig.Name = "tb_NumInpDig";
             this.tb_NumInpDig.Size = new System.Drawing.Size(112, 20);
             this.tb_NumInpDig.TabIndex = 132;
@@ -869,7 +871,7 @@
             // tb_IdentifRic
             // 
             this.tb_IdentifRic.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tb_IdentifRic.Location = new System.Drawing.Point(575, 82);
+            this.tb_IdentifRic.Location = new System.Drawing.Point(698, 82);
             this.tb_IdentifRic.Name = "tb_IdentifRic";
             this.tb_IdentifRic.Size = new System.Drawing.Size(112, 20);
             this.tb_IdentifRic.TabIndex = 133;
@@ -889,7 +891,7 @@
             // tb_ContTasti
             // 
             this.tb_ContTasti.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tb_ContTasti.Location = new System.Drawing.Point(192, 161);
+            this.tb_ContTasti.Location = new System.Drawing.Point(233, 161);
             this.tb_ContTasti.Name = "tb_ContTasti";
             this.tb_ContTasti.Size = new System.Drawing.Size(112, 20);
             this.tb_ContTasti.TabIndex = 134;
@@ -909,7 +911,7 @@
             // tb_TimeOut
             // 
             this.tb_TimeOut.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tb_TimeOut.Location = new System.Drawing.Point(192, 189);
+            this.tb_TimeOut.Location = new System.Drawing.Point(233, 189);
             this.tb_TimeOut.Name = "tb_TimeOut";
             this.tb_TimeOut.Size = new System.Drawing.Size(112, 20);
             this.tb_TimeOut.TabIndex = 135;
@@ -918,7 +920,7 @@
             // 
             this.metroLabel25.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel25.AutoSize = true;
-            this.metroLabel25.Location = new System.Drawing.Point(386, 162);
+            this.metroLabel25.Location = new System.Drawing.Point(468, 162);
             this.metroLabel25.Name = "metroLabel25";
             this.metroLabel25.Size = new System.Drawing.Size(139, 19);
             this.metroLabel25.TabIndex = 121;
@@ -928,7 +930,7 @@
             // 
             this.metroLabel26.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel26.AutoSize = true;
-            this.metroLabel26.Location = new System.Drawing.Point(769, 189);
+            this.metroLabel26.Location = new System.Drawing.Point(933, 189);
             this.metroLabel26.Name = "metroLabel26";
             this.metroLabel26.Size = new System.Drawing.Size(67, 19);
             this.metroLabel26.TabIndex = 145;
@@ -938,7 +940,7 @@
             // 
             this.tog_CloseLink.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tog_CloseLink.AutoSize = true;
-            this.tog_CloseLink.Location = new System.Drawing.Point(958, 190);
+            this.tog_CloseLink.Location = new System.Drawing.Point(1163, 190);
             this.tog_CloseLink.Name = "tog_CloseLink";
             this.tog_CloseLink.Size = new System.Drawing.Size(80, 17);
             this.tog_CloseLink.Style = MetroFramework.MetroColorStyle.Red;
@@ -1144,7 +1146,7 @@
             this.layout_dati.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 83F));
             this.layout_dati.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.layout_dati.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 308F));
-            this.layout_dati.Size = new System.Drawing.Size(1152, 1027);
+            this.layout_dati.Size = new System.Drawing.Size(1402, 1025);
             this.layout_dati.TabIndex = 78;
             // 
             // panel_intestazione
@@ -1157,7 +1159,7 @@
             this.panel_intestazione.HorizontalScrollbarSize = 10;
             this.panel_intestazione.Location = new System.Drawing.Point(3, 3);
             this.panel_intestazione.Name = "panel_intestazione";
-            this.panel_intestazione.Size = new System.Drawing.Size(1146, 77);
+            this.panel_intestazione.Size = new System.Drawing.Size(1396, 77);
             this.panel_intestazione.TabIndex = 121;
             this.panel_intestazione.VerticalScrollbarBarColor = true;
             this.panel_intestazione.VerticalScrollbarHighlightOnWheel = false;
@@ -1187,7 +1189,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1146, 77);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1396, 77);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // cb_Famiglia
@@ -1218,9 +1220,9 @@
             this.panel_revisioni.HorizontalScrollbarBarColor = true;
             this.panel_revisioni.HorizontalScrollbarHighlightOnWheel = false;
             this.panel_revisioni.HorizontalScrollbarSize = 10;
-            this.panel_revisioni.Location = new System.Drawing.Point(3, 722);
+            this.panel_revisioni.Location = new System.Drawing.Point(3, 720);
             this.panel_revisioni.Name = "panel_revisioni";
-            this.panel_revisioni.Size = new System.Drawing.Size(570, 302);
+            this.panel_revisioni.Size = new System.Drawing.Size(695, 302);
             this.panel_revisioni.TabIndex = 79;
             this.panel_revisioni.VerticalScrollbarBarColor = true;
             this.panel_revisioni.VerticalScrollbarHighlightOnWheel = false;
@@ -1231,7 +1233,7 @@
             this.rtb_Revisioni.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rtb_Revisioni.Location = new System.Drawing.Point(0, 19);
             this.rtb_Revisioni.Name = "rtb_Revisioni";
-            this.rtb_Revisioni.Size = new System.Drawing.Size(570, 283);
+            this.rtb_Revisioni.Size = new System.Drawing.Size(695, 283);
             this.rtb_Revisioni.TabIndex = 0;
             this.rtb_Revisioni.Text = "";
             // 
@@ -1256,9 +1258,9 @@
             this.panel_funzionamento.HorizontalScrollbarBarColor = true;
             this.panel_funzionamento.HorizontalScrollbarHighlightOnWheel = false;
             this.panel_funzionamento.HorizontalScrollbarSize = 10;
-            this.panel_funzionamento.Location = new System.Drawing.Point(579, 722);
+            this.panel_funzionamento.Location = new System.Drawing.Point(704, 720);
             this.panel_funzionamento.Name = "panel_funzionamento";
-            this.panel_funzionamento.Size = new System.Drawing.Size(570, 302);
+            this.panel_funzionamento.Size = new System.Drawing.Size(695, 302);
             this.panel_funzionamento.TabIndex = 80;
             this.panel_funzionamento.VerticalScrollbarBarColor = true;
             this.panel_funzionamento.VerticalScrollbarHighlightOnWheel = false;
@@ -1269,7 +1271,7 @@
             this.rtb_Funzionamento.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rtb_Funzionamento.Location = new System.Drawing.Point(0, 19);
             this.rtb_Funzionamento.Name = "rtb_Funzionamento";
-            this.rtb_Funzionamento.Size = new System.Drawing.Size(570, 283);
+            this.rtb_Funzionamento.Size = new System.Drawing.Size(695, 283);
             this.rtb_Funzionamento.TabIndex = 0;
             this.rtb_Funzionamento.Text = "";
             // 
@@ -1294,12 +1296,14 @@
             this.pan_Menu_comandi.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menu_sw_new,
             this.menu_sw_div01,
+            this.menu_sw_edit,
+            this.toolStripMenuItem1,
             this.menu_sw_clona,
             this.menu_sw_div02,
             this.creaRevisioneToolStripMenuItem});
             this.pan_Menu_comandi.Location = new System.Drawing.Point(0, 0);
             this.pan_Menu_comandi.Name = "pan_Menu_comandi";
-            this.pan_Menu_comandi.Size = new System.Drawing.Size(650, 25);
+            this.pan_Menu_comandi.Size = new System.Drawing.Size(775, 25);
             this.pan_Menu_comandi.TabIndex = 80;
             this.pan_Menu_comandi.Text = "menuStrip1";
             // 
@@ -1351,7 +1355,7 @@
             this.menu_sw_salva,
             this.menu_sw_div12,
             this.menu_sw_annulla});
-            this.pan_Menu_salva.Location = new System.Drawing.Point(826, 0);
+            this.pan_Menu_salva.Location = new System.Drawing.Point(1001, 0);
             this.pan_Menu_salva.Name = "pan_Menu_salva";
             this.pan_Menu_salva.Size = new System.Drawing.Size(168, 24);
             this.pan_Menu_salva.TabIndex = 81;
@@ -1388,7 +1392,7 @@
             this.pan_Menu_exit.Dock = System.Windows.Forms.DockStyle.None;
             this.pan_Menu_exit.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menu_sw_exit});
-            this.pan_Menu_exit.Location = new System.Drawing.Point(1227, 0);
+            this.pan_Menu_exit.Location = new System.Drawing.Point(1477, 0);
             this.pan_Menu_exit.Name = "pan_Menu_exit";
             this.pan_Menu_exit.Size = new System.Drawing.Size(75, 24);
             this.pan_Menu_exit.TabIndex = 82;
@@ -1425,7 +1429,7 @@
             this.layout_menu.RowCount = 1;
             this.layout_menu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.layout_menu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.layout_menu.Size = new System.Drawing.Size(1302, 25);
+            this.layout_menu.Size = new System.Drawing.Size(1552, 25);
             this.layout_menu.TabIndex = 118;
             // 
             // CL_Ricevitori_TableAdapter
@@ -1441,6 +1445,22 @@
             // 
             this.CL_Famiglie_TableAdapter.ClearBeforeFill = true;
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Enabled = false;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(22, 21);
+            this.toolStripMenuItem1.Text = "|";
+            // 
+            // menu_sw_edit
+            // 
+            this.menu_sw_edit.BackColor = System.Drawing.Color.LightCoral;
+            this.menu_sw_edit.Image = ((System.Drawing.Image)(resources.GetObject("menu_sw_edit.Image")));
+            this.menu_sw_edit.Name = "menu_sw_edit";
+            this.menu_sw_edit.Size = new System.Drawing.Size(144, 21);
+            this.menu_sw_edit.Text = "Modifica selezionato";
+            this.menu_sw_edit.Click += new System.EventHandler(this.menu_sw_edit_Click);
+            // 
             // UC_FW_R_Classic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1448,7 +1468,7 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1342, 1102);
+            this.ClientSize = new System.Drawing.Size(1592, 1100);
             this.ControlBox = false;
             this.Controls.Add(this.layout_dati);
             this.Controls.Add(this.panel_FW_R);
@@ -1594,5 +1614,7 @@
         private MetroFramework.Controls.MetroTextBox tb_FwAbbinato;
         private MetroFramework.Controls.MetroLabel metroLabel26;
         private MetroFramework.Controls.MetroToggle tog_CloseLink;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem menu_sw_edit;
     }
 }
