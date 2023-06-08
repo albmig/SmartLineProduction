@@ -49,7 +49,6 @@
             this.gestioneDelFirmwareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.classicLineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fWPalmariClassicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.fWRicevitoriClassicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
             this.queryFWOrdinatoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -313,7 +312,6 @@
             // 
             this.classicLineToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fWPalmariClassicToolStripMenuItem,
-            this.toolStripSeparator7,
             this.fWRicevitoriClassicToolStripMenuItem,
             this.toolStripSeparator10,
             this.queryFWOrdinatoToolStripMenuItem});
@@ -327,11 +325,6 @@
             this.fWPalmariClassicToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.fWPalmariClassicToolStripMenuItem.Text = "FW Palmari - Classic";
             this.fWPalmariClassicToolStripMenuItem.Click += new System.EventHandler(this.fWPalmariClassicToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator7
-            // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(187, 6);
             // 
             // fWRicevitoriClassicToolStripMenuItem
             // 
@@ -1070,7 +1063,6 @@
         private MetroFramework.Controls.MetroLabel lab_Brother_Default;
         private DevExpress.XtraEditors.ToggleSwitch tog_Printers;
         private System.Windows.Forms.ToolStripMenuItem fWPalmariClassicToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripMenuItem fWRicevitoriClassicToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;

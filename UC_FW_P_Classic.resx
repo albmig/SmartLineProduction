@@ -120,12 +120,6 @@
   <metadata name="CL_Famiglie_BindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>994, 17</value>
   </metadata>
-  <metadata name="CL_Famiglie_BindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>994, 17</value>
-  </metadata>
-  <metadata name="ds_CL_Firmware.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>452, 17</value>
-  </metadata>
   <metadata name="ds_CL_Firmware.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>452, 17</value>
   </metadata>
@@ -150,12 +144,12 @@
   </data>
   <data name="menu_sw_edit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAADnSURBVDhPrY8xCsJAEEXTeBFPYZ0+RbCztk1lnWMIgQie
-        w9LGwiagKSzsTLdFSLHbyTgj88NKInHBD0NmNv+/nY1ERBQ55+5S0gcJ4c3+ROvtkbhvgiAIR8sdAGEQ
-        Nl9xu7WOvP43iD7hJjdjE2zDEBMC6Z/ydwifB0EaHyK9PI+rC4Yg7EH8entHBYgYsY30xhiK43gaIFLI
-        U8xt2yLkAx5cC7WPCwEU5izLKM9zmc9qHUo3oKqqqCxLSpLkYwN81T4UAGKs65rSNO2D1tppAP+cIYDy
-        56IoZD6ofVxsWEnoS12cc/MXTa+zHRYRmJsAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        xAAADsQBlSsOGwAAAOdJREFUOE+tjzEKwkAQRdN4EU9hnT5FsLO2TWWdYwiBCJ7D0sbCJqApLOxMt0VI
+        sdvJOCPzw0oiccEPQ2Y2/7+djUREFDnn7lLSBwnhzf5E6+2RuG+CIAhHyx0AYRA2X3G7tY68/jeIPuEm
+        N2MTbMMQEwLpn/J3CJ8HQRofIr08j6sLhiDsQfx6e0cFiBixjfTGGIrjeBogUshTzG3bIuQDHlwLtY8L
+        ARTmLMsoz3OZz2odSjegqqqoLEtKkuRjA3zVPhQAYqzrmtI07YPW2mkA/5whgPLnoihkPqh9XGxYSehL
+        XZxz8xdNr7MdFhGYmwAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="menu_sw_clona.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -177,9 +171,6 @@
   </data>
   <metadata name="pan_Menu_salva.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>178, 17</value>
-  </metadata>
-  <metadata name="pan_Menu_exit.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>319, 17</value>
   </metadata>
   <data name="menu_sw_salva.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -209,6 +200,9 @@
         xPhw3RK9AWXCkz0HaCZUAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="pan_Menu_exit.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>319, 17</value>
+  </metadata>
   <data name="menu_sw_exit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO

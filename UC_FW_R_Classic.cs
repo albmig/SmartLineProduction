@@ -221,8 +221,8 @@ namespace SmartLineProduction
             newrow["FW_CL_R_TipoDev"] = cb_Famiglia.SelectedValue;
 
             if (cb_868.Checked) { newrow["FW_CL_R_Freq"] = "X"; }
-            if (cb_433.Checked) { newrow["FW_CL_R_Freq"] = "A"; }
-            if (cb_915.Checked) { newrow["FW_CL_R_Freq"] = "B"; }
+            if (cb_433.Checked) { newrow["FW_CL_R_Freq"] = "B"; }
+            if (cb_915.Checked) { newrow["FW_CL_R_Freq"] = "A"; }
             if (cb_filo.Checked) { newrow["FW_CL_R_Freq"] = "N"; }
             if (cb_can.Checked) { newrow["FW_CL_R_Freq"] = "C"; }
 
@@ -288,8 +288,8 @@ namespace SmartLineProduction
             editrow["FW_CL_R_TipoDev"] = cb_Famiglia.SelectedValue;
 
             if (cb_868.Checked) { editrow["FW_CL_R_Freq"] = "X"; }
-            if (cb_433.Checked) { editrow["FW_CL_R_Freq"] = "A"; }
-            if (cb_915.Checked) { editrow["FW_CL_R_Freq"] = "B"; }
+            if (cb_433.Checked) { editrow["FW_CL_R_Freq"] = "B"; }
+            if (cb_915.Checked) { editrow["FW_CL_R_Freq"] = "A"; }
             if (cb_filo.Checked) { editrow["FW_CL_R_Freq"] = "N"; }
             if (cb_can.Checked) { editrow["FW_CL_R_Freq"] = "C"; }
 

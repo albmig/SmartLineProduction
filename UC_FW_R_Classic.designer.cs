@@ -118,9 +118,11 @@
             this.pan_Menu_comandi = new System.Windows.Forms.MenuStrip();
             this.menu_sw_new = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_sw_div01 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_sw_edit = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_sw_clona = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_sw_div02 = new System.Windows.Forms.ToolStripMenuItem();
             this.creaRevisioneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pan_Menu_salva = new System.Windows.Forms.MenuStrip();
             this.menu_sw_salva = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_sw_div12 = new System.Windows.Forms.ToolStripMenuItem();
@@ -131,8 +133,6 @@
             this.CL_Ricevitori_TableAdapter = new SmartLineProduction.ds_CL_FirmwareTableAdapters.FW_CL_RicevitoriTableAdapter();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.CL_Famiglie_TableAdapter = new SmartLineProduction.ds_CL_FirmwareTableAdapters.FW_CL_FamiglieTableAdapter();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu_sw_edit = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_FW_R.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv_FW_R)).BeginInit();
             this.gv_FW_R_MenuStrip.SuspendLayout();
@@ -767,9 +767,9 @@
             this.metroLabel18.AutoSize = true;
             this.metroLabel18.Location = new System.Drawing.Point(933, 82);
             this.metroLabel18.Name = "metroLabel18";
-            this.metroLabel18.Size = new System.Drawing.Size(103, 19);
+            this.metroLabel18.Size = new System.Drawing.Size(201, 19);
             this.metroLabel18.TabIndex = 116;
-            this.metroLabel18.Text = "Numero Output";
+            this.metroLabel18.Text = "Numero Output (Esclusi MO/EO)";
             // 
             // metroLabel12
             // 
@@ -1297,10 +1297,10 @@
             this.menu_sw_new,
             this.menu_sw_div01,
             this.menu_sw_edit,
-            this.toolStripMenuItem1,
             this.menu_sw_clona,
             this.menu_sw_div02,
-            this.creaRevisioneToolStripMenuItem});
+            this.creaRevisioneToolStripMenuItem,
+            this.toolStripMenuItem1});
             this.pan_Menu_comandi.Location = new System.Drawing.Point(0, 0);
             this.pan_Menu_comandi.Name = "pan_Menu_comandi";
             this.pan_Menu_comandi.Size = new System.Drawing.Size(775, 25);
@@ -1321,6 +1321,15 @@
             this.menu_sw_div01.Name = "menu_sw_div01";
             this.menu_sw_div01.Size = new System.Drawing.Size(22, 21);
             this.menu_sw_div01.Text = "|";
+            // 
+            // menu_sw_edit
+            // 
+            this.menu_sw_edit.BackColor = System.Drawing.Color.LightCoral;
+            this.menu_sw_edit.Image = ((System.Drawing.Image)(resources.GetObject("menu_sw_edit.Image")));
+            this.menu_sw_edit.Name = "menu_sw_edit";
+            this.menu_sw_edit.Size = new System.Drawing.Size(144, 21);
+            this.menu_sw_edit.Text = "Modifica selezionato";
+            this.menu_sw_edit.Click += new System.EventHandler(this.menu_sw_edit_Click);
             // 
             // menu_sw_clona
             // 
@@ -1344,6 +1353,13 @@
             this.creaRevisioneToolStripMenuItem.Size = new System.Drawing.Size(112, 21);
             this.creaRevisioneToolStripMenuItem.Text = "Crea Revisione";
             this.creaRevisioneToolStripMenuItem.Click += new System.EventHandler(this.creaRevisioneToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Enabled = false;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(22, 21);
+            this.toolStripMenuItem1.Text = "|";
             // 
             // pan_Menu_salva
             // 
@@ -1444,22 +1460,6 @@
             // CL_Famiglie_TableAdapter
             // 
             this.CL_Famiglie_TableAdapter.ClearBeforeFill = true;
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Enabled = false;
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(22, 21);
-            this.toolStripMenuItem1.Text = "|";
-            // 
-            // menu_sw_edit
-            // 
-            this.menu_sw_edit.BackColor = System.Drawing.Color.LightCoral;
-            this.menu_sw_edit.Image = ((System.Drawing.Image)(resources.GetObject("menu_sw_edit.Image")));
-            this.menu_sw_edit.Name = "menu_sw_edit";
-            this.menu_sw_edit.Size = new System.Drawing.Size(144, 21);
-            this.menu_sw_edit.Text = "Modifica selezionato";
-            this.menu_sw_edit.Click += new System.EventHandler(this.menu_sw_edit_Click);
             // 
             // UC_FW_R_Classic
             // 
