@@ -35,8 +35,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Programmazione_Progettazione));
             this.commandPanel = new MetroFramework.Controls.MetroPanel();
             this.pan_tipoprogramma = new MetroFramework.Controls.MetroPanel();
-            this.safetyPointRFIDBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ds_Programmazione = new SmartLineProduction.ds_Programmazione();
             this.grid_prototipi = new MetroFramework.Controls.MetroGrid();
             this.grid_prototipi_DataRichiesta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grid_prototipi_ArticoloProgettazione = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,6 +53,8 @@
             this.menu_commesse_nas = new System.Windows.Forms.ToolStripMenuItem();
             this.sFProgettazioneSLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ds_Prototipi = new SmartLineProduction.ds_Prototipi();
+            this.safetyPointRFIDBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ds_Programmazione = new SmartLineProduction.ds_Programmazione();
             this.outputPanel = new MetroFramework.Controls.MetroPanel();
             this.dos_box = new System.Windows.Forms.TextBox();
             this.layout_orizz_menu = new System.Windows.Forms.TableLayoutPanel();
@@ -76,12 +76,12 @@
             this.safetyPointRFIDTableAdapter = new SmartLineProduction.ds_ProgrammazioneTableAdapters.SafetyPointRFIDTableAdapter();
             this.commandPanel.SuspendLayout();
             this.pan_tipoprogramma.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.safetyPointRFIDBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ds_Programmazione)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid_prototipi)).BeginInit();
             this.grid_prototipi_menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sFProgettazioneSLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ds_Prototipi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.safetyPointRFIDBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ds_Programmazione)).BeginInit();
             this.outputPanel.SuspendLayout();
             this.layout_orizz_menu.SuspendLayout();
             this.pan_Menu_exit.SuspendLayout();
@@ -123,16 +123,6 @@
             this.pan_tipoprogramma.VerticalScrollbarBarColor = true;
             this.pan_tipoprogramma.VerticalScrollbarHighlightOnWheel = false;
             this.pan_tipoprogramma.VerticalScrollbarSize = 10;
-            // 
-            // safetyPointRFIDBindingSource
-            // 
-            this.safetyPointRFIDBindingSource.DataMember = "SafetyPointRFID";
-            this.safetyPointRFIDBindingSource.DataSource = this.ds_Programmazione;
-            // 
-            // ds_Programmazione
-            // 
-            this.ds_Programmazione.DataSetName = "ds_Programmazione";
-            this.ds_Programmazione.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // grid_prototipi
             // 
@@ -344,6 +334,16 @@
             this.ds_Prototipi.DataSetName = "ds_Prototipi";
             this.ds_Prototipi.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // safetyPointRFIDBindingSource
+            // 
+            this.safetyPointRFIDBindingSource.DataMember = "SafetyPointRFID";
+            this.safetyPointRFIDBindingSource.DataSource = this.ds_Programmazione;
+            // 
+            // ds_Programmazione
+            // 
+            this.ds_Programmazione.DataSetName = "ds_Programmazione";
+            this.ds_Programmazione.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // outputPanel
             // 
             this.outputPanel.Controls.Add(this.dos_box);
@@ -510,12 +510,12 @@
             this.Load += new System.EventHandler(this.UC_Programmazione_Progettazione_Load);
             this.commandPanel.ResumeLayout(false);
             this.pan_tipoprogramma.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.safetyPointRFIDBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ds_Programmazione)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid_prototipi)).EndInit();
             this.grid_prototipi_menu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.sFProgettazioneSLBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ds_Prototipi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.safetyPointRFIDBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ds_Programmazione)).EndInit();
             this.outputPanel.ResumeLayout(false);
             this.outputPanel.PerformLayout();
             this.layout_orizz_menu.ResumeLayout(false);

@@ -20,11 +20,15 @@ namespace SmartLineProduction
         public static string qr_ID = "";                                        // lettura del barcode, può essere codice articolo (classic) o ID Smartline (smartline)
         public static string qr_fw = "";                                        // lettura del barcode
         public static string qr_ClassicSmart = "";                              // C Classic - S Smartline
-        public static string path_classic = @"\\192.168.0.8\sistematica\AREA_PRODOTTO\CLASSICLINE\XSLV_XPCL\";
-        public static string path_smartline = @"\\192.168.0.8\sistematica\AREA_PRODOTTO\SMARTLINE\XSLV\";
+        //public static string path_classic = @"\\192.168.0.8\sistematica\AREA_PRODOTTO\CLASSICLINE\XSLV_XPCL\";
+        //public static string path_smartline = @"\\192.168.0.8\sistematica\AREA_PRODOTTO\SMARTLINE\XSLV\";
+        public static string path_classic = @"\\dc\AREA_UFFICI\AREA_PRODOTTO\CLASSICLINE\XSLV_XPCL\";
+        public static string path_smartline = @"\\dc\AREA_UFFICI\AREA_PRODOTTO\SMARTLINE\XSLV\";
         public static string WEB_path_image = Properties.Settings.Default.Doc_folder;
-        public static string CLASSIC_path_image = @"\\192.168.0.8\sistematica\AREA_PRODOTTO\CLASSICLINE\IMMAGINI_PRODOTTO\";
-        public static string SMARTLINE_path_image = @"\\192.168.0.8\sistematica\AREA_PRODOTTO\SMARTLINE\IMMAGINI_PRODOTTO\";
+        //public static string CLASSIC_path_image = @"\\192.168.0.8\sistematica\AREA_PRODOTTO\CLASSICLINE\IMMAGINI_PRODOTTO\";
+        //public static string SMARTLINE_path_image = @"\\192.168.0.8\sistematica\AREA_PRODOTTO\SMARTLINE\IMMAGINI_PRODOTTO\";
+        public static string CLASSIC_path_image = @"\\dc\AREA_UFFICI\AREA_PRODOTTO\CLASSICLINE\IMMAGINI_PRODOTTO\";
+        public static string SMARTLINE_path_image = @"\\dc\AREA_UFFICI\AREA_PRODOTTO\SMARTLINE\IMMAGINI_PRODOTTO\";
         public static string filtro_special = "TipoScheda = 'LSP'";
         public static string filtro_standard = "(TipoScheda = 'LST' OR TipoScheda = 'COL')";
         public static string filtro_articolo = string.Empty;
@@ -84,7 +88,9 @@ namespace SmartLineProduction
 
                 if (sFDbarXSLVBindingSource.Count == 0)
                 {
-                    pdf_viewer_xslv.LoadDocument(@"Resources\NO_XSLV.pdf");
+                    // pdf_viewer_xslv.LoadDocument(@".\Resources\NO_XSLV.pdf");
+                    pdf_viewer_xslv.LoadDocument(@"\\dc\AREA_IT\AREA_SOFTWARE_SISTEMATICA\SmartLineProduction\Resources\NO_XSLV.pdf");
+
                 }
 
                 //Carica Immagine
@@ -303,7 +309,8 @@ namespace SmartLineProduction
         {
             if (sFDbarXSLVBindingSource.Count == 0)
             {
-                pdf_viewer_xslv.LoadDocument(@"Resources\NO_XSLV.pdf");
+//                pdf_viewer_xslv.LoadDocument(@".\Resources\NO_XSLV.pdf");
+                pdf_viewer_xslv.LoadDocument(@"\\dc\AREA_IT\AREA_SOFTWARE_SISTEMATICA\SmartLineProduction\Resources\NO_XSLV.pdf");                
             }
         }
     }

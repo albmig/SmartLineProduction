@@ -36,6 +36,7 @@ namespace SmartLineProduction
         DataRow sourceRow;
         bool VediObsolete = false;
 
+        int Glob_RowId = 0;
         private int ultcodice = 0;
 
         public UC_Quality()
@@ -50,6 +51,8 @@ namespace SmartLineProduction
 
         private void UC_Quality_Load(object sender, EventArgs e)
         {
+            // TODO: questa riga di codice carica i dati nella tabella 'ds_Quality.Filter_Quality'. È possibile spostarla o rimuoverla se necessario.
+            this.filter_QualityTableAdapter.Fill(this.ds_Quality.Filter_Quality);
             AggiornaArchivi();
 
             lab_MyIp.Text = FindIP();
@@ -101,6 +104,12 @@ namespace SmartLineProduction
                 case "V":
                     this.dt_QualityTableAdapter.FillBy_CodiceQuality(this.ds_Quality.dt_Quality);
 
+                    cb_User.Enabled = false;
+                    cb_projprodarea.Enabled = false;
+                    cb_org.Enabled = false;
+                    cb_type.Enabled = false;
+                    cb_class.Enabled = false;
+
                     dtQualityBindingSource.ResumeBinding();
                     gv_Quality.Enabled = true;
                     tb_Des.Enabled = false;
@@ -125,6 +134,13 @@ namespace SmartLineProduction
                     break;
                 case "I":
                     dtQualityBindingSource.SuspendBinding();
+
+                    cb_User.Enabled = true;
+                    cb_projprodarea.Enabled = true;
+                    cb_org.Enabled = true;
+                    cb_type.Enabled = true;
+                    cb_class.Enabled = true;
+
                     tb_Des.Enabled = true;
                     tb_Des.Text = "";
                     tb_folder.Enabled = true;
@@ -168,6 +184,12 @@ namespace SmartLineProduction
                     tb_vers.Enabled = true;
 
                     gv_Quality.Enabled = false;
+
+                    cb_User.Enabled = false;
+                    cb_projprodarea.Enabled = false;
+                    cb_org.Enabled = false;
+                    cb_type.Enabled = false;
+                    cb_class.Enabled = false;
 
                     //usersBindingSource.RemoveFilter();
                     //dtQualityProjProdAreaBindingSource.RemoveFilter();
@@ -364,7 +386,8 @@ namespace SmartLineProduction
         private void tb_folder_ButtonClick(object sender, EventArgs e)
         {
             FolderBrowserDialog folderDlg = new FolderBrowserDialog();
-            folderDlg.SelectedPath = @"\\192.168.0.8\sistematica";
+            //folderDlg.SelectedPath = @"\\192.168.0.8\sistematica";
+            folderDlg.SelectedPath = @"\\dc";
             folderDlg.ShowNewFolderButton = true;
             // Show the FolderBrowserDialog.  
             DialogResult result = folderDlg.ShowDialog();
@@ -377,6 +400,12 @@ namespace SmartLineProduction
         private void menu_sw_salva_Click(object sender, EventArgs e)
         {
             //Verifica che tutti i campi siano stati compilati correttamente
+            if (cb_User.Text == "___")
+            {
+                MessageBox.Show("Si prega di compilare correttamente il campo Utente. \nNon può essere vuoto!");
+                cb_projprodarea.Focus();
+                return;
+            }
             if (lab_projprodarea.Text == "___")
             {
                 MessageBox.Show("Si prega di compilare correttamente il campo Project / Product / Area. \nNon può essere vuoto!");
@@ -466,16 +495,16 @@ namespace SmartLineProduction
             }
             if (displayform == "E")
             {
-                DataRowView findrowview = this.dtQualityBindingSource.Current as DataRowView;
-                DataRow findrow = (DataRow)findrowview.Row;
-
-                DataRow editrow = ds_Quality.dt_Quality.Rows.Find(findrow["Id"]);
+//                DataRowView findrowview = this.dtQualityBindingSource.Current as DataRowView;
+//                DataRow findrow = (DataRow)findrowview.Row;
+//                DataRow editrow = ds_Quality.dt_Quality.Rows.Find(findrow["Id"]);
+                DataRow editrow = ds_Quality.dt_Quality.Rows.Find(Glob_RowId);
                 editrow.BeginEdit();
-                editrow["Qual_ProjProdArea"] = lab_projprodarea.Text;
-                editrow["Qual_Org"] = lab_org.Text;
-                editrow["Qual_Type"] = lab_type.Text;
-                editrow["Qual_Class"] = lab_class.Text;
-                editrow["Qual_Prog"] = ultcodice.ToString();
+//                editrow["Qual_ProjProdArea"] = lab_projprodarea.Text;
+//                editrow["Qual_Org"] = lab_org.Text;
+//                editrow["Qual_Type"] = lab_type.Text;
+//                editrow["Qual_Class"] = lab_class.Text;
+//                editrow["Qual_Prog"] = ultcodice.ToString();
                 editrow["Qual_Ver"] = tb_vers.Text;
                 editrow["Qual_Rev"] = tb_rev.Text;
                 editrow["Qual_Des"] = tb_Des.Text;
@@ -499,21 +528,23 @@ namespace SmartLineProduction
             }
             if (displayform == "R")
             {
-                DataRowView findrowview = this.dtQualityBindingSource.Current as DataRowView;
-                DataRow findrow = (DataRow)findrowview.Row;
+//                DataRowView findrowview = this.dtQualityBindingSource.Current as DataRowView;
+//                DataRow findrow = (DataRow)findrowview.Row;
 
                 ////Localizzo il vecchio record
-                DataRow editrow = ds_Quality.dt_Quality_EditRec.Rows.Find(findrow["Id"]);
-                DataRow backuprow = ds_Quality.dt_Quality_EditRec.Rows.Find(findrow["Id"]);
+//                DataRow editrow = ds_Quality.dt_Quality_EditRec.Rows.Find(findrow["Id"]);
+//                DataRow backuprow = ds_Quality.dt_Quality_EditRec.Rows.Find(findrow["Id"]);
+                DataRow editrow = ds_Quality.dt_Quality_EditRec.Rows.Find(Glob_RowId);
+                DataRow backuprow = ds_Quality.dt_Quality_EditRec.Rows.Find(Glob_RowId);
 
                 editrow.BeginEdit();
                 editrow.SetModified();
 
-                editrow["Qual_ProjProdArea"] = backuprow["Qual_ProjProdArea"];
-                editrow["Qual_Org"] = backuprow["Qual_Org"];
-                editrow["Qual_Type"] = backuprow["Qual_Type"];
-                editrow["Qual_Class"] = backuprow["Qual_Class"];
-                editrow["Qual_Prog"] = backuprow["Qual_Prog"];
+  //              editrow["Qual_ProjProdArea"] = backuprow["Qual_ProjProdArea"];
+  //              editrow["Qual_Org"] = backuprow["Qual_Org"];
+  //              editrow["Qual_Type"] = backuprow["Qual_Type"];
+  //              editrow["Qual_Class"] = backuprow["Qual_Class"];
+  //              editrow["Qual_Prog"] = backuprow["Qual_Prog"];
                 editrow["Qual_Ver"] = backuprow["Qual_Ver"];
                 editrow["Qual_Rev"] = backuprow["Qual_Rev"];
                 editrow["Qual_Des"] = backuprow["Qual_Des"];
@@ -543,8 +574,10 @@ namespace SmartLineProduction
                 newrow.ItemArray = backuprow.ItemArray;
 
                 //newrow["Id"] = DBNull.Value;
-                newrow["Id"] = (Convert.ToInt32(ds_Quality.dt_Quality.AsEnumerable().Max(row => row["Id"]))+1);
-
+                int MaxValue = Convert.ToInt32(ds_Quality.dt_Quality.AsEnumerable().Max(row => row["Id"]));
+                MaxValue++;
+                //newrow["Id"] = (Convert.ToInt32(ds_Quality.dt_Quality.AsEnumerable().Max(row => Glob_RowId))+1);
+                newrow["Id"] = MaxValue;
                 newrow["Qual_Des"] = tb_Des.Text;
                 newrow["Qual_Path"] = tb_folder.Text;
                 newrow["Qual_Ver"] = tb_vers.Text;
@@ -572,13 +605,15 @@ namespace SmartLineProduction
 
         private void sFQualityViewBindingSource_CurrentChanged(object sender, EventArgs e)
         {
-            int id_quality = 0;
+            Glob_RowId = 0;
             DataRowView drview = (DataRowView)sFQualityViewBindingSource.Current;
             if (drview != null)
             {
-                id_quality = (int)drview["Id"];
-                dtQualityBindingSource.Filter = "Id =" + id_quality;
+                Glob_RowId = (int)drview["Id"];
+                dtQualityBindingSource.Filter = "Id =" + Glob_RowId;
             }
+            //tb_Des.Text = drview["Qual_Des"].ToString();
+            //tb_Des.Refresh();
         }
 
         private void copiaIlValoreNellaClipboardToolStripMenuItem_Click(object sender, EventArgs e)

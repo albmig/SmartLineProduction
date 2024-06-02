@@ -125,6 +125,29 @@ namespace SmartLineProduction
 
         private void grid_commesse_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            //////////////////////////////////////////////////////////////////////////////////////////
+            // Controllo se posizionato sulla riga corretta
+
+            int pos_rowselected = grid_commesse.CurrentCell.RowIndex;
+            int pos_rowclicked = e.RowIndex;
+            if (pos_rowselected != pos_rowclicked)
+            {
+                string mess = "Rilevata incongruenza. Selezionare altra riga!";
+                //+"Selected = " + pos_rowclicked.ToString() + " / " + "Clicked = " + pos_rowclicked.ToString()
+
+                MessageBox.Show(mess);
+                return;
+            }
+            //string findCommessaLong = (string)grid_commesse.Rows[e.RowIndex].Cells["grid_commesse_CommessaLong"].Value;
+            //int pos_teorica = sFCommesseSLBindingSource.Position;
+            //int pos_reale = sFCommesseSLBindingSource.Find("CommessaLong", findCommessaLong);
+            //if (pos_reale != pos_teorica)
+            //{
+            //    sFCommesseSLBindingSource.Position = pos_reale;
+            //}
+            //////////////////////////////////////////////////////////////////////////////////////////
+
+
             // controllo se già evasa
             if (e.ColumnIndex == grid_commesse.Columns["grid_commesse_CommessaSelezionata"].Index)
             {
@@ -576,7 +599,7 @@ namespace SmartLineProduction
             dos_box.Clear();
 
             System.Media.SoundPlayer newplayer = new System.Media.SoundPlayer();
-            string newsound = ".\\Windows Notify.wav";
+            string newsound = @"\\dc\AREA_IT\AREA_SOFTWARE_SISTEMATICA\SmartLineProduction\Windows Notify.wav";
             newplayer.SoundLocation = newsound;
             newplayer.Load();
             newplayer.Play();
@@ -808,7 +831,7 @@ namespace SmartLineProduction
                 if (text_dos.Contains("DONE"))
                 {
                     System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-                    string sound = ".\\tada.wav";
+                    string sound = @"\\dc\AREA_IT\AREA_SOFTWARE_SISTEMATICA\SmartLineProduction\tada.wav";
                     player.SoundLocation = sound;
                     player.Load();
                     player.Play();
@@ -816,7 +839,7 @@ namespace SmartLineProduction
                 else
                 {
                     System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-                    string sound = ".\\Yamaha.wav";
+                    string sound = @"\\dc\AREA_IT\AREA_SOFTWARE_SISTEMATICA\SmartLineProduction\Yamaha.wav";
                     player.SoundLocation = sound;
                     player.Load();
                     player.Play();
@@ -917,7 +940,7 @@ namespace SmartLineProduction
                 if (text_dos.Contains("DONE"))
                 {
                     System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-                    string sound = ".\\tada.wav";
+                    string sound = @"\\dc\AREA_IT\AREA_SOFTWARE_SISTEMATICA\SmartLineProduction\tada.wav";
                     player.SoundLocation = sound;
                     player.Load();
                     player.Play();
@@ -925,7 +948,7 @@ namespace SmartLineProduction
                 else
                 {
                     System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-                    string sound = ".\\Yamaha.wav";
+                    string sound = @"\\dc\AREA_IT\AREA_SOFTWARE_SISTEMATICA\SmartLineProduction\Yamaha.wav";
                     player.SoundLocation = sound;
                     player.Load();
                     player.Play();
@@ -986,7 +1009,7 @@ namespace SmartLineProduction
                 if (text_dos.Contains("DONE"))
                 {
                     System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-                    string sound = ".\\tada.wav";
+                    string sound = @"\\dc\AREA_IT\AREA_SOFTWARE_SISTEMATICA\SmartLineProduction\tada.wav";
                     player.SoundLocation = sound;
                     player.Load();
                     player.Play();
@@ -994,7 +1017,7 @@ namespace SmartLineProduction
                 else
                 {
                     System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-                    string sound = ".\\Yamaha.wav";
+                    string sound = @"\\dc\AREA_IT\AREA_SOFTWARE_SISTEMATICA\SmartLineProduction\Yamaha.wav";
                     player.SoundLocation = sound;
                     player.Load();
                     player.Play();
@@ -1075,7 +1098,7 @@ namespace SmartLineProduction
                     if (text_dos.Contains("DONE"))
                     {
                         System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-                        string sound = ".\\tada.wav";
+                        string sound = @"\\dc\AREA_IT\AREA_SOFTWARE_SISTEMATICA\SmartLineProduction\tada.wav";
                         player.SoundLocation = sound;
                         player.Load();
                         player.Play();
@@ -1083,7 +1106,7 @@ namespace SmartLineProduction
                     else
                     {
                         System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-                        string sound = ".\\Yamaha.wav";
+                        string sound = @"\\dc\AREA_IT\AREA_SOFTWARE_SISTEMATICA\SmartLineProduction\Yamaha.wav";
                         player.SoundLocation = sound;
                         player.Load();
                         player.Play();
@@ -1270,7 +1293,7 @@ namespace SmartLineProduction
                     if (text_dos.Contains("DONE"))
                     {
                         System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-                        string sound = ".\\tada.wav";
+                        string sound = @"\\dc\AREA_IT\AREA_SOFTWARE_SISTEMATICA\SmartLineProduction\tada.wav";
                         player.SoundLocation = sound;
                         player.Load();
                         player.Play();
@@ -1278,7 +1301,7 @@ namespace SmartLineProduction
                     else
                     {
                         System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-                        string sound = ".\\Yamaha.wav";
+                        string sound = @"\\dc\AREA_IT\AREA_SOFTWARE_SISTEMATICA\SmartLineProduction\Yamaha.wav";
                         player.SoundLocation = sound;
                         player.Load();
                         player.Play();
@@ -1343,7 +1366,7 @@ namespace SmartLineProduction
                     if (text_dos.Contains("DONE"))
                     {
                         System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-                        string sound = ".\\tada.wav";
+                        string sound = @"\\dc\AREA_IT\AREA_SOFTWARE_SISTEMATICA\SmartLineProduction\tada.wav";
                         player.SoundLocation = sound;
                         player.Load();
                         player.Play();
@@ -1351,7 +1374,7 @@ namespace SmartLineProduction
                     else
                     {
                         System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-                        string sound = ".\\Yamaha.wav";
+                        string sound = @"\\dc\AREA_IT\AREA_SOFTWARE_SISTEMATICA\SmartLineProduction\Yamaha.wav";
                         player.SoundLocation = sound;
                         player.Load();
                         player.Play();
@@ -1412,7 +1435,7 @@ namespace SmartLineProduction
                     if (text_dos.Contains("DONE"))
                     {
                         System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-                        string sound = ".\\tada.wav";
+                        string sound = @"\\dc\AREA_IT\AREA_SOFTWARE_SISTEMATICA\SmartLineProduction\tada.wav";
                         player.SoundLocation = sound;
                         player.Load();
                         player.Play();
@@ -1420,7 +1443,7 @@ namespace SmartLineProduction
                     else
                     {
                         System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-                        string sound = ".\\Yamaha.wav";
+                        string sound = @"\\dc\AREA_IT\AREA_SOFTWARE_SISTEMATICA\SmartLineProduction\Yamaha.wav";
                         player.SoundLocation = sound;
                         player.Load();
                         player.Play();
@@ -1719,6 +1742,5 @@ namespace SmartLineProduction
                 }
             }
         }
-
     }
 }

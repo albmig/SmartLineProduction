@@ -112,6 +112,7 @@
             this.cntxt_CopyToClipboard = new MetroFramework.Controls.MetroContextMenu(this.components);
             this.copiaIlValoreNellaClipboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label_codview = new MetroFramework.Controls.MetroLabel();
+            this.filterQualityBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.treeListBand1 = new DevExpress.XtraTreeList.Columns.TreeListBand();
             this.treeListBand2 = new DevExpress.XtraTreeList.Columns.TreeListBand();
             this.treeListBand3 = new DevExpress.XtraTreeList.Columns.TreeListBand();
@@ -124,6 +125,7 @@
             this.sF_QualityViewTableAdapter = new SmartLineProduction.ds_QualityTableAdapters.SF_QualityViewTableAdapter();
             this.dtQualityEditRecBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dt_Quality_EditRecTableAdapter = new SmartLineProduction.ds_QualityTableAdapters.dt_Quality_EditRecTableAdapter();
+            this.filter_QualityTableAdapter = new SmartLineProduction.ds_QualityTableAdapters.Filter_QualityTableAdapter();
             this.layout_orizz_menu.SuspendLayout();
             this.pan_Menu_salva.SuspendLayout();
             this.pan_Menu_comandi.SuspendLayout();
@@ -142,6 +144,7 @@
             this.cntxt_Obsolete.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sFQualityViewBindingSource)).BeginInit();
             this.cntxt_CopyToClipboard.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.filterQualityBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtQualityEditRecBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -344,27 +347,25 @@
             this.layout_Schede.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layout_Schede.Location = new System.Drawing.Point(0, 0);
             this.layout_Schede.Name = "layout_Schede";
-            this.layout_Schede.RowCount = 20;
-            this.layout_Schede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.555555F));
-            this.layout_Schede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.555555F));
-            this.layout_Schede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.555555F));
-            this.layout_Schede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.555555F));
-            this.layout_Schede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.555555F));
-            this.layout_Schede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.555555F));
-            this.layout_Schede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.555555F));
-            this.layout_Schede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.555555F));
-            this.layout_Schede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.555555F));
-            this.layout_Schede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.555555F));
-            this.layout_Schede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.555555F));
+            this.layout_Schede.RowCount = 17;
+            this.layout_Schede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.layout_Schede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.layout_Schede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.layout_Schede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.layout_Schede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.layout_Schede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.layout_Schede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.layout_Schede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.layout_Schede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.layout_Schede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.layout_Schede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
             this.layout_Schede.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.layout_Schede.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.layout_Schede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.555555F));
-            this.layout_Schede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.555555F));
-            this.layout_Schede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.555555F));
-            this.layout_Schede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.555555F));
-            this.layout_Schede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.555555F));
-            this.layout_Schede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.555555F));
-            this.layout_Schede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.555555F));
+            this.layout_Schede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.layout_Schede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.layout_Schede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.layout_Schede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.layout_Schede.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.layout_Schede.Size = new System.Drawing.Size(960, 425);
             this.layout_Schede.TabIndex = 123;
             // 
@@ -376,9 +377,9 @@
             // 
             // 
             this.tb_rev.CustomButton.Image = null;
-            this.tb_rev.CustomButton.Location = new System.Drawing.Point(100, 1);
+            this.tb_rev.CustomButton.Location = new System.Drawing.Point(84, 1);
             this.tb_rev.CustomButton.Name = "";
-            this.tb_rev.CustomButton.Size = new System.Drawing.Size(13, 13);
+            this.tb_rev.CustomButton.Size = new System.Drawing.Size(29, 29);
             this.tb_rev.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.tb_rev.CustomButton.TabIndex = 1;
             this.tb_rev.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -387,7 +388,7 @@
             this.tb_rev.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dtQualityBindingSource, "Qual_Rev", true));
             this.tb_rev.Lines = new string[] {
         "tb_rev"};
-            this.tb_rev.Location = new System.Drawing.Point(123, 335);
+            this.tb_rev.Location = new System.Drawing.Point(123, 391);
             this.tb_rev.MaxLength = 32767;
             this.tb_rev.Name = "tb_rev";
             this.tb_rev.PasswordChar = '\0';
@@ -396,7 +397,7 @@
             this.tb_rev.SelectionLength = 0;
             this.tb_rev.SelectionStart = 0;
             this.tb_rev.ShortcutsEnabled = true;
-            this.tb_rev.Size = new System.Drawing.Size(114, 15);
+            this.tb_rev.Size = new System.Drawing.Size(114, 31);
             this.tb_rev.Style = MetroFramework.MetroColorStyle.Red;
             this.tb_rev.TabIndex = 8;
             this.tb_rev.Text = "tb_rev";
@@ -424,7 +425,7 @@
             this.metroLabel14.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel14.AutoSize = true;
             this.metroLabel14.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel14.Location = new System.Drawing.Point(3, 333);
+            this.metroLabel14.Location = new System.Drawing.Point(3, 397);
             this.metroLabel14.Name = "metroLabel14";
             this.metroLabel14.Size = new System.Drawing.Size(73, 19);
             this.metroLabel14.Style = MetroFramework.MetroColorStyle.Red;
@@ -440,9 +441,9 @@
             // 
             // 
             this.tb_vers.CustomButton.Image = null;
-            this.tb_vers.CustomButton.Location = new System.Drawing.Point(100, 1);
+            this.tb_vers.CustomButton.Location = new System.Drawing.Point(96, 1);
             this.tb_vers.CustomButton.Name = "";
-            this.tb_vers.CustomButton.Size = new System.Drawing.Size(13, 13);
+            this.tb_vers.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.tb_vers.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.tb_vers.CustomButton.TabIndex = 1;
             this.tb_vers.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -451,7 +452,7 @@
             this.tb_vers.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dtQualityBindingSource, "Qual_Ver", true));
             this.tb_vers.Lines = new string[] {
         "tb_vers"};
-            this.tb_vers.Location = new System.Drawing.Point(123, 314);
+            this.tb_vers.Location = new System.Drawing.Point(123, 366);
             this.tb_vers.MaxLength = 32767;
             this.tb_vers.Name = "tb_vers";
             this.tb_vers.PasswordChar = '\0';
@@ -460,7 +461,7 @@
             this.tb_vers.SelectionLength = 0;
             this.tb_vers.SelectionStart = 0;
             this.tb_vers.ShortcutsEnabled = true;
-            this.tb_vers.Size = new System.Drawing.Size(114, 15);
+            this.tb_vers.Size = new System.Drawing.Size(114, 19);
             this.tb_vers.Style = MetroFramework.MetroColorStyle.Red;
             this.tb_vers.TabIndex = 7;
             this.tb_vers.Text = "tb_vers";
@@ -476,7 +477,7 @@
             this.metroLabel13.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel13.AutoSize = true;
             this.metroLabel13.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel13.Location = new System.Drawing.Point(3, 312);
+            this.metroLabel13.Location = new System.Drawing.Point(3, 366);
             this.metroLabel13.Name = "metroLabel13";
             this.metroLabel13.Size = new System.Drawing.Size(68, 19);
             this.metroLabel13.Style = MetroFramework.MetroColorStyle.Red;
@@ -492,9 +493,9 @@
             // 
             this.tb_folder.CustomButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tb_folder.CustomButton.Image = global::SmartLineProduction.Properties.Resources.Lente;
-            this.tb_folder.CustomButton.Location = new System.Drawing.Point(820, 1);
+            this.tb_folder.CustomButton.Location = new System.Drawing.Point(816, 1);
             this.tb_folder.CustomButton.Name = "";
-            this.tb_folder.CustomButton.Size = new System.Drawing.Size(13, 13);
+            this.tb_folder.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.tb_folder.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.tb_folder.CustomButton.TabIndex = 1;
             this.tb_folder.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -504,7 +505,7 @@
             this.tb_folder.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tb_folder.Lines = new string[] {
         "metroTextBox2"};
-            this.tb_folder.Location = new System.Drawing.Point(123, 293);
+            this.tb_folder.Location = new System.Drawing.Point(123, 341);
             this.tb_folder.MaxLength = 32767;
             this.tb_folder.Name = "tb_folder";
             this.tb_folder.PasswordChar = '\0';
@@ -514,7 +515,7 @@
             this.tb_folder.SelectionStart = 0;
             this.tb_folder.ShortcutsEnabled = true;
             this.tb_folder.ShowButton = true;
-            this.tb_folder.Size = new System.Drawing.Size(834, 15);
+            this.tb_folder.Size = new System.Drawing.Size(834, 19);
             this.tb_folder.Style = MetroFramework.MetroColorStyle.Red;
             this.tb_folder.TabIndex = 6;
             this.tb_folder.Text = "metroTextBox2";
@@ -529,7 +530,7 @@
             this.metroLabel12.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel12.AutoSize = true;
             this.metroLabel12.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel12.Location = new System.Drawing.Point(3, 291);
+            this.metroLabel12.Location = new System.Drawing.Point(3, 341);
             this.metroLabel12.Name = "metroLabel12";
             this.metroLabel12.Size = new System.Drawing.Size(114, 19);
             this.metroLabel12.Style = MetroFramework.MetroColorStyle.Red;
@@ -543,7 +544,7 @@
             this.lab_Codice_Edit.AutoSize = true;
             this.layout_Schede.SetColumnSpan(this.lab_Codice_Edit, 2);
             this.lab_Codice_Edit.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lab_Codice_Edit.Location = new System.Drawing.Point(123, 250);
+            this.lab_Codice_Edit.Location = new System.Drawing.Point(123, 294);
             this.lab_Codice_Edit.Name = "lab_Codice_Edit";
             this.lab_Codice_Edit.Size = new System.Drawing.Size(115, 19);
             this.lab_Codice_Edit.Style = MetroFramework.MetroColorStyle.Red;
@@ -556,7 +557,7 @@
             this.label_codedit.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label_codedit.AutoSize = true;
             this.label_codedit.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.label_codedit.Location = new System.Drawing.Point(3, 250);
+            this.label_codedit.Location = new System.Drawing.Point(3, 294);
             this.label_codedit.Name = "label_codedit";
             this.label_codedit.Size = new System.Drawing.Size(105, 19);
             this.label_codedit.Style = MetroFramework.MetroColorStyle.Red;
@@ -569,7 +570,7 @@
             this.metroLabel10.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel10.AutoSize = true;
             this.metroLabel10.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel10.Location = new System.Drawing.Point(3, 270);
+            this.metroLabel10.Location = new System.Drawing.Point(3, 316);
             this.metroLabel10.Name = "metroLabel10";
             this.metroLabel10.Size = new System.Drawing.Size(85, 19);
             this.metroLabel10.Style = MetroFramework.MetroColorStyle.Red;
@@ -583,7 +584,7 @@
             this.lab_class.AutoSize = true;
             this.lab_class.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dtQualityClassificationBindingSource, "Qual_Codice", true));
             this.lab_class.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lab_class.Location = new System.Drawing.Point(873, 85);
+            this.lab_class.Location = new System.Drawing.Point(873, 103);
             this.lab_class.Name = "lab_class";
             this.lab_class.Size = new System.Drawing.Size(54, 19);
             this.lab_class.Style = MetroFramework.MetroColorStyle.Red;
@@ -605,7 +606,7 @@
             this.cb_class.DisplayMember = "Qual_Des";
             this.cb_class.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cb_class.FormattingEnabled = true;
-            this.cb_class.Location = new System.Drawing.Point(603, 87);
+            this.cb_class.Location = new System.Drawing.Point(603, 103);
             this.cb_class.Name = "cb_class";
             this.cb_class.Size = new System.Drawing.Size(234, 23);
             this.cb_class.TabIndex = 4;
@@ -615,7 +616,7 @@
             this.metroLabel5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel5.AutoSize = true;
             this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel5.Location = new System.Drawing.Point(483, 85);
+            this.metroLabel5.Location = new System.Drawing.Point(483, 103);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(94, 19);
             this.metroLabel5.Style = MetroFramework.MetroColorStyle.Red;
@@ -628,7 +629,7 @@
             this.lab_MyIp.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lab_MyIp.AutoSize = true;
             this.lab_MyIp.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lab_MyIp.Location = new System.Drawing.Point(873, 1);
+            this.lab_MyIp.Location = new System.Drawing.Point(873, 3);
             this.lab_MyIp.Name = "lab_MyIp";
             this.lab_MyIp.Size = new System.Drawing.Size(54, 19);
             this.lab_MyIp.Style = MetroFramework.MetroColorStyle.Red;
@@ -643,7 +644,7 @@
             this.lab_type.AutoSize = true;
             this.lab_type.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dtQualityTipoDocBindingSource, "Qual_Codice", true));
             this.lab_type.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lab_type.Location = new System.Drawing.Point(873, 64);
+            this.lab_type.Location = new System.Drawing.Point(873, 78);
             this.lab_type.Name = "lab_type";
             this.lab_type.Size = new System.Drawing.Size(54, 19);
             this.lab_type.Style = MetroFramework.MetroColorStyle.Red;
@@ -663,7 +664,7 @@
             this.lab_org.AutoSize = true;
             this.lab_org.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dtQualityCompanyBindingSource, "Qual_Codice", true));
             this.lab_org.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lab_org.Location = new System.Drawing.Point(873, 43);
+            this.lab_org.Location = new System.Drawing.Point(873, 53);
             this.lab_org.Name = "lab_org";
             this.lab_org.Size = new System.Drawing.Size(54, 19);
             this.lab_org.Style = MetroFramework.MetroColorStyle.Red;
@@ -683,7 +684,7 @@
             this.lab_projprodarea.AutoSize = true;
             this.lab_projprodarea.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dtQualityProjProdAreaBindingSource, "Qual_Codice", true));
             this.lab_projprodarea.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lab_projprodarea.Location = new System.Drawing.Point(873, 22);
+            this.lab_projprodarea.Location = new System.Drawing.Point(873, 28);
             this.lab_projprodarea.Name = "lab_projprodarea";
             this.lab_projprodarea.Size = new System.Drawing.Size(54, 19);
             this.lab_projprodarea.Style = MetroFramework.MetroColorStyle.Red;
@@ -705,7 +706,7 @@
             this.cb_type.DisplayMember = "Qual_Des";
             this.cb_type.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cb_type.FormattingEnabled = true;
-            this.cb_type.Location = new System.Drawing.Point(603, 66);
+            this.cb_type.Location = new System.Drawing.Point(603, 78);
             this.cb_type.Name = "cb_type";
             this.cb_type.Size = new System.Drawing.Size(234, 23);
             this.cb_type.TabIndex = 3;
@@ -718,7 +719,7 @@
             this.cb_org.DisplayMember = "Qual_Des";
             this.cb_org.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cb_org.FormattingEnabled = true;
-            this.cb_org.Location = new System.Drawing.Point(603, 45);
+            this.cb_org.Location = new System.Drawing.Point(603, 53);
             this.cb_org.Name = "cb_org";
             this.cb_org.Size = new System.Drawing.Size(234, 23);
             this.cb_org.TabIndex = 2;
@@ -731,7 +732,7 @@
             this.cb_projprodarea.DisplayMember = "Qual_Des";
             this.cb_projprodarea.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cb_projprodarea.FormattingEnabled = true;
-            this.cb_projprodarea.Location = new System.Drawing.Point(603, 24);
+            this.cb_projprodarea.Location = new System.Drawing.Point(603, 28);
             this.cb_projprodarea.Name = "cb_projprodarea";
             this.cb_projprodarea.Size = new System.Drawing.Size(234, 23);
             this.cb_projprodarea.TabIndex = 1;
@@ -760,7 +761,7 @@
             this.metroLabel4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel4.Location = new System.Drawing.Point(483, 64);
+            this.metroLabel4.Location = new System.Drawing.Point(483, 78);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(114, 19);
             this.metroLabel4.Style = MetroFramework.MetroColorStyle.Red;
@@ -773,7 +774,7 @@
             this.metroLabel3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel3.Location = new System.Drawing.Point(483, 43);
+            this.metroLabel3.Location = new System.Drawing.Point(483, 53);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(95, 19);
             this.metroLabel3.Style = MetroFramework.MetroColorStyle.Red;
@@ -786,7 +787,7 @@
             this.metroLabel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel1.Location = new System.Drawing.Point(483, 22);
+            this.metroLabel1.Location = new System.Drawing.Point(483, 28);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(114, 19);
             this.metroLabel1.Style = MetroFramework.MetroColorStyle.Red;
@@ -799,7 +800,7 @@
             this.metroLabel2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel2.Location = new System.Drawing.Point(483, 1);
+            this.metroLabel2.Location = new System.Drawing.Point(483, 3);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(54, 19);
             this.metroLabel2.Style = MetroFramework.MetroColorStyle.Red;
@@ -814,9 +815,9 @@
             // 
             // 
             this.tb_desClass.CustomButton.Image = null;
-            this.tb_desClass.CustomButton.Location = new System.Drawing.Point(236, 2);
+            this.tb_desClass.CustomButton.Location = new System.Drawing.Point(212, 2);
             this.tb_desClass.CustomButton.Name = "";
-            this.tb_desClass.CustomButton.Size = new System.Drawing.Size(115, 115);
+            this.tb_desClass.CustomButton.Size = new System.Drawing.Size(139, 139);
             this.tb_desClass.CustomButton.Style = MetroFramework.MetroColorStyle.Red;
             this.tb_desClass.CustomButton.TabIndex = 1;
             this.tb_desClass.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -827,7 +828,7 @@
             this.tb_desClass.Enabled = false;
             this.tb_desClass.Lines = new string[] {
         "metroTextBox1"};
-            this.tb_desClass.Location = new System.Drawing.Point(603, 108);
+            this.tb_desClass.Location = new System.Drawing.Point(603, 128);
             this.tb_desClass.MaxLength = 32767;
             this.tb_desClass.Multiline = true;
             this.tb_desClass.Name = "tb_desClass";
@@ -839,7 +840,7 @@
             this.tb_desClass.SelectionLength = 0;
             this.tb_desClass.SelectionStart = 0;
             this.tb_desClass.ShortcutsEnabled = true;
-            this.tb_desClass.Size = new System.Drawing.Size(354, 120);
+            this.tb_desClass.Size = new System.Drawing.Size(354, 144);
             this.tb_desClass.TabIndex = 20;
             this.tb_desClass.Text = "metroTextBox1";
             this.tb_desClass.UseSelectable = true;
@@ -857,7 +858,7 @@
             this.panel_grid.Location = new System.Drawing.Point(3, 3);
             this.panel_grid.Name = "panel_grid";
             this.layout_Schede.SetRowSpan(this.panel_grid, 11);
-            this.panel_grid.Size = new System.Drawing.Size(474, 225);
+            this.panel_grid.Size = new System.Drawing.Size(474, 269);
             this.panel_grid.TabIndex = 17;
             this.panel_grid.VerticalScrollbarBarColor = true;
             this.panel_grid.VerticalScrollbarHighlightOnWheel = false;
@@ -936,7 +937,7 @@
             this.gv_Quality.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.gv_Quality.RowTemplate.Height = 30;
             this.gv_Quality.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gv_Quality.Size = new System.Drawing.Size(474, 225);
+            this.gv_Quality.Size = new System.Drawing.Size(474, 269);
             this.gv_Quality.Style = MetroFramework.MetroColorStyle.Red;
             this.gv_Quality.TabIndex = 32;
             this.gv_Quality.UseStyleColors = true;
@@ -1139,19 +1140,19 @@
             // 
             // 
             this.tb_Des.CustomButton.Image = null;
-            this.tb_Des.CustomButton.Location = new System.Drawing.Point(820, 1);
+            this.tb_Des.CustomButton.Location = new System.Drawing.Point(816, 1);
             this.tb_Des.CustomButton.Name = "";
-            this.tb_Des.CustomButton.Size = new System.Drawing.Size(13, 13);
+            this.tb_Des.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.tb_Des.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.tb_Des.CustomButton.TabIndex = 1;
             this.tb_Des.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.tb_Des.CustomButton.UseSelectable = true;
             this.tb_Des.CustomButton.Visible = false;
-            this.tb_Des.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dtQualityBindingSource, "Qual_Des", true));
+            this.tb_Des.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sFQualityViewBindingSource, "Qual_Des", true));
             this.tb_Des.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tb_Des.Lines = new string[] {
         "tb_Des"};
-            this.tb_Des.Location = new System.Drawing.Point(123, 272);
+            this.tb_Des.Location = new System.Drawing.Point(123, 316);
             this.tb_Des.MaxLength = 32767;
             this.tb_Des.Name = "tb_Des";
             this.tb_Des.PasswordChar = '\0';
@@ -1160,7 +1161,7 @@
             this.tb_Des.SelectionLength = 0;
             this.tb_Des.SelectionStart = 0;
             this.tb_Des.ShortcutsEnabled = true;
-            this.tb_Des.Size = new System.Drawing.Size(834, 15);
+            this.tb_Des.Size = new System.Drawing.Size(834, 19);
             this.tb_Des.Style = MetroFramework.MetroColorStyle.Red;
             this.tb_Des.TabIndex = 5;
             this.tb_Des.Text = "tb_Des";
@@ -1177,7 +1178,7 @@
             this.lab_Codice_View.ContextMenuStrip = this.cntxt_CopyToClipboard;
             this.lab_Codice_View.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sFQualityViewBindingSource, "Codice_Quality", true));
             this.lab_Codice_View.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lab_Codice_View.Location = new System.Drawing.Point(123, 231);
+            this.lab_Codice_View.Location = new System.Drawing.Point(123, 275);
             this.lab_Codice_View.Name = "lab_Codice_View";
             this.lab_Codice_View.Size = new System.Drawing.Size(115, 19);
             this.lab_Codice_View.Style = MetroFramework.MetroColorStyle.Red;
@@ -1204,13 +1205,18 @@
             this.label_codview.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label_codview.AutoSize = true;
             this.label_codview.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.label_codview.Location = new System.Drawing.Point(3, 231);
+            this.label_codview.Location = new System.Drawing.Point(3, 275);
             this.label_codview.Name = "label_codview";
             this.label_codview.Size = new System.Drawing.Size(105, 19);
             this.label_codview.Style = MetroFramework.MetroColorStyle.Red;
             this.label_codview.TabIndex = 33;
             this.label_codview.Text = "Codice Qualità :";
             this.label_codview.UseStyleColors = true;
+            // 
+            // filterQualityBindingSource
+            // 
+            this.filterQualityBindingSource.DataMember = "Filter_Quality";
+            this.filterQualityBindingSource.DataSource = this.ds_Quality;
             // 
             // treeListBand1
             // 
@@ -1264,6 +1270,10 @@
             // 
             this.dt_Quality_EditRecTableAdapter.ClearBeforeFill = true;
             // 
+            // filter_QualityTableAdapter
+            // 
+            this.filter_QualityTableAdapter.ClearBeforeFill = true;
+            // 
             // UC_Quality
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1301,6 +1311,7 @@
             this.cntxt_Obsolete.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.sFQualityViewBindingSource)).EndInit();
             this.cntxt_CopyToClipboard.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.filterQualityBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtQualityEditRecBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -1403,5 +1414,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn qualDateRequestDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn qualIPRequestDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Qual_Rev_Obsolete;
+        private System.Windows.Forms.BindingSource filterQualityBindingSource;
+        private ds_QualityTableAdapters.Filter_QualityTableAdapter filter_QualityTableAdapter;
     }
 }

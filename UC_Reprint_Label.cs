@@ -42,11 +42,13 @@ namespace SmartLineProduction
 
             this.Text = this.Text + " - " + Path.GetFileName(GVar.Brother_default);
             if (GVar.PrintMask_WarningPic) { pan_Warning.Visible = true; } else { pan_Warning.Visible = false; }
+
             lab_printstring.Text = GVar.PrintMask_String;
             trigger_coord_x.Value = GVar.Brother_Default_pos_x;
             trigger_coord_y.Value = GVar.Brother_Default_pos_y;
             double conv_old_coord_x = GVar.Brother_Default_pos_x / 12;
             double conv_old_coord_y = GVar.Brother_Default_pos_y / 12;
+
             lab_old_coord_x.Text = GVar.Brother_Default_pos_x.ToString() + " (" + conv_old_coord_x.ToString("#.##") + " mm.)";
             lab_old_coord_y.Text = GVar.Brother_Default_pos_y.ToString() + " (" + conv_old_coord_y.ToString("#.##") + " mm.)";
             tb_coordinate.Text = "L'etichetta viene stampata al contrario rispetto all'operatore." + "\r\n" +

@@ -36,7 +36,7 @@ namespace SmartLineProduction.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("\\\\192.168.0.8\\sistematica\\AREA_FIRMWARE\\SmartLine\\Compilati")]
+        [global::System.Configuration.DefaultSettingValueAttribute("\\\\dc\\AREA_IT\\AREA_FIRMWARE\\SmartLine\\Compilati\\")]
         public string FW_folder {
             get {
                 return ((string)(this["FW_folder"]));
@@ -60,7 +60,7 @@ namespace SmartLineProduction.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("\\\\192.168.0.8\\sistematica\\AREA_PRODOTTO\\SMARTLINE\\")]
+        [global::System.Configuration.DefaultSettingValueAttribute("\\\\dc\\AREA_UFFICI\\AREA_PRODOTTO\\SMARTLINE\\")]
         public string Doc_folder {
             get {
                 return ((string)(this["Doc_folder"]));
@@ -96,13 +96,25 @@ namespace SmartLineProduction.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("\\\\192.168.0.8\\TJ-4120TN_SL")]
+        [global::System.Configuration.DefaultSettingValueAttribute("\\\\DC\\TJ-4120TN_SL")]
         public string Settings_Brother_Default {
             get {
                 return ((string)(this["Settings_Brother_Default"]));
             }
             set {
                 this["Settings_Brother_Default"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.0.208\\SQLEXPRESS;Initial Catalog=SISTEMATICA_FACTORY;User ID=" +
+            "sa;Password=aavesp19!;Connect Timeout=30;Encrypt=False;TrustServerCertificate=Fa" +
+            "lse")]
+        public string SISTEMATICA_FACTORYConnectionString1 {
+            get {
+                return ((string)(this["SISTEMATICA_FACTORYConnectionString1"]));
             }
         }
     }

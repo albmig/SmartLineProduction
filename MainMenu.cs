@@ -677,5 +677,19 @@ namespace SmartLineProduction
             uC_Classic_XSWR_Query.Show();
 
         }
+
+        private void newVersionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GVar.CloseSplash = false;
+            Splash SplashDB = new Splash();
+            SplashDB.Show();
+
+            UC_Quality_new_version uC_Quality_New_Version = new UC_Quality_new_version();
+            SplashDB.Close();
+            uC_Quality_New_Version.MdiParent = this;
+            uC_Quality_New_Version.Dock = DockStyle.Fill;
+            uC_Quality_New_Version.Show();
+
+        }
     }
 }
