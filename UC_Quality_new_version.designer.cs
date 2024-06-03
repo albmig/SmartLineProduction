@@ -58,10 +58,16 @@
             this.lab_type = new MetroFramework.Controls.MetroLabel();
             this.lab_class = new MetroFramework.Controls.MetroLabel();
             this.cb_User = new System.Windows.Forms.ComboBox();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ds_Quality_new = new SmartLineProduction.ds_Quality_new();
             this.cb_projprodarea = new System.Windows.Forms.ComboBox();
+            this.dtQualityProjProdAreaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cb_org = new System.Windows.Forms.ComboBox();
+            this.dtQualityCompanyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cb_type = new System.Windows.Forms.ComboBox();
+            this.dtQualityTipoDocBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cb_class = new System.Windows.Forms.ComboBox();
+            this.dtQualityClassificationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label_codview = new MetroFramework.Controls.MetroLabel();
             this.label_codedit = new MetroFramework.Controls.MetroLabel();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
@@ -73,9 +79,8 @@
             this.tb_folder = new MetroFramework.Controls.MetroTextBox();
             this.tb_vers = new MetroFramework.Controls.MetroTextBox();
             this.tb_rev = new MetroFramework.Controls.MetroTextBox();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gv_Quality = new DevExpress.XtraGrid.GridControl();
             this.qualityBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ds_Quality_new = new SmartLineProduction.ds_Quality_new();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colQual_ProjProdArea = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -96,16 +101,30 @@
             this.treeListBand2 = new DevExpress.XtraTreeList.Columns.TreeListBand();
             this.treeListBand3 = new DevExpress.XtraTreeList.Columns.TreeListBand();
             this.qualityTableAdapter = new SmartLineProduction.ds_Quality_newTableAdapters.QualityTableAdapter();
+            this.usersTableAdapter = new SmartLineProduction.ds_Quality_newTableAdapters.UsersTableAdapter();
+            this.dt_Quality_ProjProdAreaTableAdapter = new SmartLineProduction.ds_Quality_newTableAdapters.dt_Quality_ProjProdAreaTableAdapter();
+            this.dt_Quality_CompanyTableAdapter = new SmartLineProduction.ds_Quality_newTableAdapters.dt_Quality_CompanyTableAdapter();
+            this.dt_Quality_TipoDocTableAdapter = new SmartLineProduction.ds_Quality_newTableAdapters.dt_Quality_TipoDocTableAdapter();
+            this.dt_Quality_ClassificationTableAdapter = new SmartLineProduction.ds_Quality_newTableAdapters.dt_Quality_ClassificationTableAdapter();
+            this.cntxt_Obsolete = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.visualizzaRevisioniObsoleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nascondiRevisioniObsoleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.layout_orizz_menu.SuspendLayout();
             this.pan_Menu_salva.SuspendLayout();
             this.pan_Menu_comandi.SuspendLayout();
             this.pan_Menu_exit.SuspendLayout();
             this.panel_fattibilita.SuspendLayout();
             this.layout_Schede.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qualityBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ds_Quality_new)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtQualityProjProdAreaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtQualityCompanyBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtQualityTipoDocBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtQualityClassificationBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gv_Quality)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qualityBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            this.cntxt_Obsolete.SuspendLayout();
             this.SuspendLayout();
             // 
             // layout_orizz_menu
@@ -156,6 +175,7 @@
             this.menu_sw_salva.Name = "menu_sw_salva";
             this.menu_sw_salva.Size = new System.Drawing.Size(62, 20);
             this.menu_sw_salva.Text = "Salva";
+            this.menu_sw_salva.Click += new System.EventHandler(this.menu_sw_salva_Click);
             // 
             // menu_sw_div12
             // 
@@ -171,6 +191,7 @@
             this.menu_sw_annulla.Name = "menu_sw_annulla";
             this.menu_sw_annulla.Size = new System.Drawing.Size(76, 20);
             this.menu_sw_annulla.Text = "Annulla";
+            this.menu_sw_annulla.Click += new System.EventHandler(this.menu_sw_annulla_Click);
             // 
             // pan_Menu_comandi
             // 
@@ -195,6 +216,7 @@
             this.menu_new.Name = "menu_new";
             this.menu_new.Size = new System.Drawing.Size(111, 21);
             this.menu_new.Text = "Nuovo Codice";
+            this.menu_new.Click += new System.EventHandler(this.menu_new_Click);
             // 
             // menu_div01
             // 
@@ -209,6 +231,7 @@
             this.menu_edit.Name = "menu_edit";
             this.menu_edit.Size = new System.Drawing.Size(122, 21);
             this.menu_edit.Text = "Modifica Codice";
+            this.menu_edit.Click += new System.EventHandler(this.menu_edit_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -297,7 +320,7 @@
             this.layout_Schede.Controls.Add(this.tb_folder, 1, 14);
             this.layout_Schede.Controls.Add(this.tb_vers, 1, 15);
             this.layout_Schede.Controls.Add(this.tb_rev, 1, 16);
-            this.layout_Schede.Controls.Add(this.gridControl1, 0, 0);
+            this.layout_Schede.Controls.Add(this.gv_Quality, 0, 0);
             this.layout_Schede.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layout_Schede.Location = new System.Drawing.Point(0, 0);
             this.layout_Schede.Name = "layout_Schede";
@@ -508,6 +531,7 @@
             // 
             this.cb_User.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.layout_Schede.SetColumnSpan(this.cb_User, 2);
+            this.cb_User.DataSource = this.usersBindingSource;
             this.cb_User.DisplayMember = "UTENTE";
             this.cb_User.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_User.FormattingEnabled = true;
@@ -516,10 +540,21 @@
             this.cb_User.Size = new System.Drawing.Size(234, 23);
             this.cb_User.TabIndex = 26;
             // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "Users";
+            this.usersBindingSource.DataSource = this.ds_Quality_new;
+            // 
+            // ds_Quality_new
+            // 
+            this.ds_Quality_new.DataSetName = "ds_Quality_new";
+            this.ds_Quality_new.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // cb_projprodarea
             // 
             this.cb_projprodarea.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.layout_Schede.SetColumnSpan(this.cb_projprodarea, 2);
+            this.cb_projprodarea.DataSource = this.dtQualityProjProdAreaBindingSource;
             this.cb_projprodarea.DisplayMember = "Qual_Des";
             this.cb_projprodarea.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cb_projprodarea.FormattingEnabled = true;
@@ -528,10 +563,16 @@
             this.cb_projprodarea.Size = new System.Drawing.Size(234, 23);
             this.cb_projprodarea.TabIndex = 27;
             // 
+            // dtQualityProjProdAreaBindingSource
+            // 
+            this.dtQualityProjProdAreaBindingSource.DataMember = "dt_Quality_ProjProdArea";
+            this.dtQualityProjProdAreaBindingSource.DataSource = this.ds_Quality_new;
+            // 
             // cb_org
             // 
             this.cb_org.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.layout_Schede.SetColumnSpan(this.cb_org, 2);
+            this.cb_org.DataSource = this.dtQualityCompanyBindingSource;
             this.cb_org.DisplayMember = "Qual_Des";
             this.cb_org.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cb_org.FormattingEnabled = true;
@@ -540,10 +581,16 @@
             this.cb_org.Size = new System.Drawing.Size(234, 23);
             this.cb_org.TabIndex = 28;
             // 
+            // dtQualityCompanyBindingSource
+            // 
+            this.dtQualityCompanyBindingSource.DataMember = "dt_Quality_Company";
+            this.dtQualityCompanyBindingSource.DataSource = this.ds_Quality_new;
+            // 
             // cb_type
             // 
             this.cb_type.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.layout_Schede.SetColumnSpan(this.cb_type, 2);
+            this.cb_type.DataSource = this.dtQualityTipoDocBindingSource;
             this.cb_type.DisplayMember = "Qual_Des";
             this.cb_type.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cb_type.FormattingEnabled = true;
@@ -552,10 +599,16 @@
             this.cb_type.Size = new System.Drawing.Size(234, 23);
             this.cb_type.TabIndex = 29;
             // 
+            // dtQualityTipoDocBindingSource
+            // 
+            this.dtQualityTipoDocBindingSource.DataMember = "dt_Quality_TipoDoc";
+            this.dtQualityTipoDocBindingSource.DataSource = this.ds_Quality_new;
+            // 
             // cb_class
             // 
             this.cb_class.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.layout_Schede.SetColumnSpan(this.cb_class, 2);
+            this.cb_class.DataSource = this.dtQualityClassificationBindingSource;
             this.cb_class.DisplayMember = "Qual_Des";
             this.cb_class.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cb_class.FormattingEnabled = true;
@@ -563,6 +616,11 @@
             this.cb_class.Name = "cb_class";
             this.cb_class.Size = new System.Drawing.Size(234, 23);
             this.cb_class.TabIndex = 30;
+            // 
+            // dtQualityClassificationBindingSource
+            // 
+            this.dtQualityClassificationBindingSource.DataMember = "dt_Quality_Classification";
+            this.dtQualityClassificationBindingSource.DataSource = this.ds_Quality_new;
             // 
             // label_codview
             // 
@@ -730,6 +788,7 @@
             this.tb_folder.UseStyleColors = true;
             this.tb_folder.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tb_folder.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tb_folder.ButtonClick += new MetroFramework.Controls.MetroTextBox.ButClick(this.tb_folder_ButtonClick);
             // 
             // tb_vers
             // 
@@ -767,6 +826,7 @@
             this.tb_vers.UseStyleColors = true;
             this.tb_vers.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tb_vers.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tb_vers.Leave += new System.EventHandler(this.tb_vers_Leave);
             // 
             // tb_rev
             // 
@@ -804,19 +864,20 @@
             this.tb_rev.UseStyleColors = true;
             this.tb_rev.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tb_rev.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tb_rev.Leave += new System.EventHandler(this.tb_rev_Leave);
             // 
-            // gridControl1
+            // gv_Quality
             // 
-            this.layout_Schede.SetColumnSpan(this.gridControl1, 3);
-            this.gridControl1.DataSource = this.qualityBindingSource;
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(3, 3);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.layout_Schede.SetRowSpan(this.gridControl1, 11);
-            this.gridControl1.Size = new System.Drawing.Size(405, 258);
-            this.gridControl1.TabIndex = 46;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.layout_Schede.SetColumnSpan(this.gv_Quality, 3);
+            this.gv_Quality.DataSource = this.qualityBindingSource;
+            this.gv_Quality.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gv_Quality.Location = new System.Drawing.Point(3, 3);
+            this.gv_Quality.MainView = this.gridView1;
+            this.gv_Quality.Name = "gv_Quality";
+            this.layout_Schede.SetRowSpan(this.gv_Quality, 11);
+            this.gv_Quality.Size = new System.Drawing.Size(405, 258);
+            this.gv_Quality.TabIndex = 46;
+            this.gv_Quality.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // qualityBindingSource
@@ -824,14 +885,9 @@
             this.qualityBindingSource.DataMember = "Quality";
             this.qualityBindingSource.DataSource = this.ds_Quality_new;
             // 
-            // ds_Quality_new
-            // 
-            this.ds_Quality_new.DataSetName = "ds_Quality_new";
-            this.ds_Quality_new.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // gridView1
             // 
-            this.gridView1.Appearance.CustomizationFormHint.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView1.Appearance.CustomizationFormHint.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.gridView1.Appearance.CustomizationFormHint.Options.UseFont = true;
             this.gridView1.Appearance.DetailTip.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.gridView1.Appearance.DetailTip.Options.UseFont = true;
@@ -891,13 +947,15 @@
             this.colQual_IPRequest,
             this.colQual_Rev_Obsolete,
             this.colcodiceQual});
-            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.GridControl = this.gv_Quality;
             this.gridView1.GroupCount = 1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.AutoExpandAllGroups = true;
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsBehavior.ReadOnly = true;
+            this.gridView1.OptionsCustomization.AllowSort = false;
             this.gridView1.OptionsSelection.UseIndicatorForSelection = false;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.OptionsView.ShowIndicator = false;
             this.gridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colQual_ProjProdArea, DevExpress.Data.ColumnSortOrder.Ascending),
@@ -910,7 +968,7 @@
             // 
             // colQual_ProjProdArea
             // 
-            this.colQual_ProjProdArea.Caption = "Project";
+            this.colQual_ProjProdArea.Caption = "Project / Product / Area";
             this.colQual_ProjProdArea.FieldName = "Qual_ProjProdArea";
             this.colQual_ProjProdArea.Name = "colQual_ProjProdArea";
             this.colQual_ProjProdArea.Visible = true;
@@ -920,11 +978,13 @@
             // 
             this.colQual_Org.FieldName = "Qual_Org";
             this.colQual_Org.Name = "colQual_Org";
+            this.colQual_Org.Width = 49;
             // 
             // colQual_Type
             // 
             this.colQual_Type.FieldName = "Qual_Type";
             this.colQual_Type.Name = "colQual_Type";
+            this.colQual_Type.Width = 51;
             // 
             // colQual_Class
             // 
@@ -953,7 +1013,7 @@
             this.colQual_Des.Name = "colQual_Des";
             this.colQual_Des.Visible = true;
             this.colQual_Des.VisibleIndex = 1;
-            this.colQual_Des.Width = 280;
+            this.colQual_Des.Width = 183;
             // 
             // colQual_Path
             // 
@@ -987,7 +1047,7 @@
             this.colcodiceQual.Name = "colcodiceQual";
             this.colcodiceQual.Visible = true;
             this.colcodiceQual.VisibleIndex = 0;
-            this.colcodiceQual.Width = 100;
+            this.colcodiceQual.Width = 120;
             // 
             // treeListBand1
             // 
@@ -1008,11 +1068,54 @@
             // 
             this.qualityTableAdapter.ClearBeforeFill = true;
             // 
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
+            // 
+            // dt_Quality_ProjProdAreaTableAdapter
+            // 
+            this.dt_Quality_ProjProdAreaTableAdapter.ClearBeforeFill = true;
+            // 
+            // dt_Quality_CompanyTableAdapter
+            // 
+            this.dt_Quality_CompanyTableAdapter.ClearBeforeFill = true;
+            // 
+            // dt_Quality_TipoDocTableAdapter
+            // 
+            this.dt_Quality_TipoDocTableAdapter.ClearBeforeFill = true;
+            // 
+            // dt_Quality_ClassificationTableAdapter
+            // 
+            this.dt_Quality_ClassificationTableAdapter.ClearBeforeFill = true;
+            // 
+            // cntxt_Obsolete
+            // 
+            this.cntxt_Obsolete.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.visualizzaRevisioniObsoleteToolStripMenuItem,
+            this.nascondiRevisioniObsoleteToolStripMenuItem});
+            this.cntxt_Obsolete.Name = "cntxt_Obsolete";
+            this.cntxt_Obsolete.Size = new System.Drawing.Size(220, 48);
+            // 
+            // visualizzaRevisioniObsoleteToolStripMenuItem
+            // 
+            this.visualizzaRevisioniObsoleteToolStripMenuItem.Name = "visualizzaRevisioniObsoleteToolStripMenuItem";
+            this.visualizzaRevisioniObsoleteToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.visualizzaRevisioniObsoleteToolStripMenuItem.Text = "Visualizza revisioni obsolete";
+            this.visualizzaRevisioniObsoleteToolStripMenuItem.Click += new System.EventHandler(this.visualizzaRevisioniObsoleteToolStripMenuItem_Click);
+            // 
+            // nascondiRevisioniObsoleteToolStripMenuItem
+            // 
+            this.nascondiRevisioniObsoleteToolStripMenuItem.Name = "nascondiRevisioniObsoleteToolStripMenuItem";
+            this.nascondiRevisioniObsoleteToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.nascondiRevisioniObsoleteToolStripMenuItem.Text = "Nascondi revisioni obsolete";
+            this.nascondiRevisioniObsoleteToolStripMenuItem.Click += new System.EventHandler(this.nascondiRevisioniObsoleteToolStripMenuItem_Click);
+            // 
             // UC_Quality_new_version
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 500);
+            this.ContextMenuStrip = this.cntxt_Obsolete;
             this.ControlBox = false;
             this.Controls.Add(this.panel_fattibilita);
             this.Controls.Add(this.layout_orizz_menu);
@@ -1033,10 +1136,16 @@
             this.panel_fattibilita.ResumeLayout(false);
             this.layout_Schede.ResumeLayout(false);
             this.layout_Schede.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qualityBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ds_Quality_new)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtQualityProjProdAreaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtQualityCompanyBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtQualityTipoDocBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtQualityClassificationBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gv_Quality)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qualityBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            this.cntxt_Obsolete.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1094,7 +1203,7 @@
         private MetroFramework.Controls.MetroTextBox tb_folder;
         private MetroFramework.Controls.MetroTextBox tb_vers;
         private MetroFramework.Controls.MetroTextBox tb_rev;
-        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.GridControl gv_Quality;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private ds_Quality_new ds_Quality_new;
         private System.Windows.Forms.BindingSource qualityBindingSource;
@@ -1114,5 +1223,19 @@
         private DevExpress.XtraGrid.Columns.GridColumn colQual_IPRequest;
         private DevExpress.XtraGrid.Columns.GridColumn colQual_Rev_Obsolete;
         private DevExpress.XtraGrid.Columns.GridColumn colcodiceQual;
+        private System.Windows.Forms.BindingSource usersBindingSource;
+        private ds_Quality_newTableAdapters.UsersTableAdapter usersTableAdapter;
+        private System.Windows.Forms.BindingSource tabQuality_Project_BindingSource;
+        private System.Windows.Forms.BindingSource dtQualityProjProdAreaBindingSource;
+        private ds_Quality_newTableAdapters.dt_Quality_ProjProdAreaTableAdapter dt_Quality_ProjProdAreaTableAdapter;
+        private System.Windows.Forms.BindingSource dtQualityCompanyBindingSource;
+        private ds_Quality_newTableAdapters.dt_Quality_CompanyTableAdapter dt_Quality_CompanyTableAdapter;
+        private System.Windows.Forms.BindingSource dtQualityTipoDocBindingSource;
+        private ds_Quality_newTableAdapters.dt_Quality_TipoDocTableAdapter dt_Quality_TipoDocTableAdapter;
+        private System.Windows.Forms.BindingSource dtQualityClassificationBindingSource;
+        private ds_Quality_newTableAdapters.dt_Quality_ClassificationTableAdapter dt_Quality_ClassificationTableAdapter;
+        private System.Windows.Forms.ContextMenuStrip cntxt_Obsolete;
+        private System.Windows.Forms.ToolStripMenuItem visualizzaRevisioniObsoleteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nascondiRevisioniObsoleteToolStripMenuItem;
     }
 }

@@ -2,9 +2,10 @@
 <xs:schema id="ds_Quality_new" targetNamespace="http://tempuri.org/ds_Quality_new.xsd" xmlns:mstns="http://tempuri.org/ds_Quality_new.xsd" xmlns="http://tempuri.org/ds_Quality_new.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SISTEMATICA_FACTORYConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SISTEMATICA_FACTORYConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SmartLineProduction.Properties.Settings.GlobalReference.Default.SISTEMATICA_FACTORYConnectionString1" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SISTEMATICA_FACTORYConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SISTEMATICA_FACTORYConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SmartLineProduction.Properties.Settings.GlobalReference.Default.SISTEMATICA_FACTORYConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="QualityTableAdapter" GeneratorDataComponentClassName="QualityTableAdapter" Name="Quality" UserDataComponentName="QualityTableAdapter">
@@ -80,8 +81,7 @@ SELECT Id, Qual_ProjProdArea, Qual_Org, Qual_Type, Qual_Class, Qual_Prog, Qual_V
    quality.Qual_Ver + '.' +
    quality.Qual_Rev) 
    AS codiceQual
-FROM dbo.Quality
-WHERE Quality.Qual_Rev_Obsolete = '0'</CommandText>
+FROM dbo.Quality</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -145,12 +145,194 @@ SELECT Id, Qual_ProjProdArea, Qual_Org, Qual_Type, Qual_Class, Qual_Prog, Qual_V
             </Mappings>
             <Sources />
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Tab_QualityTableAdapter" GeneratorDataComponentClassName="Tab_QualityTableAdapter" Name="Tab_Quality" UserDataComponentName="Tab_QualityTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="UsersTableAdapter" GeneratorDataComponentClassName="UsersTableAdapter" Name="Users" UserDataComponentName="UsersTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionString1 (Settings)" DbObjectName="SISTEMATICA_FACTORY.dbo.Tab_Quality" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionString (Settings)" DbObjectName="SISTEMATICA_FACTORY.dbo.Users" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [Users] WHERE (([ID] = @Original_ID) AND ([NOME] = @Original_NOME) AND ([COGNOME] = @Original_COGNOME) AND ([UTENTE] = @Original_UTENTE) AND ([PWD] = @Original_PWD) AND ((@IsNull_GRUPPO = 1 AND [GRUPPO] IS NULL) OR ([GRUPPO] = @Original_GRUPPO)) AND ([DATA_CREAZIONE] = @Original_DATA_CREAZIONE) AND ((@IsNull_IP_Address = 1 AND [IP_Address] IS NULL) OR ([IP_Address] = @Original_IP_Address)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_NOME" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="NOME" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_COGNOME" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="COGNOME" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_UTENTE" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UTENTE" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_PWD" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PWD" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GRUPPO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GRUPPO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_GRUPPO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GRUPPO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DATA_CREAZIONE" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DATA_CREAZIONE" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IP_Address" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IP_Address" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_IP_Address" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="IP_Address" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO [dbo].[Tab_Quality] ([Qual_Prefix], [Qual_Codice], [Qual_Des], [Qual_Note]) VALUES (@Qual_Prefix, @Qual_Codice, @Qual_Des, @Qual_Note)</CommandText>
+                    <CommandText>INSERT INTO [Users] ([NOME], [COGNOME], [UTENTE], [PWD], [GRUPPO], [DATA_CREAZIONE], [IP_Address]) VALUES (@NOME, @COGNOME, @UTENTE, @PWD, @GRUPPO, @DATA_CREAZIONE, @IP_Address);
+SELECT ID, NOME, COGNOME, UTENTE, PWD, GRUPPO, DATA_CREAZIONE, IP_Address FROM Users WHERE (ID = SCOPE_IDENTITY()) ORDER BY COGNOME</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@NOME" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="NOME" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@COGNOME" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="COGNOME" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UTENTE" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UTENTE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@PWD" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PWD" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@GRUPPO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GRUPPO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DATA_CREAZIONE" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DATA_CREAZIONE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@IP_Address" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="IP_Address" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ID, NOME, COGNOME, UTENTE, PWD, GRUPPO, DATA_CREAZIONE, IP_Address
+FROM            Users
+ORDER BY COGNOME</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [Users] SET [NOME] = @NOME, [COGNOME] = @COGNOME, [UTENTE] = @UTENTE, [PWD] = @PWD, [GRUPPO] = @GRUPPO, [DATA_CREAZIONE] = @DATA_CREAZIONE, [IP_Address] = @IP_Address WHERE (([ID] = @Original_ID) AND ([NOME] = @Original_NOME) AND ([COGNOME] = @Original_COGNOME) AND ([UTENTE] = @Original_UTENTE) AND ([PWD] = @Original_PWD) AND ((@IsNull_GRUPPO = 1 AND [GRUPPO] IS NULL) OR ([GRUPPO] = @Original_GRUPPO)) AND ([DATA_CREAZIONE] = @Original_DATA_CREAZIONE) AND ((@IsNull_IP_Address = 1 AND [IP_Address] IS NULL) OR ([IP_Address] = @Original_IP_Address)));
+SELECT ID, NOME, COGNOME, UTENTE, PWD, GRUPPO, DATA_CREAZIONE, IP_Address FROM Users WHERE (ID = @ID) ORDER BY COGNOME</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@NOME" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="NOME" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@COGNOME" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="COGNOME" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UTENTE" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UTENTE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@PWD" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PWD" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@GRUPPO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GRUPPO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DATA_CREAZIONE" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DATA_CREAZIONE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@IP_Address" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="IP_Address" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_NOME" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="NOME" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_COGNOME" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="COGNOME" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_UTENTE" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UTENTE" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_PWD" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PWD" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GRUPPO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GRUPPO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_GRUPPO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GRUPPO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DATA_CREAZIONE" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DATA_CREAZIONE" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IP_Address" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IP_Address" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_IP_Address" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="IP_Address" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="ID" DataSourceName="SISTEMATICA_FACTORY.dbo.Users" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="NOME" DataSetColumn="NOME" />
+              <Mapping SourceColumn="COGNOME" DataSetColumn="COGNOME" />
+              <Mapping SourceColumn="UTENTE" DataSetColumn="UTENTE" />
+              <Mapping SourceColumn="PWD" DataSetColumn="PWD" />
+              <Mapping SourceColumn="GRUPPO" DataSetColumn="GRUPPO" />
+              <Mapping SourceColumn="DATA_CREAZIONE" DataSetColumn="DATA_CREAZIONE" />
+              <Mapping SourceColumn="IP_Address" DataSetColumn="IP_Address" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dt_Quality_ProjProdAreaTableAdapter" GeneratorDataComponentClassName="dt_Quality_ProjProdAreaTableAdapter" Name="dt_Quality_ProjProdArea" UserDataComponentName="dt_Quality_ProjProdAreaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionString (Settings)" DbObjectName="SISTEMATICA_FACTORY.dbo.Tab_Quality" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [Tab_Quality] ([Qual_Prefix], [Qual_Codice], [Qual_Des], [Qual_Note]) VALUES (@Qual_Prefix, @Qual_Codice, @Qual_Des, @Qual_Note)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Qual_Prefix" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Qual_Prefix" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Qual_Codice" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Qual_Codice" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Qual_Des" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Qual_Des" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Qual_Note" Precision="0" ProviderType="Text" Scale="0" Size="0" SourceColumn="Qual_Note" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Qual_Prefix, Qual_Codice, Qual_Des, Qual_Note
+FROM            Tab_Quality
+WHERE        (Qual_Prefix = 'Area') OR
+                         (Qual_Prefix = 'Product') OR
+                         (Qual_Prefix = 'Project')
+order by qual_des asc</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Qual_Prefix" DataSetColumn="Qual_Prefix" />
+              <Mapping SourceColumn="Qual_Codice" DataSetColumn="Qual_Codice" />
+              <Mapping SourceColumn="Qual_Des" DataSetColumn="Qual_Des" />
+              <Mapping SourceColumn="Qual_Note" DataSetColumn="Qual_Note" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dt_Quality_CompanyTableAdapter" GeneratorDataComponentClassName="dt_Quality_CompanyTableAdapter" Name="dt_Quality_Company" UserDataComponentName="dt_Quality_CompanyTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionString (Settings)" DbObjectName="SISTEMATICA_FACTORY.dbo.Tab_Quality" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [Tab_Quality] ([Qual_Prefix], [Qual_Codice], [Qual_Des], [Qual_Note]) VALUES (@Qual_Prefix, @Qual_Codice, @Qual_Des, @Qual_Note)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Qual_Prefix" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Qual_Prefix" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Qual_Codice" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Qual_Codice" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Qual_Des" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Qual_Des" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Qual_Note" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Qual_Note" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        Qual_Prefix, Qual_Codice, Qual_Des, Qual_Note
+FROM            Tab_Quality
+WHERE        (Qual_Prefix = 'Company')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Qual_Prefix" DataSetColumn="Qual_Prefix" />
+              <Mapping SourceColumn="Qual_Codice" DataSetColumn="Qual_Codice" />
+              <Mapping SourceColumn="Qual_Des" DataSetColumn="Qual_Des" />
+              <Mapping SourceColumn="Qual_Note" DataSetColumn="Qual_Note" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dt_Quality_TipoDocTableAdapter" GeneratorDataComponentClassName="dt_Quality_TipoDocTableAdapter" Name="dt_Quality_TipoDoc" UserDataComponentName="dt_Quality_TipoDocTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionString (Settings)" DbObjectName="SISTEMATICA_FACTORY.dbo.Tab_Quality" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [Tab_Quality] ([Qual_Prefix], [Qual_Codice], [Qual_Des], [Qual_Note]) VALUES (@Qual_Prefix, @Qual_Codice, @Qual_Des, @Qual_Note)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Qual_Prefix" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Qual_Prefix" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Qual_Codice" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Qual_Codice" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Qual_Des" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Qual_Des" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Qual_Note" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Qual_Note" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        Qual_Prefix, Qual_Codice, Qual_Des, Qual_Note
+FROM            Tab_Quality
+WHERE        (Qual_Prefix = 'TipoDoc')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Qual_Prefix" DataSetColumn="Qual_Prefix" />
+              <Mapping SourceColumn="Qual_Codice" DataSetColumn="Qual_Codice" />
+              <Mapping SourceColumn="Qual_Des" DataSetColumn="Qual_Des" />
+              <Mapping SourceColumn="Qual_Note" DataSetColumn="Qual_Note" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dt_Quality_ClassificationTableAdapter" GeneratorDataComponentClassName="dt_Quality_ClassificationTableAdapter" Name="dt_Quality_Classification" UserDataComponentName="dt_Quality_ClassificationTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionString (Settings)" DbObjectName="SISTEMATICA_FACTORY.dbo.Tab_Quality" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [Tab_Quality] ([Qual_Prefix], [Qual_Codice], [Qual_Des], [Qual_Note]) VALUES (@Qual_Prefix, @Qual_Codice, @Qual_Des, @Qual_Note)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Qual_Prefix" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Qual_Prefix" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Qual_Codice" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Qual_Codice" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -161,7 +343,9 @@ SELECT Id, Qual_ProjProdArea, Qual_Org, Qual_Type, Qual_Class, Qual_Prog, Qual_V
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Qual_Prefix, Qual_Codice, Qual_Des, Qual_Note FROM dbo.Tab_Quality</CommandText>
+                    <CommandText>SELECT        Qual_Prefix, Qual_Codice, Qual_Des, Qual_Note
+FROM            Tab_Quality
+WHERE        (Qual_Prefix = 'Classification')</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -183,7 +367,7 @@ SELECT Id, Qual_ProjProdArea, Qual_Org, Qual_Type, Qual_Class, Qual_Prog, Qual_V
   <xs:element name="ds_Quality_new" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ds_Quality_new" msprop:Generator_UserDSName="ds_Quality_new">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Quality" msprop:Generator_TableClassName="QualityDataTable" msprop:Generator_TableVarName="tableQuality" msprop:Generator_RowChangedName="QualityRowChanged" msprop:Generator_TablePropName="Quality" msprop:Generator_RowDeletingName="QualityRowDeleting" msprop:Generator_RowChangingName="QualityRowChanging" msprop:Generator_RowEvHandlerName="QualityRowChangeEventHandler" msprop:Generator_RowDeletedName="QualityRowDeleted" msprop:Generator_RowClassName="QualityRow" msprop:Generator_UserTableName="Quality" msprop:Generator_RowEvArgName="QualityRowChangeEvent">
+        <xs:element name="Quality" msprop:Generator_TableClassName="QualityDataTable" msprop:Generator_TableVarName="tableQuality" msprop:Generator_TablePropName="Quality" msprop:Generator_RowDeletingName="QualityRowDeleting" msprop:Generator_RowChangingName="QualityRowChanging" msprop:Generator_RowEvHandlerName="QualityRowChangeEventHandler" msprop:Generator_RowDeletedName="QualityRowDeleted" msprop:Generator_UserTableName="Quality" msprop:Generator_RowChangedName="QualityRowChanged" msprop:Generator_RowEvArgName="QualityRowChangeEvent" msprop:Generator_RowClassName="QualityRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -270,7 +454,153 @@ SELECT Id, Qual_ProjProdArea, Qual_Org, Qual_Type, Qual_Class, Qual_Prog, Qual_V
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Tab_Quality" msprop:Generator_TableClassName="Tab_QualityDataTable" msprop:Generator_TableVarName="tableTab_Quality" msprop:Generator_RowChangedName="Tab_QualityRowChanged" msprop:Generator_TablePropName="Tab_Quality" msprop:Generator_RowDeletingName="Tab_QualityRowDeleting" msprop:Generator_RowChangingName="Tab_QualityRowChanging" msprop:Generator_RowEvHandlerName="Tab_QualityRowChangeEventHandler" msprop:Generator_RowDeletedName="Tab_QualityRowDeleted" msprop:Generator_RowClassName="Tab_QualityRow" msprop:Generator_UserTableName="Tab_Quality" msprop:Generator_RowEvArgName="Tab_QualityRowChangeEvent">
+        <xs:element name="Users" msprop:Generator_TableClassName="UsersDataTable" msprop:Generator_TableVarName="tableUsers" msprop:Generator_TablePropName="Users" msprop:Generator_RowDeletingName="UsersRowDeleting" msprop:Generator_RowChangingName="UsersRowChanging" msprop:Generator_RowEvHandlerName="UsersRowChangeEventHandler" msprop:Generator_RowDeletedName="UsersRowDeleted" msprop:Generator_UserTableName="Users" msprop:Generator_RowChangedName="UsersRowChanged" msprop:Generator_RowEvArgName="UsersRowChangeEvent" msprop:Generator_RowClassName="UsersRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="NOME" msprop:Generator_ColumnVarNameInTable="columnNOME" msprop:Generator_ColumnPropNameInRow="NOME" msprop:Generator_ColumnPropNameInTable="NOMEColumn" msprop:Generator_UserColumnName="NOME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="COGNOME" msprop:Generator_ColumnVarNameInTable="columnCOGNOME" msprop:Generator_ColumnPropNameInRow="COGNOME" msprop:Generator_ColumnPropNameInTable="COGNOMEColumn" msprop:Generator_UserColumnName="COGNOME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UTENTE" msprop:Generator_ColumnVarNameInTable="columnUTENTE" msprop:Generator_ColumnPropNameInRow="UTENTE" msprop:Generator_ColumnPropNameInTable="UTENTEColumn" msprop:Generator_UserColumnName="UTENTE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PWD" msprop:Generator_ColumnVarNameInTable="columnPWD" msprop:Generator_ColumnPropNameInRow="PWD" msprop:Generator_ColumnPropNameInTable="PWDColumn" msprop:Generator_UserColumnName="PWD">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GRUPPO" msprop:Generator_ColumnVarNameInTable="columnGRUPPO" msprop:Generator_ColumnPropNameInRow="GRUPPO" msprop:Generator_ColumnPropNameInTable="GRUPPOColumn" msprop:Generator_UserColumnName="GRUPPO" type="xs:int" minOccurs="0" />
+              <xs:element name="DATA_CREAZIONE" msprop:Generator_ColumnVarNameInTable="columnDATA_CREAZIONE" msprop:Generator_ColumnPropNameInRow="DATA_CREAZIONE" msprop:Generator_ColumnPropNameInTable="DATA_CREAZIONEColumn" msprop:Generator_UserColumnName="DATA_CREAZIONE" type="xs:dateTime" />
+              <xs:element name="IP_Address" msprop:Generator_ColumnVarNameInTable="columnIP_Address" msprop:Generator_ColumnPropNameInRow="IP_Address" msprop:Generator_ColumnPropNameInTable="IP_AddressColumn" msprop:Generator_UserColumnName="IP_Address" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_Quality_ProjProdArea" msprop:Generator_TableClassName="dt_Quality_ProjProdAreaDataTable" msprop:Generator_TableVarName="tabledt_Quality_ProjProdArea" msprop:Generator_TablePropName="dt_Quality_ProjProdArea" msprop:Generator_RowDeletingName="dt_Quality_ProjProdAreaRowDeleting" msprop:Generator_RowChangingName="dt_Quality_ProjProdAreaRowChanging" msprop:Generator_RowEvHandlerName="dt_Quality_ProjProdAreaRowChangeEventHandler" msprop:Generator_RowDeletedName="dt_Quality_ProjProdAreaRowDeleted" msprop:Generator_UserTableName="dt_Quality_ProjProdArea" msprop:Generator_RowChangedName="dt_Quality_ProjProdAreaRowChanged" msprop:Generator_RowEvArgName="dt_Quality_ProjProdAreaRowChangeEvent" msprop:Generator_RowClassName="dt_Quality_ProjProdAreaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Qual_Prefix" msprop:Generator_ColumnVarNameInTable="columnQual_Prefix" msprop:Generator_ColumnPropNameInRow="Qual_Prefix" msprop:Generator_ColumnPropNameInTable="Qual_PrefixColumn" msprop:Generator_UserColumnName="Qual_Prefix" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Qual_Codice" msprop:Generator_ColumnVarNameInTable="columnQual_Codice" msprop:Generator_ColumnPropNameInRow="Qual_Codice" msprop:Generator_ColumnPropNameInTable="Qual_CodiceColumn" msprop:Generator_UserColumnName="Qual_Codice" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Qual_Des" msprop:Generator_ColumnVarNameInTable="columnQual_Des" msprop:Generator_ColumnPropNameInRow="Qual_Des" msprop:Generator_ColumnPropNameInTable="Qual_DesColumn" msprop:Generator_UserColumnName="Qual_Des" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Qual_Note" msprop:Generator_ColumnVarNameInTable="columnQual_Note" msprop:Generator_ColumnPropNameInRow="Qual_Note" msprop:Generator_ColumnPropNameInTable="Qual_NoteColumn" msprop:Generator_UserColumnName="Qual_Note" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_Quality_Company" msprop:Generator_TableClassName="dt_Quality_CompanyDataTable" msprop:Generator_TableVarName="tabledt_Quality_Company" msprop:Generator_TablePropName="dt_Quality_Company" msprop:Generator_RowDeletingName="dt_Quality_CompanyRowDeleting" msprop:Generator_RowChangingName="dt_Quality_CompanyRowChanging" msprop:Generator_RowEvHandlerName="dt_Quality_CompanyRowChangeEventHandler" msprop:Generator_RowDeletedName="dt_Quality_CompanyRowDeleted" msprop:Generator_UserTableName="dt_Quality_Company" msprop:Generator_RowChangedName="dt_Quality_CompanyRowChanged" msprop:Generator_RowEvArgName="dt_Quality_CompanyRowChangeEvent" msprop:Generator_RowClassName="dt_Quality_CompanyRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Qual_Prefix" msprop:Generator_ColumnVarNameInTable="columnQual_Prefix" msprop:Generator_ColumnPropNameInRow="Qual_Prefix" msprop:Generator_ColumnPropNameInTable="Qual_PrefixColumn" msprop:Generator_UserColumnName="Qual_Prefix" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Qual_Codice" msprop:Generator_ColumnVarNameInTable="columnQual_Codice" msprop:Generator_ColumnPropNameInRow="Qual_Codice" msprop:Generator_ColumnPropNameInTable="Qual_CodiceColumn" msprop:Generator_UserColumnName="Qual_Codice" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Qual_Des" msprop:Generator_ColumnVarNameInTable="columnQual_Des" msprop:Generator_ColumnPropNameInRow="Qual_Des" msprop:Generator_ColumnPropNameInTable="Qual_DesColumn" msprop:Generator_UserColumnName="Qual_Des" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Qual_Note" msprop:Generator_ColumnVarNameInTable="columnQual_Note" msprop:Generator_ColumnPropNameInRow="Qual_Note" msprop:Generator_ColumnPropNameInTable="Qual_NoteColumn" msprop:Generator_UserColumnName="Qual_Note" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_Quality_TipoDoc" msprop:Generator_TableClassName="dt_Quality_TipoDocDataTable" msprop:Generator_TableVarName="tabledt_Quality_TipoDoc" msprop:Generator_TablePropName="dt_Quality_TipoDoc" msprop:Generator_RowDeletingName="dt_Quality_TipoDocRowDeleting" msprop:Generator_RowChangingName="dt_Quality_TipoDocRowChanging" msprop:Generator_RowEvHandlerName="dt_Quality_TipoDocRowChangeEventHandler" msprop:Generator_RowDeletedName="dt_Quality_TipoDocRowDeleted" msprop:Generator_UserTableName="dt_Quality_TipoDoc" msprop:Generator_RowChangedName="dt_Quality_TipoDocRowChanged" msprop:Generator_RowEvArgName="dt_Quality_TipoDocRowChangeEvent" msprop:Generator_RowClassName="dt_Quality_TipoDocRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Qual_Prefix" msprop:Generator_ColumnVarNameInTable="columnQual_Prefix" msprop:Generator_ColumnPropNameInRow="Qual_Prefix" msprop:Generator_ColumnPropNameInTable="Qual_PrefixColumn" msprop:Generator_UserColumnName="Qual_Prefix" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Qual_Codice" msprop:Generator_ColumnVarNameInTable="columnQual_Codice" msprop:Generator_ColumnPropNameInRow="Qual_Codice" msprop:Generator_ColumnPropNameInTable="Qual_CodiceColumn" msprop:Generator_UserColumnName="Qual_Codice" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Qual_Des" msprop:Generator_ColumnVarNameInTable="columnQual_Des" msprop:Generator_ColumnPropNameInRow="Qual_Des" msprop:Generator_ColumnPropNameInTable="Qual_DesColumn" msprop:Generator_UserColumnName="Qual_Des" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Qual_Note" msprop:Generator_ColumnVarNameInTable="columnQual_Note" msprop:Generator_ColumnPropNameInRow="Qual_Note" msprop:Generator_ColumnPropNameInTable="Qual_NoteColumn" msprop:Generator_UserColumnName="Qual_Note" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_Quality_Classification" msprop:Generator_TableClassName="dt_Quality_ClassificationDataTable" msprop:Generator_TableVarName="tabledt_Quality_Classification" msprop:Generator_TablePropName="dt_Quality_Classification" msprop:Generator_RowDeletingName="dt_Quality_ClassificationRowDeleting" msprop:Generator_RowChangingName="dt_Quality_ClassificationRowChanging" msprop:Generator_RowEvHandlerName="dt_Quality_ClassificationRowChangeEventHandler" msprop:Generator_RowDeletedName="dt_Quality_ClassificationRowDeleted" msprop:Generator_UserTableName="dt_Quality_Classification" msprop:Generator_RowChangedName="dt_Quality_ClassificationRowChanged" msprop:Generator_RowEvArgName="dt_Quality_ClassificationRowChangeEvent" msprop:Generator_RowClassName="dt_Quality_ClassificationRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Qual_Prefix" msprop:Generator_ColumnVarNameInTable="columnQual_Prefix" msprop:Generator_ColumnPropNameInRow="Qual_Prefix" msprop:Generator_ColumnPropNameInTable="Qual_PrefixColumn" msprop:Generator_UserColumnName="Qual_Prefix" minOccurs="0">
@@ -309,6 +639,10 @@ SELECT Id, Qual_ProjProdArea, Qual_Org, Qual_Type, Qual_Class, Qual_Prog, Qual_V
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Quality" />
       <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique name="Users_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Users" />
+      <xs:field xpath="mstns:ID" />
     </xs:unique>
   </xs:element>
 </xs:schema>

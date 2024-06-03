@@ -44,7 +44,7 @@ namespace SmartLineProduction
             InitializeComponent();
         }
 
-        private void menu_sw_exit_Click(object sender, EventArgs e)
+        private void menu_sw_exit_Click(object sender, EventArgs e)                                   //fatto
         {
             this.Close();
         }
@@ -57,7 +57,7 @@ namespace SmartLineProduction
 
             lab_MyIp.Text = FindIP();
             PreparaForm();
-        }
+        }                                   //fatto
 
         private string FindIP()
         {
@@ -70,7 +70,7 @@ namespace SmartLineProduction
                 }
             }
             throw new Exception("No network adapters with an IPv4 address in the system!");
-        }
+        }                                                                    //fatto
 
         private void dtQualityBindingSource_CurrentChanged(object sender, EventArgs e)
         {
@@ -243,7 +243,7 @@ namespace SmartLineProduction
 
                     break;
             }
-        }
+        }                                                                 //fatto
 
         private void menu_new_Click(object sender, EventArgs e)
         {
@@ -251,7 +251,7 @@ namespace SmartLineProduction
             Application.UseWaitCursor = true;
             PreparaForm();
             Application.UseWaitCursor = false;
-        }
+        }                                    //fatto
 
         private void FiltraQuality()
         {
@@ -312,7 +312,7 @@ namespace SmartLineProduction
         {
             displayform = "V";
             PreparaForm();
-        }
+        }                              //fatto
 
         private void CreaCodice()
         {
@@ -338,9 +338,9 @@ namespace SmartLineProduction
             //,CONCAT(Quality.Qual_ProjProdArea, '-', Quality.Qual_Org, '-', Quality.Qual_Type, '-', Quality.Qual_Class, '-', FORMAT(Quality.Qual_Prog, '0000'), '-', Quality.Qual_Ver, '.', Quality.Qual_Rev) AS Codice_Quality
             string codice = sel_ProjProdArea + "-" + sel_Org + "-" + sel_Type + "-" + sel_Class + "-" + ultcodice.ToString("0000") + "-" + codvers + "." + codrev;
             lab_Codice_Edit.Text = codice;
-        }
+        }                                                                   //fatto
 
-        private void tb_vers_Leave(object sender, EventArgs e)
+        private void tb_vers_Leave(object sender, EventArgs e)                                         //fatto
         {
             //Controlla versione
             int oldvers = 0;
@@ -360,7 +360,7 @@ namespace SmartLineProduction
                 CreaCodice();
             else
                 CreaCodiceRevisione(Qual_ProjProdArea, Qual_Org, Qual_Type, Qual_Class, Qual_Prog, Qual_Ver, Qual_Rev);                
-        }
+        }                                      
 
         private void tb_rev_Leave(object sender, EventArgs e)
         {
@@ -381,7 +381,7 @@ namespace SmartLineProduction
                 CreaCodice();
             else
                 CreaCodiceRevisione(Qual_ProjProdArea, Qual_Org, Qual_Type, Qual_Class, Qual_Prog, Qual_Ver, Qual_Rev);
-        }
+        }                                       //fatto
 
         private void tb_folder_ButtonClick(object sender, EventArgs e)
         {
@@ -395,7 +395,7 @@ namespace SmartLineProduction
             {
                 tb_folder.Text = folderDlg.SelectedPath;
             }
-        }
+        }                              //fatto
 
         private void menu_sw_salva_Click(object sender, EventArgs e)
         {
@@ -469,7 +469,7 @@ namespace SmartLineProduction
 
             displayform = "V";
             PreparaForm();
-        }
+        }                                //fatto
 
         private void Riga2Db()
         {
@@ -587,7 +587,7 @@ namespace SmartLineProduction
                 ds_Quality.dt_Quality.Rows.Add(newrow);
                 dt_QualityTableAdapter.Update(newrow);
             }
-        }
+        }                                                                       //fatto
 
         private void usersBindingSource_CurrentChanged(object sender, EventArgs e)
         {
@@ -601,7 +601,7 @@ namespace SmartLineProduction
             Application.UseWaitCursor = true;
             PreparaForm();
             Application.UseWaitCursor = false;
-        }
+        }                                    //fatto
 
         private void sFQualityViewBindingSource_CurrentChanged(object sender, EventArgs e)
         {
