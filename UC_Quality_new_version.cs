@@ -48,6 +48,63 @@ namespace SmartLineProduction
         /// Funzioni private
         ////////////////////////////////////////////////////////////////////////////////////
 
+        private void FiltraQuality()
+        {
+            if (displayform == "I")
+            {
+                string filtro = "";
+                bool firstfilter = false;
+
+                if (sel_ProjProdArea != "___")
+                {
+                    filtro = filtro + "(Qual_ProjProdArea like " + "'" + sel_ProjProdArea + "')";
+                    firstfilter = true;
+                }
+                if (sel_Org != "___")
+                {
+                    if (firstfilter) { filtro = filtro + " AND "; }
+                    filtro = filtro + "(Qual_Org like " + "'" + sel_Org + "')";
+                    firstfilter = true;
+                }
+                if (sel_Type != "___")
+                {
+                    if (firstfilter) { filtro = filtro + " AND "; }
+                    filtro = filtro + "(Qual_Type like " + "'" + sel_Type + "')";
+                    firstfilter = true;
+                }
+
+                qualityBindingSource.Filter = filtro;
+
+                CreaCodice();
+            }
+        }
+
+        private void CreaCodice()
+        {
+            //Trova ultimo codice
+            ultcodice = 0;
+
+            DataView view = new DataView(ds_Quality_new.Quality);
+            view.RowFilter = qualityBindingSource.Filter;
+            int contarec = view.Count;
+            if (contarec > 0)
+            {
+                DataTable result = view.ToTable();
+                ultcodice = Convert.ToInt32(result.Compute("max(Qual_Prog)", ""));
+            }
+
+            ultcodice++;
+
+            string codvers = "";
+            string codrev = "";
+            if (tb_vers.Text != "") { codvers = tb_vers.Text; } else { codvers = "__"; }
+            if (tb_rev.Text != "") { codrev = tb_rev.Text; } else { codrev = "__"; }
+
+            //,CONCAT(Quality.Qual_ProjProdArea, '-', Quality.Qual_Org, '-', Quality.Qual_Type, '-', Quality.Qual_Class, '-', FORMAT(Quality.Qual_Prog, '0000'), '-', Quality.Qual_Ver, '.', Quality.Qual_Rev) AS Codice_Quality
+            string codice = sel_ProjProdArea + "-" + sel_Org + "-" + sel_Type + "-" + sel_Class + "-" + ultcodice.ToString("0000") + "-" + codvers + "." + codrev;
+            lab_Codice_Edit.Text = codice;
+        }
+
         ////////////////////////////////////////////////////////////////////////////////////
         /// Funzioni automatiche
         ////////////////////////////////////////////////////////////////////////////////////
@@ -61,7 +118,9 @@ namespace SmartLineProduction
         {
             // TODO: questa riga di codice carica i dati nella tabella 'ds_Quality_new.Quality'. È possibile spostarla o rimuoverla se necessario.
             this.qualityTableAdapter.Fill(this.ds_Quality_new.Quality);
-
+            // TODO: questa riga di codice carica i dati nella tabella 'ds_Quality_new.Quality'. È possibile spostarla o rimuoverla se necessario.
+            this.qualityTableAdapter.Fill(this.ds_Quality_new.Quality);
+            //qualityBindingSource.MoveFirst();
         }
     }
 }
