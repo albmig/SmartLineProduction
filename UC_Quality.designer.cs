@@ -1191,7 +1191,7 @@
             this.cntxt_CopyToClipboard.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.copiaIlValoreNellaClipboardToolStripMenuItem});
             this.cntxt_CopyToClipboard.Name = "cntxt_CopyToClipboard";
-            this.cntxt_CopyToClipboard.Size = new System.Drawing.Size(231, 26);
+            this.cntxt_CopyToClipboard.Size = new System.Drawing.Size(231, 48);
             // 
             // copiaIlValoreNellaClipboardToolStripMenuItem
             // 

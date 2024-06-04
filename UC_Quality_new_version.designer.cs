@@ -80,7 +80,6 @@
             this.tb_vers = new MetroFramework.Controls.MetroTextBox();
             this.tb_rev = new MetroFramework.Controls.MetroTextBox();
             this.gv_Quality = new DevExpress.XtraGrid.GridControl();
-            this.qualityBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colQual_ProjProdArea = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -97,6 +96,7 @@
             this.colQual_IPRequest = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colQual_Rev_Obsolete = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colcodiceQual = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.qualityBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.treeListBand1 = new DevExpress.XtraTreeList.Columns.TreeListBand();
             this.treeListBand2 = new DevExpress.XtraTreeList.Columns.TreeListBand();
             this.treeListBand3 = new DevExpress.XtraTreeList.Columns.TreeListBand();
@@ -109,6 +109,10 @@
             this.cntxt_Obsolete = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.visualizzaRevisioniObsoleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nascondiRevisioniObsoleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cntxt_CopyToClipboard = new MetroFramework.Controls.MetroContextMenu(this.components);
+            this.copiaIlValoreNellaClipboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dtQualityEditRecBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dt_Quality_EditRecTableAdapter = new SmartLineProduction.ds_Quality_newTableAdapters.dt_Quality_EditRecTableAdapter();
             this.layout_orizz_menu.SuspendLayout();
             this.pan_Menu_salva.SuspendLayout();
             this.pan_Menu_comandi.SuspendLayout();
@@ -122,9 +126,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtQualityTipoDocBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtQualityClassificationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_Quality)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qualityBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qualityBindingSource)).BeginInit();
             this.cntxt_Obsolete.SuspendLayout();
+            this.cntxt_CopyToClipboard.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtQualityEditRecBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layout_orizz_menu
@@ -245,6 +251,7 @@
             this.creaRevisioneToolStripMenuItem1.Name = "creaRevisioneToolStripMenuItem1";
             this.creaRevisioneToolStripMenuItem1.Size = new System.Drawing.Size(112, 21);
             this.creaRevisioneToolStripMenuItem1.Text = "Crea Revisione";
+            this.creaRevisioneToolStripMenuItem1.Click += new System.EventHandler(this.creaRevisioneToolStripMenuItem1_Click);
             // 
             // pan_Menu_exit
             // 
@@ -544,6 +551,7 @@
             // 
             this.usersBindingSource.DataMember = "Users";
             this.usersBindingSource.DataSource = this.ds_Quality_new;
+            this.usersBindingSource.CurrentChanged += new System.EventHandler(this.usersBindingSource_CurrentChanged);
             // 
             // ds_Quality_new
             // 
@@ -567,6 +575,7 @@
             // 
             this.dtQualityProjProdAreaBindingSource.DataMember = "dt_Quality_ProjProdArea";
             this.dtQualityProjProdAreaBindingSource.DataSource = this.ds_Quality_new;
+            this.dtQualityProjProdAreaBindingSource.CurrentChanged += new System.EventHandler(this.dtQualityProjProdAreaBindingSource_CurrentChanged);
             // 
             // cb_org
             // 
@@ -585,6 +594,7 @@
             // 
             this.dtQualityCompanyBindingSource.DataMember = "dt_Quality_Company";
             this.dtQualityCompanyBindingSource.DataSource = this.ds_Quality_new;
+            this.dtQualityCompanyBindingSource.CurrentChanged += new System.EventHandler(this.dtQualityCompanyBindingSource_CurrentChanged);
             // 
             // cb_type
             // 
@@ -603,6 +613,7 @@
             // 
             this.dtQualityTipoDocBindingSource.DataMember = "dt_Quality_TipoDoc";
             this.dtQualityTipoDocBindingSource.DataSource = this.ds_Quality_new;
+            this.dtQualityTipoDocBindingSource.CurrentChanged += new System.EventHandler(this.dtQualityTipoDocBindingSource_CurrentChanged);
             // 
             // cb_class
             // 
@@ -621,6 +632,7 @@
             // 
             this.dtQualityClassificationBindingSource.DataMember = "dt_Quality_Classification";
             this.dtQualityClassificationBindingSource.DataSource = this.ds_Quality_new;
+            this.dtQualityClassificationBindingSource.CurrentChanged += new System.EventHandler(this.dtQualityClassificationBindingSource_CurrentChanged);
             // 
             // label_codview
             // 
@@ -880,11 +892,6 @@
             this.gv_Quality.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
-            // qualityBindingSource
-            // 
-            this.qualityBindingSource.DataMember = "Quality";
-            this.qualityBindingSource.DataSource = this.ds_Quality_new;
-            // 
             // gridView1
             // 
             this.gridView1.Appearance.CustomizationFormHint.Font = new System.Drawing.Font("Segoe UI", 9.75F);
@@ -1049,6 +1056,13 @@
             this.colcodiceQual.VisibleIndex = 0;
             this.colcodiceQual.Width = 120;
             // 
+            // qualityBindingSource
+            // 
+            this.qualityBindingSource.DataMember = "Quality";
+            this.qualityBindingSource.DataSource = this.ds_Quality_new;
+            this.qualityBindingSource.Sort = "Qual_ProjProdArea asc, Qual_Org asc, Qual_Type asc";
+            this.qualityBindingSource.CurrentChanged += new System.EventHandler(this.qualityBindingSource_CurrentChanged);
+            // 
             // treeListBand1
             // 
             this.treeListBand1.Caption = "treeListBand1";
@@ -1110,6 +1124,29 @@
             this.nascondiRevisioniObsoleteToolStripMenuItem.Text = "Nascondi revisioni obsolete";
             this.nascondiRevisioniObsoleteToolStripMenuItem.Click += new System.EventHandler(this.nascondiRevisioniObsoleteToolStripMenuItem_Click);
             // 
+            // cntxt_CopyToClipboard
+            // 
+            this.cntxt_CopyToClipboard.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.copiaIlValoreNellaClipboardToolStripMenuItem});
+            this.cntxt_CopyToClipboard.Name = "cntxt_CopyToClipboard";
+            this.cntxt_CopyToClipboard.Size = new System.Drawing.Size(231, 26);
+            // 
+            // copiaIlValoreNellaClipboardToolStripMenuItem
+            // 
+            this.copiaIlValoreNellaClipboardToolStripMenuItem.Name = "copiaIlValoreNellaClipboardToolStripMenuItem";
+            this.copiaIlValoreNellaClipboardToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
+            this.copiaIlValoreNellaClipboardToolStripMenuItem.Text = "Copia il valore nella clipboard";
+            this.copiaIlValoreNellaClipboardToolStripMenuItem.Click += new System.EventHandler(this.copiaIlValoreNellaClipboardToolStripMenuItem_Click);
+            // 
+            // dtQualityEditRecBindingSource
+            // 
+            this.dtQualityEditRecBindingSource.DataMember = "dt_Quality_EditRec";
+            this.dtQualityEditRecBindingSource.DataSource = this.ds_Quality_new;
+            // 
+            // dt_Quality_EditRecTableAdapter
+            // 
+            this.dt_Quality_EditRecTableAdapter.ClearBeforeFill = true;
+            // 
             // UC_Quality_new_version
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1143,9 +1180,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtQualityTipoDocBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtQualityClassificationBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_Quality)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qualityBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qualityBindingSource)).EndInit();
             this.cntxt_Obsolete.ResumeLayout(false);
+            this.cntxt_CopyToClipboard.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtQualityEditRecBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1237,5 +1276,10 @@
         private System.Windows.Forms.ContextMenuStrip cntxt_Obsolete;
         private System.Windows.Forms.ToolStripMenuItem visualizzaRevisioniObsoleteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nascondiRevisioniObsoleteToolStripMenuItem;
+        private MetroFramework.Controls.MetroContextMenu cntxt_CopyToClipboard;
+        private System.Windows.Forms.ToolStripMenuItem copiaIlValoreNellaClipboardToolStripMenuItem;
+        private System.Windows.Forms.BindingSource QualityBindingSource;
+        private System.Windows.Forms.BindingSource dtQualityEditRecBindingSource;
+        private ds_Quality_newTableAdapters.dt_Quality_EditRecTableAdapter dt_Quality_EditRecTableAdapter;
     }
 }

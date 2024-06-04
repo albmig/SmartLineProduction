@@ -282,31 +282,31 @@ namespace SmartLineProduction
 
                 CreaCodice();
             }
-        }
+        }                                                                  //fatto
 
         private void dtQualityProjProdAreaBindingSource_CurrentChanged(object sender, EventArgs e)
         {
             DataRowView drview = (DataRowView)dtQualityProjProdAreaBindingSource.Current;
             if (drview != null && displayform == "I") { sel_ProjProdArea = drview["Qual_Codice"].ToString(); FiltraQuality(); }
-        }
+        }   //fatto
 
         private void dtQualityCompanyBindingSource_CurrentChanged(object sender, EventArgs e)
         {
             DataRowView drview = (DataRowView)dtQualityCompanyBindingSource.Current;
             if (drview != null && displayform == "I") { sel_Org = drview["Qual_Codice"].ToString(); FiltraQuality(); }
-        }
+        }   //fatto
 
         private void dtQualityTipoDocBindingSource_CurrentChanged(object sender, EventArgs e)
         {
             DataRowView drview = (DataRowView)dtQualityTipoDocBindingSource.Current;
             if (drview != null && displayform == "I") { sel_Type = drview["Qual_Codice"].ToString(); FiltraQuality(); }
-        }
+        }   //fatto
 
         private void dtQualityClassificationBindingSource_CurrentChanged(object sender, EventArgs e)
         {
             DataRowView drview = (DataRowView)dtQualityClassificationBindingSource.Current;
             if (drview != null && displayform == "I") { sel_Class = drview["Qual_Codice"].ToString(); FiltraQuality(); }
-        }
+        }   //fatto
 
         private void menu_sw_annulla_Click(object sender, EventArgs e)
         {
@@ -593,7 +593,7 @@ namespace SmartLineProduction
         {
             DataRowView drview = (DataRowView)usersBindingSource.Current;
             if (drview != null && displayform == "I") { sel_User = drview["UTENTE"].ToString(); }
-        }
+        }                   //fatto
 
         private void menu_edit_Click(object sender, EventArgs e)
         {
@@ -619,7 +619,7 @@ namespace SmartLineProduction
         private void copiaIlValoreNellaClipboardToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(lab_Codice_View.Text);
-        }
+        }  //fatto
 
         private void creaRevisioneToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -658,7 +658,7 @@ namespace SmartLineProduction
             Qual_Rev_old = sourceRow["Qual_Rev"].ToString();
 
             CreaCodiceRevisione(Qual_ProjProdArea, Qual_Org, Qual_Type, Qual_Class, Qual_Prog, Qual_Ver, Qual_Rev);
-        }
+        }               //fatto
 
         private void CreaCodiceRevisione(string loc_Qual_ProjProdArea, string loc_Qual_Org, string loc_Qual_Type, string loc_Qual_Class, string loc_Qual_Prog, string loc_Qual_Ver, string loc_Qual_Rev)
         {
@@ -704,20 +704,20 @@ namespace SmartLineProduction
             Qual_Ver_old = "";
             Qual_Rev_old = "";
 
-        }
+        }                                                               //fatto
 
         private void visualizzaRevisioniObsoleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Qual_Rev_Obsolete.Visible = true;
             VediObsolete = true;
             AggiornaArchivi();
-        }
+        }   //fatto
 
         private void nascondiRevisioniObsoleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Qual_Rev_Obsolete.Visible = false;
             VediObsolete = false;
             AggiornaArchivi();
-        }
+        }       //fatto
     }
 }
