@@ -108,6 +108,11 @@ namespace SmartLineProduction
         private void AggiornaArchivi()
         {
             this.qualityTableAdapter.Fill(this.ds_Quality_new.Quality);
+            if (this.qualityBindingSource.Count==0)
+            {
+                AzzeraForm();
+            }
+
             this.dt_Quality_EditRecTableAdapter.Fill(this.ds_Quality_new.dt_Quality_EditRec);
 
             this.dt_Quality_ClassificationTableAdapter.Fill(this.ds_Quality_new.dt_Quality_Classification);
@@ -421,6 +426,21 @@ namespace SmartLineProduction
                 ds_Quality_new.Quality.Rows.Add(newrow);
                 qualityTableAdapter.Update(newrow);
             }
+        }
+
+        private void AzzeraForm()
+        {
+            lab_Codice_Edit.Text = string.Empty;
+            lab_Codice_View.Text = string.Empty;
+            tb_Des.Text = string.Empty;
+            tb_folder.Text = string.Empty;
+            tb_vers.Text = string.Empty;
+            tb_rev.Text = string.Empty;
+            lab_MyIp.Text = string.Empty;
+            dtQualityProjProdAreaBindingSource.MoveFirst();
+            dtQualityCompanyBindingSource.MoveFirst();
+            dtQualityTipoDocBindingSource.MoveFirst();
+            dtQualityClassificationBindingSource.MoveFirst(); 
         }
 
         ////////////////////////////////////////////////////////////////////////////////////

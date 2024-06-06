@@ -47,6 +47,8 @@
             this.layout_Schede = new System.Windows.Forms.TableLayoutPanel();
             this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
             this.tb_desClass = new MetroFramework.Controls.MetroTextBox();
+            this.dtQualityClassificationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ds_Quality_new = new SmartLineProduction.ds_Quality_new();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
@@ -54,20 +56,18 @@
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.lab_MyIp = new MetroFramework.Controls.MetroLabel();
             this.lab_projprodarea = new MetroFramework.Controls.MetroLabel();
+            this.dtQualityProjProdAreaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lab_org = new MetroFramework.Controls.MetroLabel();
+            this.dtQualityCompanyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lab_type = new MetroFramework.Controls.MetroLabel();
+            this.dtQualityTipoDocBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lab_class = new MetroFramework.Controls.MetroLabel();
             this.cb_User = new System.Windows.Forms.ComboBox();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ds_Quality_new = new SmartLineProduction.ds_Quality_new();
             this.cb_projprodarea = new System.Windows.Forms.ComboBox();
-            this.dtQualityProjProdAreaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cb_org = new System.Windows.Forms.ComboBox();
-            this.dtQualityCompanyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cb_type = new System.Windows.Forms.ComboBox();
-            this.dtQualityTipoDocBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cb_class = new System.Windows.Forms.ComboBox();
-            this.dtQualityClassificationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label_codview = new MetroFramework.Controls.MetroLabel();
             this.label_codedit = new MetroFramework.Controls.MetroLabel();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
@@ -80,6 +80,7 @@
             this.tb_vers = new MetroFramework.Controls.MetroTextBox();
             this.tb_rev = new MetroFramework.Controls.MetroTextBox();
             this.gv_Quality = new DevExpress.XtraGrid.GridControl();
+            this.qualityBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colQual_ProjProdArea = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -96,7 +97,6 @@
             this.colQual_IPRequest = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colQual_Rev_Obsolete = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colcodiceQual = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.qualityBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.treeListBand1 = new DevExpress.XtraTreeList.Columns.TreeListBand();
             this.treeListBand2 = new DevExpress.XtraTreeList.Columns.TreeListBand();
             this.treeListBand3 = new DevExpress.XtraTreeList.Columns.TreeListBand();
@@ -119,15 +119,15 @@
             this.pan_Menu_exit.SuspendLayout();
             this.panel_fattibilita.SuspendLayout();
             this.layout_Schede.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtQualityClassificationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ds_Quality_new)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtQualityProjProdAreaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtQualityCompanyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtQualityTipoDocBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtQualityClassificationBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_Quality)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qualityBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.cntxt_Obsolete.SuspendLayout();
             this.cntxt_CopyToClipboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtQualityEditRecBindingSource)).BeginInit();
@@ -380,6 +380,7 @@
             this.tb_desClass.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.tb_desClass.CustomButton.UseSelectable = true;
             this.tb_desClass.CustomButton.Visible = false;
+            this.tb_desClass.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dtQualityClassificationBindingSource, "Qual_Note", true));
             this.tb_desClass.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tb_desClass.Enabled = false;
             this.tb_desClass.Lines = new string[] {
@@ -402,6 +403,17 @@
             this.tb_desClass.UseSelectable = true;
             this.tb_desClass.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tb_desClass.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // dtQualityClassificationBindingSource
+            // 
+            this.dtQualityClassificationBindingSource.DataMember = "dt_Quality_Classification";
+            this.dtQualityClassificationBindingSource.DataSource = this.ds_Quality_new;
+            this.dtQualityClassificationBindingSource.CurrentChanged += new System.EventHandler(this.dtQualityClassificationBindingSource_CurrentChanged);
+            // 
+            // ds_Quality_new
+            // 
+            this.ds_Quality_new.DataSetName = "ds_Quality_new";
+            this.ds_Quality_new.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // metroLabel2
             // 
@@ -486,6 +498,7 @@
             // 
             this.lab_projprodarea.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lab_projprodarea.AutoSize = true;
+            this.lab_projprodarea.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dtQualityProjProdAreaBindingSource, "Qual_Codice", true));
             this.lab_projprodarea.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.lab_projprodarea.Location = new System.Drawing.Point(864, 26);
             this.lab_projprodarea.Name = "lab_projprodarea";
@@ -495,10 +508,17 @@
             this.lab_projprodarea.Text = "Utente:";
             this.lab_projprodarea.UseStyleColors = true;
             // 
+            // dtQualityProjProdAreaBindingSource
+            // 
+            this.dtQualityProjProdAreaBindingSource.DataMember = "dt_Quality_ProjProdArea";
+            this.dtQualityProjProdAreaBindingSource.DataSource = this.ds_Quality_new;
+            this.dtQualityProjProdAreaBindingSource.CurrentChanged += new System.EventHandler(this.dtQualityProjProdAreaBindingSource_CurrentChanged);
+            // 
             // lab_org
             // 
             this.lab_org.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lab_org.AutoSize = true;
+            this.lab_org.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dtQualityCompanyBindingSource, "Qual_Codice", true));
             this.lab_org.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.lab_org.Location = new System.Drawing.Point(864, 50);
             this.lab_org.Name = "lab_org";
@@ -508,10 +528,17 @@
             this.lab_org.Text = "Utente:";
             this.lab_org.UseStyleColors = true;
             // 
+            // dtQualityCompanyBindingSource
+            // 
+            this.dtQualityCompanyBindingSource.DataMember = "dt_Quality_Company";
+            this.dtQualityCompanyBindingSource.DataSource = this.ds_Quality_new;
+            this.dtQualityCompanyBindingSource.CurrentChanged += new System.EventHandler(this.dtQualityCompanyBindingSource_CurrentChanged);
+            // 
             // lab_type
             // 
             this.lab_type.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lab_type.AutoSize = true;
+            this.lab_type.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dtQualityTipoDocBindingSource, "Qual_Codice", true));
             this.lab_type.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.lab_type.Location = new System.Drawing.Point(864, 74);
             this.lab_type.Name = "lab_type";
@@ -521,10 +548,17 @@
             this.lab_type.Text = "Utente:";
             this.lab_type.UseStyleColors = true;
             // 
+            // dtQualityTipoDocBindingSource
+            // 
+            this.dtQualityTipoDocBindingSource.DataMember = "dt_Quality_TipoDoc";
+            this.dtQualityTipoDocBindingSource.DataSource = this.ds_Quality_new;
+            this.dtQualityTipoDocBindingSource.CurrentChanged += new System.EventHandler(this.dtQualityTipoDocBindingSource_CurrentChanged);
+            // 
             // lab_class
             // 
             this.lab_class.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lab_class.AutoSize = true;
+            this.lab_class.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dtQualityClassificationBindingSource, "Qual_Codice", true));
             this.lab_class.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.lab_class.Location = new System.Drawing.Point(864, 98);
             this.lab_class.Name = "lab_class";
@@ -553,11 +587,6 @@
             this.usersBindingSource.DataSource = this.ds_Quality_new;
             this.usersBindingSource.CurrentChanged += new System.EventHandler(this.usersBindingSource_CurrentChanged);
             // 
-            // ds_Quality_new
-            // 
-            this.ds_Quality_new.DataSetName = "ds_Quality_new";
-            this.ds_Quality_new.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // cb_projprodarea
             // 
             this.cb_projprodarea.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -570,12 +599,6 @@
             this.cb_projprodarea.Name = "cb_projprodarea";
             this.cb_projprodarea.Size = new System.Drawing.Size(234, 23);
             this.cb_projprodarea.TabIndex = 27;
-            // 
-            // dtQualityProjProdAreaBindingSource
-            // 
-            this.dtQualityProjProdAreaBindingSource.DataMember = "dt_Quality_ProjProdArea";
-            this.dtQualityProjProdAreaBindingSource.DataSource = this.ds_Quality_new;
-            this.dtQualityProjProdAreaBindingSource.CurrentChanged += new System.EventHandler(this.dtQualityProjProdAreaBindingSource_CurrentChanged);
             // 
             // cb_org
             // 
@@ -590,12 +613,6 @@
             this.cb_org.Size = new System.Drawing.Size(234, 23);
             this.cb_org.TabIndex = 28;
             // 
-            // dtQualityCompanyBindingSource
-            // 
-            this.dtQualityCompanyBindingSource.DataMember = "dt_Quality_Company";
-            this.dtQualityCompanyBindingSource.DataSource = this.ds_Quality_new;
-            this.dtQualityCompanyBindingSource.CurrentChanged += new System.EventHandler(this.dtQualityCompanyBindingSource_CurrentChanged);
-            // 
             // cb_type
             // 
             this.cb_type.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -609,12 +626,6 @@
             this.cb_type.Size = new System.Drawing.Size(234, 23);
             this.cb_type.TabIndex = 29;
             // 
-            // dtQualityTipoDocBindingSource
-            // 
-            this.dtQualityTipoDocBindingSource.DataMember = "dt_Quality_TipoDoc";
-            this.dtQualityTipoDocBindingSource.DataSource = this.ds_Quality_new;
-            this.dtQualityTipoDocBindingSource.CurrentChanged += new System.EventHandler(this.dtQualityTipoDocBindingSource_CurrentChanged);
-            // 
             // cb_class
             // 
             this.cb_class.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -627,12 +638,6 @@
             this.cb_class.Name = "cb_class";
             this.cb_class.Size = new System.Drawing.Size(234, 23);
             this.cb_class.TabIndex = 30;
-            // 
-            // dtQualityClassificationBindingSource
-            // 
-            this.dtQualityClassificationBindingSource.DataMember = "dt_Quality_Classification";
-            this.dtQualityClassificationBindingSource.DataSource = this.ds_Quality_new;
-            this.dtQualityClassificationBindingSource.CurrentChanged += new System.EventHandler(this.dtQualityClassificationBindingSource_CurrentChanged);
             // 
             // label_codview
             // 
@@ -892,6 +897,13 @@
             this.gv_Quality.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
+            // qualityBindingSource
+            // 
+            this.qualityBindingSource.DataMember = "Quality";
+            this.qualityBindingSource.DataSource = this.ds_Quality_new;
+            this.qualityBindingSource.Sort = "Qual_ProjProdArea asc, Qual_Org asc, Qual_Type asc";
+            this.qualityBindingSource.CurrentChanged += new System.EventHandler(this.qualityBindingSource_CurrentChanged);
+            // 
             // gridView1
             // 
             this.gridView1.Appearance.CustomizationFormHint.Font = new System.Drawing.Font("Segoe UI", 9.75F);
@@ -1056,13 +1068,6 @@
             this.colcodiceQual.VisibleIndex = 0;
             this.colcodiceQual.Width = 120;
             // 
-            // qualityBindingSource
-            // 
-            this.qualityBindingSource.DataMember = "Quality";
-            this.qualityBindingSource.DataSource = this.ds_Quality_new;
-            this.qualityBindingSource.Sort = "Qual_ProjProdArea asc, Qual_Org asc, Qual_Type asc";
-            this.qualityBindingSource.CurrentChanged += new System.EventHandler(this.qualityBindingSource_CurrentChanged);
-            // 
             // treeListBand1
             // 
             this.treeListBand1.Caption = "treeListBand1";
@@ -1173,15 +1178,15 @@
             this.panel_fattibilita.ResumeLayout(false);
             this.layout_Schede.ResumeLayout(false);
             this.layout_Schede.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtQualityClassificationBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ds_Quality_new)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtQualityProjProdAreaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtQualityCompanyBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtQualityTipoDocBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtQualityClassificationBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_Quality)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qualityBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.cntxt_Obsolete.ResumeLayout(false);
             this.cntxt_CopyToClipboard.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtQualityEditRecBindingSource)).EndInit();

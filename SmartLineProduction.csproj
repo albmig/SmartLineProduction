@@ -1129,6 +1129,7 @@
     <None Include="Icone 32x32\15x15_Icona_NotOK.png" />
     <Content Include="Resources\Lettori_Rfid.jpg" />
     <Content Include="Resources\Lettori_Scanner.jpg" />
+    <Content Include="ToDo.txt" />
     <Content Include="ZebraCommands.txt" />
     <None Include="Icone\gb.png" />
     <None Include="Icone\it.png" />
