@@ -185,8 +185,8 @@ namespace SmartLineProduction
                     lab_Codice_View.Visible = true;
                     lab_Codice_Edit.Visible = false;
 
-                    cntxt_Obsolete.Visible = true;
-
+                    but_view_obsolete.Visible = true;
+                    but_hide_obsolete.Visible = false;
                     break;
                 case "I":
                     //dtQualityBindingSource.SuspendBinding();
@@ -228,7 +228,8 @@ namespace SmartLineProduction
                     pan_Menu_salva.Enabled = true;
                     pan_Menu_exit.Enabled = false;
 
-                    cntxt_Obsolete.Visible = false;
+                    but_view_obsolete.Visible = true;
+                    but_hide_obsolete.Visible = false;
 
                     break;
                 case "R":
@@ -270,7 +271,8 @@ namespace SmartLineProduction
                     pan_Menu_salva.Enabled = true;
                     pan_Menu_exit.Enabled = false;
 
-                    cntxt_Obsolete.Visible = false;
+                    but_view_obsolete.Visible = true;
+                    but_hide_obsolete.Visible = false;
 
                     break;
 
@@ -460,20 +462,6 @@ namespace SmartLineProduction
             PreparaForm();
         }
 
-        private void visualizzaRevisioniObsoleteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            gridView1.Columns["Qual_Rev_Obsolete"].Visible = true;
-            VediObsolete = true;
-            AggiornaArchivi();
-        }
-
-        private void nascondiRevisioniObsoleteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            gridView1.Columns["Qual_Rev_Obsolete"].Visible = false;
-            VediObsolete = false;
-            AggiornaArchivi();
-        }
-
         private void menu_new_Click(object sender, EventArgs e)
         {
             displayform = "I";
@@ -485,6 +473,7 @@ namespace SmartLineProduction
         private void menu_sw_annulla_Click(object sender, EventArgs e)
         {
             displayform = "V";
+            AzzeraForm();
             PreparaForm();
         }
 
@@ -714,6 +703,24 @@ namespace SmartLineProduction
                 //}
             }
 
+        }
+
+        private void but_view_obsolete_Click(object sender, EventArgs e)
+        {
+            gridView1.Columns["Qual_Rev_Obsolete"].Visible = true;
+            VediObsolete = true;
+            AggiornaArchivi();
+            but_view_obsolete.Visible = false;
+            but_hide_obsolete.Visible = true;
+        }
+
+        private void but_hide_obsolete_Click(object sender, EventArgs e)
+        {
+            gridView1.Columns["Qual_Rev_Obsolete"].Visible = false;
+            VediObsolete = false;
+            AggiornaArchivi();
+            but_view_obsolete.Visible = true;
+            but_hide_obsolete.Visible = false;
         }
     }
 }
