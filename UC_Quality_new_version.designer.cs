@@ -917,6 +917,7 @@
             this.colQual_Rev_Obsolete});
             this.gridView1.GridControl = this.gv_Quality;
             this.gridView1.GroupCount = 3;
+            this.gridView1.GroupFormat = "{1}";
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsBehavior.ReadOnly = true;
