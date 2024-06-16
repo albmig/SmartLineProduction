@@ -23,6 +23,8 @@ namespace SmartLineProduction
         private string sel_Class = "";
         private string sel_User = "";
 
+        public const string NoValue = "___";
+
         //valori per Creazione Revisione
         string Qual_ProjProdArea = "";
         string Qual_Org = "";
@@ -37,7 +39,7 @@ namespace SmartLineProduction
         bool VediObsolete = false;
 
         int Glob_RowId = 0;
-        private int ultcodice = 0;
+        private int ultimoProg = 0;
 
         public UC_Quality_new_version()
         {
@@ -55,18 +57,18 @@ namespace SmartLineProduction
                 string filtro = "";
                 bool firstfilter = false;
 
-                if (sel_ProjProdArea != "___")
+                if (sel_ProjProdArea != NoValue)
                 {
                     filtro = filtro + "(Qual_ProjProdArea like " + "'" + sel_ProjProdArea + "')";
                     firstfilter = true;
                 }
-                if (sel_Org != "___")
+                if (sel_Org != NoValue)
                 {
                     if (firstfilter) { filtro = filtro + " AND "; }
                     filtro = filtro + "(Qual_Org like " + "'" + sel_Org + "')";
                     firstfilter = true;
                 }
-                if (sel_Type != "___")
+                if (sel_Type != NoValue)
                 {
                     if (firstfilter) { filtro = filtro + " AND "; }
                     filtro = filtro + "(Qual_Type like " + "'" + sel_Type + "')";
@@ -81,34 +83,31 @@ namespace SmartLineProduction
 
         private void CreaCodice()
         {
-            //Trova ultimo codice
-            ultcodice = 0;
-
-            DataView view = new DataView(ds_Quality_new.Quality);
-            view.RowFilter = qualityBindingSource.Filter;
-            int contarec = view.Count;
-            if (contarec > 0)
-            {
-                DataTable result = view.ToTable();
-                ultcodice = Convert.ToInt32(result.Compute("max(Qual_Prog)", ""));
-            }
-
-            ultcodice++;
-
             string codvers = "";
             string codrev = "";
-            if (tb_vers.Text != "") { codvers = tb_vers.Text; } else { codvers = "__"; }
-            if (tb_rev.Text != "") { codrev = tb_rev.Text; } else { codrev = "__"; }
+
+            ultimoProg = 0;
+            if ((sel_ProjProdArea != null) && (sel_Org != null) && (sel_Type != null))
+            {
+                if ((sel_ProjProdArea != NoValue) && (sel_Org != NoValue) && (sel_Type != NoValue)) 
+                { 
+                    ultimoProg = (int)this.qualityTableAdapter.FindMaxProg(sel_ProjProdArea, sel_Org, sel_Type); 
+                }
+            }
+
+            ultimoProg++;
+            if (tb_vers.Text != "") { codvers = tb_vers.Text; } else { codvers = NoValue; }
+            if (tb_rev.Text != "") { codrev = tb_rev.Text; } else { codrev = NoValue; }
 
             //,CONCAT(Quality.Qual_ProjProdArea, '-', Quality.Qual_Org, '-', Quality.Qual_Type, '-', Quality.Qual_Class, '-', FORMAT(Quality.Qual_Prog, '0000'), '-', Quality.Qual_Ver, '.', Quality.Qual_Rev) AS Codice_Quality
-            string codice = sel_ProjProdArea + "-" + sel_Org + "-" + sel_Type + "-" + sel_Class + "-" + ultcodice.ToString("0000") + "-" + codvers + "." + codrev;
+            string codice = sel_ProjProdArea + "-" + sel_Org + "-" + sel_Type + "-" + sel_Class + "-" + ultimoProg.ToString("0000") + "-" + codvers + "." + codrev;
             lab_Codice_Edit.Text = codice;
         }
 
         private void AggiornaArchivi()
         {
             this.qualityTableAdapter.Fill(this.ds_Quality_new.Quality);
-            if (this.qualityBindingSource.Count==0)
+            if (this.qualityBindingSource.Count == 0)
             {
                 AzzeraForm();
             }
@@ -228,7 +227,7 @@ namespace SmartLineProduction
                     pan_Menu_salva.Enabled = true;
                     pan_Menu_exit.Enabled = false;
 
-                    but_view_obsolete.Visible = true;
+                    but_view_obsolete.Visible = false;
                     but_hide_obsolete.Visible = false;
 
                     break;
@@ -271,7 +270,7 @@ namespace SmartLineProduction
                     pan_Menu_salva.Enabled = true;
                     pan_Menu_exit.Enabled = false;
 
-                    but_view_obsolete.Visible = true;
+                    but_view_obsolete.Visible = false;
                     but_hide_obsolete.Visible = false;
 
                     break;
@@ -299,6 +298,9 @@ namespace SmartLineProduction
                     pan_Menu_salva.Enabled = true;
                     pan_Menu_exit.Enabled = false;
 
+                    but_view_obsolete.Visible = false;
+                    but_hide_obsolete.Visible = false;
+
                     break;
             }
         }
@@ -321,7 +323,7 @@ namespace SmartLineProduction
                 newrow["Qual_Org"] = lab_org.Text;
                 newrow["Qual_Type"] = lab_type.Text;
                 newrow["Qual_Class"] = lab_class.Text;
-                newrow["Qual_Prog"] = ultcodice.ToString();
+                newrow["Qual_Prog"] = ultimoProg.ToString();
                 newrow["Qual_Ver"] = tb_vers.Text;
                 newrow["Qual_Rev"] = tb_rev.Text;
                 newrow["Qual_Des"] = tb_Des.Text;
@@ -417,7 +419,6 @@ namespace SmartLineProduction
                 //newrow["Id"] = DBNull.Value;
                 int MaxValue = Convert.ToInt32(ds_Quality_new.Quality.AsEnumerable().Max(row => row["Id"]));
                 MaxValue++;
-                //newrow["Id"] = (Convert.ToInt32(ds_Quality_new.dt_Quality.AsEnumerable().Max(row => Glob_RowId))+1);
                 newrow["Id"] = MaxValue;
                 newrow["Qual_Des"] = tb_Des.Text;
                 newrow["Qual_Path"] = tb_folder.Text;
@@ -442,7 +443,11 @@ namespace SmartLineProduction
             dtQualityProjProdAreaBindingSource.MoveFirst();
             dtQualityCompanyBindingSource.MoveFirst();
             dtQualityTipoDocBindingSource.MoveFirst();
-            dtQualityClassificationBindingSource.MoveFirst(); 
+            dtQualityClassificationBindingSource.MoveFirst();
+            if (!VediObsolete)
+                qualityBindingSource.Filter = "Qual_Rev_Obsolete = false";
+            else
+                qualityBindingSource.Filter = string.Empty;
         }
 
         ////////////////////////////////////////////////////////////////////////////////////
@@ -456,6 +461,8 @@ namespace SmartLineProduction
 
         private void UC_Quality_new_version_Load(object sender, EventArgs e)
         {
+            // TODO: questa riga di codice carica i dati nella tabella 'ds_Quality_new.SF_QualityViewNew'. È possibile spostarla o rimuoverla se necessario.
+            this.sF_QualityViewNewTableAdapter.Fill(this.ds_Quality_new.SF_QualityViewNew);
             AggiornaArchivi();
 
             lab_MyIp.Text = FindIP();
@@ -526,31 +533,31 @@ namespace SmartLineProduction
         private void menu_sw_salva_Click(object sender, EventArgs e)
         {
             //Verifica che tutti i campi siano stati compilati correttamente
-            if (cb_User.Text == "___")
+            if (cb_User.Text == NoValue)
             {
                 MessageBox.Show("Si prega di compilare correttamente il campo Utente. \nNon può essere vuoto!");
                 cb_projprodarea.Focus();
                 return;
             }
-            if (lab_projprodarea.Text == "___")
+            if (lab_projprodarea.Text == NoValue)
             {
                 MessageBox.Show("Si prega di compilare correttamente il campo Project / Product / Area. \nNon può essere vuoto!");
                 cb_projprodarea.Focus();
                 return;
             }
-            if (lab_org.Text == "___")
+            if (lab_org.Text == NoValue)
             {
                 MessageBox.Show("Si prega di compilare correttamente il campo Organization. \nNon può essere vuoto!");
                 cb_org.Focus();
                 return;
             }
-            if (lab_type.Text == "___")
+            if (lab_type.Text == NoValue)
             {
                 MessageBox.Show("Si prega di compilare correttamente il campo Type Document. \nNon può essere vuoto!");
                 cb_type.Focus();
                 return;
             }
-            if (lab_class.Text == "___")
+            if (lab_class.Text == NoValue)
             {
                 MessageBox.Show("Si prega di compilare correttamente il campo Classification. \nNon può essere vuoto!");
                 cb_class.Focus();
@@ -652,25 +659,25 @@ namespace SmartLineProduction
         private void dtQualityProjProdAreaBindingSource_CurrentChanged(object sender, EventArgs e)
         {
             DataRowView drview = (DataRowView)dtQualityProjProdAreaBindingSource.Current;
-            if (drview != null && displayform == "I") { sel_ProjProdArea = drview["Qual_Codice"].ToString(); FiltraQuality(); }
+            if (drview != null && displayform == "I") { sel_ProjProdArea = drview["Qual_Codice"].ToString(); FiltraQuality(); } else { sel_ProjProdArea = null; }
         }
 
         private void dtQualityCompanyBindingSource_CurrentChanged(object sender, EventArgs e)
         {
             DataRowView drview = (DataRowView)dtQualityCompanyBindingSource.Current;
-            if (drview != null && displayform == "I") { sel_Org = drview["Qual_Codice"].ToString(); FiltraQuality(); }
+            if (drview != null && displayform == "I") { sel_Org = drview["Qual_Codice"].ToString(); FiltraQuality(); } else { sel_Org = null; }
         }
 
         private void dtQualityTipoDocBindingSource_CurrentChanged(object sender, EventArgs e)
         {
             DataRowView drview = (DataRowView)dtQualityTipoDocBindingSource.Current;
-            if (drview != null && displayform == "I") { sel_Type = drview["Qual_Codice"].ToString(); FiltraQuality(); }
+            if (drview != null && displayform == "I") { sel_Type = drview["Qual_Codice"].ToString(); FiltraQuality(); } else { sel_Type = null; }
         }
 
         private void dtQualityClassificationBindingSource_CurrentChanged(object sender, EventArgs e)
         {
             DataRowView drview = (DataRowView)dtQualityClassificationBindingSource.Current;
-            if (drview != null && displayform == "I") { sel_Class = drview["Qual_Codice"].ToString(); FiltraQuality(); }
+            if (drview != null && displayform == "I") { sel_Class = drview["Qual_Codice"].ToString(); FiltraQuality(); } else { sel_Class = null; }
         }
 
         private void usersBindingSource_CurrentChanged(object sender, EventArgs e)
@@ -721,6 +728,11 @@ namespace SmartLineProduction
             AggiornaArchivi();
             but_view_obsolete.Visible = true;
             but_hide_obsolete.Visible = false;
+        }
+
+        private void cb_projprodarea_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

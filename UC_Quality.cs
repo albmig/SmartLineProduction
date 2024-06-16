@@ -282,7 +282,7 @@ namespace SmartLineProduction
 
                 CreaCodice();
             }
-        }                                                                  //fatto
+        }                                                                  
 
         private void dtQualityProjProdAreaBindingSource_CurrentChanged(object sender, EventArgs e)
         {

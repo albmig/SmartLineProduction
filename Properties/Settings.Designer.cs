@@ -28,9 +28,9 @@ namespace SmartLineProduction.Properties {
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=SERVER208\\SQLEXPRESS;Initial Catalog=SISTEMATICA_FACTORY;Persist Secu" +
             "rity Info=True;User ID=sa;Password=aavesp19!;")]
-        public string SISTEMATICA_FACTORYConnectionString {
+        public string SISTEMATICA_FACTORYConnectionStringOk {
             get {
-                return ((string)(this["SISTEMATICA_FACTORYConnectionString"]));
+                return ((string)(this["SISTEMATICA_FACTORYConnectionStringOk"]));
             }
         }
         
@@ -112,9 +112,9 @@ namespace SmartLineProduction.Properties {
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.0.208\\SQLEXPRESS;Initial Catalog=SISTEMATICA_FACTORY;User ID=" +
             "sa;Password=aavesp19!;Connect Timeout=30;Encrypt=False;TrustServerCertificate=Fa" +
             "lse")]
-        public string SISTEMATICA_FACTORYConnectionString1 {
+        public string SISTEMATICA_FACTORYConnectionString {
             get {
-                return ((string)(this["SISTEMATICA_FACTORYConnectionString1"]));
+                return ((string)(this["SISTEMATICA_FACTORYConnectionString"]));
             }
         }
     }

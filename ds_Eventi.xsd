@@ -4,12 +4,12 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SISTEMATICA_FACTORYConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SISTEMATICA_FACTORYConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SmartLineProduction.Properties.Settings.GlobalReference.Default.SISTEMATICA_FACTORYConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SISTEMATICA_FACTORYConnectionStringOk" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SISTEMATICA_FACTORYConnectionStringOk (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SmartLineProduction.Properties.Settings.GlobalReference.Default.SISTEMATICA_FACTORYConnectionStringOk" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="UI_EventsTableAdapter" GeneratorDataComponentClassName="UI_EventsTableAdapter" Name="UI_Events" UserDataComponentName="UI_EventsTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionString (Settings)" DbObjectName="SISTEMATICA_FACTORY.dbo.UI_Events" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionStringOk (Settings)" DbObjectName="SISTEMATICA_FACTORY.dbo.UI_Events" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT serialnumber, id, firmware, event, value, recorded_at, UI_EL_Multiplier, ValMolt, UI_EL_Desc_it, UI_EL_Desc_en FROM dbo.UI_Events</CommandText>
@@ -34,7 +34,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="UI_Events_AnagTableAdapter" GeneratorDataComponentClassName="UI_Events_AnagTableAdapter" Name="UI_Events_Anag" UserDataComponentName="UI_Events_AnagTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionString (Settings)" DbObjectName="SISTEMATICA_FACTORY.dbo.UI_Events_Anag" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionStringOk (Settings)" DbObjectName="SISTEMATICA_FACTORY.dbo.UI_Events_Anag" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT serialnumber, Firmware, event, UI_EL_Desc_it, UI_EL_Desc_en, UI_EL_Multiplier FROM dbo.UI_Events_Anag</CommandText>
@@ -61,7 +61,7 @@
   <xs:element name="ds_Eventi" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ds_Eventi" msprop:Generator_UserDSName="ds_Eventi">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="UI_Events" msprop:Generator_TableClassName="UI_EventsDataTable" msprop:Generator_TableVarName="tableUI_Events" msprop:Generator_RowChangedName="UI_EventsRowChanged" msprop:Generator_TablePropName="UI_Events" msprop:Generator_RowDeletingName="UI_EventsRowDeleting" msprop:Generator_RowChangingName="UI_EventsRowChanging" msprop:Generator_RowEvHandlerName="UI_EventsRowChangeEventHandler" msprop:Generator_RowDeletedName="UI_EventsRowDeleted" msprop:Generator_RowClassName="UI_EventsRow" msprop:Generator_UserTableName="UI_Events" msprop:Generator_RowEvArgName="UI_EventsRowChangeEvent">
+        <xs:element name="UI_Events" msprop:Generator_TableClassName="UI_EventsDataTable" msprop:Generator_TableVarName="tableUI_Events" msprop:Generator_TablePropName="UI_Events" msprop:Generator_RowDeletingName="UI_EventsRowDeleting" msprop:Generator_RowChangingName="UI_EventsRowChanging" msprop:Generator_RowEvHandlerName="UI_EventsRowChangeEventHandler" msprop:Generator_RowDeletedName="UI_EventsRowDeleted" msprop:Generator_UserTableName="UI_Events" msprop:Generator_RowChangedName="UI_EventsRowChanged" msprop:Generator_RowEvArgName="UI_EventsRowChangeEvent" msprop:Generator_RowClassName="UI_EventsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="serialnumber" msprop:Generator_ColumnVarNameInTable="columnserialnumber" msprop:Generator_ColumnPropNameInRow="serialnumber" msprop:Generator_ColumnPropNameInTable="serialnumberColumn" msprop:Generator_UserColumnName="serialnumber" minOccurs="0">
@@ -113,7 +113,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="UI_Events_Anag" msprop:Generator_TableClassName="UI_Events_AnagDataTable" msprop:Generator_TableVarName="tableUI_Events_Anag" msprop:Generator_TablePropName="UI_Events_Anag" msprop:Generator_RowDeletingName="UI_Events_AnagRowDeleting" msprop:Generator_RowChangingName="UI_Events_AnagRowChanging" msprop:Generator_RowEvHandlerName="UI_Events_AnagRowChangeEventHandler" msprop:Generator_RowDeletedName="UI_Events_AnagRowDeleted" msprop:Generator_UserTableName="UI_Events_Anag" msprop:Generator_RowChangedName="UI_Events_AnagRowChanged" msprop:Generator_RowEvArgName="UI_Events_AnagRowChangeEvent" msprop:Generator_RowClassName="UI_Events_AnagRow">
+        <xs:element name="UI_Events_Anag" msprop:Generator_TableClassName="UI_Events_AnagDataTable" msprop:Generator_TableVarName="tableUI_Events_Anag" msprop:Generator_RowChangedName="UI_Events_AnagRowChanged" msprop:Generator_TablePropName="UI_Events_Anag" msprop:Generator_RowDeletingName="UI_Events_AnagRowDeleting" msprop:Generator_RowChangingName="UI_Events_AnagRowChanging" msprop:Generator_RowEvHandlerName="UI_Events_AnagRowChangeEventHandler" msprop:Generator_RowDeletedName="UI_Events_AnagRowDeleted" msprop:Generator_RowClassName="UI_Events_AnagRow" msprop:Generator_UserTableName="UI_Events_Anag" msprop:Generator_RowEvArgName="UI_Events_AnagRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="serialnumber" msprop:Generator_ColumnVarNameInTable="columnserialnumber" msprop:Generator_ColumnPropNameInRow="serialnumber" msprop:Generator_ColumnPropNameInTable="serialnumberColumn" msprop:Generator_UserColumnName="serialnumber" minOccurs="0">
@@ -164,7 +164,7 @@
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="UI_Events_Anag_UI_Events" msdata:parent="UI_Events_Anag" msdata:child="UI_Events" msdata:parentkey="serialnumber event" msdata:childkey="serialnumber event" msprop:Generator_UserChildTable="UI_Events" msprop:Generator_ChildPropName="GetUI_EventsRows" msprop:Generator_UserRelationName="UI_Events_Anag_UI_Events" msprop:Generator_RelationVarName="relationUI_Events_Anag_UI_Events" msprop:Generator_UserParentTable="UI_Events_Anag" msprop:Generator_ParentPropName="UI_Events_AnagRowParent" />
+      <msdata:Relationship name="UI_Events_Anag_UI_Events" msdata:parent="UI_Events_Anag" msdata:child="UI_Events" msdata:parentkey="serialnumber event" msdata:childkey="serialnumber event" msprop:Generator_UserChildTable="UI_Events" msprop:Generator_ChildPropName="GetUI_EventsRows" msprop:Generator_UserRelationName="UI_Events_Anag_UI_Events" msprop:Generator_ParentPropName="UI_Events_AnagRowParent" msprop:Generator_RelationVarName="relationUI_Events_Anag_UI_Events" msprop:Generator_UserParentTable="UI_Events_Anag" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

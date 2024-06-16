@@ -2538,7 +2538,7 @@ SELECT Proj_Id, Proj_Des, Proj_ID_Cliente, Proj_Date_Start, Proj_Date_End_Suppos
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionString;
+            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionStringOk;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2946,7 +2946,7 @@ SELECT Id, Tab_Tipo, Tab_Valore, Tab_Des FROM TabelleCodici WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionString;
+            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionStringOk;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3302,7 +3302,7 @@ SELECT Id, Tab_Tipo, Tab_Valore, Tab_Des FROM TabelleCodici WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionString;
+            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionStringOk;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3538,7 +3538,7 @@ SELECT Id, Tab_Tipo, Tab_Valore, Tab_Des FROM TabelleCodici WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionString;
+            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionStringOk;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

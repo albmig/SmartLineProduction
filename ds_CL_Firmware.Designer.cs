@@ -3218,7 +3218,7 @@ SELECT FW_CL_Fam_ID, FW_CL_Fam_Des, FW_CL_Fam_TipoDev FROM FW_CL_Famiglie WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionString;
+            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionStringOk;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3716,7 +3716,7 @@ SELECT FW_CL_Fam_ID, FW_CL_Fam_Des, FW_CL_Fam_TipoDev FROM FW_CL_Famiglie WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionString;
+            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionStringOk;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4682,7 +4682,7 @@ FROM            FW_CL_Palmari";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionString;
+            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionStringOk;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

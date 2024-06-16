@@ -7634,7 +7634,7 @@ SELECT ID, NOME, COGNOME, UTENTE, PWD, GRUPPO, DATA_CREAZIONE, IP_Address, Respo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionString;
+            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionStringOk;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8241,7 +8241,7 @@ SELECT ID, NOME, COGNOME, UTENTE, PWD, GRUPPO, DATA_CREAZIONE, IP_Address, Respo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionString;
+            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionStringOk;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8848,7 +8848,7 @@ SELECT ID, NOME, COGNOME, UTENTE, PWD, GRUPPO, DATA_CREAZIONE, IP_Address, Respo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionString;
+            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionStringOk;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9455,7 +9455,7 @@ SELECT ID, NOME, COGNOME, UTENTE, PWD, GRUPPO, DATA_CREAZIONE, IP_Address, Respo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionString;
+            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionStringOk;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9987,7 +9987,7 @@ SELECT ID, NOME, COGNOME, UTENTE, PWD, GRUPPO, DATA_CREAZIONE, IP_Address, Respo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionString;
+            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionStringOk;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10165,7 +10165,7 @@ SELECT ID, NOME, COGNOME, UTENTE, PWD, GRUPPO, DATA_CREAZIONE, IP_Address, Respo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionString;
+            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionStringOk;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10393,7 +10393,7 @@ SELECT ID, NOME, COGNOME, UTENTE, PWD, GRUPPO, DATA_CREAZIONE, IP_Address, Respo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionString;
+            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionStringOk;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10792,7 +10792,7 @@ FROM            Ncr";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionString;
+            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionStringOk;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10968,7 +10968,7 @@ FROM            Ncr";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionString;
+            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionStringOk;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11196,7 +11196,7 @@ FROM            Ncr";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionString;
+            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionStringOk;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

@@ -38,6 +38,8 @@ namespace SmartLineProduction {
         
         private dt_Quality_EditRecDataTable tabledt_Quality_EditRec;
         
+        private SF_QualityViewNewDataTable tableSF_QualityViewNew;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -86,6 +88,9 @@ namespace SmartLineProduction {
                 }
                 if ((ds.Tables["dt_Quality_EditRec"] != null)) {
                     base.Tables.Add(new dt_Quality_EditRecDataTable(ds.Tables["dt_Quality_EditRec"]));
+                }
+                if ((ds.Tables["SF_QualityViewNew"] != null)) {
+                    base.Tables.Add(new SF_QualityViewNewDataTable(ds.Tables["SF_QualityViewNew"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -177,6 +182,16 @@ namespace SmartLineProduction {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public SF_QualityViewNewDataTable SF_QualityViewNew {
+            get {
+                return this.tableSF_QualityViewNew;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -263,6 +278,9 @@ namespace SmartLineProduction {
                 if ((ds.Tables["dt_Quality_EditRec"] != null)) {
                     base.Tables.Add(new dt_Quality_EditRecDataTable(ds.Tables["dt_Quality_EditRec"]));
                 }
+                if ((ds.Tables["SF_QualityViewNew"] != null)) {
+                    base.Tables.Add(new SF_QualityViewNewDataTable(ds.Tables["SF_QualityViewNew"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -338,6 +356,12 @@ namespace SmartLineProduction {
                     this.tabledt_Quality_EditRec.InitVars();
                 }
             }
+            this.tableSF_QualityViewNew = ((SF_QualityViewNewDataTable)(base.Tables["SF_QualityViewNew"]));
+            if ((initTable == true)) {
+                if ((this.tableSF_QualityViewNew != null)) {
+                    this.tableSF_QualityViewNew.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -362,6 +386,8 @@ namespace SmartLineProduction {
             base.Tables.Add(this.tabledt_Quality_Classification);
             this.tabledt_Quality_EditRec = new dt_Quality_EditRecDataTable();
             base.Tables.Add(this.tabledt_Quality_EditRec);
+            this.tableSF_QualityViewNew = new SF_QualityViewNewDataTable();
+            base.Tables.Add(this.tableSF_QualityViewNew);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -403,6 +429,12 @@ namespace SmartLineProduction {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private bool ShouldSerializedt_Quality_EditRec() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializeSF_QualityViewNew() {
             return false;
         }
         
@@ -481,6 +513,9 @@ namespace SmartLineProduction {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void dt_Quality_EditRecRowChangeEventHandler(object sender, dt_Quality_EditRecRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void SF_QualityViewNewRowChangeEventHandler(object sender, SF_QualityViewNewRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -2983,6 +3018,535 @@ namespace SmartLineProduction {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class SF_QualityViewNewDataTable : global::System.Data.TypedTableBase<SF_QualityViewNewRow> {
+            
+            private global::System.Data.DataColumn columnDes_ProjProdArea;
+            
+            private global::System.Data.DataColumn columnDes_Company;
+            
+            private global::System.Data.DataColumn columnDes_TipoDoc;
+            
+            private global::System.Data.DataColumn columnId;
+            
+            private global::System.Data.DataColumn columnQual_ProjProdArea;
+            
+            private global::System.Data.DataColumn columnQual_Org;
+            
+            private global::System.Data.DataColumn columnQual_Type;
+            
+            private global::System.Data.DataColumn columnQual_Class;
+            
+            private global::System.Data.DataColumn columnQual_Prog;
+            
+            private global::System.Data.DataColumn columnQual_Ver;
+            
+            private global::System.Data.DataColumn columnQual_Rev;
+            
+            private global::System.Data.DataColumn columnQual_Des;
+            
+            private global::System.Data.DataColumn columnQual_Path;
+            
+            private global::System.Data.DataColumn columnQual_Richiedente;
+            
+            private global::System.Data.DataColumn columnQual_DateRequest;
+            
+            private global::System.Data.DataColumn columnQual_IPRequest;
+            
+            private global::System.Data.DataColumn columnQual_Rev_Obsolete;
+            
+            private global::System.Data.DataColumn columncodiceQual;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public SF_QualityViewNewDataTable() {
+                this.TableName = "SF_QualityViewNew";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal SF_QualityViewNewDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected SF_QualityViewNewDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Des_ProjProdAreaColumn {
+                get {
+                    return this.columnDes_ProjProdArea;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Des_CompanyColumn {
+                get {
+                    return this.columnDes_Company;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Des_TipoDocColumn {
+                get {
+                    return this.columnDes_TipoDoc;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn IdColumn {
+                get {
+                    return this.columnId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Qual_ProjProdAreaColumn {
+                get {
+                    return this.columnQual_ProjProdArea;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Qual_OrgColumn {
+                get {
+                    return this.columnQual_Org;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Qual_TypeColumn {
+                get {
+                    return this.columnQual_Type;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Qual_ClassColumn {
+                get {
+                    return this.columnQual_Class;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Qual_ProgColumn {
+                get {
+                    return this.columnQual_Prog;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Qual_VerColumn {
+                get {
+                    return this.columnQual_Ver;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Qual_RevColumn {
+                get {
+                    return this.columnQual_Rev;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Qual_DesColumn {
+                get {
+                    return this.columnQual_Des;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Qual_PathColumn {
+                get {
+                    return this.columnQual_Path;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Qual_RichiedenteColumn {
+                get {
+                    return this.columnQual_Richiedente;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Qual_DateRequestColumn {
+                get {
+                    return this.columnQual_DateRequest;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Qual_IPRequestColumn {
+                get {
+                    return this.columnQual_IPRequest;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Qual_Rev_ObsoleteColumn {
+                get {
+                    return this.columnQual_Rev_Obsolete;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn codiceQualColumn {
+                get {
+                    return this.columncodiceQual;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public SF_QualityViewNewRow this[int index] {
+                get {
+                    return ((SF_QualityViewNewRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event SF_QualityViewNewRowChangeEventHandler SF_QualityViewNewRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event SF_QualityViewNewRowChangeEventHandler SF_QualityViewNewRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event SF_QualityViewNewRowChangeEventHandler SF_QualityViewNewRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event SF_QualityViewNewRowChangeEventHandler SF_QualityViewNewRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddSF_QualityViewNewRow(SF_QualityViewNewRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public SF_QualityViewNewRow AddSF_QualityViewNewRow(
+                        string Des_ProjProdArea, 
+                        string Des_Company, 
+                        string Des_TipoDoc, 
+                        int Id, 
+                        string Qual_ProjProdArea, 
+                        string Qual_Org, 
+                        string Qual_Type, 
+                        string Qual_Class, 
+                        int Qual_Prog, 
+                        string Qual_Ver, 
+                        string Qual_Rev, 
+                        string Qual_Des, 
+                        string Qual_Path, 
+                        string Qual_Richiedente, 
+                        System.DateTime Qual_DateRequest, 
+                        string Qual_IPRequest, 
+                        bool Qual_Rev_Obsolete, 
+                        string codiceQual) {
+                SF_QualityViewNewRow rowSF_QualityViewNewRow = ((SF_QualityViewNewRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Des_ProjProdArea,
+                        Des_Company,
+                        Des_TipoDoc,
+                        Id,
+                        Qual_ProjProdArea,
+                        Qual_Org,
+                        Qual_Type,
+                        Qual_Class,
+                        Qual_Prog,
+                        Qual_Ver,
+                        Qual_Rev,
+                        Qual_Des,
+                        Qual_Path,
+                        Qual_Richiedente,
+                        Qual_DateRequest,
+                        Qual_IPRequest,
+                        Qual_Rev_Obsolete,
+                        codiceQual};
+                rowSF_QualityViewNewRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowSF_QualityViewNewRow);
+                return rowSF_QualityViewNewRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                SF_QualityViewNewDataTable cln = ((SF_QualityViewNewDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new SF_QualityViewNewDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnDes_ProjProdArea = base.Columns["Des_ProjProdArea"];
+                this.columnDes_Company = base.Columns["Des_Company"];
+                this.columnDes_TipoDoc = base.Columns["Des_TipoDoc"];
+                this.columnId = base.Columns["Id"];
+                this.columnQual_ProjProdArea = base.Columns["Qual_ProjProdArea"];
+                this.columnQual_Org = base.Columns["Qual_Org"];
+                this.columnQual_Type = base.Columns["Qual_Type"];
+                this.columnQual_Class = base.Columns["Qual_Class"];
+                this.columnQual_Prog = base.Columns["Qual_Prog"];
+                this.columnQual_Ver = base.Columns["Qual_Ver"];
+                this.columnQual_Rev = base.Columns["Qual_Rev"];
+                this.columnQual_Des = base.Columns["Qual_Des"];
+                this.columnQual_Path = base.Columns["Qual_Path"];
+                this.columnQual_Richiedente = base.Columns["Qual_Richiedente"];
+                this.columnQual_DateRequest = base.Columns["Qual_DateRequest"];
+                this.columnQual_IPRequest = base.Columns["Qual_IPRequest"];
+                this.columnQual_Rev_Obsolete = base.Columns["Qual_Rev_Obsolete"];
+                this.columncodiceQual = base.Columns["codiceQual"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnDes_ProjProdArea = new global::System.Data.DataColumn("Des_ProjProdArea", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDes_ProjProdArea);
+                this.columnDes_Company = new global::System.Data.DataColumn("Des_Company", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDes_Company);
+                this.columnDes_TipoDoc = new global::System.Data.DataColumn("Des_TipoDoc", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDes_TipoDoc);
+                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId);
+                this.columnQual_ProjProdArea = new global::System.Data.DataColumn("Qual_ProjProdArea", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQual_ProjProdArea);
+                this.columnQual_Org = new global::System.Data.DataColumn("Qual_Org", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQual_Org);
+                this.columnQual_Type = new global::System.Data.DataColumn("Qual_Type", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQual_Type);
+                this.columnQual_Class = new global::System.Data.DataColumn("Qual_Class", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQual_Class);
+                this.columnQual_Prog = new global::System.Data.DataColumn("Qual_Prog", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQual_Prog);
+                this.columnQual_Ver = new global::System.Data.DataColumn("Qual_Ver", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQual_Ver);
+                this.columnQual_Rev = new global::System.Data.DataColumn("Qual_Rev", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQual_Rev);
+                this.columnQual_Des = new global::System.Data.DataColumn("Qual_Des", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQual_Des);
+                this.columnQual_Path = new global::System.Data.DataColumn("Qual_Path", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQual_Path);
+                this.columnQual_Richiedente = new global::System.Data.DataColumn("Qual_Richiedente", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQual_Richiedente);
+                this.columnQual_DateRequest = new global::System.Data.DataColumn("Qual_DateRequest", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQual_DateRequest);
+                this.columnQual_IPRequest = new global::System.Data.DataColumn("Qual_IPRequest", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQual_IPRequest);
+                this.columnQual_Rev_Obsolete = new global::System.Data.DataColumn("Qual_Rev_Obsolete", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQual_Rev_Obsolete);
+                this.columncodiceQual = new global::System.Data.DataColumn("codiceQual", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncodiceQual);
+                this.columnDes_ProjProdArea.MaxLength = 255;
+                this.columnDes_Company.MaxLength = 255;
+                this.columnDes_TipoDoc.MaxLength = 255;
+                this.columnId.AllowDBNull = false;
+                this.columnQual_ProjProdArea.AllowDBNull = false;
+                this.columnQual_ProjProdArea.MaxLength = 10;
+                this.columnQual_Org.AllowDBNull = false;
+                this.columnQual_Org.MaxLength = 3;
+                this.columnQual_Type.AllowDBNull = false;
+                this.columnQual_Type.MaxLength = 3;
+                this.columnQual_Class.AllowDBNull = false;
+                this.columnQual_Class.MaxLength = 1;
+                this.columnQual_Prog.AllowDBNull = false;
+                this.columnQual_Ver.AllowDBNull = false;
+                this.columnQual_Ver.MaxLength = 3;
+                this.columnQual_Rev.AllowDBNull = false;
+                this.columnQual_Rev.MaxLength = 3;
+                this.columnQual_Des.AllowDBNull = false;
+                this.columnQual_Des.MaxLength = 250;
+                this.columnQual_Path.MaxLength = 255;
+                this.columnQual_Richiedente.AllowDBNull = false;
+                this.columnQual_Richiedente.MaxLength = 50;
+                this.columnQual_IPRequest.MaxLength = 15;
+                this.columnQual_Rev_Obsolete.AllowDBNull = false;
+                this.columncodiceQual.ReadOnly = true;
+                this.columncodiceQual.MaxLength = 4000;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public SF_QualityViewNewRow NewSF_QualityViewNewRow() {
+                return ((SF_QualityViewNewRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new SF_QualityViewNewRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(SF_QualityViewNewRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.SF_QualityViewNewRowChanged != null)) {
+                    this.SF_QualityViewNewRowChanged(this, new SF_QualityViewNewRowChangeEvent(((SF_QualityViewNewRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.SF_QualityViewNewRowChanging != null)) {
+                    this.SF_QualityViewNewRowChanging(this, new SF_QualityViewNewRowChangeEvent(((SF_QualityViewNewRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.SF_QualityViewNewRowDeleted != null)) {
+                    this.SF_QualityViewNewRowDeleted(this, new SF_QualityViewNewRowChangeEvent(((SF_QualityViewNewRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.SF_QualityViewNewRowDeleting != null)) {
+                    this.SF_QualityViewNewRowDeleting(this, new SF_QualityViewNewRowChangeEvent(((SF_QualityViewNewRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemoveSF_QualityViewNewRow(SF_QualityViewNewRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                ds_Quality_new ds = new ds_Quality_new();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "SF_QualityViewNewDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class QualityRow : global::System.Data.DataRow {
@@ -4139,6 +4703,343 @@ namespace SmartLineProduction {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class SF_QualityViewNewRow : global::System.Data.DataRow {
+            
+            private SF_QualityViewNewDataTable tableSF_QualityViewNew;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal SF_QualityViewNewRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableSF_QualityViewNew = ((SF_QualityViewNewDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Des_ProjProdArea {
+                get {
+                    try {
+                        return ((string)(this[this.tableSF_QualityViewNew.Des_ProjProdAreaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Des_ProjProdArea\' nella tabella \'SF_QualityViewNew\' è DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableSF_QualityViewNew.Des_ProjProdAreaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Des_Company {
+                get {
+                    try {
+                        return ((string)(this[this.tableSF_QualityViewNew.Des_CompanyColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Des_Company\' nella tabella \'SF_QualityViewNew\' è DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableSF_QualityViewNew.Des_CompanyColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Des_TipoDoc {
+                get {
+                    try {
+                        return ((string)(this[this.tableSF_QualityViewNew.Des_TipoDocColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Des_TipoDoc\' nella tabella \'SF_QualityViewNew\' è DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableSF_QualityViewNew.Des_TipoDocColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Id {
+                get {
+                    return ((int)(this[this.tableSF_QualityViewNew.IdColumn]));
+                }
+                set {
+                    this[this.tableSF_QualityViewNew.IdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Qual_ProjProdArea {
+                get {
+                    return ((string)(this[this.tableSF_QualityViewNew.Qual_ProjProdAreaColumn]));
+                }
+                set {
+                    this[this.tableSF_QualityViewNew.Qual_ProjProdAreaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Qual_Org {
+                get {
+                    return ((string)(this[this.tableSF_QualityViewNew.Qual_OrgColumn]));
+                }
+                set {
+                    this[this.tableSF_QualityViewNew.Qual_OrgColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Qual_Type {
+                get {
+                    return ((string)(this[this.tableSF_QualityViewNew.Qual_TypeColumn]));
+                }
+                set {
+                    this[this.tableSF_QualityViewNew.Qual_TypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Qual_Class {
+                get {
+                    return ((string)(this[this.tableSF_QualityViewNew.Qual_ClassColumn]));
+                }
+                set {
+                    this[this.tableSF_QualityViewNew.Qual_ClassColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Qual_Prog {
+                get {
+                    return ((int)(this[this.tableSF_QualityViewNew.Qual_ProgColumn]));
+                }
+                set {
+                    this[this.tableSF_QualityViewNew.Qual_ProgColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Qual_Ver {
+                get {
+                    return ((string)(this[this.tableSF_QualityViewNew.Qual_VerColumn]));
+                }
+                set {
+                    this[this.tableSF_QualityViewNew.Qual_VerColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Qual_Rev {
+                get {
+                    return ((string)(this[this.tableSF_QualityViewNew.Qual_RevColumn]));
+                }
+                set {
+                    this[this.tableSF_QualityViewNew.Qual_RevColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Qual_Des {
+                get {
+                    return ((string)(this[this.tableSF_QualityViewNew.Qual_DesColumn]));
+                }
+                set {
+                    this[this.tableSF_QualityViewNew.Qual_DesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Qual_Path {
+                get {
+                    try {
+                        return ((string)(this[this.tableSF_QualityViewNew.Qual_PathColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Qual_Path\' nella tabella \'SF_QualityViewNew\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSF_QualityViewNew.Qual_PathColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Qual_Richiedente {
+                get {
+                    return ((string)(this[this.tableSF_QualityViewNew.Qual_RichiedenteColumn]));
+                }
+                set {
+                    this[this.tableSF_QualityViewNew.Qual_RichiedenteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime Qual_DateRequest {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableSF_QualityViewNew.Qual_DateRequestColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Qual_DateRequest\' nella tabella \'SF_QualityViewNew\' è DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableSF_QualityViewNew.Qual_DateRequestColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Qual_IPRequest {
+                get {
+                    try {
+                        return ((string)(this[this.tableSF_QualityViewNew.Qual_IPRequestColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Qual_IPRequest\' nella tabella \'SF_QualityViewNew\' è DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableSF_QualityViewNew.Qual_IPRequestColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Qual_Rev_Obsolete {
+                get {
+                    return ((bool)(this[this.tableSF_QualityViewNew.Qual_Rev_ObsoleteColumn]));
+                }
+                set {
+                    this[this.tableSF_QualityViewNew.Qual_Rev_ObsoleteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string codiceQual {
+                get {
+                    try {
+                        return ((string)(this[this.tableSF_QualityViewNew.codiceQualColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'codiceQual\' nella tabella \'SF_QualityViewNew\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSF_QualityViewNew.codiceQualColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDes_ProjProdAreaNull() {
+                return this.IsNull(this.tableSF_QualityViewNew.Des_ProjProdAreaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDes_ProjProdAreaNull() {
+                this[this.tableSF_QualityViewNew.Des_ProjProdAreaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDes_CompanyNull() {
+                return this.IsNull(this.tableSF_QualityViewNew.Des_CompanyColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDes_CompanyNull() {
+                this[this.tableSF_QualityViewNew.Des_CompanyColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDes_TipoDocNull() {
+                return this.IsNull(this.tableSF_QualityViewNew.Des_TipoDocColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDes_TipoDocNull() {
+                this[this.tableSF_QualityViewNew.Des_TipoDocColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsQual_PathNull() {
+                return this.IsNull(this.tableSF_QualityViewNew.Qual_PathColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetQual_PathNull() {
+                this[this.tableSF_QualityViewNew.Qual_PathColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsQual_DateRequestNull() {
+                return this.IsNull(this.tableSF_QualityViewNew.Qual_DateRequestColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetQual_DateRequestNull() {
+                this[this.tableSF_QualityViewNew.Qual_DateRequestColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsQual_IPRequestNull() {
+                return this.IsNull(this.tableSF_QualityViewNew.Qual_IPRequestColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetQual_IPRequestNull() {
+                this[this.tableSF_QualityViewNew.Qual_IPRequestColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IscodiceQualNull() {
+                return this.IsNull(this.tableSF_QualityViewNew.codiceQualColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetcodiceQualNull() {
+                this[this.tableSF_QualityViewNew.codiceQualColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -4375,6 +5276,40 @@ namespace SmartLineProduction {
                 }
             }
         }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class SF_QualityViewNewRowChangeEvent : global::System.EventArgs {
+            
+            private SF_QualityViewNewRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public SF_QualityViewNewRowChangeEvent(SF_QualityViewNewRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public SF_QualityViewNewRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
     }
 }
 namespace SmartLineProduction.ds_Quality_newTableAdapters {
@@ -4540,19 +5475,34 @@ namespace SmartLineProduction.ds_Quality_newTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionString1;
+            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionStringOk;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT        Id, Qual_ProjProdArea, Qual_Org, Qual_Type, Qual_Class, Qual_Prog, Qual_Ver, Qual_Rev, Qual_Des, Qual_Path, Qual_Richiedente, Qual_DateRequest, Qual_IPRequest, Qual_Rev_Obsolete, 
                          Qual_ProjProdArea + '-' + Qual_Org + '-' + Qual_Type + '-' + Qual_Class + '-' + FORMAT(Qual_Prog, '0000') + '-' + Qual_Ver + '.' + Qual_Rev AS codiceQual
 FROM            Quality_test";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT
+  MAX(Quality_test.Qual_Prog) AS MaxQualProg
+FROM dbo.Quality_test
+WHERE Quality_test.Qual_ProjProdArea = @Qual_ProjProdArea
+AND Quality_test.Qual_Org = @Qual_Org
+AND Quality_test.Qual_Type = @Qual_Type
+AND Quality_test.Qual_Rev_Obsolete = 0
+
+";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_ProjProdArea", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_ProjProdArea", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Org", global::System.Data.SqlDbType.VarChar, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Org", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Type", global::System.Data.SqlDbType.VarChar, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4606,6 +5556,52 @@ FROM            Quality_test";
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(global::System.Data.DataRow[] dataRows) {
             return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual global::System.Nullable<int> FindMaxProg(string Qual_ProjProdArea, string Qual_Org, string Qual_Type) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            if ((Qual_ProjProdArea == null)) {
+                throw new global::System.ArgumentNullException("Qual_ProjProdArea");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(Qual_ProjProdArea));
+            }
+            if ((Qual_Org == null)) {
+                throw new global::System.ArgumentNullException("Qual_Org");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(Qual_Org));
+            }
+            if ((Qual_Type == null)) {
+                throw new global::System.ArgumentNullException("Qual_Type");
+            }
+            else {
+                command.Parameters[2].Value = ((string)(Qual_Type));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return new global::System.Nullable<int>();
+            }
+            else {
+                return new global::System.Nullable<int>(((int)(returnValue)));
+            }
         }
     }
     
@@ -4794,7 +5790,7 @@ SELECT ID, NOME, COGNOME, UTENTE, PWD, GRUPPO, DATA_CREAZIONE, IP_Address FROM U
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionString;
+            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionStringOk;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5249,7 +6245,7 @@ SELECT ID, NOME, COGNOME, UTENTE, PWD, GRUPPO, DATA_CREAZIONE, IP_Address FROM U
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionString;
+            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionStringOk;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5507,7 +6503,7 @@ order by qual_des asc";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionString;
+            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionStringOk;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5761,7 +6757,7 @@ order by qual_des asc";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionString;
+            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionStringOk;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6015,7 +7011,7 @@ order by qual_des asc";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionString;
+            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionStringOk;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6364,7 +7360,7 @@ SELECT Id, Qual_ProjProdArea, Qual_Org, Qual_Type, Qual_Class, Qual_Prog, Qual_V
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionString;
+            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionStringOk;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6873,6 +7869,190 @@ FROM            Quality";
                     string Original_Qual_IPRequest, 
                     bool Original_Qual_Rev_Obsolete) {
             return this.Update(Qual_ProjProdArea, Qual_Org, Qual_Type, Qual_Class, Qual_Prog, Qual_Ver, Qual_Rev, Qual_Des, Qual_Path, Qual_Richiedente, Qual_DateRequest, Qual_IPRequest, Qual_Rev_Obsolete, Original_Id, Original_Qual_ProjProdArea, Original_Qual_Org, Original_Qual_Type, Original_Qual_Class, Original_Qual_Prog, Original_Qual_Ver, Original_Qual_Rev, Original_Qual_Des, Original_Qual_Path, Original_Qual_Richiedente, Original_Qual_DateRequest, Original_Qual_IPRequest, Original_Qual_Rev_Obsolete, Original_Id);
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class SF_QualityViewNewTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public SF_QualityViewNewTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "SF_QualityViewNew";
+            tableMapping.ColumnMappings.Add("Des_ProjProdArea", "Des_ProjProdArea");
+            tableMapping.ColumnMappings.Add("Des_Company", "Des_Company");
+            tableMapping.ColumnMappings.Add("Des_TipoDoc", "Des_TipoDoc");
+            tableMapping.ColumnMappings.Add("Id", "Id");
+            tableMapping.ColumnMappings.Add("Qual_ProjProdArea", "Qual_ProjProdArea");
+            tableMapping.ColumnMappings.Add("Qual_Org", "Qual_Org");
+            tableMapping.ColumnMappings.Add("Qual_Type", "Qual_Type");
+            tableMapping.ColumnMappings.Add("Qual_Class", "Qual_Class");
+            tableMapping.ColumnMappings.Add("Qual_Prog", "Qual_Prog");
+            tableMapping.ColumnMappings.Add("Qual_Ver", "Qual_Ver");
+            tableMapping.ColumnMappings.Add("Qual_Rev", "Qual_Rev");
+            tableMapping.ColumnMappings.Add("Qual_Des", "Qual_Des");
+            tableMapping.ColumnMappings.Add("Qual_Path", "Qual_Path");
+            tableMapping.ColumnMappings.Add("Qual_Richiedente", "Qual_Richiedente");
+            tableMapping.ColumnMappings.Add("Qual_DateRequest", "Qual_DateRequest");
+            tableMapping.ColumnMappings.Add("Qual_IPRequest", "Qual_IPRequest");
+            tableMapping.ColumnMappings.Add("Qual_Rev_Obsolete", "Qual_Rev_Obsolete");
+            tableMapping.ColumnMappings.Add("codiceQual", "codiceQual");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT Des_ProjProdArea, Des_Company, Des_TipoDoc, Id, Qual_ProjProdArea, Qual_Org, Qual_Type, Qual_Class, Qual_Prog, Qual_Ver, Qual_Rev, Qual_Des, Qual_Path, Qual_Richiedente, Qual_DateRequest, Qual_IPRequest, Qual_Rev_Obsolete, codiceQual FROM dbo.SF_QualityViewNew";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(ds_Quality_new.SF_QualityViewNewDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual ds_Quality_new.SF_QualityViewNewDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            ds_Quality_new.SF_QualityViewNewDataTable dataTable = new ds_Quality_new.SF_QualityViewNewDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
         }
     }
     

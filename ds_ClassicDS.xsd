@@ -4,12 +4,12 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SISTEMATICA_FACTORYConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SISTEMATICA_FACTORYConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SmartLineProduction.Properties.Settings.GlobalReference.Default.SISTEMATICA_FACTORYConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SISTEMATICA_FACTORYConnectionStringOk" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SISTEMATICA_FACTORYConnectionStringOk (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SmartLineProduction.Properties.Settings.GlobalReference.Default.SISTEMATICA_FACTORYConnectionStringOk" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dt_ClassicFilesTableAdapter" GeneratorDataComponentClassName="dt_ClassicFilesTableAdapter" Name="dt_ClassicFiles" UserDataComponentName="dt_ClassicFilesTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionString (Settings)" DbObjectName="SISTEMATICA_FACTORY.dbo.Classic_Datasheets" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionStringOk (Settings)" DbObjectName="SISTEMATICA_FACTORY.dbo.Classic_Datasheets" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>INSERT INTO [dbo].[Classic_Datasheets] ([CDS_SourceFileName], [CDS_SourceFilePath], [CDS_SourceLastModify], [CDS_TargetFileExists], [CDS_TargetLastModify], [CDS_FileCopy]) VALUES (@CDS_SourceFileName, @CDS_SourceFilePath, @CDS_SourceLastModify, @CDS_TargetFileExists, @CDS_TargetLastModify, @CDS_FileCopy)</CommandText>
@@ -41,7 +41,7 @@
               <Mapping SourceColumn="CDS_FileCopy" DataSetColumn="CDS_FileCopy" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteQuery" Modifier="Public" Name="DeleteQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteQuery">
+              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionStringOk (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteQuery" Modifier="Public" Name="DeleteQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteQuery">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM Classic_Datasheets</CommandText>
@@ -59,7 +59,7 @@
   <xs:element name="ds_ClassicDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ds_ClassicDS" msprop:Generator_UserDSName="ds_ClassicDS">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="dt_ClassicFiles" msprop:Generator_TableClassName="dt_ClassicFilesDataTable" msprop:Generator_TableVarName="tabledt_ClassicFiles" msprop:Generator_TablePropName="dt_ClassicFiles" msprop:Generator_RowDeletingName="dt_ClassicFilesRowDeleting" msprop:Generator_RowChangingName="dt_ClassicFilesRowChanging" msprop:Generator_RowEvHandlerName="dt_ClassicFilesRowChangeEventHandler" msprop:Generator_RowDeletedName="dt_ClassicFilesRowDeleted" msprop:Generator_UserTableName="dt_ClassicFiles" msprop:Generator_RowChangedName="dt_ClassicFilesRowChanged" msprop:Generator_RowEvArgName="dt_ClassicFilesRowChangeEvent" msprop:Generator_RowClassName="dt_ClassicFilesRow">
+        <xs:element name="dt_ClassicFiles" msprop:Generator_TableClassName="dt_ClassicFilesDataTable" msprop:Generator_TableVarName="tabledt_ClassicFiles" msprop:Generator_RowChangedName="dt_ClassicFilesRowChanged" msprop:Generator_TablePropName="dt_ClassicFiles" msprop:Generator_RowDeletingName="dt_ClassicFilesRowDeleting" msprop:Generator_RowChangingName="dt_ClassicFilesRowChanging" msprop:Generator_RowEvHandlerName="dt_ClassicFilesRowChangeEventHandler" msprop:Generator_RowDeletedName="dt_ClassicFilesRowDeleted" msprop:Generator_RowClassName="dt_ClassicFilesRow" msprop:Generator_UserTableName="dt_ClassicFiles" msprop:Generator_RowEvArgName="dt_ClassicFilesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CDS_Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCDS_Id" msprop:Generator_ColumnPropNameInRow="CDS_Id" msprop:Generator_ColumnPropNameInTable="CDS_IdColumn" msprop:Generator_UserColumnName="CDS_Id" type="xs:int" />
