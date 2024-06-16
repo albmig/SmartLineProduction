@@ -89,9 +89,9 @@ namespace SmartLineProduction
             ultimoProg = 0;
             if ((sel_ProjProdArea != null) && (sel_Org != null) && (sel_Type != null))
             {
-                if ((sel_ProjProdArea != NoValue) && (sel_Org != NoValue) && (sel_Type != NoValue)) 
-                { 
-                    ultimoProg = (int)this.qualityTableAdapter.FindMaxProg(sel_ProjProdArea, sel_Org, sel_Type); 
+                if ((sel_ProjProdArea != NoValue) && (sel_Org != NoValue) && (sel_Type != NoValue))
+                {
+                    ultimoProg = (int)this.qualityTableAdapter.FindMaxProg(sel_ProjProdArea, sel_Org, sel_Type);
                 }
             }
 
@@ -111,6 +111,7 @@ namespace SmartLineProduction
             {
                 AzzeraForm();
             }
+            this.sF_QualityViewNewTableAdapter.Fill(this.ds_Quality_new.SF_QualityViewNew);
 
             this.dt_Quality_EditRecTableAdapter.Fill(this.ds_Quality_new.dt_Quality_EditRec);
 
@@ -122,9 +123,9 @@ namespace SmartLineProduction
             this.usersTableAdapter.Fill(this.ds_Quality_new.Users);
 
             if (!VediObsolete)
-                qualityBindingSource.Filter = "Qual_Rev_Obsolete = false";
+                sFQualityViewNewBindingSource.Filter = "Qual_Rev_Obsolete = false";
             else
-                qualityBindingSource.Filter = "";
+                sFQualityViewNewBindingSource.Filter = "";
 
 
             Qual_ProjProdArea = "";
@@ -450,6 +451,42 @@ namespace SmartLineProduction
                 qualityBindingSource.Filter = string.Empty;
         }
 
+        private void HidePanelDati()
+        {
+            label_codview.Visible = false;
+            lab_Codice_View.Visible = false;
+            label_codedit.Visible = false;
+            lab_Codice_Edit.Visible = false;
+            lab_des.Visible = false;
+            tb_Des.Visible = false;
+            lab_folder.Visible = false;
+            tb_folder.Visible = false;
+            lab_vers.Visible = false;
+            tb_vers.Visible = false;
+            lab_rev.Visible = false;
+            tb_rev.Visible = false;
+
+            panel_Sigle.Visible = false;
+        }
+
+        private void ShowPanelDati()
+        {
+            label_codview.Visible = true;
+            lab_Codice_View.Visible = true;
+            label_codedit.Visible = true;
+            lab_Codice_Edit.Visible = true;
+            lab_des.Visible = true;
+            tb_Des.Visible = true;
+            lab_folder.Visible = true;
+            tb_folder.Visible = true;
+            lab_vers.Visible = true;
+            tb_vers.Visible = true;
+            lab_rev.Visible = true;
+            tb_rev.Visible = true;
+
+            panel_Sigle.Visible = true;
+        }
+
         ////////////////////////////////////////////////////////////////////////////////////
         /// Funzioni automatiche
         ////////////////////////////////////////////////////////////////////////////////////
@@ -461,8 +498,6 @@ namespace SmartLineProduction
 
         private void UC_Quality_new_version_Load(object sender, EventArgs e)
         {
-            // TODO: questa riga di codice carica i dati nella tabella 'ds_Quality_new.SF_QualityViewNew'. È possibile spostarla o rimuoverla se necessario.
-            this.sF_QualityViewNewTableAdapter.Fill(this.ds_Quality_new.SF_QualityViewNew);
             AggiornaArchivi();
 
             lab_MyIp.Text = FindIP();
@@ -714,7 +749,7 @@ namespace SmartLineProduction
 
         private void but_view_obsolete_Click(object sender, EventArgs e)
         {
-            gridView1.Columns["Qual_Rev_Obsolete"].Visible = true;
+            MainGridView.Columns["Qual_Rev_Obsolete"].Visible = true;
             VediObsolete = true;
             AggiornaArchivi();
             but_view_obsolete.Visible = false;
@@ -723,7 +758,7 @@ namespace SmartLineProduction
 
         private void but_hide_obsolete_Click(object sender, EventArgs e)
         {
-            gridView1.Columns["Qual_Rev_Obsolete"].Visible = false;
+            MainGridView.Columns["Qual_Rev_Obsolete"].Visible = false;
             VediObsolete = false;
             AggiornaArchivi();
             but_view_obsolete.Visible = true;
@@ -733,6 +768,68 @@ namespace SmartLineProduction
         private void cb_projprodarea_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+        }
+
+        private void gridView1_SelectionChanged(object sender, DevExpress.Data.SelectionChangedEventArgs e)
+        {
+            int rowHandle = MainGridView.FocusedRowHandle;
+
+            if (rowHandle < 0)
+            {
+                HidePanelDati();
+            }
+            else
+            {
+                ShowPanelDati();
+            }
+        }
+
+        private void sFQualityViewNewBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+            if (displayform == "V")
+            {
+                DataRowView drview = (DataRowView)sFQualityViewNewBindingSource.Current;
+                if (drview != null)
+                {
+                    string filtro = "UTENTE = " + "'" + drview["Qual_Richiedente"].ToString() + "'";
+                    usersBindingSource.Filter = filtro;
+
+                    filtro = "Qual_Codice = " + "'" + drview["Qual_ProjProdArea"].ToString() + "'";
+                    dtQualityProjProdAreaBindingSource.Filter = filtro;
+
+                    filtro = "Qual_Codice = " + "'" + drview["Qual_Org"].ToString() + "'";
+                    dtQualityCompanyBindingSource.Filter = filtro;
+
+                    filtro = "Qual_Codice = " + "'" + drview["Qual_Type"].ToString() + "'";
+                    dtQualityTipoDocBindingSource.Filter = filtro;
+
+                    filtro = "Qual_Codice = " + "'" + drview["Qual_Class"].ToString() + "'";
+                    dtQualityClassificationBindingSource.Filter = filtro;
+                }
+
+                int rowHandle = MainGridView.FocusedRowHandle;
+                MainGridView.ExpandGroupRow(0,true);
+            }
+
+        }
+
+        private void MainGridView_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {
+            int rowHandle = MainGridView.FocusedRowHandle;
+
+            if (MainGridView.GetRowExpanded(rowHandle))
+            {
+                MainGridView.CollapseGroupRow(rowHandle, true);
+
+            }
+            else
+            {
+                MainGridView.ExpandGroupRow(rowHandle, true);
+            }
         }
     }
 }

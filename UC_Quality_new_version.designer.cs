@@ -45,42 +45,10 @@
             this.menu_sw_exit = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_fattibilita = new MetroFramework.Controls.MetroPanel();
             this.layout_Schede = new System.Windows.Forms.TableLayoutPanel();
-            this.tb_desClass = new MetroFramework.Controls.MetroTextBox();
-            this.dtQualityClassificationBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ds_Quality_new = new SmartLineProduction.ds_Quality_new();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.lab_MyIp = new MetroFramework.Controls.MetroLabel();
-            this.lab_projprodarea = new MetroFramework.Controls.MetroLabel();
-            this.dtQualityProjProdAreaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lab_org = new MetroFramework.Controls.MetroLabel();
-            this.dtQualityCompanyBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lab_type = new MetroFramework.Controls.MetroLabel();
-            this.dtQualityTipoDocBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lab_class = new MetroFramework.Controls.MetroLabel();
-            this.cb_User = new System.Windows.Forms.ComboBox();
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cb_projprodarea = new System.Windows.Forms.ComboBox();
-            this.cb_org = new System.Windows.Forms.ComboBox();
-            this.cb_type = new System.Windows.Forms.ComboBox();
-            this.cb_class = new System.Windows.Forms.ComboBox();
-            this.label_codview = new MetroFramework.Controls.MetroLabel();
-            this.label_codedit = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
-            this.lab_Codice_View = new MetroFramework.Controls.MetroLabel();
-            this.qualityBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lab_Codice_Edit = new MetroFramework.Controls.MetroLabel();
-            this.tb_Des = new MetroFramework.Controls.MetroTextBox();
-            this.tb_folder = new MetroFramework.Controls.MetroTextBox();
-            this.tb_vers = new MetroFramework.Controls.MetroTextBox();
             this.gv_Quality = new DevExpress.XtraGrid.GridControl();
             this.sFQualityViewNewBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.ds_Quality_new = new SmartLineProduction.ds_Quality_new();
+            this.MainGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colQual_Des = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colcodiceQual = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDes_ProjProdArea = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -89,8 +57,42 @@
             this.colQual_Rev_Obsolete = new DevExpress.XtraGrid.Columns.GridColumn();
             this.but_view_obsolete = new DevExpress.XtraEditors.SimpleButton();
             this.but_hide_obsolete = new DevExpress.XtraEditors.SimpleButton();
-            this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
+            this.panel_Sigle = new System.Windows.Forms.TableLayoutPanel();
+            this.cb_class = new System.Windows.Forms.ComboBox();
+            this.dtQualityClassificationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cb_type = new System.Windows.Forms.ComboBox();
+            this.dtQualityTipoDocBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cb_org = new System.Windows.Forms.ComboBox();
+            this.dtQualityCompanyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cb_projprodarea = new System.Windows.Forms.ComboBox();
+            this.dtQualityProjProdAreaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cb_User = new System.Windows.Forms.ComboBox();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.lab_class = new MetroFramework.Controls.MetroLabel();
+            this.lab_type = new MetroFramework.Controls.MetroLabel();
+            this.lab_org = new MetroFramework.Controls.MetroLabel();
+            this.lab_projprodarea = new MetroFramework.Controls.MetroLabel();
+            this.lab_MyIp = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.tb_desClass = new MetroFramework.Controls.MetroTextBox();
+            this.panel_Valori = new System.Windows.Forms.TableLayoutPanel();
+            this.tb_vers = new MetroFramework.Controls.MetroTextBox();
+            this.lab_vers = new MetroFramework.Controls.MetroLabel();
+            this.lab_folder = new MetroFramework.Controls.MetroLabel();
             this.tb_rev = new MetroFramework.Controls.MetroTextBox();
+            this.lab_rev = new MetroFramework.Controls.MetroLabel();
+            this.tb_folder = new MetroFramework.Controls.MetroTextBox();
+            this.lab_des = new MetroFramework.Controls.MetroLabel();
+            this.label_codedit = new MetroFramework.Controls.MetroLabel();
+            this.tb_Des = new MetroFramework.Controls.MetroTextBox();
+            this.label_codview = new MetroFramework.Controls.MetroLabel();
+            this.lab_Codice_View = new MetroFramework.Controls.MetroLabel();
+            this.lab_Codice_Edit = new MetroFramework.Controls.MetroLabel();
+            this.qualityBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.treeListBand1 = new DevExpress.XtraTreeList.Columns.TreeListBand();
             this.treeListBand2 = new DevExpress.XtraTreeList.Columns.TreeListBand();
             this.treeListBand3 = new DevExpress.XtraTreeList.Columns.TreeListBand();
@@ -112,16 +114,18 @@
             this.pan_Menu_exit.SuspendLayout();
             this.panel_fattibilita.SuspendLayout();
             this.layout_Schede.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtQualityClassificationBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ds_Quality_new)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtQualityProjProdAreaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtQualityCompanyBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtQualityTipoDocBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qualityBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_Quality)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sFQualityViewNewBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ds_Quality_new)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MainGridView)).BeginInit();
+            this.panel_Sigle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtQualityClassificationBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtQualityTipoDocBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtQualityCompanyBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtQualityProjProdAreaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            this.panel_Valori.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.qualityBindingSource)).BeginInit();
             this.cntxt_CopyToClipboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtQualityEditRecBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -293,37 +297,15 @@
             this.layout_Schede.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.layout_Schede.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.layout_Schede.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.layout_Schede.Controls.Add(this.tb_desClass, 5, 6);
-            this.layout_Schede.Controls.Add(this.metroLabel2, 4, 1);
-            this.layout_Schede.Controls.Add(this.metroLabel1, 4, 2);
-            this.layout_Schede.Controls.Add(this.metroLabel3, 4, 3);
-            this.layout_Schede.Controls.Add(this.metroLabel4, 4, 4);
-            this.layout_Schede.Controls.Add(this.metroLabel5, 4, 5);
-            this.layout_Schede.Controls.Add(this.lab_MyIp, 7, 1);
-            this.layout_Schede.Controls.Add(this.lab_projprodarea, 7, 2);
-            this.layout_Schede.Controls.Add(this.lab_org, 7, 3);
-            this.layout_Schede.Controls.Add(this.lab_type, 7, 4);
-            this.layout_Schede.Controls.Add(this.lab_class, 7, 5);
-            this.layout_Schede.Controls.Add(this.cb_User, 5, 1);
-            this.layout_Schede.Controls.Add(this.cb_projprodarea, 5, 2);
-            this.layout_Schede.Controls.Add(this.cb_org, 5, 3);
-            this.layout_Schede.Controls.Add(this.cb_type, 5, 4);
-            this.layout_Schede.Controls.Add(this.cb_class, 5, 5);
-            this.layout_Schede.Controls.Add(this.label_codview, 0, 12);
-            this.layout_Schede.Controls.Add(this.label_codedit, 0, 13);
-            this.layout_Schede.Controls.Add(this.metroLabel10, 0, 14);
-            this.layout_Schede.Controls.Add(this.metroLabel12, 0, 15);
-            this.layout_Schede.Controls.Add(this.metroLabel13, 0, 16);
-            this.layout_Schede.Controls.Add(this.lab_Codice_View, 1, 12);
-            this.layout_Schede.Controls.Add(this.lab_Codice_Edit, 1, 13);
-            this.layout_Schede.Controls.Add(this.tb_Des, 1, 14);
-            this.layout_Schede.Controls.Add(this.tb_folder, 1, 15);
-            this.layout_Schede.Controls.Add(this.tb_vers, 1, 16);
+            this.layout_Schede.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.layout_Schede.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.layout_Schede.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.layout_Schede.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.layout_Schede.Controls.Add(this.gv_Quality, 0, 1);
             this.layout_Schede.Controls.Add(this.but_view_obsolete, 0, 0);
             this.layout_Schede.Controls.Add(this.but_hide_obsolete, 3, 0);
-            this.layout_Schede.Controls.Add(this.metroLabel14, 2, 16);
-            this.layout_Schede.Controls.Add(this.tb_rev, 4, 16);
+            this.layout_Schede.Controls.Add(this.panel_Sigle, 4, 1);
+            this.layout_Schede.Controls.Add(this.panel_Valori, 4, 12);
             this.layout_Schede.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layout_Schede.Location = new System.Drawing.Point(0, 0);
             this.layout_Schede.Name = "layout_Schede";
@@ -349,588 +331,104 @@
             this.layout_Schede.Size = new System.Drawing.Size(960, 425);
             this.layout_Schede.TabIndex = 123;
             // 
-            // tb_desClass
-            // 
-            this.layout_Schede.SetColumnSpan(this.tb_desClass, 3);
-            // 
-            // 
-            // 
-            this.tb_desClass.CustomButton.Image = null;
-            this.tb_desClass.CustomButton.Location = new System.Drawing.Point(224, 2);
-            this.tb_desClass.CustomButton.Name = "";
-            this.tb_desClass.CustomButton.Size = new System.Drawing.Size(127, 127);
-            this.tb_desClass.CustomButton.Style = MetroFramework.MetroColorStyle.Red;
-            this.tb_desClass.CustomButton.TabIndex = 1;
-            this.tb_desClass.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.tb_desClass.CustomButton.UseSelectable = true;
-            this.tb_desClass.CustomButton.Visible = false;
-            this.tb_desClass.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dtQualityClassificationBindingSource, "Qual_Note", true));
-            this.tb_desClass.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tb_desClass.Enabled = false;
-            this.tb_desClass.Lines = new string[] {
-        "metroTextBox1"};
-            this.tb_desClass.Location = new System.Drawing.Point(603, 148);
-            this.tb_desClass.MaxLength = 32767;
-            this.tb_desClass.Multiline = true;
-            this.tb_desClass.Name = "tb_desClass";
-            this.tb_desClass.PasswordChar = '\0';
-            this.tb_desClass.ReadOnly = true;
-            this.layout_Schede.SetRowSpan(this.tb_desClass, 6);
-            this.tb_desClass.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tb_desClass.SelectedText = "";
-            this.tb_desClass.SelectionLength = 0;
-            this.tb_desClass.SelectionStart = 0;
-            this.tb_desClass.ShortcutsEnabled = true;
-            this.tb_desClass.Size = new System.Drawing.Size(354, 132);
-            this.tb_desClass.TabIndex = 25;
-            this.tb_desClass.Text = "metroTextBox1";
-            this.tb_desClass.UseSelectable = true;
-            this.tb_desClass.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.tb_desClass.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // dtQualityClassificationBindingSource
-            // 
-            this.dtQualityClassificationBindingSource.DataMember = "dt_Quality_Classification";
-            this.dtQualityClassificationBindingSource.DataSource = this.ds_Quality_new;
-            this.dtQualityClassificationBindingSource.CurrentChanged += new System.EventHandler(this.dtQualityClassificationBindingSource_CurrentChanged);
-            // 
-            // ds_Quality_new
-            // 
-            this.ds_Quality_new.DataSetName = "ds_Quality_new";
-            this.ds_Quality_new.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel2.Location = new System.Drawing.Point(483, 32);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(54, 19);
-            this.metroLabel2.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroLabel2.TabIndex = 5;
-            this.metroLabel2.Text = "Utente:";
-            this.metroLabel2.UseStyleColors = true;
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel1.Location = new System.Drawing.Point(483, 55);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(114, 19);
-            this.metroLabel1.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroLabel1.TabIndex = 6;
-            this.metroLabel1.Text = "Project / Product / Area :";
-            this.metroLabel1.UseStyleColors = true;
-            // 
-            // metroLabel3
-            // 
-            this.metroLabel3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel3.Location = new System.Drawing.Point(483, 78);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(95, 19);
-            this.metroLabel3.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroLabel3.TabIndex = 7;
-            this.metroLabel3.Text = "Organization :";
-            this.metroLabel3.UseStyleColors = true;
-            // 
-            // metroLabel4
-            // 
-            this.metroLabel4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel4.Location = new System.Drawing.Point(483, 101);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(114, 19);
-            this.metroLabel4.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroLabel4.TabIndex = 8;
-            this.metroLabel4.Text = "Type of document :";
-            this.metroLabel4.UseStyleColors = true;
-            // 
-            // metroLabel5
-            // 
-            this.metroLabel5.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel5.Location = new System.Drawing.Point(483, 124);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(94, 19);
-            this.metroLabel5.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroLabel5.TabIndex = 19;
-            this.metroLabel5.Text = "Classification :";
-            this.metroLabel5.UseStyleColors = true;
-            // 
-            // lab_MyIp
-            // 
-            this.lab_MyIp.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lab_MyIp.AutoSize = true;
-            this.lab_MyIp.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lab_MyIp.Location = new System.Drawing.Point(873, 32);
-            this.lab_MyIp.Name = "lab_MyIp";
-            this.lab_MyIp.Size = new System.Drawing.Size(54, 19);
-            this.lab_MyIp.Style = MetroFramework.MetroColorStyle.Red;
-            this.lab_MyIp.TabIndex = 20;
-            this.lab_MyIp.Text = "Utente:";
-            this.lab_MyIp.UseStyleColors = true;
-            this.lab_MyIp.Visible = false;
-            // 
-            // lab_projprodarea
-            // 
-            this.lab_projprodarea.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lab_projprodarea.AutoSize = true;
-            this.lab_projprodarea.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dtQualityProjProdAreaBindingSource, "Qual_Codice", true));
-            this.lab_projprodarea.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lab_projprodarea.Location = new System.Drawing.Point(873, 55);
-            this.lab_projprodarea.Name = "lab_projprodarea";
-            this.lab_projprodarea.Size = new System.Drawing.Size(54, 19);
-            this.lab_projprodarea.Style = MetroFramework.MetroColorStyle.Red;
-            this.lab_projprodarea.TabIndex = 21;
-            this.lab_projprodarea.Text = "Utente:";
-            this.lab_projprodarea.UseStyleColors = true;
-            // 
-            // dtQualityProjProdAreaBindingSource
-            // 
-            this.dtQualityProjProdAreaBindingSource.DataMember = "dt_Quality_ProjProdArea";
-            this.dtQualityProjProdAreaBindingSource.DataSource = this.ds_Quality_new;
-            this.dtQualityProjProdAreaBindingSource.CurrentChanged += new System.EventHandler(this.dtQualityProjProdAreaBindingSource_CurrentChanged);
-            // 
-            // lab_org
-            // 
-            this.lab_org.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lab_org.AutoSize = true;
-            this.lab_org.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dtQualityCompanyBindingSource, "Qual_Codice", true));
-            this.lab_org.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lab_org.Location = new System.Drawing.Point(873, 78);
-            this.lab_org.Name = "lab_org";
-            this.lab_org.Size = new System.Drawing.Size(54, 19);
-            this.lab_org.Style = MetroFramework.MetroColorStyle.Red;
-            this.lab_org.TabIndex = 22;
-            this.lab_org.Text = "Utente:";
-            this.lab_org.UseStyleColors = true;
-            // 
-            // dtQualityCompanyBindingSource
-            // 
-            this.dtQualityCompanyBindingSource.DataMember = "dt_Quality_Company";
-            this.dtQualityCompanyBindingSource.DataSource = this.ds_Quality_new;
-            this.dtQualityCompanyBindingSource.CurrentChanged += new System.EventHandler(this.dtQualityCompanyBindingSource_CurrentChanged);
-            // 
-            // lab_type
-            // 
-            this.lab_type.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lab_type.AutoSize = true;
-            this.lab_type.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dtQualityTipoDocBindingSource, "Qual_Codice", true));
-            this.lab_type.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lab_type.Location = new System.Drawing.Point(873, 101);
-            this.lab_type.Name = "lab_type";
-            this.lab_type.Size = new System.Drawing.Size(54, 19);
-            this.lab_type.Style = MetroFramework.MetroColorStyle.Red;
-            this.lab_type.TabIndex = 23;
-            this.lab_type.Text = "Utente:";
-            this.lab_type.UseStyleColors = true;
-            // 
-            // dtQualityTipoDocBindingSource
-            // 
-            this.dtQualityTipoDocBindingSource.DataMember = "dt_Quality_TipoDoc";
-            this.dtQualityTipoDocBindingSource.DataSource = this.ds_Quality_new;
-            this.dtQualityTipoDocBindingSource.CurrentChanged += new System.EventHandler(this.dtQualityTipoDocBindingSource_CurrentChanged);
-            // 
-            // lab_class
-            // 
-            this.lab_class.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lab_class.AutoSize = true;
-            this.lab_class.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dtQualityClassificationBindingSource, "Qual_Codice", true));
-            this.lab_class.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lab_class.Location = new System.Drawing.Point(873, 124);
-            this.lab_class.Name = "lab_class";
-            this.lab_class.Size = new System.Drawing.Size(54, 19);
-            this.lab_class.Style = MetroFramework.MetroColorStyle.Red;
-            this.lab_class.TabIndex = 24;
-            this.lab_class.Text = "Utente:";
-            this.lab_class.UseStyleColors = true;
-            // 
-            // cb_User
-            // 
-            this.cb_User.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.layout_Schede.SetColumnSpan(this.cb_User, 2);
-            this.cb_User.DataSource = this.usersBindingSource;
-            this.cb_User.DisplayMember = "UTENTE";
-            this.cb_User.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_User.FormattingEnabled = true;
-            this.cb_User.Location = new System.Drawing.Point(603, 33);
-            this.cb_User.Name = "cb_User";
-            this.cb_User.Size = new System.Drawing.Size(234, 23);
-            this.cb_User.TabIndex = 26;
-            // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataMember = "Users";
-            this.usersBindingSource.DataSource = this.ds_Quality_new;
-            this.usersBindingSource.CurrentChanged += new System.EventHandler(this.usersBindingSource_CurrentChanged);
-            // 
-            // cb_projprodarea
-            // 
-            this.cb_projprodarea.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.layout_Schede.SetColumnSpan(this.cb_projprodarea, 2);
-            this.cb_projprodarea.DataSource = this.dtQualityProjProdAreaBindingSource;
-            this.cb_projprodarea.DisplayMember = "Qual_Des";
-            this.cb_projprodarea.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.cb_projprodarea.FormattingEnabled = true;
-            this.cb_projprodarea.Location = new System.Drawing.Point(603, 56);
-            this.cb_projprodarea.Name = "cb_projprodarea";
-            this.cb_projprodarea.Size = new System.Drawing.Size(234, 23);
-            this.cb_projprodarea.TabIndex = 27;
-            this.cb_projprodarea.SelectedIndexChanged += new System.EventHandler(this.cb_projprodarea_SelectedIndexChanged);
-            // 
-            // cb_org
-            // 
-            this.cb_org.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.layout_Schede.SetColumnSpan(this.cb_org, 2);
-            this.cb_org.DataSource = this.dtQualityCompanyBindingSource;
-            this.cb_org.DisplayMember = "Qual_Des";
-            this.cb_org.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.cb_org.FormattingEnabled = true;
-            this.cb_org.Location = new System.Drawing.Point(603, 79);
-            this.cb_org.Name = "cb_org";
-            this.cb_org.Size = new System.Drawing.Size(234, 23);
-            this.cb_org.TabIndex = 28;
-            // 
-            // cb_type
-            // 
-            this.cb_type.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.layout_Schede.SetColumnSpan(this.cb_type, 2);
-            this.cb_type.DataSource = this.dtQualityTipoDocBindingSource;
-            this.cb_type.DisplayMember = "Qual_Des";
-            this.cb_type.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.cb_type.FormattingEnabled = true;
-            this.cb_type.Location = new System.Drawing.Point(603, 102);
-            this.cb_type.Name = "cb_type";
-            this.cb_type.Size = new System.Drawing.Size(234, 23);
-            this.cb_type.TabIndex = 29;
-            // 
-            // cb_class
-            // 
-            this.cb_class.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.layout_Schede.SetColumnSpan(this.cb_class, 2);
-            this.cb_class.DataSource = this.dtQualityClassificationBindingSource;
-            this.cb_class.DisplayMember = "Qual_Des";
-            this.cb_class.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.cb_class.FormattingEnabled = true;
-            this.cb_class.Location = new System.Drawing.Point(603, 125);
-            this.cb_class.Name = "cb_class";
-            this.cb_class.Size = new System.Drawing.Size(234, 23);
-            this.cb_class.TabIndex = 30;
-            // 
-            // label_codview
-            // 
-            this.label_codview.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label_codview.AutoSize = true;
-            this.label_codview.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.label_codview.Location = new System.Drawing.Point(3, 285);
-            this.label_codview.Name = "label_codview";
-            this.label_codview.Size = new System.Drawing.Size(105, 19);
-            this.label_codview.Style = MetroFramework.MetroColorStyle.Red;
-            this.label_codview.TabIndex = 34;
-            this.label_codview.Text = "Codice Qualità :";
-            this.label_codview.UseStyleColors = true;
-            // 
-            // label_codedit
-            // 
-            this.label_codedit.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label_codedit.AutoSize = true;
-            this.label_codedit.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.label_codedit.Location = new System.Drawing.Point(3, 308);
-            this.label_codedit.Name = "label_codedit";
-            this.label_codedit.Size = new System.Drawing.Size(105, 19);
-            this.label_codedit.Style = MetroFramework.MetroColorStyle.Red;
-            this.label_codedit.TabIndex = 35;
-            this.label_codedit.Text = "Codice Qualità :";
-            this.label_codedit.UseStyleColors = true;
-            // 
-            // metroLabel10
-            // 
-            this.metroLabel10.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.metroLabel10.AutoSize = true;
-            this.metroLabel10.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel10.Location = new System.Drawing.Point(3, 331);
-            this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(85, 19);
-            this.metroLabel10.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroLabel10.TabIndex = 36;
-            this.metroLabel10.Text = "Descrizione :";
-            this.metroLabel10.UseStyleColors = true;
-            // 
-            // metroLabel12
-            // 
-            this.metroLabel12.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.metroLabel12.AutoSize = true;
-            this.metroLabel12.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel12.Location = new System.Drawing.Point(3, 354);
-            this.metroLabel12.Name = "metroLabel12";
-            this.metroLabel12.Size = new System.Drawing.Size(114, 19);
-            this.metroLabel12.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroLabel12.TabIndex = 37;
-            this.metroLabel12.Text = "Cartella di riferimento :";
-            this.metroLabel12.UseStyleColors = true;
-            // 
-            // metroLabel13
-            // 
-            this.metroLabel13.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.metroLabel13.AutoSize = true;
-            this.metroLabel13.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel13.Location = new System.Drawing.Point(3, 377);
-            this.metroLabel13.Name = "metroLabel13";
-            this.metroLabel13.Size = new System.Drawing.Size(68, 19);
-            this.metroLabel13.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroLabel13.TabIndex = 38;
-            this.metroLabel13.Text = "Versione :";
-            this.metroLabel13.UseStyleColors = true;
-            // 
-            // lab_Codice_View
-            // 
-            this.lab_Codice_View.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lab_Codice_View.AutoSize = true;
-            this.layout_Schede.SetColumnSpan(this.lab_Codice_View, 2);
-            this.lab_Codice_View.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.qualityBindingSource, "codiceQual", true));
-            this.lab_Codice_View.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lab_Codice_View.Location = new System.Drawing.Point(123, 285);
-            this.lab_Codice_View.Name = "lab_Codice_View";
-            this.lab_Codice_View.Size = new System.Drawing.Size(115, 19);
-            this.lab_Codice_View.Style = MetroFramework.MetroColorStyle.Red;
-            this.lab_Codice_View.TabIndex = 40;
-            this.lab_Codice_View.Text = "Codice Qualità :";
-            this.lab_Codice_View.UseStyleColors = true;
-            // 
-            // qualityBindingSource
-            // 
-            this.qualityBindingSource.DataMember = "Quality";
-            this.qualityBindingSource.DataSource = this.ds_Quality_new;
-            this.qualityBindingSource.Sort = "Qual_ProjProdArea asc, Qual_Org asc, Qual_Type asc";
-            this.qualityBindingSource.CurrentChanged += new System.EventHandler(this.qualityBindingSource_CurrentChanged);
-            // 
-            // lab_Codice_Edit
-            // 
-            this.lab_Codice_Edit.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lab_Codice_Edit.AutoSize = true;
-            this.layout_Schede.SetColumnSpan(this.lab_Codice_Edit, 2);
-            this.lab_Codice_Edit.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lab_Codice_Edit.Location = new System.Drawing.Point(123, 308);
-            this.lab_Codice_Edit.Name = "lab_Codice_Edit";
-            this.lab_Codice_Edit.Size = new System.Drawing.Size(115, 19);
-            this.lab_Codice_Edit.Style = MetroFramework.MetroColorStyle.Red;
-            this.lab_Codice_Edit.TabIndex = 41;
-            this.lab_Codice_Edit.Text = "Codice Qualità :";
-            this.lab_Codice_Edit.UseStyleColors = true;
-            // 
-            // tb_Des
-            // 
-            this.layout_Schede.SetColumnSpan(this.tb_Des, 7);
-            // 
-            // 
-            // 
-            this.tb_Des.CustomButton.Image = null;
-            this.tb_Des.CustomButton.Location = new System.Drawing.Point(818, 1);
-            this.tb_Des.CustomButton.Name = "";
-            this.tb_Des.CustomButton.Size = new System.Drawing.Size(15, 15);
-            this.tb_Des.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.tb_Des.CustomButton.TabIndex = 1;
-            this.tb_Des.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.tb_Des.CustomButton.UseSelectable = true;
-            this.tb_Des.CustomButton.Visible = false;
-            this.tb_Des.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.qualityBindingSource, "Qual_Des", true));
-            this.tb_Des.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tb_Des.Lines = new string[] {
-        "tb_Des"};
-            this.tb_Des.Location = new System.Drawing.Point(123, 332);
-            this.tb_Des.MaxLength = 32767;
-            this.tb_Des.Name = "tb_Des";
-            this.tb_Des.PasswordChar = '\0';
-            this.tb_Des.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tb_Des.SelectedText = "";
-            this.tb_Des.SelectionLength = 0;
-            this.tb_Des.SelectionStart = 0;
-            this.tb_Des.ShortcutsEnabled = true;
-            this.tb_Des.Size = new System.Drawing.Size(834, 17);
-            this.tb_Des.Style = MetroFramework.MetroColorStyle.Red;
-            this.tb_Des.TabIndex = 42;
-            this.tb_Des.Text = "tb_Des";
-            this.tb_Des.UseSelectable = true;
-            this.tb_Des.UseStyleColors = true;
-            this.tb_Des.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.tb_Des.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // tb_folder
-            // 
-            this.layout_Schede.SetColumnSpan(this.tb_folder, 7);
-            // 
-            // 
-            // 
-            this.tb_folder.CustomButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tb_folder.CustomButton.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            this.tb_folder.CustomButton.Location = new System.Drawing.Point(818, 1);
-            this.tb_folder.CustomButton.Name = "";
-            this.tb_folder.CustomButton.Size = new System.Drawing.Size(15, 15);
-            this.tb_folder.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.tb_folder.CustomButton.TabIndex = 1;
-            this.tb_folder.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.tb_folder.CustomButton.UseSelectable = true;
-            this.tb_folder.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.qualityBindingSource, "Qual_Path", true));
-            this.tb_folder.DisplayIcon = true;
-            this.tb_folder.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tb_folder.Lines = new string[] {
-        "metroTextBox2"};
-            this.tb_folder.Location = new System.Drawing.Point(123, 355);
-            this.tb_folder.MaxLength = 32767;
-            this.tb_folder.Name = "tb_folder";
-            this.tb_folder.PasswordChar = '\0';
-            this.tb_folder.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tb_folder.SelectedText = "";
-            this.tb_folder.SelectionLength = 0;
-            this.tb_folder.SelectionStart = 0;
-            this.tb_folder.ShortcutsEnabled = true;
-            this.tb_folder.ShowButton = true;
-            this.tb_folder.Size = new System.Drawing.Size(834, 17);
-            this.tb_folder.Style = MetroFramework.MetroColorStyle.Red;
-            this.tb_folder.TabIndex = 43;
-            this.tb_folder.Text = "metroTextBox2";
-            this.tb_folder.UseSelectable = true;
-            this.tb_folder.UseStyleColors = true;
-            this.tb_folder.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.tb_folder.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.tb_folder.ButtonClick += new MetroFramework.Controls.MetroTextBox.ButClick(this.tb_folder_ButtonClick);
-            // 
-            // tb_vers
-            // 
-            this.tb_vers.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            // 
-            // 
-            // 
-            this.tb_vers.CustomButton.Image = null;
-            this.tb_vers.CustomButton.Location = new System.Drawing.Point(98, 1);
-            this.tb_vers.CustomButton.Name = "";
-            this.tb_vers.CustomButton.Size = new System.Drawing.Size(15, 15);
-            this.tb_vers.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.tb_vers.CustomButton.TabIndex = 1;
-            this.tb_vers.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.tb_vers.CustomButton.UseSelectable = true;
-            this.tb_vers.CustomButton.Visible = false;
-            this.tb_vers.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.qualityBindingSource, "Qual_Ver", true));
-            this.tb_vers.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.tb_vers.Lines = new string[] {
-        "tb_vers"};
-            this.tb_vers.Location = new System.Drawing.Point(123, 378);
-            this.tb_vers.MaxLength = 32767;
-            this.tb_vers.Name = "tb_vers";
-            this.tb_vers.PasswordChar = '\0';
-            this.tb_vers.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tb_vers.SelectedText = "";
-            this.tb_vers.SelectionLength = 0;
-            this.tb_vers.SelectionStart = 0;
-            this.tb_vers.ShortcutsEnabled = true;
-            this.tb_vers.Size = new System.Drawing.Size(114, 17);
-            this.tb_vers.Style = MetroFramework.MetroColorStyle.Red;
-            this.tb_vers.TabIndex = 44;
-            this.tb_vers.Text = "tb_vers";
-            this.tb_vers.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tb_vers.UseSelectable = true;
-            this.tb_vers.UseStyleColors = true;
-            this.tb_vers.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.tb_vers.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.tb_vers.Leave += new System.EventHandler(this.tb_vers_Leave);
-            // 
             // gv_Quality
             // 
             this.layout_Schede.SetColumnSpan(this.gv_Quality, 4);
             this.gv_Quality.DataSource = this.sFQualityViewNewBindingSource;
             this.gv_Quality.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gv_Quality.Location = new System.Drawing.Point(3, 33);
-            this.gv_Quality.MainView = this.gridView1;
+            this.gv_Quality.MainView = this.MainGridView;
             this.gv_Quality.Name = "gv_Quality";
-            this.layout_Schede.SetRowSpan(this.gv_Quality, 11);
-            this.gv_Quality.Size = new System.Drawing.Size(474, 247);
+            this.layout_Schede.SetRowSpan(this.gv_Quality, 17);
+            this.gv_Quality.Size = new System.Drawing.Size(474, 389);
             this.gv_Quality.TabIndex = 46;
             this.gv_Quality.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.MainGridView});
             // 
             // sFQualityViewNewBindingSource
             // 
             this.sFQualityViewNewBindingSource.DataMember = "SF_QualityViewNew";
             this.sFQualityViewNewBindingSource.DataSource = this.ds_Quality_new;
+            this.sFQualityViewNewBindingSource.CurrentChanged += new System.EventHandler(this.sFQualityViewNewBindingSource_CurrentChanged);
             // 
-            // gridView1
+            // ds_Quality_new
             // 
-            this.gridView1.Appearance.CustomizationFormHint.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.gridView1.Appearance.CustomizationFormHint.Options.UseFont = true;
-            this.gridView1.Appearance.DetailTip.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.gridView1.Appearance.DetailTip.Options.UseFont = true;
-            this.gridView1.Appearance.EvenRow.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.gridView1.Appearance.EvenRow.Options.UseFont = true;
-            this.gridView1.Appearance.FilterPanel.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.gridView1.Appearance.FilterPanel.Options.UseFont = true;
-            this.gridView1.Appearance.FocusedCell.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.gridView1.Appearance.FocusedCell.Options.UseFont = true;
-            this.gridView1.Appearance.FocusedRow.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.gridView1.Appearance.FocusedRow.Options.UseFont = true;
-            this.gridView1.Appearance.FooterPanel.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.gridView1.Appearance.FooterPanel.Options.UseFont = true;
-            this.gridView1.Appearance.GroupFooter.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.gridView1.Appearance.GroupFooter.Options.UseFont = true;
-            this.gridView1.Appearance.GroupPanel.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.gridView1.Appearance.GroupPanel.Options.UseFont = true;
-            this.gridView1.Appearance.GroupRow.BackColor = System.Drawing.SystemColors.Control;
-            this.gridView1.Appearance.GroupRow.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.gridView1.Appearance.GroupRow.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.gridView1.Appearance.GroupRow.Options.UseBackColor = true;
-            this.gridView1.Appearance.GroupRow.Options.UseFont = true;
-            this.gridView1.Appearance.GroupRow.Options.UseForeColor = true;
-            this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.gridView1.Appearance.HeaderPanel.Options.UseFont = true;
-            this.gridView1.Appearance.HideSelectionRow.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.gridView1.Appearance.HideSelectionRow.Options.UseFont = true;
-            this.gridView1.Appearance.HotTrackedRow.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.gridView1.Appearance.HotTrackedRow.Options.UseFont = true;
-            this.gridView1.Appearance.NoSearchResults.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.gridView1.Appearance.NoSearchResults.Options.UseFont = true;
-            this.gridView1.Appearance.OddRow.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.gridView1.Appearance.OddRow.Options.UseFont = true;
-            this.gridView1.Appearance.Preview.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.gridView1.Appearance.Preview.Options.UseFont = true;
-            this.gridView1.Appearance.Row.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.gridView1.Appearance.Row.Options.UseFont = true;
-            this.gridView1.Appearance.SelectedRow.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.gridView1.Appearance.SelectedRow.Options.UseFont = true;
-            this.gridView1.Appearance.TopNewRow.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.gridView1.Appearance.TopNewRow.Options.UseFont = true;
-            this.gridView1.Appearance.ViewCaption.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.gridView1.Appearance.ViewCaption.Options.UseFont = true;
-            this.gridView1.AutoFillColumn = this.colQual_Des;
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.ds_Quality_new.DataSetName = "ds_Quality_new";
+            this.ds_Quality_new.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // MainGridView
+            // 
+            this.MainGridView.Appearance.CustomizationFormHint.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.MainGridView.Appearance.CustomizationFormHint.Options.UseFont = true;
+            this.MainGridView.Appearance.DetailTip.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.MainGridView.Appearance.DetailTip.Options.UseFont = true;
+            this.MainGridView.Appearance.EvenRow.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.MainGridView.Appearance.EvenRow.Options.UseFont = true;
+            this.MainGridView.Appearance.FilterPanel.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.MainGridView.Appearance.FilterPanel.Options.UseFont = true;
+            this.MainGridView.Appearance.FocusedCell.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.MainGridView.Appearance.FocusedCell.Options.UseFont = true;
+            this.MainGridView.Appearance.FocusedRow.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.MainGridView.Appearance.FocusedRow.Options.UseFont = true;
+            this.MainGridView.Appearance.FooterPanel.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.MainGridView.Appearance.FooterPanel.Options.UseFont = true;
+            this.MainGridView.Appearance.GroupFooter.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.MainGridView.Appearance.GroupFooter.Options.UseFont = true;
+            this.MainGridView.Appearance.GroupPanel.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.MainGridView.Appearance.GroupPanel.Options.UseFont = true;
+            this.MainGridView.Appearance.GroupRow.BackColor = System.Drawing.SystemColors.Control;
+            this.MainGridView.Appearance.GroupRow.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.MainGridView.Appearance.GroupRow.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.MainGridView.Appearance.GroupRow.Options.UseBackColor = true;
+            this.MainGridView.Appearance.GroupRow.Options.UseFont = true;
+            this.MainGridView.Appearance.GroupRow.Options.UseForeColor = true;
+            this.MainGridView.Appearance.HeaderPanel.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.MainGridView.Appearance.HeaderPanel.Options.UseFont = true;
+            this.MainGridView.Appearance.HideSelectionRow.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.MainGridView.Appearance.HideSelectionRow.Options.UseFont = true;
+            this.MainGridView.Appearance.HotTrackedRow.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.MainGridView.Appearance.HotTrackedRow.Options.UseFont = true;
+            this.MainGridView.Appearance.NoSearchResults.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.MainGridView.Appearance.NoSearchResults.Options.UseFont = true;
+            this.MainGridView.Appearance.OddRow.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.MainGridView.Appearance.OddRow.Options.UseFont = true;
+            this.MainGridView.Appearance.Preview.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.MainGridView.Appearance.Preview.Options.UseFont = true;
+            this.MainGridView.Appearance.Row.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.MainGridView.Appearance.Row.Options.UseFont = true;
+            this.MainGridView.Appearance.SelectedRow.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.MainGridView.Appearance.SelectedRow.Options.UseFont = true;
+            this.MainGridView.Appearance.TopNewRow.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.MainGridView.Appearance.TopNewRow.Options.UseFont = true;
+            this.MainGridView.Appearance.ViewCaption.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.MainGridView.Appearance.ViewCaption.Options.UseFont = true;
+            this.MainGridView.AutoFillColumn = this.colQual_Des;
+            this.MainGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colcodiceQual,
             this.colDes_ProjProdArea,
             this.colDes_Company,
             this.colDes_TipoDoc,
             this.colQual_Des,
             this.colQual_Rev_Obsolete});
-            this.gridView1.GridControl = this.gv_Quality;
-            this.gridView1.GroupCount = 3;
-            this.gridView1.GroupFormat = "{1}";
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsBehavior.Editable = false;
-            this.gridView1.OptionsBehavior.ReadOnly = true;
-            this.gridView1.OptionsCustomization.AllowSort = false;
-            this.gridView1.OptionsSelection.UseIndicatorForSelection = false;
-            this.gridView1.OptionsView.ColumnAutoWidth = false;
-            this.gridView1.OptionsView.ShowColumnHeaders = false;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
-            this.gridView1.OptionsView.ShowIndicator = false;
-            this.gridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            this.MainGridView.GridControl = this.gv_Quality;
+            this.MainGridView.GroupCount = 3;
+            this.MainGridView.GroupFormat = "{1}";
+            this.MainGridView.Name = "MainGridView";
+            this.MainGridView.OptionsBehavior.Editable = false;
+            this.MainGridView.OptionsBehavior.ReadOnly = true;
+            this.MainGridView.OptionsCustomization.AllowSort = false;
+            this.MainGridView.OptionsSelection.UseIndicatorForSelection = false;
+            this.MainGridView.OptionsView.ColumnAutoWidth = false;
+            this.MainGridView.OptionsView.ShowColumnHeaders = false;
+            this.MainGridView.OptionsView.ShowGroupPanel = false;
+            this.MainGridView.OptionsView.ShowIndicator = false;
+            this.MainGridView.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colDes_ProjProdArea, DevExpress.Data.ColumnSortOrder.Ascending),
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colDes_Company, DevExpress.Data.ColumnSortOrder.Ascending),
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colDes_TipoDoc, DevExpress.Data.ColumnSortOrder.Ascending)});
+            this.MainGridView.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.MainGridView_RowClick);
+            this.MainGridView.SelectionChanged += new DevExpress.Data.SelectionChangedEventHandler(this.gridView1_SelectionChanged);
+            this.MainGridView.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
             // colQual_Des
             // 
@@ -976,6 +474,8 @@
             // 
             this.colQual_Rev_Obsolete.FieldName = "Qual_Rev_Obsolete";
             this.colQual_Rev_Obsolete.Name = "colQual_Rev_Obsolete";
+            this.colQual_Rev_Obsolete.Visible = true;
+            this.colQual_Rev_Obsolete.VisibleIndex = 2;
             this.colQual_Rev_Obsolete.Width = 158;
             // 
             // but_view_obsolete
@@ -1010,18 +510,410 @@
             this.but_hide_obsolete.Text = "Nascondi obsoleti";
             this.but_hide_obsolete.Click += new System.EventHandler(this.but_hide_obsolete_Click);
             // 
-            // metroLabel14
+            // panel_Sigle
             // 
-            this.metroLabel14.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.metroLabel14.AutoSize = true;
-            this.metroLabel14.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel14.Location = new System.Drawing.Point(243, 377);
-            this.metroLabel14.Name = "metroLabel14";
-            this.metroLabel14.Size = new System.Drawing.Size(73, 19);
-            this.metroLabel14.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroLabel14.TabIndex = 39;
-            this.metroLabel14.Text = "Revisione :";
-            this.metroLabel14.UseStyleColors = true;
+            this.panel_Sigle.ColumnCount = 3;
+            this.layout_Schede.SetColumnSpan(this.panel_Sigle, 4);
+            this.panel_Sigle.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.panel_Sigle.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.panel_Sigle.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.panel_Sigle.Controls.Add(this.cb_class, 1, 4);
+            this.panel_Sigle.Controls.Add(this.cb_type, 1, 3);
+            this.panel_Sigle.Controls.Add(this.cb_org, 1, 2);
+            this.panel_Sigle.Controls.Add(this.cb_projprodarea, 1, 1);
+            this.panel_Sigle.Controls.Add(this.cb_User, 1, 0);
+            this.panel_Sigle.Controls.Add(this.metroLabel2, 0, 0);
+            this.panel_Sigle.Controls.Add(this.lab_class, 2, 4);
+            this.panel_Sigle.Controls.Add(this.lab_type, 2, 3);
+            this.panel_Sigle.Controls.Add(this.lab_org, 2, 2);
+            this.panel_Sigle.Controls.Add(this.lab_projprodarea, 2, 1);
+            this.panel_Sigle.Controls.Add(this.lab_MyIp, 2, 0);
+            this.panel_Sigle.Controls.Add(this.metroLabel5, 0, 4);
+            this.panel_Sigle.Controls.Add(this.metroLabel4, 0, 3);
+            this.panel_Sigle.Controls.Add(this.metroLabel3, 0, 2);
+            this.panel_Sigle.Controls.Add(this.metroLabel1, 0, 1);
+            this.panel_Sigle.Controls.Add(this.tb_desClass, 1, 5);
+            this.panel_Sigle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_Sigle.Location = new System.Drawing.Point(483, 33);
+            this.panel_Sigle.Name = "panel_Sigle";
+            this.panel_Sigle.RowCount = 6;
+            this.layout_Schede.SetRowSpan(this.panel_Sigle, 11);
+            this.panel_Sigle.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.panel_Sigle.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.panel_Sigle.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.panel_Sigle.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.panel_Sigle.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.panel_Sigle.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.panel_Sigle.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.panel_Sigle.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.panel_Sigle.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.panel_Sigle.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.panel_Sigle.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.panel_Sigle.Size = new System.Drawing.Size(474, 247);
+            this.panel_Sigle.TabIndex = 49;
+            // 
+            // cb_class
+            // 
+            this.cb_class.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cb_class.DataSource = this.dtQualityClassificationBindingSource;
+            this.cb_class.DisplayMember = "Qual_Des";
+            this.cb_class.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cb_class.FormattingEnabled = true;
+            this.cb_class.Location = new System.Drawing.Point(121, 99);
+            this.cb_class.Name = "cb_class";
+            this.cb_class.Size = new System.Drawing.Size(231, 23);
+            this.cb_class.TabIndex = 30;
+            // 
+            // dtQualityClassificationBindingSource
+            // 
+            this.dtQualityClassificationBindingSource.DataMember = "dt_Quality_Classification";
+            this.dtQualityClassificationBindingSource.DataSource = this.ds_Quality_new;
+            this.dtQualityClassificationBindingSource.CurrentChanged += new System.EventHandler(this.dtQualityClassificationBindingSource_CurrentChanged);
+            // 
+            // cb_type
+            // 
+            this.cb_type.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cb_type.DataSource = this.dtQualityTipoDocBindingSource;
+            this.cb_type.DisplayMember = "Qual_Des";
+            this.cb_type.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cb_type.FormattingEnabled = true;
+            this.cb_type.Location = new System.Drawing.Point(121, 75);
+            this.cb_type.Name = "cb_type";
+            this.cb_type.Size = new System.Drawing.Size(231, 23);
+            this.cb_type.TabIndex = 29;
+            // 
+            // dtQualityTipoDocBindingSource
+            // 
+            this.dtQualityTipoDocBindingSource.DataMember = "dt_Quality_TipoDoc";
+            this.dtQualityTipoDocBindingSource.DataSource = this.ds_Quality_new;
+            this.dtQualityTipoDocBindingSource.CurrentChanged += new System.EventHandler(this.dtQualityTipoDocBindingSource_CurrentChanged);
+            // 
+            // cb_org
+            // 
+            this.cb_org.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cb_org.DataSource = this.dtQualityCompanyBindingSource;
+            this.cb_org.DisplayMember = "Qual_Des";
+            this.cb_org.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cb_org.FormattingEnabled = true;
+            this.cb_org.Location = new System.Drawing.Point(121, 51);
+            this.cb_org.Name = "cb_org";
+            this.cb_org.Size = new System.Drawing.Size(231, 23);
+            this.cb_org.TabIndex = 28;
+            // 
+            // dtQualityCompanyBindingSource
+            // 
+            this.dtQualityCompanyBindingSource.DataMember = "dt_Quality_Company";
+            this.dtQualityCompanyBindingSource.DataSource = this.ds_Quality_new;
+            this.dtQualityCompanyBindingSource.CurrentChanged += new System.EventHandler(this.dtQualityCompanyBindingSource_CurrentChanged);
+            // 
+            // cb_projprodarea
+            // 
+            this.cb_projprodarea.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cb_projprodarea.DataSource = this.dtQualityProjProdAreaBindingSource;
+            this.cb_projprodarea.DisplayMember = "Qual_Des";
+            this.cb_projprodarea.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cb_projprodarea.FormattingEnabled = true;
+            this.cb_projprodarea.Location = new System.Drawing.Point(121, 27);
+            this.cb_projprodarea.Name = "cb_projprodarea";
+            this.cb_projprodarea.Size = new System.Drawing.Size(231, 23);
+            this.cb_projprodarea.TabIndex = 27;
+            this.cb_projprodarea.SelectedIndexChanged += new System.EventHandler(this.cb_projprodarea_SelectedIndexChanged);
+            // 
+            // dtQualityProjProdAreaBindingSource
+            // 
+            this.dtQualityProjProdAreaBindingSource.DataMember = "dt_Quality_ProjProdArea";
+            this.dtQualityProjProdAreaBindingSource.DataSource = this.ds_Quality_new;
+            this.dtQualityProjProdAreaBindingSource.CurrentChanged += new System.EventHandler(this.dtQualityProjProdAreaBindingSource_CurrentChanged);
+            // 
+            // cb_User
+            // 
+            this.cb_User.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cb_User.DataSource = this.usersBindingSource;
+            this.cb_User.DisplayMember = "UTENTE";
+            this.cb_User.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_User.FormattingEnabled = true;
+            this.cb_User.Location = new System.Drawing.Point(121, 3);
+            this.cb_User.Name = "cb_User";
+            this.cb_User.Size = new System.Drawing.Size(231, 23);
+            this.cb_User.TabIndex = 26;
+            // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "Users";
+            this.usersBindingSource.DataSource = this.ds_Quality_new;
+            this.usersBindingSource.CurrentChanged += new System.EventHandler(this.usersBindingSource_CurrentChanged);
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel2.Location = new System.Drawing.Point(3, 2);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(54, 19);
+            this.metroLabel2.Style = MetroFramework.MetroColorStyle.Red;
+            this.metroLabel2.TabIndex = 5;
+            this.metroLabel2.Text = "Utente:";
+            this.metroLabel2.UseStyleColors = true;
+            // 
+            // lab_class
+            // 
+            this.lab_class.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lab_class.AutoSize = true;
+            this.lab_class.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dtQualityClassificationBindingSource, "Qual_Codice", true));
+            this.lab_class.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lab_class.Location = new System.Drawing.Point(387, 98);
+            this.lab_class.Name = "lab_class";
+            this.lab_class.Size = new System.Drawing.Size(54, 19);
+            this.lab_class.Style = MetroFramework.MetroColorStyle.Red;
+            this.lab_class.TabIndex = 24;
+            this.lab_class.Text = "Utente:";
+            this.lab_class.UseStyleColors = true;
+            // 
+            // lab_type
+            // 
+            this.lab_type.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lab_type.AutoSize = true;
+            this.lab_type.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dtQualityTipoDocBindingSource, "Qual_Codice", true));
+            this.lab_type.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lab_type.Location = new System.Drawing.Point(387, 74);
+            this.lab_type.Name = "lab_type";
+            this.lab_type.Size = new System.Drawing.Size(54, 19);
+            this.lab_type.Style = MetroFramework.MetroColorStyle.Red;
+            this.lab_type.TabIndex = 23;
+            this.lab_type.Text = "Utente:";
+            this.lab_type.UseStyleColors = true;
+            // 
+            // lab_org
+            // 
+            this.lab_org.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lab_org.AutoSize = true;
+            this.lab_org.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dtQualityCompanyBindingSource, "Qual_Codice", true));
+            this.lab_org.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lab_org.Location = new System.Drawing.Point(387, 50);
+            this.lab_org.Name = "lab_org";
+            this.lab_org.Size = new System.Drawing.Size(54, 19);
+            this.lab_org.Style = MetroFramework.MetroColorStyle.Red;
+            this.lab_org.TabIndex = 22;
+            this.lab_org.Text = "Utente:";
+            this.lab_org.UseStyleColors = true;
+            // 
+            // lab_projprodarea
+            // 
+            this.lab_projprodarea.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lab_projprodarea.AutoSize = true;
+            this.lab_projprodarea.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dtQualityProjProdAreaBindingSource, "Qual_Codice", true));
+            this.lab_projprodarea.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lab_projprodarea.Location = new System.Drawing.Point(387, 26);
+            this.lab_projprodarea.Name = "lab_projprodarea";
+            this.lab_projprodarea.Size = new System.Drawing.Size(54, 19);
+            this.lab_projprodarea.Style = MetroFramework.MetroColorStyle.Red;
+            this.lab_projprodarea.TabIndex = 21;
+            this.lab_projprodarea.Text = "Utente:";
+            this.lab_projprodarea.UseStyleColors = true;
+            // 
+            // lab_MyIp
+            // 
+            this.lab_MyIp.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lab_MyIp.AutoSize = true;
+            this.lab_MyIp.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lab_MyIp.Location = new System.Drawing.Point(387, 2);
+            this.lab_MyIp.Name = "lab_MyIp";
+            this.lab_MyIp.Size = new System.Drawing.Size(54, 19);
+            this.lab_MyIp.Style = MetroFramework.MetroColorStyle.Red;
+            this.lab_MyIp.TabIndex = 20;
+            this.lab_MyIp.Text = "Utente:";
+            this.lab_MyIp.UseStyleColors = true;
+            this.lab_MyIp.Visible = false;
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel5.Location = new System.Drawing.Point(3, 98);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(94, 19);
+            this.metroLabel5.Style = MetroFramework.MetroColorStyle.Red;
+            this.metroLabel5.TabIndex = 19;
+            this.metroLabel5.Text = "Classification :";
+            this.metroLabel5.UseStyleColors = true;
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel4.Location = new System.Drawing.Point(3, 74);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(112, 19);
+            this.metroLabel4.Style = MetroFramework.MetroColorStyle.Red;
+            this.metroLabel4.TabIndex = 8;
+            this.metroLabel4.Text = "Type of document :";
+            this.metroLabel4.UseStyleColors = true;
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel3.Location = new System.Drawing.Point(3, 50);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(95, 19);
+            this.metroLabel3.Style = MetroFramework.MetroColorStyle.Red;
+            this.metroLabel3.TabIndex = 7;
+            this.metroLabel3.Text = "Organization :";
+            this.metroLabel3.UseStyleColors = true;
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel1.Location = new System.Drawing.Point(3, 26);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(112, 19);
+            this.metroLabel1.Style = MetroFramework.MetroColorStyle.Red;
+            this.metroLabel1.TabIndex = 6;
+            this.metroLabel1.Text = "Project / Product / Area :";
+            this.metroLabel1.UseStyleColors = true;
+            // 
+            // tb_desClass
+            // 
+            this.panel_Sigle.SetColumnSpan(this.tb_desClass, 2);
+            // 
+            // 
+            // 
+            this.tb_desClass.CustomButton.Image = null;
+            this.tb_desClass.CustomButton.Location = new System.Drawing.Point(230, 1);
+            this.tb_desClass.CustomButton.Name = "";
+            this.tb_desClass.CustomButton.Size = new System.Drawing.Size(119, 119);
+            this.tb_desClass.CustomButton.Style = MetroFramework.MetroColorStyle.Red;
+            this.tb_desClass.CustomButton.TabIndex = 1;
+            this.tb_desClass.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.tb_desClass.CustomButton.UseSelectable = true;
+            this.tb_desClass.CustomButton.Visible = false;
+            this.tb_desClass.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dtQualityClassificationBindingSource, "Qual_Note", true));
+            this.tb_desClass.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tb_desClass.Enabled = false;
+            this.tb_desClass.Lines = new string[] {
+        "metroTextBox1"};
+            this.tb_desClass.Location = new System.Drawing.Point(121, 123);
+            this.tb_desClass.MaxLength = 32767;
+            this.tb_desClass.Multiline = true;
+            this.tb_desClass.Name = "tb_desClass";
+            this.tb_desClass.PasswordChar = '\0';
+            this.tb_desClass.ReadOnly = true;
+            this.tb_desClass.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tb_desClass.SelectedText = "";
+            this.tb_desClass.SelectionLength = 0;
+            this.tb_desClass.SelectionStart = 0;
+            this.tb_desClass.ShortcutsEnabled = true;
+            this.tb_desClass.Size = new System.Drawing.Size(350, 121);
+            this.tb_desClass.TabIndex = 25;
+            this.tb_desClass.Text = "metroTextBox1";
+            this.tb_desClass.UseSelectable = true;
+            this.tb_desClass.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.tb_desClass.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // panel_Valori
+            // 
+            this.panel_Valori.ColumnCount = 4;
+            this.layout_Schede.SetColumnSpan(this.panel_Valori, 4);
+            this.panel_Valori.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.panel_Valori.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.panel_Valori.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.panel_Valori.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.panel_Valori.Controls.Add(this.tb_vers, 1, 4);
+            this.panel_Valori.Controls.Add(this.lab_vers, 0, 4);
+            this.panel_Valori.Controls.Add(this.lab_folder, 0, 3);
+            this.panel_Valori.Controls.Add(this.tb_rev, 3, 4);
+            this.panel_Valori.Controls.Add(this.lab_rev, 2, 4);
+            this.panel_Valori.Controls.Add(this.tb_folder, 1, 3);
+            this.panel_Valori.Controls.Add(this.lab_des, 0, 2);
+            this.panel_Valori.Controls.Add(this.label_codedit, 0, 1);
+            this.panel_Valori.Controls.Add(this.tb_Des, 1, 2);
+            this.panel_Valori.Controls.Add(this.label_codview, 0, 0);
+            this.panel_Valori.Controls.Add(this.lab_Codice_View, 1, 0);
+            this.panel_Valori.Controls.Add(this.lab_Codice_Edit, 1, 1);
+            this.panel_Valori.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_Valori.Location = new System.Drawing.Point(483, 286);
+            this.panel_Valori.Name = "panel_Valori";
+            this.panel_Valori.RowCount = 5;
+            this.layout_Schede.SetRowSpan(this.panel_Valori, 6);
+            this.panel_Valori.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.panel_Valori.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.panel_Valori.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.panel_Valori.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.panel_Valori.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.panel_Valori.Size = new System.Drawing.Size(474, 136);
+            this.panel_Valori.TabIndex = 50;
+            // 
+            // tb_vers
+            // 
+            this.tb_vers.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            // 
+            // 
+            // 
+            this.tb_vers.CustomButton.Image = null;
+            this.tb_vers.CustomButton.Location = new System.Drawing.Point(92, 2);
+            this.tb_vers.CustomButton.Name = "";
+            this.tb_vers.CustomButton.Size = new System.Drawing.Size(17, 17);
+            this.tb_vers.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.tb_vers.CustomButton.TabIndex = 1;
+            this.tb_vers.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.tb_vers.CustomButton.UseSelectable = true;
+            this.tb_vers.CustomButton.Visible = false;
+            this.tb_vers.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sFQualityViewNewBindingSource, "Qual_Ver", true));
+            this.tb_vers.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.tb_vers.Lines = new string[] {
+        "tb_vers"};
+            this.tb_vers.Location = new System.Drawing.Point(121, 111);
+            this.tb_vers.MaxLength = 32767;
+            this.tb_vers.Name = "tb_vers";
+            this.tb_vers.PasswordChar = '\0';
+            this.tb_vers.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tb_vers.SelectedText = "";
+            this.tb_vers.SelectionLength = 0;
+            this.tb_vers.SelectionStart = 0;
+            this.tb_vers.ShortcutsEnabled = true;
+            this.tb_vers.Size = new System.Drawing.Size(112, 22);
+            this.tb_vers.Style = MetroFramework.MetroColorStyle.Red;
+            this.tb_vers.TabIndex = 44;
+            this.tb_vers.Text = "tb_vers";
+            this.tb_vers.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_vers.UseSelectable = true;
+            this.tb_vers.UseStyleColors = true;
+            this.tb_vers.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.tb_vers.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tb_vers.Leave += new System.EventHandler(this.tb_vers_Leave);
+            // 
+            // lab_vers
+            // 
+            this.lab_vers.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lab_vers.AutoSize = true;
+            this.lab_vers.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lab_vers.Location = new System.Drawing.Point(3, 112);
+            this.lab_vers.Name = "lab_vers";
+            this.lab_vers.Size = new System.Drawing.Size(68, 19);
+            this.lab_vers.Style = MetroFramework.MetroColorStyle.Red;
+            this.lab_vers.TabIndex = 38;
+            this.lab_vers.Text = "Versione :";
+            this.lab_vers.UseStyleColors = true;
+            // 
+            // lab_folder
+            // 
+            this.lab_folder.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lab_folder.AutoSize = true;
+            this.lab_folder.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lab_folder.Location = new System.Drawing.Point(3, 85);
+            this.lab_folder.Name = "lab_folder";
+            this.lab_folder.Size = new System.Drawing.Size(112, 19);
+            this.lab_folder.Style = MetroFramework.MetroColorStyle.Red;
+            this.lab_folder.TabIndex = 37;
+            this.lab_folder.Text = "Cartella di riferimento :";
+            this.lab_folder.UseStyleColors = true;
             // 
             // tb_rev
             // 
@@ -1031,19 +923,19 @@
             // 
             // 
             this.tb_rev.CustomButton.Image = null;
-            this.tb_rev.CustomButton.Location = new System.Drawing.Point(98, 1);
+            this.tb_rev.CustomButton.Location = new System.Drawing.Point(94, 2);
             this.tb_rev.CustomButton.Name = "";
-            this.tb_rev.CustomButton.Size = new System.Drawing.Size(15, 15);
+            this.tb_rev.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.tb_rev.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.tb_rev.CustomButton.TabIndex = 1;
             this.tb_rev.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.tb_rev.CustomButton.UseSelectable = true;
             this.tb_rev.CustomButton.Visible = false;
-            this.tb_rev.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.qualityBindingSource, "Qual_Rev", true));
+            this.tb_rev.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sFQualityViewNewBindingSource, "Qual_Rev", true));
             this.tb_rev.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.tb_rev.Lines = new string[] {
         "tb_rev"};
-            this.tb_rev.Location = new System.Drawing.Point(483, 378);
+            this.tb_rev.Location = new System.Drawing.Point(357, 111);
             this.tb_rev.MaxLength = 32767;
             this.tb_rev.Name = "tb_rev";
             this.tb_rev.PasswordChar = '\0';
@@ -1052,7 +944,7 @@
             this.tb_rev.SelectionLength = 0;
             this.tb_rev.SelectionStart = 0;
             this.tb_rev.ShortcutsEnabled = true;
-            this.tb_rev.Size = new System.Drawing.Size(114, 17);
+            this.tb_rev.Size = new System.Drawing.Size(114, 22);
             this.tb_rev.Style = MetroFramework.MetroColorStyle.Red;
             this.tb_rev.TabIndex = 45;
             this.tb_rev.Text = "tb_rev";
@@ -1062,6 +954,169 @@
             this.tb_rev.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tb_rev.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.tb_rev.Leave += new System.EventHandler(this.tb_rev_Leave);
+            // 
+            // lab_rev
+            // 
+            this.lab_rev.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lab_rev.AutoSize = true;
+            this.lab_rev.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lab_rev.Location = new System.Drawing.Point(239, 112);
+            this.lab_rev.Name = "lab_rev";
+            this.lab_rev.Size = new System.Drawing.Size(73, 19);
+            this.lab_rev.Style = MetroFramework.MetroColorStyle.Red;
+            this.lab_rev.TabIndex = 39;
+            this.lab_rev.Text = "Revisione :";
+            this.lab_rev.UseStyleColors = true;
+            // 
+            // tb_folder
+            // 
+            this.panel_Valori.SetColumnSpan(this.tb_folder, 3);
+            // 
+            // 
+            // 
+            this.tb_folder.CustomButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tb_folder.CustomButton.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.tb_folder.CustomButton.Location = new System.Drawing.Point(330, 1);
+            this.tb_folder.CustomButton.Name = "";
+            this.tb_folder.CustomButton.Size = new System.Drawing.Size(19, 19);
+            this.tb_folder.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.tb_folder.CustomButton.TabIndex = 1;
+            this.tb_folder.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.tb_folder.CustomButton.UseSelectable = true;
+            this.tb_folder.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sFQualityViewNewBindingSource, "Qual_Path", true));
+            this.tb_folder.DisplayIcon = true;
+            this.tb_folder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tb_folder.Lines = new string[] {
+        "metroTextBox2"};
+            this.tb_folder.Location = new System.Drawing.Point(121, 84);
+            this.tb_folder.MaxLength = 32767;
+            this.tb_folder.Name = "tb_folder";
+            this.tb_folder.PasswordChar = '\0';
+            this.tb_folder.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tb_folder.SelectedText = "";
+            this.tb_folder.SelectionLength = 0;
+            this.tb_folder.SelectionStart = 0;
+            this.tb_folder.ShortcutsEnabled = true;
+            this.tb_folder.ShowButton = true;
+            this.tb_folder.Size = new System.Drawing.Size(350, 21);
+            this.tb_folder.Style = MetroFramework.MetroColorStyle.Red;
+            this.tb_folder.TabIndex = 43;
+            this.tb_folder.Text = "metroTextBox2";
+            this.tb_folder.UseSelectable = true;
+            this.tb_folder.UseStyleColors = true;
+            this.tb_folder.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.tb_folder.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tb_folder.ButtonClick += new MetroFramework.Controls.MetroTextBox.ButClick(this.tb_folder_ButtonClick);
+            // 
+            // lab_des
+            // 
+            this.lab_des.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lab_des.AutoSize = true;
+            this.lab_des.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lab_des.Location = new System.Drawing.Point(3, 58);
+            this.lab_des.Name = "lab_des";
+            this.lab_des.Size = new System.Drawing.Size(85, 19);
+            this.lab_des.Style = MetroFramework.MetroColorStyle.Red;
+            this.lab_des.TabIndex = 36;
+            this.lab_des.Text = "Descrizione :";
+            this.lab_des.UseStyleColors = true;
+            // 
+            // label_codedit
+            // 
+            this.label_codedit.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label_codedit.AutoSize = true;
+            this.label_codedit.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.label_codedit.Location = new System.Drawing.Point(3, 31);
+            this.label_codedit.Name = "label_codedit";
+            this.label_codedit.Size = new System.Drawing.Size(105, 19);
+            this.label_codedit.Style = MetroFramework.MetroColorStyle.Red;
+            this.label_codedit.TabIndex = 35;
+            this.label_codedit.Text = "Codice Qualità :";
+            this.label_codedit.UseStyleColors = true;
+            // 
+            // tb_Des
+            // 
+            this.panel_Valori.SetColumnSpan(this.tb_Des, 3);
+            // 
+            // 
+            // 
+            this.tb_Des.CustomButton.Image = null;
+            this.tb_Des.CustomButton.Location = new System.Drawing.Point(330, 1);
+            this.tb_Des.CustomButton.Name = "";
+            this.tb_Des.CustomButton.Size = new System.Drawing.Size(19, 19);
+            this.tb_Des.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.tb_Des.CustomButton.TabIndex = 1;
+            this.tb_Des.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.tb_Des.CustomButton.UseSelectable = true;
+            this.tb_Des.CustomButton.Visible = false;
+            this.tb_Des.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sFQualityViewNewBindingSource, "Qual_Des", true));
+            this.tb_Des.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tb_Des.Lines = new string[] {
+        "tb_Des"};
+            this.tb_Des.Location = new System.Drawing.Point(121, 57);
+            this.tb_Des.MaxLength = 32767;
+            this.tb_Des.Name = "tb_Des";
+            this.tb_Des.PasswordChar = '\0';
+            this.tb_Des.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tb_Des.SelectedText = "";
+            this.tb_Des.SelectionLength = 0;
+            this.tb_Des.SelectionStart = 0;
+            this.tb_Des.ShortcutsEnabled = true;
+            this.tb_Des.Size = new System.Drawing.Size(350, 21);
+            this.tb_Des.Style = MetroFramework.MetroColorStyle.Red;
+            this.tb_Des.TabIndex = 42;
+            this.tb_Des.Text = "tb_Des";
+            this.tb_Des.UseSelectable = true;
+            this.tb_Des.UseStyleColors = true;
+            this.tb_Des.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.tb_Des.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // label_codview
+            // 
+            this.label_codview.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label_codview.AutoSize = true;
+            this.label_codview.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.label_codview.Location = new System.Drawing.Point(3, 4);
+            this.label_codview.Name = "label_codview";
+            this.label_codview.Size = new System.Drawing.Size(105, 19);
+            this.label_codview.Style = MetroFramework.MetroColorStyle.Red;
+            this.label_codview.TabIndex = 34;
+            this.label_codview.Text = "Codice Qualità :";
+            this.label_codview.UseStyleColors = true;
+            // 
+            // lab_Codice_View
+            // 
+            this.lab_Codice_View.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lab_Codice_View.AutoSize = true;
+            this.lab_Codice_View.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sFQualityViewNewBindingSource, "codiceQual", true));
+            this.lab_Codice_View.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lab_Codice_View.Location = new System.Drawing.Point(121, 4);
+            this.lab_Codice_View.Name = "lab_Codice_View";
+            this.lab_Codice_View.Size = new System.Drawing.Size(112, 19);
+            this.lab_Codice_View.Style = MetroFramework.MetroColorStyle.Red;
+            this.lab_Codice_View.TabIndex = 40;
+            this.lab_Codice_View.Text = "Codice Qualità :";
+            this.lab_Codice_View.UseStyleColors = true;
+            // 
+            // lab_Codice_Edit
+            // 
+            this.lab_Codice_Edit.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lab_Codice_Edit.AutoSize = true;
+            this.lab_Codice_Edit.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lab_Codice_Edit.Location = new System.Drawing.Point(121, 31);
+            this.lab_Codice_Edit.Name = "lab_Codice_Edit";
+            this.lab_Codice_Edit.Size = new System.Drawing.Size(112, 19);
+            this.lab_Codice_Edit.Style = MetroFramework.MetroColorStyle.Red;
+            this.lab_Codice_Edit.TabIndex = 41;
+            this.lab_Codice_Edit.Text = "Codice Qualità :";
+            this.lab_Codice_Edit.UseStyleColors = true;
+            // 
+            // qualityBindingSource
+            // 
+            this.qualityBindingSource.DataMember = "Quality";
+            this.qualityBindingSource.DataSource = this.ds_Quality_new;
+            this.qualityBindingSource.Sort = "Qual_ProjProdArea asc, Qual_Org asc, Qual_Type asc";
+            this.qualityBindingSource.CurrentChanged += new System.EventHandler(this.qualityBindingSource_CurrentChanged);
             // 
             // treeListBand1
             // 
@@ -1157,17 +1212,20 @@
             this.pan_Menu_exit.PerformLayout();
             this.panel_fattibilita.ResumeLayout(false);
             this.layout_Schede.ResumeLayout(false);
-            this.layout_Schede.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtQualityClassificationBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ds_Quality_new)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtQualityProjProdAreaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtQualityCompanyBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtQualityTipoDocBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qualityBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_Quality)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sFQualityViewNewBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ds_Quality_new)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MainGridView)).EndInit();
+            this.panel_Sigle.ResumeLayout(false);
+            this.panel_Sigle.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtQualityClassificationBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtQualityTipoDocBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtQualityCompanyBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtQualityProjProdAreaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            this.panel_Valori.ResumeLayout(false);
+            this.panel_Valori.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.qualityBindingSource)).EndInit();
             this.cntxt_CopyToClipboard.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtQualityEditRecBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -1209,7 +1267,6 @@
         private MetroFramework.Controls.MetroLabel lab_org;
         private MetroFramework.Controls.MetroLabel lab_type;
         private MetroFramework.Controls.MetroLabel lab_class;
-        private MetroFramework.Controls.MetroTextBox tb_desClass;
         private System.Windows.Forms.ComboBox cb_User;
         private System.Windows.Forms.ComboBox cb_projprodarea;
         private System.Windows.Forms.ComboBox cb_org;
@@ -1217,10 +1274,10 @@
         private System.Windows.Forms.ComboBox cb_class;
         private MetroFramework.Controls.MetroLabel label_codview;
         private MetroFramework.Controls.MetroLabel label_codedit;
-        private MetroFramework.Controls.MetroLabel metroLabel10;
-        private MetroFramework.Controls.MetroLabel metroLabel12;
-        private MetroFramework.Controls.MetroLabel metroLabel13;
-        private MetroFramework.Controls.MetroLabel metroLabel14;
+        private MetroFramework.Controls.MetroLabel lab_des;
+        private MetroFramework.Controls.MetroLabel lab_folder;
+        private MetroFramework.Controls.MetroLabel lab_vers;
+        private MetroFramework.Controls.MetroLabel lab_rev;
         private MetroFramework.Controls.MetroLabel lab_Codice_View;
         private MetroFramework.Controls.MetroLabel lab_Codice_Edit;
         private MetroFramework.Controls.MetroTextBox tb_Des;
@@ -1228,7 +1285,7 @@
         private MetroFramework.Controls.MetroTextBox tb_vers;
         private MetroFramework.Controls.MetroTextBox tb_rev;
         private DevExpress.XtraGrid.GridControl gv_Quality;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Views.Grid.GridView MainGridView;
         private ds_Quality_new ds_Quality_new;
         private System.Windows.Forms.BindingSource qualityBindingSource;
         private ds_Quality_newTableAdapters.QualityTableAdapter qualityTableAdapter;
@@ -1259,5 +1316,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn colcodiceQual;
         private DevExpress.XtraGrid.Columns.GridColumn colQual_Des;
         private DevExpress.XtraGrid.Columns.GridColumn colQual_Rev_Obsolete;
+        private System.Windows.Forms.TableLayoutPanel panel_Sigle;
+        private MetroFramework.Controls.MetroTextBox tb_desClass;
+        private System.Windows.Forms.TableLayoutPanel panel_Valori;
     }
 }
