@@ -474,8 +474,6 @@
             // 
             this.colQual_Rev_Obsolete.FieldName = "Qual_Rev_Obsolete";
             this.colQual_Rev_Obsolete.Name = "colQual_Rev_Obsolete";
-            this.colQual_Rev_Obsolete.Visible = true;
-            this.colQual_Rev_Obsolete.VisibleIndex = 2;
             this.colQual_Rev_Obsolete.Width = 158;
             // 
             // but_view_obsolete

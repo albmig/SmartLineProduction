@@ -77,6 +77,7 @@
             this.analisiCostiDelVendutoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.qualitàToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.classificazioneDocumentiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newVersionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.tracciaiblitàDeiNumeriDiSerieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
@@ -107,7 +108,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.miniToolStrip = new System.Windows.Forms.MenuStrip();
             this.Brother_timer = new System.Windows.Forms.Timer(this.components);
-            this.newVersionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.layout_Menu.SuspendLayout();
             this.layout_orizz_menu.SuspendLayout();
             this.MainMenuStrip.SuspendLayout();
@@ -541,21 +541,28 @@
             // classificazioneDocumentiToolStripMenuItem
             // 
             this.classificazioneDocumentiToolStripMenuItem.Name = "classificazioneDocumentiToolStripMenuItem";
-            this.classificazioneDocumentiToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
+            this.classificazioneDocumentiToolStripMenuItem.Size = new System.Drawing.Size(289, 22);
             this.classificazioneDocumentiToolStripMenuItem.Text = "Classificazione Documenti";
             this.classificazioneDocumentiToolStripMenuItem.Click += new System.EventHandler(this.classificazioneDocumentiToolStripMenuItem_Click);
+            // 
+            // newVersionToolStripMenuItem
+            // 
+            this.newVersionToolStripMenuItem.Name = "newVersionToolStripMenuItem";
+            this.newVersionToolStripMenuItem.Size = new System.Drawing.Size(289, 22);
+            this.newVersionToolStripMenuItem.Text = "Classificazione Documenti - New Version";
+            this.newVersionToolStripMenuItem.Click += new System.EventHandler(this.newVersionToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(236, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(286, 6);
             this.toolStripSeparator3.Visible = false;
             // 
             // tracciaiblitàDeiNumeriDiSerieToolStripMenuItem
             // 
             this.tracciaiblitàDeiNumeriDiSerieToolStripMenuItem.Enabled = false;
             this.tracciaiblitàDeiNumeriDiSerieToolStripMenuItem.Name = "tracciaiblitàDeiNumeriDiSerieToolStripMenuItem";
-            this.tracciaiblitàDeiNumeriDiSerieToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
+            this.tracciaiblitàDeiNumeriDiSerieToolStripMenuItem.Size = new System.Drawing.Size(289, 22);
             this.tracciaiblitàDeiNumeriDiSerieToolStripMenuItem.Text = "Tracciabilità dei Numeri di Serie";
             this.tracciaiblitàDeiNumeriDiSerieToolStripMenuItem.Visible = false;
             this.tracciaiblitàDeiNumeriDiSerieToolStripMenuItem.Click += new System.EventHandler(this.tracciaiblitàDeiNumeriDiSerieToolStripMenuItem_Click);
@@ -563,13 +570,13 @@
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(236, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(286, 6);
             this.toolStripSeparator5.Visible = false;
             // 
             // compilazioneNCRToolStripMenuItem
             // 
             this.compilazioneNCRToolStripMenuItem.Name = "compilazioneNCRToolStripMenuItem";
-            this.compilazioneNCRToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
+            this.compilazioneNCRToolStripMenuItem.Size = new System.Drawing.Size(289, 22);
             this.compilazioneNCRToolStripMenuItem.Text = "Compilazione NCR";
             this.compilazioneNCRToolStripMenuItem.Visible = false;
             // 
@@ -963,13 +970,6 @@
             this.Brother_timer.Enabled = true;
             this.Brother_timer.Interval = 1000;
             this.Brother_timer.Tick += new System.EventHandler(this.Brother_timer_Tick);
-            // 
-            // newVersionToolStripMenuItem
-            // 
-            this.newVersionToolStripMenuItem.Name = "newVersionToolStripMenuItem";
-            this.newVersionToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
-            this.newVersionToolStripMenuItem.Text = "New Version";
-            this.newVersionToolStripMenuItem.Click += new System.EventHandler(this.newVersionToolStripMenuItem_Click);
             // 
             // MainMenu
             // 

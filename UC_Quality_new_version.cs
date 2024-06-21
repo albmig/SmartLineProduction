@@ -87,11 +87,14 @@ namespace SmartLineProduction
             string codrev = "";
 
             ultimoProg = 0;
-            if ((sel_ProjProdArea != null) && (sel_Org != null) && (sel_Type != null))
+            if ((sel_ProjProdArea != null) && (sel_ProjProdArea != NoValue)
+               && (sel_Org != null) && (sel_Org != NoValue)
+               && (sel_Type != null) && (sel_Type != NoValue))
             {
-                if ((sel_ProjProdArea != NoValue) && (sel_Org != NoValue) && (sel_Type != NoValue))
+                var checkNull = this.qualityTableAdapter.FindMaxProg(sel_ProjProdArea, sel_Org, sel_Type);
+                if (checkNull != null)
                 {
-                    ultimoProg = (int)this.qualityTableAdapter.FindMaxProg(sel_ProjProdArea, sel_Org, sel_Type);
+                    ultimoProg = Convert.ToInt32(checkNull);
                 }
             }
 
@@ -231,6 +234,7 @@ namespace SmartLineProduction
                     but_view_obsolete.Visible = false;
                     but_hide_obsolete.Visible = false;
 
+                    ShowPanelDati();
                     break;
                 case "R":
                     //dtQualityBindingSource.SuspendBinding();
@@ -485,6 +489,28 @@ namespace SmartLineProduction
             tb_rev.Visible = true;
 
             panel_Sigle.Visible = true;
+
+            switch (displayform)
+            {
+                case "V":
+                    label_codview.Visible = true;
+                    label_codedit.Visible = false;
+                    lab_Codice_View.Visible = true;
+                    lab_Codice_Edit.Visible = false;
+                    break;
+                case "I":
+                    label_codview.Visible = false;
+                    label_codedit.Visible = true;
+                    lab_Codice_View.Visible = false;
+                    lab_Codice_Edit.Visible = true;
+                    break;
+                case "R":
+                    label_codview.Visible = true;
+                    label_codedit.Visible = false;
+                    lab_Codice_View.Visible = true;
+                    lab_Codice_Edit.Visible = false;
+                    break;
+            }
         }
 
         ////////////////////////////////////////////////////////////////////////////////////
@@ -812,7 +838,7 @@ namespace SmartLineProduction
                 }
 
                 int rowHandle = MainGridView.FocusedRowHandle;
-                MainGridView.ExpandGroupRow(0,true);
+                MainGridView.ExpandGroupRow(0, true);
             }
 
         }
