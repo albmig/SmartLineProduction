@@ -1,2 +1,0 @@
-﻿Trova MAX di versione e revisione
-verificare righe da 692

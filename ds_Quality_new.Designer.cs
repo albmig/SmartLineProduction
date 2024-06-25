@@ -36,8 +36,6 @@ namespace SmartLineProduction {
         
         private dt_Quality_ClassificationDataTable tabledt_Quality_Classification;
         
-        private dt_Quality_EditRecDataTable tabledt_Quality_EditRec;
-        
         private SF_QualityViewNewDataTable tableSF_QualityViewNew;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
@@ -85,9 +83,6 @@ namespace SmartLineProduction {
                 }
                 if ((ds.Tables["dt_Quality_Classification"] != null)) {
                     base.Tables.Add(new dt_Quality_ClassificationDataTable(ds.Tables["dt_Quality_Classification"]));
-                }
-                if ((ds.Tables["dt_Quality_EditRec"] != null)) {
-                    base.Tables.Add(new dt_Quality_EditRecDataTable(ds.Tables["dt_Quality_EditRec"]));
                 }
                 if ((ds.Tables["SF_QualityViewNew"] != null)) {
                     base.Tables.Add(new SF_QualityViewNewDataTable(ds.Tables["SF_QualityViewNew"]));
@@ -167,16 +162,6 @@ namespace SmartLineProduction {
         public dt_Quality_ClassificationDataTable dt_Quality_Classification {
             get {
                 return this.tabledt_Quality_Classification;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public dt_Quality_EditRecDataTable dt_Quality_EditRec {
-            get {
-                return this.tabledt_Quality_EditRec;
             }
         }
         
@@ -275,9 +260,6 @@ namespace SmartLineProduction {
                 if ((ds.Tables["dt_Quality_Classification"] != null)) {
                     base.Tables.Add(new dt_Quality_ClassificationDataTable(ds.Tables["dt_Quality_Classification"]));
                 }
-                if ((ds.Tables["dt_Quality_EditRec"] != null)) {
-                    base.Tables.Add(new dt_Quality_EditRecDataTable(ds.Tables["dt_Quality_EditRec"]));
-                }
                 if ((ds.Tables["SF_QualityViewNew"] != null)) {
                     base.Tables.Add(new SF_QualityViewNewDataTable(ds.Tables["SF_QualityViewNew"]));
                 }
@@ -350,12 +332,6 @@ namespace SmartLineProduction {
                     this.tabledt_Quality_Classification.InitVars();
                 }
             }
-            this.tabledt_Quality_EditRec = ((dt_Quality_EditRecDataTable)(base.Tables["dt_Quality_EditRec"]));
-            if ((initTable == true)) {
-                if ((this.tabledt_Quality_EditRec != null)) {
-                    this.tabledt_Quality_EditRec.InitVars();
-                }
-            }
             this.tableSF_QualityViewNew = ((SF_QualityViewNewDataTable)(base.Tables["SF_QualityViewNew"]));
             if ((initTable == true)) {
                 if ((this.tableSF_QualityViewNew != null)) {
@@ -384,8 +360,6 @@ namespace SmartLineProduction {
             base.Tables.Add(this.tabledt_Quality_TipoDoc);
             this.tabledt_Quality_Classification = new dt_Quality_ClassificationDataTable();
             base.Tables.Add(this.tabledt_Quality_Classification);
-            this.tabledt_Quality_EditRec = new dt_Quality_EditRecDataTable();
-            base.Tables.Add(this.tabledt_Quality_EditRec);
             this.tableSF_QualityViewNew = new SF_QualityViewNewDataTable();
             base.Tables.Add(this.tableSF_QualityViewNew);
         }
@@ -423,12 +397,6 @@ namespace SmartLineProduction {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private bool ShouldSerializedt_Quality_Classification() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializedt_Quality_EditRec() {
             return false;
         }
         
@@ -510,9 +478,6 @@ namespace SmartLineProduction {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void dt_Quality_ClassificationRowChangeEventHandler(object sender, dt_Quality_ClassificationRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void dt_Quality_EditRecRowChangeEventHandler(object sender, dt_Quality_EditRecRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void SF_QualityViewNewRowChangeEventHandler(object sender, SF_QualityViewNewRowChangeEvent e);
@@ -2544,484 +2509,6 @@ namespace SmartLineProduction {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class dt_Quality_EditRecDataTable : global::System.Data.TypedTableBase<dt_Quality_EditRecRow> {
-            
-            private global::System.Data.DataColumn columnId;
-            
-            private global::System.Data.DataColumn columnQual_ProjProdArea;
-            
-            private global::System.Data.DataColumn columnQual_Org;
-            
-            private global::System.Data.DataColumn columnQual_Type;
-            
-            private global::System.Data.DataColumn columnQual_Class;
-            
-            private global::System.Data.DataColumn columnQual_Prog;
-            
-            private global::System.Data.DataColumn columnQual_Ver;
-            
-            private global::System.Data.DataColumn columnQual_Rev;
-            
-            private global::System.Data.DataColumn columnQual_Des;
-            
-            private global::System.Data.DataColumn columnQual_Path;
-            
-            private global::System.Data.DataColumn columnQual_Richiedente;
-            
-            private global::System.Data.DataColumn columnQual_DateRequest;
-            
-            private global::System.Data.DataColumn columnQual_IPRequest;
-            
-            private global::System.Data.DataColumn columnCodice_Quality;
-            
-            private global::System.Data.DataColumn columnQual_Rev_Obsolete;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public dt_Quality_EditRecDataTable() {
-                this.TableName = "dt_Quality_EditRec";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal dt_Quality_EditRecDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected dt_Quality_EditRecDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn IdColumn {
-                get {
-                    return this.columnId;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Qual_ProjProdAreaColumn {
-                get {
-                    return this.columnQual_ProjProdArea;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Qual_OrgColumn {
-                get {
-                    return this.columnQual_Org;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Qual_TypeColumn {
-                get {
-                    return this.columnQual_Type;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Qual_ClassColumn {
-                get {
-                    return this.columnQual_Class;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Qual_ProgColumn {
-                get {
-                    return this.columnQual_Prog;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Qual_VerColumn {
-                get {
-                    return this.columnQual_Ver;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Qual_RevColumn {
-                get {
-                    return this.columnQual_Rev;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Qual_DesColumn {
-                get {
-                    return this.columnQual_Des;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Qual_PathColumn {
-                get {
-                    return this.columnQual_Path;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Qual_RichiedenteColumn {
-                get {
-                    return this.columnQual_Richiedente;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Qual_DateRequestColumn {
-                get {
-                    return this.columnQual_DateRequest;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Qual_IPRequestColumn {
-                get {
-                    return this.columnQual_IPRequest;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Codice_QualityColumn {
-                get {
-                    return this.columnCodice_Quality;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Qual_Rev_ObsoleteColumn {
-                get {
-                    return this.columnQual_Rev_Obsolete;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public dt_Quality_EditRecRow this[int index] {
-                get {
-                    return ((dt_Quality_EditRecRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event dt_Quality_EditRecRowChangeEventHandler dt_Quality_EditRecRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event dt_Quality_EditRecRowChangeEventHandler dt_Quality_EditRecRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event dt_Quality_EditRecRowChangeEventHandler dt_Quality_EditRecRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event dt_Quality_EditRecRowChangeEventHandler dt_Quality_EditRecRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Adddt_Quality_EditRecRow(dt_Quality_EditRecRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public dt_Quality_EditRecRow Adddt_Quality_EditRecRow(string Qual_ProjProdArea, string Qual_Org, string Qual_Type, string Qual_Class, int Qual_Prog, string Qual_Ver, string Qual_Rev, string Qual_Des, string Qual_Path, string Qual_Richiedente, System.DateTime Qual_DateRequest, string Qual_IPRequest, string Codice_Quality, bool Qual_Rev_Obsolete) {
-                dt_Quality_EditRecRow rowdt_Quality_EditRecRow = ((dt_Quality_EditRecRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        null,
-                        Qual_ProjProdArea,
-                        Qual_Org,
-                        Qual_Type,
-                        Qual_Class,
-                        Qual_Prog,
-                        Qual_Ver,
-                        Qual_Rev,
-                        Qual_Des,
-                        Qual_Path,
-                        Qual_Richiedente,
-                        Qual_DateRequest,
-                        Qual_IPRequest,
-                        Codice_Quality,
-                        Qual_Rev_Obsolete};
-                rowdt_Quality_EditRecRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowdt_Quality_EditRecRow);
-                return rowdt_Quality_EditRecRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public dt_Quality_EditRecRow FindById(int Id) {
-                return ((dt_Quality_EditRecRow)(this.Rows.Find(new object[] {
-                            Id})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                dt_Quality_EditRecDataTable cln = ((dt_Quality_EditRecDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new dt_Quality_EditRecDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal void InitVars() {
-                this.columnId = base.Columns["Id"];
-                this.columnQual_ProjProdArea = base.Columns["Qual_ProjProdArea"];
-                this.columnQual_Org = base.Columns["Qual_Org"];
-                this.columnQual_Type = base.Columns["Qual_Type"];
-                this.columnQual_Class = base.Columns["Qual_Class"];
-                this.columnQual_Prog = base.Columns["Qual_Prog"];
-                this.columnQual_Ver = base.Columns["Qual_Ver"];
-                this.columnQual_Rev = base.Columns["Qual_Rev"];
-                this.columnQual_Des = base.Columns["Qual_Des"];
-                this.columnQual_Path = base.Columns["Qual_Path"];
-                this.columnQual_Richiedente = base.Columns["Qual_Richiedente"];
-                this.columnQual_DateRequest = base.Columns["Qual_DateRequest"];
-                this.columnQual_IPRequest = base.Columns["Qual_IPRequest"];
-                this.columnCodice_Quality = base.Columns["Codice_Quality"];
-                this.columnQual_Rev_Obsolete = base.Columns["Qual_Rev_Obsolete"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            private void InitClass() {
-                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnId);
-                this.columnQual_ProjProdArea = new global::System.Data.DataColumn("Qual_ProjProdArea", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnQual_ProjProdArea);
-                this.columnQual_Org = new global::System.Data.DataColumn("Qual_Org", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnQual_Org);
-                this.columnQual_Type = new global::System.Data.DataColumn("Qual_Type", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnQual_Type);
-                this.columnQual_Class = new global::System.Data.DataColumn("Qual_Class", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnQual_Class);
-                this.columnQual_Prog = new global::System.Data.DataColumn("Qual_Prog", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnQual_Prog);
-                this.columnQual_Ver = new global::System.Data.DataColumn("Qual_Ver", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnQual_Ver);
-                this.columnQual_Rev = new global::System.Data.DataColumn("Qual_Rev", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnQual_Rev);
-                this.columnQual_Des = new global::System.Data.DataColumn("Qual_Des", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnQual_Des);
-                this.columnQual_Path = new global::System.Data.DataColumn("Qual_Path", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnQual_Path);
-                this.columnQual_Richiedente = new global::System.Data.DataColumn("Qual_Richiedente", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnQual_Richiedente);
-                this.columnQual_DateRequest = new global::System.Data.DataColumn("Qual_DateRequest", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnQual_DateRequest);
-                this.columnQual_IPRequest = new global::System.Data.DataColumn("Qual_IPRequest", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnQual_IPRequest);
-                this.columnCodice_Quality = new global::System.Data.DataColumn("Codice_Quality", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCodice_Quality);
-                this.columnQual_Rev_Obsolete = new global::System.Data.DataColumn("Qual_Rev_Obsolete", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnQual_Rev_Obsolete);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnId}, true));
-                this.columnId.AutoIncrement = true;
-                this.columnId.AutoIncrementSeed = -1;
-                this.columnId.AutoIncrementStep = -1;
-                this.columnId.AllowDBNull = false;
-                this.columnId.ReadOnly = true;
-                this.columnId.Unique = true;
-                this.columnQual_ProjProdArea.AllowDBNull = false;
-                this.columnQual_ProjProdArea.MaxLength = 10;
-                this.columnQual_Org.AllowDBNull = false;
-                this.columnQual_Org.MaxLength = 3;
-                this.columnQual_Type.AllowDBNull = false;
-                this.columnQual_Type.MaxLength = 3;
-                this.columnQual_Class.AllowDBNull = false;
-                this.columnQual_Class.MaxLength = 1;
-                this.columnQual_Prog.AllowDBNull = false;
-                this.columnQual_Ver.AllowDBNull = false;
-                this.columnQual_Ver.MaxLength = 3;
-                this.columnQual_Rev.AllowDBNull = false;
-                this.columnQual_Rev.MaxLength = 3;
-                this.columnQual_Des.AllowDBNull = false;
-                this.columnQual_Des.MaxLength = 250;
-                this.columnQual_Path.MaxLength = 255;
-                this.columnQual_Richiedente.AllowDBNull = false;
-                this.columnQual_Richiedente.MaxLength = 50;
-                this.columnQual_IPRequest.MaxLength = 15;
-                this.columnQual_Rev_Obsolete.AllowDBNull = false;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public dt_Quality_EditRecRow Newdt_Quality_EditRecRow() {
-                return ((dt_Quality_EditRecRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new dt_Quality_EditRecRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(dt_Quality_EditRecRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.dt_Quality_EditRecRowChanged != null)) {
-                    this.dt_Quality_EditRecRowChanged(this, new dt_Quality_EditRecRowChangeEvent(((dt_Quality_EditRecRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.dt_Quality_EditRecRowChanging != null)) {
-                    this.dt_Quality_EditRecRowChanging(this, new dt_Quality_EditRecRowChangeEvent(((dt_Quality_EditRecRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.dt_Quality_EditRecRowDeleted != null)) {
-                    this.dt_Quality_EditRecRowDeleted(this, new dt_Quality_EditRecRowChangeEvent(((dt_Quality_EditRecRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.dt_Quality_EditRecRowDeleting != null)) {
-                    this.dt_Quality_EditRecRowDeleting(this, new dt_Quality_EditRecRowChangeEvent(((dt_Quality_EditRecRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Removedt_Quality_EditRecRow(dt_Quality_EditRecRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                ds_Quality_new ds = new ds_Quality_new();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "dt_Quality_EditRecDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class SF_QualityViewNewDataTable : global::System.Data.TypedTableBase<SF_QualityViewNewRow> {
             
             private global::System.Data.DataColumn columnDes_ProjProdArea;
@@ -3320,6 +2807,13 @@ namespace SmartLineProduction {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public SF_QualityViewNewRow FindById(int Id) {
+                return ((SF_QualityViewNewRow)(this.Rows.Find(new object[] {
+                            Id})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 SF_QualityViewNewDataTable cln = ((SF_QualityViewNewDataTable)(base.Clone()));
                 cln.InitVars();
@@ -3394,10 +2888,13 @@ namespace SmartLineProduction {
                 base.Columns.Add(this.columnQual_Rev_Obsolete);
                 this.columncodiceQual = new global::System.Data.DataColumn("codiceQual", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncodiceQual);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnId}, true));
                 this.columnDes_ProjProdArea.MaxLength = 255;
                 this.columnDes_Company.MaxLength = 255;
                 this.columnDes_TipoDoc.MaxLength = 255;
                 this.columnId.AllowDBNull = false;
+                this.columnId.Unique = true;
                 this.columnQual_ProjProdArea.AllowDBNull = false;
                 this.columnQual_ProjProdArea.MaxLength = 10;
                 this.columnQual_Org.AllowDBNull = false;
@@ -4454,257 +3951,6 @@ namespace SmartLineProduction {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class dt_Quality_EditRecRow : global::System.Data.DataRow {
-            
-            private dt_Quality_EditRecDataTable tabledt_Quality_EditRec;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal dt_Quality_EditRecRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tabledt_Quality_EditRec = ((dt_Quality_EditRecDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Id {
-                get {
-                    return ((int)(this[this.tabledt_Quality_EditRec.IdColumn]));
-                }
-                set {
-                    this[this.tabledt_Quality_EditRec.IdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Qual_ProjProdArea {
-                get {
-                    return ((string)(this[this.tabledt_Quality_EditRec.Qual_ProjProdAreaColumn]));
-                }
-                set {
-                    this[this.tabledt_Quality_EditRec.Qual_ProjProdAreaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Qual_Org {
-                get {
-                    return ((string)(this[this.tabledt_Quality_EditRec.Qual_OrgColumn]));
-                }
-                set {
-                    this[this.tabledt_Quality_EditRec.Qual_OrgColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Qual_Type {
-                get {
-                    return ((string)(this[this.tabledt_Quality_EditRec.Qual_TypeColumn]));
-                }
-                set {
-                    this[this.tabledt_Quality_EditRec.Qual_TypeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Qual_Class {
-                get {
-                    return ((string)(this[this.tabledt_Quality_EditRec.Qual_ClassColumn]));
-                }
-                set {
-                    this[this.tabledt_Quality_EditRec.Qual_ClassColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Qual_Prog {
-                get {
-                    return ((int)(this[this.tabledt_Quality_EditRec.Qual_ProgColumn]));
-                }
-                set {
-                    this[this.tabledt_Quality_EditRec.Qual_ProgColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Qual_Ver {
-                get {
-                    return ((string)(this[this.tabledt_Quality_EditRec.Qual_VerColumn]));
-                }
-                set {
-                    this[this.tabledt_Quality_EditRec.Qual_VerColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Qual_Rev {
-                get {
-                    return ((string)(this[this.tabledt_Quality_EditRec.Qual_RevColumn]));
-                }
-                set {
-                    this[this.tabledt_Quality_EditRec.Qual_RevColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Qual_Des {
-                get {
-                    return ((string)(this[this.tabledt_Quality_EditRec.Qual_DesColumn]));
-                }
-                set {
-                    this[this.tabledt_Quality_EditRec.Qual_DesColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Qual_Path {
-                get {
-                    try {
-                        return ((string)(this[this.tabledt_Quality_EditRec.Qual_PathColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Qual_Path\' nella tabella \'dt_Quality_EditRec\' è DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabledt_Quality_EditRec.Qual_PathColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Qual_Richiedente {
-                get {
-                    return ((string)(this[this.tabledt_Quality_EditRec.Qual_RichiedenteColumn]));
-                }
-                set {
-                    this[this.tabledt_Quality_EditRec.Qual_RichiedenteColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime Qual_DateRequest {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tabledt_Quality_EditRec.Qual_DateRequestColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Qual_DateRequest\' nella tabella \'dt_Quality_EditRec\' è D" +
-                                "BNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabledt_Quality_EditRec.Qual_DateRequestColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Qual_IPRequest {
-                get {
-                    try {
-                        return ((string)(this[this.tabledt_Quality_EditRec.Qual_IPRequestColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Qual_IPRequest\' nella tabella \'dt_Quality_EditRec\' è DBN" +
-                                "ull.", e);
-                    }
-                }
-                set {
-                    this[this.tabledt_Quality_EditRec.Qual_IPRequestColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Codice_Quality {
-                get {
-                    try {
-                        return ((string)(this[this.tabledt_Quality_EditRec.Codice_QualityColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Codice_Quality\' nella tabella \'dt_Quality_EditRec\' è DBN" +
-                                "ull.", e);
-                    }
-                }
-                set {
-                    this[this.tabledt_Quality_EditRec.Codice_QualityColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Qual_Rev_Obsolete {
-                get {
-                    return ((bool)(this[this.tabledt_Quality_EditRec.Qual_Rev_ObsoleteColumn]));
-                }
-                set {
-                    this[this.tabledt_Quality_EditRec.Qual_Rev_ObsoleteColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsQual_PathNull() {
-                return this.IsNull(this.tabledt_Quality_EditRec.Qual_PathColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetQual_PathNull() {
-                this[this.tabledt_Quality_EditRec.Qual_PathColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsQual_DateRequestNull() {
-                return this.IsNull(this.tabledt_Quality_EditRec.Qual_DateRequestColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetQual_DateRequestNull() {
-                this[this.tabledt_Quality_EditRec.Qual_DateRequestColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsQual_IPRequestNull() {
-                return this.IsNull(this.tabledt_Quality_EditRec.Qual_IPRequestColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetQual_IPRequestNull() {
-                this[this.tabledt_Quality_EditRec.Qual_IPRequestColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsCodice_QualityNull() {
-                return this.IsNull(this.tabledt_Quality_EditRec.Codice_QualityColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetCodice_QualityNull() {
-                this[this.tabledt_Quality_EditRec.Codice_QualityColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
         public partial class SF_QualityViewNewRow : global::System.Data.DataRow {
             
             private SF_QualityViewNewDataTable tableSF_QualityViewNew;
@@ -5247,40 +4493,6 @@ namespace SmartLineProduction {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class dt_Quality_EditRecRowChangeEvent : global::System.EventArgs {
-            
-            private dt_Quality_EditRecRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public dt_Quality_EditRecRowChangeEvent(dt_Quality_EditRecRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public dt_Quality_EditRecRow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public class SF_QualityViewNewRowChangeEvent : global::System.EventArgs {
             
             private SF_QualityViewNewRow eventRow;
@@ -5452,9 +4664,30 @@ namespace SmartLineProduction.ds_Quality_newTableAdapters {
             tableMapping.ColumnMappings.Add("Qual_Rev_Obsolete", "Qual_Rev_Obsolete");
             tableMapping.ColumnMappings.Add("codiceQual", "codiceQual");
             this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Quality] WHERE (([Id] = @Original_Id) AND ([Qual_ProjProdArea] = @Original_Qual_ProjProdArea) AND ([Qual_Org] = @Original_Qual_Org) AND ([Qual_Type] = @Original_Qual_Type) AND ([Qual_Class] = @Original_Qual_Class) AND ([Qual_Prog] = @Original_Qual_Prog) AND ([Qual_Ver] = @Original_Qual_Ver) AND ([Qual_Rev] = @Original_Qual_Rev) AND ([Qual_Des] = @Original_Qual_Des) AND ((@IsNull_Qual_Path = 1 AND [Qual_Path] IS NULL) OR ([Qual_Path] = @Original_Qual_Path)) AND ([Qual_Richiedente] = @Original_Qual_Richiedente) AND ((@IsNull_Qual_DateRequest = 1 AND [Qual_DateRequest] IS NULL) OR ([Qual_DateRequest] = @Original_Qual_DateRequest)) AND ((@IsNull_Qual_IPRequest = 1 AND [Qual_IPRequest] IS NULL) OR ([Qual_IPRequest] = @Original_Qual_IPRequest)) AND ([Qual_Rev_Obsolete] = @Original_Qual_Rev_Obsolete))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_ProjProdArea", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_ProjProdArea", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Org", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Org", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Type", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Type", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Class", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Class", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Prog", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Prog", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Ver", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Ver", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Rev", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Rev", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Des", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Des", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Qual_Path", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Path", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Path", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Path", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Richiedente", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Richiedente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Qual_DateRequest", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_DateRequest", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_DateRequest", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_DateRequest", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Qual_IPRequest", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_IPRequest", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_IPRequest", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_IPRequest", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Rev_Obsolete", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Rev_Obsolete", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Quality_test] ([Qual_ProjProdArea], [Qual_Org], [Qual_Type], [Qual_Class], [Qual_Prog], [Qual_Ver], [Qual_Rev], [Qual_Des], [Qual_Path], [Qual_Richiedente], [Qual_DateRequest], [Qual_IPRequest], [Qual_Rev_Obsolete]) VALUES (@Qual_ProjProdArea, @Qual_Org, @Qual_Type, @Qual_Class, @Qual_Prog, @Qual_Ver, @Qual_Rev, @Qual_Des, @Qual_Path, @Qual_Richiedente, @Qual_DateRequest, @Qual_IPRequest, @Qual_Rev_Obsolete)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Quality] ([Qual_ProjProdArea], [Qual_Org], [Qual_Type], [Qual_Class], [Qual_Prog], [Qual_Ver], [Qual_Rev], [Qual_Des], [Qual_Path], [Qual_Richiedente], [Qual_DateRequest], [Qual_IPRequest], [Qual_Rev_Obsolete]) VALUES (@Qual_ProjProdArea, @Qual_Org, @Qual_Type, @Qual_Class, @Qual_Prog, @Qual_Ver, @Qual_Rev, @Qual_Des, @Qual_Path, @Qual_Richiedente, @Qual_DateRequest, @Qual_IPRequest, @Qual_Rev_Obsolete)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_ProjProdArea", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_ProjProdArea", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Org", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Org", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5469,6 +4702,40 @@ namespace SmartLineProduction.ds_Quality_newTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_DateRequest", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_DateRequest", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_IPRequest", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_IPRequest", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Rev_Obsolete", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Rev_Obsolete", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Quality] SET [Qual_ProjProdArea] = @Qual_ProjProdArea, [Qual_Org] = @Qual_Org, [Qual_Type] = @Qual_Type, [Qual_Class] = @Qual_Class, [Qual_Prog] = @Qual_Prog, [Qual_Ver] = @Qual_Ver, [Qual_Rev] = @Qual_Rev, [Qual_Des] = @Qual_Des, [Qual_Path] = @Qual_Path, [Qual_Richiedente] = @Qual_Richiedente, [Qual_DateRequest] = @Qual_DateRequest, [Qual_IPRequest] = @Qual_IPRequest, [Qual_Rev_Obsolete] = @Qual_Rev_Obsolete WHERE (([Id] = @Original_Id) AND ([Qual_ProjProdArea] = @Original_Qual_ProjProdArea) AND ([Qual_Org] = @Original_Qual_Org) AND ([Qual_Type] = @Original_Qual_Type) AND ([Qual_Class] = @Original_Qual_Class) AND ([Qual_Prog] = @Original_Qual_Prog) AND ([Qual_Ver] = @Original_Qual_Ver) AND ([Qual_Rev] = @Original_Qual_Rev) AND ([Qual_Des] = @Original_Qual_Des) AND ((@IsNull_Qual_Path = 1 AND [Qual_Path] IS NULL) OR ([Qual_Path] = @Original_Qual_Path)) AND ([Qual_Richiedente] = @Original_Qual_Richiedente) AND ((@IsNull_Qual_DateRequest = 1 AND [Qual_DateRequest] IS NULL) OR ([Qual_DateRequest] = @Original_Qual_DateRequest)) AND ((@IsNull_Qual_IPRequest = 1 AND [Qual_IPRequest] IS NULL) OR ([Qual_IPRequest] = @Original_Qual_IPRequest)) AND ([Qual_Rev_Obsolete] = @Original_Qual_Rev_Obsolete))";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_ProjProdArea", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_ProjProdArea", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Org", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Org", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Type", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Class", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Class", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Prog", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Prog", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Ver", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Ver", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Rev", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Rev", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Des", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Des", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Path", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Path", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Richiedente", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Richiedente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_DateRequest", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_DateRequest", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_IPRequest", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_IPRequest", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Rev_Obsolete", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Rev_Obsolete", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_ProjProdArea", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_ProjProdArea", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Org", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Org", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Type", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Type", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Class", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Class", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Prog", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Prog", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Ver", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Ver", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Rev", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Rev", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Des", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Des", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Qual_Path", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Path", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Path", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Path", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Richiedente", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Richiedente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Qual_DateRequest", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_DateRequest", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_DateRequest", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_DateRequest", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Qual_IPRequest", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_IPRequest", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_IPRequest", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_IPRequest", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Rev_Obsolete", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Rev_Obsolete", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5481,28 +4748,45 @@ namespace SmartLineProduction.ds_Quality_newTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT        Id, Qual_ProjProdArea, Qual_Org, Qual_Type, Qual_Class, Qual_Prog, Qual_Ver, Qual_Rev, Qual_Des, Qual_Path, Qual_Richiedente, Qual_DateRequest, Qual_IPRequest, Qual_Rev_Obsolete, 
                          Qual_ProjProdArea + '-' + Qual_Org + '-' + Qual_Type + '-' + Qual_Class + '-' + FORMAT(Qual_Prog, '0000') + '-' + Qual_Ver + '.' + Qual_Rev AS codiceQual
-FROM            Quality_test";
+FROM            Quality";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"SELECT
-  MAX(Quality_test.Qual_Prog) AS MaxQualProg
-FROM dbo.Quality_test
-WHERE Quality_test.Qual_ProjProdArea = @Qual_ProjProdArea
-AND Quality_test.Qual_Org = @Qual_Org
-AND Quality_test.Qual_Type = @Qual_Type
-AND Quality_test.Qual_Rev_Obsolete = 0
-
-";
+            this._commandCollection[1].CommandText = "SELECT        COUNT(*) AS FoundRows\r\nFROM            Quality\r\nWHERE        (Qual_" +
+                "ProjProdArea = @Qual_ProjProdArea) AND (Qual_Org = @Qual_Org) AND (Qual_Type = @" +
+                "Qual_Type) AND (Qual_Ver = @Qual_Ver) AND (Qual_Rev = @Qual_Rev) AND (Qual_Prog " +
+                "= @Qual_Prog)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_ProjProdArea", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_ProjProdArea", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Org", global::System.Data.SqlDbType.VarChar, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Org", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Type", global::System.Data.SqlDbType.VarChar, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Ver", global::System.Data.SqlDbType.VarChar, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Ver", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Rev", global::System.Data.SqlDbType.VarChar, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Rev", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Prog", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Prog", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT\r\n  MAX(Quality.Qual_Prog) AS MaxQualProg\r\nFROM dbo.Quality\r\nWHERE Quality." +
+                "Qual_ProjProdArea = @Qual_ProjProdArea\r\nAND Quality.Qual_Org = @Qual_Org\r\nAND Qu" +
+                "ality.Qual_Type = @Qual_Type\r\n";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_ProjProdArea", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_ProjProdArea", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Org", global::System.Data.SqlDbType.VarChar, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Org", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Type", global::System.Data.SqlDbType.VarChar, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "UPDATE       Quality\r\nSET                Qual_Rev_Obsolete = 1\r\nWHERE        (Qua" +
+                "l_ProjProdArea = @Qual_ProjProdArea) AND (Qual_Org = @Qual_Org) AND (Qual_Type =" +
+                " @Qual_Type) AND (Qual_Prog = @Qual_Prog) AND (Qual_Rev_Obsolete = 0)";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_ProjProdArea", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_ProjProdArea", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Org", global::System.Data.SqlDbType.VarChar, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Org", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Type", global::System.Data.SqlDbType.VarChar, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Type", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Prog", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Prog", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5561,8 +4845,443 @@ AND Quality_test.Qual_Rev_Obsolete = 0
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual global::System.Nullable<int> FindMaxProg(string Qual_ProjProdArea, string Qual_Org, string Qual_Type) {
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_Id, string Original_Qual_ProjProdArea, string Original_Qual_Org, string Original_Qual_Type, string Original_Qual_Class, int Original_Qual_Prog, string Original_Qual_Ver, string Original_Qual_Rev, string Original_Qual_Des, string Original_Qual_Path, string Original_Qual_Richiedente, global::System.Nullable<global::System.DateTime> Original_Qual_DateRequest, string Original_Qual_IPRequest, bool Original_Qual_Rev_Obsolete) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
+            if ((Original_Qual_ProjProdArea == null)) {
+                throw new global::System.ArgumentNullException("Original_Qual_ProjProdArea");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Qual_ProjProdArea));
+            }
+            if ((Original_Qual_Org == null)) {
+                throw new global::System.ArgumentNullException("Original_Qual_Org");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Qual_Org));
+            }
+            if ((Original_Qual_Type == null)) {
+                throw new global::System.ArgumentNullException("Original_Qual_Type");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Qual_Type));
+            }
+            if ((Original_Qual_Class == null)) {
+                throw new global::System.ArgumentNullException("Original_Qual_Class");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Qual_Class));
+            }
+            this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_Qual_Prog));
+            if ((Original_Qual_Ver == null)) {
+                throw new global::System.ArgumentNullException("Original_Qual_Ver");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Qual_Ver));
+            }
+            if ((Original_Qual_Rev == null)) {
+                throw new global::System.ArgumentNullException("Original_Qual_Rev");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_Qual_Rev));
+            }
+            if ((Original_Qual_Des == null)) {
+                throw new global::System.ArgumentNullException("Original_Qual_Des");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_Qual_Des));
+            }
+            if ((Original_Qual_Path == null)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_Qual_Path));
+            }
+            if ((Original_Qual_Richiedente == null)) {
+                throw new global::System.ArgumentNullException("Original_Qual_Richiedente");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((string)(Original_Qual_Richiedente));
+            }
+            if ((Original_Qual_DateRequest.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((System.DateTime)(Original_Qual_DateRequest.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Qual_IPRequest == null)) {
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((string)(Original_Qual_IPRequest));
+            }
+            this.Adapter.DeleteCommand.Parameters[16].Value = ((bool)(Original_Qual_Rev_Obsolete));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(string Qual_ProjProdArea, string Qual_Org, string Qual_Type, string Qual_Class, int Qual_Prog, string Qual_Ver, string Qual_Rev, string Qual_Des, string Qual_Path, string Qual_Richiedente, global::System.Nullable<global::System.DateTime> Qual_DateRequest, string Qual_IPRequest, bool Qual_Rev_Obsolete) {
+            if ((Qual_ProjProdArea == null)) {
+                throw new global::System.ArgumentNullException("Qual_ProjProdArea");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Qual_ProjProdArea));
+            }
+            if ((Qual_Org == null)) {
+                throw new global::System.ArgumentNullException("Qual_Org");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Qual_Org));
+            }
+            if ((Qual_Type == null)) {
+                throw new global::System.ArgumentNullException("Qual_Type");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Qual_Type));
+            }
+            if ((Qual_Class == null)) {
+                throw new global::System.ArgumentNullException("Qual_Class");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Qual_Class));
+            }
+            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(Qual_Prog));
+            if ((Qual_Ver == null)) {
+                throw new global::System.ArgumentNullException("Qual_Ver");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Qual_Ver));
+            }
+            if ((Qual_Rev == null)) {
+                throw new global::System.ArgumentNullException("Qual_Rev");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Qual_Rev));
+            }
+            if ((Qual_Des == null)) {
+                throw new global::System.ArgumentNullException("Qual_Des");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(Qual_Des));
+            }
+            if ((Qual_Path == null)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(Qual_Path));
+            }
+            if ((Qual_Richiedente == null)) {
+                throw new global::System.ArgumentNullException("Qual_Richiedente");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(Qual_Richiedente));
+            }
+            if ((Qual_DateRequest.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((System.DateTime)(Qual_DateRequest.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((Qual_IPRequest == null)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(Qual_IPRequest));
+            }
+            this.Adapter.InsertCommand.Parameters[12].Value = ((bool)(Qual_Rev_Obsolete));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    string Qual_ProjProdArea, 
+                    string Qual_Org, 
+                    string Qual_Type, 
+                    string Qual_Class, 
+                    int Qual_Prog, 
+                    string Qual_Ver, 
+                    string Qual_Rev, 
+                    string Qual_Des, 
+                    string Qual_Path, 
+                    string Qual_Richiedente, 
+                    global::System.Nullable<global::System.DateTime> Qual_DateRequest, 
+                    string Qual_IPRequest, 
+                    bool Qual_Rev_Obsolete, 
+                    int Original_Id, 
+                    string Original_Qual_ProjProdArea, 
+                    string Original_Qual_Org, 
+                    string Original_Qual_Type, 
+                    string Original_Qual_Class, 
+                    int Original_Qual_Prog, 
+                    string Original_Qual_Ver, 
+                    string Original_Qual_Rev, 
+                    string Original_Qual_Des, 
+                    string Original_Qual_Path, 
+                    string Original_Qual_Richiedente, 
+                    global::System.Nullable<global::System.DateTime> Original_Qual_DateRequest, 
+                    string Original_Qual_IPRequest, 
+                    bool Original_Qual_Rev_Obsolete) {
+            if ((Qual_ProjProdArea == null)) {
+                throw new global::System.ArgumentNullException("Qual_ProjProdArea");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Qual_ProjProdArea));
+            }
+            if ((Qual_Org == null)) {
+                throw new global::System.ArgumentNullException("Qual_Org");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Qual_Org));
+            }
+            if ((Qual_Type == null)) {
+                throw new global::System.ArgumentNullException("Qual_Type");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Qual_Type));
+            }
+            if ((Qual_Class == null)) {
+                throw new global::System.ArgumentNullException("Qual_Class");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Qual_Class));
+            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Qual_Prog));
+            if ((Qual_Ver == null)) {
+                throw new global::System.ArgumentNullException("Qual_Ver");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Qual_Ver));
+            }
+            if ((Qual_Rev == null)) {
+                throw new global::System.ArgumentNullException("Qual_Rev");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Qual_Rev));
+            }
+            if ((Qual_Des == null)) {
+                throw new global::System.ArgumentNullException("Qual_Des");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Qual_Des));
+            }
+            if ((Qual_Path == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Qual_Path));
+            }
+            if ((Qual_Richiedente == null)) {
+                throw new global::System.ArgumentNullException("Qual_Richiedente");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Qual_Richiedente));
+            }
+            if ((Qual_DateRequest.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((System.DateTime)(Qual_DateRequest.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((Qual_IPRequest == null)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Qual_IPRequest));
+            }
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((bool)(Qual_Rev_Obsolete));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_Id));
+            if ((Original_Qual_ProjProdArea == null)) {
+                throw new global::System.ArgumentNullException("Original_Qual_ProjProdArea");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_Qual_ProjProdArea));
+            }
+            if ((Original_Qual_Org == null)) {
+                throw new global::System.ArgumentNullException("Original_Qual_Org");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_Qual_Org));
+            }
+            if ((Original_Qual_Type == null)) {
+                throw new global::System.ArgumentNullException("Original_Qual_Type");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_Qual_Type));
+            }
+            if ((Original_Qual_Class == null)) {
+                throw new global::System.ArgumentNullException("Original_Qual_Class");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_Qual_Class));
+            }
+            this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_Qual_Prog));
+            if ((Original_Qual_Ver == null)) {
+                throw new global::System.ArgumentNullException("Original_Qual_Ver");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_Qual_Ver));
+            }
+            if ((Original_Qual_Rev == null)) {
+                throw new global::System.ArgumentNullException("Original_Qual_Rev");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_Qual_Rev));
+            }
+            if ((Original_Qual_Des == null)) {
+                throw new global::System.ArgumentNullException("Original_Qual_Des");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_Qual_Des));
+            }
+            if ((Original_Qual_Path == null)) {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_Qual_Path));
+            }
+            if ((Original_Qual_Richiedente == null)) {
+                throw new global::System.ArgumentNullException("Original_Qual_Richiedente");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_Qual_Richiedente));
+            }
+            if ((Original_Qual_DateRequest.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((System.DateTime)(Original_Qual_DateRequest.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Qual_IPRequest == null)) {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Original_Qual_IPRequest));
+            }
+            this.Adapter.UpdateCommand.Parameters[29].Value = ((bool)(Original_Qual_Rev_Obsolete));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual object FindDuplicate(string Qual_ProjProdArea, string Qual_Org, string Qual_Type, string Qual_Ver, string Qual_Rev, int Qual_Prog) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            if ((Qual_ProjProdArea == null)) {
+                throw new global::System.ArgumentNullException("Qual_ProjProdArea");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(Qual_ProjProdArea));
+            }
+            if ((Qual_Org == null)) {
+                throw new global::System.ArgumentNullException("Qual_Org");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(Qual_Org));
+            }
+            if ((Qual_Type == null)) {
+                throw new global::System.ArgumentNullException("Qual_Type");
+            }
+            else {
+                command.Parameters[2].Value = ((string)(Qual_Type));
+            }
+            if ((Qual_Ver == null)) {
+                throw new global::System.ArgumentNullException("Qual_Ver");
+            }
+            else {
+                command.Parameters[3].Value = ((string)(Qual_Ver));
+            }
+            if ((Qual_Rev == null)) {
+                throw new global::System.ArgumentNullException("Qual_Rev");
+            }
+            else {
+                command.Parameters[4].Value = ((string)(Qual_Rev));
+            }
+            command.Parameters[5].Value = ((int)(Qual_Prog));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((object)(returnValue));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual object FindMaxProg(string Qual_ProjProdArea, string Qual_Org, string Qual_Type) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
             if ((Qual_ProjProdArea == null)) {
                 throw new global::System.ArgumentNullException("Qual_ProjProdArea");
             }
@@ -5597,11 +5316,53 @@ AND Quality_test.Qual_Rev_Obsolete = 0
             }
             if (((returnValue == null) 
                         || (returnValue.GetType() == typeof(global::System.DBNull)))) {
-                return new global::System.Nullable<int>();
+                return null;
             }
             else {
-                return new global::System.Nullable<int>(((int)(returnValue)));
+                return ((object)(returnValue));
             }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int SetObsolete(string Qual_ProjProdArea, string Qual_Org, string Qual_Type, int Qual_Prog) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
+            if ((Qual_ProjProdArea == null)) {
+                throw new global::System.ArgumentNullException("Qual_ProjProdArea");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(Qual_ProjProdArea));
+            }
+            if ((Qual_Org == null)) {
+                throw new global::System.ArgumentNullException("Qual_Org");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(Qual_Org));
+            }
+            if ((Qual_Type == null)) {
+                throw new global::System.ArgumentNullException("Qual_Type");
+            }
+            else {
+                command.Parameters[2].Value = ((string)(Qual_Type));
+            }
+            command.Parameters[3].Value = ((int)(Qual_Prog));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     
@@ -7133,754 +6894,6 @@ order by qual_des asc";
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class dt_Quality_EditRecTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public dt_Quality_EditRecTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "dt_Quality_EditRec";
-            tableMapping.ColumnMappings.Add("Id", "Id");
-            tableMapping.ColumnMappings.Add("Qual_ProjProdArea", "Qual_ProjProdArea");
-            tableMapping.ColumnMappings.Add("Qual_Org", "Qual_Org");
-            tableMapping.ColumnMappings.Add("Qual_Type", "Qual_Type");
-            tableMapping.ColumnMappings.Add("Qual_Class", "Qual_Class");
-            tableMapping.ColumnMappings.Add("Qual_Prog", "Qual_Prog");
-            tableMapping.ColumnMappings.Add("Qual_Ver", "Qual_Ver");
-            tableMapping.ColumnMappings.Add("Qual_Rev", "Qual_Rev");
-            tableMapping.ColumnMappings.Add("Qual_Des", "Qual_Des");
-            tableMapping.ColumnMappings.Add("Qual_Path", "Qual_Path");
-            tableMapping.ColumnMappings.Add("Qual_Richiedente", "Qual_Richiedente");
-            tableMapping.ColumnMappings.Add("Qual_DateRequest", "Qual_DateRequest");
-            tableMapping.ColumnMappings.Add("Qual_IPRequest", "Qual_IPRequest");
-            tableMapping.ColumnMappings.Add("Codice_Quality", "Codice_Quality");
-            tableMapping.ColumnMappings.Add("Qual_Rev_Obsolete", "Qual_Rev_Obsolete");
-            this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Quality] WHERE (([Id] = @Original_Id) AND ([Qual_ProjProdArea] = @Original_Qual_ProjProdArea) AND ([Qual_Org] = @Original_Qual_Org) AND ([Qual_Type] = @Original_Qual_Type) AND ([Qual_Class] = @Original_Qual_Class) AND ([Qual_Prog] = @Original_Qual_Prog) AND ([Qual_Ver] = @Original_Qual_Ver) AND ([Qual_Rev] = @Original_Qual_Rev) AND ([Qual_Des] = @Original_Qual_Des) AND ((@IsNull_Qual_Path = 1 AND [Qual_Path] IS NULL) OR ([Qual_Path] = @Original_Qual_Path)) AND ([Qual_Richiedente] = @Original_Qual_Richiedente) AND ((@IsNull_Qual_DateRequest = 1 AND [Qual_DateRequest] IS NULL) OR ([Qual_DateRequest] = @Original_Qual_DateRequest)) AND ((@IsNull_Qual_IPRequest = 1 AND [Qual_IPRequest] IS NULL) OR ([Qual_IPRequest] = @Original_Qual_IPRequest)) AND ([Qual_Rev_Obsolete] = @Original_Qual_Rev_Obsolete))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_ProjProdArea", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_ProjProdArea", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Org", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Org", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Type", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Type", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Class", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Class", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Prog", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Prog", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Ver", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Ver", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Rev", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Rev", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Des", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Des", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Qual_Path", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Path", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Path", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Path", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Richiedente", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Richiedente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Qual_DateRequest", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_DateRequest", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_DateRequest", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_DateRequest", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Qual_IPRequest", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_IPRequest", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_IPRequest", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_IPRequest", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Rev_Obsolete", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Rev_Obsolete", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Quality] ([Qual_ProjProdArea], [Qual_Org], [Qual_Type], [Qual_Class], [Qual_Prog], [Qual_Ver], [Qual_Rev], [Qual_Des], [Qual_Path], [Qual_Richiedente], [Qual_DateRequest], [Qual_IPRequest], [Qual_Rev_Obsolete]) VALUES (@Qual_ProjProdArea, @Qual_Org, @Qual_Type, @Qual_Class, @Qual_Prog, @Qual_Ver, @Qual_Rev, @Qual_Des, @Qual_Path, @Qual_Richiedente, @Qual_DateRequest, @Qual_IPRequest, @Qual_Rev_Obsolete);
-SELECT Id, Qual_ProjProdArea, Qual_Org, Qual_Type, Qual_Class, Qual_Prog, Qual_Ver, Qual_Rev, Qual_Des, Qual_Path, Qual_Richiedente, Qual_DateRequest, Qual_IPRequest, Qual_ProjProdArea + '-' + Qual_Org + '-' + Qual_Type + '-' + Qual_Class + '-' + format(Qual_Prog, '0000') + '-' + Qual_Ver + '.' + Qual_Rev AS Codice_Quality, Qual_Rev_Obsolete FROM Quality WHERE (Id = SCOPE_IDENTITY())";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_ProjProdArea", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_ProjProdArea", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Org", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Org", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Type", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Class", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Class", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Prog", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Prog", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Ver", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Ver", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Rev", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Rev", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Des", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Des", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Path", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Path", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Richiedente", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Richiedente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_DateRequest", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_DateRequest", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_IPRequest", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_IPRequest", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Rev_Obsolete", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Rev_Obsolete", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [Quality] SET [Qual_ProjProdArea] = @Qual_ProjProdArea, [Qual_Org] = @Qual" +
-                "_Org, [Qual_Type] = @Qual_Type, [Qual_Class] = @Qual_Class, [Qual_Prog] = @Qual_" +
-                "Prog, [Qual_Ver] = @Qual_Ver, [Qual_Rev] = @Qual_Rev, [Qual_Des] = @Qual_Des, [Q" +
-                "ual_Path] = @Qual_Path, [Qual_Richiedente] = @Qual_Richiedente, [Qual_DateReques" +
-                "t] = @Qual_DateRequest, [Qual_IPRequest] = @Qual_IPRequest, [Qual_Rev_Obsolete] " +
-                "= @Qual_Rev_Obsolete WHERE (([Id] = @Original_Id) AND ([Qual_ProjProdArea] = @Or" +
-                "iginal_Qual_ProjProdArea) AND ([Qual_Org] = @Original_Qual_Org) AND ([Qual_Type]" +
-                " = @Original_Qual_Type) AND ([Qual_Class] = @Original_Qual_Class) AND ([Qual_Pro" +
-                "g] = @Original_Qual_Prog) AND ([Qual_Ver] = @Original_Qual_Ver) AND ([Qual_Rev] " +
-                "= @Original_Qual_Rev) AND ([Qual_Des] = @Original_Qual_Des) AND ((@IsNull_Qual_P" +
-                "ath = 1 AND [Qual_Path] IS NULL) OR ([Qual_Path] = @Original_Qual_Path)) AND ([Q" +
-                "ual_Richiedente] = @Original_Qual_Richiedente) AND ((@IsNull_Qual_DateRequest = " +
-                "1 AND [Qual_DateRequest] IS NULL) OR ([Qual_DateRequest] = @Original_Qual_DateRe" +
-                "quest)) AND ((@IsNull_Qual_IPRequest = 1 AND [Qual_IPRequest] IS NULL) OR ([Qual" +
-                "_IPRequest] = @Original_Qual_IPRequest)) AND ([Qual_Rev_Obsolete] = @Original_Qu" +
-                "al_Rev_Obsolete));\r\nSELECT Id, Qual_ProjProdArea, Qual_Org, Qual_Type, Qual_Clas" +
-                "s, Qual_Prog, Qual_Ver, Qual_Rev, Qual_Des, Qual_Path, Qual_Richiedente, Qual_Da" +
-                "teRequest, Qual_IPRequest, Qual_ProjProdArea + \'-\' + Qual_Org + \'-\' + Qual_Type " +
-                "+ \'-\' + Qual_Class + \'-\' + format(Qual_Prog, \'0000\') + \'-\' + Qual_Ver + \'.\' + Qu" +
-                "al_Rev AS Codice_Quality, Qual_Rev_Obsolete FROM Quality WHERE (Id = @Id)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_ProjProdArea", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_ProjProdArea", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Org", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Org", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Type", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Class", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Class", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Prog", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Prog", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Ver", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Ver", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Rev", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Rev", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Des", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Des", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Path", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Path", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Richiedente", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Richiedente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_DateRequest", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_DateRequest", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_IPRequest", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_IPRequest", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qual_Rev_Obsolete", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Rev_Obsolete", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_ProjProdArea", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_ProjProdArea", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Org", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Org", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Type", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Type", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Class", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Class", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Prog", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Prog", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Ver", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Ver", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Rev", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Rev", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Des", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Des", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Qual_Path", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Path", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Path", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Path", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Richiedente", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Richiedente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Qual_DateRequest", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_DateRequest", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_DateRequest", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_DateRequest", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Qual_IPRequest", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_IPRequest", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_IPRequest", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_IPRequest", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qual_Rev_Obsolete", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qual_Rev_Obsolete", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionStringOk;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        Id, Qual_ProjProdArea, Qual_Org, Qual_Type, Qual_Class, Qual_Prog, Qual_Ver, Qual_Rev, Qual_Des, Qual_Path, Qual_Richiedente, Qual_DateRequest, Qual_IPRequest, 
-                         Qual_ProjProdArea + '-' + Qual_Org + '-' + Qual_Type + '-' + Qual_Class + '-' + format(Qual_Prog, '0000') + '-' + Qual_Ver + '.' + Qual_Rev AS Codice_Quality, Qual_Rev_Obsolete
-FROM            Quality";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT Id, Qual_Class, Qual_DateRequest, Qual_Des, Qual_IPRequest, Qual_Org, Qual" +
-                "_Path, Qual_Prog, Qual_ProjProdArea, Qual_Rev, Qual_Rev_Obsolete, Qual_Richieden" +
-                "te, Qual_Type, Qual_Ver FROM Quality";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(ds_Quality_new.dt_Quality_EditRecDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual ds_Quality_new.dt_Quality_EditRecDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            ds_Quality_new.dt_Quality_EditRecDataTable dataTable = new ds_Quality_new.dt_Quality_EditRecDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy_CodiceQuality(ds_Quality_new.dt_Quality_EditRecDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual ds_Quality_new.dt_Quality_EditRecDataTable GetDataBy() {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            ds_Quality_new.dt_Quality_EditRecDataTable dataTable = new ds_Quality_new.dt_Quality_EditRecDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ds_Quality_new.dt_Quality_EditRecDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ds_Quality_new dataSet) {
-            return this.Adapter.Update(dataSet, "dt_Quality_EditRec");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, string Original_Qual_ProjProdArea, string Original_Qual_Org, string Original_Qual_Type, string Original_Qual_Class, int Original_Qual_Prog, string Original_Qual_Ver, string Original_Qual_Rev, string Original_Qual_Des, string Original_Qual_Path, string Original_Qual_Richiedente, global::System.Nullable<global::System.DateTime> Original_Qual_DateRequest, string Original_Qual_IPRequest, bool Original_Qual_Rev_Obsolete) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
-            if ((Original_Qual_ProjProdArea == null)) {
-                throw new global::System.ArgumentNullException("Original_Qual_ProjProdArea");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Qual_ProjProdArea));
-            }
-            if ((Original_Qual_Org == null)) {
-                throw new global::System.ArgumentNullException("Original_Qual_Org");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Qual_Org));
-            }
-            if ((Original_Qual_Type == null)) {
-                throw new global::System.ArgumentNullException("Original_Qual_Type");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Qual_Type));
-            }
-            if ((Original_Qual_Class == null)) {
-                throw new global::System.ArgumentNullException("Original_Qual_Class");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Qual_Class));
-            }
-            this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_Qual_Prog));
-            if ((Original_Qual_Ver == null)) {
-                throw new global::System.ArgumentNullException("Original_Qual_Ver");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Qual_Ver));
-            }
-            if ((Original_Qual_Rev == null)) {
-                throw new global::System.ArgumentNullException("Original_Qual_Rev");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_Qual_Rev));
-            }
-            if ((Original_Qual_Des == null)) {
-                throw new global::System.ArgumentNullException("Original_Qual_Des");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_Qual_Des));
-            }
-            if ((Original_Qual_Path == null)) {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_Qual_Path));
-            }
-            if ((Original_Qual_Richiedente == null)) {
-                throw new global::System.ArgumentNullException("Original_Qual_Richiedente");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((string)(Original_Qual_Richiedente));
-            }
-            if ((Original_Qual_DateRequest.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((System.DateTime)(Original_Qual_DateRequest.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[13].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Qual_IPRequest == null)) {
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[15].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((string)(Original_Qual_IPRequest));
-            }
-            this.Adapter.DeleteCommand.Parameters[16].Value = ((bool)(Original_Qual_Rev_Obsolete));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Qual_ProjProdArea, string Qual_Org, string Qual_Type, string Qual_Class, int Qual_Prog, string Qual_Ver, string Qual_Rev, string Qual_Des, string Qual_Path, string Qual_Richiedente, global::System.Nullable<global::System.DateTime> Qual_DateRequest, string Qual_IPRequest, bool Qual_Rev_Obsolete) {
-            if ((Qual_ProjProdArea == null)) {
-                throw new global::System.ArgumentNullException("Qual_ProjProdArea");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Qual_ProjProdArea));
-            }
-            if ((Qual_Org == null)) {
-                throw new global::System.ArgumentNullException("Qual_Org");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Qual_Org));
-            }
-            if ((Qual_Type == null)) {
-                throw new global::System.ArgumentNullException("Qual_Type");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Qual_Type));
-            }
-            if ((Qual_Class == null)) {
-                throw new global::System.ArgumentNullException("Qual_Class");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Qual_Class));
-            }
-            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(Qual_Prog));
-            if ((Qual_Ver == null)) {
-                throw new global::System.ArgumentNullException("Qual_Ver");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Qual_Ver));
-            }
-            if ((Qual_Rev == null)) {
-                throw new global::System.ArgumentNullException("Qual_Rev");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Qual_Rev));
-            }
-            if ((Qual_Des == null)) {
-                throw new global::System.ArgumentNullException("Qual_Des");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(Qual_Des));
-            }
-            if ((Qual_Path == null)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(Qual_Path));
-            }
-            if ((Qual_Richiedente == null)) {
-                throw new global::System.ArgumentNullException("Qual_Richiedente");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(Qual_Richiedente));
-            }
-            if ((Qual_DateRequest.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((System.DateTime)(Qual_DateRequest.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            if ((Qual_IPRequest == null)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(Qual_IPRequest));
-            }
-            this.Adapter.InsertCommand.Parameters[12].Value = ((bool)(Qual_Rev_Obsolete));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    string Qual_ProjProdArea, 
-                    string Qual_Org, 
-                    string Qual_Type, 
-                    string Qual_Class, 
-                    int Qual_Prog, 
-                    string Qual_Ver, 
-                    string Qual_Rev, 
-                    string Qual_Des, 
-                    string Qual_Path, 
-                    string Qual_Richiedente, 
-                    global::System.Nullable<global::System.DateTime> Qual_DateRequest, 
-                    string Qual_IPRequest, 
-                    bool Qual_Rev_Obsolete, 
-                    int Original_Id, 
-                    string Original_Qual_ProjProdArea, 
-                    string Original_Qual_Org, 
-                    string Original_Qual_Type, 
-                    string Original_Qual_Class, 
-                    int Original_Qual_Prog, 
-                    string Original_Qual_Ver, 
-                    string Original_Qual_Rev, 
-                    string Original_Qual_Des, 
-                    string Original_Qual_Path, 
-                    string Original_Qual_Richiedente, 
-                    global::System.Nullable<global::System.DateTime> Original_Qual_DateRequest, 
-                    string Original_Qual_IPRequest, 
-                    bool Original_Qual_Rev_Obsolete, 
-                    int Id) {
-            if ((Qual_ProjProdArea == null)) {
-                throw new global::System.ArgumentNullException("Qual_ProjProdArea");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Qual_ProjProdArea));
-            }
-            if ((Qual_Org == null)) {
-                throw new global::System.ArgumentNullException("Qual_Org");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Qual_Org));
-            }
-            if ((Qual_Type == null)) {
-                throw new global::System.ArgumentNullException("Qual_Type");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Qual_Type));
-            }
-            if ((Qual_Class == null)) {
-                throw new global::System.ArgumentNullException("Qual_Class");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Qual_Class));
-            }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Qual_Prog));
-            if ((Qual_Ver == null)) {
-                throw new global::System.ArgumentNullException("Qual_Ver");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Qual_Ver));
-            }
-            if ((Qual_Rev == null)) {
-                throw new global::System.ArgumentNullException("Qual_Rev");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Qual_Rev));
-            }
-            if ((Qual_Des == null)) {
-                throw new global::System.ArgumentNullException("Qual_Des");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Qual_Des));
-            }
-            if ((Qual_Path == null)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Qual_Path));
-            }
-            if ((Qual_Richiedente == null)) {
-                throw new global::System.ArgumentNullException("Qual_Richiedente");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Qual_Richiedente));
-            }
-            if ((Qual_DateRequest.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((System.DateTime)(Qual_DateRequest.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            if ((Qual_IPRequest == null)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Qual_IPRequest));
-            }
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((bool)(Qual_Rev_Obsolete));
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_Id));
-            if ((Original_Qual_ProjProdArea == null)) {
-                throw new global::System.ArgumentNullException("Original_Qual_ProjProdArea");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_Qual_ProjProdArea));
-            }
-            if ((Original_Qual_Org == null)) {
-                throw new global::System.ArgumentNullException("Original_Qual_Org");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_Qual_Org));
-            }
-            if ((Original_Qual_Type == null)) {
-                throw new global::System.ArgumentNullException("Original_Qual_Type");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_Qual_Type));
-            }
-            if ((Original_Qual_Class == null)) {
-                throw new global::System.ArgumentNullException("Original_Qual_Class");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_Qual_Class));
-            }
-            this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_Qual_Prog));
-            if ((Original_Qual_Ver == null)) {
-                throw new global::System.ArgumentNullException("Original_Qual_Ver");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_Qual_Ver));
-            }
-            if ((Original_Qual_Rev == null)) {
-                throw new global::System.ArgumentNullException("Original_Qual_Rev");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_Qual_Rev));
-            }
-            if ((Original_Qual_Des == null)) {
-                throw new global::System.ArgumentNullException("Original_Qual_Des");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_Qual_Des));
-            }
-            if ((Original_Qual_Path == null)) {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_Qual_Path));
-            }
-            if ((Original_Qual_Richiedente == null)) {
-                throw new global::System.ArgumentNullException("Original_Qual_Richiedente");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_Qual_Richiedente));
-            }
-            if ((Original_Qual_DateRequest.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((System.DateTime)(Original_Qual_DateRequest.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Qual_IPRequest == null)) {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Original_Qual_IPRequest));
-            }
-            this.Adapter.UpdateCommand.Parameters[29].Value = ((bool)(Original_Qual_Rev_Obsolete));
-            this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(Id));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    string Qual_ProjProdArea, 
-                    string Qual_Org, 
-                    string Qual_Type, 
-                    string Qual_Class, 
-                    int Qual_Prog, 
-                    string Qual_Ver, 
-                    string Qual_Rev, 
-                    string Qual_Des, 
-                    string Qual_Path, 
-                    string Qual_Richiedente, 
-                    global::System.Nullable<global::System.DateTime> Qual_DateRequest, 
-                    string Qual_IPRequest, 
-                    bool Qual_Rev_Obsolete, 
-                    int Original_Id, 
-                    string Original_Qual_ProjProdArea, 
-                    string Original_Qual_Org, 
-                    string Original_Qual_Type, 
-                    string Original_Qual_Class, 
-                    int Original_Qual_Prog, 
-                    string Original_Qual_Ver, 
-                    string Original_Qual_Rev, 
-                    string Original_Qual_Des, 
-                    string Original_Qual_Path, 
-                    string Original_Qual_Richiedente, 
-                    global::System.Nullable<global::System.DateTime> Original_Qual_DateRequest, 
-                    string Original_Qual_IPRequest, 
-                    bool Original_Qual_Rev_Obsolete) {
-            return this.Update(Qual_ProjProdArea, Qual_Org, Qual_Type, Qual_Class, Qual_Prog, Qual_Ver, Qual_Rev, Qual_Des, Qual_Path, Qual_Richiedente, Qual_DateRequest, Qual_IPRequest, Qual_Rev_Obsolete, Original_Id, Original_Qual_ProjProdArea, Original_Qual_Org, Original_Qual_Type, Original_Qual_Class, Original_Qual_Prog, Original_Qual_Ver, Original_Qual_Rev, Original_Qual_Des, Original_Qual_Path, Original_Qual_Richiedente, Original_Qual_DateRequest, Original_Qual_IPRequest, Original_Qual_Rev_Obsolete, Original_Id);
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
     public partial class SF_QualityViewNewTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
@@ -8080,8 +7093,6 @@ FROM            Quality";
         
         private dt_Quality_ClassificationTableAdapter _dt_Quality_ClassificationTableAdapter;
         
-        private dt_Quality_EditRecTableAdapter _dt_Quality_EditRecTableAdapter;
-        
         private bool _backupDataSetBeforeUpdate;
         
         private global::System.Data.IDbConnection _connection;
@@ -8183,20 +7194,6 @@ FROM            Quality";
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public dt_Quality_EditRecTableAdapter dt_Quality_EditRecTableAdapter {
-            get {
-                return this._dt_Quality_EditRecTableAdapter;
-            }
-            set {
-                this._dt_Quality_EditRecTableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -8238,10 +7235,6 @@ FROM            Quality";
                             && (this._dt_Quality_ClassificationTableAdapter.Connection != null))) {
                     return this._dt_Quality_ClassificationTableAdapter.Connection;
                 }
-                if (((this._dt_Quality_EditRecTableAdapter != null) 
-                            && (this._dt_Quality_EditRecTableAdapter.Connection != null))) {
-                    return this._dt_Quality_EditRecTableAdapter.Connection;
-                }
                 return null;
             }
             set {
@@ -8271,9 +7264,6 @@ FROM            Quality";
                     count = (count + 1);
                 }
                 if ((this._dt_Quality_ClassificationTableAdapter != null)) {
-                    count = (count + 1);
-                }
-                if ((this._dt_Quality_EditRecTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -8341,15 +7331,6 @@ FROM            Quality";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._dt_Quality_EditRecTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.dt_Quality_EditRec.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._dt_Quality_EditRecTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             return result;
         }
         
@@ -8408,14 +7389,6 @@ FROM            Quality";
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._dt_Quality_EditRecTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.dt_Quality_EditRec.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._dt_Quality_EditRecTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             return result;
         }
         
@@ -8426,14 +7399,6 @@ FROM            Quality";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateDeletedRows(ds_Quality_new dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._dt_Quality_EditRecTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.dt_Quality_EditRec.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._dt_Quality_EditRecTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._dt_Quality_ClassificationTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.dt_Quality_Classification.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -8551,11 +7516,6 @@ FROM            Quality";
                 throw new global::System.ArgumentException("Tutti gli oggetti TableAdapter gestiti da TableAdapterManager devono utilizzare l" +
                         "a stessa stringa di connessione.");
             }
-            if (((this._dt_Quality_EditRecTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._dt_Quality_EditRecTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("Tutti gli oggetti TableAdapter gestiti da TableAdapterManager devono utilizzare l" +
-                        "a stessa stringa di connessione.");
-            }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
                 throw new global::System.ApplicationException("TableAdapterManager non contiene informazioni di connessione. Impostare la propri" +
@@ -8643,15 +7603,6 @@ FROM            Quality";
                         adaptersWithAcceptChangesDuringUpdate.Add(this._dt_Quality_ClassificationTableAdapter.Adapter);
                     }
                 }
-                if ((this._dt_Quality_EditRecTableAdapter != null)) {
-                    revertConnections.Add(this._dt_Quality_EditRecTableAdapter, this._dt_Quality_EditRecTableAdapter.Connection);
-                    this._dt_Quality_EditRecTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._dt_Quality_EditRecTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._dt_Quality_EditRecTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._dt_Quality_EditRecTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._dt_Quality_EditRecTableAdapter.Adapter);
-                    }
-                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -8733,10 +7684,6 @@ FROM            Quality";
                 if ((this._dt_Quality_ClassificationTableAdapter != null)) {
                     this._dt_Quality_ClassificationTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._dt_Quality_ClassificationTableAdapter]));
                     this._dt_Quality_ClassificationTableAdapter.Transaction = null;
-                }
-                if ((this._dt_Quality_EditRecTableAdapter != null)) {
-                    this._dt_Quality_EditRecTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._dt_Quality_EditRecTableAdapter]));
-                    this._dt_Quality_EditRecTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
