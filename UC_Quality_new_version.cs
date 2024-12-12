@@ -331,15 +331,28 @@ namespace SmartLineProduction
             if (displayform == "I")
             {
                 var newrow = ds_Quality_new.Quality.NewRow();
-                newrow["Qual_ProjProdArea"] = input_ProjProdArea;
-                newrow["Qual_Org"] = input_Org;
-                newrow["Qual_Type"] = input_Type;
-                newrow["Qual_Class"] = input_Class;
+                //newrow["Qual_ProjProdArea"] = input_ProjProdArea;
+                //newrow["Qual_Org"] = input_Org;
+                //newrow["Qual_Type"] = input_Type;
+                //newrow["Qual_Class"] = input_Class;
+                //newrow["Qual_Prog"] = input_Prog.ToString();
+                //newrow["Qual_Ver"] = input_Ver;
+                //newrow["Qual_Rev"] = input_Rev;
+                //newrow["Qual_Des"] = input_Des;
+                //newrow["Qual_Path"] = input_Path;
+                //newrow["Qual_Richiedente"] = input_User;
+                //newrow["Qual_DateRequest"] = DateTime.Now;
+                //newrow["Qual_IPRequest"] = FindIP();
+                //newrow["Qual_Rev_Obsolete"] = false;
+                newrow["Qual_ProjProdArea"] = lab_projprodarea.Text;
+                newrow["Qual_Org"] = lab_org.Text;
+                newrow["Qual_Type"] = lab_type.Text;
+                newrow["Qual_Class"] = lab_class.Text;
                 newrow["Qual_Prog"] = input_Prog.ToString();
-                newrow["Qual_Ver"] = input_Ver;
-                newrow["Qual_Rev"] = input_Rev;
-                newrow["Qual_Des"] = input_Des;
-                newrow["Qual_Path"] = input_Path;
+                newrow["Qual_Ver"] = tb_vers.Text;
+                newrow["Qual_Rev"] = tb_rev.Text;
+                newrow["Qual_Des"] = tb_Des.Text;
+                newrow["Qual_Path"] = tb_folder.Text;
                 newrow["Qual_Richiedente"] = input_User;
                 newrow["Qual_DateRequest"] = DateTime.Now;
                 newrow["Qual_IPRequest"] = FindIP();

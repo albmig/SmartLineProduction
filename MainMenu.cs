@@ -691,5 +691,18 @@ namespace SmartLineProduction
             uC_Quality_New_Version.Show();
 
         }
+
+        private void programmazioneCommessaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GVar.CloseSplash = false;
+            Splash SplashDB = new Splash();
+            SplashDB.Show();
+
+            UC_Programmazione_GL_Commessa uC_Programmazione_GL_Commessa = new UC_Programmazione_GL_Commessa();
+            SplashDB.Close();
+            uC_Programmazione_GL_Commessa.MdiParent = this;
+            uC_Programmazione_GL_Commessa.Dock = DockStyle.Fill;
+            uC_Programmazione_GL_Commessa.Show();
+        }
     }
 }

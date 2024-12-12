@@ -36,7 +36,7 @@ namespace SmartLineProduction.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("\\\\dc\\AREA_IT\\AREA_FIRMWARE\\SmartLine\\Compilati\\")]
+        [global::System.Configuration.DefaultSettingValueAttribute("\\\\dc\\AREA_IT\\AREA_FIRMWARE\\GlobalLine\\Compilati")]
         public string FW_folder {
             get {
                 return ((string)(this["FW_folder"]));

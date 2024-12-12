@@ -11,7 +11,7 @@
       <Value Profile="(Default)">Data Source=SERVER208\SQLEXPRESS;Initial Catalog=SISTEMATICA_FACTORY;Persist Security Info=True;User ID=sa;Password=aavesp19!;</Value>
     </Setting>
     <Setting Name="FW_folder" Type="System.String" Scope="User">
-      <Value Profile="(Default)">\\dc\AREA_IT\AREA_FIRMWARE\SmartLine\Compilati\</Value>
+      <Value Profile="(Default)">\\dc\AREA_IT\AREA_FIRMWARE\GlobalLine\Compilati</Value>
     </Setting>
     <Setting Name="Commander_path" Type="System.String" Scope="User">
       <Value Profile="(Default)">C:\Commander</Value>

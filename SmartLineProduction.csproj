@@ -245,6 +245,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ds_Ncr.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ds_Programmazione_GL.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_Programmazione_GL.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ds_Prototipi.cs">
       <DependentUpon>ds_Prototipi.xsd</DependentUpon>
     </Compile>
@@ -395,6 +400,12 @@
     </Compile>
     <Compile Include="UC_FW_R_Classic.designer.cs">
       <DependentUpon>UC_FW_R_Classic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Programmazione_GL_Commessa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_Programmazione_GL_Commessa.Designer.cs">
+      <DependentUpon>UC_Programmazione_GL_Commessa.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_Quality_new_version.cs">
       <SubType>Form</SubType>
@@ -698,6 +709,9 @@
     <EmbeddedResource Include="UC_FW_R_Classic.resx">
       <DependentUpon>UC_FW_R_Classic.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_Programmazione_GL_Commessa.resx">
+      <DependentUpon>UC_Programmazione_GL_Commessa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_Quality_new_version.resx">
       <DependentUpon>UC_Quality_new_version.cs</DependentUpon>
     </EmbeddedResource>
@@ -895,6 +909,17 @@
     </None>
     <None Include="ds_Ncr.xss">
       <DependentUpon>ds_Ncr.xsd</DependentUpon>
+    </None>
+    <None Include="ds_Programmazione_GL.xsc">
+      <DependentUpon>ds_Programmazione_GL.xsd</DependentUpon>
+    </None>
+    <None Include="ds_Programmazione_GL.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_Programmazione_GL.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds_Programmazione_GL.xss">
+      <DependentUpon>ds_Programmazione_GL.xsd</DependentUpon>
     </None>
     <None Include="ds_Prototipi.xsc">
       <DependentUpon>ds_Prototipi.xsd</DependentUpon>

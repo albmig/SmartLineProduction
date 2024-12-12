@@ -108,6 +108,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.miniToolStrip = new System.Windows.Forms.MenuStrip();
             this.Brother_timer = new System.Windows.Forms.Timer(this.components);
+            this.programmazioneGlobalLineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
+            this.programmazioneCommessaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.layout_Menu.SuspendLayout();
             this.layout_orizz_menu.SuspendLayout();
             this.MainMenuStrip.SuspendLayout();
@@ -151,7 +156,7 @@
             this.layout_Menu.RowCount = 2;
             this.layout_Menu.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.layout_Menu.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.layout_Menu.Size = new System.Drawing.Size(760, 462);
+            this.layout_Menu.Size = new System.Drawing.Size(1172, 626);
             this.layout_Menu.TabIndex = 1;
             // 
             // layout_orizz_menu
@@ -176,7 +181,7 @@
             this.layout_orizz_menu.Name = "layout_orizz_menu";
             this.layout_orizz_menu.RowCount = 1;
             this.layout_orizz_menu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.layout_orizz_menu.Size = new System.Drawing.Size(754, 25);
+            this.layout_orizz_menu.Size = new System.Drawing.Size(1166, 25);
             this.layout_orizz_menu.TabIndex = 119;
             // 
             // MainMenuStrip
@@ -192,15 +197,19 @@
             this.progettiToolStripMenuItem});
             this.MainMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MainMenuStrip.Name = "MainMenuStrip";
-            this.MainMenuStrip.Size = new System.Drawing.Size(675, 25);
+            this.MainMenuStrip.Size = new System.Drawing.Size(1044, 25);
             this.MainMenuStrip.TabIndex = 83;
             this.MainMenuStrip.Text = "menuStrip1";
             // 
             // spedizioneToolStripMenuItem
             // 
             this.spedizioneToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripSeparator12,
             this.fasiDiAvanzamentoToolStripMenuItem,
             this.programmazioneSmartLineToolStripMenuItem,
+            this.toolStripSeparator7,
+            this.programmazioneGlobalLineToolStripMenuItem,
+            this.toolStripSeparator11,
             this.spedizioneToolStripMenuItem1,
             this.individuazioneEtichetteToolStripMenuItem,
             this.raccoltaDatasheetPerCommessaToolStripMenuItem,
@@ -603,7 +612,7 @@
             this.pan_Menu_exit.Dock = System.Windows.Forms.DockStyle.None;
             this.pan_Menu_exit.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menu_sw_exit});
-            this.pan_Menu_exit.Location = new System.Drawing.Point(679, 0);
+            this.pan_Menu_exit.Location = new System.Drawing.Point(1091, 0);
             this.pan_Menu_exit.Name = "pan_Menu_exit";
             this.pan_Menu_exit.Size = new System.Drawing.Size(75, 24);
             this.pan_Menu_exit.TabIndex = 82;
@@ -632,7 +641,7 @@
             this.MainPanel.HorizontalScrollbarSize = 10;
             this.MainPanel.Location = new System.Drawing.Point(3, 34);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(754, 425);
+            this.MainPanel.Size = new System.Drawing.Size(1166, 589);
             this.MainPanel.TabIndex = 120;
             this.MainPanel.VerticalScrollbarBarColor = true;
             this.MainPanel.VerticalScrollbarHighlightOnWheel = false;
@@ -646,14 +655,14 @@
             this.docker_printers.Controls.Add(this.layout_BrotherPrinters, 0, 0);
             this.docker_printers.Controls.Add(this.metroTextBox1, 0, 1);
             this.docker_printers.Dock = System.Windows.Forms.DockStyle.Right;
-            this.docker_printers.Location = new System.Drawing.Point(268, 0);
+            this.docker_printers.Location = new System.Drawing.Point(680, 0);
             this.docker_printers.Name = "docker_printers";
             this.docker_printers.RowCount = 3;
             this.docker_printers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.docker_printers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.docker_printers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.docker_printers.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.docker_printers.Size = new System.Drawing.Size(486, 425);
+            this.docker_printers.Size = new System.Drawing.Size(486, 589);
             this.docker_printers.TabIndex = 5;
             // 
             // layout_BrotherPrinters
@@ -907,7 +916,7 @@
             this.metroTextBox1.Lines = new string[] {
         "Le stampanti devono essere installate sul server e condivise. Qui viene riportato" +
             " il nome con cui sono state installate."};
-            this.metroTextBox1.Location = new System.Drawing.Point(3, 144);
+            this.metroTextBox1.Location = new System.Drawing.Point(3, 199);
             this.metroTextBox1.MaxLength = 32767;
             this.metroTextBox1.Multiline = true;
             this.metroTextBox1.Name = "metroTextBox1";
@@ -932,7 +941,7 @@
             this.lab_resources_path.AutoSize = true;
             this.lab_resources_path.BackColor = System.Drawing.Color.Transparent;
             this.lab_resources_path.ForeColor = System.Drawing.Color.White;
-            this.lab_resources_path.Location = new System.Drawing.Point(3, 406);
+            this.lab_resources_path.Location = new System.Drawing.Point(3, 570);
             this.lab_resources_path.Name = "lab_resources_path";
             this.lab_resources_path.Size = new System.Drawing.Size(81, 19);
             this.lab_resources_path.TabIndex = 3;
@@ -946,7 +955,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(300, 145);
+            this.pictureBox1.Location = new System.Drawing.Point(506, 227);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(150, 150);
             this.pictureBox1.TabIndex = 2;
@@ -971,13 +980,43 @@
             this.Brother_timer.Interval = 1000;
             this.Brother_timer.Tick += new System.EventHandler(this.Brother_timer_Tick);
             // 
+            // programmazioneGlobalLineToolStripMenuItem
+            // 
+            this.programmazioneGlobalLineToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.programmazioneCommessaToolStripMenuItem});
+            this.programmazioneGlobalLineToolStripMenuItem.Name = "programmazioneGlobalLineToolStripMenuItem";
+            this.programmazioneGlobalLineToolStripMenuItem.Size = new System.Drawing.Size(288, 22);
+            this.programmazioneGlobalLineToolStripMenuItem.Text = "--- Programmazione GlobalLine ---";
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(285, 6);
+            // 
+            // toolStripSeparator11
+            // 
+            this.toolStripSeparator11.Name = "toolStripSeparator11";
+            this.toolStripSeparator11.Size = new System.Drawing.Size(285, 6);
+            // 
+            // toolStripSeparator12
+            // 
+            this.toolStripSeparator12.Name = "toolStripSeparator12";
+            this.toolStripSeparator12.Size = new System.Drawing.Size(285, 6);
+            // 
+            // programmazioneCommessaToolStripMenuItem
+            // 
+            this.programmazioneCommessaToolStripMenuItem.Name = "programmazioneCommessaToolStripMenuItem";
+            this.programmazioneCommessaToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
+            this.programmazioneCommessaToolStripMenuItem.Text = "Programmazione - Commessa";
+            this.programmazioneCommessaToolStripMenuItem.Click += new System.EventHandler(this.programmazioneCommessaToolStripMenuItem_Click);
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(800, 542);
+            this.ClientSize = new System.Drawing.Size(1212, 706);
             this.Controls.Add(this.layout_Menu);
             this.IsMdiContainer = true;
             this.Name = "MainMenu";
@@ -1088,6 +1127,11 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
         private System.Windows.Forms.ToolStripMenuItem queryFWOrdinatoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newVersionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem programmazioneGlobalLineToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator12;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator11;
+        private System.Windows.Forms.ToolStripMenuItem programmazioneCommessaToolStripMenuItem;
     }
 }
 

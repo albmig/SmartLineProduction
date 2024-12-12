@@ -1,0 +1,432 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ds_Programmazione_GL" targetNamespace="http://tempuri.org/ds_Programmazione_GL.xsd" xmlns:mstns="http://tempuri.org/ds_Programmazione_GL.xsd" xmlns="http://tempuri.org/ds_Programmazione_GL.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SISTEMATICA_FACTORYConnectionStringOk" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SISTEMATICA_FACTORYConnectionStringOk (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SmartLineProduction.Properties.Settings.GlobalReference.Default.SISTEMATICA_FACTORYConnectionStringOk" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SF_Commesse_GLTableAdapter" GeneratorDataComponentClassName="SF_Commesse_GLTableAdapter" Name="SF_Commesse_GL" UserDataComponentName="SF_Commesse_GLTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionStringOk (Settings)" DbObjectName="SISTEMATICA_FACTORY.dbo.SF_Commesse_GL" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT TipoOrdine, CommessaLong, CommessaShort, Data_Ordine, Data_Conferma_Consegna, Numero_Ordine, Numero_Riga, CodAnagrafico, Ragione_Sociale, Art_Commessa, UM, Qta_Ordinata, Qta_da_Evadere, StatoCommessa, TipoRiga, Is_Kit, Is_SWR_P, Is_SWR_R, DataFineValidita, Device, SW_Device FROM dbo.SF_Commesse_GL</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TipoOrdine" DataSetColumn="TipoOrdine" />
+              <Mapping SourceColumn="CommessaLong" DataSetColumn="CommessaLong" />
+              <Mapping SourceColumn="CommessaShort" DataSetColumn="CommessaShort" />
+              <Mapping SourceColumn="Data_Ordine" DataSetColumn="Data_Ordine" />
+              <Mapping SourceColumn="Data_Conferma_Consegna" DataSetColumn="Data_Conferma_Consegna" />
+              <Mapping SourceColumn="Numero_Ordine" DataSetColumn="Numero_Ordine" />
+              <Mapping SourceColumn="Numero_Riga" DataSetColumn="Numero_Riga" />
+              <Mapping SourceColumn="CodAnagrafico" DataSetColumn="CodAnagrafico" />
+              <Mapping SourceColumn="Ragione_Sociale" DataSetColumn="Ragione_Sociale" />
+              <Mapping SourceColumn="Art_Commessa" DataSetColumn="Art_Commessa" />
+              <Mapping SourceColumn="UM" DataSetColumn="UM" />
+              <Mapping SourceColumn="Qta_Ordinata" DataSetColumn="Qta_Ordinata" />
+              <Mapping SourceColumn="Qta_da_Evadere" DataSetColumn="Qta_da_Evadere" />
+              <Mapping SourceColumn="StatoCommessa" DataSetColumn="StatoCommessa" />
+              <Mapping SourceColumn="TipoRiga" DataSetColumn="TipoRiga" />
+              <Mapping SourceColumn="Is_Kit" DataSetColumn="Is_Kit" />
+              <Mapping SourceColumn="Is_SWR_P" DataSetColumn="Is_SWR_P" />
+              <Mapping SourceColumn="Is_SWR_R" DataSetColumn="Is_SWR_R" />
+              <Mapping SourceColumn="DataFineValidita" DataSetColumn="DataFineValidita" />
+              <Mapping SourceColumn="Device" DataSetColumn="Device" />
+              <Mapping SourceColumn="SW_Device" DataSetColumn="SW_Device" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionStringOk (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy_CommessePack" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy_CommessePack" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy_CommessePack">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        SF_Commesse_GL.TipoOrdine, SF_Commesse_GL.CommessaLong, SF_Commesse_GL.CommessaShort, SF_Commesse_GL.Data_Ordine, SF_Commesse_GL.Data_Conferma_Consegna, SF_Commesse_GL.Numero_Ordine, 
+                         SF_Commesse_GL.Numero_Riga, SF_Commesse_GL.CodAnagrafico, SF_Commesse_GL.Ragione_Sociale, SF_Commesse_GL.Art_Commessa, SF_Commesse_GL.UM, SF_Commesse_GL.Qta_Ordinata, 
+                         SF_Commesse_GL.Qta_da_Evadere, SF_Commesse_GL.StatoCommessa, SF_Commesse_GL.TipoRiga, SF_Commesse_GL.Is_Kit, SF_Commesse_GL.Is_SWR_P, SF_Commesse_GL.Is_SWR_R, 
+                         SF_Commesse_GL.DataFineValidita, SF_Commesse_GL.Device, SF_Commesse_GL.SW_Device, CASE WHEN CommesseSL_Count.QtaEvasa IS NULL THEN 0 ELSE CommesseSL_Count.QtaEvasa END AS Qta_Evasa, 
+                         CommesseSL_Count.Ser_Commessa, CommesseSL_Count.Ser_Kit, CommesseSL_Count.Ser_Device
+FROM            SF_Commesse_GL LEFT OUTER JOIN
+                         CommesseSL_Count ON SF_Commesse_GL.CommessaLong = CommesseSL_Count.Ser_Commessa AND SF_Commesse_GL.Art_Commessa = CommesseSL_Count.Ser_Kit AND 
+                         SF_Commesse_GL.Device = CommesseSL_Count.Ser_Device
+WHERE        (SF_Commesse_GL.Is_Kit = '1') OR
+                         (SF_Commesse_GL.Is_SWR_P = '1') OR
+                         (SF_Commesse_GL.Is_SWR_R = '1')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SF_ArticoliToXSWR_GLTableAdapter" GeneratorDataComponentClassName="SF_ArticoliToXSWR_GLTableAdapter" Name="SF_ArticoliToXSWR_GL" UserDataComponentName="SF_ArticoliToXSWR_GLTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionStringOk (Settings)" DbObjectName="SISTEMATICA_FACTORY.dbo.SF_ArticoliToXSWR_GL" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ArtCommessa, CodiceFw, Descrizione, DescrizioneEstesa, DataInizioValidita, DataFineValidita FROM dbo.SF_ArticoliToXSWR_GL</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ArtCommessa" DataSetColumn="ArtCommessa" />
+              <Mapping SourceColumn="CodiceFw" DataSetColumn="CodiceFw" />
+              <Mapping SourceColumn="Descrizione" DataSetColumn="Descrizione" />
+              <Mapping SourceColumn="DescrizioneEstesa" DataSetColumn="DescrizioneEstesa" />
+              <Mapping SourceColumn="DataInizioValidita" DataSetColumn="DataInizioValidita" />
+              <Mapping SourceColumn="DataFineValidita" DataSetColumn="DataFineValidita" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SF_Articoli_GLTableAdapter" GeneratorDataComponentClassName="SF_Articoli_GLTableAdapter" Name="SF_Articoli_GL" UserDataComponentName="SF_Articoli_GLTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionStringOk (Settings)" DbObjectName="SISTEMATICA_FACTORY.dbo.SF_Articoli_GL" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Articolo, Descrizione, DescrizioneEstesa, Modello, Prefix_3, Prefix_5 FROM dbo.SF_Articoli_GL</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Articolo" DataSetColumn="Articolo" />
+              <Mapping SourceColumn="Descrizione" DataSetColumn="Descrizione" />
+              <Mapping SourceColumn="DescrizioneEstesa" DataSetColumn="DescrizioneEstesa" />
+              <Mapping SourceColumn="Modello" DataSetColumn="Modello" />
+              <Mapping SourceColumn="Prefix_3" DataSetColumn="Prefix_3" />
+              <Mapping SourceColumn="Prefix_5" DataSetColumn="Prefix_5" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CommesseGL_CountTableAdapter" GeneratorDataComponentClassName="CommesseGL_CountTableAdapter" Name="CommesseGL_Count" UserDataComponentName="CommesseGL_CountTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionStringOk (Settings)" DbObjectName="SISTEMATICA_FACTORY.dbo.CommesseGL_Count" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Ser_Commessa, Ser_Kit, Ser_Device, QtaEvasa FROM dbo.CommesseGL_Count</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Ser_Commessa" DataSetColumn="Ser_Commessa" />
+              <Mapping SourceColumn="Ser_Kit" DataSetColumn="Ser_Kit" />
+              <Mapping SourceColumn="Ser_Device" DataSetColumn="Ser_Device" />
+              <Mapping SourceColumn="QtaEvasa" DataSetColumn="QtaEvasa" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SF_LastSerialNumber_GLTableAdapter" GeneratorDataComponentClassName="SF_LastSerialNumber_GLTableAdapter" Name="SF_LastSerialNumber_GL" UserDataComponentName="SF_LastSerialNumber_GLTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionStringOk (Settings)" DbObjectName="SISTEMATICA_FACTORY.dbo.SF_LastSerialNumber_GL" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Anno, LastSerialID FROM dbo.SF_LastSerialNumber_GL</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Anno" DataSetColumn="Anno" />
+              <Mapping SourceColumn="LastSerialID" DataSetColumn="LastSerialID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ds_Programmazione_GL" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ds_Programmazione_GL" msprop:Generator_UserDSName="ds_Programmazione_GL">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SF_Commesse_GL" msprop:Generator_TableClassName="SF_Commesse_GLDataTable" msprop:Generator_TableVarName="tableSF_Commesse_GL" msprop:Generator_RowChangedName="SF_Commesse_GLRowChanged" msprop:Generator_TablePropName="SF_Commesse_GL" msprop:Generator_RowDeletingName="SF_Commesse_GLRowDeleting" msprop:Generator_RowChangingName="SF_Commesse_GLRowChanging" msprop:Generator_RowEvHandlerName="SF_Commesse_GLRowChangeEventHandler" msprop:Generator_RowDeletedName="SF_Commesse_GLRowDeleted" msprop:Generator_RowClassName="SF_Commesse_GLRow" msprop:Generator_UserTableName="SF_Commesse_GL" msprop:Generator_RowEvArgName="SF_Commesse_GLRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TipoOrdine" msprop:Generator_ColumnVarNameInTable="columnTipoOrdine" msprop:Generator_ColumnPropNameInRow="TipoOrdine" msprop:Generator_ColumnPropNameInTable="TipoOrdineColumn" msprop:Generator_UserColumnName="TipoOrdine" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CommessaLong" msprop:Generator_ColumnVarNameInTable="columnCommessaLong" msprop:Generator_ColumnPropNameInRow="CommessaLong" msprop:Generator_ColumnPropNameInTable="CommessaLongColumn" msprop:Generator_UserColumnName="CommessaLong" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CommessaShort" msprop:Generator_ColumnVarNameInTable="columnCommessaShort" msprop:Generator_ColumnPropNameInRow="CommessaShort" msprop:Generator_ColumnPropNameInTable="CommessaShortColumn" msprop:Generator_UserColumnName="CommessaShort" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Data_Ordine" msprop:Generator_ColumnVarNameInTable="columnData_Ordine" msprop:Generator_ColumnPropNameInRow="Data_Ordine" msprop:Generator_ColumnPropNameInTable="Data_OrdineColumn" msprop:Generator_UserColumnName="Data_Ordine" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Data_Conferma_Consegna" msprop:Generator_ColumnVarNameInTable="columnData_Conferma_Consegna" msprop:Generator_ColumnPropNameInRow="Data_Conferma_Consegna" msprop:Generator_ColumnPropNameInTable="Data_Conferma_ConsegnaColumn" msprop:Generator_UserColumnName="Data_Conferma_Consegna" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Numero_Ordine" msprop:Generator_ColumnVarNameInTable="columnNumero_Ordine" msprop:Generator_ColumnPropNameInRow="Numero_Ordine" msprop:Generator_ColumnPropNameInTable="Numero_OrdineColumn" msprop:Generator_UserColumnName="Numero_Ordine" type="xs:int" minOccurs="0" />
+              <xs:element name="Numero_Riga" msprop:Generator_ColumnVarNameInTable="columnNumero_Riga" msprop:Generator_ColumnPropNameInRow="Numero_Riga" msprop:Generator_ColumnPropNameInTable="Numero_RigaColumn" msprop:Generator_UserColumnName="Numero_Riga" type="xs:int" minOccurs="0" />
+              <xs:element name="CodAnagrafico" msprop:Generator_ColumnVarNameInTable="columnCodAnagrafico" msprop:Generator_ColumnPropNameInRow="CodAnagrafico" msprop:Generator_ColumnPropNameInTable="CodAnagraficoColumn" msprop:Generator_UserColumnName="CodAnagrafico" type="xs:int" minOccurs="0" />
+              <xs:element name="Ragione_Sociale" msprop:Generator_ColumnVarNameInTable="columnRagione_Sociale" msprop:Generator_ColumnPropNameInRow="Ragione_Sociale" msprop:Generator_ColumnPropNameInTable="Ragione_SocialeColumn" msprop:Generator_UserColumnName="Ragione_Sociale" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Art_Commessa" msprop:Generator_ColumnVarNameInTable="columnArt_Commessa" msprop:Generator_ColumnPropNameInRow="Art_Commessa" msprop:Generator_ColumnPropNameInTable="Art_CommessaColumn" msprop:Generator_UserColumnName="Art_Commessa" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UM" msprop:Generator_ColumnVarNameInTable="columnUM" msprop:Generator_ColumnPropNameInRow="UM" msprop:Generator_ColumnPropNameInTable="UMColumn" msprop:Generator_UserColumnName="UM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Qta_Ordinata" msprop:Generator_ColumnVarNameInTable="columnQta_Ordinata" msprop:Generator_ColumnPropNameInRow="Qta_Ordinata" msprop:Generator_ColumnPropNameInTable="Qta_OrdinataColumn" msprop:Generator_UserColumnName="Qta_Ordinata" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Qta_da_Evadere" msprop:Generator_ColumnVarNameInTable="columnQta_da_Evadere" msprop:Generator_ColumnPropNameInRow="Qta_da_Evadere" msprop:Generator_ColumnPropNameInTable="Qta_da_EvadereColumn" msprop:Generator_UserColumnName="Qta_da_Evadere" type="xs:decimal" minOccurs="0" />
+              <xs:element name="StatoCommessa" msprop:Generator_ColumnVarNameInTable="columnStatoCommessa" msprop:Generator_ColumnPropNameInRow="StatoCommessa" msprop:Generator_ColumnPropNameInTable="StatoCommessaColumn" msprop:Generator_UserColumnName="StatoCommessa" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TipoRiga" msprop:Generator_ColumnVarNameInTable="columnTipoRiga" msprop:Generator_ColumnPropNameInRow="TipoRiga" msprop:Generator_ColumnPropNameInTable="TipoRigaColumn" msprop:Generator_UserColumnName="TipoRiga" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Is_Kit" msprop:Generator_ColumnVarNameInTable="columnIs_Kit" msprop:Generator_ColumnPropNameInRow="Is_Kit" msprop:Generator_ColumnPropNameInTable="Is_KitColumn" msprop:Generator_UserColumnName="Is_Kit" type="xs:int" />
+              <xs:element name="Is_SWR_P" msprop:Generator_ColumnVarNameInTable="columnIs_SWR_P" msprop:Generator_ColumnPropNameInRow="Is_SWR_P" msprop:Generator_ColumnPropNameInTable="Is_SWR_PColumn" msprop:Generator_UserColumnName="Is_SWR_P" type="xs:int" />
+              <xs:element name="Is_SWR_R" msprop:Generator_ColumnVarNameInTable="columnIs_SWR_R" msprop:Generator_ColumnPropNameInRow="Is_SWR_R" msprop:Generator_ColumnPropNameInTable="Is_SWR_RColumn" msprop:Generator_UserColumnName="Is_SWR_R" type="xs:int" />
+              <xs:element name="DataFineValidita" msprop:Generator_ColumnVarNameInTable="columnDataFineValidita" msprop:Generator_ColumnPropNameInRow="DataFineValidita" msprop:Generator_ColumnPropNameInTable="DataFineValiditaColumn" msprop:Generator_UserColumnName="DataFineValidita" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Device" msprop:Generator_ColumnVarNameInTable="columnDevice" msprop:Generator_ColumnPropNameInRow="Device" msprop:Generator_ColumnPropNameInTable="DeviceColumn" msprop:Generator_UserColumnName="Device" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SW_Device" msprop:Generator_ColumnVarNameInTable="columnSW_Device" msprop:Generator_ColumnPropNameInRow="SW_Device" msprop:Generator_ColumnPropNameInTable="SW_DeviceColumn" msprop:Generator_UserColumnName="SW_Device" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SF_ArticoliToXSWR_GL" msprop:Generator_TableClassName="SF_ArticoliToXSWR_GLDataTable" msprop:Generator_TableVarName="tableSF_ArticoliToXSWR_GL" msprop:Generator_RowChangedName="SF_ArticoliToXSWR_GLRowChanged" msprop:Generator_TablePropName="SF_ArticoliToXSWR_GL" msprop:Generator_RowDeletingName="SF_ArticoliToXSWR_GLRowDeleting" msprop:Generator_RowChangingName="SF_ArticoliToXSWR_GLRowChanging" msprop:Generator_RowEvHandlerName="SF_ArticoliToXSWR_GLRowChangeEventHandler" msprop:Generator_RowDeletedName="SF_ArticoliToXSWR_GLRowDeleted" msprop:Generator_RowClassName="SF_ArticoliToXSWR_GLRow" msprop:Generator_UserTableName="SF_ArticoliToXSWR_GL" msprop:Generator_RowEvArgName="SF_ArticoliToXSWR_GLRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ArtCommessa" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnArtCommessa" msprop:Generator_ColumnPropNameInRow="ArtCommessa" msprop:Generator_ColumnPropNameInTable="ArtCommessaColumn" msprop:Generator_UserColumnName="ArtCommessa" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CodiceFw" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCodiceFw" msprop:Generator_ColumnPropNameInRow="CodiceFw" msprop:Generator_ColumnPropNameInTable="CodiceFwColumn" msprop:Generator_UserColumnName="CodiceFw" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Descrizione" msprop:Generator_ColumnVarNameInTable="columnDescrizione" msprop:Generator_ColumnPropNameInRow="Descrizione" msprop:Generator_ColumnPropNameInTable="DescrizioneColumn" msprop:Generator_UserColumnName="Descrizione" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DescrizioneEstesa" msprop:Generator_ColumnVarNameInTable="columnDescrizioneEstesa" msprop:Generator_ColumnPropNameInRow="DescrizioneEstesa" msprop:Generator_ColumnPropNameInTable="DescrizioneEstesaColumn" msprop:Generator_UserColumnName="DescrizioneEstesa" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DataInizioValidita" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDataInizioValidita" msprop:Generator_ColumnPropNameInRow="DataInizioValidita" msprop:Generator_ColumnPropNameInTable="DataInizioValiditaColumn" msprop:Generator_UserColumnName="DataInizioValidita" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DataFineValidita" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDataFineValidita" msprop:Generator_ColumnPropNameInRow="DataFineValidita" msprop:Generator_ColumnPropNameInTable="DataFineValiditaColumn" msprop:Generator_UserColumnName="DataFineValidita" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SF_Articoli_GL" msprop:Generator_TableClassName="SF_Articoli_GLDataTable" msprop:Generator_TableVarName="tableSF_Articoli_GL" msprop:Generator_TablePropName="SF_Articoli_GL" msprop:Generator_RowDeletingName="SF_Articoli_GLRowDeleting" msprop:Generator_RowChangingName="SF_Articoli_GLRowChanging" msprop:Generator_RowEvHandlerName="SF_Articoli_GLRowChangeEventHandler" msprop:Generator_RowDeletedName="SF_Articoli_GLRowDeleted" msprop:Generator_UserTableName="SF_Articoli_GL" msprop:Generator_RowChangedName="SF_Articoli_GLRowChanged" msprop:Generator_RowEvArgName="SF_Articoli_GLRowChangeEvent" msprop:Generator_RowClassName="SF_Articoli_GLRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Articolo" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnArticolo" msprop:Generator_ColumnPropNameInRow="Articolo" msprop:Generator_ColumnPropNameInTable="ArticoloColumn" msprop:Generator_UserColumnName="Articolo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Descrizione" msprop:Generator_ColumnVarNameInTable="columnDescrizione" msprop:Generator_ColumnPropNameInRow="Descrizione" msprop:Generator_ColumnPropNameInTable="DescrizioneColumn" msprop:Generator_UserColumnName="Descrizione" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DescrizioneEstesa" msprop:Generator_ColumnVarNameInTable="columnDescrizioneEstesa" msprop:Generator_ColumnPropNameInRow="DescrizioneEstesa" msprop:Generator_ColumnPropNameInTable="DescrizioneEstesaColumn" msprop:Generator_UserColumnName="DescrizioneEstesa" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Modello" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnModello" msprop:Generator_ColumnPropNameInRow="Modello" msprop:Generator_ColumnPropNameInTable="ModelloColumn" msprop:Generator_UserColumnName="Modello" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Prefix_3" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPrefix_3" msprop:Generator_ColumnPropNameInRow="Prefix_3" msprop:Generator_ColumnPropNameInTable="Prefix_3Column" msprop:Generator_UserColumnName="Prefix_3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Prefix_5" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPrefix_5" msprop:Generator_ColumnPropNameInRow="Prefix_5" msprop:Generator_ColumnPropNameInTable="Prefix_5Column" msprop:Generator_UserColumnName="Prefix_5" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CommesseGL_Count" msprop:Generator_TableClassName="CommesseGL_CountDataTable" msprop:Generator_TableVarName="tableCommesseGL_Count" msprop:Generator_RowChangedName="CommesseGL_CountRowChanged" msprop:Generator_TablePropName="CommesseGL_Count" msprop:Generator_RowDeletingName="CommesseGL_CountRowDeleting" msprop:Generator_RowChangingName="CommesseGL_CountRowChanging" msprop:Generator_RowEvHandlerName="CommesseGL_CountRowChangeEventHandler" msprop:Generator_RowDeletedName="CommesseGL_CountRowDeleted" msprop:Generator_RowClassName="CommesseGL_CountRow" msprop:Generator_UserTableName="CommesseGL_Count" msprop:Generator_RowEvArgName="CommesseGL_CountRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Ser_Commessa" msprop:Generator_ColumnVarNameInTable="columnSer_Commessa" msprop:Generator_ColumnPropNameInRow="Ser_Commessa" msprop:Generator_ColumnPropNameInTable="Ser_CommessaColumn" msprop:Generator_UserColumnName="Ser_Commessa" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ser_Kit" msprop:Generator_ColumnVarNameInTable="columnSer_Kit" msprop:Generator_ColumnPropNameInRow="Ser_Kit" msprop:Generator_ColumnPropNameInTable="Ser_KitColumn" msprop:Generator_UserColumnName="Ser_Kit" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ser_Device" msprop:Generator_ColumnVarNameInTable="columnSer_Device" msprop:Generator_ColumnPropNameInRow="Ser_Device" msprop:Generator_ColumnPropNameInTable="Ser_DeviceColumn" msprop:Generator_UserColumnName="Ser_Device" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QtaEvasa" msprop:Generator_ColumnVarNameInTable="columnQtaEvasa" msprop:Generator_ColumnPropNameInRow="QtaEvasa" msprop:Generator_ColumnPropNameInTable="QtaEvasaColumn" msprop:Generator_UserColumnName="QtaEvasa" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SF_LastSerialNumber_GL" msprop:Generator_TableClassName="SF_LastSerialNumber_GLDataTable" msprop:Generator_TableVarName="tableSF_LastSerialNumber_GL" msprop:Generator_RowChangedName="SF_LastSerialNumber_GLRowChanged" msprop:Generator_TablePropName="SF_LastSerialNumber_GL" msprop:Generator_RowDeletingName="SF_LastSerialNumber_GLRowDeleting" msprop:Generator_RowChangingName="SF_LastSerialNumber_GLRowChanging" msprop:Generator_RowEvHandlerName="SF_LastSerialNumber_GLRowChangeEventHandler" msprop:Generator_RowDeletedName="SF_LastSerialNumber_GLRowDeleted" msprop:Generator_RowClassName="SF_LastSerialNumber_GLRow" msprop:Generator_UserTableName="SF_LastSerialNumber_GL" msprop:Generator_RowEvArgName="SF_LastSerialNumber_GLRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Anno" msprop:Generator_ColumnVarNameInTable="columnAnno" msprop:Generator_ColumnPropNameInRow="Anno" msprop:Generator_ColumnPropNameInTable="AnnoColumn" msprop:Generator_UserColumnName="Anno" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LastSerialID" msprop:Generator_ColumnVarNameInTable="columnLastSerialID" msprop:Generator_ColumnPropNameInRow="LastSerialID" msprop:Generator_ColumnPropNameInTable="LastSerialIDColumn" msprop:Generator_UserColumnName="LastSerialID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_Tmp_Programma" msprop:Generator_TableClassName="dt_Tmp_ProgrammaDataTable" msprop:Generator_TableVarName="tabledt_Tmp_Programma" msprop:Generator_TablePropName="dt_Tmp_Programma" msprop:Generator_RowDeletingName="dt_Tmp_ProgrammaRowDeleting" msprop:Generator_RowChangingName="dt_Tmp_ProgrammaRowChanging" msprop:Generator_RowEvHandlerName="dt_Tmp_ProgrammaRowChangeEventHandler" msprop:Generator_RowDeletedName="dt_Tmp_ProgrammaRowDeleted" msprop:Generator_UserTableName="dt_Tmp_Programma" msprop:Generator_RowChangedName="dt_Tmp_ProgrammaRowChanged" msprop:Generator_RowEvArgName="dt_Tmp_ProgrammaRowChangeEvent" msprop:Generator_RowClassName="dt_Tmp_ProgrammaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="tmp_prog_id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columntmp_prog_id" msprop:Generator_ColumnPropNameInRow="tmp_prog_id" msprop:Generator_ColumnPropNameInTable="tmp_prog_idColumn" msprop:Generator_UserColumnName="tmp_prog_id" type="xs:short" />
+              <xs:element name="tmp_prog_commessa" msprop:Generator_ColumnVarNameInTable="columntmp_prog_commessa" msprop:Generator_ColumnPropNameInRow="tmp_prog_commessa" msprop:Generator_ColumnPropNameInTable="tmp_prog_commessaColumn" msprop:Generator_UserColumnName="tmp_prog_commessa" type="xs:string" minOccurs="0" />
+              <xs:element name="tmp_prog_codart_kit" msprop:Generator_ColumnVarNameInTable="columntmp_prog_codart_kit" msprop:Generator_ColumnPropNameInRow="tmp_prog_codart_kit" msprop:Generator_ColumnPropNameInTable="tmp_prog_codart_kitColumn" msprop:Generator_UserColumnName="tmp_prog_codart_kit" type="xs:string" minOccurs="0" />
+              <xs:element name="tmp_prog_codart_item" msprop:Generator_ColumnVarNameInTable="columntmp_prog_codart_item" msprop:Generator_ColumnPropNameInRow="tmp_prog_codart_item" msprop:Generator_ColumnPropNameInTable="tmp_prog_codart_itemColumn" msprop:Generator_UserColumnName="tmp_prog_codart_item" type="xs:string" minOccurs="0" />
+              <xs:element name="tmp_prog_codart_fw" msprop:Generator_ColumnVarNameInTable="columntmp_prog_codart_fw" msprop:Generator_ColumnPropNameInRow="tmp_prog_codart_fw" msprop:Generator_ColumnPropNameInTable="tmp_prog_codart_fwColumn" msprop:Generator_UserColumnName="tmp_prog_codart_fw" type="xs:string" minOccurs="0" />
+              <xs:element name="tmp_fw_key_id" msprop:Generator_ColumnVarNameInTable="columntmp_fw_key_id" msprop:Generator_ColumnPropNameInRow="tmp_fw_key_id" msprop:Generator_ColumnPropNameInTable="tmp_fw_key_idColumn" msprop:Generator_UserColumnName="tmp_fw_key_id" type="xs:short" minOccurs="0" />
+              <xs:element name="tmp_ID_Hardware" msprop:Generator_ColumnVarNameInTable="columntmp_ID_Hardware" msprop:Generator_ColumnPropNameInRow="tmp_ID_Hardware" msprop:Generator_ColumnPropNameInTable="tmp_ID_HardwareColumn" msprop:Generator_UserColumnName="tmp_ID_Hardware" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dt_Tmp_Fw" msprop:Generator_TableClassName="dt_Tmp_FwDataTable" msprop:Generator_TableVarName="tabledt_Tmp_Fw" msprop:Generator_TablePropName="dt_Tmp_Fw" msprop:Generator_RowDeletingName="dt_Tmp_FwRowDeleting" msprop:Generator_RowChangingName="dt_Tmp_FwRowChanging" msprop:Generator_RowEvHandlerName="dt_Tmp_FwRowChangeEventHandler" msprop:Generator_RowDeletedName="dt_Tmp_FwRowDeleted" msprop:Generator_UserTableName="dt_Tmp_Fw" msprop:Generator_RowChangedName="dt_Tmp_FwRowChanged" msprop:Generator_RowEvArgName="dt_Tmp_FwRowChangeEvent" msprop:Generator_RowClassName="dt_Tmp_FwRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="fw_codfw" msprop:Generator_ColumnVarNameInTable="columnfw_codfw" msprop:Generator_ColumnPropNameInRow="fw_codfw" msprop:Generator_ColumnPropNameInTable="fw_codfwColumn" msprop:Generator_UserColumnName="fw_codfw" type="xs:string" minOccurs="0" />
+              <xs:element name="fw_pathfw" msprop:Generator_ColumnVarNameInTable="columnfw_pathfw" msprop:Generator_ColumnPropNameInRow="fw_pathfw" msprop:Generator_ColumnPropNameInTable="fw_pathfwColumn" msprop:Generator_UserColumnName="fw_pathfw" type="xs:string" minOccurs="0" />
+              <xs:element name="fw_prefix" msprop:Generator_ColumnVarNameInTable="columnfw_prefix" msprop:Generator_ColumnPropNameInRow="fw_prefix" msprop:Generator_ColumnPropNameInTable="fw_prefixColumn" msprop:Generator_UserColumnName="fw_prefix" type="xs:string" minOccurs="0" />
+              <xs:element name="fw_tipodev" msprop:Generator_ColumnVarNameInTable="columnfw_tipodev" msprop:Generator_ColumnPropNameInRow="fw_tipodev" msprop:Generator_ColumnPropNameInTable="fw_tipodevColumn" msprop:Generator_UserColumnName="fw_tipodev" type="xs:string" minOccurs="0" />
+              <xs:element name="fw_standcust" msprop:Generator_ColumnVarNameInTable="columnfw_standcust" msprop:Generator_ColumnPropNameInRow="fw_standcust" msprop:Generator_ColumnPropNameInTable="fw_standcustColumn" msprop:Generator_UserColumnName="fw_standcust" type="xs:string" minOccurs="0" />
+              <xs:element name="fw_versione" msprop:Generator_ColumnVarNameInTable="columnfw_versione" msprop:Generator_ColumnPropNameInRow="fw_versione" msprop:Generator_ColumnPropNameInTable="fw_versioneColumn" msprop:Generator_UserColumnName="fw_versione" type="xs:string" minOccurs="0" />
+              <xs:element name="fw_freq" msprop:Generator_ColumnVarNameInTable="columnfw_freq" msprop:Generator_ColumnPropNameInRow="fw_freq" msprop:Generator_ColumnPropNameInTable="fw_freqColumn" msprop:Generator_UserColumnName="fw_freq" type="xs:string" minOccurs="0" />
+              <xs:element name="fw_searchvers" msprop:Generator_ColumnVarNameInTable="columnfw_searchvers" msprop:Generator_ColumnPropNameInRow="fw_searchvers" msprop:Generator_ColumnPropNameInTable="fw_searchversColumn" msprop:Generator_UserColumnName="fw_searchvers" type="xs:string" minOccurs="0" />
+              <xs:element name="fw_id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnfw_id" msprop:Generator_ColumnPropNameInRow="fw_id" msprop:Generator_ColumnPropNameInTable="fw_idColumn" msprop:Generator_UserColumnName="fw_id" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="SF_Commesse_GL_SF_ArticoliToXSWR_GL" msdata:parent="SF_Commesse_GL" msdata:child="SF_ArticoliToXSWR_GL" msdata:parentkey="Art_Commessa" msdata:childkey="ArtCommessa" msprop:Generator_UserChildTable="SF_ArticoliToXSWR_GL" msprop:Generator_ChildPropName="GetSF_ArticoliToXSWR_GLRows" msprop:Generator_UserRelationName="SF_Commesse_GL_SF_ArticoliToXSWR_GL" msprop:Generator_RelationVarName="relationSF_Commesse_GL_SF_ArticoliToXSWR_GL" msprop:Generator_UserParentTable="SF_Commesse_GL" msprop:Generator_ParentPropName="SF_Commesse_GLRow" />
+      <msdata:Relationship name="SF_Commesse_GL_SF_Articoli_GL" msdata:parent="SF_Commesse_GL" msdata:child="SF_Articoli_GL" msdata:parentkey="Device" msdata:childkey="Articolo" msprop:Generator_UserChildTable="SF_Articoli_GL" msprop:Generator_ChildPropName="GetSF_Articoli_GLRows" msprop:Generator_UserRelationName="SF_Commesse_GL_SF_Articoli_GL" msprop:Generator_ParentPropName="SF_Commesse_GLRow" msprop:Generator_RelationVarName="relationSF_Commesse_GL_SF_Articoli_GL" msprop:Generator_UserParentTable="SF_Commesse_GL" />
+      <msdata:Relationship name="SF_Commesse_GL_CommesseGL_Count" msdata:parent="SF_Commesse_GL" msdata:child="CommesseGL_Count" msdata:parentkey="CommessaLong Art_Commessa Device" msdata:childkey="Ser_Commessa Ser_Kit Ser_Device" msprop:Generator_UserChildTable="CommesseGL_Count" msprop:Generator_ChildPropName="GetCommesseGL_CountRows" msprop:Generator_UserRelationName="SF_Commesse_GL_CommesseGL_Count" msprop:Generator_RelationVarName="relationSF_Commesse_GL_CommesseGL_Count" msprop:Generator_UserParentTable="SF_Commesse_GL" msprop:Generator_ParentPropName="SF_Commesse_GLRowParent" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>
