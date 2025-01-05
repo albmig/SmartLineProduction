@@ -51,8 +51,8 @@ namespace SmartLineProduction
         private void UC_Programmazione_GL_Commessa_Load(object sender, EventArgs e)
         {
             // Abilita zone dello schermo
-            ds_Programmazione_GL.dt_Tmp_Fw.Clear();
-            ds_Programmazione_GL.dt_Tmp_Programma.Clear();
+            ds_Programmazione_GL.dt_GL_Tmp_Fw.Clear();
+            ds_Programmazione_GL.dt_GL_Tmp_Programma.Clear();
             AbilitaSchermo();
 
             CaricaArchivi();
@@ -222,7 +222,7 @@ namespace SmartLineProduction
                 }
                 else
                 {
-                    ds_Programmazione_GL.dt_Tmp_Programma.Clear();
+                    ds_Programmazione_GL.dt_GL_Tmp_Programma.Clear();
                     ds_SL.dt_TMP_Firmware.Clear();
 
                     //Ricerca di tutti i device e di tutti i software
@@ -435,14 +435,14 @@ namespace SmartLineProduction
 
         private bool AggiungiRigaProg(string Commessa, string Kit, string Item, string cod_fw, int fw_key_id, string ID_Hw)
         {
-            DataRow dr = ds_Programmazione_GL.dt_Tmp_Programma.NewRow();
+            DataRow dr = ds_Programmazione_GL.dt_GL_Tmp_Programma.NewRow();
             dr["tmp_prog_commessa"] = Commessa;
             dr["tmp_prog_codart_kit"] = Kit;
             dr["tmp_prog_codart_item"] = Item;
             dr["tmp_prog_codart_fw"] = cod_fw;
             dr["tmp_fw_key_id"] = fw_key_id;
             dr["tmp_ID_Hardware"] = ID_Hw;
-            ds_Programmazione_GL.dt_Tmp_Programma.Rows.Add(dr);
+            ds_Programmazione_GL.dt_GL_Tmp_Programma.Rows.Add(dr);
 
             return true;
         }
@@ -539,7 +539,7 @@ namespace SmartLineProduction
             }
             else
             {
-                DataView dv = new DataView(ds_Programmazione_GL.dt_Tmp_Fw);
+                DataView dv = new DataView(ds_Programmazione_GL.dt_GL_Tmp_Fw);
 
                 dv.RowFilter = "fw_id = " + fw_key_id;
                 if (dv.Count > 0)
@@ -1481,7 +1481,7 @@ namespace SmartLineProduction
         private void AggiornaSN(string Commessa, string Kit, string Item, int fw_key_id, string nome_fw_full, string ID_Hw, string serial_read, string serial_write, string ID_Cli)
         {
             // Recupero Codice Firmware
-            DataView dv = new DataView(ds_Programmazione_GL.dt_Tmp_Fw);
+            DataView dv = new DataView(ds_Programmazione_GL.dt_GL_Tmp_Fw);
             string codice_fw = "";
             bool Fw_isStandard = false;
             string Fw_Rev = "";

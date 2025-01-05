@@ -34,15 +34,33 @@ namespace SmartLineProduction {
         
         private SF_LastSerialNumber_GLDataTable tableSF_LastSerialNumber_GL;
         
-        private dt_Tmp_ProgrammaDataTable tabledt_Tmp_Programma;
+        private GL_FW_ClientiDataTable tableGL_FW_Clienti;
         
-        private dt_Tmp_FwDataTable tabledt_Tmp_Fw;
+        private GL_SerialNumbersDataTable tableGL_SerialNumbers;
+        
+        private GL_FirmwareDataTable tableGL_Firmware;
+        
+        private dt_Firmware_lookupCommesseGLDataTable tabledt_Firmware_lookupCommesseGL;
+        
+        private SerialNumbersGL_ObsoleteDataTable tableSerialNumbersGL_Obsolete;
+        
+        private SafetyPointRFID_GLDataTable tableSafetyPointRFID_GL;
+        
+        private GL_FW_RevisioniDataTable tableGL_FW_Revisioni;
+        
+        private dt_GL_Tmp_ProgrammaDataTable tabledt_GL_Tmp_Programma;
+        
+        private dt_GL_Tmp_FwDataTable tabledt_GL_Tmp_Fw;
         
         private global::System.Data.DataRelation relationSF_Commesse_GL_SF_ArticoliToXSWR_GL;
         
         private global::System.Data.DataRelation relationSF_Commesse_GL_SF_Articoli_GL;
         
         private global::System.Data.DataRelation relationSF_Commesse_GL_CommesseGL_Count;
+        
+        private global::System.Data.DataRelation relationSF_Commesse_GL_GL_FW_Clienti;
+        
+        private global::System.Data.DataRelation relationdt_GL_Tmp_Programma_GL_Firmware;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -87,11 +105,32 @@ namespace SmartLineProduction {
                 if ((ds.Tables["SF_LastSerialNumber_GL"] != null)) {
                     base.Tables.Add(new SF_LastSerialNumber_GLDataTable(ds.Tables["SF_LastSerialNumber_GL"]));
                 }
-                if ((ds.Tables["dt_Tmp_Programma"] != null)) {
-                    base.Tables.Add(new dt_Tmp_ProgrammaDataTable(ds.Tables["dt_Tmp_Programma"]));
+                if ((ds.Tables["GL_FW_Clienti"] != null)) {
+                    base.Tables.Add(new GL_FW_ClientiDataTable(ds.Tables["GL_FW_Clienti"]));
                 }
-                if ((ds.Tables["dt_Tmp_Fw"] != null)) {
-                    base.Tables.Add(new dt_Tmp_FwDataTable(ds.Tables["dt_Tmp_Fw"]));
+                if ((ds.Tables["GL_SerialNumbers"] != null)) {
+                    base.Tables.Add(new GL_SerialNumbersDataTable(ds.Tables["GL_SerialNumbers"]));
+                }
+                if ((ds.Tables["GL_Firmware"] != null)) {
+                    base.Tables.Add(new GL_FirmwareDataTable(ds.Tables["GL_Firmware"]));
+                }
+                if ((ds.Tables["dt_Firmware_lookupCommesseGL"] != null)) {
+                    base.Tables.Add(new dt_Firmware_lookupCommesseGLDataTable(ds.Tables["dt_Firmware_lookupCommesseGL"]));
+                }
+                if ((ds.Tables["SerialNumbersGL_Obsolete"] != null)) {
+                    base.Tables.Add(new SerialNumbersGL_ObsoleteDataTable(ds.Tables["SerialNumbersGL_Obsolete"]));
+                }
+                if ((ds.Tables["SafetyPointRFID_GL"] != null)) {
+                    base.Tables.Add(new SafetyPointRFID_GLDataTable(ds.Tables["SafetyPointRFID_GL"]));
+                }
+                if ((ds.Tables["GL_FW_Revisioni"] != null)) {
+                    base.Tables.Add(new GL_FW_RevisioniDataTable(ds.Tables["GL_FW_Revisioni"]));
+                }
+                if ((ds.Tables["dt_GL_Tmp_Programma"] != null)) {
+                    base.Tables.Add(new dt_GL_Tmp_ProgrammaDataTable(ds.Tables["dt_GL_Tmp_Programma"]));
+                }
+                if ((ds.Tables["dt_GL_Tmp_Fw"] != null)) {
+                    base.Tables.Add(new dt_GL_Tmp_FwDataTable(ds.Tables["dt_GL_Tmp_Fw"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -165,9 +204,9 @@ namespace SmartLineProduction {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public dt_Tmp_ProgrammaDataTable dt_Tmp_Programma {
+        public GL_FW_ClientiDataTable GL_FW_Clienti {
             get {
-                return this.tabledt_Tmp_Programma;
+                return this.tableGL_FW_Clienti;
             }
         }
         
@@ -175,9 +214,79 @@ namespace SmartLineProduction {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public dt_Tmp_FwDataTable dt_Tmp_Fw {
+        public GL_SerialNumbersDataTable GL_SerialNumbers {
             get {
-                return this.tabledt_Tmp_Fw;
+                return this.tableGL_SerialNumbers;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public GL_FirmwareDataTable GL_Firmware {
+            get {
+                return this.tableGL_Firmware;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public dt_Firmware_lookupCommesseGLDataTable dt_Firmware_lookupCommesseGL {
+            get {
+                return this.tabledt_Firmware_lookupCommesseGL;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public SerialNumbersGL_ObsoleteDataTable SerialNumbersGL_Obsolete {
+            get {
+                return this.tableSerialNumbersGL_Obsolete;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public SafetyPointRFID_GLDataTable SafetyPointRFID_GL {
+            get {
+                return this.tableSafetyPointRFID_GL;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public GL_FW_RevisioniDataTable GL_FW_Revisioni {
+            get {
+                return this.tableGL_FW_Revisioni;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public dt_GL_Tmp_ProgrammaDataTable dt_GL_Tmp_Programma {
+            get {
+                return this.tabledt_GL_Tmp_Programma;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public dt_GL_Tmp_FwDataTable dt_GL_Tmp_Fw {
+            get {
+                return this.tabledt_GL_Tmp_Fw;
             }
         }
         
@@ -263,11 +372,32 @@ namespace SmartLineProduction {
                 if ((ds.Tables["SF_LastSerialNumber_GL"] != null)) {
                     base.Tables.Add(new SF_LastSerialNumber_GLDataTable(ds.Tables["SF_LastSerialNumber_GL"]));
                 }
-                if ((ds.Tables["dt_Tmp_Programma"] != null)) {
-                    base.Tables.Add(new dt_Tmp_ProgrammaDataTable(ds.Tables["dt_Tmp_Programma"]));
+                if ((ds.Tables["GL_FW_Clienti"] != null)) {
+                    base.Tables.Add(new GL_FW_ClientiDataTable(ds.Tables["GL_FW_Clienti"]));
                 }
-                if ((ds.Tables["dt_Tmp_Fw"] != null)) {
-                    base.Tables.Add(new dt_Tmp_FwDataTable(ds.Tables["dt_Tmp_Fw"]));
+                if ((ds.Tables["GL_SerialNumbers"] != null)) {
+                    base.Tables.Add(new GL_SerialNumbersDataTable(ds.Tables["GL_SerialNumbers"]));
+                }
+                if ((ds.Tables["GL_Firmware"] != null)) {
+                    base.Tables.Add(new GL_FirmwareDataTable(ds.Tables["GL_Firmware"]));
+                }
+                if ((ds.Tables["dt_Firmware_lookupCommesseGL"] != null)) {
+                    base.Tables.Add(new dt_Firmware_lookupCommesseGLDataTable(ds.Tables["dt_Firmware_lookupCommesseGL"]));
+                }
+                if ((ds.Tables["SerialNumbersGL_Obsolete"] != null)) {
+                    base.Tables.Add(new SerialNumbersGL_ObsoleteDataTable(ds.Tables["SerialNumbersGL_Obsolete"]));
+                }
+                if ((ds.Tables["SafetyPointRFID_GL"] != null)) {
+                    base.Tables.Add(new SafetyPointRFID_GLDataTable(ds.Tables["SafetyPointRFID_GL"]));
+                }
+                if ((ds.Tables["GL_FW_Revisioni"] != null)) {
+                    base.Tables.Add(new GL_FW_RevisioniDataTable(ds.Tables["GL_FW_Revisioni"]));
+                }
+                if ((ds.Tables["dt_GL_Tmp_Programma"] != null)) {
+                    base.Tables.Add(new dt_GL_Tmp_ProgrammaDataTable(ds.Tables["dt_GL_Tmp_Programma"]));
+                }
+                if ((ds.Tables["dt_GL_Tmp_Fw"] != null)) {
+                    base.Tables.Add(new dt_GL_Tmp_FwDataTable(ds.Tables["dt_GL_Tmp_Fw"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -332,21 +462,65 @@ namespace SmartLineProduction {
                     this.tableSF_LastSerialNumber_GL.InitVars();
                 }
             }
-            this.tabledt_Tmp_Programma = ((dt_Tmp_ProgrammaDataTable)(base.Tables["dt_Tmp_Programma"]));
+            this.tableGL_FW_Clienti = ((GL_FW_ClientiDataTable)(base.Tables["GL_FW_Clienti"]));
             if ((initTable == true)) {
-                if ((this.tabledt_Tmp_Programma != null)) {
-                    this.tabledt_Tmp_Programma.InitVars();
+                if ((this.tableGL_FW_Clienti != null)) {
+                    this.tableGL_FW_Clienti.InitVars();
                 }
             }
-            this.tabledt_Tmp_Fw = ((dt_Tmp_FwDataTable)(base.Tables["dt_Tmp_Fw"]));
+            this.tableGL_SerialNumbers = ((GL_SerialNumbersDataTable)(base.Tables["GL_SerialNumbers"]));
             if ((initTable == true)) {
-                if ((this.tabledt_Tmp_Fw != null)) {
-                    this.tabledt_Tmp_Fw.InitVars();
+                if ((this.tableGL_SerialNumbers != null)) {
+                    this.tableGL_SerialNumbers.InitVars();
+                }
+            }
+            this.tableGL_Firmware = ((GL_FirmwareDataTable)(base.Tables["GL_Firmware"]));
+            if ((initTable == true)) {
+                if ((this.tableGL_Firmware != null)) {
+                    this.tableGL_Firmware.InitVars();
+                }
+            }
+            this.tabledt_Firmware_lookupCommesseGL = ((dt_Firmware_lookupCommesseGLDataTable)(base.Tables["dt_Firmware_lookupCommesseGL"]));
+            if ((initTable == true)) {
+                if ((this.tabledt_Firmware_lookupCommesseGL != null)) {
+                    this.tabledt_Firmware_lookupCommesseGL.InitVars();
+                }
+            }
+            this.tableSerialNumbersGL_Obsolete = ((SerialNumbersGL_ObsoleteDataTable)(base.Tables["SerialNumbersGL_Obsolete"]));
+            if ((initTable == true)) {
+                if ((this.tableSerialNumbersGL_Obsolete != null)) {
+                    this.tableSerialNumbersGL_Obsolete.InitVars();
+                }
+            }
+            this.tableSafetyPointRFID_GL = ((SafetyPointRFID_GLDataTable)(base.Tables["SafetyPointRFID_GL"]));
+            if ((initTable == true)) {
+                if ((this.tableSafetyPointRFID_GL != null)) {
+                    this.tableSafetyPointRFID_GL.InitVars();
+                }
+            }
+            this.tableGL_FW_Revisioni = ((GL_FW_RevisioniDataTable)(base.Tables["GL_FW_Revisioni"]));
+            if ((initTable == true)) {
+                if ((this.tableGL_FW_Revisioni != null)) {
+                    this.tableGL_FW_Revisioni.InitVars();
+                }
+            }
+            this.tabledt_GL_Tmp_Programma = ((dt_GL_Tmp_ProgrammaDataTable)(base.Tables["dt_GL_Tmp_Programma"]));
+            if ((initTable == true)) {
+                if ((this.tabledt_GL_Tmp_Programma != null)) {
+                    this.tabledt_GL_Tmp_Programma.InitVars();
+                }
+            }
+            this.tabledt_GL_Tmp_Fw = ((dt_GL_Tmp_FwDataTable)(base.Tables["dt_GL_Tmp_Fw"]));
+            if ((initTable == true)) {
+                if ((this.tabledt_GL_Tmp_Fw != null)) {
+                    this.tabledt_GL_Tmp_Fw.InitVars();
                 }
             }
             this.relationSF_Commesse_GL_SF_ArticoliToXSWR_GL = this.Relations["SF_Commesse_GL_SF_ArticoliToXSWR_GL"];
             this.relationSF_Commesse_GL_SF_Articoli_GL = this.Relations["SF_Commesse_GL_SF_Articoli_GL"];
             this.relationSF_Commesse_GL_CommesseGL_Count = this.Relations["SF_Commesse_GL_CommesseGL_Count"];
+            this.relationSF_Commesse_GL_GL_FW_Clienti = this.Relations["SF_Commesse_GL_GL_FW_Clienti"];
+            this.relationdt_GL_Tmp_Programma_GL_Firmware = this.Relations["dt_GL_Tmp_Programma_GL_Firmware"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -367,10 +541,24 @@ namespace SmartLineProduction {
             base.Tables.Add(this.tableCommesseGL_Count);
             this.tableSF_LastSerialNumber_GL = new SF_LastSerialNumber_GLDataTable();
             base.Tables.Add(this.tableSF_LastSerialNumber_GL);
-            this.tabledt_Tmp_Programma = new dt_Tmp_ProgrammaDataTable();
-            base.Tables.Add(this.tabledt_Tmp_Programma);
-            this.tabledt_Tmp_Fw = new dt_Tmp_FwDataTable();
-            base.Tables.Add(this.tabledt_Tmp_Fw);
+            this.tableGL_FW_Clienti = new GL_FW_ClientiDataTable();
+            base.Tables.Add(this.tableGL_FW_Clienti);
+            this.tableGL_SerialNumbers = new GL_SerialNumbersDataTable();
+            base.Tables.Add(this.tableGL_SerialNumbers);
+            this.tableGL_Firmware = new GL_FirmwareDataTable();
+            base.Tables.Add(this.tableGL_Firmware);
+            this.tabledt_Firmware_lookupCommesseGL = new dt_Firmware_lookupCommesseGLDataTable();
+            base.Tables.Add(this.tabledt_Firmware_lookupCommesseGL);
+            this.tableSerialNumbersGL_Obsolete = new SerialNumbersGL_ObsoleteDataTable();
+            base.Tables.Add(this.tableSerialNumbersGL_Obsolete);
+            this.tableSafetyPointRFID_GL = new SafetyPointRFID_GLDataTable();
+            base.Tables.Add(this.tableSafetyPointRFID_GL);
+            this.tableGL_FW_Revisioni = new GL_FW_RevisioniDataTable();
+            base.Tables.Add(this.tableGL_FW_Revisioni);
+            this.tabledt_GL_Tmp_Programma = new dt_GL_Tmp_ProgrammaDataTable();
+            base.Tables.Add(this.tabledt_GL_Tmp_Programma);
+            this.tabledt_GL_Tmp_Fw = new dt_GL_Tmp_FwDataTable();
+            base.Tables.Add(this.tabledt_GL_Tmp_Fw);
             this.relationSF_Commesse_GL_SF_ArticoliToXSWR_GL = new global::System.Data.DataRelation("SF_Commesse_GL_SF_ArticoliToXSWR_GL", new global::System.Data.DataColumn[] {
                         this.tableSF_Commesse_GL.Art_CommessaColumn}, new global::System.Data.DataColumn[] {
                         this.tableSF_ArticoliToXSWR_GL.ArtCommessaColumn}, false);
@@ -387,6 +575,14 @@ namespace SmartLineProduction {
                         this.tableCommesseGL_Count.Ser_KitColumn,
                         this.tableCommesseGL_Count.Ser_DeviceColumn}, false);
             this.Relations.Add(this.relationSF_Commesse_GL_CommesseGL_Count);
+            this.relationSF_Commesse_GL_GL_FW_Clienti = new global::System.Data.DataRelation("SF_Commesse_GL_GL_FW_Clienti", new global::System.Data.DataColumn[] {
+                        this.tableSF_Commesse_GL.CodAnagraficoColumn}, new global::System.Data.DataColumn[] {
+                        this.tableGL_FW_Clienti.Cod_NominativoColumn}, false);
+            this.Relations.Add(this.relationSF_Commesse_GL_GL_FW_Clienti);
+            this.relationdt_GL_Tmp_Programma_GL_Firmware = new global::System.Data.DataRelation("dt_GL_Tmp_Programma_GL_Firmware", new global::System.Data.DataColumn[] {
+                        this.tabledt_GL_Tmp_Programma.tmp_prog_codart_fwColumn}, new global::System.Data.DataColumn[] {
+                        this.tableGL_Firmware.SW_CodeColumn}, false);
+            this.Relations.Add(this.relationdt_GL_Tmp_Programma_GL_Firmware);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -421,13 +617,55 @@ namespace SmartLineProduction {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializedt_Tmp_Programma() {
+        private bool ShouldSerializeGL_FW_Clienti() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializedt_Tmp_Fw() {
+        private bool ShouldSerializeGL_SerialNumbers() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializeGL_Firmware() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializedt_Firmware_lookupCommesseGL() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializeSerialNumbersGL_Obsolete() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializeSafetyPointRFID_GL() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializeGL_FW_Revisioni() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializedt_GL_Tmp_Programma() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializedt_GL_Tmp_Fw() {
             return false;
         }
         
@@ -502,10 +740,31 @@ namespace SmartLineProduction {
         public delegate void SF_LastSerialNumber_GLRowChangeEventHandler(object sender, SF_LastSerialNumber_GLRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void dt_Tmp_ProgrammaRowChangeEventHandler(object sender, dt_Tmp_ProgrammaRowChangeEvent e);
+        public delegate void GL_FW_ClientiRowChangeEventHandler(object sender, GL_FW_ClientiRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void dt_Tmp_FwRowChangeEventHandler(object sender, dt_Tmp_FwRowChangeEvent e);
+        public delegate void GL_SerialNumbersRowChangeEventHandler(object sender, GL_SerialNumbersRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void GL_FirmwareRowChangeEventHandler(object sender, GL_FirmwareRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void dt_Firmware_lookupCommesseGLRowChangeEventHandler(object sender, dt_Firmware_lookupCommesseGLRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void SerialNumbersGL_ObsoleteRowChangeEventHandler(object sender, SerialNumbersGL_ObsoleteRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void SafetyPointRFID_GLRowChangeEventHandler(object sender, SafetyPointRFID_GLRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void GL_FW_RevisioniRowChangeEventHandler(object sender, GL_FW_RevisioniRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void dt_GL_Tmp_ProgrammaRowChangeEventHandler(object sender, dt_GL_Tmp_ProgrammaRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void dt_GL_Tmp_FwRowChangeEventHandler(object sender, dt_GL_Tmp_FwRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -2290,7 +2549,4671 @@ namespace SmartLineProduction {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class dt_Tmp_ProgrammaDataTable : global::System.Data.TypedTableBase<dt_Tmp_ProgrammaRow> {
+        public partial class GL_FW_ClientiDataTable : global::System.Data.TypedTableBase<GL_FW_ClientiRow> {
+            
+            private global::System.Data.DataColumn columnid;
+            
+            private global::System.Data.DataColumn columnCod_Nominativo;
+            
+            private global::System.Data.DataColumn columnSW_Code;
+            
+            private global::System.Data.DataColumn columnSW_Des1;
+            
+            private global::System.Data.DataColumn columnSW_Des2;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public GL_FW_ClientiDataTable() {
+                this.TableName = "GL_FW_Clienti";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal GL_FW_ClientiDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected GL_FW_ClientiDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn idColumn {
+                get {
+                    return this.columnid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Cod_NominativoColumn {
+                get {
+                    return this.columnCod_Nominativo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_CodeColumn {
+                get {
+                    return this.columnSW_Code;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_Des1Column {
+                get {
+                    return this.columnSW_Des1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_Des2Column {
+                get {
+                    return this.columnSW_Des2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public GL_FW_ClientiRow this[int index] {
+                get {
+                    return ((GL_FW_ClientiRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event GL_FW_ClientiRowChangeEventHandler GL_FW_ClientiRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event GL_FW_ClientiRowChangeEventHandler GL_FW_ClientiRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event GL_FW_ClientiRowChangeEventHandler GL_FW_ClientiRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event GL_FW_ClientiRowChangeEventHandler GL_FW_ClientiRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddGL_FW_ClientiRow(GL_FW_ClientiRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public GL_FW_ClientiRow AddGL_FW_ClientiRow(SF_Commesse_GLRow parentSF_Commesse_GLRowBySF_Commesse_GL_GL_FW_Clienti, string SW_Code, string SW_Des1, string SW_Des2) {
+                GL_FW_ClientiRow rowGL_FW_ClientiRow = ((GL_FW_ClientiRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        null,
+                        SW_Code,
+                        SW_Des1,
+                        SW_Des2};
+                if ((parentSF_Commesse_GLRowBySF_Commesse_GL_GL_FW_Clienti != null)) {
+                    columnValuesArray[1] = parentSF_Commesse_GLRowBySF_Commesse_GL_GL_FW_Clienti[7];
+                }
+                rowGL_FW_ClientiRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowGL_FW_ClientiRow);
+                return rowGL_FW_ClientiRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                GL_FW_ClientiDataTable cln = ((GL_FW_ClientiDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new GL_FW_ClientiDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnid = base.Columns["id"];
+                this.columnCod_Nominativo = base.Columns["Cod_Nominativo"];
+                this.columnSW_Code = base.Columns["SW_Code"];
+                this.columnSW_Des1 = base.Columns["SW_Des1"];
+                this.columnSW_Des2 = base.Columns["SW_Des2"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid);
+                this.columnCod_Nominativo = new global::System.Data.DataColumn("Cod_Nominativo", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCod_Nominativo);
+                this.columnSW_Code = new global::System.Data.DataColumn("SW_Code", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Code);
+                this.columnSW_Des1 = new global::System.Data.DataColumn("SW_Des1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Des1);
+                this.columnSW_Des2 = new global::System.Data.DataColumn("SW_Des2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Des2);
+                this.columnid.AutoIncrement = true;
+                this.columnid.AutoIncrementSeed = -1;
+                this.columnid.AutoIncrementStep = -1;
+                this.columnid.AllowDBNull = false;
+                this.columnid.ReadOnly = true;
+                this.columnCod_Nominativo.AllowDBNull = false;
+                this.columnSW_Code.MaxLength = 25;
+                this.columnSW_Des1.MaxLength = 255;
+                this.columnSW_Des2.MaxLength = 255;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public GL_FW_ClientiRow NewGL_FW_ClientiRow() {
+                return ((GL_FW_ClientiRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new GL_FW_ClientiRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(GL_FW_ClientiRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.GL_FW_ClientiRowChanged != null)) {
+                    this.GL_FW_ClientiRowChanged(this, new GL_FW_ClientiRowChangeEvent(((GL_FW_ClientiRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.GL_FW_ClientiRowChanging != null)) {
+                    this.GL_FW_ClientiRowChanging(this, new GL_FW_ClientiRowChangeEvent(((GL_FW_ClientiRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.GL_FW_ClientiRowDeleted != null)) {
+                    this.GL_FW_ClientiRowDeleted(this, new GL_FW_ClientiRowChangeEvent(((GL_FW_ClientiRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.GL_FW_ClientiRowDeleting != null)) {
+                    this.GL_FW_ClientiRowDeleting(this, new GL_FW_ClientiRowChangeEvent(((GL_FW_ClientiRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemoveGL_FW_ClientiRow(GL_FW_ClientiRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                ds_Programmazione_GL ds = new ds_Programmazione_GL();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "GL_FW_ClientiDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class GL_SerialNumbersDataTable : global::System.Data.TypedTableBase<GL_SerialNumbersRow> {
+            
+            private global::System.Data.DataColumn columnId;
+            
+            private global::System.Data.DataColumn columnSer_Kit;
+            
+            private global::System.Data.DataColumn columnSer_ID_Cli;
+            
+            private global::System.Data.DataColumn columnSer_Device;
+            
+            private global::System.Data.DataColumn columnSer_Device_ID_Code;
+            
+            private global::System.Data.DataColumn columnSer_OfficialSerial;
+            
+            private global::System.Data.DataColumn columnSer_ReadSerial;
+            
+            private global::System.Data.DataColumn columnSer_SW_Code;
+            
+            private global::System.Data.DataColumn columnSer_SW_Code_Rev;
+            
+            private global::System.Data.DataColumn columnSer_SW_Std_Type;
+            
+            private global::System.Data.DataColumn columnSer_SN_prod;
+            
+            private global::System.Data.DataColumn columnSer_Commessa;
+            
+            private global::System.Data.DataColumn columnSer_DateProduction;
+            
+            private global::System.Data.DataColumn columnSer_Spedito;
+            
+            private global::System.Data.DataColumn columnSer_Data_Spedito;
+            
+            private global::System.Data.DataColumn columnSer_Substition_ID_ReadSerial;
+            
+            private global::System.Data.DataColumn columnSer_Note;
+            
+            private global::System.Data.DataColumn columnSer_LockLevel;
+            
+            private global::System.Data.DataColumn columnSer_Device_ID_Code_Start;
+            
+            private global::System.Data.DataColumn columnSer_Golden_Unlock;
+            
+            private global::System.Data.DataColumn columnSer_Cfg_Init;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public GL_SerialNumbersDataTable() {
+                this.TableName = "GL_SerialNumbers";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal GL_SerialNumbersDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected GL_SerialNumbersDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn IdColumn {
+                get {
+                    return this.columnId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_KitColumn {
+                get {
+                    return this.columnSer_Kit;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_ID_CliColumn {
+                get {
+                    return this.columnSer_ID_Cli;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_DeviceColumn {
+                get {
+                    return this.columnSer_Device;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_Device_ID_CodeColumn {
+                get {
+                    return this.columnSer_Device_ID_Code;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_OfficialSerialColumn {
+                get {
+                    return this.columnSer_OfficialSerial;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_ReadSerialColumn {
+                get {
+                    return this.columnSer_ReadSerial;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_SW_CodeColumn {
+                get {
+                    return this.columnSer_SW_Code;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_SW_Code_RevColumn {
+                get {
+                    return this.columnSer_SW_Code_Rev;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_SW_Std_TypeColumn {
+                get {
+                    return this.columnSer_SW_Std_Type;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_SN_prodColumn {
+                get {
+                    return this.columnSer_SN_prod;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_CommessaColumn {
+                get {
+                    return this.columnSer_Commessa;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_DateProductionColumn {
+                get {
+                    return this.columnSer_DateProduction;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_SpeditoColumn {
+                get {
+                    return this.columnSer_Spedito;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_Data_SpeditoColumn {
+                get {
+                    return this.columnSer_Data_Spedito;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_Substition_ID_ReadSerialColumn {
+                get {
+                    return this.columnSer_Substition_ID_ReadSerial;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_NoteColumn {
+                get {
+                    return this.columnSer_Note;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_LockLevelColumn {
+                get {
+                    return this.columnSer_LockLevel;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_Device_ID_Code_StartColumn {
+                get {
+                    return this.columnSer_Device_ID_Code_Start;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_Golden_UnlockColumn {
+                get {
+                    return this.columnSer_Golden_Unlock;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_Cfg_InitColumn {
+                get {
+                    return this.columnSer_Cfg_Init;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public GL_SerialNumbersRow this[int index] {
+                get {
+                    return ((GL_SerialNumbersRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event GL_SerialNumbersRowChangeEventHandler GL_SerialNumbersRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event GL_SerialNumbersRowChangeEventHandler GL_SerialNumbersRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event GL_SerialNumbersRowChangeEventHandler GL_SerialNumbersRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event GL_SerialNumbersRowChangeEventHandler GL_SerialNumbersRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddGL_SerialNumbersRow(GL_SerialNumbersRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public GL_SerialNumbersRow AddGL_SerialNumbersRow(
+                        string Ser_Kit, 
+                        int Ser_ID_Cli, 
+                        string Ser_Device, 
+                        string Ser_Device_ID_Code, 
+                        string Ser_OfficialSerial, 
+                        string Ser_ReadSerial, 
+                        string Ser_SW_Code, 
+                        string Ser_SW_Code_Rev, 
+                        bool Ser_SW_Std_Type, 
+                        string Ser_SN_prod, 
+                        string Ser_Commessa, 
+                        System.DateTime Ser_DateProduction, 
+                        bool Ser_Spedito, 
+                        System.DateTime Ser_Data_Spedito, 
+                        string Ser_Substition_ID_ReadSerial, 
+                        string Ser_Note, 
+                        int Ser_LockLevel, 
+                        string Ser_Device_ID_Code_Start, 
+                        bool Ser_Golden_Unlock, 
+                        string Ser_Cfg_Init) {
+                GL_SerialNumbersRow rowGL_SerialNumbersRow = ((GL_SerialNumbersRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        Ser_Kit,
+                        Ser_ID_Cli,
+                        Ser_Device,
+                        Ser_Device_ID_Code,
+                        Ser_OfficialSerial,
+                        Ser_ReadSerial,
+                        Ser_SW_Code,
+                        Ser_SW_Code_Rev,
+                        Ser_SW_Std_Type,
+                        Ser_SN_prod,
+                        Ser_Commessa,
+                        Ser_DateProduction,
+                        Ser_Spedito,
+                        Ser_Data_Spedito,
+                        Ser_Substition_ID_ReadSerial,
+                        Ser_Note,
+                        Ser_LockLevel,
+                        Ser_Device_ID_Code_Start,
+                        Ser_Golden_Unlock,
+                        Ser_Cfg_Init};
+                rowGL_SerialNumbersRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowGL_SerialNumbersRow);
+                return rowGL_SerialNumbersRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public GL_SerialNumbersRow FindById(int Id) {
+                return ((GL_SerialNumbersRow)(this.Rows.Find(new object[] {
+                            Id})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                GL_SerialNumbersDataTable cln = ((GL_SerialNumbersDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new GL_SerialNumbersDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnId = base.Columns["Id"];
+                this.columnSer_Kit = base.Columns["Ser_Kit"];
+                this.columnSer_ID_Cli = base.Columns["Ser_ID_Cli"];
+                this.columnSer_Device = base.Columns["Ser_Device"];
+                this.columnSer_Device_ID_Code = base.Columns["Ser_Device_ID_Code"];
+                this.columnSer_OfficialSerial = base.Columns["Ser_OfficialSerial"];
+                this.columnSer_ReadSerial = base.Columns["Ser_ReadSerial"];
+                this.columnSer_SW_Code = base.Columns["Ser_SW_Code"];
+                this.columnSer_SW_Code_Rev = base.Columns["Ser_SW_Code_Rev"];
+                this.columnSer_SW_Std_Type = base.Columns["Ser_SW_Std_Type"];
+                this.columnSer_SN_prod = base.Columns["Ser_SN_prod"];
+                this.columnSer_Commessa = base.Columns["Ser_Commessa"];
+                this.columnSer_DateProduction = base.Columns["Ser_DateProduction"];
+                this.columnSer_Spedito = base.Columns["Ser_Spedito"];
+                this.columnSer_Data_Spedito = base.Columns["Ser_Data_Spedito"];
+                this.columnSer_Substition_ID_ReadSerial = base.Columns["Ser_Substition_ID_ReadSerial"];
+                this.columnSer_Note = base.Columns["Ser_Note"];
+                this.columnSer_LockLevel = base.Columns["Ser_LockLevel"];
+                this.columnSer_Device_ID_Code_Start = base.Columns["Ser_Device_ID_Code_Start"];
+                this.columnSer_Golden_Unlock = base.Columns["Ser_Golden_Unlock"];
+                this.columnSer_Cfg_Init = base.Columns["Ser_Cfg_Init"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId);
+                this.columnSer_Kit = new global::System.Data.DataColumn("Ser_Kit", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_Kit);
+                this.columnSer_ID_Cli = new global::System.Data.DataColumn("Ser_ID_Cli", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_ID_Cli);
+                this.columnSer_Device = new global::System.Data.DataColumn("Ser_Device", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_Device);
+                this.columnSer_Device_ID_Code = new global::System.Data.DataColumn("Ser_Device_ID_Code", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_Device_ID_Code);
+                this.columnSer_OfficialSerial = new global::System.Data.DataColumn("Ser_OfficialSerial", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_OfficialSerial);
+                this.columnSer_ReadSerial = new global::System.Data.DataColumn("Ser_ReadSerial", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_ReadSerial);
+                this.columnSer_SW_Code = new global::System.Data.DataColumn("Ser_SW_Code", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_SW_Code);
+                this.columnSer_SW_Code_Rev = new global::System.Data.DataColumn("Ser_SW_Code_Rev", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_SW_Code_Rev);
+                this.columnSer_SW_Std_Type = new global::System.Data.DataColumn("Ser_SW_Std_Type", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_SW_Std_Type);
+                this.columnSer_SN_prod = new global::System.Data.DataColumn("Ser_SN_prod", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_SN_prod);
+                this.columnSer_Commessa = new global::System.Data.DataColumn("Ser_Commessa", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_Commessa);
+                this.columnSer_DateProduction = new global::System.Data.DataColumn("Ser_DateProduction", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_DateProduction);
+                this.columnSer_Spedito = new global::System.Data.DataColumn("Ser_Spedito", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_Spedito);
+                this.columnSer_Data_Spedito = new global::System.Data.DataColumn("Ser_Data_Spedito", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_Data_Spedito);
+                this.columnSer_Substition_ID_ReadSerial = new global::System.Data.DataColumn("Ser_Substition_ID_ReadSerial", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_Substition_ID_ReadSerial);
+                this.columnSer_Note = new global::System.Data.DataColumn("Ser_Note", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_Note);
+                this.columnSer_LockLevel = new global::System.Data.DataColumn("Ser_LockLevel", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_LockLevel);
+                this.columnSer_Device_ID_Code_Start = new global::System.Data.DataColumn("Ser_Device_ID_Code_Start", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_Device_ID_Code_Start);
+                this.columnSer_Golden_Unlock = new global::System.Data.DataColumn("Ser_Golden_Unlock", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_Golden_Unlock);
+                this.columnSer_Cfg_Init = new global::System.Data.DataColumn("Ser_Cfg_Init", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_Cfg_Init);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnId}, true));
+                this.columnId.AutoIncrement = true;
+                this.columnId.AutoIncrementSeed = -1;
+                this.columnId.AutoIncrementStep = -1;
+                this.columnId.AllowDBNull = false;
+                this.columnId.ReadOnly = true;
+                this.columnId.Unique = true;
+                this.columnSer_Kit.MaxLength = 25;
+                this.columnSer_Device.MaxLength = 25;
+                this.columnSer_Device_ID_Code.MaxLength = 10;
+                this.columnSer_OfficialSerial.MaxLength = 25;
+                this.columnSer_ReadSerial.MaxLength = 25;
+                this.columnSer_SW_Code.MaxLength = 25;
+                this.columnSer_SW_Code_Rev.MaxLength = 5;
+                this.columnSer_SN_prod.MaxLength = 11;
+                this.columnSer_Commessa.MaxLength = 25;
+                this.columnSer_Spedito.AllowDBNull = false;
+                this.columnSer_Substition_ID_ReadSerial.MaxLength = 25;
+                this.columnSer_Note.MaxLength = 2147483647;
+                this.columnSer_Device_ID_Code_Start.MaxLength = 10;
+                this.columnSer_Golden_Unlock.AllowDBNull = false;
+                this.columnSer_Cfg_Init.MaxLength = 50;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public GL_SerialNumbersRow NewGL_SerialNumbersRow() {
+                return ((GL_SerialNumbersRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new GL_SerialNumbersRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(GL_SerialNumbersRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.GL_SerialNumbersRowChanged != null)) {
+                    this.GL_SerialNumbersRowChanged(this, new GL_SerialNumbersRowChangeEvent(((GL_SerialNumbersRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.GL_SerialNumbersRowChanging != null)) {
+                    this.GL_SerialNumbersRowChanging(this, new GL_SerialNumbersRowChangeEvent(((GL_SerialNumbersRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.GL_SerialNumbersRowDeleted != null)) {
+                    this.GL_SerialNumbersRowDeleted(this, new GL_SerialNumbersRowChangeEvent(((GL_SerialNumbersRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.GL_SerialNumbersRowDeleting != null)) {
+                    this.GL_SerialNumbersRowDeleting(this, new GL_SerialNumbersRowChangeEvent(((GL_SerialNumbersRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemoveGL_SerialNumbersRow(GL_SerialNumbersRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                ds_Programmazione_GL ds = new ds_Programmazione_GL();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "GL_SerialNumbersDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class GL_FirmwareDataTable : global::System.Data.TypedTableBase<GL_FirmwareRow> {
+            
+            private global::System.Data.DataColumn columnId;
+            
+            private global::System.Data.DataColumn columnSW_Code;
+            
+            private global::System.Data.DataColumn columnSW_TipoDevice;
+            
+            private global::System.Data.DataColumn columnSW_Descrizione;
+            
+            private global::System.Data.DataColumn columnSW_Descrizione_EN;
+            
+            private global::System.Data.DataColumn columnSW_Versione;
+            
+            private global::System.Data.DataColumn columnSW_Revisione;
+            
+            private global::System.Data.DataColumn columnSW_Standard;
+            
+            private global::System.Data.DataColumn columnSW_FamProd;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_RF;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_Use_Oled;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_Use_EmButt;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_Use_Backlight;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_ShiftPage;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_Use_Accel;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_Use_SP;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_Use_Buzzer;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_Use_Vibracall;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_Use_LedTorch;
+            
+            private global::System.Data.DataColumn columnSW_P_PLD;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_MaxPairDevices;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_RF;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Plug_Exp;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Plug_Ple;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Em_Keyb;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Can;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Prop_Out;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_TimeOut;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Cont_Keys;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_LockSameRow;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Use_SP;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_MaxPairDevices;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_ShiftPage;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Output_No;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Dig_Input_No;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Ana_Input_No;
+            
+            private global::System.Data.DataColumn columnSW_Revisioni;
+            
+            private global::System.Data.DataColumn columnSW_Funzionamento;
+            
+            private global::System.Data.DataColumn columnSW_Config;
+            
+            private global::System.Data.DataColumn columnSW_Obsolete_ver;
+            
+            private global::System.Data.DataColumn columnSW_Obsolete_ver_from_date;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Use_Radius;
+            
+            private global::System.Data.DataColumn columnSW_CustomPIC;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_Use_Radius;
+            
+            private global::System.Data.DataColumn columnSW_P_Lock;
+            
+            private global::System.Data.DataColumn columnSW_R_Lock;
+            
+            private global::System.Data.DataColumn columnSW_IsPublic;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public GL_FirmwareDataTable() {
+                this.TableName = "GL_Firmware";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal GL_FirmwareDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected GL_FirmwareDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn IdColumn {
+                get {
+                    return this.columnId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_CodeColumn {
+                get {
+                    return this.columnSW_Code;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_TipoDeviceColumn {
+                get {
+                    return this.columnSW_TipoDevice;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_DescrizioneColumn {
+                get {
+                    return this.columnSW_Descrizione;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_Descrizione_ENColumn {
+                get {
+                    return this.columnSW_Descrizione_EN;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_VersioneColumn {
+                get {
+                    return this.columnSW_Versione;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_RevisioneColumn {
+                get {
+                    return this.columnSW_Revisione;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_StandardColumn {
+                get {
+                    return this.columnSW_Standard;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_FamProdColumn {
+                get {
+                    return this.columnSW_FamProd;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_RFColumn {
+                get {
+                    return this.columnSW_P_Opt_RF;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_Use_OledColumn {
+                get {
+                    return this.columnSW_P_Opt_Use_Oled;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_Use_EmButtColumn {
+                get {
+                    return this.columnSW_P_Opt_Use_EmButt;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_Use_BacklightColumn {
+                get {
+                    return this.columnSW_P_Opt_Use_Backlight;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_ShiftPageColumn {
+                get {
+                    return this.columnSW_P_Opt_ShiftPage;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_Use_AccelColumn {
+                get {
+                    return this.columnSW_P_Opt_Use_Accel;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_Use_SPColumn {
+                get {
+                    return this.columnSW_P_Opt_Use_SP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_Use_BuzzerColumn {
+                get {
+                    return this.columnSW_P_Opt_Use_Buzzer;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_Use_VibracallColumn {
+                get {
+                    return this.columnSW_P_Opt_Use_Vibracall;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_Use_LedTorchColumn {
+                get {
+                    return this.columnSW_P_Opt_Use_LedTorch;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_PLDColumn {
+                get {
+                    return this.columnSW_P_PLD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_MaxPairDevicesColumn {
+                get {
+                    return this.columnSW_P_Opt_MaxPairDevices;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_RFColumn {
+                get {
+                    return this.columnSW_R_Opt_RF;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_Plug_ExpColumn {
+                get {
+                    return this.columnSW_R_Opt_Plug_Exp;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_Plug_PleColumn {
+                get {
+                    return this.columnSW_R_Opt_Plug_Ple;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_Em_KeybColumn {
+                get {
+                    return this.columnSW_R_Opt_Em_Keyb;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_CanColumn {
+                get {
+                    return this.columnSW_R_Opt_Can;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_Prop_OutColumn {
+                get {
+                    return this.columnSW_R_Opt_Prop_Out;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_TimeOutColumn {
+                get {
+                    return this.columnSW_R_Opt_TimeOut;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_Cont_KeysColumn {
+                get {
+                    return this.columnSW_R_Opt_Cont_Keys;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_LockSameRowColumn {
+                get {
+                    return this.columnSW_R_Opt_LockSameRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_Use_SPColumn {
+                get {
+                    return this.columnSW_R_Opt_Use_SP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_MaxPairDevicesColumn {
+                get {
+                    return this.columnSW_R_Opt_MaxPairDevices;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_ShiftPageColumn {
+                get {
+                    return this.columnSW_R_Opt_ShiftPage;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_Output_NoColumn {
+                get {
+                    return this.columnSW_R_Opt_Output_No;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_Dig_Input_NoColumn {
+                get {
+                    return this.columnSW_R_Opt_Dig_Input_No;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_Ana_Input_NoColumn {
+                get {
+                    return this.columnSW_R_Opt_Ana_Input_No;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_RevisioniColumn {
+                get {
+                    return this.columnSW_Revisioni;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_FunzionamentoColumn {
+                get {
+                    return this.columnSW_Funzionamento;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_ConfigColumn {
+                get {
+                    return this.columnSW_Config;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_Obsolete_verColumn {
+                get {
+                    return this.columnSW_Obsolete_ver;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_Obsolete_ver_from_dateColumn {
+                get {
+                    return this.columnSW_Obsolete_ver_from_date;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_Use_RadiusColumn {
+                get {
+                    return this.columnSW_R_Opt_Use_Radius;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_CustomPICColumn {
+                get {
+                    return this.columnSW_CustomPIC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_Use_RadiusColumn {
+                get {
+                    return this.columnSW_P_Opt_Use_Radius;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_LockColumn {
+                get {
+                    return this.columnSW_P_Lock;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_LockColumn {
+                get {
+                    return this.columnSW_R_Lock;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_IsPublicColumn {
+                get {
+                    return this.columnSW_IsPublic;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public GL_FirmwareRow this[int index] {
+                get {
+                    return ((GL_FirmwareRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event GL_FirmwareRowChangeEventHandler GL_FirmwareRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event GL_FirmwareRowChangeEventHandler GL_FirmwareRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event GL_FirmwareRowChangeEventHandler GL_FirmwareRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event GL_FirmwareRowChangeEventHandler GL_FirmwareRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddGL_FirmwareRow(GL_FirmwareRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public GL_FirmwareRow AddGL_FirmwareRow(
+                        dt_GL_Tmp_ProgrammaRow parentdt_GL_Tmp_ProgrammaRowBydt_GL_Tmp_Programma_GL_Firmware, 
+                        string SW_TipoDevice, 
+                        string SW_Descrizione, 
+                        string SW_Descrizione_EN, 
+                        string SW_Versione, 
+                        string SW_Revisione, 
+                        bool SW_Standard, 
+                        string SW_FamProd, 
+                        string SW_P_Opt_RF, 
+                        bool SW_P_Opt_Use_Oled, 
+                        bool SW_P_Opt_Use_EmButt, 
+                        bool SW_P_Opt_Use_Backlight, 
+                        bool SW_P_Opt_ShiftPage, 
+                        bool SW_P_Opt_Use_Accel, 
+                        bool SW_P_Opt_Use_SP, 
+                        bool SW_P_Opt_Use_Buzzer, 
+                        bool SW_P_Opt_Use_Vibracall, 
+                        bool SW_P_Opt_Use_LedTorch, 
+                        bool SW_P_PLD, 
+                        int SW_P_Opt_MaxPairDevices, 
+                        string SW_R_Opt_RF, 
+                        bool SW_R_Opt_Plug_Exp, 
+                        bool SW_R_Opt_Plug_Ple, 
+                        bool SW_R_Opt_Em_Keyb, 
+                        bool SW_R_Opt_Can, 
+                        bool SW_R_Opt_Prop_Out, 
+                        string SW_R_Opt_TimeOut, 
+                        int SW_R_Opt_Cont_Keys, 
+                        bool SW_R_Opt_LockSameRow, 
+                        bool SW_R_Opt_Use_SP, 
+                        int SW_R_Opt_MaxPairDevices, 
+                        bool SW_R_Opt_ShiftPage, 
+                        int SW_R_Opt_Output_No, 
+                        int SW_R_Opt_Dig_Input_No, 
+                        int SW_R_Opt_Ana_Input_No, 
+                        string SW_Revisioni, 
+                        string SW_Funzionamento, 
+                        string SW_Config, 
+                        bool SW_Obsolete_ver, 
+                        System.DateTime SW_Obsolete_ver_from_date, 
+                        bool SW_R_Opt_Use_Radius, 
+                        bool SW_CustomPIC, 
+                        bool SW_P_Opt_Use_Radius, 
+                        int SW_P_Lock, 
+                        int SW_R_Lock, 
+                        bool SW_IsPublic) {
+                GL_FirmwareRow rowGL_FirmwareRow = ((GL_FirmwareRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        null,
+                        SW_TipoDevice,
+                        SW_Descrizione,
+                        SW_Descrizione_EN,
+                        SW_Versione,
+                        SW_Revisione,
+                        SW_Standard,
+                        SW_FamProd,
+                        SW_P_Opt_RF,
+                        SW_P_Opt_Use_Oled,
+                        SW_P_Opt_Use_EmButt,
+                        SW_P_Opt_Use_Backlight,
+                        SW_P_Opt_ShiftPage,
+                        SW_P_Opt_Use_Accel,
+                        SW_P_Opt_Use_SP,
+                        SW_P_Opt_Use_Buzzer,
+                        SW_P_Opt_Use_Vibracall,
+                        SW_P_Opt_Use_LedTorch,
+                        SW_P_PLD,
+                        SW_P_Opt_MaxPairDevices,
+                        SW_R_Opt_RF,
+                        SW_R_Opt_Plug_Exp,
+                        SW_R_Opt_Plug_Ple,
+                        SW_R_Opt_Em_Keyb,
+                        SW_R_Opt_Can,
+                        SW_R_Opt_Prop_Out,
+                        SW_R_Opt_TimeOut,
+                        SW_R_Opt_Cont_Keys,
+                        SW_R_Opt_LockSameRow,
+                        SW_R_Opt_Use_SP,
+                        SW_R_Opt_MaxPairDevices,
+                        SW_R_Opt_ShiftPage,
+                        SW_R_Opt_Output_No,
+                        SW_R_Opt_Dig_Input_No,
+                        SW_R_Opt_Ana_Input_No,
+                        SW_Revisioni,
+                        SW_Funzionamento,
+                        SW_Config,
+                        SW_Obsolete_ver,
+                        SW_Obsolete_ver_from_date,
+                        SW_R_Opt_Use_Radius,
+                        SW_CustomPIC,
+                        SW_P_Opt_Use_Radius,
+                        SW_P_Lock,
+                        SW_R_Lock,
+                        SW_IsPublic};
+                if ((parentdt_GL_Tmp_ProgrammaRowBydt_GL_Tmp_Programma_GL_Firmware != null)) {
+                    columnValuesArray[1] = parentdt_GL_Tmp_ProgrammaRowBydt_GL_Tmp_Programma_GL_Firmware[4];
+                }
+                rowGL_FirmwareRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowGL_FirmwareRow);
+                return rowGL_FirmwareRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                GL_FirmwareDataTable cln = ((GL_FirmwareDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new GL_FirmwareDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnId = base.Columns["Id"];
+                this.columnSW_Code = base.Columns["SW_Code"];
+                this.columnSW_TipoDevice = base.Columns["SW_TipoDevice"];
+                this.columnSW_Descrizione = base.Columns["SW_Descrizione"];
+                this.columnSW_Descrizione_EN = base.Columns["SW_Descrizione_EN"];
+                this.columnSW_Versione = base.Columns["SW_Versione"];
+                this.columnSW_Revisione = base.Columns["SW_Revisione"];
+                this.columnSW_Standard = base.Columns["SW_Standard"];
+                this.columnSW_FamProd = base.Columns["SW_FamProd"];
+                this.columnSW_P_Opt_RF = base.Columns["SW_P_Opt_RF"];
+                this.columnSW_P_Opt_Use_Oled = base.Columns["SW_P_Opt_Use_Oled"];
+                this.columnSW_P_Opt_Use_EmButt = base.Columns["SW_P_Opt_Use_EmButt"];
+                this.columnSW_P_Opt_Use_Backlight = base.Columns["SW_P_Opt_Use_Backlight"];
+                this.columnSW_P_Opt_ShiftPage = base.Columns["SW_P_Opt_ShiftPage"];
+                this.columnSW_P_Opt_Use_Accel = base.Columns["SW_P_Opt_Use_Accel"];
+                this.columnSW_P_Opt_Use_SP = base.Columns["SW_P_Opt_Use_SP"];
+                this.columnSW_P_Opt_Use_Buzzer = base.Columns["SW_P_Opt_Use_Buzzer"];
+                this.columnSW_P_Opt_Use_Vibracall = base.Columns["SW_P_Opt_Use_Vibracall"];
+                this.columnSW_P_Opt_Use_LedTorch = base.Columns["SW_P_Opt_Use_LedTorch"];
+                this.columnSW_P_PLD = base.Columns["SW_P_PLD"];
+                this.columnSW_P_Opt_MaxPairDevices = base.Columns["SW_P_Opt_MaxPairDevices"];
+                this.columnSW_R_Opt_RF = base.Columns["SW_R_Opt_RF"];
+                this.columnSW_R_Opt_Plug_Exp = base.Columns["SW_R_Opt_Plug_Exp"];
+                this.columnSW_R_Opt_Plug_Ple = base.Columns["SW_R_Opt_Plug_Ple"];
+                this.columnSW_R_Opt_Em_Keyb = base.Columns["SW_R_Opt_Em_Keyb"];
+                this.columnSW_R_Opt_Can = base.Columns["SW_R_Opt_Can"];
+                this.columnSW_R_Opt_Prop_Out = base.Columns["SW_R_Opt_Prop_Out"];
+                this.columnSW_R_Opt_TimeOut = base.Columns["SW_R_Opt_TimeOut"];
+                this.columnSW_R_Opt_Cont_Keys = base.Columns["SW_R_Opt_Cont_Keys"];
+                this.columnSW_R_Opt_LockSameRow = base.Columns["SW_R_Opt_LockSameRow"];
+                this.columnSW_R_Opt_Use_SP = base.Columns["SW_R_Opt_Use_SP"];
+                this.columnSW_R_Opt_MaxPairDevices = base.Columns["SW_R_Opt_MaxPairDevices"];
+                this.columnSW_R_Opt_ShiftPage = base.Columns["SW_R_Opt_ShiftPage"];
+                this.columnSW_R_Opt_Output_No = base.Columns["SW_R_Opt_Output_No"];
+                this.columnSW_R_Opt_Dig_Input_No = base.Columns["SW_R_Opt_Dig_Input_No"];
+                this.columnSW_R_Opt_Ana_Input_No = base.Columns["SW_R_Opt_Ana_Input_No"];
+                this.columnSW_Revisioni = base.Columns["SW_Revisioni"];
+                this.columnSW_Funzionamento = base.Columns["SW_Funzionamento"];
+                this.columnSW_Config = base.Columns["SW_Config"];
+                this.columnSW_Obsolete_ver = base.Columns["SW_Obsolete_ver"];
+                this.columnSW_Obsolete_ver_from_date = base.Columns["SW_Obsolete_ver_from_date"];
+                this.columnSW_R_Opt_Use_Radius = base.Columns["SW_R_Opt_Use_Radius"];
+                this.columnSW_CustomPIC = base.Columns["SW_CustomPIC"];
+                this.columnSW_P_Opt_Use_Radius = base.Columns["SW_P_Opt_Use_Radius"];
+                this.columnSW_P_Lock = base.Columns["SW_P_Lock"];
+                this.columnSW_R_Lock = base.Columns["SW_R_Lock"];
+                this.columnSW_IsPublic = base.Columns["SW_IsPublic"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId);
+                this.columnSW_Code = new global::System.Data.DataColumn("SW_Code", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Code);
+                this.columnSW_TipoDevice = new global::System.Data.DataColumn("SW_TipoDevice", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_TipoDevice);
+                this.columnSW_Descrizione = new global::System.Data.DataColumn("SW_Descrizione", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Descrizione);
+                this.columnSW_Descrizione_EN = new global::System.Data.DataColumn("SW_Descrizione_EN", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Descrizione_EN);
+                this.columnSW_Versione = new global::System.Data.DataColumn("SW_Versione", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Versione);
+                this.columnSW_Revisione = new global::System.Data.DataColumn("SW_Revisione", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Revisione);
+                this.columnSW_Standard = new global::System.Data.DataColumn("SW_Standard", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Standard);
+                this.columnSW_FamProd = new global::System.Data.DataColumn("SW_FamProd", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_FamProd);
+                this.columnSW_P_Opt_RF = new global::System.Data.DataColumn("SW_P_Opt_RF", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_RF);
+                this.columnSW_P_Opt_Use_Oled = new global::System.Data.DataColumn("SW_P_Opt_Use_Oled", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_Use_Oled);
+                this.columnSW_P_Opt_Use_EmButt = new global::System.Data.DataColumn("SW_P_Opt_Use_EmButt", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_Use_EmButt);
+                this.columnSW_P_Opt_Use_Backlight = new global::System.Data.DataColumn("SW_P_Opt_Use_Backlight", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_Use_Backlight);
+                this.columnSW_P_Opt_ShiftPage = new global::System.Data.DataColumn("SW_P_Opt_ShiftPage", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_ShiftPage);
+                this.columnSW_P_Opt_Use_Accel = new global::System.Data.DataColumn("SW_P_Opt_Use_Accel", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_Use_Accel);
+                this.columnSW_P_Opt_Use_SP = new global::System.Data.DataColumn("SW_P_Opt_Use_SP", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_Use_SP);
+                this.columnSW_P_Opt_Use_Buzzer = new global::System.Data.DataColumn("SW_P_Opt_Use_Buzzer", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_Use_Buzzer);
+                this.columnSW_P_Opt_Use_Vibracall = new global::System.Data.DataColumn("SW_P_Opt_Use_Vibracall", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_Use_Vibracall);
+                this.columnSW_P_Opt_Use_LedTorch = new global::System.Data.DataColumn("SW_P_Opt_Use_LedTorch", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_Use_LedTorch);
+                this.columnSW_P_PLD = new global::System.Data.DataColumn("SW_P_PLD", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_PLD);
+                this.columnSW_P_Opt_MaxPairDevices = new global::System.Data.DataColumn("SW_P_Opt_MaxPairDevices", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_MaxPairDevices);
+                this.columnSW_R_Opt_RF = new global::System.Data.DataColumn("SW_R_Opt_RF", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_RF);
+                this.columnSW_R_Opt_Plug_Exp = new global::System.Data.DataColumn("SW_R_Opt_Plug_Exp", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Plug_Exp);
+                this.columnSW_R_Opt_Plug_Ple = new global::System.Data.DataColumn("SW_R_Opt_Plug_Ple", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Plug_Ple);
+                this.columnSW_R_Opt_Em_Keyb = new global::System.Data.DataColumn("SW_R_Opt_Em_Keyb", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Em_Keyb);
+                this.columnSW_R_Opt_Can = new global::System.Data.DataColumn("SW_R_Opt_Can", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Can);
+                this.columnSW_R_Opt_Prop_Out = new global::System.Data.DataColumn("SW_R_Opt_Prop_Out", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Prop_Out);
+                this.columnSW_R_Opt_TimeOut = new global::System.Data.DataColumn("SW_R_Opt_TimeOut", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_TimeOut);
+                this.columnSW_R_Opt_Cont_Keys = new global::System.Data.DataColumn("SW_R_Opt_Cont_Keys", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Cont_Keys);
+                this.columnSW_R_Opt_LockSameRow = new global::System.Data.DataColumn("SW_R_Opt_LockSameRow", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_LockSameRow);
+                this.columnSW_R_Opt_Use_SP = new global::System.Data.DataColumn("SW_R_Opt_Use_SP", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Use_SP);
+                this.columnSW_R_Opt_MaxPairDevices = new global::System.Data.DataColumn("SW_R_Opt_MaxPairDevices", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_MaxPairDevices);
+                this.columnSW_R_Opt_ShiftPage = new global::System.Data.DataColumn("SW_R_Opt_ShiftPage", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_ShiftPage);
+                this.columnSW_R_Opt_Output_No = new global::System.Data.DataColumn("SW_R_Opt_Output_No", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Output_No);
+                this.columnSW_R_Opt_Dig_Input_No = new global::System.Data.DataColumn("SW_R_Opt_Dig_Input_No", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Dig_Input_No);
+                this.columnSW_R_Opt_Ana_Input_No = new global::System.Data.DataColumn("SW_R_Opt_Ana_Input_No", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Ana_Input_No);
+                this.columnSW_Revisioni = new global::System.Data.DataColumn("SW_Revisioni", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Revisioni);
+                this.columnSW_Funzionamento = new global::System.Data.DataColumn("SW_Funzionamento", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Funzionamento);
+                this.columnSW_Config = new global::System.Data.DataColumn("SW_Config", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Config);
+                this.columnSW_Obsolete_ver = new global::System.Data.DataColumn("SW_Obsolete_ver", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Obsolete_ver);
+                this.columnSW_Obsolete_ver_from_date = new global::System.Data.DataColumn("SW_Obsolete_ver_from_date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Obsolete_ver_from_date);
+                this.columnSW_R_Opt_Use_Radius = new global::System.Data.DataColumn("SW_R_Opt_Use_Radius", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Use_Radius);
+                this.columnSW_CustomPIC = new global::System.Data.DataColumn("SW_CustomPIC", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_CustomPIC);
+                this.columnSW_P_Opt_Use_Radius = new global::System.Data.DataColumn("SW_P_Opt_Use_Radius", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_Use_Radius);
+                this.columnSW_P_Lock = new global::System.Data.DataColumn("SW_P_Lock", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Lock);
+                this.columnSW_R_Lock = new global::System.Data.DataColumn("SW_R_Lock", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Lock);
+                this.columnSW_IsPublic = new global::System.Data.DataColumn("SW_IsPublic", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_IsPublic);
+                this.columnId.AutoIncrement = true;
+                this.columnId.AutoIncrementSeed = -1;
+                this.columnId.AutoIncrementStep = -1;
+                this.columnId.AllowDBNull = false;
+                this.columnId.ReadOnly = true;
+                this.columnSW_Code.AllowDBNull = false;
+                this.columnSW_Code.MaxLength = 25;
+                this.columnSW_TipoDevice.AllowDBNull = false;
+                this.columnSW_TipoDevice.MaxLength = 1;
+                this.columnSW_Descrizione.MaxLength = 255;
+                this.columnSW_Descrizione_EN.MaxLength = 255;
+                this.columnSW_Versione.MaxLength = 6;
+                this.columnSW_Revisione.MaxLength = 3;
+                this.columnSW_Standard.AllowDBNull = false;
+                this.columnSW_FamProd.MaxLength = 20;
+                this.columnSW_P_Opt_RF.AllowDBNull = false;
+                this.columnSW_P_Opt_RF.MaxLength = 10;
+                this.columnSW_P_Opt_Use_Oled.AllowDBNull = false;
+                this.columnSW_P_Opt_Use_EmButt.AllowDBNull = false;
+                this.columnSW_P_Opt_Use_Backlight.AllowDBNull = false;
+                this.columnSW_P_Opt_ShiftPage.AllowDBNull = false;
+                this.columnSW_P_Opt_Use_Accel.AllowDBNull = false;
+                this.columnSW_P_Opt_Use_SP.AllowDBNull = false;
+                this.columnSW_P_Opt_Use_Buzzer.AllowDBNull = false;
+                this.columnSW_P_Opt_Use_Vibracall.AllowDBNull = false;
+                this.columnSW_P_Opt_Use_LedTorch.AllowDBNull = false;
+                this.columnSW_P_PLD.AllowDBNull = false;
+                this.columnSW_R_Opt_RF.AllowDBNull = false;
+                this.columnSW_R_Opt_RF.MaxLength = 10;
+                this.columnSW_R_Opt_Plug_Exp.AllowDBNull = false;
+                this.columnSW_R_Opt_Plug_Ple.AllowDBNull = false;
+                this.columnSW_R_Opt_Em_Keyb.AllowDBNull = false;
+                this.columnSW_R_Opt_Can.AllowDBNull = false;
+                this.columnSW_R_Opt_Prop_Out.AllowDBNull = false;
+                this.columnSW_R_Opt_TimeOut.AllowDBNull = false;
+                this.columnSW_R_Opt_TimeOut.MaxLength = 10;
+                this.columnSW_R_Opt_LockSameRow.AllowDBNull = false;
+                this.columnSW_R_Opt_Use_SP.AllowDBNull = false;
+                this.columnSW_R_Opt_ShiftPage.AllowDBNull = false;
+                this.columnSW_Revisioni.MaxLength = 2147483647;
+                this.columnSW_Funzionamento.MaxLength = 2147483647;
+                this.columnSW_Config.MaxLength = 2147483647;
+                this.columnSW_Obsolete_ver.AllowDBNull = false;
+                this.columnSW_R_Opt_Use_Radius.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public GL_FirmwareRow NewGL_FirmwareRow() {
+                return ((GL_FirmwareRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new GL_FirmwareRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(GL_FirmwareRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.GL_FirmwareRowChanged != null)) {
+                    this.GL_FirmwareRowChanged(this, new GL_FirmwareRowChangeEvent(((GL_FirmwareRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.GL_FirmwareRowChanging != null)) {
+                    this.GL_FirmwareRowChanging(this, new GL_FirmwareRowChangeEvent(((GL_FirmwareRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.GL_FirmwareRowDeleted != null)) {
+                    this.GL_FirmwareRowDeleted(this, new GL_FirmwareRowChangeEvent(((GL_FirmwareRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.GL_FirmwareRowDeleting != null)) {
+                    this.GL_FirmwareRowDeleting(this, new GL_FirmwareRowChangeEvent(((GL_FirmwareRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemoveGL_FirmwareRow(GL_FirmwareRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                ds_Programmazione_GL ds = new ds_Programmazione_GL();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "GL_FirmwareDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class dt_Firmware_lookupCommesseGLDataTable : global::System.Data.TypedTableBase<dt_Firmware_lookupCommesseGLRow> {
+            
+            private global::System.Data.DataColumn columnId;
+            
+            private global::System.Data.DataColumn columnSW_Code;
+            
+            private global::System.Data.DataColumn columnSW_TipoDevice;
+            
+            private global::System.Data.DataColumn columnSW_Descrizione;
+            
+            private global::System.Data.DataColumn columnSW_Descrizione_EN;
+            
+            private global::System.Data.DataColumn columnSW_Versione;
+            
+            private global::System.Data.DataColumn columnSW_Revisione;
+            
+            private global::System.Data.DataColumn columnSW_Standard;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_RF;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_Use_Oled;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_Use_EmButt;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_Use_Backlight;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_ShiftPage;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_Use_Accel;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_Use_SP;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_Use_Buzzer;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_Use_Vibracall;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_Use_LedTorch;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_MaxPairDevices;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_RF;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Plug_Exp;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Plug_Ple;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Em_Keyb;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Can;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Prop_Out;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_TimeOut;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Cont_Keys;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_LockSameRow;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Use_SP;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_MaxPairDevices;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_ShiftPage;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Output_No;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Dig_Input_No;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Ana_Input_No;
+            
+            private global::System.Data.DataColumn columnSW_Revisioni;
+            
+            private global::System.Data.DataColumn columnSW_Funzionamento;
+            
+            private global::System.Data.DataColumn columnSW_Config;
+            
+            private global::System.Data.DataColumn columnSW_Obsolete_ver;
+            
+            private global::System.Data.DataColumn columnSW_Obsolete_ver_from_date;
+            
+            private global::System.Data.DataColumn columnSW_P_Lock;
+            
+            private global::System.Data.DataColumn columnSW_R_Lock;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public dt_Firmware_lookupCommesseGLDataTable() {
+                this.TableName = "dt_Firmware_lookupCommesseGL";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal dt_Firmware_lookupCommesseGLDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected dt_Firmware_lookupCommesseGLDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn IdColumn {
+                get {
+                    return this.columnId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_CodeColumn {
+                get {
+                    return this.columnSW_Code;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_TipoDeviceColumn {
+                get {
+                    return this.columnSW_TipoDevice;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_DescrizioneColumn {
+                get {
+                    return this.columnSW_Descrizione;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_Descrizione_ENColumn {
+                get {
+                    return this.columnSW_Descrizione_EN;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_VersioneColumn {
+                get {
+                    return this.columnSW_Versione;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_RevisioneColumn {
+                get {
+                    return this.columnSW_Revisione;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_StandardColumn {
+                get {
+                    return this.columnSW_Standard;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_RFColumn {
+                get {
+                    return this.columnSW_P_Opt_RF;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_Use_OledColumn {
+                get {
+                    return this.columnSW_P_Opt_Use_Oled;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_Use_EmButtColumn {
+                get {
+                    return this.columnSW_P_Opt_Use_EmButt;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_Use_BacklightColumn {
+                get {
+                    return this.columnSW_P_Opt_Use_Backlight;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_ShiftPageColumn {
+                get {
+                    return this.columnSW_P_Opt_ShiftPage;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_Use_AccelColumn {
+                get {
+                    return this.columnSW_P_Opt_Use_Accel;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_Use_SPColumn {
+                get {
+                    return this.columnSW_P_Opt_Use_SP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_Use_BuzzerColumn {
+                get {
+                    return this.columnSW_P_Opt_Use_Buzzer;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_Use_VibracallColumn {
+                get {
+                    return this.columnSW_P_Opt_Use_Vibracall;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_Use_LedTorchColumn {
+                get {
+                    return this.columnSW_P_Opt_Use_LedTorch;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_MaxPairDevicesColumn {
+                get {
+                    return this.columnSW_P_Opt_MaxPairDevices;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_RFColumn {
+                get {
+                    return this.columnSW_R_Opt_RF;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_Plug_ExpColumn {
+                get {
+                    return this.columnSW_R_Opt_Plug_Exp;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_Plug_PleColumn {
+                get {
+                    return this.columnSW_R_Opt_Plug_Ple;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_Em_KeybColumn {
+                get {
+                    return this.columnSW_R_Opt_Em_Keyb;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_CanColumn {
+                get {
+                    return this.columnSW_R_Opt_Can;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_Prop_OutColumn {
+                get {
+                    return this.columnSW_R_Opt_Prop_Out;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_TimeOutColumn {
+                get {
+                    return this.columnSW_R_Opt_TimeOut;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_Cont_KeysColumn {
+                get {
+                    return this.columnSW_R_Opt_Cont_Keys;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_LockSameRowColumn {
+                get {
+                    return this.columnSW_R_Opt_LockSameRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_Use_SPColumn {
+                get {
+                    return this.columnSW_R_Opt_Use_SP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_MaxPairDevicesColumn {
+                get {
+                    return this.columnSW_R_Opt_MaxPairDevices;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_ShiftPageColumn {
+                get {
+                    return this.columnSW_R_Opt_ShiftPage;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_Output_NoColumn {
+                get {
+                    return this.columnSW_R_Opt_Output_No;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_Dig_Input_NoColumn {
+                get {
+                    return this.columnSW_R_Opt_Dig_Input_No;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_Ana_Input_NoColumn {
+                get {
+                    return this.columnSW_R_Opt_Ana_Input_No;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_RevisioniColumn {
+                get {
+                    return this.columnSW_Revisioni;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_FunzionamentoColumn {
+                get {
+                    return this.columnSW_Funzionamento;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_ConfigColumn {
+                get {
+                    return this.columnSW_Config;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_Obsolete_verColumn {
+                get {
+                    return this.columnSW_Obsolete_ver;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_Obsolete_ver_from_dateColumn {
+                get {
+                    return this.columnSW_Obsolete_ver_from_date;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_LockColumn {
+                get {
+                    return this.columnSW_P_Lock;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_LockColumn {
+                get {
+                    return this.columnSW_R_Lock;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public dt_Firmware_lookupCommesseGLRow this[int index] {
+                get {
+                    return ((dt_Firmware_lookupCommesseGLRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event dt_Firmware_lookupCommesseGLRowChangeEventHandler dt_Firmware_lookupCommesseGLRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event dt_Firmware_lookupCommesseGLRowChangeEventHandler dt_Firmware_lookupCommesseGLRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event dt_Firmware_lookupCommesseGLRowChangeEventHandler dt_Firmware_lookupCommesseGLRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event dt_Firmware_lookupCommesseGLRowChangeEventHandler dt_Firmware_lookupCommesseGLRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Adddt_Firmware_lookupCommesseGLRow(dt_Firmware_lookupCommesseGLRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public dt_Firmware_lookupCommesseGLRow Adddt_Firmware_lookupCommesseGLRow(
+                        string SW_Code, 
+                        string SW_TipoDevice, 
+                        string SW_Descrizione, 
+                        string SW_Descrizione_EN, 
+                        string SW_Versione, 
+                        string SW_Revisione, 
+                        bool SW_Standard, 
+                        string SW_P_Opt_RF, 
+                        bool SW_P_Opt_Use_Oled, 
+                        bool SW_P_Opt_Use_EmButt, 
+                        bool SW_P_Opt_Use_Backlight, 
+                        bool SW_P_Opt_ShiftPage, 
+                        bool SW_P_Opt_Use_Accel, 
+                        bool SW_P_Opt_Use_SP, 
+                        bool SW_P_Opt_Use_Buzzer, 
+                        bool SW_P_Opt_Use_Vibracall, 
+                        bool SW_P_Opt_Use_LedTorch, 
+                        int SW_P_Opt_MaxPairDevices, 
+                        string SW_R_Opt_RF, 
+                        bool SW_R_Opt_Plug_Exp, 
+                        bool SW_R_Opt_Plug_Ple, 
+                        bool SW_R_Opt_Em_Keyb, 
+                        bool SW_R_Opt_Can, 
+                        bool SW_R_Opt_Prop_Out, 
+                        string SW_R_Opt_TimeOut, 
+                        int SW_R_Opt_Cont_Keys, 
+                        bool SW_R_Opt_LockSameRow, 
+                        bool SW_R_Opt_Use_SP, 
+                        int SW_R_Opt_MaxPairDevices, 
+                        bool SW_R_Opt_ShiftPage, 
+                        int SW_R_Opt_Output_No, 
+                        int SW_R_Opt_Dig_Input_No, 
+                        int SW_R_Opt_Ana_Input_No, 
+                        string SW_Revisioni, 
+                        string SW_Funzionamento, 
+                        string SW_Config, 
+                        bool SW_Obsolete_ver, 
+                        System.DateTime SW_Obsolete_ver_from_date, 
+                        int SW_P_Lock, 
+                        int SW_R_Lock) {
+                dt_Firmware_lookupCommesseGLRow rowdt_Firmware_lookupCommesseGLRow = ((dt_Firmware_lookupCommesseGLRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        SW_Code,
+                        SW_TipoDevice,
+                        SW_Descrizione,
+                        SW_Descrizione_EN,
+                        SW_Versione,
+                        SW_Revisione,
+                        SW_Standard,
+                        SW_P_Opt_RF,
+                        SW_P_Opt_Use_Oled,
+                        SW_P_Opt_Use_EmButt,
+                        SW_P_Opt_Use_Backlight,
+                        SW_P_Opt_ShiftPage,
+                        SW_P_Opt_Use_Accel,
+                        SW_P_Opt_Use_SP,
+                        SW_P_Opt_Use_Buzzer,
+                        SW_P_Opt_Use_Vibracall,
+                        SW_P_Opt_Use_LedTorch,
+                        SW_P_Opt_MaxPairDevices,
+                        SW_R_Opt_RF,
+                        SW_R_Opt_Plug_Exp,
+                        SW_R_Opt_Plug_Ple,
+                        SW_R_Opt_Em_Keyb,
+                        SW_R_Opt_Can,
+                        SW_R_Opt_Prop_Out,
+                        SW_R_Opt_TimeOut,
+                        SW_R_Opt_Cont_Keys,
+                        SW_R_Opt_LockSameRow,
+                        SW_R_Opt_Use_SP,
+                        SW_R_Opt_MaxPairDevices,
+                        SW_R_Opt_ShiftPage,
+                        SW_R_Opt_Output_No,
+                        SW_R_Opt_Dig_Input_No,
+                        SW_R_Opt_Ana_Input_No,
+                        SW_Revisioni,
+                        SW_Funzionamento,
+                        SW_Config,
+                        SW_Obsolete_ver,
+                        SW_Obsolete_ver_from_date,
+                        SW_P_Lock,
+                        SW_R_Lock};
+                rowdt_Firmware_lookupCommesseGLRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowdt_Firmware_lookupCommesseGLRow);
+                return rowdt_Firmware_lookupCommesseGLRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public dt_Firmware_lookupCommesseGLRow FindById(int Id) {
+                return ((dt_Firmware_lookupCommesseGLRow)(this.Rows.Find(new object[] {
+                            Id})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                dt_Firmware_lookupCommesseGLDataTable cln = ((dt_Firmware_lookupCommesseGLDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new dt_Firmware_lookupCommesseGLDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnId = base.Columns["Id"];
+                this.columnSW_Code = base.Columns["SW_Code"];
+                this.columnSW_TipoDevice = base.Columns["SW_TipoDevice"];
+                this.columnSW_Descrizione = base.Columns["SW_Descrizione"];
+                this.columnSW_Descrizione_EN = base.Columns["SW_Descrizione_EN"];
+                this.columnSW_Versione = base.Columns["SW_Versione"];
+                this.columnSW_Revisione = base.Columns["SW_Revisione"];
+                this.columnSW_Standard = base.Columns["SW_Standard"];
+                this.columnSW_P_Opt_RF = base.Columns["SW_P_Opt_RF"];
+                this.columnSW_P_Opt_Use_Oled = base.Columns["SW_P_Opt_Use_Oled"];
+                this.columnSW_P_Opt_Use_EmButt = base.Columns["SW_P_Opt_Use_EmButt"];
+                this.columnSW_P_Opt_Use_Backlight = base.Columns["SW_P_Opt_Use_Backlight"];
+                this.columnSW_P_Opt_ShiftPage = base.Columns["SW_P_Opt_ShiftPage"];
+                this.columnSW_P_Opt_Use_Accel = base.Columns["SW_P_Opt_Use_Accel"];
+                this.columnSW_P_Opt_Use_SP = base.Columns["SW_P_Opt_Use_SP"];
+                this.columnSW_P_Opt_Use_Buzzer = base.Columns["SW_P_Opt_Use_Buzzer"];
+                this.columnSW_P_Opt_Use_Vibracall = base.Columns["SW_P_Opt_Use_Vibracall"];
+                this.columnSW_P_Opt_Use_LedTorch = base.Columns["SW_P_Opt_Use_LedTorch"];
+                this.columnSW_P_Opt_MaxPairDevices = base.Columns["SW_P_Opt_MaxPairDevices"];
+                this.columnSW_R_Opt_RF = base.Columns["SW_R_Opt_RF"];
+                this.columnSW_R_Opt_Plug_Exp = base.Columns["SW_R_Opt_Plug_Exp"];
+                this.columnSW_R_Opt_Plug_Ple = base.Columns["SW_R_Opt_Plug_Ple"];
+                this.columnSW_R_Opt_Em_Keyb = base.Columns["SW_R_Opt_Em_Keyb"];
+                this.columnSW_R_Opt_Can = base.Columns["SW_R_Opt_Can"];
+                this.columnSW_R_Opt_Prop_Out = base.Columns["SW_R_Opt_Prop_Out"];
+                this.columnSW_R_Opt_TimeOut = base.Columns["SW_R_Opt_TimeOut"];
+                this.columnSW_R_Opt_Cont_Keys = base.Columns["SW_R_Opt_Cont_Keys"];
+                this.columnSW_R_Opt_LockSameRow = base.Columns["SW_R_Opt_LockSameRow"];
+                this.columnSW_R_Opt_Use_SP = base.Columns["SW_R_Opt_Use_SP"];
+                this.columnSW_R_Opt_MaxPairDevices = base.Columns["SW_R_Opt_MaxPairDevices"];
+                this.columnSW_R_Opt_ShiftPage = base.Columns["SW_R_Opt_ShiftPage"];
+                this.columnSW_R_Opt_Output_No = base.Columns["SW_R_Opt_Output_No"];
+                this.columnSW_R_Opt_Dig_Input_No = base.Columns["SW_R_Opt_Dig_Input_No"];
+                this.columnSW_R_Opt_Ana_Input_No = base.Columns["SW_R_Opt_Ana_Input_No"];
+                this.columnSW_Revisioni = base.Columns["SW_Revisioni"];
+                this.columnSW_Funzionamento = base.Columns["SW_Funzionamento"];
+                this.columnSW_Config = base.Columns["SW_Config"];
+                this.columnSW_Obsolete_ver = base.Columns["SW_Obsolete_ver"];
+                this.columnSW_Obsolete_ver_from_date = base.Columns["SW_Obsolete_ver_from_date"];
+                this.columnSW_P_Lock = base.Columns["SW_P_Lock"];
+                this.columnSW_R_Lock = base.Columns["SW_R_Lock"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId);
+                this.columnSW_Code = new global::System.Data.DataColumn("SW_Code", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Code);
+                this.columnSW_TipoDevice = new global::System.Data.DataColumn("SW_TipoDevice", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_TipoDevice);
+                this.columnSW_Descrizione = new global::System.Data.DataColumn("SW_Descrizione", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Descrizione);
+                this.columnSW_Descrizione_EN = new global::System.Data.DataColumn("SW_Descrizione_EN", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Descrizione_EN);
+                this.columnSW_Versione = new global::System.Data.DataColumn("SW_Versione", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Versione);
+                this.columnSW_Revisione = new global::System.Data.DataColumn("SW_Revisione", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Revisione);
+                this.columnSW_Standard = new global::System.Data.DataColumn("SW_Standard", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Standard);
+                this.columnSW_P_Opt_RF = new global::System.Data.DataColumn("SW_P_Opt_RF", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_RF);
+                this.columnSW_P_Opt_Use_Oled = new global::System.Data.DataColumn("SW_P_Opt_Use_Oled", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_Use_Oled);
+                this.columnSW_P_Opt_Use_EmButt = new global::System.Data.DataColumn("SW_P_Opt_Use_EmButt", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_Use_EmButt);
+                this.columnSW_P_Opt_Use_Backlight = new global::System.Data.DataColumn("SW_P_Opt_Use_Backlight", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_Use_Backlight);
+                this.columnSW_P_Opt_ShiftPage = new global::System.Data.DataColumn("SW_P_Opt_ShiftPage", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_ShiftPage);
+                this.columnSW_P_Opt_Use_Accel = new global::System.Data.DataColumn("SW_P_Opt_Use_Accel", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_Use_Accel);
+                this.columnSW_P_Opt_Use_SP = new global::System.Data.DataColumn("SW_P_Opt_Use_SP", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_Use_SP);
+                this.columnSW_P_Opt_Use_Buzzer = new global::System.Data.DataColumn("SW_P_Opt_Use_Buzzer", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_Use_Buzzer);
+                this.columnSW_P_Opt_Use_Vibracall = new global::System.Data.DataColumn("SW_P_Opt_Use_Vibracall", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_Use_Vibracall);
+                this.columnSW_P_Opt_Use_LedTorch = new global::System.Data.DataColumn("SW_P_Opt_Use_LedTorch", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_Use_LedTorch);
+                this.columnSW_P_Opt_MaxPairDevices = new global::System.Data.DataColumn("SW_P_Opt_MaxPairDevices", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_MaxPairDevices);
+                this.columnSW_R_Opt_RF = new global::System.Data.DataColumn("SW_R_Opt_RF", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_RF);
+                this.columnSW_R_Opt_Plug_Exp = new global::System.Data.DataColumn("SW_R_Opt_Plug_Exp", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Plug_Exp);
+                this.columnSW_R_Opt_Plug_Ple = new global::System.Data.DataColumn("SW_R_Opt_Plug_Ple", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Plug_Ple);
+                this.columnSW_R_Opt_Em_Keyb = new global::System.Data.DataColumn("SW_R_Opt_Em_Keyb", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Em_Keyb);
+                this.columnSW_R_Opt_Can = new global::System.Data.DataColumn("SW_R_Opt_Can", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Can);
+                this.columnSW_R_Opt_Prop_Out = new global::System.Data.DataColumn("SW_R_Opt_Prop_Out", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Prop_Out);
+                this.columnSW_R_Opt_TimeOut = new global::System.Data.DataColumn("SW_R_Opt_TimeOut", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_TimeOut);
+                this.columnSW_R_Opt_Cont_Keys = new global::System.Data.DataColumn("SW_R_Opt_Cont_Keys", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Cont_Keys);
+                this.columnSW_R_Opt_LockSameRow = new global::System.Data.DataColumn("SW_R_Opt_LockSameRow", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_LockSameRow);
+                this.columnSW_R_Opt_Use_SP = new global::System.Data.DataColumn("SW_R_Opt_Use_SP", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Use_SP);
+                this.columnSW_R_Opt_MaxPairDevices = new global::System.Data.DataColumn("SW_R_Opt_MaxPairDevices", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_MaxPairDevices);
+                this.columnSW_R_Opt_ShiftPage = new global::System.Data.DataColumn("SW_R_Opt_ShiftPage", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_ShiftPage);
+                this.columnSW_R_Opt_Output_No = new global::System.Data.DataColumn("SW_R_Opt_Output_No", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Output_No);
+                this.columnSW_R_Opt_Dig_Input_No = new global::System.Data.DataColumn("SW_R_Opt_Dig_Input_No", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Dig_Input_No);
+                this.columnSW_R_Opt_Ana_Input_No = new global::System.Data.DataColumn("SW_R_Opt_Ana_Input_No", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Ana_Input_No);
+                this.columnSW_Revisioni = new global::System.Data.DataColumn("SW_Revisioni", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Revisioni);
+                this.columnSW_Funzionamento = new global::System.Data.DataColumn("SW_Funzionamento", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Funzionamento);
+                this.columnSW_Config = new global::System.Data.DataColumn("SW_Config", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Config);
+                this.columnSW_Obsolete_ver = new global::System.Data.DataColumn("SW_Obsolete_ver", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Obsolete_ver);
+                this.columnSW_Obsolete_ver_from_date = new global::System.Data.DataColumn("SW_Obsolete_ver_from_date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Obsolete_ver_from_date);
+                this.columnSW_P_Lock = new global::System.Data.DataColumn("SW_P_Lock", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Lock);
+                this.columnSW_R_Lock = new global::System.Data.DataColumn("SW_R_Lock", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Lock);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnId}, true));
+                this.columnId.AutoIncrement = true;
+                this.columnId.AutoIncrementSeed = -1;
+                this.columnId.AutoIncrementStep = -1;
+                this.columnId.AllowDBNull = false;
+                this.columnId.ReadOnly = true;
+                this.columnId.Unique = true;
+                this.columnSW_Code.AllowDBNull = false;
+                this.columnSW_Code.MaxLength = 25;
+                this.columnSW_TipoDevice.AllowDBNull = false;
+                this.columnSW_TipoDevice.MaxLength = 1;
+                this.columnSW_Descrizione.MaxLength = 255;
+                this.columnSW_Descrizione_EN.MaxLength = 255;
+                this.columnSW_Versione.MaxLength = 6;
+                this.columnSW_Revisione.MaxLength = 3;
+                this.columnSW_Standard.AllowDBNull = false;
+                this.columnSW_P_Opt_RF.AllowDBNull = false;
+                this.columnSW_P_Opt_RF.MaxLength = 10;
+                this.columnSW_P_Opt_Use_Oled.AllowDBNull = false;
+                this.columnSW_P_Opt_Use_EmButt.AllowDBNull = false;
+                this.columnSW_P_Opt_Use_Backlight.AllowDBNull = false;
+                this.columnSW_P_Opt_ShiftPage.AllowDBNull = false;
+                this.columnSW_P_Opt_Use_Accel.AllowDBNull = false;
+                this.columnSW_P_Opt_Use_SP.AllowDBNull = false;
+                this.columnSW_P_Opt_Use_Buzzer.AllowDBNull = false;
+                this.columnSW_P_Opt_Use_Vibracall.AllowDBNull = false;
+                this.columnSW_P_Opt_Use_LedTorch.AllowDBNull = false;
+                this.columnSW_R_Opt_RF.AllowDBNull = false;
+                this.columnSW_R_Opt_RF.MaxLength = 10;
+                this.columnSW_R_Opt_Plug_Exp.AllowDBNull = false;
+                this.columnSW_R_Opt_Plug_Ple.AllowDBNull = false;
+                this.columnSW_R_Opt_Em_Keyb.AllowDBNull = false;
+                this.columnSW_R_Opt_Can.AllowDBNull = false;
+                this.columnSW_R_Opt_Prop_Out.AllowDBNull = false;
+                this.columnSW_R_Opt_TimeOut.AllowDBNull = false;
+                this.columnSW_R_Opt_TimeOut.MaxLength = 10;
+                this.columnSW_R_Opt_LockSameRow.AllowDBNull = false;
+                this.columnSW_R_Opt_Use_SP.AllowDBNull = false;
+                this.columnSW_R_Opt_ShiftPage.AllowDBNull = false;
+                this.columnSW_Revisioni.MaxLength = 2147483647;
+                this.columnSW_Funzionamento.MaxLength = 2147483647;
+                this.columnSW_Config.MaxLength = 2147483647;
+                this.columnSW_Obsolete_ver.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public dt_Firmware_lookupCommesseGLRow Newdt_Firmware_lookupCommesseGLRow() {
+                return ((dt_Firmware_lookupCommesseGLRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new dt_Firmware_lookupCommesseGLRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(dt_Firmware_lookupCommesseGLRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.dt_Firmware_lookupCommesseGLRowChanged != null)) {
+                    this.dt_Firmware_lookupCommesseGLRowChanged(this, new dt_Firmware_lookupCommesseGLRowChangeEvent(((dt_Firmware_lookupCommesseGLRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.dt_Firmware_lookupCommesseGLRowChanging != null)) {
+                    this.dt_Firmware_lookupCommesseGLRowChanging(this, new dt_Firmware_lookupCommesseGLRowChangeEvent(((dt_Firmware_lookupCommesseGLRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.dt_Firmware_lookupCommesseGLRowDeleted != null)) {
+                    this.dt_Firmware_lookupCommesseGLRowDeleted(this, new dt_Firmware_lookupCommesseGLRowChangeEvent(((dt_Firmware_lookupCommesseGLRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.dt_Firmware_lookupCommesseGLRowDeleting != null)) {
+                    this.dt_Firmware_lookupCommesseGLRowDeleting(this, new dt_Firmware_lookupCommesseGLRowChangeEvent(((dt_Firmware_lookupCommesseGLRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Removedt_Firmware_lookupCommesseGLRow(dt_Firmware_lookupCommesseGLRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                ds_Programmazione_GL ds = new ds_Programmazione_GL();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "dt_Firmware_lookupCommesseGLDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class SerialNumbersGL_ObsoleteDataTable : global::System.Data.TypedTableBase<SerialNumbersGL_ObsoleteRow> {
+            
+            private global::System.Data.DataColumn columnSer_Kit;
+            
+            private global::System.Data.DataColumn columnSer_ID_Cli;
+            
+            private global::System.Data.DataColumn columnSer_Device;
+            
+            private global::System.Data.DataColumn columnSer_Device_ID_Code;
+            
+            private global::System.Data.DataColumn columnSer_OfficialSerial;
+            
+            private global::System.Data.DataColumn columnSer_ReadSerial;
+            
+            private global::System.Data.DataColumn columnSer_SW_Code;
+            
+            private global::System.Data.DataColumn columnSer_SW_Code_Rev;
+            
+            private global::System.Data.DataColumn columnSer_SW_Std_Type;
+            
+            private global::System.Data.DataColumn columnSer_SN_prod;
+            
+            private global::System.Data.DataColumn columnSer_Commessa;
+            
+            private global::System.Data.DataColumn columnSer_DateProduction;
+            
+            private global::System.Data.DataColumn columnSer_Spedito;
+            
+            private global::System.Data.DataColumn columnSer_Data_Spedito;
+            
+            private global::System.Data.DataColumn columnSer_Substition_ID_ReadSerial;
+            
+            private global::System.Data.DataColumn columnSer_Note;
+            
+            private global::System.Data.DataColumn columnSer_ObsoleteFromDate;
+            
+            private global::System.Data.DataColumn columnSer_LockLevel;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public SerialNumbersGL_ObsoleteDataTable() {
+                this.TableName = "SerialNumbersGL_Obsolete";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal SerialNumbersGL_ObsoleteDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected SerialNumbersGL_ObsoleteDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_KitColumn {
+                get {
+                    return this.columnSer_Kit;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_ID_CliColumn {
+                get {
+                    return this.columnSer_ID_Cli;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_DeviceColumn {
+                get {
+                    return this.columnSer_Device;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_Device_ID_CodeColumn {
+                get {
+                    return this.columnSer_Device_ID_Code;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_OfficialSerialColumn {
+                get {
+                    return this.columnSer_OfficialSerial;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_ReadSerialColumn {
+                get {
+                    return this.columnSer_ReadSerial;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_SW_CodeColumn {
+                get {
+                    return this.columnSer_SW_Code;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_SW_Code_RevColumn {
+                get {
+                    return this.columnSer_SW_Code_Rev;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_SW_Std_TypeColumn {
+                get {
+                    return this.columnSer_SW_Std_Type;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_SN_prodColumn {
+                get {
+                    return this.columnSer_SN_prod;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_CommessaColumn {
+                get {
+                    return this.columnSer_Commessa;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_DateProductionColumn {
+                get {
+                    return this.columnSer_DateProduction;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_SpeditoColumn {
+                get {
+                    return this.columnSer_Spedito;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_Data_SpeditoColumn {
+                get {
+                    return this.columnSer_Data_Spedito;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_Substition_ID_ReadSerialColumn {
+                get {
+                    return this.columnSer_Substition_ID_ReadSerial;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_NoteColumn {
+                get {
+                    return this.columnSer_Note;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_ObsoleteFromDateColumn {
+                get {
+                    return this.columnSer_ObsoleteFromDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Ser_LockLevelColumn {
+                get {
+                    return this.columnSer_LockLevel;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public SerialNumbersGL_ObsoleteRow this[int index] {
+                get {
+                    return ((SerialNumbersGL_ObsoleteRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event SerialNumbersGL_ObsoleteRowChangeEventHandler SerialNumbersGL_ObsoleteRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event SerialNumbersGL_ObsoleteRowChangeEventHandler SerialNumbersGL_ObsoleteRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event SerialNumbersGL_ObsoleteRowChangeEventHandler SerialNumbersGL_ObsoleteRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event SerialNumbersGL_ObsoleteRowChangeEventHandler SerialNumbersGL_ObsoleteRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddSerialNumbersGL_ObsoleteRow(SerialNumbersGL_ObsoleteRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public SerialNumbersGL_ObsoleteRow AddSerialNumbersGL_ObsoleteRow(
+                        string Ser_Kit, 
+                        int Ser_ID_Cli, 
+                        string Ser_Device, 
+                        string Ser_Device_ID_Code, 
+                        string Ser_OfficialSerial, 
+                        string Ser_ReadSerial, 
+                        string Ser_SW_Code, 
+                        string Ser_SW_Code_Rev, 
+                        bool Ser_SW_Std_Type, 
+                        string Ser_SN_prod, 
+                        string Ser_Commessa, 
+                        System.DateTime Ser_DateProduction, 
+                        bool Ser_Spedito, 
+                        System.DateTime Ser_Data_Spedito, 
+                        string Ser_Substition_ID_ReadSerial, 
+                        string Ser_Note, 
+                        System.DateTime Ser_ObsoleteFromDate, 
+                        int Ser_LockLevel) {
+                SerialNumbersGL_ObsoleteRow rowSerialNumbersGL_ObsoleteRow = ((SerialNumbersGL_ObsoleteRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Ser_Kit,
+                        Ser_ID_Cli,
+                        Ser_Device,
+                        Ser_Device_ID_Code,
+                        Ser_OfficialSerial,
+                        Ser_ReadSerial,
+                        Ser_SW_Code,
+                        Ser_SW_Code_Rev,
+                        Ser_SW_Std_Type,
+                        Ser_SN_prod,
+                        Ser_Commessa,
+                        Ser_DateProduction,
+                        Ser_Spedito,
+                        Ser_Data_Spedito,
+                        Ser_Substition_ID_ReadSerial,
+                        Ser_Note,
+                        Ser_ObsoleteFromDate,
+                        Ser_LockLevel};
+                rowSerialNumbersGL_ObsoleteRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowSerialNumbersGL_ObsoleteRow);
+                return rowSerialNumbersGL_ObsoleteRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                SerialNumbersGL_ObsoleteDataTable cln = ((SerialNumbersGL_ObsoleteDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new SerialNumbersGL_ObsoleteDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnSer_Kit = base.Columns["Ser_Kit"];
+                this.columnSer_ID_Cli = base.Columns["Ser_ID_Cli"];
+                this.columnSer_Device = base.Columns["Ser_Device"];
+                this.columnSer_Device_ID_Code = base.Columns["Ser_Device_ID_Code"];
+                this.columnSer_OfficialSerial = base.Columns["Ser_OfficialSerial"];
+                this.columnSer_ReadSerial = base.Columns["Ser_ReadSerial"];
+                this.columnSer_SW_Code = base.Columns["Ser_SW_Code"];
+                this.columnSer_SW_Code_Rev = base.Columns["Ser_SW_Code_Rev"];
+                this.columnSer_SW_Std_Type = base.Columns["Ser_SW_Std_Type"];
+                this.columnSer_SN_prod = base.Columns["Ser_SN_prod"];
+                this.columnSer_Commessa = base.Columns["Ser_Commessa"];
+                this.columnSer_DateProduction = base.Columns["Ser_DateProduction"];
+                this.columnSer_Spedito = base.Columns["Ser_Spedito"];
+                this.columnSer_Data_Spedito = base.Columns["Ser_Data_Spedito"];
+                this.columnSer_Substition_ID_ReadSerial = base.Columns["Ser_Substition_ID_ReadSerial"];
+                this.columnSer_Note = base.Columns["Ser_Note"];
+                this.columnSer_ObsoleteFromDate = base.Columns["Ser_ObsoleteFromDate"];
+                this.columnSer_LockLevel = base.Columns["Ser_LockLevel"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnSer_Kit = new global::System.Data.DataColumn("Ser_Kit", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_Kit);
+                this.columnSer_ID_Cli = new global::System.Data.DataColumn("Ser_ID_Cli", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_ID_Cli);
+                this.columnSer_Device = new global::System.Data.DataColumn("Ser_Device", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_Device);
+                this.columnSer_Device_ID_Code = new global::System.Data.DataColumn("Ser_Device_ID_Code", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_Device_ID_Code);
+                this.columnSer_OfficialSerial = new global::System.Data.DataColumn("Ser_OfficialSerial", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_OfficialSerial);
+                this.columnSer_ReadSerial = new global::System.Data.DataColumn("Ser_ReadSerial", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_ReadSerial);
+                this.columnSer_SW_Code = new global::System.Data.DataColumn("Ser_SW_Code", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_SW_Code);
+                this.columnSer_SW_Code_Rev = new global::System.Data.DataColumn("Ser_SW_Code_Rev", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_SW_Code_Rev);
+                this.columnSer_SW_Std_Type = new global::System.Data.DataColumn("Ser_SW_Std_Type", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_SW_Std_Type);
+                this.columnSer_SN_prod = new global::System.Data.DataColumn("Ser_SN_prod", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_SN_prod);
+                this.columnSer_Commessa = new global::System.Data.DataColumn("Ser_Commessa", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_Commessa);
+                this.columnSer_DateProduction = new global::System.Data.DataColumn("Ser_DateProduction", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_DateProduction);
+                this.columnSer_Spedito = new global::System.Data.DataColumn("Ser_Spedito", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_Spedito);
+                this.columnSer_Data_Spedito = new global::System.Data.DataColumn("Ser_Data_Spedito", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_Data_Spedito);
+                this.columnSer_Substition_ID_ReadSerial = new global::System.Data.DataColumn("Ser_Substition_ID_ReadSerial", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_Substition_ID_ReadSerial);
+                this.columnSer_Note = new global::System.Data.DataColumn("Ser_Note", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_Note);
+                this.columnSer_ObsoleteFromDate = new global::System.Data.DataColumn("Ser_ObsoleteFromDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_ObsoleteFromDate);
+                this.columnSer_LockLevel = new global::System.Data.DataColumn("Ser_LockLevel", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSer_LockLevel);
+                this.columnSer_Kit.MaxLength = 25;
+                this.columnSer_Device.MaxLength = 25;
+                this.columnSer_Device_ID_Code.MaxLength = 4;
+                this.columnSer_OfficialSerial.MaxLength = 25;
+                this.columnSer_ReadSerial.MaxLength = 25;
+                this.columnSer_SW_Code.MaxLength = 25;
+                this.columnSer_SW_Code_Rev.MaxLength = 5;
+                this.columnSer_SN_prod.MaxLength = 11;
+                this.columnSer_Commessa.MaxLength = 25;
+                this.columnSer_Spedito.AllowDBNull = false;
+                this.columnSer_Substition_ID_ReadSerial.MaxLength = 25;
+                this.columnSer_Note.MaxLength = 2147483647;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public SerialNumbersGL_ObsoleteRow NewSerialNumbersGL_ObsoleteRow() {
+                return ((SerialNumbersGL_ObsoleteRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new SerialNumbersGL_ObsoleteRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(SerialNumbersGL_ObsoleteRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.SerialNumbersGL_ObsoleteRowChanged != null)) {
+                    this.SerialNumbersGL_ObsoleteRowChanged(this, new SerialNumbersGL_ObsoleteRowChangeEvent(((SerialNumbersGL_ObsoleteRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.SerialNumbersGL_ObsoleteRowChanging != null)) {
+                    this.SerialNumbersGL_ObsoleteRowChanging(this, new SerialNumbersGL_ObsoleteRowChangeEvent(((SerialNumbersGL_ObsoleteRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.SerialNumbersGL_ObsoleteRowDeleted != null)) {
+                    this.SerialNumbersGL_ObsoleteRowDeleted(this, new SerialNumbersGL_ObsoleteRowChangeEvent(((SerialNumbersGL_ObsoleteRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.SerialNumbersGL_ObsoleteRowDeleting != null)) {
+                    this.SerialNumbersGL_ObsoleteRowDeleting(this, new SerialNumbersGL_ObsoleteRowChangeEvent(((SerialNumbersGL_ObsoleteRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemoveSerialNumbersGL_ObsoleteRow(SerialNumbersGL_ObsoleteRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                ds_Programmazione_GL ds = new ds_Programmazione_GL();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "SerialNumbersGL_ObsoleteDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class SafetyPointRFID_GLDataTable : global::System.Data.TypedTableBase<SafetyPointRFID_GLRow> {
+            
+            private global::System.Data.DataColumn columnRfid_ID;
+            
+            private global::System.Data.DataColumn columnRfid_UUID;
+            
+            private global::System.Data.DataColumn columnRfid_Technology;
+            
+            private global::System.Data.DataColumn columnRfid_Ser_SN_Prod;
+            
+            private global::System.Data.DataColumn columnRfid_Obsolete;
+            
+            private global::System.Data.DataColumn columnRfid_Verified;
+            
+            private global::System.Data.DataColumn columnRfid_Note;
+            
+            private global::System.Data.DataColumn columnRfid_Ser_OfficialSerial;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public SafetyPointRFID_GLDataTable() {
+                this.TableName = "SafetyPointRFID_GL";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal SafetyPointRFID_GLDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected SafetyPointRFID_GLDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Rfid_IDColumn {
+                get {
+                    return this.columnRfid_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Rfid_UUIDColumn {
+                get {
+                    return this.columnRfid_UUID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Rfid_TechnologyColumn {
+                get {
+                    return this.columnRfid_Technology;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Rfid_Ser_SN_ProdColumn {
+                get {
+                    return this.columnRfid_Ser_SN_Prod;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Rfid_ObsoleteColumn {
+                get {
+                    return this.columnRfid_Obsolete;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Rfid_VerifiedColumn {
+                get {
+                    return this.columnRfid_Verified;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Rfid_NoteColumn {
+                get {
+                    return this.columnRfid_Note;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Rfid_Ser_OfficialSerialColumn {
+                get {
+                    return this.columnRfid_Ser_OfficialSerial;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public SafetyPointRFID_GLRow this[int index] {
+                get {
+                    return ((SafetyPointRFID_GLRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event SafetyPointRFID_GLRowChangeEventHandler SafetyPointRFID_GLRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event SafetyPointRFID_GLRowChangeEventHandler SafetyPointRFID_GLRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event SafetyPointRFID_GLRowChangeEventHandler SafetyPointRFID_GLRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event SafetyPointRFID_GLRowChangeEventHandler SafetyPointRFID_GLRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddSafetyPointRFID_GLRow(SafetyPointRFID_GLRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public SafetyPointRFID_GLRow AddSafetyPointRFID_GLRow(string Rfid_UUID, string Rfid_Technology, string Rfid_Ser_SN_Prod, bool Rfid_Obsolete, bool Rfid_Verified, string Rfid_Note, string Rfid_Ser_OfficialSerial) {
+                SafetyPointRFID_GLRow rowSafetyPointRFID_GLRow = ((SafetyPointRFID_GLRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        Rfid_UUID,
+                        Rfid_Technology,
+                        Rfid_Ser_SN_Prod,
+                        Rfid_Obsolete,
+                        Rfid_Verified,
+                        Rfid_Note,
+                        Rfid_Ser_OfficialSerial};
+                rowSafetyPointRFID_GLRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowSafetyPointRFID_GLRow);
+                return rowSafetyPointRFID_GLRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public SafetyPointRFID_GLRow FindByRfid_ID(int Rfid_ID) {
+                return ((SafetyPointRFID_GLRow)(this.Rows.Find(new object[] {
+                            Rfid_ID})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                SafetyPointRFID_GLDataTable cln = ((SafetyPointRFID_GLDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new SafetyPointRFID_GLDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnRfid_ID = base.Columns["Rfid_ID"];
+                this.columnRfid_UUID = base.Columns["Rfid_UUID"];
+                this.columnRfid_Technology = base.Columns["Rfid_Technology"];
+                this.columnRfid_Ser_SN_Prod = base.Columns["Rfid_Ser_SN_Prod"];
+                this.columnRfid_Obsolete = base.Columns["Rfid_Obsolete"];
+                this.columnRfid_Verified = base.Columns["Rfid_Verified"];
+                this.columnRfid_Note = base.Columns["Rfid_Note"];
+                this.columnRfid_Ser_OfficialSerial = base.Columns["Rfid_Ser_OfficialSerial"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnRfid_ID = new global::System.Data.DataColumn("Rfid_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRfid_ID);
+                this.columnRfid_UUID = new global::System.Data.DataColumn("Rfid_UUID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRfid_UUID);
+                this.columnRfid_Technology = new global::System.Data.DataColumn("Rfid_Technology", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRfid_Technology);
+                this.columnRfid_Ser_SN_Prod = new global::System.Data.DataColumn("Rfid_Ser_SN_Prod", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRfid_Ser_SN_Prod);
+                this.columnRfid_Obsolete = new global::System.Data.DataColumn("Rfid_Obsolete", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRfid_Obsolete);
+                this.columnRfid_Verified = new global::System.Data.DataColumn("Rfid_Verified", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRfid_Verified);
+                this.columnRfid_Note = new global::System.Data.DataColumn("Rfid_Note", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRfid_Note);
+                this.columnRfid_Ser_OfficialSerial = new global::System.Data.DataColumn("Rfid_Ser_OfficialSerial", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRfid_Ser_OfficialSerial);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnRfid_ID}, true));
+                this.columnRfid_ID.AutoIncrement = true;
+                this.columnRfid_ID.AutoIncrementSeed = -1;
+                this.columnRfid_ID.AutoIncrementStep = -1;
+                this.columnRfid_ID.AllowDBNull = false;
+                this.columnRfid_ID.ReadOnly = true;
+                this.columnRfid_ID.Unique = true;
+                this.columnRfid_UUID.MaxLength = 50;
+                this.columnRfid_Technology.MaxLength = 10;
+                this.columnRfid_Ser_SN_Prod.MaxLength = 11;
+                this.columnRfid_Obsolete.AllowDBNull = false;
+                this.columnRfid_Verified.AllowDBNull = false;
+                this.columnRfid_Note.MaxLength = 2147483647;
+                this.columnRfid_Ser_OfficialSerial.MaxLength = 25;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public SafetyPointRFID_GLRow NewSafetyPointRFID_GLRow() {
+                return ((SafetyPointRFID_GLRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new SafetyPointRFID_GLRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(SafetyPointRFID_GLRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.SafetyPointRFID_GLRowChanged != null)) {
+                    this.SafetyPointRFID_GLRowChanged(this, new SafetyPointRFID_GLRowChangeEvent(((SafetyPointRFID_GLRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.SafetyPointRFID_GLRowChanging != null)) {
+                    this.SafetyPointRFID_GLRowChanging(this, new SafetyPointRFID_GLRowChangeEvent(((SafetyPointRFID_GLRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.SafetyPointRFID_GLRowDeleted != null)) {
+                    this.SafetyPointRFID_GLRowDeleted(this, new SafetyPointRFID_GLRowChangeEvent(((SafetyPointRFID_GLRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.SafetyPointRFID_GLRowDeleting != null)) {
+                    this.SafetyPointRFID_GLRowDeleting(this, new SafetyPointRFID_GLRowChangeEvent(((SafetyPointRFID_GLRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemoveSafetyPointRFID_GLRow(SafetyPointRFID_GLRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                ds_Programmazione_GL ds = new ds_Programmazione_GL();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "SafetyPointRFID_GLDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class GL_FW_RevisioniDataTable : global::System.Data.TypedTableBase<GL_FW_RevisioniRow> {
+            
+            private global::System.Data.DataColumn columnId;
+            
+            private global::System.Data.DataColumn columnSW_Code;
+            
+            private global::System.Data.DataColumn columnSW_TipoDevice;
+            
+            private global::System.Data.DataColumn columnSW_Descrizione;
+            
+            private global::System.Data.DataColumn columnSW_Descrizione_EN;
+            
+            private global::System.Data.DataColumn columnSW_Versione;
+            
+            private global::System.Data.DataColumn columnSW_Revisione;
+            
+            private global::System.Data.DataColumn columnSW_Standard;
+            
+            private global::System.Data.DataColumn columnSW_FamProd;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_RF;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_Use_Oled;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_Use_EmButt;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_Use_Backlight;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_ShiftPage;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_Use_Accel;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_Use_SP;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_Use_Buzzer;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_Use_Vibracall;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_Use_LedTorch;
+            
+            private global::System.Data.DataColumn columnSW_P_PLD;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_MaxPairDevices;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_RF;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Plug_Exp;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Plug_Ple;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Em_Keyb;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Can;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Prop_Out;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_TimeOut;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Cont_Keys;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_LockSameRow;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Use_SP;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_MaxPairDevices;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_ShiftPage;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Output_No;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Dig_Input_No;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Ana_Input_No;
+            
+            private global::System.Data.DataColumn columnSW_Revisioni;
+            
+            private global::System.Data.DataColumn columnSW_Funzionamento;
+            
+            private global::System.Data.DataColumn columnSW_Config;
+            
+            private global::System.Data.DataColumn columnSW_Obsolete_ver;
+            
+            private global::System.Data.DataColumn columnSW_Obsolete_ver_from_date;
+            
+            private global::System.Data.DataColumn columnSW_Order;
+            
+            private global::System.Data.DataColumn columnSW_R_Opt_Use_Radius;
+            
+            private global::System.Data.DataColumn columnSW_CustomPIC;
+            
+            private global::System.Data.DataColumn columnSW_P_Opt_Use_Radius;
+            
+            private global::System.Data.DataColumn columnSW_P_Lock;
+            
+            private global::System.Data.DataColumn columnSW_R_Lock;
+            
+            private global::System.Data.DataColumn columnSW_IsPublic;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public GL_FW_RevisioniDataTable() {
+                this.TableName = "GL_FW_Revisioni";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal GL_FW_RevisioniDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected GL_FW_RevisioniDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn IdColumn {
+                get {
+                    return this.columnId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_CodeColumn {
+                get {
+                    return this.columnSW_Code;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_TipoDeviceColumn {
+                get {
+                    return this.columnSW_TipoDevice;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_DescrizioneColumn {
+                get {
+                    return this.columnSW_Descrizione;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_Descrizione_ENColumn {
+                get {
+                    return this.columnSW_Descrizione_EN;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_VersioneColumn {
+                get {
+                    return this.columnSW_Versione;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_RevisioneColumn {
+                get {
+                    return this.columnSW_Revisione;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_StandardColumn {
+                get {
+                    return this.columnSW_Standard;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_FamProdColumn {
+                get {
+                    return this.columnSW_FamProd;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_RFColumn {
+                get {
+                    return this.columnSW_P_Opt_RF;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_Use_OledColumn {
+                get {
+                    return this.columnSW_P_Opt_Use_Oled;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_Use_EmButtColumn {
+                get {
+                    return this.columnSW_P_Opt_Use_EmButt;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_Use_BacklightColumn {
+                get {
+                    return this.columnSW_P_Opt_Use_Backlight;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_ShiftPageColumn {
+                get {
+                    return this.columnSW_P_Opt_ShiftPage;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_Use_AccelColumn {
+                get {
+                    return this.columnSW_P_Opt_Use_Accel;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_Use_SPColumn {
+                get {
+                    return this.columnSW_P_Opt_Use_SP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_Use_BuzzerColumn {
+                get {
+                    return this.columnSW_P_Opt_Use_Buzzer;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_Use_VibracallColumn {
+                get {
+                    return this.columnSW_P_Opt_Use_Vibracall;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_Use_LedTorchColumn {
+                get {
+                    return this.columnSW_P_Opt_Use_LedTorch;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_PLDColumn {
+                get {
+                    return this.columnSW_P_PLD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_MaxPairDevicesColumn {
+                get {
+                    return this.columnSW_P_Opt_MaxPairDevices;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_RFColumn {
+                get {
+                    return this.columnSW_R_Opt_RF;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_Plug_ExpColumn {
+                get {
+                    return this.columnSW_R_Opt_Plug_Exp;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_Plug_PleColumn {
+                get {
+                    return this.columnSW_R_Opt_Plug_Ple;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_Em_KeybColumn {
+                get {
+                    return this.columnSW_R_Opt_Em_Keyb;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_CanColumn {
+                get {
+                    return this.columnSW_R_Opt_Can;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_Prop_OutColumn {
+                get {
+                    return this.columnSW_R_Opt_Prop_Out;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_TimeOutColumn {
+                get {
+                    return this.columnSW_R_Opt_TimeOut;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_Cont_KeysColumn {
+                get {
+                    return this.columnSW_R_Opt_Cont_Keys;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_LockSameRowColumn {
+                get {
+                    return this.columnSW_R_Opt_LockSameRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_Use_SPColumn {
+                get {
+                    return this.columnSW_R_Opt_Use_SP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_MaxPairDevicesColumn {
+                get {
+                    return this.columnSW_R_Opt_MaxPairDevices;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_ShiftPageColumn {
+                get {
+                    return this.columnSW_R_Opt_ShiftPage;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_Output_NoColumn {
+                get {
+                    return this.columnSW_R_Opt_Output_No;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_Dig_Input_NoColumn {
+                get {
+                    return this.columnSW_R_Opt_Dig_Input_No;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_Ana_Input_NoColumn {
+                get {
+                    return this.columnSW_R_Opt_Ana_Input_No;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_RevisioniColumn {
+                get {
+                    return this.columnSW_Revisioni;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_FunzionamentoColumn {
+                get {
+                    return this.columnSW_Funzionamento;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_ConfigColumn {
+                get {
+                    return this.columnSW_Config;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_Obsolete_verColumn {
+                get {
+                    return this.columnSW_Obsolete_ver;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_Obsolete_ver_from_dateColumn {
+                get {
+                    return this.columnSW_Obsolete_ver_from_date;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_OrderColumn {
+                get {
+                    return this.columnSW_Order;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_Opt_Use_RadiusColumn {
+                get {
+                    return this.columnSW_R_Opt_Use_Radius;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_CustomPICColumn {
+                get {
+                    return this.columnSW_CustomPIC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_Opt_Use_RadiusColumn {
+                get {
+                    return this.columnSW_P_Opt_Use_Radius;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_P_LockColumn {
+                get {
+                    return this.columnSW_P_Lock;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_R_LockColumn {
+                get {
+                    return this.columnSW_R_Lock;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SW_IsPublicColumn {
+                get {
+                    return this.columnSW_IsPublic;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public GL_FW_RevisioniRow this[int index] {
+                get {
+                    return ((GL_FW_RevisioniRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event GL_FW_RevisioniRowChangeEventHandler GL_FW_RevisioniRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event GL_FW_RevisioniRowChangeEventHandler GL_FW_RevisioniRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event GL_FW_RevisioniRowChangeEventHandler GL_FW_RevisioniRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event GL_FW_RevisioniRowChangeEventHandler GL_FW_RevisioniRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddGL_FW_RevisioniRow(GL_FW_RevisioniRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public GL_FW_RevisioniRow AddGL_FW_RevisioniRow(
+                        string SW_Code, 
+                        string SW_TipoDevice, 
+                        string SW_Descrizione, 
+                        string SW_Descrizione_EN, 
+                        string SW_Versione, 
+                        string SW_Revisione, 
+                        bool SW_Standard, 
+                        string SW_FamProd, 
+                        string SW_P_Opt_RF, 
+                        bool SW_P_Opt_Use_Oled, 
+                        bool SW_P_Opt_Use_EmButt, 
+                        bool SW_P_Opt_Use_Backlight, 
+                        bool SW_P_Opt_ShiftPage, 
+                        bool SW_P_Opt_Use_Accel, 
+                        bool SW_P_Opt_Use_SP, 
+                        bool SW_P_Opt_Use_Buzzer, 
+                        bool SW_P_Opt_Use_Vibracall, 
+                        bool SW_P_Opt_Use_LedTorch, 
+                        bool SW_P_PLD, 
+                        int SW_P_Opt_MaxPairDevices, 
+                        string SW_R_Opt_RF, 
+                        bool SW_R_Opt_Plug_Exp, 
+                        bool SW_R_Opt_Plug_Ple, 
+                        bool SW_R_Opt_Em_Keyb, 
+                        bool SW_R_Opt_Can, 
+                        bool SW_R_Opt_Prop_Out, 
+                        string SW_R_Opt_TimeOut, 
+                        int SW_R_Opt_Cont_Keys, 
+                        bool SW_R_Opt_LockSameRow, 
+                        bool SW_R_Opt_Use_SP, 
+                        int SW_R_Opt_MaxPairDevices, 
+                        bool SW_R_Opt_ShiftPage, 
+                        int SW_R_Opt_Output_No, 
+                        int SW_R_Opt_Dig_Input_No, 
+                        int SW_R_Opt_Ana_Input_No, 
+                        string SW_Revisioni, 
+                        string SW_Funzionamento, 
+                        string SW_Config, 
+                        bool SW_Obsolete_ver, 
+                        System.DateTime SW_Obsolete_ver_from_date, 
+                        string SW_Order, 
+                        bool SW_R_Opt_Use_Radius, 
+                        bool SW_CustomPIC, 
+                        bool SW_P_Opt_Use_Radius, 
+                        int SW_P_Lock, 
+                        int SW_R_Lock, 
+                        bool SW_IsPublic) {
+                GL_FW_RevisioniRow rowGL_FW_RevisioniRow = ((GL_FW_RevisioniRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        SW_Code,
+                        SW_TipoDevice,
+                        SW_Descrizione,
+                        SW_Descrizione_EN,
+                        SW_Versione,
+                        SW_Revisione,
+                        SW_Standard,
+                        SW_FamProd,
+                        SW_P_Opt_RF,
+                        SW_P_Opt_Use_Oled,
+                        SW_P_Opt_Use_EmButt,
+                        SW_P_Opt_Use_Backlight,
+                        SW_P_Opt_ShiftPage,
+                        SW_P_Opt_Use_Accel,
+                        SW_P_Opt_Use_SP,
+                        SW_P_Opt_Use_Buzzer,
+                        SW_P_Opt_Use_Vibracall,
+                        SW_P_Opt_Use_LedTorch,
+                        SW_P_PLD,
+                        SW_P_Opt_MaxPairDevices,
+                        SW_R_Opt_RF,
+                        SW_R_Opt_Plug_Exp,
+                        SW_R_Opt_Plug_Ple,
+                        SW_R_Opt_Em_Keyb,
+                        SW_R_Opt_Can,
+                        SW_R_Opt_Prop_Out,
+                        SW_R_Opt_TimeOut,
+                        SW_R_Opt_Cont_Keys,
+                        SW_R_Opt_LockSameRow,
+                        SW_R_Opt_Use_SP,
+                        SW_R_Opt_MaxPairDevices,
+                        SW_R_Opt_ShiftPage,
+                        SW_R_Opt_Output_No,
+                        SW_R_Opt_Dig_Input_No,
+                        SW_R_Opt_Ana_Input_No,
+                        SW_Revisioni,
+                        SW_Funzionamento,
+                        SW_Config,
+                        SW_Obsolete_ver,
+                        SW_Obsolete_ver_from_date,
+                        SW_Order,
+                        SW_R_Opt_Use_Radius,
+                        SW_CustomPIC,
+                        SW_P_Opt_Use_Radius,
+                        SW_P_Lock,
+                        SW_R_Lock,
+                        SW_IsPublic};
+                rowGL_FW_RevisioniRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowGL_FW_RevisioniRow);
+                return rowGL_FW_RevisioniRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public GL_FW_RevisioniRow FindById(int Id) {
+                return ((GL_FW_RevisioniRow)(this.Rows.Find(new object[] {
+                            Id})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                GL_FW_RevisioniDataTable cln = ((GL_FW_RevisioniDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new GL_FW_RevisioniDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnId = base.Columns["Id"];
+                this.columnSW_Code = base.Columns["SW_Code"];
+                this.columnSW_TipoDevice = base.Columns["SW_TipoDevice"];
+                this.columnSW_Descrizione = base.Columns["SW_Descrizione"];
+                this.columnSW_Descrizione_EN = base.Columns["SW_Descrizione_EN"];
+                this.columnSW_Versione = base.Columns["SW_Versione"];
+                this.columnSW_Revisione = base.Columns["SW_Revisione"];
+                this.columnSW_Standard = base.Columns["SW_Standard"];
+                this.columnSW_FamProd = base.Columns["SW_FamProd"];
+                this.columnSW_P_Opt_RF = base.Columns["SW_P_Opt_RF"];
+                this.columnSW_P_Opt_Use_Oled = base.Columns["SW_P_Opt_Use_Oled"];
+                this.columnSW_P_Opt_Use_EmButt = base.Columns["SW_P_Opt_Use_EmButt"];
+                this.columnSW_P_Opt_Use_Backlight = base.Columns["SW_P_Opt_Use_Backlight"];
+                this.columnSW_P_Opt_ShiftPage = base.Columns["SW_P_Opt_ShiftPage"];
+                this.columnSW_P_Opt_Use_Accel = base.Columns["SW_P_Opt_Use_Accel"];
+                this.columnSW_P_Opt_Use_SP = base.Columns["SW_P_Opt_Use_SP"];
+                this.columnSW_P_Opt_Use_Buzzer = base.Columns["SW_P_Opt_Use_Buzzer"];
+                this.columnSW_P_Opt_Use_Vibracall = base.Columns["SW_P_Opt_Use_Vibracall"];
+                this.columnSW_P_Opt_Use_LedTorch = base.Columns["SW_P_Opt_Use_LedTorch"];
+                this.columnSW_P_PLD = base.Columns["SW_P_PLD"];
+                this.columnSW_P_Opt_MaxPairDevices = base.Columns["SW_P_Opt_MaxPairDevices"];
+                this.columnSW_R_Opt_RF = base.Columns["SW_R_Opt_RF"];
+                this.columnSW_R_Opt_Plug_Exp = base.Columns["SW_R_Opt_Plug_Exp"];
+                this.columnSW_R_Opt_Plug_Ple = base.Columns["SW_R_Opt_Plug_Ple"];
+                this.columnSW_R_Opt_Em_Keyb = base.Columns["SW_R_Opt_Em_Keyb"];
+                this.columnSW_R_Opt_Can = base.Columns["SW_R_Opt_Can"];
+                this.columnSW_R_Opt_Prop_Out = base.Columns["SW_R_Opt_Prop_Out"];
+                this.columnSW_R_Opt_TimeOut = base.Columns["SW_R_Opt_TimeOut"];
+                this.columnSW_R_Opt_Cont_Keys = base.Columns["SW_R_Opt_Cont_Keys"];
+                this.columnSW_R_Opt_LockSameRow = base.Columns["SW_R_Opt_LockSameRow"];
+                this.columnSW_R_Opt_Use_SP = base.Columns["SW_R_Opt_Use_SP"];
+                this.columnSW_R_Opt_MaxPairDevices = base.Columns["SW_R_Opt_MaxPairDevices"];
+                this.columnSW_R_Opt_ShiftPage = base.Columns["SW_R_Opt_ShiftPage"];
+                this.columnSW_R_Opt_Output_No = base.Columns["SW_R_Opt_Output_No"];
+                this.columnSW_R_Opt_Dig_Input_No = base.Columns["SW_R_Opt_Dig_Input_No"];
+                this.columnSW_R_Opt_Ana_Input_No = base.Columns["SW_R_Opt_Ana_Input_No"];
+                this.columnSW_Revisioni = base.Columns["SW_Revisioni"];
+                this.columnSW_Funzionamento = base.Columns["SW_Funzionamento"];
+                this.columnSW_Config = base.Columns["SW_Config"];
+                this.columnSW_Obsolete_ver = base.Columns["SW_Obsolete_ver"];
+                this.columnSW_Obsolete_ver_from_date = base.Columns["SW_Obsolete_ver_from_date"];
+                this.columnSW_Order = base.Columns["SW_Order"];
+                this.columnSW_R_Opt_Use_Radius = base.Columns["SW_R_Opt_Use_Radius"];
+                this.columnSW_CustomPIC = base.Columns["SW_CustomPIC"];
+                this.columnSW_P_Opt_Use_Radius = base.Columns["SW_P_Opt_Use_Radius"];
+                this.columnSW_P_Lock = base.Columns["SW_P_Lock"];
+                this.columnSW_R_Lock = base.Columns["SW_R_Lock"];
+                this.columnSW_IsPublic = base.Columns["SW_IsPublic"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId);
+                this.columnSW_Code = new global::System.Data.DataColumn("SW_Code", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Code);
+                this.columnSW_TipoDevice = new global::System.Data.DataColumn("SW_TipoDevice", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_TipoDevice);
+                this.columnSW_Descrizione = new global::System.Data.DataColumn("SW_Descrizione", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Descrizione);
+                this.columnSW_Descrizione_EN = new global::System.Data.DataColumn("SW_Descrizione_EN", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Descrizione_EN);
+                this.columnSW_Versione = new global::System.Data.DataColumn("SW_Versione", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Versione);
+                this.columnSW_Revisione = new global::System.Data.DataColumn("SW_Revisione", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Revisione);
+                this.columnSW_Standard = new global::System.Data.DataColumn("SW_Standard", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Standard);
+                this.columnSW_FamProd = new global::System.Data.DataColumn("SW_FamProd", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_FamProd);
+                this.columnSW_P_Opt_RF = new global::System.Data.DataColumn("SW_P_Opt_RF", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_RF);
+                this.columnSW_P_Opt_Use_Oled = new global::System.Data.DataColumn("SW_P_Opt_Use_Oled", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_Use_Oled);
+                this.columnSW_P_Opt_Use_EmButt = new global::System.Data.DataColumn("SW_P_Opt_Use_EmButt", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_Use_EmButt);
+                this.columnSW_P_Opt_Use_Backlight = new global::System.Data.DataColumn("SW_P_Opt_Use_Backlight", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_Use_Backlight);
+                this.columnSW_P_Opt_ShiftPage = new global::System.Data.DataColumn("SW_P_Opt_ShiftPage", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_ShiftPage);
+                this.columnSW_P_Opt_Use_Accel = new global::System.Data.DataColumn("SW_P_Opt_Use_Accel", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_Use_Accel);
+                this.columnSW_P_Opt_Use_SP = new global::System.Data.DataColumn("SW_P_Opt_Use_SP", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_Use_SP);
+                this.columnSW_P_Opt_Use_Buzzer = new global::System.Data.DataColumn("SW_P_Opt_Use_Buzzer", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_Use_Buzzer);
+                this.columnSW_P_Opt_Use_Vibracall = new global::System.Data.DataColumn("SW_P_Opt_Use_Vibracall", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_Use_Vibracall);
+                this.columnSW_P_Opt_Use_LedTorch = new global::System.Data.DataColumn("SW_P_Opt_Use_LedTorch", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_Use_LedTorch);
+                this.columnSW_P_PLD = new global::System.Data.DataColumn("SW_P_PLD", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_PLD);
+                this.columnSW_P_Opt_MaxPairDevices = new global::System.Data.DataColumn("SW_P_Opt_MaxPairDevices", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_MaxPairDevices);
+                this.columnSW_R_Opt_RF = new global::System.Data.DataColumn("SW_R_Opt_RF", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_RF);
+                this.columnSW_R_Opt_Plug_Exp = new global::System.Data.DataColumn("SW_R_Opt_Plug_Exp", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Plug_Exp);
+                this.columnSW_R_Opt_Plug_Ple = new global::System.Data.DataColumn("SW_R_Opt_Plug_Ple", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Plug_Ple);
+                this.columnSW_R_Opt_Em_Keyb = new global::System.Data.DataColumn("SW_R_Opt_Em_Keyb", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Em_Keyb);
+                this.columnSW_R_Opt_Can = new global::System.Data.DataColumn("SW_R_Opt_Can", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Can);
+                this.columnSW_R_Opt_Prop_Out = new global::System.Data.DataColumn("SW_R_Opt_Prop_Out", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Prop_Out);
+                this.columnSW_R_Opt_TimeOut = new global::System.Data.DataColumn("SW_R_Opt_TimeOut", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_TimeOut);
+                this.columnSW_R_Opt_Cont_Keys = new global::System.Data.DataColumn("SW_R_Opt_Cont_Keys", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Cont_Keys);
+                this.columnSW_R_Opt_LockSameRow = new global::System.Data.DataColumn("SW_R_Opt_LockSameRow", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_LockSameRow);
+                this.columnSW_R_Opt_Use_SP = new global::System.Data.DataColumn("SW_R_Opt_Use_SP", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Use_SP);
+                this.columnSW_R_Opt_MaxPairDevices = new global::System.Data.DataColumn("SW_R_Opt_MaxPairDevices", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_MaxPairDevices);
+                this.columnSW_R_Opt_ShiftPage = new global::System.Data.DataColumn("SW_R_Opt_ShiftPage", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_ShiftPage);
+                this.columnSW_R_Opt_Output_No = new global::System.Data.DataColumn("SW_R_Opt_Output_No", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Output_No);
+                this.columnSW_R_Opt_Dig_Input_No = new global::System.Data.DataColumn("SW_R_Opt_Dig_Input_No", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Dig_Input_No);
+                this.columnSW_R_Opt_Ana_Input_No = new global::System.Data.DataColumn("SW_R_Opt_Ana_Input_No", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Ana_Input_No);
+                this.columnSW_Revisioni = new global::System.Data.DataColumn("SW_Revisioni", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Revisioni);
+                this.columnSW_Funzionamento = new global::System.Data.DataColumn("SW_Funzionamento", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Funzionamento);
+                this.columnSW_Config = new global::System.Data.DataColumn("SW_Config", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Config);
+                this.columnSW_Obsolete_ver = new global::System.Data.DataColumn("SW_Obsolete_ver", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Obsolete_ver);
+                this.columnSW_Obsolete_ver_from_date = new global::System.Data.DataColumn("SW_Obsolete_ver_from_date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Obsolete_ver_from_date);
+                this.columnSW_Order = new global::System.Data.DataColumn("SW_Order", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_Order);
+                this.columnSW_R_Opt_Use_Radius = new global::System.Data.DataColumn("SW_R_Opt_Use_Radius", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Opt_Use_Radius);
+                this.columnSW_CustomPIC = new global::System.Data.DataColumn("SW_CustomPIC", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_CustomPIC);
+                this.columnSW_P_Opt_Use_Radius = new global::System.Data.DataColumn("SW_P_Opt_Use_Radius", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Opt_Use_Radius);
+                this.columnSW_P_Lock = new global::System.Data.DataColumn("SW_P_Lock", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_P_Lock);
+                this.columnSW_R_Lock = new global::System.Data.DataColumn("SW_R_Lock", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_R_Lock);
+                this.columnSW_IsPublic = new global::System.Data.DataColumn("SW_IsPublic", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSW_IsPublic);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnId}, true));
+                this.columnId.AutoIncrement = true;
+                this.columnId.AutoIncrementSeed = -1;
+                this.columnId.AutoIncrementStep = -1;
+                this.columnId.AllowDBNull = false;
+                this.columnId.ReadOnly = true;
+                this.columnId.Unique = true;
+                this.columnSW_Code.AllowDBNull = false;
+                this.columnSW_Code.MaxLength = 25;
+                this.columnSW_TipoDevice.AllowDBNull = false;
+                this.columnSW_TipoDevice.MaxLength = 1;
+                this.columnSW_Descrizione.MaxLength = 255;
+                this.columnSW_Descrizione_EN.MaxLength = 255;
+                this.columnSW_Versione.MaxLength = 6;
+                this.columnSW_Revisione.MaxLength = 3;
+                this.columnSW_Standard.AllowDBNull = false;
+                this.columnSW_FamProd.MaxLength = 20;
+                this.columnSW_P_Opt_RF.AllowDBNull = false;
+                this.columnSW_P_Opt_RF.MaxLength = 10;
+                this.columnSW_P_Opt_Use_Oled.AllowDBNull = false;
+                this.columnSW_P_Opt_Use_EmButt.AllowDBNull = false;
+                this.columnSW_P_Opt_Use_Backlight.AllowDBNull = false;
+                this.columnSW_P_Opt_ShiftPage.AllowDBNull = false;
+                this.columnSW_P_Opt_Use_Accel.AllowDBNull = false;
+                this.columnSW_P_Opt_Use_SP.AllowDBNull = false;
+                this.columnSW_P_Opt_Use_Buzzer.AllowDBNull = false;
+                this.columnSW_P_Opt_Use_Vibracall.AllowDBNull = false;
+                this.columnSW_P_Opt_Use_LedTorch.AllowDBNull = false;
+                this.columnSW_P_PLD.AllowDBNull = false;
+                this.columnSW_R_Opt_RF.AllowDBNull = false;
+                this.columnSW_R_Opt_RF.MaxLength = 10;
+                this.columnSW_R_Opt_Plug_Exp.AllowDBNull = false;
+                this.columnSW_R_Opt_Plug_Ple.AllowDBNull = false;
+                this.columnSW_R_Opt_Em_Keyb.AllowDBNull = false;
+                this.columnSW_R_Opt_Can.AllowDBNull = false;
+                this.columnSW_R_Opt_Prop_Out.AllowDBNull = false;
+                this.columnSW_R_Opt_TimeOut.AllowDBNull = false;
+                this.columnSW_R_Opt_TimeOut.MaxLength = 10;
+                this.columnSW_R_Opt_LockSameRow.AllowDBNull = false;
+                this.columnSW_R_Opt_Use_SP.AllowDBNull = false;
+                this.columnSW_R_Opt_ShiftPage.AllowDBNull = false;
+                this.columnSW_Revisioni.MaxLength = 2147483647;
+                this.columnSW_Funzionamento.MaxLength = 2147483647;
+                this.columnSW_Config.MaxLength = 2147483647;
+                this.columnSW_Obsolete_ver.AllowDBNull = false;
+                this.columnSW_Order.ReadOnly = true;
+                this.columnSW_Order.MaxLength = 6;
+                this.columnSW_R_Opt_Use_Radius.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public GL_FW_RevisioniRow NewGL_FW_RevisioniRow() {
+                return ((GL_FW_RevisioniRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new GL_FW_RevisioniRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(GL_FW_RevisioniRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.GL_FW_RevisioniRowChanged != null)) {
+                    this.GL_FW_RevisioniRowChanged(this, new GL_FW_RevisioniRowChangeEvent(((GL_FW_RevisioniRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.GL_FW_RevisioniRowChanging != null)) {
+                    this.GL_FW_RevisioniRowChanging(this, new GL_FW_RevisioniRowChangeEvent(((GL_FW_RevisioniRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.GL_FW_RevisioniRowDeleted != null)) {
+                    this.GL_FW_RevisioniRowDeleted(this, new GL_FW_RevisioniRowChangeEvent(((GL_FW_RevisioniRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.GL_FW_RevisioniRowDeleting != null)) {
+                    this.GL_FW_RevisioniRowDeleting(this, new GL_FW_RevisioniRowChangeEvent(((GL_FW_RevisioniRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemoveGL_FW_RevisioniRow(GL_FW_RevisioniRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                ds_Programmazione_GL ds = new ds_Programmazione_GL();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "GL_FW_RevisioniDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class dt_GL_Tmp_ProgrammaDataTable : global::System.Data.TypedTableBase<dt_GL_Tmp_ProgrammaRow> {
             
             private global::System.Data.DataColumn columntmp_prog_id;
             
@@ -2308,8 +7231,8 @@ namespace SmartLineProduction {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public dt_Tmp_ProgrammaDataTable() {
-                this.TableName = "dt_Tmp_Programma";
+            public dt_GL_Tmp_ProgrammaDataTable() {
+                this.TableName = "dt_GL_Tmp_Programma";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -2317,7 +7240,7 @@ namespace SmartLineProduction {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal dt_Tmp_ProgrammaDataTable(global::System.Data.DataTable table) {
+            internal dt_GL_Tmp_ProgrammaDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -2334,7 +7257,7 @@ namespace SmartLineProduction {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected dt_Tmp_ProgrammaDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected dt_GL_Tmp_ProgrammaDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -2406,34 +7329,34 @@ namespace SmartLineProduction {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public dt_Tmp_ProgrammaRow this[int index] {
+            public dt_GL_Tmp_ProgrammaRow this[int index] {
                 get {
-                    return ((dt_Tmp_ProgrammaRow)(this.Rows[index]));
+                    return ((dt_GL_Tmp_ProgrammaRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event dt_Tmp_ProgrammaRowChangeEventHandler dt_Tmp_ProgrammaRowChanging;
+            public event dt_GL_Tmp_ProgrammaRowChangeEventHandler dt_GL_Tmp_ProgrammaRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event dt_Tmp_ProgrammaRowChangeEventHandler dt_Tmp_ProgrammaRowChanged;
+            public event dt_GL_Tmp_ProgrammaRowChangeEventHandler dt_GL_Tmp_ProgrammaRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event dt_Tmp_ProgrammaRowChangeEventHandler dt_Tmp_ProgrammaRowDeleting;
+            public event dt_GL_Tmp_ProgrammaRowChangeEventHandler dt_GL_Tmp_ProgrammaRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event dt_Tmp_ProgrammaRowChangeEventHandler dt_Tmp_ProgrammaRowDeleted;
+            public event dt_GL_Tmp_ProgrammaRowChangeEventHandler dt_GL_Tmp_ProgrammaRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Adddt_Tmp_ProgrammaRow(dt_Tmp_ProgrammaRow row) {
+            public void Adddt_GL_Tmp_ProgrammaRow(dt_GL_Tmp_ProgrammaRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public dt_Tmp_ProgrammaRow Adddt_Tmp_ProgrammaRow(string tmp_prog_commessa, string tmp_prog_codart_kit, string tmp_prog_codart_item, string tmp_prog_codart_fw, short tmp_fw_key_id, string tmp_ID_Hardware) {
-                dt_Tmp_ProgrammaRow rowdt_Tmp_ProgrammaRow = ((dt_Tmp_ProgrammaRow)(this.NewRow()));
+            public dt_GL_Tmp_ProgrammaRow Adddt_GL_Tmp_ProgrammaRow(string tmp_prog_commessa, string tmp_prog_codart_kit, string tmp_prog_codart_item, string tmp_prog_codart_fw, short tmp_fw_key_id, string tmp_ID_Hardware) {
+                dt_GL_Tmp_ProgrammaRow rowdt_GL_Tmp_ProgrammaRow = ((dt_GL_Tmp_ProgrammaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         tmp_prog_commessa,
@@ -2442,15 +7365,15 @@ namespace SmartLineProduction {
                         tmp_prog_codart_fw,
                         tmp_fw_key_id,
                         tmp_ID_Hardware};
-                rowdt_Tmp_ProgrammaRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowdt_Tmp_ProgrammaRow);
-                return rowdt_Tmp_ProgrammaRow;
+                rowdt_GL_Tmp_ProgrammaRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowdt_GL_Tmp_ProgrammaRow);
+                return rowdt_GL_Tmp_ProgrammaRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                dt_Tmp_ProgrammaDataTable cln = ((dt_Tmp_ProgrammaDataTable)(base.Clone()));
+                dt_GL_Tmp_ProgrammaDataTable cln = ((dt_GL_Tmp_ProgrammaDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -2458,7 +7381,7 @@ namespace SmartLineProduction {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new dt_Tmp_ProgrammaDataTable();
+                return new dt_GL_Tmp_ProgrammaDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2498,28 +7421,28 @@ namespace SmartLineProduction {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public dt_Tmp_ProgrammaRow Newdt_Tmp_ProgrammaRow() {
-                return ((dt_Tmp_ProgrammaRow)(this.NewRow()));
+            public dt_GL_Tmp_ProgrammaRow Newdt_GL_Tmp_ProgrammaRow() {
+                return ((dt_GL_Tmp_ProgrammaRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new dt_Tmp_ProgrammaRow(builder);
+                return new dt_GL_Tmp_ProgrammaRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(dt_Tmp_ProgrammaRow);
+                return typeof(dt_GL_Tmp_ProgrammaRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.dt_Tmp_ProgrammaRowChanged != null)) {
-                    this.dt_Tmp_ProgrammaRowChanged(this, new dt_Tmp_ProgrammaRowChangeEvent(((dt_Tmp_ProgrammaRow)(e.Row)), e.Action));
+                if ((this.dt_GL_Tmp_ProgrammaRowChanged != null)) {
+                    this.dt_GL_Tmp_ProgrammaRowChanged(this, new dt_GL_Tmp_ProgrammaRowChangeEvent(((dt_GL_Tmp_ProgrammaRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2527,8 +7450,8 @@ namespace SmartLineProduction {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.dt_Tmp_ProgrammaRowChanging != null)) {
-                    this.dt_Tmp_ProgrammaRowChanging(this, new dt_Tmp_ProgrammaRowChangeEvent(((dt_Tmp_ProgrammaRow)(e.Row)), e.Action));
+                if ((this.dt_GL_Tmp_ProgrammaRowChanging != null)) {
+                    this.dt_GL_Tmp_ProgrammaRowChanging(this, new dt_GL_Tmp_ProgrammaRowChangeEvent(((dt_GL_Tmp_ProgrammaRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2536,8 +7459,8 @@ namespace SmartLineProduction {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.dt_Tmp_ProgrammaRowDeleted != null)) {
-                    this.dt_Tmp_ProgrammaRowDeleted(this, new dt_Tmp_ProgrammaRowChangeEvent(((dt_Tmp_ProgrammaRow)(e.Row)), e.Action));
+                if ((this.dt_GL_Tmp_ProgrammaRowDeleted != null)) {
+                    this.dt_GL_Tmp_ProgrammaRowDeleted(this, new dt_GL_Tmp_ProgrammaRowChangeEvent(((dt_GL_Tmp_ProgrammaRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2545,14 +7468,14 @@ namespace SmartLineProduction {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.dt_Tmp_ProgrammaRowDeleting != null)) {
-                    this.dt_Tmp_ProgrammaRowDeleting(this, new dt_Tmp_ProgrammaRowChangeEvent(((dt_Tmp_ProgrammaRow)(e.Row)), e.Action));
+                if ((this.dt_GL_Tmp_ProgrammaRowDeleting != null)) {
+                    this.dt_GL_Tmp_ProgrammaRowDeleting(this, new dt_GL_Tmp_ProgrammaRowChangeEvent(((dt_GL_Tmp_ProgrammaRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Removedt_Tmp_ProgrammaRow(dt_Tmp_ProgrammaRow row) {
+            public void Removedt_GL_Tmp_ProgrammaRow(dt_GL_Tmp_ProgrammaRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -2579,7 +7502,7 @@ namespace SmartLineProduction {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "dt_Tmp_ProgrammaDataTable";
+                attribute2.FixedValue = "dt_GL_Tmp_ProgrammaDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2625,7 +7548,7 @@ namespace SmartLineProduction {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class dt_Tmp_FwDataTable : global::System.Data.TypedTableBase<dt_Tmp_FwRow> {
+        public partial class dt_GL_Tmp_FwDataTable : global::System.Data.TypedTableBase<dt_GL_Tmp_FwRow> {
             
             private global::System.Data.DataColumn columnfw_codfw;
             
@@ -2647,8 +7570,8 @@ namespace SmartLineProduction {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public dt_Tmp_FwDataTable() {
-                this.TableName = "dt_Tmp_Fw";
+            public dt_GL_Tmp_FwDataTable() {
+                this.TableName = "dt_GL_Tmp_Fw";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -2656,7 +7579,7 @@ namespace SmartLineProduction {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal dt_Tmp_FwDataTable(global::System.Data.DataTable table) {
+            internal dt_GL_Tmp_FwDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -2673,7 +7596,7 @@ namespace SmartLineProduction {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected dt_Tmp_FwDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected dt_GL_Tmp_FwDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -2761,34 +7684,34 @@ namespace SmartLineProduction {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public dt_Tmp_FwRow this[int index] {
+            public dt_GL_Tmp_FwRow this[int index] {
                 get {
-                    return ((dt_Tmp_FwRow)(this.Rows[index]));
+                    return ((dt_GL_Tmp_FwRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event dt_Tmp_FwRowChangeEventHandler dt_Tmp_FwRowChanging;
+            public event dt_GL_Tmp_FwRowChangeEventHandler dt_GL_Tmp_FwRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event dt_Tmp_FwRowChangeEventHandler dt_Tmp_FwRowChanged;
+            public event dt_GL_Tmp_FwRowChangeEventHandler dt_GL_Tmp_FwRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event dt_Tmp_FwRowChangeEventHandler dt_Tmp_FwRowDeleting;
+            public event dt_GL_Tmp_FwRowChangeEventHandler dt_GL_Tmp_FwRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event dt_Tmp_FwRowChangeEventHandler dt_Tmp_FwRowDeleted;
+            public event dt_GL_Tmp_FwRowChangeEventHandler dt_GL_Tmp_FwRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Adddt_Tmp_FwRow(dt_Tmp_FwRow row) {
+            public void Adddt_GL_Tmp_FwRow(dt_GL_Tmp_FwRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public dt_Tmp_FwRow Adddt_Tmp_FwRow(string fw_codfw, string fw_pathfw, string fw_prefix, string fw_tipodev, string fw_standcust, string fw_versione, string fw_freq, string fw_searchvers) {
-                dt_Tmp_FwRow rowdt_Tmp_FwRow = ((dt_Tmp_FwRow)(this.NewRow()));
+            public dt_GL_Tmp_FwRow Adddt_GL_Tmp_FwRow(string fw_codfw, string fw_pathfw, string fw_prefix, string fw_tipodev, string fw_standcust, string fw_versione, string fw_freq, string fw_searchvers) {
+                dt_GL_Tmp_FwRow rowdt_GL_Tmp_FwRow = ((dt_GL_Tmp_FwRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         fw_codfw,
                         fw_pathfw,
@@ -2799,15 +7722,15 @@ namespace SmartLineProduction {
                         fw_freq,
                         fw_searchvers,
                         null};
-                rowdt_Tmp_FwRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowdt_Tmp_FwRow);
-                return rowdt_Tmp_FwRow;
+                rowdt_GL_Tmp_FwRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowdt_GL_Tmp_FwRow);
+                return rowdt_GL_Tmp_FwRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                dt_Tmp_FwDataTable cln = ((dt_Tmp_FwDataTable)(base.Clone()));
+                dt_GL_Tmp_FwDataTable cln = ((dt_GL_Tmp_FwDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -2815,7 +7738,7 @@ namespace SmartLineProduction {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new dt_Tmp_FwDataTable();
+                return new dt_GL_Tmp_FwDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2859,28 +7782,28 @@ namespace SmartLineProduction {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public dt_Tmp_FwRow Newdt_Tmp_FwRow() {
-                return ((dt_Tmp_FwRow)(this.NewRow()));
+            public dt_GL_Tmp_FwRow Newdt_GL_Tmp_FwRow() {
+                return ((dt_GL_Tmp_FwRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new dt_Tmp_FwRow(builder);
+                return new dt_GL_Tmp_FwRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(dt_Tmp_FwRow);
+                return typeof(dt_GL_Tmp_FwRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.dt_Tmp_FwRowChanged != null)) {
-                    this.dt_Tmp_FwRowChanged(this, new dt_Tmp_FwRowChangeEvent(((dt_Tmp_FwRow)(e.Row)), e.Action));
+                if ((this.dt_GL_Tmp_FwRowChanged != null)) {
+                    this.dt_GL_Tmp_FwRowChanged(this, new dt_GL_Tmp_FwRowChangeEvent(((dt_GL_Tmp_FwRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2888,8 +7811,8 @@ namespace SmartLineProduction {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.dt_Tmp_FwRowChanging != null)) {
-                    this.dt_Tmp_FwRowChanging(this, new dt_Tmp_FwRowChangeEvent(((dt_Tmp_FwRow)(e.Row)), e.Action));
+                if ((this.dt_GL_Tmp_FwRowChanging != null)) {
+                    this.dt_GL_Tmp_FwRowChanging(this, new dt_GL_Tmp_FwRowChangeEvent(((dt_GL_Tmp_FwRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2897,8 +7820,8 @@ namespace SmartLineProduction {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.dt_Tmp_FwRowDeleted != null)) {
-                    this.dt_Tmp_FwRowDeleted(this, new dt_Tmp_FwRowChangeEvent(((dt_Tmp_FwRow)(e.Row)), e.Action));
+                if ((this.dt_GL_Tmp_FwRowDeleted != null)) {
+                    this.dt_GL_Tmp_FwRowDeleted(this, new dt_GL_Tmp_FwRowChangeEvent(((dt_GL_Tmp_FwRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2906,14 +7829,14 @@ namespace SmartLineProduction {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.dt_Tmp_FwRowDeleting != null)) {
-                    this.dt_Tmp_FwRowDeleting(this, new dt_Tmp_FwRowChangeEvent(((dt_Tmp_FwRow)(e.Row)), e.Action));
+                if ((this.dt_GL_Tmp_FwRowDeleting != null)) {
+                    this.dt_GL_Tmp_FwRowDeleting(this, new dt_GL_Tmp_FwRowChangeEvent(((dt_GL_Tmp_FwRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Removedt_Tmp_FwRow(dt_Tmp_FwRow row) {
+            public void Removedt_GL_Tmp_FwRow(dt_GL_Tmp_FwRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -2940,7 +7863,7 @@ namespace SmartLineProduction {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "dt_Tmp_FwDataTable";
+                attribute2.FixedValue = "dt_GL_Tmp_FwDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -3568,6 +8491,17 @@ namespace SmartLineProduction {
                     return ((CommesseGL_CountRow[])(base.GetChildRows(this.Table.ChildRelations["SF_Commesse_GL_CommesseGL_Count"])));
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public GL_FW_ClientiRow[] GetGL_FW_ClientiRows() {
+                if ((this.Table.ChildRelations["SF_Commesse_GL_GL_FW_Clienti"] == null)) {
+                    return new GL_FW_ClientiRow[0];
+                }
+                else {
+                    return ((GL_FW_ClientiRow[])(base.GetChildRows(this.Table.ChildRelations["SF_Commesse_GL_GL_FW_Clienti"])));
+                }
+            }
         }
         
         /// <summary>
@@ -4179,25 +9113,3988 @@ namespace SmartLineProduction {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class dt_Tmp_ProgrammaRow : global::System.Data.DataRow {
+        public partial class GL_FW_ClientiRow : global::System.Data.DataRow {
             
-            private dt_Tmp_ProgrammaDataTable tabledt_Tmp_Programma;
+            private GL_FW_ClientiDataTable tableGL_FW_Clienti;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal dt_Tmp_ProgrammaRow(global::System.Data.DataRowBuilder rb) : 
+            internal GL_FW_ClientiRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tabledt_Tmp_Programma = ((dt_Tmp_ProgrammaDataTable)(this.Table));
+                this.tableGL_FW_Clienti = ((GL_FW_ClientiDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int id {
+                get {
+                    return ((int)(this[this.tableGL_FW_Clienti.idColumn]));
+                }
+                set {
+                    this[this.tableGL_FW_Clienti.idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Cod_Nominativo {
+                get {
+                    return ((int)(this[this.tableGL_FW_Clienti.Cod_NominativoColumn]));
+                }
+                set {
+                    this[this.tableGL_FW_Clienti.Cod_NominativoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_Code {
+                get {
+                    try {
+                        return ((string)(this[this.tableGL_FW_Clienti.SW_CodeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_Code\' nella tabella \'GL_FW_Clienti\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_FW_Clienti.SW_CodeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_Des1 {
+                get {
+                    try {
+                        return ((string)(this[this.tableGL_FW_Clienti.SW_Des1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_Des1\' nella tabella \'GL_FW_Clienti\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_FW_Clienti.SW_Des1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_Des2 {
+                get {
+                    try {
+                        return ((string)(this[this.tableGL_FW_Clienti.SW_Des2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_Des2\' nella tabella \'GL_FW_Clienti\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_FW_Clienti.SW_Des2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public SF_Commesse_GLRow SF_Commesse_GLRow {
+                get {
+                    return ((SF_Commesse_GLRow)(this.GetParentRow(this.Table.ParentRelations["SF_Commesse_GL_GL_FW_Clienti"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["SF_Commesse_GL_GL_FW_Clienti"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_CodeNull() {
+                return this.IsNull(this.tableGL_FW_Clienti.SW_CodeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_CodeNull() {
+                this[this.tableGL_FW_Clienti.SW_CodeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_Des1Null() {
+                return this.IsNull(this.tableGL_FW_Clienti.SW_Des1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_Des1Null() {
+                this[this.tableGL_FW_Clienti.SW_Des1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_Des2Null() {
+                return this.IsNull(this.tableGL_FW_Clienti.SW_Des2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_Des2Null() {
+                this[this.tableGL_FW_Clienti.SW_Des2Column] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class GL_SerialNumbersRow : global::System.Data.DataRow {
+            
+            private GL_SerialNumbersDataTable tableGL_SerialNumbers;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal GL_SerialNumbersRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableGL_SerialNumbers = ((GL_SerialNumbersDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Id {
+                get {
+                    return ((int)(this[this.tableGL_SerialNumbers.IdColumn]));
+                }
+                set {
+                    this[this.tableGL_SerialNumbers.IdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Ser_Kit {
+                get {
+                    try {
+                        return ((string)(this[this.tableGL_SerialNumbers.Ser_KitColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Ser_Kit\' nella tabella \'GL_SerialNumbers\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_SerialNumbers.Ser_KitColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Ser_ID_Cli {
+                get {
+                    try {
+                        return ((int)(this[this.tableGL_SerialNumbers.Ser_ID_CliColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Ser_ID_Cli\' nella tabella \'GL_SerialNumbers\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_SerialNumbers.Ser_ID_CliColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Ser_Device {
+                get {
+                    try {
+                        return ((string)(this[this.tableGL_SerialNumbers.Ser_DeviceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Ser_Device\' nella tabella \'GL_SerialNumbers\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_SerialNumbers.Ser_DeviceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Ser_Device_ID_Code {
+                get {
+                    try {
+                        return ((string)(this[this.tableGL_SerialNumbers.Ser_Device_ID_CodeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Ser_Device_ID_Code\' nella tabella \'GL_SerialNumbers\' è D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_SerialNumbers.Ser_Device_ID_CodeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Ser_OfficialSerial {
+                get {
+                    try {
+                        return ((string)(this[this.tableGL_SerialNumbers.Ser_OfficialSerialColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Ser_OfficialSerial\' nella tabella \'GL_SerialNumbers\' è D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_SerialNumbers.Ser_OfficialSerialColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Ser_ReadSerial {
+                get {
+                    try {
+                        return ((string)(this[this.tableGL_SerialNumbers.Ser_ReadSerialColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Ser_ReadSerial\' nella tabella \'GL_SerialNumbers\' è DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_SerialNumbers.Ser_ReadSerialColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Ser_SW_Code {
+                get {
+                    try {
+                        return ((string)(this[this.tableGL_SerialNumbers.Ser_SW_CodeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Ser_SW_Code\' nella tabella \'GL_SerialNumbers\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_SerialNumbers.Ser_SW_CodeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Ser_SW_Code_Rev {
+                get {
+                    try {
+                        return ((string)(this[this.tableGL_SerialNumbers.Ser_SW_Code_RevColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Ser_SW_Code_Rev\' nella tabella \'GL_SerialNumbers\' è DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_SerialNumbers.Ser_SW_Code_RevColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Ser_SW_Std_Type {
+                get {
+                    try {
+                        return ((bool)(this[this.tableGL_SerialNumbers.Ser_SW_Std_TypeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Ser_SW_Std_Type\' nella tabella \'GL_SerialNumbers\' è DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_SerialNumbers.Ser_SW_Std_TypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Ser_SN_prod {
+                get {
+                    try {
+                        return ((string)(this[this.tableGL_SerialNumbers.Ser_SN_prodColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Ser_SN_prod\' nella tabella \'GL_SerialNumbers\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_SerialNumbers.Ser_SN_prodColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Ser_Commessa {
+                get {
+                    try {
+                        return ((string)(this[this.tableGL_SerialNumbers.Ser_CommessaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Ser_Commessa\' nella tabella \'GL_SerialNumbers\' è DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_SerialNumbers.Ser_CommessaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime Ser_DateProduction {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableGL_SerialNumbers.Ser_DateProductionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Ser_DateProduction\' nella tabella \'GL_SerialNumbers\' è D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_SerialNumbers.Ser_DateProductionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Ser_Spedito {
+                get {
+                    return ((bool)(this[this.tableGL_SerialNumbers.Ser_SpeditoColumn]));
+                }
+                set {
+                    this[this.tableGL_SerialNumbers.Ser_SpeditoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime Ser_Data_Spedito {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableGL_SerialNumbers.Ser_Data_SpeditoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Ser_Data_Spedito\' nella tabella \'GL_SerialNumbers\' è DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_SerialNumbers.Ser_Data_SpeditoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Ser_Substition_ID_ReadSerial {
+                get {
+                    try {
+                        return ((string)(this[this.tableGL_SerialNumbers.Ser_Substition_ID_ReadSerialColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Ser_Substition_ID_ReadSerial\' nella tabella \'GL_SerialNu" +
+                                "mbers\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_SerialNumbers.Ser_Substition_ID_ReadSerialColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Ser_Note {
+                get {
+                    try {
+                        return ((string)(this[this.tableGL_SerialNumbers.Ser_NoteColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Ser_Note\' nella tabella \'GL_SerialNumbers\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_SerialNumbers.Ser_NoteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Ser_LockLevel {
+                get {
+                    try {
+                        return ((int)(this[this.tableGL_SerialNumbers.Ser_LockLevelColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Ser_LockLevel\' nella tabella \'GL_SerialNumbers\' è DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_SerialNumbers.Ser_LockLevelColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Ser_Device_ID_Code_Start {
+                get {
+                    try {
+                        return ((string)(this[this.tableGL_SerialNumbers.Ser_Device_ID_Code_StartColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Ser_Device_ID_Code_Start\' nella tabella \'GL_SerialNumber" +
+                                "s\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_SerialNumbers.Ser_Device_ID_Code_StartColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Ser_Golden_Unlock {
+                get {
+                    return ((bool)(this[this.tableGL_SerialNumbers.Ser_Golden_UnlockColumn]));
+                }
+                set {
+                    this[this.tableGL_SerialNumbers.Ser_Golden_UnlockColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Ser_Cfg_Init {
+                get {
+                    try {
+                        return ((string)(this[this.tableGL_SerialNumbers.Ser_Cfg_InitColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Ser_Cfg_Init\' nella tabella \'GL_SerialNumbers\' è DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_SerialNumbers.Ser_Cfg_InitColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSer_KitNull() {
+                return this.IsNull(this.tableGL_SerialNumbers.Ser_KitColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSer_KitNull() {
+                this[this.tableGL_SerialNumbers.Ser_KitColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSer_ID_CliNull() {
+                return this.IsNull(this.tableGL_SerialNumbers.Ser_ID_CliColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSer_ID_CliNull() {
+                this[this.tableGL_SerialNumbers.Ser_ID_CliColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSer_DeviceNull() {
+                return this.IsNull(this.tableGL_SerialNumbers.Ser_DeviceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSer_DeviceNull() {
+                this[this.tableGL_SerialNumbers.Ser_DeviceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSer_Device_ID_CodeNull() {
+                return this.IsNull(this.tableGL_SerialNumbers.Ser_Device_ID_CodeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSer_Device_ID_CodeNull() {
+                this[this.tableGL_SerialNumbers.Ser_Device_ID_CodeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSer_OfficialSerialNull() {
+                return this.IsNull(this.tableGL_SerialNumbers.Ser_OfficialSerialColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSer_OfficialSerialNull() {
+                this[this.tableGL_SerialNumbers.Ser_OfficialSerialColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSer_ReadSerialNull() {
+                return this.IsNull(this.tableGL_SerialNumbers.Ser_ReadSerialColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSer_ReadSerialNull() {
+                this[this.tableGL_SerialNumbers.Ser_ReadSerialColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSer_SW_CodeNull() {
+                return this.IsNull(this.tableGL_SerialNumbers.Ser_SW_CodeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSer_SW_CodeNull() {
+                this[this.tableGL_SerialNumbers.Ser_SW_CodeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSer_SW_Code_RevNull() {
+                return this.IsNull(this.tableGL_SerialNumbers.Ser_SW_Code_RevColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSer_SW_Code_RevNull() {
+                this[this.tableGL_SerialNumbers.Ser_SW_Code_RevColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSer_SW_Std_TypeNull() {
+                return this.IsNull(this.tableGL_SerialNumbers.Ser_SW_Std_TypeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSer_SW_Std_TypeNull() {
+                this[this.tableGL_SerialNumbers.Ser_SW_Std_TypeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSer_SN_prodNull() {
+                return this.IsNull(this.tableGL_SerialNumbers.Ser_SN_prodColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSer_SN_prodNull() {
+                this[this.tableGL_SerialNumbers.Ser_SN_prodColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSer_CommessaNull() {
+                return this.IsNull(this.tableGL_SerialNumbers.Ser_CommessaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSer_CommessaNull() {
+                this[this.tableGL_SerialNumbers.Ser_CommessaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSer_DateProductionNull() {
+                return this.IsNull(this.tableGL_SerialNumbers.Ser_DateProductionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSer_DateProductionNull() {
+                this[this.tableGL_SerialNumbers.Ser_DateProductionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSer_Data_SpeditoNull() {
+                return this.IsNull(this.tableGL_SerialNumbers.Ser_Data_SpeditoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSer_Data_SpeditoNull() {
+                this[this.tableGL_SerialNumbers.Ser_Data_SpeditoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSer_Substition_ID_ReadSerialNull() {
+                return this.IsNull(this.tableGL_SerialNumbers.Ser_Substition_ID_ReadSerialColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSer_Substition_ID_ReadSerialNull() {
+                this[this.tableGL_SerialNumbers.Ser_Substition_ID_ReadSerialColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSer_NoteNull() {
+                return this.IsNull(this.tableGL_SerialNumbers.Ser_NoteColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSer_NoteNull() {
+                this[this.tableGL_SerialNumbers.Ser_NoteColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSer_LockLevelNull() {
+                return this.IsNull(this.tableGL_SerialNumbers.Ser_LockLevelColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSer_LockLevelNull() {
+                this[this.tableGL_SerialNumbers.Ser_LockLevelColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSer_Device_ID_Code_StartNull() {
+                return this.IsNull(this.tableGL_SerialNumbers.Ser_Device_ID_Code_StartColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSer_Device_ID_Code_StartNull() {
+                this[this.tableGL_SerialNumbers.Ser_Device_ID_Code_StartColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSer_Cfg_InitNull() {
+                return this.IsNull(this.tableGL_SerialNumbers.Ser_Cfg_InitColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSer_Cfg_InitNull() {
+                this[this.tableGL_SerialNumbers.Ser_Cfg_InitColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class GL_FirmwareRow : global::System.Data.DataRow {
+            
+            private GL_FirmwareDataTable tableGL_Firmware;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal GL_FirmwareRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableGL_Firmware = ((GL_FirmwareDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Id {
+                get {
+                    return ((int)(this[this.tableGL_Firmware.IdColumn]));
+                }
+                set {
+                    this[this.tableGL_Firmware.IdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_Code {
+                get {
+                    return ((string)(this[this.tableGL_Firmware.SW_CodeColumn]));
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_CodeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_TipoDevice {
+                get {
+                    return ((string)(this[this.tableGL_Firmware.SW_TipoDeviceColumn]));
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_TipoDeviceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_Descrizione {
+                get {
+                    try {
+                        return ((string)(this[this.tableGL_Firmware.SW_DescrizioneColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_Descrizione\' nella tabella \'GL_Firmware\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_DescrizioneColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_Descrizione_EN {
+                get {
+                    try {
+                        return ((string)(this[this.tableGL_Firmware.SW_Descrizione_ENColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_Descrizione_EN\' nella tabella \'GL_Firmware\' è DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_Descrizione_ENColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_Versione {
+                get {
+                    try {
+                        return ((string)(this[this.tableGL_Firmware.SW_VersioneColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_Versione\' nella tabella \'GL_Firmware\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_VersioneColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_Revisione {
+                get {
+                    try {
+                        return ((string)(this[this.tableGL_Firmware.SW_RevisioneColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_Revisione\' nella tabella \'GL_Firmware\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_RevisioneColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_Standard {
+                get {
+                    return ((bool)(this[this.tableGL_Firmware.SW_StandardColumn]));
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_StandardColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_FamProd {
+                get {
+                    try {
+                        return ((string)(this[this.tableGL_Firmware.SW_FamProdColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_FamProd\' nella tabella \'GL_Firmware\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_FamProdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_P_Opt_RF {
+                get {
+                    return ((string)(this[this.tableGL_Firmware.SW_P_Opt_RFColumn]));
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_P_Opt_RFColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_Opt_Use_Oled {
+                get {
+                    return ((bool)(this[this.tableGL_Firmware.SW_P_Opt_Use_OledColumn]));
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_P_Opt_Use_OledColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_Opt_Use_EmButt {
+                get {
+                    return ((bool)(this[this.tableGL_Firmware.SW_P_Opt_Use_EmButtColumn]));
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_P_Opt_Use_EmButtColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_Opt_Use_Backlight {
+                get {
+                    return ((bool)(this[this.tableGL_Firmware.SW_P_Opt_Use_BacklightColumn]));
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_P_Opt_Use_BacklightColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_Opt_ShiftPage {
+                get {
+                    return ((bool)(this[this.tableGL_Firmware.SW_P_Opt_ShiftPageColumn]));
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_P_Opt_ShiftPageColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_Opt_Use_Accel {
+                get {
+                    return ((bool)(this[this.tableGL_Firmware.SW_P_Opt_Use_AccelColumn]));
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_P_Opt_Use_AccelColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_Opt_Use_SP {
+                get {
+                    return ((bool)(this[this.tableGL_Firmware.SW_P_Opt_Use_SPColumn]));
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_P_Opt_Use_SPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_Opt_Use_Buzzer {
+                get {
+                    return ((bool)(this[this.tableGL_Firmware.SW_P_Opt_Use_BuzzerColumn]));
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_P_Opt_Use_BuzzerColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_Opt_Use_Vibracall {
+                get {
+                    return ((bool)(this[this.tableGL_Firmware.SW_P_Opt_Use_VibracallColumn]));
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_P_Opt_Use_VibracallColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_Opt_Use_LedTorch {
+                get {
+                    return ((bool)(this[this.tableGL_Firmware.SW_P_Opt_Use_LedTorchColumn]));
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_P_Opt_Use_LedTorchColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_PLD {
+                get {
+                    return ((bool)(this[this.tableGL_Firmware.SW_P_PLDColumn]));
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_P_PLDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int SW_P_Opt_MaxPairDevices {
+                get {
+                    try {
+                        return ((int)(this[this.tableGL_Firmware.SW_P_Opt_MaxPairDevicesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_P_Opt_MaxPairDevices\' nella tabella \'GL_Firmware\' è D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_P_Opt_MaxPairDevicesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_R_Opt_RF {
+                get {
+                    return ((string)(this[this.tableGL_Firmware.SW_R_Opt_RFColumn]));
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_R_Opt_RFColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_R_Opt_Plug_Exp {
+                get {
+                    return ((bool)(this[this.tableGL_Firmware.SW_R_Opt_Plug_ExpColumn]));
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_R_Opt_Plug_ExpColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_R_Opt_Plug_Ple {
+                get {
+                    return ((bool)(this[this.tableGL_Firmware.SW_R_Opt_Plug_PleColumn]));
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_R_Opt_Plug_PleColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_R_Opt_Em_Keyb {
+                get {
+                    return ((bool)(this[this.tableGL_Firmware.SW_R_Opt_Em_KeybColumn]));
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_R_Opt_Em_KeybColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_R_Opt_Can {
+                get {
+                    return ((bool)(this[this.tableGL_Firmware.SW_R_Opt_CanColumn]));
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_R_Opt_CanColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_R_Opt_Prop_Out {
+                get {
+                    return ((bool)(this[this.tableGL_Firmware.SW_R_Opt_Prop_OutColumn]));
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_R_Opt_Prop_OutColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_R_Opt_TimeOut {
+                get {
+                    return ((string)(this[this.tableGL_Firmware.SW_R_Opt_TimeOutColumn]));
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_R_Opt_TimeOutColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int SW_R_Opt_Cont_Keys {
+                get {
+                    try {
+                        return ((int)(this[this.tableGL_Firmware.SW_R_Opt_Cont_KeysColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_R_Opt_Cont_Keys\' nella tabella \'GL_Firmware\' è DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_R_Opt_Cont_KeysColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_R_Opt_LockSameRow {
+                get {
+                    return ((bool)(this[this.tableGL_Firmware.SW_R_Opt_LockSameRowColumn]));
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_R_Opt_LockSameRowColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_R_Opt_Use_SP {
+                get {
+                    return ((bool)(this[this.tableGL_Firmware.SW_R_Opt_Use_SPColumn]));
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_R_Opt_Use_SPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int SW_R_Opt_MaxPairDevices {
+                get {
+                    try {
+                        return ((int)(this[this.tableGL_Firmware.SW_R_Opt_MaxPairDevicesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_R_Opt_MaxPairDevices\' nella tabella \'GL_Firmware\' è D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_R_Opt_MaxPairDevicesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_R_Opt_ShiftPage {
+                get {
+                    return ((bool)(this[this.tableGL_Firmware.SW_R_Opt_ShiftPageColumn]));
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_R_Opt_ShiftPageColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int SW_R_Opt_Output_No {
+                get {
+                    try {
+                        return ((int)(this[this.tableGL_Firmware.SW_R_Opt_Output_NoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_R_Opt_Output_No\' nella tabella \'GL_Firmware\' è DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_R_Opt_Output_NoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int SW_R_Opt_Dig_Input_No {
+                get {
+                    try {
+                        return ((int)(this[this.tableGL_Firmware.SW_R_Opt_Dig_Input_NoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_R_Opt_Dig_Input_No\' nella tabella \'GL_Firmware\' è DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_R_Opt_Dig_Input_NoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int SW_R_Opt_Ana_Input_No {
+                get {
+                    try {
+                        return ((int)(this[this.tableGL_Firmware.SW_R_Opt_Ana_Input_NoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_R_Opt_Ana_Input_No\' nella tabella \'GL_Firmware\' è DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_R_Opt_Ana_Input_NoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_Revisioni {
+                get {
+                    try {
+                        return ((string)(this[this.tableGL_Firmware.SW_RevisioniColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_Revisioni\' nella tabella \'GL_Firmware\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_RevisioniColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_Funzionamento {
+                get {
+                    try {
+                        return ((string)(this[this.tableGL_Firmware.SW_FunzionamentoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_Funzionamento\' nella tabella \'GL_Firmware\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_FunzionamentoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_Config {
+                get {
+                    try {
+                        return ((string)(this[this.tableGL_Firmware.SW_ConfigColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_Config\' nella tabella \'GL_Firmware\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_ConfigColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_Obsolete_ver {
+                get {
+                    return ((bool)(this[this.tableGL_Firmware.SW_Obsolete_verColumn]));
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_Obsolete_verColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime SW_Obsolete_ver_from_date {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableGL_Firmware.SW_Obsolete_ver_from_dateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_Obsolete_ver_from_date\' nella tabella \'GL_Firmware\' è" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_Obsolete_ver_from_dateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_R_Opt_Use_Radius {
+                get {
+                    return ((bool)(this[this.tableGL_Firmware.SW_R_Opt_Use_RadiusColumn]));
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_R_Opt_Use_RadiusColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_CustomPIC {
+                get {
+                    try {
+                        return ((bool)(this[this.tableGL_Firmware.SW_CustomPICColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_CustomPIC\' nella tabella \'GL_Firmware\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_CustomPICColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_Opt_Use_Radius {
+                get {
+                    try {
+                        return ((bool)(this[this.tableGL_Firmware.SW_P_Opt_Use_RadiusColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_P_Opt_Use_Radius\' nella tabella \'GL_Firmware\' è DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_P_Opt_Use_RadiusColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int SW_P_Lock {
+                get {
+                    try {
+                        return ((int)(this[this.tableGL_Firmware.SW_P_LockColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_P_Lock\' nella tabella \'GL_Firmware\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_P_LockColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int SW_R_Lock {
+                get {
+                    try {
+                        return ((int)(this[this.tableGL_Firmware.SW_R_LockColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_R_Lock\' nella tabella \'GL_Firmware\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_R_LockColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_IsPublic {
+                get {
+                    try {
+                        return ((bool)(this[this.tableGL_Firmware.SW_IsPublicColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_IsPublic\' nella tabella \'GL_Firmware\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_Firmware.SW_IsPublicColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public dt_GL_Tmp_ProgrammaRow dt_GL_Tmp_ProgrammaRow {
+                get {
+                    return ((dt_GL_Tmp_ProgrammaRow)(this.GetParentRow(this.Table.ParentRelations["dt_GL_Tmp_Programma_GL_Firmware"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["dt_GL_Tmp_Programma_GL_Firmware"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_DescrizioneNull() {
+                return this.IsNull(this.tableGL_Firmware.SW_DescrizioneColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_DescrizioneNull() {
+                this[this.tableGL_Firmware.SW_DescrizioneColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_Descrizione_ENNull() {
+                return this.IsNull(this.tableGL_Firmware.SW_Descrizione_ENColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_Descrizione_ENNull() {
+                this[this.tableGL_Firmware.SW_Descrizione_ENColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_VersioneNull() {
+                return this.IsNull(this.tableGL_Firmware.SW_VersioneColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_VersioneNull() {
+                this[this.tableGL_Firmware.SW_VersioneColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_RevisioneNull() {
+                return this.IsNull(this.tableGL_Firmware.SW_RevisioneColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_RevisioneNull() {
+                this[this.tableGL_Firmware.SW_RevisioneColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_FamProdNull() {
+                return this.IsNull(this.tableGL_Firmware.SW_FamProdColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_FamProdNull() {
+                this[this.tableGL_Firmware.SW_FamProdColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_P_Opt_MaxPairDevicesNull() {
+                return this.IsNull(this.tableGL_Firmware.SW_P_Opt_MaxPairDevicesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_P_Opt_MaxPairDevicesNull() {
+                this[this.tableGL_Firmware.SW_P_Opt_MaxPairDevicesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_R_Opt_Cont_KeysNull() {
+                return this.IsNull(this.tableGL_Firmware.SW_R_Opt_Cont_KeysColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_R_Opt_Cont_KeysNull() {
+                this[this.tableGL_Firmware.SW_R_Opt_Cont_KeysColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_R_Opt_MaxPairDevicesNull() {
+                return this.IsNull(this.tableGL_Firmware.SW_R_Opt_MaxPairDevicesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_R_Opt_MaxPairDevicesNull() {
+                this[this.tableGL_Firmware.SW_R_Opt_MaxPairDevicesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_R_Opt_Output_NoNull() {
+                return this.IsNull(this.tableGL_Firmware.SW_R_Opt_Output_NoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_R_Opt_Output_NoNull() {
+                this[this.tableGL_Firmware.SW_R_Opt_Output_NoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_R_Opt_Dig_Input_NoNull() {
+                return this.IsNull(this.tableGL_Firmware.SW_R_Opt_Dig_Input_NoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_R_Opt_Dig_Input_NoNull() {
+                this[this.tableGL_Firmware.SW_R_Opt_Dig_Input_NoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_R_Opt_Ana_Input_NoNull() {
+                return this.IsNull(this.tableGL_Firmware.SW_R_Opt_Ana_Input_NoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_R_Opt_Ana_Input_NoNull() {
+                this[this.tableGL_Firmware.SW_R_Opt_Ana_Input_NoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_RevisioniNull() {
+                return this.IsNull(this.tableGL_Firmware.SW_RevisioniColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_RevisioniNull() {
+                this[this.tableGL_Firmware.SW_RevisioniColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_FunzionamentoNull() {
+                return this.IsNull(this.tableGL_Firmware.SW_FunzionamentoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_FunzionamentoNull() {
+                this[this.tableGL_Firmware.SW_FunzionamentoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_ConfigNull() {
+                return this.IsNull(this.tableGL_Firmware.SW_ConfigColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_ConfigNull() {
+                this[this.tableGL_Firmware.SW_ConfigColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_Obsolete_ver_from_dateNull() {
+                return this.IsNull(this.tableGL_Firmware.SW_Obsolete_ver_from_dateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_Obsolete_ver_from_dateNull() {
+                this[this.tableGL_Firmware.SW_Obsolete_ver_from_dateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_CustomPICNull() {
+                return this.IsNull(this.tableGL_Firmware.SW_CustomPICColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_CustomPICNull() {
+                this[this.tableGL_Firmware.SW_CustomPICColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_P_Opt_Use_RadiusNull() {
+                return this.IsNull(this.tableGL_Firmware.SW_P_Opt_Use_RadiusColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_P_Opt_Use_RadiusNull() {
+                this[this.tableGL_Firmware.SW_P_Opt_Use_RadiusColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_P_LockNull() {
+                return this.IsNull(this.tableGL_Firmware.SW_P_LockColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_P_LockNull() {
+                this[this.tableGL_Firmware.SW_P_LockColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_R_LockNull() {
+                return this.IsNull(this.tableGL_Firmware.SW_R_LockColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_R_LockNull() {
+                this[this.tableGL_Firmware.SW_R_LockColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_IsPublicNull() {
+                return this.IsNull(this.tableGL_Firmware.SW_IsPublicColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_IsPublicNull() {
+                this[this.tableGL_Firmware.SW_IsPublicColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class dt_Firmware_lookupCommesseGLRow : global::System.Data.DataRow {
+            
+            private dt_Firmware_lookupCommesseGLDataTable tabledt_Firmware_lookupCommesseGL;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal dt_Firmware_lookupCommesseGLRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tabledt_Firmware_lookupCommesseGL = ((dt_Firmware_lookupCommesseGLDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Id {
+                get {
+                    return ((int)(this[this.tabledt_Firmware_lookupCommesseGL.IdColumn]));
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.IdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_Code {
+                get {
+                    return ((string)(this[this.tabledt_Firmware_lookupCommesseGL.SW_CodeColumn]));
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_CodeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_TipoDevice {
+                get {
+                    return ((string)(this[this.tabledt_Firmware_lookupCommesseGL.SW_TipoDeviceColumn]));
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_TipoDeviceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_Descrizione {
+                get {
+                    try {
+                        return ((string)(this[this.tabledt_Firmware_lookupCommesseGL.SW_DescrizioneColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_Descrizione\' nella tabella \'dt_Firmware_lookupCommess" +
+                                "eGL\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_DescrizioneColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_Descrizione_EN {
+                get {
+                    try {
+                        return ((string)(this[this.tabledt_Firmware_lookupCommesseGL.SW_Descrizione_ENColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_Descrizione_EN\' nella tabella \'dt_Firmware_lookupComm" +
+                                "esseGL\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_Descrizione_ENColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_Versione {
+                get {
+                    try {
+                        return ((string)(this[this.tabledt_Firmware_lookupCommesseGL.SW_VersioneColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_Versione\' nella tabella \'dt_Firmware_lookupCommesseGL" +
+                                "\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_VersioneColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_Revisione {
+                get {
+                    try {
+                        return ((string)(this[this.tabledt_Firmware_lookupCommesseGL.SW_RevisioneColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_Revisione\' nella tabella \'dt_Firmware_lookupCommesseG" +
+                                "L\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_RevisioneColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_Standard {
+                get {
+                    return ((bool)(this[this.tabledt_Firmware_lookupCommesseGL.SW_StandardColumn]));
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_StandardColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_P_Opt_RF {
+                get {
+                    return ((string)(this[this.tabledt_Firmware_lookupCommesseGL.SW_P_Opt_RFColumn]));
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_P_Opt_RFColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_Opt_Use_Oled {
+                get {
+                    return ((bool)(this[this.tabledt_Firmware_lookupCommesseGL.SW_P_Opt_Use_OledColumn]));
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_P_Opt_Use_OledColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_Opt_Use_EmButt {
+                get {
+                    return ((bool)(this[this.tabledt_Firmware_lookupCommesseGL.SW_P_Opt_Use_EmButtColumn]));
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_P_Opt_Use_EmButtColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_Opt_Use_Backlight {
+                get {
+                    return ((bool)(this[this.tabledt_Firmware_lookupCommesseGL.SW_P_Opt_Use_BacklightColumn]));
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_P_Opt_Use_BacklightColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_Opt_ShiftPage {
+                get {
+                    return ((bool)(this[this.tabledt_Firmware_lookupCommesseGL.SW_P_Opt_ShiftPageColumn]));
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_P_Opt_ShiftPageColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_Opt_Use_Accel {
+                get {
+                    return ((bool)(this[this.tabledt_Firmware_lookupCommesseGL.SW_P_Opt_Use_AccelColumn]));
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_P_Opt_Use_AccelColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_Opt_Use_SP {
+                get {
+                    return ((bool)(this[this.tabledt_Firmware_lookupCommesseGL.SW_P_Opt_Use_SPColumn]));
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_P_Opt_Use_SPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_Opt_Use_Buzzer {
+                get {
+                    return ((bool)(this[this.tabledt_Firmware_lookupCommesseGL.SW_P_Opt_Use_BuzzerColumn]));
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_P_Opt_Use_BuzzerColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_Opt_Use_Vibracall {
+                get {
+                    return ((bool)(this[this.tabledt_Firmware_lookupCommesseGL.SW_P_Opt_Use_VibracallColumn]));
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_P_Opt_Use_VibracallColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_Opt_Use_LedTorch {
+                get {
+                    return ((bool)(this[this.tabledt_Firmware_lookupCommesseGL.SW_P_Opt_Use_LedTorchColumn]));
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_P_Opt_Use_LedTorchColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int SW_P_Opt_MaxPairDevices {
+                get {
+                    try {
+                        return ((int)(this[this.tabledt_Firmware_lookupCommesseGL.SW_P_Opt_MaxPairDevicesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_P_Opt_MaxPairDevices\' nella tabella \'dt_Firmware_look" +
+                                "upCommesseGL\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_P_Opt_MaxPairDevicesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_R_Opt_RF {
+                get {
+                    return ((string)(this[this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_RFColumn]));
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_RFColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_R_Opt_Plug_Exp {
+                get {
+                    return ((bool)(this[this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_Plug_ExpColumn]));
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_Plug_ExpColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_R_Opt_Plug_Ple {
+                get {
+                    return ((bool)(this[this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_Plug_PleColumn]));
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_Plug_PleColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_R_Opt_Em_Keyb {
+                get {
+                    return ((bool)(this[this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_Em_KeybColumn]));
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_Em_KeybColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_R_Opt_Can {
+                get {
+                    return ((bool)(this[this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_CanColumn]));
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_CanColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_R_Opt_Prop_Out {
+                get {
+                    return ((bool)(this[this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_Prop_OutColumn]));
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_Prop_OutColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_R_Opt_TimeOut {
+                get {
+                    return ((string)(this[this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_TimeOutColumn]));
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_TimeOutColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int SW_R_Opt_Cont_Keys {
+                get {
+                    try {
+                        return ((int)(this[this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_Cont_KeysColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_R_Opt_Cont_Keys\' nella tabella \'dt_Firmware_lookupCom" +
+                                "messeGL\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_Cont_KeysColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_R_Opt_LockSameRow {
+                get {
+                    return ((bool)(this[this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_LockSameRowColumn]));
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_LockSameRowColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_R_Opt_Use_SP {
+                get {
+                    return ((bool)(this[this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_Use_SPColumn]));
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_Use_SPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int SW_R_Opt_MaxPairDevices {
+                get {
+                    try {
+                        return ((int)(this[this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_MaxPairDevicesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_R_Opt_MaxPairDevices\' nella tabella \'dt_Firmware_look" +
+                                "upCommesseGL\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_MaxPairDevicesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_R_Opt_ShiftPage {
+                get {
+                    return ((bool)(this[this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_ShiftPageColumn]));
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_ShiftPageColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int SW_R_Opt_Output_No {
+                get {
+                    try {
+                        return ((int)(this[this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_Output_NoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_R_Opt_Output_No\' nella tabella \'dt_Firmware_lookupCom" +
+                                "messeGL\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_Output_NoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int SW_R_Opt_Dig_Input_No {
+                get {
+                    try {
+                        return ((int)(this[this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_Dig_Input_NoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_R_Opt_Dig_Input_No\' nella tabella \'dt_Firmware_lookup" +
+                                "CommesseGL\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_Dig_Input_NoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int SW_R_Opt_Ana_Input_No {
+                get {
+                    try {
+                        return ((int)(this[this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_Ana_Input_NoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_R_Opt_Ana_Input_No\' nella tabella \'dt_Firmware_lookup" +
+                                "CommesseGL\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_Ana_Input_NoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_Revisioni {
+                get {
+                    try {
+                        return ((string)(this[this.tabledt_Firmware_lookupCommesseGL.SW_RevisioniColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_Revisioni\' nella tabella \'dt_Firmware_lookupCommesseG" +
+                                "L\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_RevisioniColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_Funzionamento {
+                get {
+                    try {
+                        return ((string)(this[this.tabledt_Firmware_lookupCommesseGL.SW_FunzionamentoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_Funzionamento\' nella tabella \'dt_Firmware_lookupComme" +
+                                "sseGL\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_FunzionamentoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_Config {
+                get {
+                    try {
+                        return ((string)(this[this.tabledt_Firmware_lookupCommesseGL.SW_ConfigColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_Config\' nella tabella \'dt_Firmware_lookupCommesseGL\' " +
+                                "è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_ConfigColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_Obsolete_ver {
+                get {
+                    return ((bool)(this[this.tabledt_Firmware_lookupCommesseGL.SW_Obsolete_verColumn]));
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_Obsolete_verColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime SW_Obsolete_ver_from_date {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tabledt_Firmware_lookupCommesseGL.SW_Obsolete_ver_from_dateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_Obsolete_ver_from_date\' nella tabella \'dt_Firmware_lo" +
+                                "okupCommesseGL\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_Obsolete_ver_from_dateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int SW_P_Lock {
+                get {
+                    try {
+                        return ((int)(this[this.tabledt_Firmware_lookupCommesseGL.SW_P_LockColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_P_Lock\' nella tabella \'dt_Firmware_lookupCommesseGL\' " +
+                                "è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_P_LockColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int SW_R_Lock {
+                get {
+                    try {
+                        return ((int)(this[this.tabledt_Firmware_lookupCommesseGL.SW_R_LockColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_R_Lock\' nella tabella \'dt_Firmware_lookupCommesseGL\' " +
+                                "è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledt_Firmware_lookupCommesseGL.SW_R_LockColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_DescrizioneNull() {
+                return this.IsNull(this.tabledt_Firmware_lookupCommesseGL.SW_DescrizioneColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_DescrizioneNull() {
+                this[this.tabledt_Firmware_lookupCommesseGL.SW_DescrizioneColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_Descrizione_ENNull() {
+                return this.IsNull(this.tabledt_Firmware_lookupCommesseGL.SW_Descrizione_ENColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_Descrizione_ENNull() {
+                this[this.tabledt_Firmware_lookupCommesseGL.SW_Descrizione_ENColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_VersioneNull() {
+                return this.IsNull(this.tabledt_Firmware_lookupCommesseGL.SW_VersioneColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_VersioneNull() {
+                this[this.tabledt_Firmware_lookupCommesseGL.SW_VersioneColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_RevisioneNull() {
+                return this.IsNull(this.tabledt_Firmware_lookupCommesseGL.SW_RevisioneColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_RevisioneNull() {
+                this[this.tabledt_Firmware_lookupCommesseGL.SW_RevisioneColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_P_Opt_MaxPairDevicesNull() {
+                return this.IsNull(this.tabledt_Firmware_lookupCommesseGL.SW_P_Opt_MaxPairDevicesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_P_Opt_MaxPairDevicesNull() {
+                this[this.tabledt_Firmware_lookupCommesseGL.SW_P_Opt_MaxPairDevicesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_R_Opt_Cont_KeysNull() {
+                return this.IsNull(this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_Cont_KeysColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_R_Opt_Cont_KeysNull() {
+                this[this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_Cont_KeysColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_R_Opt_MaxPairDevicesNull() {
+                return this.IsNull(this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_MaxPairDevicesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_R_Opt_MaxPairDevicesNull() {
+                this[this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_MaxPairDevicesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_R_Opt_Output_NoNull() {
+                return this.IsNull(this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_Output_NoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_R_Opt_Output_NoNull() {
+                this[this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_Output_NoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_R_Opt_Dig_Input_NoNull() {
+                return this.IsNull(this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_Dig_Input_NoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_R_Opt_Dig_Input_NoNull() {
+                this[this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_Dig_Input_NoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_R_Opt_Ana_Input_NoNull() {
+                return this.IsNull(this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_Ana_Input_NoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_R_Opt_Ana_Input_NoNull() {
+                this[this.tabledt_Firmware_lookupCommesseGL.SW_R_Opt_Ana_Input_NoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_RevisioniNull() {
+                return this.IsNull(this.tabledt_Firmware_lookupCommesseGL.SW_RevisioniColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_RevisioniNull() {
+                this[this.tabledt_Firmware_lookupCommesseGL.SW_RevisioniColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_FunzionamentoNull() {
+                return this.IsNull(this.tabledt_Firmware_lookupCommesseGL.SW_FunzionamentoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_FunzionamentoNull() {
+                this[this.tabledt_Firmware_lookupCommesseGL.SW_FunzionamentoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_ConfigNull() {
+                return this.IsNull(this.tabledt_Firmware_lookupCommesseGL.SW_ConfigColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_ConfigNull() {
+                this[this.tabledt_Firmware_lookupCommesseGL.SW_ConfigColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_Obsolete_ver_from_dateNull() {
+                return this.IsNull(this.tabledt_Firmware_lookupCommesseGL.SW_Obsolete_ver_from_dateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_Obsolete_ver_from_dateNull() {
+                this[this.tabledt_Firmware_lookupCommesseGL.SW_Obsolete_ver_from_dateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_P_LockNull() {
+                return this.IsNull(this.tabledt_Firmware_lookupCommesseGL.SW_P_LockColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_P_LockNull() {
+                this[this.tabledt_Firmware_lookupCommesseGL.SW_P_LockColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_R_LockNull() {
+                return this.IsNull(this.tabledt_Firmware_lookupCommesseGL.SW_R_LockColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_R_LockNull() {
+                this[this.tabledt_Firmware_lookupCommesseGL.SW_R_LockColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class SerialNumbersGL_ObsoleteRow : global::System.Data.DataRow {
+            
+            private SerialNumbersGL_ObsoleteDataTable tableSerialNumbersGL_Obsolete;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal SerialNumbersGL_ObsoleteRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableSerialNumbersGL_Obsolete = ((SerialNumbersGL_ObsoleteDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Ser_Kit {
+                get {
+                    try {
+                        return ((string)(this[this.tableSerialNumbersGL_Obsolete.Ser_KitColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Ser_Kit\' nella tabella \'SerialNumbersGL_Obsolete\' è DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableSerialNumbersGL_Obsolete.Ser_KitColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Ser_ID_Cli {
+                get {
+                    try {
+                        return ((int)(this[this.tableSerialNumbersGL_Obsolete.Ser_ID_CliColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Ser_ID_Cli\' nella tabella \'SerialNumbersGL_Obsolete\' è D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSerialNumbersGL_Obsolete.Ser_ID_CliColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Ser_Device {
+                get {
+                    try {
+                        return ((string)(this[this.tableSerialNumbersGL_Obsolete.Ser_DeviceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Ser_Device\' nella tabella \'SerialNumbersGL_Obsolete\' è D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSerialNumbersGL_Obsolete.Ser_DeviceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Ser_Device_ID_Code {
+                get {
+                    try {
+                        return ((string)(this[this.tableSerialNumbersGL_Obsolete.Ser_Device_ID_CodeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Ser_Device_ID_Code\' nella tabella \'SerialNumbersGL_Obsol" +
+                                "ete\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSerialNumbersGL_Obsolete.Ser_Device_ID_CodeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Ser_OfficialSerial {
+                get {
+                    try {
+                        return ((string)(this[this.tableSerialNumbersGL_Obsolete.Ser_OfficialSerialColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Ser_OfficialSerial\' nella tabella \'SerialNumbersGL_Obsol" +
+                                "ete\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSerialNumbersGL_Obsolete.Ser_OfficialSerialColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Ser_ReadSerial {
+                get {
+                    try {
+                        return ((string)(this[this.tableSerialNumbersGL_Obsolete.Ser_ReadSerialColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Ser_ReadSerial\' nella tabella \'SerialNumbersGL_Obsolete\'" +
+                                " è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSerialNumbersGL_Obsolete.Ser_ReadSerialColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Ser_SW_Code {
+                get {
+                    try {
+                        return ((string)(this[this.tableSerialNumbersGL_Obsolete.Ser_SW_CodeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Ser_SW_Code\' nella tabella \'SerialNumbersGL_Obsolete\' è " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSerialNumbersGL_Obsolete.Ser_SW_CodeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Ser_SW_Code_Rev {
+                get {
+                    try {
+                        return ((string)(this[this.tableSerialNumbersGL_Obsolete.Ser_SW_Code_RevColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Ser_SW_Code_Rev\' nella tabella \'SerialNumbersGL_Obsolete" +
+                                "\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSerialNumbersGL_Obsolete.Ser_SW_Code_RevColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Ser_SW_Std_Type {
+                get {
+                    try {
+                        return ((bool)(this[this.tableSerialNumbersGL_Obsolete.Ser_SW_Std_TypeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Ser_SW_Std_Type\' nella tabella \'SerialNumbersGL_Obsolete" +
+                                "\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSerialNumbersGL_Obsolete.Ser_SW_Std_TypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Ser_SN_prod {
+                get {
+                    try {
+                        return ((string)(this[this.tableSerialNumbersGL_Obsolete.Ser_SN_prodColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Ser_SN_prod\' nella tabella \'SerialNumbersGL_Obsolete\' è " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSerialNumbersGL_Obsolete.Ser_SN_prodColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Ser_Commessa {
+                get {
+                    try {
+                        return ((string)(this[this.tableSerialNumbersGL_Obsolete.Ser_CommessaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Ser_Commessa\' nella tabella \'SerialNumbersGL_Obsolete\' è" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSerialNumbersGL_Obsolete.Ser_CommessaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime Ser_DateProduction {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableSerialNumbersGL_Obsolete.Ser_DateProductionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Ser_DateProduction\' nella tabella \'SerialNumbersGL_Obsol" +
+                                "ete\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSerialNumbersGL_Obsolete.Ser_DateProductionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Ser_Spedito {
+                get {
+                    return ((bool)(this[this.tableSerialNumbersGL_Obsolete.Ser_SpeditoColumn]));
+                }
+                set {
+                    this[this.tableSerialNumbersGL_Obsolete.Ser_SpeditoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime Ser_Data_Spedito {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableSerialNumbersGL_Obsolete.Ser_Data_SpeditoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Ser_Data_Spedito\' nella tabella \'SerialNumbersGL_Obsolet" +
+                                "e\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSerialNumbersGL_Obsolete.Ser_Data_SpeditoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Ser_Substition_ID_ReadSerial {
+                get {
+                    try {
+                        return ((string)(this[this.tableSerialNumbersGL_Obsolete.Ser_Substition_ID_ReadSerialColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Ser_Substition_ID_ReadSerial\' nella tabella \'SerialNumbe" +
+                                "rsGL_Obsolete\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSerialNumbersGL_Obsolete.Ser_Substition_ID_ReadSerialColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Ser_Note {
+                get {
+                    try {
+                        return ((string)(this[this.tableSerialNumbersGL_Obsolete.Ser_NoteColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Ser_Note\' nella tabella \'SerialNumbersGL_Obsolete\' è DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSerialNumbersGL_Obsolete.Ser_NoteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime Ser_ObsoleteFromDate {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableSerialNumbersGL_Obsolete.Ser_ObsoleteFromDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Ser_ObsoleteFromDate\' nella tabella \'SerialNumbersGL_Obs" +
+                                "olete\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSerialNumbersGL_Obsolete.Ser_ObsoleteFromDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Ser_LockLevel {
+                get {
+                    try {
+                        return ((int)(this[this.tableSerialNumbersGL_Obsolete.Ser_LockLevelColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Ser_LockLevel\' nella tabella \'SerialNumbersGL_Obsolete\' " +
+                                "è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSerialNumbersGL_Obsolete.Ser_LockLevelColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSer_KitNull() {
+                return this.IsNull(this.tableSerialNumbersGL_Obsolete.Ser_KitColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSer_KitNull() {
+                this[this.tableSerialNumbersGL_Obsolete.Ser_KitColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSer_ID_CliNull() {
+                return this.IsNull(this.tableSerialNumbersGL_Obsolete.Ser_ID_CliColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSer_ID_CliNull() {
+                this[this.tableSerialNumbersGL_Obsolete.Ser_ID_CliColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSer_DeviceNull() {
+                return this.IsNull(this.tableSerialNumbersGL_Obsolete.Ser_DeviceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSer_DeviceNull() {
+                this[this.tableSerialNumbersGL_Obsolete.Ser_DeviceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSer_Device_ID_CodeNull() {
+                return this.IsNull(this.tableSerialNumbersGL_Obsolete.Ser_Device_ID_CodeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSer_Device_ID_CodeNull() {
+                this[this.tableSerialNumbersGL_Obsolete.Ser_Device_ID_CodeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSer_OfficialSerialNull() {
+                return this.IsNull(this.tableSerialNumbersGL_Obsolete.Ser_OfficialSerialColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSer_OfficialSerialNull() {
+                this[this.tableSerialNumbersGL_Obsolete.Ser_OfficialSerialColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSer_ReadSerialNull() {
+                return this.IsNull(this.tableSerialNumbersGL_Obsolete.Ser_ReadSerialColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSer_ReadSerialNull() {
+                this[this.tableSerialNumbersGL_Obsolete.Ser_ReadSerialColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSer_SW_CodeNull() {
+                return this.IsNull(this.tableSerialNumbersGL_Obsolete.Ser_SW_CodeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSer_SW_CodeNull() {
+                this[this.tableSerialNumbersGL_Obsolete.Ser_SW_CodeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSer_SW_Code_RevNull() {
+                return this.IsNull(this.tableSerialNumbersGL_Obsolete.Ser_SW_Code_RevColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSer_SW_Code_RevNull() {
+                this[this.tableSerialNumbersGL_Obsolete.Ser_SW_Code_RevColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSer_SW_Std_TypeNull() {
+                return this.IsNull(this.tableSerialNumbersGL_Obsolete.Ser_SW_Std_TypeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSer_SW_Std_TypeNull() {
+                this[this.tableSerialNumbersGL_Obsolete.Ser_SW_Std_TypeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSer_SN_prodNull() {
+                return this.IsNull(this.tableSerialNumbersGL_Obsolete.Ser_SN_prodColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSer_SN_prodNull() {
+                this[this.tableSerialNumbersGL_Obsolete.Ser_SN_prodColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSer_CommessaNull() {
+                return this.IsNull(this.tableSerialNumbersGL_Obsolete.Ser_CommessaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSer_CommessaNull() {
+                this[this.tableSerialNumbersGL_Obsolete.Ser_CommessaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSer_DateProductionNull() {
+                return this.IsNull(this.tableSerialNumbersGL_Obsolete.Ser_DateProductionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSer_DateProductionNull() {
+                this[this.tableSerialNumbersGL_Obsolete.Ser_DateProductionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSer_Data_SpeditoNull() {
+                return this.IsNull(this.tableSerialNumbersGL_Obsolete.Ser_Data_SpeditoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSer_Data_SpeditoNull() {
+                this[this.tableSerialNumbersGL_Obsolete.Ser_Data_SpeditoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSer_Substition_ID_ReadSerialNull() {
+                return this.IsNull(this.tableSerialNumbersGL_Obsolete.Ser_Substition_ID_ReadSerialColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSer_Substition_ID_ReadSerialNull() {
+                this[this.tableSerialNumbersGL_Obsolete.Ser_Substition_ID_ReadSerialColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSer_NoteNull() {
+                return this.IsNull(this.tableSerialNumbersGL_Obsolete.Ser_NoteColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSer_NoteNull() {
+                this[this.tableSerialNumbersGL_Obsolete.Ser_NoteColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSer_ObsoleteFromDateNull() {
+                return this.IsNull(this.tableSerialNumbersGL_Obsolete.Ser_ObsoleteFromDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSer_ObsoleteFromDateNull() {
+                this[this.tableSerialNumbersGL_Obsolete.Ser_ObsoleteFromDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSer_LockLevelNull() {
+                return this.IsNull(this.tableSerialNumbersGL_Obsolete.Ser_LockLevelColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSer_LockLevelNull() {
+                this[this.tableSerialNumbersGL_Obsolete.Ser_LockLevelColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class SafetyPointRFID_GLRow : global::System.Data.DataRow {
+            
+            private SafetyPointRFID_GLDataTable tableSafetyPointRFID_GL;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal SafetyPointRFID_GLRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableSafetyPointRFID_GL = ((SafetyPointRFID_GLDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Rfid_ID {
+                get {
+                    return ((int)(this[this.tableSafetyPointRFID_GL.Rfid_IDColumn]));
+                }
+                set {
+                    this[this.tableSafetyPointRFID_GL.Rfid_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Rfid_UUID {
+                get {
+                    try {
+                        return ((string)(this[this.tableSafetyPointRFID_GL.Rfid_UUIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Rfid_UUID\' nella tabella \'SafetyPointRFID_GL\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSafetyPointRFID_GL.Rfid_UUIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Rfid_Technology {
+                get {
+                    try {
+                        return ((string)(this[this.tableSafetyPointRFID_GL.Rfid_TechnologyColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Rfid_Technology\' nella tabella \'SafetyPointRFID_GL\' è DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableSafetyPointRFID_GL.Rfid_TechnologyColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Rfid_Ser_SN_Prod {
+                get {
+                    try {
+                        return ((string)(this[this.tableSafetyPointRFID_GL.Rfid_Ser_SN_ProdColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Rfid_Ser_SN_Prod\' nella tabella \'SafetyPointRFID_GL\' è D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSafetyPointRFID_GL.Rfid_Ser_SN_ProdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Rfid_Obsolete {
+                get {
+                    return ((bool)(this[this.tableSafetyPointRFID_GL.Rfid_ObsoleteColumn]));
+                }
+                set {
+                    this[this.tableSafetyPointRFID_GL.Rfid_ObsoleteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Rfid_Verified {
+                get {
+                    return ((bool)(this[this.tableSafetyPointRFID_GL.Rfid_VerifiedColumn]));
+                }
+                set {
+                    this[this.tableSafetyPointRFID_GL.Rfid_VerifiedColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Rfid_Note {
+                get {
+                    try {
+                        return ((string)(this[this.tableSafetyPointRFID_GL.Rfid_NoteColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Rfid_Note\' nella tabella \'SafetyPointRFID_GL\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSafetyPointRFID_GL.Rfid_NoteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Rfid_Ser_OfficialSerial {
+                get {
+                    try {
+                        return ((string)(this[this.tableSafetyPointRFID_GL.Rfid_Ser_OfficialSerialColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Rfid_Ser_OfficialSerial\' nella tabella \'SafetyPointRFID_" +
+                                "GL\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSafetyPointRFID_GL.Rfid_Ser_OfficialSerialColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsRfid_UUIDNull() {
+                return this.IsNull(this.tableSafetyPointRFID_GL.Rfid_UUIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetRfid_UUIDNull() {
+                this[this.tableSafetyPointRFID_GL.Rfid_UUIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsRfid_TechnologyNull() {
+                return this.IsNull(this.tableSafetyPointRFID_GL.Rfid_TechnologyColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetRfid_TechnologyNull() {
+                this[this.tableSafetyPointRFID_GL.Rfid_TechnologyColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsRfid_Ser_SN_ProdNull() {
+                return this.IsNull(this.tableSafetyPointRFID_GL.Rfid_Ser_SN_ProdColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetRfid_Ser_SN_ProdNull() {
+                this[this.tableSafetyPointRFID_GL.Rfid_Ser_SN_ProdColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsRfid_NoteNull() {
+                return this.IsNull(this.tableSafetyPointRFID_GL.Rfid_NoteColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetRfid_NoteNull() {
+                this[this.tableSafetyPointRFID_GL.Rfid_NoteColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsRfid_Ser_OfficialSerialNull() {
+                return this.IsNull(this.tableSafetyPointRFID_GL.Rfid_Ser_OfficialSerialColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetRfid_Ser_OfficialSerialNull() {
+                this[this.tableSafetyPointRFID_GL.Rfid_Ser_OfficialSerialColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class GL_FW_RevisioniRow : global::System.Data.DataRow {
+            
+            private GL_FW_RevisioniDataTable tableGL_FW_Revisioni;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal GL_FW_RevisioniRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableGL_FW_Revisioni = ((GL_FW_RevisioniDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Id {
+                get {
+                    return ((int)(this[this.tableGL_FW_Revisioni.IdColumn]));
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.IdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_Code {
+                get {
+                    return ((string)(this[this.tableGL_FW_Revisioni.SW_CodeColumn]));
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_CodeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_TipoDevice {
+                get {
+                    return ((string)(this[this.tableGL_FW_Revisioni.SW_TipoDeviceColumn]));
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_TipoDeviceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_Descrizione {
+                get {
+                    try {
+                        return ((string)(this[this.tableGL_FW_Revisioni.SW_DescrizioneColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_Descrizione\' nella tabella \'GL_FW_Revisioni\' è DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_DescrizioneColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_Descrizione_EN {
+                get {
+                    try {
+                        return ((string)(this[this.tableGL_FW_Revisioni.SW_Descrizione_ENColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_Descrizione_EN\' nella tabella \'GL_FW_Revisioni\' è DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_Descrizione_ENColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_Versione {
+                get {
+                    try {
+                        return ((string)(this[this.tableGL_FW_Revisioni.SW_VersioneColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_Versione\' nella tabella \'GL_FW_Revisioni\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_VersioneColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_Revisione {
+                get {
+                    try {
+                        return ((string)(this[this.tableGL_FW_Revisioni.SW_RevisioneColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_Revisione\' nella tabella \'GL_FW_Revisioni\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_RevisioneColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_Standard {
+                get {
+                    return ((bool)(this[this.tableGL_FW_Revisioni.SW_StandardColumn]));
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_StandardColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_FamProd {
+                get {
+                    try {
+                        return ((string)(this[this.tableGL_FW_Revisioni.SW_FamProdColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_FamProd\' nella tabella \'GL_FW_Revisioni\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_FamProdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_P_Opt_RF {
+                get {
+                    return ((string)(this[this.tableGL_FW_Revisioni.SW_P_Opt_RFColumn]));
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_P_Opt_RFColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_Opt_Use_Oled {
+                get {
+                    return ((bool)(this[this.tableGL_FW_Revisioni.SW_P_Opt_Use_OledColumn]));
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_P_Opt_Use_OledColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_Opt_Use_EmButt {
+                get {
+                    return ((bool)(this[this.tableGL_FW_Revisioni.SW_P_Opt_Use_EmButtColumn]));
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_P_Opt_Use_EmButtColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_Opt_Use_Backlight {
+                get {
+                    return ((bool)(this[this.tableGL_FW_Revisioni.SW_P_Opt_Use_BacklightColumn]));
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_P_Opt_Use_BacklightColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_Opt_ShiftPage {
+                get {
+                    return ((bool)(this[this.tableGL_FW_Revisioni.SW_P_Opt_ShiftPageColumn]));
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_P_Opt_ShiftPageColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_Opt_Use_Accel {
+                get {
+                    return ((bool)(this[this.tableGL_FW_Revisioni.SW_P_Opt_Use_AccelColumn]));
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_P_Opt_Use_AccelColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_Opt_Use_SP {
+                get {
+                    return ((bool)(this[this.tableGL_FW_Revisioni.SW_P_Opt_Use_SPColumn]));
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_P_Opt_Use_SPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_Opt_Use_Buzzer {
+                get {
+                    return ((bool)(this[this.tableGL_FW_Revisioni.SW_P_Opt_Use_BuzzerColumn]));
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_P_Opt_Use_BuzzerColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_Opt_Use_Vibracall {
+                get {
+                    return ((bool)(this[this.tableGL_FW_Revisioni.SW_P_Opt_Use_VibracallColumn]));
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_P_Opt_Use_VibracallColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_Opt_Use_LedTorch {
+                get {
+                    return ((bool)(this[this.tableGL_FW_Revisioni.SW_P_Opt_Use_LedTorchColumn]));
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_P_Opt_Use_LedTorchColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_PLD {
+                get {
+                    return ((bool)(this[this.tableGL_FW_Revisioni.SW_P_PLDColumn]));
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_P_PLDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int SW_P_Opt_MaxPairDevices {
+                get {
+                    try {
+                        return ((int)(this[this.tableGL_FW_Revisioni.SW_P_Opt_MaxPairDevicesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_P_Opt_MaxPairDevices\' nella tabella \'GL_FW_Revisioni\'" +
+                                " è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_P_Opt_MaxPairDevicesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_R_Opt_RF {
+                get {
+                    return ((string)(this[this.tableGL_FW_Revisioni.SW_R_Opt_RFColumn]));
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_R_Opt_RFColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_R_Opt_Plug_Exp {
+                get {
+                    return ((bool)(this[this.tableGL_FW_Revisioni.SW_R_Opt_Plug_ExpColumn]));
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_R_Opt_Plug_ExpColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_R_Opt_Plug_Ple {
+                get {
+                    return ((bool)(this[this.tableGL_FW_Revisioni.SW_R_Opt_Plug_PleColumn]));
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_R_Opt_Plug_PleColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_R_Opt_Em_Keyb {
+                get {
+                    return ((bool)(this[this.tableGL_FW_Revisioni.SW_R_Opt_Em_KeybColumn]));
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_R_Opt_Em_KeybColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_R_Opt_Can {
+                get {
+                    return ((bool)(this[this.tableGL_FW_Revisioni.SW_R_Opt_CanColumn]));
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_R_Opt_CanColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_R_Opt_Prop_Out {
+                get {
+                    return ((bool)(this[this.tableGL_FW_Revisioni.SW_R_Opt_Prop_OutColumn]));
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_R_Opt_Prop_OutColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_R_Opt_TimeOut {
+                get {
+                    return ((string)(this[this.tableGL_FW_Revisioni.SW_R_Opt_TimeOutColumn]));
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_R_Opt_TimeOutColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int SW_R_Opt_Cont_Keys {
+                get {
+                    try {
+                        return ((int)(this[this.tableGL_FW_Revisioni.SW_R_Opt_Cont_KeysColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_R_Opt_Cont_Keys\' nella tabella \'GL_FW_Revisioni\' è DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_R_Opt_Cont_KeysColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_R_Opt_LockSameRow {
+                get {
+                    return ((bool)(this[this.tableGL_FW_Revisioni.SW_R_Opt_LockSameRowColumn]));
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_R_Opt_LockSameRowColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_R_Opt_Use_SP {
+                get {
+                    return ((bool)(this[this.tableGL_FW_Revisioni.SW_R_Opt_Use_SPColumn]));
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_R_Opt_Use_SPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int SW_R_Opt_MaxPairDevices {
+                get {
+                    try {
+                        return ((int)(this[this.tableGL_FW_Revisioni.SW_R_Opt_MaxPairDevicesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_R_Opt_MaxPairDevices\' nella tabella \'GL_FW_Revisioni\'" +
+                                " è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_R_Opt_MaxPairDevicesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_R_Opt_ShiftPage {
+                get {
+                    return ((bool)(this[this.tableGL_FW_Revisioni.SW_R_Opt_ShiftPageColumn]));
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_R_Opt_ShiftPageColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int SW_R_Opt_Output_No {
+                get {
+                    try {
+                        return ((int)(this[this.tableGL_FW_Revisioni.SW_R_Opt_Output_NoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_R_Opt_Output_No\' nella tabella \'GL_FW_Revisioni\' è DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_R_Opt_Output_NoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int SW_R_Opt_Dig_Input_No {
+                get {
+                    try {
+                        return ((int)(this[this.tableGL_FW_Revisioni.SW_R_Opt_Dig_Input_NoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_R_Opt_Dig_Input_No\' nella tabella \'GL_FW_Revisioni\' è" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_R_Opt_Dig_Input_NoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int SW_R_Opt_Ana_Input_No {
+                get {
+                    try {
+                        return ((int)(this[this.tableGL_FW_Revisioni.SW_R_Opt_Ana_Input_NoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_R_Opt_Ana_Input_No\' nella tabella \'GL_FW_Revisioni\' è" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_R_Opt_Ana_Input_NoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_Revisioni {
+                get {
+                    try {
+                        return ((string)(this[this.tableGL_FW_Revisioni.SW_RevisioniColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_Revisioni\' nella tabella \'GL_FW_Revisioni\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_RevisioniColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_Funzionamento {
+                get {
+                    try {
+                        return ((string)(this[this.tableGL_FW_Revisioni.SW_FunzionamentoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_Funzionamento\' nella tabella \'GL_FW_Revisioni\' è DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_FunzionamentoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_Config {
+                get {
+                    try {
+                        return ((string)(this[this.tableGL_FW_Revisioni.SW_ConfigColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_Config\' nella tabella \'GL_FW_Revisioni\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_ConfigColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_Obsolete_ver {
+                get {
+                    return ((bool)(this[this.tableGL_FW_Revisioni.SW_Obsolete_verColumn]));
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_Obsolete_verColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime SW_Obsolete_ver_from_date {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableGL_FW_Revisioni.SW_Obsolete_ver_from_dateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_Obsolete_ver_from_date\' nella tabella \'GL_FW_Revision" +
+                                "i\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_Obsolete_ver_from_dateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SW_Order {
+                get {
+                    try {
+                        return ((string)(this[this.tableGL_FW_Revisioni.SW_OrderColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_Order\' nella tabella \'GL_FW_Revisioni\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_OrderColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_R_Opt_Use_Radius {
+                get {
+                    return ((bool)(this[this.tableGL_FW_Revisioni.SW_R_Opt_Use_RadiusColumn]));
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_R_Opt_Use_RadiusColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_CustomPIC {
+                get {
+                    try {
+                        return ((bool)(this[this.tableGL_FW_Revisioni.SW_CustomPICColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_CustomPIC\' nella tabella \'GL_FW_Revisioni\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_CustomPICColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_P_Opt_Use_Radius {
+                get {
+                    try {
+                        return ((bool)(this[this.tableGL_FW_Revisioni.SW_P_Opt_Use_RadiusColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_P_Opt_Use_Radius\' nella tabella \'GL_FW_Revisioni\' è D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_P_Opt_Use_RadiusColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int SW_P_Lock {
+                get {
+                    try {
+                        return ((int)(this[this.tableGL_FW_Revisioni.SW_P_LockColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_P_Lock\' nella tabella \'GL_FW_Revisioni\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_P_LockColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int SW_R_Lock {
+                get {
+                    try {
+                        return ((int)(this[this.tableGL_FW_Revisioni.SW_R_LockColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_R_Lock\' nella tabella \'GL_FW_Revisioni\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_R_LockColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool SW_IsPublic {
+                get {
+                    try {
+                        return ((bool)(this[this.tableGL_FW_Revisioni.SW_IsPublicColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'SW_IsPublic\' nella tabella \'GL_FW_Revisioni\' è DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGL_FW_Revisioni.SW_IsPublicColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_DescrizioneNull() {
+                return this.IsNull(this.tableGL_FW_Revisioni.SW_DescrizioneColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_DescrizioneNull() {
+                this[this.tableGL_FW_Revisioni.SW_DescrizioneColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_Descrizione_ENNull() {
+                return this.IsNull(this.tableGL_FW_Revisioni.SW_Descrizione_ENColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_Descrizione_ENNull() {
+                this[this.tableGL_FW_Revisioni.SW_Descrizione_ENColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_VersioneNull() {
+                return this.IsNull(this.tableGL_FW_Revisioni.SW_VersioneColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_VersioneNull() {
+                this[this.tableGL_FW_Revisioni.SW_VersioneColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_RevisioneNull() {
+                return this.IsNull(this.tableGL_FW_Revisioni.SW_RevisioneColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_RevisioneNull() {
+                this[this.tableGL_FW_Revisioni.SW_RevisioneColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_FamProdNull() {
+                return this.IsNull(this.tableGL_FW_Revisioni.SW_FamProdColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_FamProdNull() {
+                this[this.tableGL_FW_Revisioni.SW_FamProdColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_P_Opt_MaxPairDevicesNull() {
+                return this.IsNull(this.tableGL_FW_Revisioni.SW_P_Opt_MaxPairDevicesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_P_Opt_MaxPairDevicesNull() {
+                this[this.tableGL_FW_Revisioni.SW_P_Opt_MaxPairDevicesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_R_Opt_Cont_KeysNull() {
+                return this.IsNull(this.tableGL_FW_Revisioni.SW_R_Opt_Cont_KeysColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_R_Opt_Cont_KeysNull() {
+                this[this.tableGL_FW_Revisioni.SW_R_Opt_Cont_KeysColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_R_Opt_MaxPairDevicesNull() {
+                return this.IsNull(this.tableGL_FW_Revisioni.SW_R_Opt_MaxPairDevicesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_R_Opt_MaxPairDevicesNull() {
+                this[this.tableGL_FW_Revisioni.SW_R_Opt_MaxPairDevicesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_R_Opt_Output_NoNull() {
+                return this.IsNull(this.tableGL_FW_Revisioni.SW_R_Opt_Output_NoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_R_Opt_Output_NoNull() {
+                this[this.tableGL_FW_Revisioni.SW_R_Opt_Output_NoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_R_Opt_Dig_Input_NoNull() {
+                return this.IsNull(this.tableGL_FW_Revisioni.SW_R_Opt_Dig_Input_NoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_R_Opt_Dig_Input_NoNull() {
+                this[this.tableGL_FW_Revisioni.SW_R_Opt_Dig_Input_NoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_R_Opt_Ana_Input_NoNull() {
+                return this.IsNull(this.tableGL_FW_Revisioni.SW_R_Opt_Ana_Input_NoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_R_Opt_Ana_Input_NoNull() {
+                this[this.tableGL_FW_Revisioni.SW_R_Opt_Ana_Input_NoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_RevisioniNull() {
+                return this.IsNull(this.tableGL_FW_Revisioni.SW_RevisioniColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_RevisioniNull() {
+                this[this.tableGL_FW_Revisioni.SW_RevisioniColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_FunzionamentoNull() {
+                return this.IsNull(this.tableGL_FW_Revisioni.SW_FunzionamentoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_FunzionamentoNull() {
+                this[this.tableGL_FW_Revisioni.SW_FunzionamentoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_ConfigNull() {
+                return this.IsNull(this.tableGL_FW_Revisioni.SW_ConfigColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_ConfigNull() {
+                this[this.tableGL_FW_Revisioni.SW_ConfigColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_Obsolete_ver_from_dateNull() {
+                return this.IsNull(this.tableGL_FW_Revisioni.SW_Obsolete_ver_from_dateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_Obsolete_ver_from_dateNull() {
+                this[this.tableGL_FW_Revisioni.SW_Obsolete_ver_from_dateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_OrderNull() {
+                return this.IsNull(this.tableGL_FW_Revisioni.SW_OrderColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_OrderNull() {
+                this[this.tableGL_FW_Revisioni.SW_OrderColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_CustomPICNull() {
+                return this.IsNull(this.tableGL_FW_Revisioni.SW_CustomPICColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_CustomPICNull() {
+                this[this.tableGL_FW_Revisioni.SW_CustomPICColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_P_Opt_Use_RadiusNull() {
+                return this.IsNull(this.tableGL_FW_Revisioni.SW_P_Opt_Use_RadiusColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_P_Opt_Use_RadiusNull() {
+                this[this.tableGL_FW_Revisioni.SW_P_Opt_Use_RadiusColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_P_LockNull() {
+                return this.IsNull(this.tableGL_FW_Revisioni.SW_P_LockColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_P_LockNull() {
+                this[this.tableGL_FW_Revisioni.SW_P_LockColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_R_LockNull() {
+                return this.IsNull(this.tableGL_FW_Revisioni.SW_R_LockColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_R_LockNull() {
+                this[this.tableGL_FW_Revisioni.SW_R_LockColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSW_IsPublicNull() {
+                return this.IsNull(this.tableGL_FW_Revisioni.SW_IsPublicColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSW_IsPublicNull() {
+                this[this.tableGL_FW_Revisioni.SW_IsPublicColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class dt_GL_Tmp_ProgrammaRow : global::System.Data.DataRow {
+            
+            private dt_GL_Tmp_ProgrammaDataTable tabledt_GL_Tmp_Programma;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal dt_GL_Tmp_ProgrammaRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tabledt_GL_Tmp_Programma = ((dt_GL_Tmp_ProgrammaDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public short tmp_prog_id {
                 get {
-                    return ((short)(this[this.tabledt_Tmp_Programma.tmp_prog_idColumn]));
+                    return ((short)(this[this.tabledt_GL_Tmp_Programma.tmp_prog_idColumn]));
                 }
                 set {
-                    this[this.tabledt_Tmp_Programma.tmp_prog_idColumn] = value;
+                    this[this.tabledt_GL_Tmp_Programma.tmp_prog_idColumn] = value;
                 }
             }
             
@@ -4206,15 +13103,15 @@ namespace SmartLineProduction {
             public string tmp_prog_commessa {
                 get {
                     try {
-                        return ((string)(this[this.tabledt_Tmp_Programma.tmp_prog_commessaColumn]));
+                        return ((string)(this[this.tabledt_GL_Tmp_Programma.tmp_prog_commessaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'tmp_prog_commessa\' nella tabella \'dt_Tmp_Programma\' è DB" +
-                                "Null.", e);
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'tmp_prog_commessa\' nella tabella \'dt_GL_Tmp_Programma\' è" +
+                                " DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledt_Tmp_Programma.tmp_prog_commessaColumn] = value;
+                    this[this.tabledt_GL_Tmp_Programma.tmp_prog_commessaColumn] = value;
                 }
             }
             
@@ -4223,15 +13120,15 @@ namespace SmartLineProduction {
             public string tmp_prog_codart_kit {
                 get {
                     try {
-                        return ((string)(this[this.tabledt_Tmp_Programma.tmp_prog_codart_kitColumn]));
+                        return ((string)(this[this.tabledt_GL_Tmp_Programma.tmp_prog_codart_kitColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'tmp_prog_codart_kit\' nella tabella \'dt_Tmp_Programma\' è " +
-                                "DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'tmp_prog_codart_kit\' nella tabella \'dt_GL_Tmp_Programma\'" +
+                                " è DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledt_Tmp_Programma.tmp_prog_codart_kitColumn] = value;
+                    this[this.tabledt_GL_Tmp_Programma.tmp_prog_codart_kitColumn] = value;
                 }
             }
             
@@ -4240,15 +13137,15 @@ namespace SmartLineProduction {
             public string tmp_prog_codart_item {
                 get {
                     try {
-                        return ((string)(this[this.tabledt_Tmp_Programma.tmp_prog_codart_itemColumn]));
+                        return ((string)(this[this.tabledt_GL_Tmp_Programma.tmp_prog_codart_itemColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'tmp_prog_codart_item\' nella tabella \'dt_Tmp_Programma\' è" +
-                                " DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'tmp_prog_codart_item\' nella tabella \'dt_GL_Tmp_Programma" +
+                                "\' è DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledt_Tmp_Programma.tmp_prog_codart_itemColumn] = value;
+                    this[this.tabledt_GL_Tmp_Programma.tmp_prog_codart_itemColumn] = value;
                 }
             }
             
@@ -4257,15 +13154,15 @@ namespace SmartLineProduction {
             public string tmp_prog_codart_fw {
                 get {
                     try {
-                        return ((string)(this[this.tabledt_Tmp_Programma.tmp_prog_codart_fwColumn]));
+                        return ((string)(this[this.tabledt_GL_Tmp_Programma.tmp_prog_codart_fwColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'tmp_prog_codart_fw\' nella tabella \'dt_Tmp_Programma\' è D" +
-                                "BNull.", e);
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'tmp_prog_codart_fw\' nella tabella \'dt_GL_Tmp_Programma\' " +
+                                "è DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledt_Tmp_Programma.tmp_prog_codart_fwColumn] = value;
+                    this[this.tabledt_GL_Tmp_Programma.tmp_prog_codart_fwColumn] = value;
                 }
             }
             
@@ -4274,15 +13171,15 @@ namespace SmartLineProduction {
             public short tmp_fw_key_id {
                 get {
                     try {
-                        return ((short)(this[this.tabledt_Tmp_Programma.tmp_fw_key_idColumn]));
+                        return ((short)(this[this.tabledt_GL_Tmp_Programma.tmp_fw_key_idColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'tmp_fw_key_id\' nella tabella \'dt_Tmp_Programma\' è DBNull" +
-                                ".", e);
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'tmp_fw_key_id\' nella tabella \'dt_GL_Tmp_Programma\' è DBN" +
+                                "ull.", e);
                     }
                 }
                 set {
-                    this[this.tabledt_Tmp_Programma.tmp_fw_key_idColumn] = value;
+                    this[this.tabledt_GL_Tmp_Programma.tmp_fw_key_idColumn] = value;
                 }
             }
             
@@ -4291,103 +13188,114 @@ namespace SmartLineProduction {
             public string tmp_ID_Hardware {
                 get {
                     try {
-                        return ((string)(this[this.tabledt_Tmp_Programma.tmp_ID_HardwareColumn]));
+                        return ((string)(this[this.tabledt_GL_Tmp_Programma.tmp_ID_HardwareColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'tmp_ID_Hardware\' nella tabella \'dt_Tmp_Programma\' è DBNu" +
-                                "ll.", e);
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'tmp_ID_Hardware\' nella tabella \'dt_GL_Tmp_Programma\' è D" +
+                                "BNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledt_Tmp_Programma.tmp_ID_HardwareColumn] = value;
+                    this[this.tabledt_GL_Tmp_Programma.tmp_ID_HardwareColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Istmp_prog_commessaNull() {
-                return this.IsNull(this.tabledt_Tmp_Programma.tmp_prog_commessaColumn);
+                return this.IsNull(this.tabledt_GL_Tmp_Programma.tmp_prog_commessaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Settmp_prog_commessaNull() {
-                this[this.tabledt_Tmp_Programma.tmp_prog_commessaColumn] = global::System.Convert.DBNull;
+                this[this.tabledt_GL_Tmp_Programma.tmp_prog_commessaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Istmp_prog_codart_kitNull() {
-                return this.IsNull(this.tabledt_Tmp_Programma.tmp_prog_codart_kitColumn);
+                return this.IsNull(this.tabledt_GL_Tmp_Programma.tmp_prog_codart_kitColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Settmp_prog_codart_kitNull() {
-                this[this.tabledt_Tmp_Programma.tmp_prog_codart_kitColumn] = global::System.Convert.DBNull;
+                this[this.tabledt_GL_Tmp_Programma.tmp_prog_codart_kitColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Istmp_prog_codart_itemNull() {
-                return this.IsNull(this.tabledt_Tmp_Programma.tmp_prog_codart_itemColumn);
+                return this.IsNull(this.tabledt_GL_Tmp_Programma.tmp_prog_codart_itemColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Settmp_prog_codart_itemNull() {
-                this[this.tabledt_Tmp_Programma.tmp_prog_codart_itemColumn] = global::System.Convert.DBNull;
+                this[this.tabledt_GL_Tmp_Programma.tmp_prog_codart_itemColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Istmp_prog_codart_fwNull() {
-                return this.IsNull(this.tabledt_Tmp_Programma.tmp_prog_codart_fwColumn);
+                return this.IsNull(this.tabledt_GL_Tmp_Programma.tmp_prog_codart_fwColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Settmp_prog_codart_fwNull() {
-                this[this.tabledt_Tmp_Programma.tmp_prog_codart_fwColumn] = global::System.Convert.DBNull;
+                this[this.tabledt_GL_Tmp_Programma.tmp_prog_codart_fwColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Istmp_fw_key_idNull() {
-                return this.IsNull(this.tabledt_Tmp_Programma.tmp_fw_key_idColumn);
+                return this.IsNull(this.tabledt_GL_Tmp_Programma.tmp_fw_key_idColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Settmp_fw_key_idNull() {
-                this[this.tabledt_Tmp_Programma.tmp_fw_key_idColumn] = global::System.Convert.DBNull;
+                this[this.tabledt_GL_Tmp_Programma.tmp_fw_key_idColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Istmp_ID_HardwareNull() {
-                return this.IsNull(this.tabledt_Tmp_Programma.tmp_ID_HardwareColumn);
+                return this.IsNull(this.tabledt_GL_Tmp_Programma.tmp_ID_HardwareColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Settmp_ID_HardwareNull() {
-                this[this.tabledt_Tmp_Programma.tmp_ID_HardwareColumn] = global::System.Convert.DBNull;
+                this[this.tabledt_GL_Tmp_Programma.tmp_ID_HardwareColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public GL_FirmwareRow[] GetGL_FirmwareRows() {
+                if ((this.Table.ChildRelations["dt_GL_Tmp_Programma_GL_Firmware"] == null)) {
+                    return new GL_FirmwareRow[0];
+                }
+                else {
+                    return ((GL_FirmwareRow[])(base.GetChildRows(this.Table.ChildRelations["dt_GL_Tmp_Programma_GL_Firmware"])));
+                }
             }
         }
         
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class dt_Tmp_FwRow : global::System.Data.DataRow {
+        public partial class dt_GL_Tmp_FwRow : global::System.Data.DataRow {
             
-            private dt_Tmp_FwDataTable tabledt_Tmp_Fw;
+            private dt_GL_Tmp_FwDataTable tabledt_GL_Tmp_Fw;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal dt_Tmp_FwRow(global::System.Data.DataRowBuilder rb) : 
+            internal dt_GL_Tmp_FwRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tabledt_Tmp_Fw = ((dt_Tmp_FwDataTable)(this.Table));
+                this.tabledt_GL_Tmp_Fw = ((dt_GL_Tmp_FwDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4395,14 +13303,14 @@ namespace SmartLineProduction {
             public string fw_codfw {
                 get {
                     try {
-                        return ((string)(this[this.tabledt_Tmp_Fw.fw_codfwColumn]));
+                        return ((string)(this[this.tabledt_GL_Tmp_Fw.fw_codfwColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'fw_codfw\' nella tabella \'dt_Tmp_Fw\' è DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'fw_codfw\' nella tabella \'dt_GL_Tmp_Fw\' è DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledt_Tmp_Fw.fw_codfwColumn] = value;
+                    this[this.tabledt_GL_Tmp_Fw.fw_codfwColumn] = value;
                 }
             }
             
@@ -4411,14 +13319,14 @@ namespace SmartLineProduction {
             public string fw_pathfw {
                 get {
                     try {
-                        return ((string)(this[this.tabledt_Tmp_Fw.fw_pathfwColumn]));
+                        return ((string)(this[this.tabledt_GL_Tmp_Fw.fw_pathfwColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'fw_pathfw\' nella tabella \'dt_Tmp_Fw\' è DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'fw_pathfw\' nella tabella \'dt_GL_Tmp_Fw\' è DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledt_Tmp_Fw.fw_pathfwColumn] = value;
+                    this[this.tabledt_GL_Tmp_Fw.fw_pathfwColumn] = value;
                 }
             }
             
@@ -4427,14 +13335,14 @@ namespace SmartLineProduction {
             public string fw_prefix {
                 get {
                     try {
-                        return ((string)(this[this.tabledt_Tmp_Fw.fw_prefixColumn]));
+                        return ((string)(this[this.tabledt_GL_Tmp_Fw.fw_prefixColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'fw_prefix\' nella tabella \'dt_Tmp_Fw\' è DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'fw_prefix\' nella tabella \'dt_GL_Tmp_Fw\' è DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledt_Tmp_Fw.fw_prefixColumn] = value;
+                    this[this.tabledt_GL_Tmp_Fw.fw_prefixColumn] = value;
                 }
             }
             
@@ -4443,14 +13351,14 @@ namespace SmartLineProduction {
             public string fw_tipodev {
                 get {
                     try {
-                        return ((string)(this[this.tabledt_Tmp_Fw.fw_tipodevColumn]));
+                        return ((string)(this[this.tabledt_GL_Tmp_Fw.fw_tipodevColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'fw_tipodev\' nella tabella \'dt_Tmp_Fw\' è DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'fw_tipodev\' nella tabella \'dt_GL_Tmp_Fw\' è DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledt_Tmp_Fw.fw_tipodevColumn] = value;
+                    this[this.tabledt_GL_Tmp_Fw.fw_tipodevColumn] = value;
                 }
             }
             
@@ -4459,14 +13367,14 @@ namespace SmartLineProduction {
             public string fw_standcust {
                 get {
                     try {
-                        return ((string)(this[this.tabledt_Tmp_Fw.fw_standcustColumn]));
+                        return ((string)(this[this.tabledt_GL_Tmp_Fw.fw_standcustColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'fw_standcust\' nella tabella \'dt_Tmp_Fw\' è DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'fw_standcust\' nella tabella \'dt_GL_Tmp_Fw\' è DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledt_Tmp_Fw.fw_standcustColumn] = value;
+                    this[this.tabledt_GL_Tmp_Fw.fw_standcustColumn] = value;
                 }
             }
             
@@ -4475,14 +13383,14 @@ namespace SmartLineProduction {
             public string fw_versione {
                 get {
                     try {
-                        return ((string)(this[this.tabledt_Tmp_Fw.fw_versioneColumn]));
+                        return ((string)(this[this.tabledt_GL_Tmp_Fw.fw_versioneColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'fw_versione\' nella tabella \'dt_Tmp_Fw\' è DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'fw_versione\' nella tabella \'dt_GL_Tmp_Fw\' è DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledt_Tmp_Fw.fw_versioneColumn] = value;
+                    this[this.tabledt_GL_Tmp_Fw.fw_versioneColumn] = value;
                 }
             }
             
@@ -4491,14 +13399,14 @@ namespace SmartLineProduction {
             public string fw_freq {
                 get {
                     try {
-                        return ((string)(this[this.tabledt_Tmp_Fw.fw_freqColumn]));
+                        return ((string)(this[this.tabledt_GL_Tmp_Fw.fw_freqColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'fw_freq\' nella tabella \'dt_Tmp_Fw\' è DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'fw_freq\' nella tabella \'dt_GL_Tmp_Fw\' è DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledt_Tmp_Fw.fw_freqColumn] = value;
+                    this[this.tabledt_GL_Tmp_Fw.fw_freqColumn] = value;
                 }
             }
             
@@ -4507,14 +13415,14 @@ namespace SmartLineProduction {
             public string fw_searchvers {
                 get {
                     try {
-                        return ((string)(this[this.tabledt_Tmp_Fw.fw_searchversColumn]));
+                        return ((string)(this[this.tabledt_GL_Tmp_Fw.fw_searchversColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'fw_searchvers\' nella tabella \'dt_Tmp_Fw\' è DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'fw_searchvers\' nella tabella \'dt_GL_Tmp_Fw\' è DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledt_Tmp_Fw.fw_searchversColumn] = value;
+                    this[this.tabledt_GL_Tmp_Fw.fw_searchversColumn] = value;
                 }
             }
             
@@ -4523,123 +13431,123 @@ namespace SmartLineProduction {
             public int fw_id {
                 get {
                     try {
-                        return ((int)(this[this.tabledt_Tmp_Fw.fw_idColumn]));
+                        return ((int)(this[this.tabledt_GL_Tmp_Fw.fw_idColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'fw_id\' nella tabella \'dt_Tmp_Fw\' è DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'fw_id\' nella tabella \'dt_GL_Tmp_Fw\' è DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledt_Tmp_Fw.fw_idColumn] = value;
+                    this[this.tabledt_GL_Tmp_Fw.fw_idColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isfw_codfwNull() {
-                return this.IsNull(this.tabledt_Tmp_Fw.fw_codfwColumn);
+                return this.IsNull(this.tabledt_GL_Tmp_Fw.fw_codfwColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setfw_codfwNull() {
-                this[this.tabledt_Tmp_Fw.fw_codfwColumn] = global::System.Convert.DBNull;
+                this[this.tabledt_GL_Tmp_Fw.fw_codfwColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isfw_pathfwNull() {
-                return this.IsNull(this.tabledt_Tmp_Fw.fw_pathfwColumn);
+                return this.IsNull(this.tabledt_GL_Tmp_Fw.fw_pathfwColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setfw_pathfwNull() {
-                this[this.tabledt_Tmp_Fw.fw_pathfwColumn] = global::System.Convert.DBNull;
+                this[this.tabledt_GL_Tmp_Fw.fw_pathfwColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isfw_prefixNull() {
-                return this.IsNull(this.tabledt_Tmp_Fw.fw_prefixColumn);
+                return this.IsNull(this.tabledt_GL_Tmp_Fw.fw_prefixColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setfw_prefixNull() {
-                this[this.tabledt_Tmp_Fw.fw_prefixColumn] = global::System.Convert.DBNull;
+                this[this.tabledt_GL_Tmp_Fw.fw_prefixColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isfw_tipodevNull() {
-                return this.IsNull(this.tabledt_Tmp_Fw.fw_tipodevColumn);
+                return this.IsNull(this.tabledt_GL_Tmp_Fw.fw_tipodevColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setfw_tipodevNull() {
-                this[this.tabledt_Tmp_Fw.fw_tipodevColumn] = global::System.Convert.DBNull;
+                this[this.tabledt_GL_Tmp_Fw.fw_tipodevColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isfw_standcustNull() {
-                return this.IsNull(this.tabledt_Tmp_Fw.fw_standcustColumn);
+                return this.IsNull(this.tabledt_GL_Tmp_Fw.fw_standcustColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setfw_standcustNull() {
-                this[this.tabledt_Tmp_Fw.fw_standcustColumn] = global::System.Convert.DBNull;
+                this[this.tabledt_GL_Tmp_Fw.fw_standcustColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isfw_versioneNull() {
-                return this.IsNull(this.tabledt_Tmp_Fw.fw_versioneColumn);
+                return this.IsNull(this.tabledt_GL_Tmp_Fw.fw_versioneColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setfw_versioneNull() {
-                this[this.tabledt_Tmp_Fw.fw_versioneColumn] = global::System.Convert.DBNull;
+                this[this.tabledt_GL_Tmp_Fw.fw_versioneColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isfw_freqNull() {
-                return this.IsNull(this.tabledt_Tmp_Fw.fw_freqColumn);
+                return this.IsNull(this.tabledt_GL_Tmp_Fw.fw_freqColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setfw_freqNull() {
-                this[this.tabledt_Tmp_Fw.fw_freqColumn] = global::System.Convert.DBNull;
+                this[this.tabledt_GL_Tmp_Fw.fw_freqColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isfw_searchversNull() {
-                return this.IsNull(this.tabledt_Tmp_Fw.fw_searchversColumn);
+                return this.IsNull(this.tabledt_GL_Tmp_Fw.fw_searchversColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setfw_searchversNull() {
-                this[this.tabledt_Tmp_Fw.fw_searchversColumn] = global::System.Convert.DBNull;
+                this[this.tabledt_GL_Tmp_Fw.fw_searchversColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isfw_idNull() {
-                return this.IsNull(this.tabledt_Tmp_Fw.fw_idColumn);
+                return this.IsNull(this.tabledt_GL_Tmp_Fw.fw_idColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setfw_idNull() {
-                this[this.tabledt_Tmp_Fw.fw_idColumn] = global::System.Convert.DBNull;
+                this[this.tabledt_GL_Tmp_Fw.fw_idColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4817,22 +13725,22 @@ namespace SmartLineProduction {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class dt_Tmp_ProgrammaRowChangeEvent : global::System.EventArgs {
+        public class GL_FW_ClientiRowChangeEvent : global::System.EventArgs {
             
-            private dt_Tmp_ProgrammaRow eventRow;
+            private GL_FW_ClientiRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public dt_Tmp_ProgrammaRowChangeEvent(dt_Tmp_ProgrammaRow row, global::System.Data.DataRowAction action) {
+            public GL_FW_ClientiRowChangeEvent(GL_FW_ClientiRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public dt_Tmp_ProgrammaRow Row {
+            public GL_FW_ClientiRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -4851,22 +13759,260 @@ namespace SmartLineProduction {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class dt_Tmp_FwRowChangeEvent : global::System.EventArgs {
+        public class GL_SerialNumbersRowChangeEvent : global::System.EventArgs {
             
-            private dt_Tmp_FwRow eventRow;
+            private GL_SerialNumbersRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public dt_Tmp_FwRowChangeEvent(dt_Tmp_FwRow row, global::System.Data.DataRowAction action) {
+            public GL_SerialNumbersRowChangeEvent(GL_SerialNumbersRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public dt_Tmp_FwRow Row {
+            public GL_SerialNumbersRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class GL_FirmwareRowChangeEvent : global::System.EventArgs {
+            
+            private GL_FirmwareRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public GL_FirmwareRowChangeEvent(GL_FirmwareRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public GL_FirmwareRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class dt_Firmware_lookupCommesseGLRowChangeEvent : global::System.EventArgs {
+            
+            private dt_Firmware_lookupCommesseGLRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public dt_Firmware_lookupCommesseGLRowChangeEvent(dt_Firmware_lookupCommesseGLRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public dt_Firmware_lookupCommesseGLRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class SerialNumbersGL_ObsoleteRowChangeEvent : global::System.EventArgs {
+            
+            private SerialNumbersGL_ObsoleteRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public SerialNumbersGL_ObsoleteRowChangeEvent(SerialNumbersGL_ObsoleteRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public SerialNumbersGL_ObsoleteRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class SafetyPointRFID_GLRowChangeEvent : global::System.EventArgs {
+            
+            private SafetyPointRFID_GLRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public SafetyPointRFID_GLRowChangeEvent(SafetyPointRFID_GLRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public SafetyPointRFID_GLRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class GL_FW_RevisioniRowChangeEvent : global::System.EventArgs {
+            
+            private GL_FW_RevisioniRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public GL_FW_RevisioniRowChangeEvent(GL_FW_RevisioniRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public GL_FW_RevisioniRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class dt_GL_Tmp_ProgrammaRowChangeEvent : global::System.EventArgs {
+            
+            private dt_GL_Tmp_ProgrammaRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public dt_GL_Tmp_ProgrammaRowChangeEvent(dt_GL_Tmp_ProgrammaRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public dt_GL_Tmp_ProgrammaRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class dt_GL_Tmp_FwRowChangeEvent : global::System.EventArgs {
+            
+            private dt_GL_Tmp_FwRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public dt_GL_Tmp_FwRowChangeEvent(dt_GL_Tmp_FwRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public dt_GL_Tmp_FwRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -5795,6 +14941,3642 @@ WHERE        (SF_Commesse_GL.Is_Kit = '1') OR
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class GL_FW_ClientiTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public GL_FW_ClientiTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "GL_FW_Clienti";
+            tableMapping.ColumnMappings.Add("id", "id");
+            tableMapping.ColumnMappings.Add("Cod_Nominativo", "Cod_Nominativo");
+            tableMapping.ColumnMappings.Add("SW_Code", "SW_Code");
+            tableMapping.ColumnMappings.Add("SW_Des1", "SW_Des1");
+            tableMapping.ColumnMappings.Add("SW_Des2", "SW_Des2");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[GL_FW_Clienti] ([Cod_Nominativo], [SW_Code], [SW_Des1], [SW_De" +
+                "s2]) VALUES (@Cod_Nominativo, @SW_Code, @SW_Des1, @SW_Des2)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cod_Nominativo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cod_Nominativo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Des1", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Des1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Des2", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Des2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionStringOk;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT id, Cod_Nominativo, SW_Code, SW_Des1, SW_Des2 FROM dbo.GL_FW_Clienti";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(ds_Programmazione_GL.GL_FW_ClientiDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual ds_Programmazione_GL.GL_FW_ClientiDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            ds_Programmazione_GL.GL_FW_ClientiDataTable dataTable = new ds_Programmazione_GL.GL_FW_ClientiDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(ds_Programmazione_GL.GL_FW_ClientiDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(ds_Programmazione_GL dataSet) {
+            return this.Adapter.Update(dataSet, "GL_FW_Clienti");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(int Cod_Nominativo, string SW_Code, string SW_Des1, string SW_Des2) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Cod_Nominativo));
+            if ((SW_Code == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(SW_Code));
+            }
+            if ((SW_Des1 == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(SW_Des1));
+            }
+            if ((SW_Des2 == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(SW_Des2));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class GL_SerialNumbersTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public GL_SerialNumbersTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "GL_SerialNumbers";
+            tableMapping.ColumnMappings.Add("Id", "Id");
+            tableMapping.ColumnMappings.Add("Ser_Kit", "Ser_Kit");
+            tableMapping.ColumnMappings.Add("Ser_ID_Cli", "Ser_ID_Cli");
+            tableMapping.ColumnMappings.Add("Ser_Device", "Ser_Device");
+            tableMapping.ColumnMappings.Add("Ser_Device_ID_Code", "Ser_Device_ID_Code");
+            tableMapping.ColumnMappings.Add("Ser_OfficialSerial", "Ser_OfficialSerial");
+            tableMapping.ColumnMappings.Add("Ser_ReadSerial", "Ser_ReadSerial");
+            tableMapping.ColumnMappings.Add("Ser_SW_Code", "Ser_SW_Code");
+            tableMapping.ColumnMappings.Add("Ser_SW_Code_Rev", "Ser_SW_Code_Rev");
+            tableMapping.ColumnMappings.Add("Ser_SW_Std_Type", "Ser_SW_Std_Type");
+            tableMapping.ColumnMappings.Add("Ser_SN_prod", "Ser_SN_prod");
+            tableMapping.ColumnMappings.Add("Ser_Commessa", "Ser_Commessa");
+            tableMapping.ColumnMappings.Add("Ser_DateProduction", "Ser_DateProduction");
+            tableMapping.ColumnMappings.Add("Ser_Spedito", "Ser_Spedito");
+            tableMapping.ColumnMappings.Add("Ser_Data_Spedito", "Ser_Data_Spedito");
+            tableMapping.ColumnMappings.Add("Ser_Substition_ID_ReadSerial", "Ser_Substition_ID_ReadSerial");
+            tableMapping.ColumnMappings.Add("Ser_Note", "Ser_Note");
+            tableMapping.ColumnMappings.Add("Ser_LockLevel", "Ser_LockLevel");
+            tableMapping.ColumnMappings.Add("Ser_Device_ID_Code_Start", "Ser_Device_ID_Code_Start");
+            tableMapping.ColumnMappings.Add("Ser_Golden_Unlock", "Ser_Golden_Unlock");
+            tableMapping.ColumnMappings.Add("Ser_Cfg_Init", "Ser_Cfg_Init");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[GL_SerialNumbers] WHERE (([Id] = @Original_Id) AND ((@IsNull_S" +
+                "er_Kit = 1 AND [Ser_Kit] IS NULL) OR ([Ser_Kit] = @Original_Ser_Kit)) AND ((@IsN" +
+                "ull_Ser_ID_Cli = 1 AND [Ser_ID_Cli] IS NULL) OR ([Ser_ID_Cli] = @Original_Ser_ID" +
+                "_Cli)) AND ((@IsNull_Ser_Device = 1 AND [Ser_Device] IS NULL) OR ([Ser_Device] =" +
+                " @Original_Ser_Device)) AND ((@IsNull_Ser_Device_ID_Code = 1 AND [Ser_Device_ID_" +
+                "Code] IS NULL) OR ([Ser_Device_ID_Code] = @Original_Ser_Device_ID_Code)) AND ((@" +
+                "IsNull_Ser_OfficialSerial = 1 AND [Ser_OfficialSerial] IS NULL) OR ([Ser_Officia" +
+                "lSerial] = @Original_Ser_OfficialSerial)) AND ((@IsNull_Ser_ReadSerial = 1 AND [" +
+                "Ser_ReadSerial] IS NULL) OR ([Ser_ReadSerial] = @Original_Ser_ReadSerial)) AND (" +
+                "(@IsNull_Ser_SW_Code = 1 AND [Ser_SW_Code] IS NULL) OR ([Ser_SW_Code] = @Origina" +
+                "l_Ser_SW_Code)) AND ((@IsNull_Ser_SW_Code_Rev = 1 AND [Ser_SW_Code_Rev] IS NULL)" +
+                " OR ([Ser_SW_Code_Rev] = @Original_Ser_SW_Code_Rev)) AND ((@IsNull_Ser_SW_Std_Ty" +
+                "pe = 1 AND [Ser_SW_Std_Type] IS NULL) OR ([Ser_SW_Std_Type] = @Original_Ser_SW_S" +
+                "td_Type)) AND ((@IsNull_Ser_SN_prod = 1 AND [Ser_SN_prod] IS NULL) OR ([Ser_SN_p" +
+                "rod] = @Original_Ser_SN_prod)) AND ((@IsNull_Ser_Commessa = 1 AND [Ser_Commessa]" +
+                " IS NULL) OR ([Ser_Commessa] = @Original_Ser_Commessa)) AND ((@IsNull_Ser_DatePr" +
+                "oduction = 1 AND [Ser_DateProduction] IS NULL) OR ([Ser_DateProduction] = @Origi" +
+                "nal_Ser_DateProduction)) AND ([Ser_Spedito] = @Original_Ser_Spedito) AND ((@IsNu" +
+                "ll_Ser_Data_Spedito = 1 AND [Ser_Data_Spedito] IS NULL) OR ([Ser_Data_Spedito] =" +
+                " @Original_Ser_Data_Spedito)) AND ((@IsNull_Ser_Substition_ID_ReadSerial = 1 AND" +
+                " [Ser_Substition_ID_ReadSerial] IS NULL) OR ([Ser_Substition_ID_ReadSerial] = @O" +
+                "riginal_Ser_Substition_ID_ReadSerial)) AND ((@IsNull_Ser_LockLevel = 1 AND [Ser_" +
+                "LockLevel] IS NULL) OR ([Ser_LockLevel] = @Original_Ser_LockLevel)) AND ((@IsNul" +
+                "l_Ser_Device_ID_Code_Start = 1 AND [Ser_Device_ID_Code_Start] IS NULL) OR ([Ser_" +
+                "Device_ID_Code_Start] = @Original_Ser_Device_ID_Code_Start)) AND ([Ser_Golden_Un" +
+                "lock] = @Original_Ser_Golden_Unlock) AND ((@IsNull_Ser_Cfg_Init = 1 AND [Ser_Cfg" +
+                "_Init] IS NULL) OR ([Ser_Cfg_Init] = @Original_Ser_Cfg_Init)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_Kit", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Kit", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_Kit", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Kit", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_ID_Cli", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_ID_Cli", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_ID_Cli", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_ID_Cli", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_Device", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Device", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_Device", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Device", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_Device_ID_Code", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Device_ID_Code", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_Device_ID_Code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Device_ID_Code", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_OfficialSerial", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_OfficialSerial", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_OfficialSerial", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_OfficialSerial", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_ReadSerial", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_ReadSerial", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_ReadSerial", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_ReadSerial", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_SW_Code", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_SW_Code", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_SW_Code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_SW_Code", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_SW_Code_Rev", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_SW_Code_Rev", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_SW_Code_Rev", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_SW_Code_Rev", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_SW_Std_Type", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_SW_Std_Type", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_SW_Std_Type", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_SW_Std_Type", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_SN_prod", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_SN_prod", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_SN_prod", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_SN_prod", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_Commessa", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Commessa", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_Commessa", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Commessa", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_DateProduction", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_DateProduction", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_DateProduction", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_DateProduction", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_Spedito", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Spedito", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_Data_Spedito", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Data_Spedito", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_Data_Spedito", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Data_Spedito", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_Substition_ID_ReadSerial", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Substition_ID_ReadSerial", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_Substition_ID_ReadSerial", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Substition_ID_ReadSerial", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_LockLevel", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_LockLevel", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_LockLevel", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_LockLevel", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_Device_ID_Code_Start", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Device_ID_Code_Start", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_Device_ID_Code_Start", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Device_ID_Code_Start", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_Golden_Unlock", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Golden_Unlock", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_Cfg_Init", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Cfg_Init", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_Cfg_Init", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Cfg_Init", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[GL_SerialNumbers] ([Ser_Kit], [Ser_ID_Cli], [Ser_Device], [Ser_Device_ID_Code], [Ser_OfficialSerial], [Ser_ReadSerial], [Ser_SW_Code], [Ser_SW_Code_Rev], [Ser_SW_Std_Type], [Ser_SN_prod], [Ser_Commessa], [Ser_DateProduction], [Ser_Spedito], [Ser_Data_Spedito], [Ser_Substition_ID_ReadSerial], [Ser_Note], [Ser_LockLevel], [Ser_Device_ID_Code_Start], [Ser_Golden_Unlock], [Ser_Cfg_Init]) VALUES (@Ser_Kit, @Ser_ID_Cli, @Ser_Device, @Ser_Device_ID_Code, @Ser_OfficialSerial, @Ser_ReadSerial, @Ser_SW_Code, @Ser_SW_Code_Rev, @Ser_SW_Std_Type, @Ser_SN_prod, @Ser_Commessa, @Ser_DateProduction, @Ser_Spedito, @Ser_Data_Spedito, @Ser_Substition_ID_ReadSerial, @Ser_Note, @Ser_LockLevel, @Ser_Device_ID_Code_Start, @Ser_Golden_Unlock, @Ser_Cfg_Init);
+SELECT Id, Ser_Kit, Ser_ID_Cli, Ser_Device, Ser_Device_ID_Code, Ser_OfficialSerial, Ser_ReadSerial, Ser_SW_Code, Ser_SW_Code_Rev, Ser_SW_Std_Type, Ser_SN_prod, Ser_Commessa, Ser_DateProduction, Ser_Spedito, Ser_Data_Spedito, Ser_Substition_ID_ReadSerial, Ser_Note, Ser_LockLevel, Ser_Device_ID_Code_Start, Ser_Golden_Unlock, Ser_Cfg_Init FROM GL_SerialNumbers WHERE (Id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Kit", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Kit", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_ID_Cli", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_ID_Cli", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Device", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Device", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Device_ID_Code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Device_ID_Code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_OfficialSerial", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_OfficialSerial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_ReadSerial", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_ReadSerial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_SW_Code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_SW_Code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_SW_Code_Rev", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_SW_Code_Rev", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_SW_Std_Type", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_SW_Std_Type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_SN_prod", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_SN_prod", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Commessa", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Commessa", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_DateProduction", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_DateProduction", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Spedito", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Spedito", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Data_Spedito", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Data_Spedito", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Substition_ID_ReadSerial", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Substition_ID_ReadSerial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Note", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Note", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_LockLevel", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_LockLevel", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Device_ID_Code_Start", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Device_ID_Code_Start", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Golden_Unlock", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Golden_Unlock", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Cfg_Init", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Cfg_Init", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[GL_SerialNumbers] SET [Ser_Kit] = @Ser_Kit, [Ser_ID_Cli] = @Ser_ID_" +
+                "Cli, [Ser_Device] = @Ser_Device, [Ser_Device_ID_Code] = @Ser_Device_ID_Code, [Se" +
+                "r_OfficialSerial] = @Ser_OfficialSerial, [Ser_ReadSerial] = @Ser_ReadSerial, [Se" +
+                "r_SW_Code] = @Ser_SW_Code, [Ser_SW_Code_Rev] = @Ser_SW_Code_Rev, [Ser_SW_Std_Typ" +
+                "e] = @Ser_SW_Std_Type, [Ser_SN_prod] = @Ser_SN_prod, [Ser_Commessa] = @Ser_Comme" +
+                "ssa, [Ser_DateProduction] = @Ser_DateProduction, [Ser_Spedito] = @Ser_Spedito, [" +
+                "Ser_Data_Spedito] = @Ser_Data_Spedito, [Ser_Substition_ID_ReadSerial] = @Ser_Sub" +
+                "stition_ID_ReadSerial, [Ser_Note] = @Ser_Note, [Ser_LockLevel] = @Ser_LockLevel," +
+                " [Ser_Device_ID_Code_Start] = @Ser_Device_ID_Code_Start, [Ser_Golden_Unlock] = @" +
+                "Ser_Golden_Unlock, [Ser_Cfg_Init] = @Ser_Cfg_Init WHERE (([Id] = @Original_Id) A" +
+                "ND ((@IsNull_Ser_Kit = 1 AND [Ser_Kit] IS NULL) OR ([Ser_Kit] = @Original_Ser_Ki" +
+                "t)) AND ((@IsNull_Ser_ID_Cli = 1 AND [Ser_ID_Cli] IS NULL) OR ([Ser_ID_Cli] = @O" +
+                "riginal_Ser_ID_Cli)) AND ((@IsNull_Ser_Device = 1 AND [Ser_Device] IS NULL) OR (" +
+                "[Ser_Device] = @Original_Ser_Device)) AND ((@IsNull_Ser_Device_ID_Code = 1 AND [" +
+                "Ser_Device_ID_Code] IS NULL) OR ([Ser_Device_ID_Code] = @Original_Ser_Device_ID_" +
+                "Code)) AND ((@IsNull_Ser_OfficialSerial = 1 AND [Ser_OfficialSerial] IS NULL) OR" +
+                " ([Ser_OfficialSerial] = @Original_Ser_OfficialSerial)) AND ((@IsNull_Ser_ReadSe" +
+                "rial = 1 AND [Ser_ReadSerial] IS NULL) OR ([Ser_ReadSerial] = @Original_Ser_Read" +
+                "Serial)) AND ((@IsNull_Ser_SW_Code = 1 AND [Ser_SW_Code] IS NULL) OR ([Ser_SW_Co" +
+                "de] = @Original_Ser_SW_Code)) AND ((@IsNull_Ser_SW_Code_Rev = 1 AND [Ser_SW_Code" +
+                "_Rev] IS NULL) OR ([Ser_SW_Code_Rev] = @Original_Ser_SW_Code_Rev)) AND ((@IsNull" +
+                "_Ser_SW_Std_Type = 1 AND [Ser_SW_Std_Type] IS NULL) OR ([Ser_SW_Std_Type] = @Ori" +
+                "ginal_Ser_SW_Std_Type)) AND ((@IsNull_Ser_SN_prod = 1 AND [Ser_SN_prod] IS NULL)" +
+                " OR ([Ser_SN_prod] = @Original_Ser_SN_prod)) AND ((@IsNull_Ser_Commessa = 1 AND " +
+                "[Ser_Commessa] IS NULL) OR ([Ser_Commessa] = @Original_Ser_Commessa)) AND ((@IsN" +
+                "ull_Ser_DateProduction = 1 AND [Ser_DateProduction] IS NULL) OR ([Ser_DateProduc" +
+                "tion] = @Original_Ser_DateProduction)) AND ([Ser_Spedito] = @Original_Ser_Spedit" +
+                "o) AND ((@IsNull_Ser_Data_Spedito = 1 AND [Ser_Data_Spedito] IS NULL) OR ([Ser_D" +
+                "ata_Spedito] = @Original_Ser_Data_Spedito)) AND ((@IsNull_Ser_Substition_ID_Read" +
+                "Serial = 1 AND [Ser_Substition_ID_ReadSerial] IS NULL) OR ([Ser_Substition_ID_Re" +
+                "adSerial] = @Original_Ser_Substition_ID_ReadSerial)) AND ((@IsNull_Ser_LockLevel" +
+                " = 1 AND [Ser_LockLevel] IS NULL) OR ([Ser_LockLevel] = @Original_Ser_LockLevel)" +
+                ") AND ((@IsNull_Ser_Device_ID_Code_Start = 1 AND [Ser_Device_ID_Code_Start] IS N" +
+                "ULL) OR ([Ser_Device_ID_Code_Start] = @Original_Ser_Device_ID_Code_Start)) AND (" +
+                "[Ser_Golden_Unlock] = @Original_Ser_Golden_Unlock) AND ((@IsNull_Ser_Cfg_Init = " +
+                "1 AND [Ser_Cfg_Init] IS NULL) OR ([Ser_Cfg_Init] = @Original_Ser_Cfg_Init)));\r\nS" +
+                "ELECT Id, Ser_Kit, Ser_ID_Cli, Ser_Device, Ser_Device_ID_Code, Ser_OfficialSeria" +
+                "l, Ser_ReadSerial, Ser_SW_Code, Ser_SW_Code_Rev, Ser_SW_Std_Type, Ser_SN_prod, S" +
+                "er_Commessa, Ser_DateProduction, Ser_Spedito, Ser_Data_Spedito, Ser_Substition_I" +
+                "D_ReadSerial, Ser_Note, Ser_LockLevel, Ser_Device_ID_Code_Start, Ser_Golden_Unlo" +
+                "ck, Ser_Cfg_Init FROM GL_SerialNumbers WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Kit", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Kit", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_ID_Cli", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_ID_Cli", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Device", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Device", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Device_ID_Code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Device_ID_Code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_OfficialSerial", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_OfficialSerial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_ReadSerial", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_ReadSerial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_SW_Code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_SW_Code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_SW_Code_Rev", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_SW_Code_Rev", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_SW_Std_Type", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_SW_Std_Type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_SN_prod", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_SN_prod", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Commessa", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Commessa", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_DateProduction", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_DateProduction", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Spedito", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Spedito", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Data_Spedito", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Data_Spedito", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Substition_ID_ReadSerial", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Substition_ID_ReadSerial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Note", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Note", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_LockLevel", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_LockLevel", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Device_ID_Code_Start", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Device_ID_Code_Start", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Golden_Unlock", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Golden_Unlock", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Cfg_Init", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Cfg_Init", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_Kit", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Kit", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_Kit", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Kit", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_ID_Cli", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_ID_Cli", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_ID_Cli", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_ID_Cli", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_Device", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Device", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_Device", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Device", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_Device_ID_Code", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Device_ID_Code", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_Device_ID_Code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Device_ID_Code", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_OfficialSerial", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_OfficialSerial", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_OfficialSerial", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_OfficialSerial", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_ReadSerial", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_ReadSerial", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_ReadSerial", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_ReadSerial", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_SW_Code", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_SW_Code", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_SW_Code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_SW_Code", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_SW_Code_Rev", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_SW_Code_Rev", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_SW_Code_Rev", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_SW_Code_Rev", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_SW_Std_Type", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_SW_Std_Type", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_SW_Std_Type", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_SW_Std_Type", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_SN_prod", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_SN_prod", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_SN_prod", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_SN_prod", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_Commessa", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Commessa", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_Commessa", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Commessa", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_DateProduction", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_DateProduction", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_DateProduction", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_DateProduction", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_Spedito", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Spedito", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_Data_Spedito", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Data_Spedito", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_Data_Spedito", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Data_Spedito", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_Substition_ID_ReadSerial", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Substition_ID_ReadSerial", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_Substition_ID_ReadSerial", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Substition_ID_ReadSerial", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_LockLevel", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_LockLevel", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_LockLevel", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_LockLevel", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_Device_ID_Code_Start", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Device_ID_Code_Start", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_Device_ID_Code_Start", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Device_ID_Code_Start", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_Golden_Unlock", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Golden_Unlock", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ser_Cfg_Init", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Cfg_Init", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ser_Cfg_Init", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Cfg_Init", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionStringOk;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT Id, Ser_Kit, Ser_ID_Cli, Ser_Device, Ser_Device_ID_Code, Ser_OfficialSerial, Ser_ReadSerial, Ser_SW_Code, Ser_SW_Code_Rev, Ser_SW_Std_Type, Ser_SN_prod, Ser_Commessa, Ser_DateProduction, Ser_Spedito, Ser_Data_Spedito, Ser_Substition_ID_ReadSerial, Ser_Note, Ser_LockLevel, Ser_Device_ID_Code_Start, Ser_Golden_Unlock, Ser_Cfg_Init FROM dbo.GL_SerialNumbers";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT Id, Ser_Commessa, Ser_Data_Spedito, Ser_DateProduction, Ser_Device, Ser_Device_ID_Code, Ser_ID_Cli, Ser_Kit, Ser_LockLevel, Ser_Note, Ser_OfficialSerial, Ser_ReadSerial, Ser_SN_prod, Ser_SW_Code, Ser_SW_Code_Rev, Ser_SW_Std_Type, Ser_Spedito, Ser_Substition_ID_ReadSerial FROM SerialNumbers WHERE (Ser_OfficialSerial = @BarCodeID)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BarCodeID", global::System.Data.SqlDbType.VarChar, 25, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_OfficialSerial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(ds_Programmazione_GL.GL_SerialNumbersDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual ds_Programmazione_GL.GL_SerialNumbersDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            ds_Programmazione_GL.GL_SerialNumbersDataTable dataTable = new ds_Programmazione_GL.GL_SerialNumbersDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy_Spedizioni_OfficialSerial(ds_Programmazione_GL.GL_SerialNumbersDataTable dataTable, string BarCodeID) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((BarCodeID == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(BarCodeID));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual ds_Programmazione_GL.GL_SerialNumbersDataTable GetDataBy_Spedizioni_OfficialSerial(string BarCodeID) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((BarCodeID == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(BarCodeID));
+            }
+            ds_Programmazione_GL.GL_SerialNumbersDataTable dataTable = new ds_Programmazione_GL.GL_SerialNumbersDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(ds_Programmazione_GL.GL_SerialNumbersDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(ds_Programmazione_GL dataSet) {
+            return this.Adapter.Update(dataSet, "GL_SerialNumbers");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(
+                    int Original_Id, 
+                    string Original_Ser_Kit, 
+                    global::System.Nullable<int> Original_Ser_ID_Cli, 
+                    string Original_Ser_Device, 
+                    string Original_Ser_Device_ID_Code, 
+                    string Original_Ser_OfficialSerial, 
+                    string Original_Ser_ReadSerial, 
+                    string Original_Ser_SW_Code, 
+                    string Original_Ser_SW_Code_Rev, 
+                    global::System.Nullable<bool> Original_Ser_SW_Std_Type, 
+                    string Original_Ser_SN_prod, 
+                    string Original_Ser_Commessa, 
+                    global::System.Nullable<global::System.DateTime> Original_Ser_DateProduction, 
+                    bool Original_Ser_Spedito, 
+                    global::System.Nullable<global::System.DateTime> Original_Ser_Data_Spedito, 
+                    string Original_Ser_Substition_ID_ReadSerial, 
+                    global::System.Nullable<int> Original_Ser_LockLevel, 
+                    string Original_Ser_Device_ID_Code_Start, 
+                    bool Original_Ser_Golden_Unlock, 
+                    string Original_Ser_Cfg_Init) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
+            if ((Original_Ser_Kit == null)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Ser_Kit));
+            }
+            if ((Original_Ser_ID_Cli.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_Ser_ID_Cli.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Ser_Device == null)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Ser_Device));
+            }
+            if ((Original_Ser_Device_ID_Code == null)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_Ser_Device_ID_Code));
+            }
+            if ((Original_Ser_OfficialSerial == null)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_Ser_OfficialSerial));
+            }
+            if ((Original_Ser_ReadSerial == null)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_Ser_ReadSerial));
+            }
+            if ((Original_Ser_SW_Code == null)) {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_Ser_SW_Code));
+            }
+            if ((Original_Ser_SW_Code_Rev == null)) {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_Ser_SW_Code_Rev));
+            }
+            if ((Original_Ser_SW_Std_Type.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((bool)(Original_Ser_SW_Std_Type.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Ser_SN_prod == null)) {
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((string)(Original_Ser_SN_prod));
+            }
+            if ((Original_Ser_Commessa == null)) {
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((string)(Original_Ser_Commessa));
+            }
+            if ((Original_Ser_DateProduction.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((System.DateTime)(Original_Ser_DateProduction.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.DeleteCommand.Parameters[25].Value = ((bool)(Original_Ser_Spedito));
+            if ((Original_Ser_Data_Spedito.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[26].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[27].Value = ((System.DateTime)(Original_Ser_Data_Spedito.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[26].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[27].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Ser_Substition_ID_ReadSerial == null)) {
+                this.Adapter.DeleteCommand.Parameters[28].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[29].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[28].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[29].Value = ((string)(Original_Ser_Substition_ID_ReadSerial));
+            }
+            if ((Original_Ser_LockLevel.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[30].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[31].Value = ((int)(Original_Ser_LockLevel.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[30].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[31].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Ser_Device_ID_Code_Start == null)) {
+                this.Adapter.DeleteCommand.Parameters[32].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[33].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[32].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[33].Value = ((string)(Original_Ser_Device_ID_Code_Start));
+            }
+            this.Adapter.DeleteCommand.Parameters[34].Value = ((bool)(Original_Ser_Golden_Unlock));
+            if ((Original_Ser_Cfg_Init == null)) {
+                this.Adapter.DeleteCommand.Parameters[35].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[36].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[35].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[36].Value = ((string)(Original_Ser_Cfg_Init));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(
+                    string Ser_Kit, 
+                    global::System.Nullable<int> Ser_ID_Cli, 
+                    string Ser_Device, 
+                    string Ser_Device_ID_Code, 
+                    string Ser_OfficialSerial, 
+                    string Ser_ReadSerial, 
+                    string Ser_SW_Code, 
+                    string Ser_SW_Code_Rev, 
+                    global::System.Nullable<bool> Ser_SW_Std_Type, 
+                    string Ser_SN_prod, 
+                    string Ser_Commessa, 
+                    global::System.Nullable<global::System.DateTime> Ser_DateProduction, 
+                    bool Ser_Spedito, 
+                    global::System.Nullable<global::System.DateTime> Ser_Data_Spedito, 
+                    string Ser_Substition_ID_ReadSerial, 
+                    string Ser_Note, 
+                    global::System.Nullable<int> Ser_LockLevel, 
+                    string Ser_Device_ID_Code_Start, 
+                    bool Ser_Golden_Unlock, 
+                    string Ser_Cfg_Init) {
+            if ((Ser_Kit == null)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Ser_Kit));
+            }
+            if ((Ser_ID_Cli.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(Ser_ID_Cli.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((Ser_Device == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Ser_Device));
+            }
+            if ((Ser_Device_ID_Code == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Ser_Device_ID_Code));
+            }
+            if ((Ser_OfficialSerial == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Ser_OfficialSerial));
+            }
+            if ((Ser_ReadSerial == null)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Ser_ReadSerial));
+            }
+            if ((Ser_SW_Code == null)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Ser_SW_Code));
+            }
+            if ((Ser_SW_Code_Rev == null)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(Ser_SW_Code_Rev));
+            }
+            if ((Ser_SW_Std_Type.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((bool)(Ser_SW_Std_Type.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((Ser_SN_prod == null)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(Ser_SN_prod));
+            }
+            if ((Ser_Commessa == null)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(Ser_Commessa));
+            }
+            if ((Ser_DateProduction.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((System.DateTime)(Ser_DateProduction.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.InsertCommand.Parameters[12].Value = ((bool)(Ser_Spedito));
+            if ((Ser_Data_Spedito.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[13].Value = ((System.DateTime)(Ser_Data_Spedito.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((Ser_Substition_ID_ReadSerial == null)) {
+                this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[14].Value = ((string)(Ser_Substition_ID_ReadSerial));
+            }
+            if ((Ser_Note == null)) {
+                this.Adapter.InsertCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[15].Value = ((string)(Ser_Note));
+            }
+            if ((Ser_LockLevel.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[16].Value = ((int)(Ser_LockLevel.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            if ((Ser_Device_ID_Code_Start == null)) {
+                this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[17].Value = ((string)(Ser_Device_ID_Code_Start));
+            }
+            this.Adapter.InsertCommand.Parameters[18].Value = ((bool)(Ser_Golden_Unlock));
+            if ((Ser_Cfg_Init == null)) {
+                this.Adapter.InsertCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[19].Value = ((string)(Ser_Cfg_Init));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    string Ser_Kit, 
+                    global::System.Nullable<int> Ser_ID_Cli, 
+                    string Ser_Device, 
+                    string Ser_Device_ID_Code, 
+                    string Ser_OfficialSerial, 
+                    string Ser_ReadSerial, 
+                    string Ser_SW_Code, 
+                    string Ser_SW_Code_Rev, 
+                    global::System.Nullable<bool> Ser_SW_Std_Type, 
+                    string Ser_SN_prod, 
+                    string Ser_Commessa, 
+                    global::System.Nullable<global::System.DateTime> Ser_DateProduction, 
+                    bool Ser_Spedito, 
+                    global::System.Nullable<global::System.DateTime> Ser_Data_Spedito, 
+                    string Ser_Substition_ID_ReadSerial, 
+                    string Ser_Note, 
+                    global::System.Nullable<int> Ser_LockLevel, 
+                    string Ser_Device_ID_Code_Start, 
+                    bool Ser_Golden_Unlock, 
+                    string Ser_Cfg_Init, 
+                    int Original_Id, 
+                    string Original_Ser_Kit, 
+                    global::System.Nullable<int> Original_Ser_ID_Cli, 
+                    string Original_Ser_Device, 
+                    string Original_Ser_Device_ID_Code, 
+                    string Original_Ser_OfficialSerial, 
+                    string Original_Ser_ReadSerial, 
+                    string Original_Ser_SW_Code, 
+                    string Original_Ser_SW_Code_Rev, 
+                    global::System.Nullable<bool> Original_Ser_SW_Std_Type, 
+                    string Original_Ser_SN_prod, 
+                    string Original_Ser_Commessa, 
+                    global::System.Nullable<global::System.DateTime> Original_Ser_DateProduction, 
+                    bool Original_Ser_Spedito, 
+                    global::System.Nullable<global::System.DateTime> Original_Ser_Data_Spedito, 
+                    string Original_Ser_Substition_ID_ReadSerial, 
+                    global::System.Nullable<int> Original_Ser_LockLevel, 
+                    string Original_Ser_Device_ID_Code_Start, 
+                    bool Original_Ser_Golden_Unlock, 
+                    string Original_Ser_Cfg_Init, 
+                    int Id) {
+            if ((Ser_Kit == null)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Ser_Kit));
+            }
+            if ((Ser_ID_Cli.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Ser_ID_Cli.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((Ser_Device == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Ser_Device));
+            }
+            if ((Ser_Device_ID_Code == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Ser_Device_ID_Code));
+            }
+            if ((Ser_OfficialSerial == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Ser_OfficialSerial));
+            }
+            if ((Ser_ReadSerial == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Ser_ReadSerial));
+            }
+            if ((Ser_SW_Code == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Ser_SW_Code));
+            }
+            if ((Ser_SW_Code_Rev == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Ser_SW_Code_Rev));
+            }
+            if ((Ser_SW_Std_Type.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((bool)(Ser_SW_Std_Type.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((Ser_SN_prod == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Ser_SN_prod));
+            }
+            if ((Ser_Commessa == null)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Ser_Commessa));
+            }
+            if ((Ser_DateProduction.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((System.DateTime)(Ser_DateProduction.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((bool)(Ser_Spedito));
+            if ((Ser_Data_Spedito.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((System.DateTime)(Ser_Data_Spedito.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((Ser_Substition_ID_ReadSerial == null)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Ser_Substition_ID_ReadSerial));
+            }
+            if ((Ser_Note == null)) {
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Ser_Note));
+            }
+            if ((Ser_LockLevel.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Ser_LockLevel.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            if ((Ser_Device_ID_Code_Start == null)) {
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Ser_Device_ID_Code_Start));
+            }
+            this.Adapter.UpdateCommand.Parameters[18].Value = ((bool)(Ser_Golden_Unlock));
+            if ((Ser_Cfg_Init == null)) {
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Ser_Cfg_Init));
+            }
+            this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_Id));
+            if ((Original_Ser_Kit == null)) {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_Ser_Kit));
+            }
+            if ((Original_Ser_ID_Cli.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(Original_Ser_ID_Cli.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Ser_Device == null)) {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_Ser_Device));
+            }
+            if ((Original_Ser_Device_ID_Code == null)) {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Original_Ser_Device_ID_Code));
+            }
+            if ((Original_Ser_OfficialSerial == null)) {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((string)(Original_Ser_OfficialSerial));
+            }
+            if ((Original_Ser_ReadSerial == null)) {
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((string)(Original_Ser_ReadSerial));
+            }
+            if ((Original_Ser_SW_Code == null)) {
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((string)(Original_Ser_SW_Code));
+            }
+            if ((Original_Ser_SW_Code_Rev == null)) {
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((string)(Original_Ser_SW_Code_Rev));
+            }
+            if ((Original_Ser_SW_Std_Type.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((bool)(Original_Ser_SW_Std_Type.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Ser_SN_prod == null)) {
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[40].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((string)(Original_Ser_SN_prod));
+            }
+            if ((Original_Ser_Commessa == null)) {
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[42].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((string)(Original_Ser_Commessa));
+            }
+            if ((Original_Ser_DateProduction.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((System.DateTime)(Original_Ser_DateProduction.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[44].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[45].Value = ((bool)(Original_Ser_Spedito));
+            if ((Original_Ser_Data_Spedito.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((System.DateTime)(Original_Ser_Data_Spedito.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[47].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Ser_Substition_ID_ReadSerial == null)) {
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[49].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((string)(Original_Ser_Substition_ID_ReadSerial));
+            }
+            if ((Original_Ser_LockLevel.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[50].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((int)(Original_Ser_LockLevel.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[50].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[51].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Ser_Device_ID_Code_Start == null)) {
+                this.Adapter.UpdateCommand.Parameters[52].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[53].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[52].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((string)(Original_Ser_Device_ID_Code_Start));
+            }
+            this.Adapter.UpdateCommand.Parameters[54].Value = ((bool)(Original_Ser_Golden_Unlock));
+            if ((Original_Ser_Cfg_Init == null)) {
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[56].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[56].Value = ((string)(Original_Ser_Cfg_Init));
+            }
+            this.Adapter.UpdateCommand.Parameters[57].Value = ((int)(Id));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    string Ser_Kit, 
+                    global::System.Nullable<int> Ser_ID_Cli, 
+                    string Ser_Device, 
+                    string Ser_Device_ID_Code, 
+                    string Ser_OfficialSerial, 
+                    string Ser_ReadSerial, 
+                    string Ser_SW_Code, 
+                    string Ser_SW_Code_Rev, 
+                    global::System.Nullable<bool> Ser_SW_Std_Type, 
+                    string Ser_SN_prod, 
+                    string Ser_Commessa, 
+                    global::System.Nullable<global::System.DateTime> Ser_DateProduction, 
+                    bool Ser_Spedito, 
+                    global::System.Nullable<global::System.DateTime> Ser_Data_Spedito, 
+                    string Ser_Substition_ID_ReadSerial, 
+                    string Ser_Note, 
+                    global::System.Nullable<int> Ser_LockLevel, 
+                    string Ser_Device_ID_Code_Start, 
+                    bool Ser_Golden_Unlock, 
+                    string Ser_Cfg_Init, 
+                    int Original_Id, 
+                    string Original_Ser_Kit, 
+                    global::System.Nullable<int> Original_Ser_ID_Cli, 
+                    string Original_Ser_Device, 
+                    string Original_Ser_Device_ID_Code, 
+                    string Original_Ser_OfficialSerial, 
+                    string Original_Ser_ReadSerial, 
+                    string Original_Ser_SW_Code, 
+                    string Original_Ser_SW_Code_Rev, 
+                    global::System.Nullable<bool> Original_Ser_SW_Std_Type, 
+                    string Original_Ser_SN_prod, 
+                    string Original_Ser_Commessa, 
+                    global::System.Nullable<global::System.DateTime> Original_Ser_DateProduction, 
+                    bool Original_Ser_Spedito, 
+                    global::System.Nullable<global::System.DateTime> Original_Ser_Data_Spedito, 
+                    string Original_Ser_Substition_ID_ReadSerial, 
+                    global::System.Nullable<int> Original_Ser_LockLevel, 
+                    string Original_Ser_Device_ID_Code_Start, 
+                    bool Original_Ser_Golden_Unlock, 
+                    string Original_Ser_Cfg_Init) {
+            return this.Update(Ser_Kit, Ser_ID_Cli, Ser_Device, Ser_Device_ID_Code, Ser_OfficialSerial, Ser_ReadSerial, Ser_SW_Code, Ser_SW_Code_Rev, Ser_SW_Std_Type, Ser_SN_prod, Ser_Commessa, Ser_DateProduction, Ser_Spedito, Ser_Data_Spedito, Ser_Substition_ID_ReadSerial, Ser_Note, Ser_LockLevel, Ser_Device_ID_Code_Start, Ser_Golden_Unlock, Ser_Cfg_Init, Original_Id, Original_Ser_Kit, Original_Ser_ID_Cli, Original_Ser_Device, Original_Ser_Device_ID_Code, Original_Ser_OfficialSerial, Original_Ser_ReadSerial, Original_Ser_SW_Code, Original_Ser_SW_Code_Rev, Original_Ser_SW_Std_Type, Original_Ser_SN_prod, Original_Ser_Commessa, Original_Ser_DateProduction, Original_Ser_Spedito, Original_Ser_Data_Spedito, Original_Ser_Substition_ID_ReadSerial, Original_Ser_LockLevel, Original_Ser_Device_ID_Code_Start, Original_Ser_Golden_Unlock, Original_Ser_Cfg_Init, Original_Id);
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class GL_FirmwareTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public GL_FirmwareTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "GL_Firmware";
+            tableMapping.ColumnMappings.Add("Id", "Id");
+            tableMapping.ColumnMappings.Add("SW_Code", "SW_Code");
+            tableMapping.ColumnMappings.Add("SW_TipoDevice", "SW_TipoDevice");
+            tableMapping.ColumnMappings.Add("SW_Descrizione", "SW_Descrizione");
+            tableMapping.ColumnMappings.Add("SW_Descrizione_EN", "SW_Descrizione_EN");
+            tableMapping.ColumnMappings.Add("SW_Versione", "SW_Versione");
+            tableMapping.ColumnMappings.Add("SW_Revisione", "SW_Revisione");
+            tableMapping.ColumnMappings.Add("SW_Standard", "SW_Standard");
+            tableMapping.ColumnMappings.Add("SW_FamProd", "SW_FamProd");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_RF", "SW_P_Opt_RF");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_Use_Oled", "SW_P_Opt_Use_Oled");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_Use_EmButt", "SW_P_Opt_Use_EmButt");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_Use_Backlight", "SW_P_Opt_Use_Backlight");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_ShiftPage", "SW_P_Opt_ShiftPage");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_Use_Accel", "SW_P_Opt_Use_Accel");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_Use_SP", "SW_P_Opt_Use_SP");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_Use_Buzzer", "SW_P_Opt_Use_Buzzer");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_Use_Vibracall", "SW_P_Opt_Use_Vibracall");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_Use_LedTorch", "SW_P_Opt_Use_LedTorch");
+            tableMapping.ColumnMappings.Add("SW_P_PLD", "SW_P_PLD");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_MaxPairDevices", "SW_P_Opt_MaxPairDevices");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_RF", "SW_R_Opt_RF");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Plug_Exp", "SW_R_Opt_Plug_Exp");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Plug_Ple", "SW_R_Opt_Plug_Ple");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Em_Keyb", "SW_R_Opt_Em_Keyb");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Can", "SW_R_Opt_Can");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Prop_Out", "SW_R_Opt_Prop_Out");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_TimeOut", "SW_R_Opt_TimeOut");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Cont_Keys", "SW_R_Opt_Cont_Keys");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_LockSameRow", "SW_R_Opt_LockSameRow");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Use_SP", "SW_R_Opt_Use_SP");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_MaxPairDevices", "SW_R_Opt_MaxPairDevices");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_ShiftPage", "SW_R_Opt_ShiftPage");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Output_No", "SW_R_Opt_Output_No");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Dig_Input_No", "SW_R_Opt_Dig_Input_No");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Ana_Input_No", "SW_R_Opt_Ana_Input_No");
+            tableMapping.ColumnMappings.Add("SW_Revisioni", "SW_Revisioni");
+            tableMapping.ColumnMappings.Add("SW_Funzionamento", "SW_Funzionamento");
+            tableMapping.ColumnMappings.Add("SW_Config", "SW_Config");
+            tableMapping.ColumnMappings.Add("SW_Obsolete_ver", "SW_Obsolete_ver");
+            tableMapping.ColumnMappings.Add("SW_Obsolete_ver_from_date", "SW_Obsolete_ver_from_date");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Use_Radius", "SW_R_Opt_Use_Radius");
+            tableMapping.ColumnMappings.Add("SW_CustomPIC", "SW_CustomPIC");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_Use_Radius", "SW_P_Opt_Use_Radius");
+            tableMapping.ColumnMappings.Add("SW_P_Lock", "SW_P_Lock");
+            tableMapping.ColumnMappings.Add("SW_R_Lock", "SW_R_Lock");
+            tableMapping.ColumnMappings.Add("SW_IsPublic", "SW_IsPublic");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[GL_Firmware] ([SW_Code], [SW_TipoDevice], [SW_Descrizione], [S" +
+                "W_Descrizione_EN], [SW_Versione], [SW_Revisione], [SW_Standard], [SW_FamProd], [" +
+                "SW_P_Opt_RF], [SW_P_Opt_Use_Oled], [SW_P_Opt_Use_EmButt], [SW_P_Opt_Use_Backligh" +
+                "t], [SW_P_Opt_ShiftPage], [SW_P_Opt_Use_Accel], [SW_P_Opt_Use_SP], [SW_P_Opt_Use" +
+                "_Buzzer], [SW_P_Opt_Use_Vibracall], [SW_P_Opt_Use_LedTorch], [SW_P_PLD], [SW_P_O" +
+                "pt_MaxPairDevices], [SW_R_Opt_RF], [SW_R_Opt_Plug_Exp], [SW_R_Opt_Plug_Ple], [SW" +
+                "_R_Opt_Em_Keyb], [SW_R_Opt_Can], [SW_R_Opt_Prop_Out], [SW_R_Opt_TimeOut], [SW_R_" +
+                "Opt_Cont_Keys], [SW_R_Opt_LockSameRow], [SW_R_Opt_Use_SP], [SW_R_Opt_MaxPairDevi" +
+                "ces], [SW_R_Opt_ShiftPage], [SW_R_Opt_Output_No], [SW_R_Opt_Dig_Input_No], [SW_R" +
+                "_Opt_Ana_Input_No], [SW_Revisioni], [SW_Funzionamento], [SW_Config], [SW_Obsolet" +
+                "e_ver], [SW_Obsolete_ver_from_date], [SW_R_Opt_Use_Radius], [SW_CustomPIC], [SW_" +
+                "P_Opt_Use_Radius], [SW_P_Lock], [SW_R_Lock], [SW_IsPublic]) VALUES (@SW_Code, @S" +
+                "W_TipoDevice, @SW_Descrizione, @SW_Descrizione_EN, @SW_Versione, @SW_Revisione, " +
+                "@SW_Standard, @SW_FamProd, @SW_P_Opt_RF, @SW_P_Opt_Use_Oled, @SW_P_Opt_Use_EmBut" +
+                "t, @SW_P_Opt_Use_Backlight, @SW_P_Opt_ShiftPage, @SW_P_Opt_Use_Accel, @SW_P_Opt_" +
+                "Use_SP, @SW_P_Opt_Use_Buzzer, @SW_P_Opt_Use_Vibracall, @SW_P_Opt_Use_LedTorch, @" +
+                "SW_P_PLD, @SW_P_Opt_MaxPairDevices, @SW_R_Opt_RF, @SW_R_Opt_Plug_Exp, @SW_R_Opt_" +
+                "Plug_Ple, @SW_R_Opt_Em_Keyb, @SW_R_Opt_Can, @SW_R_Opt_Prop_Out, @SW_R_Opt_TimeOu" +
+                "t, @SW_R_Opt_Cont_Keys, @SW_R_Opt_LockSameRow, @SW_R_Opt_Use_SP, @SW_R_Opt_MaxPa" +
+                "irDevices, @SW_R_Opt_ShiftPage, @SW_R_Opt_Output_No, @SW_R_Opt_Dig_Input_No, @SW" +
+                "_R_Opt_Ana_Input_No, @SW_Revisioni, @SW_Funzionamento, @SW_Config, @SW_Obsolete_" +
+                "ver, @SW_Obsolete_ver_from_date, @SW_R_Opt_Use_Radius, @SW_CustomPIC, @SW_P_Opt_" +
+                "Use_Radius, @SW_P_Lock, @SW_R_Lock, @SW_IsPublic)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_TipoDevice", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_TipoDevice", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Descrizione", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Descrizione", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Descrizione_EN", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Descrizione_EN", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Versione", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Versione", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Revisione", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Revisione", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Standard", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Standard", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_FamProd", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_FamProd", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_RF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_RF", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_Use_Oled", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_Oled", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_Use_EmButt", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_EmButt", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_Use_Backlight", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_Backlight", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_ShiftPage", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_ShiftPage", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_Use_Accel", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_Accel", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_Use_SP", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_SP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_Use_Buzzer", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_Buzzer", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_Use_Vibracall", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_Vibracall", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_Use_LedTorch", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_LedTorch", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_PLD", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_PLD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_MaxPairDevices", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_MaxPairDevices", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_RF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_RF", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Plug_Exp", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Plug_Exp", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Plug_Ple", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Plug_Ple", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Em_Keyb", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Em_Keyb", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Can", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Can", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Prop_Out", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Prop_Out", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_TimeOut", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_TimeOut", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Cont_Keys", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Cont_Keys", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_LockSameRow", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_LockSameRow", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Use_SP", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Use_SP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_MaxPairDevices", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_MaxPairDevices", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_ShiftPage", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_ShiftPage", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Output_No", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Output_No", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Dig_Input_No", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Dig_Input_No", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Ana_Input_No", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Ana_Input_No", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Revisioni", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Revisioni", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Funzionamento", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Funzionamento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Config", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Config", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Obsolete_ver", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Obsolete_ver", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Obsolete_ver_from_date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Obsolete_ver_from_date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Use_Radius", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Use_Radius", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_CustomPIC", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_CustomPIC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_Use_Radius", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_Radius", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Lock", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Lock", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Lock", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Lock", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_IsPublic", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_IsPublic", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionStringOk;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT Id, SW_Code, SW_TipoDevice, SW_Descrizione, SW_Descrizione_EN, SW_Versione, SW_Revisione, SW_Standard, SW_FamProd, SW_P_Opt_RF, SW_P_Opt_Use_Oled, SW_P_Opt_Use_EmButt, SW_P_Opt_Use_Backlight, SW_P_Opt_ShiftPage, SW_P_Opt_Use_Accel, SW_P_Opt_Use_SP, SW_P_Opt_Use_Buzzer, SW_P_Opt_Use_Vibracall, SW_P_Opt_Use_LedTorch, SW_P_PLD, SW_P_Opt_MaxPairDevices, SW_R_Opt_RF, SW_R_Opt_Plug_Exp, SW_R_Opt_Plug_Ple, SW_R_Opt_Em_Keyb, SW_R_Opt_Can, SW_R_Opt_Prop_Out, SW_R_Opt_TimeOut, SW_R_Opt_Cont_Keys, SW_R_Opt_LockSameRow, SW_R_Opt_Use_SP, SW_R_Opt_MaxPairDevices, SW_R_Opt_ShiftPage, SW_R_Opt_Output_No, SW_R_Opt_Dig_Input_No, SW_R_Opt_Ana_Input_No, SW_Revisioni, SW_Funzionamento, SW_Config, SW_Obsolete_ver, SW_Obsolete_ver_from_date, SW_R_Opt_Use_Radius, SW_CustomPIC, SW_P_Opt_Use_Radius, SW_P_Lock, SW_R_Lock, SW_IsPublic FROM dbo.GL_Firmware";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT        SW_CustomPIC\r\nFROM            Firmware\r\nWHERE        (SW_Code = @SW" +
+                "_Code) and (SW_Obsolete_ver =0)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Code", global::System.Data.SqlDbType.VarChar, 25, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(ds_Programmazione_GL.GL_FirmwareDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual ds_Programmazione_GL.GL_FirmwareDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            ds_Programmazione_GL.GL_FirmwareDataTable dataTable = new ds_Programmazione_GL.GL_FirmwareDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(ds_Programmazione_GL.GL_FirmwareDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(ds_Programmazione_GL dataSet) {
+            return this.Adapter.Update(dataSet, "GL_Firmware");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(
+                    string SW_Code, 
+                    string SW_TipoDevice, 
+                    string SW_Descrizione, 
+                    string SW_Descrizione_EN, 
+                    string SW_Versione, 
+                    string SW_Revisione, 
+                    bool SW_Standard, 
+                    string SW_FamProd, 
+                    string SW_P_Opt_RF, 
+                    bool SW_P_Opt_Use_Oled, 
+                    bool SW_P_Opt_Use_EmButt, 
+                    bool SW_P_Opt_Use_Backlight, 
+                    bool SW_P_Opt_ShiftPage, 
+                    bool SW_P_Opt_Use_Accel, 
+                    bool SW_P_Opt_Use_SP, 
+                    bool SW_P_Opt_Use_Buzzer, 
+                    bool SW_P_Opt_Use_Vibracall, 
+                    bool SW_P_Opt_Use_LedTorch, 
+                    bool SW_P_PLD, 
+                    global::System.Nullable<int> SW_P_Opt_MaxPairDevices, 
+                    string SW_R_Opt_RF, 
+                    bool SW_R_Opt_Plug_Exp, 
+                    bool SW_R_Opt_Plug_Ple, 
+                    bool SW_R_Opt_Em_Keyb, 
+                    bool SW_R_Opt_Can, 
+                    bool SW_R_Opt_Prop_Out, 
+                    string SW_R_Opt_TimeOut, 
+                    global::System.Nullable<int> SW_R_Opt_Cont_Keys, 
+                    bool SW_R_Opt_LockSameRow, 
+                    bool SW_R_Opt_Use_SP, 
+                    global::System.Nullable<int> SW_R_Opt_MaxPairDevices, 
+                    bool SW_R_Opt_ShiftPage, 
+                    global::System.Nullable<int> SW_R_Opt_Output_No, 
+                    global::System.Nullable<int> SW_R_Opt_Dig_Input_No, 
+                    global::System.Nullable<int> SW_R_Opt_Ana_Input_No, 
+                    string SW_Revisioni, 
+                    string SW_Funzionamento, 
+                    string SW_Config, 
+                    bool SW_Obsolete_ver, 
+                    global::System.Nullable<global::System.DateTime> SW_Obsolete_ver_from_date, 
+                    bool SW_R_Opt_Use_Radius, 
+                    global::System.Nullable<bool> SW_CustomPIC, 
+                    global::System.Nullable<bool> SW_P_Opt_Use_Radius, 
+                    global::System.Nullable<int> SW_P_Lock, 
+                    global::System.Nullable<int> SW_R_Lock, 
+                    global::System.Nullable<bool> SW_IsPublic) {
+            if ((SW_Code == null)) {
+                throw new global::System.ArgumentNullException("SW_Code");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(SW_Code));
+            }
+            if ((SW_TipoDevice == null)) {
+                throw new global::System.ArgumentNullException("SW_TipoDevice");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(SW_TipoDevice));
+            }
+            if ((SW_Descrizione == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(SW_Descrizione));
+            }
+            if ((SW_Descrizione_EN == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(SW_Descrizione_EN));
+            }
+            if ((SW_Versione == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(SW_Versione));
+            }
+            if ((SW_Revisione == null)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(SW_Revisione));
+            }
+            this.Adapter.InsertCommand.Parameters[6].Value = ((bool)(SW_Standard));
+            if ((SW_FamProd == null)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(SW_FamProd));
+            }
+            if ((SW_P_Opt_RF == null)) {
+                throw new global::System.ArgumentNullException("SW_P_Opt_RF");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(SW_P_Opt_RF));
+            }
+            this.Adapter.InsertCommand.Parameters[9].Value = ((bool)(SW_P_Opt_Use_Oled));
+            this.Adapter.InsertCommand.Parameters[10].Value = ((bool)(SW_P_Opt_Use_EmButt));
+            this.Adapter.InsertCommand.Parameters[11].Value = ((bool)(SW_P_Opt_Use_Backlight));
+            this.Adapter.InsertCommand.Parameters[12].Value = ((bool)(SW_P_Opt_ShiftPage));
+            this.Adapter.InsertCommand.Parameters[13].Value = ((bool)(SW_P_Opt_Use_Accel));
+            this.Adapter.InsertCommand.Parameters[14].Value = ((bool)(SW_P_Opt_Use_SP));
+            this.Adapter.InsertCommand.Parameters[15].Value = ((bool)(SW_P_Opt_Use_Buzzer));
+            this.Adapter.InsertCommand.Parameters[16].Value = ((bool)(SW_P_Opt_Use_Vibracall));
+            this.Adapter.InsertCommand.Parameters[17].Value = ((bool)(SW_P_Opt_Use_LedTorch));
+            this.Adapter.InsertCommand.Parameters[18].Value = ((bool)(SW_P_PLD));
+            if ((SW_P_Opt_MaxPairDevices.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[19].Value = ((int)(SW_P_Opt_MaxPairDevices.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            if ((SW_R_Opt_RF == null)) {
+                throw new global::System.ArgumentNullException("SW_R_Opt_RF");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[20].Value = ((string)(SW_R_Opt_RF));
+            }
+            this.Adapter.InsertCommand.Parameters[21].Value = ((bool)(SW_R_Opt_Plug_Exp));
+            this.Adapter.InsertCommand.Parameters[22].Value = ((bool)(SW_R_Opt_Plug_Ple));
+            this.Adapter.InsertCommand.Parameters[23].Value = ((bool)(SW_R_Opt_Em_Keyb));
+            this.Adapter.InsertCommand.Parameters[24].Value = ((bool)(SW_R_Opt_Can));
+            this.Adapter.InsertCommand.Parameters[25].Value = ((bool)(SW_R_Opt_Prop_Out));
+            if ((SW_R_Opt_TimeOut == null)) {
+                throw new global::System.ArgumentNullException("SW_R_Opt_TimeOut");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[26].Value = ((string)(SW_R_Opt_TimeOut));
+            }
+            if ((SW_R_Opt_Cont_Keys.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[27].Value = ((int)(SW_R_Opt_Cont_Keys.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[27].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.InsertCommand.Parameters[28].Value = ((bool)(SW_R_Opt_LockSameRow));
+            this.Adapter.InsertCommand.Parameters[29].Value = ((bool)(SW_R_Opt_Use_SP));
+            if ((SW_R_Opt_MaxPairDevices.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[30].Value = ((int)(SW_R_Opt_MaxPairDevices.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[30].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.InsertCommand.Parameters[31].Value = ((bool)(SW_R_Opt_ShiftPage));
+            if ((SW_R_Opt_Output_No.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[32].Value = ((int)(SW_R_Opt_Output_No.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            if ((SW_R_Opt_Dig_Input_No.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[33].Value = ((int)(SW_R_Opt_Dig_Input_No.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[33].Value = global::System.DBNull.Value;
+            }
+            if ((SW_R_Opt_Ana_Input_No.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[34].Value = ((int)(SW_R_Opt_Ana_Input_No.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[34].Value = global::System.DBNull.Value;
+            }
+            if ((SW_Revisioni == null)) {
+                this.Adapter.InsertCommand.Parameters[35].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[35].Value = ((string)(SW_Revisioni));
+            }
+            if ((SW_Funzionamento == null)) {
+                this.Adapter.InsertCommand.Parameters[36].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[36].Value = ((string)(SW_Funzionamento));
+            }
+            if ((SW_Config == null)) {
+                this.Adapter.InsertCommand.Parameters[37].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[37].Value = ((string)(SW_Config));
+            }
+            this.Adapter.InsertCommand.Parameters[38].Value = ((bool)(SW_Obsolete_ver));
+            if ((SW_Obsolete_ver_from_date.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[39].Value = ((System.DateTime)(SW_Obsolete_ver_from_date.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[39].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.InsertCommand.Parameters[40].Value = ((bool)(SW_R_Opt_Use_Radius));
+            if ((SW_CustomPIC.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[41].Value = ((bool)(SW_CustomPIC.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[41].Value = global::System.DBNull.Value;
+            }
+            if ((SW_P_Opt_Use_Radius.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[42].Value = ((bool)(SW_P_Opt_Use_Radius.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[42].Value = global::System.DBNull.Value;
+            }
+            if ((SW_P_Lock.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[43].Value = ((int)(SW_P_Lock.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[43].Value = global::System.DBNull.Value;
+            }
+            if ((SW_R_Lock.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[44].Value = ((int)(SW_R_Lock.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[44].Value = global::System.DBNull.Value;
+            }
+            if ((SW_IsPublic.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[45].Value = ((bool)(SW_IsPublic.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[45].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual global::System.Nullable<bool> IsCustomPic(string SW_Code) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            if ((SW_Code == null)) {
+                throw new global::System.ArgumentNullException("SW_Code");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(SW_Code));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return new global::System.Nullable<bool>();
+            }
+            else {
+                return new global::System.Nullable<bool>(((bool)(returnValue)));
+            }
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class dt_Firmware_lookupCommesseGLTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public dt_Firmware_lookupCommesseGLTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "dt_Firmware_lookupCommesseGL";
+            tableMapping.ColumnMappings.Add("Id", "Id");
+            tableMapping.ColumnMappings.Add("SW_Code", "SW_Code");
+            tableMapping.ColumnMappings.Add("SW_TipoDevice", "SW_TipoDevice");
+            tableMapping.ColumnMappings.Add("SW_Descrizione", "SW_Descrizione");
+            tableMapping.ColumnMappings.Add("SW_Descrizione_EN", "SW_Descrizione_EN");
+            tableMapping.ColumnMappings.Add("SW_Versione", "SW_Versione");
+            tableMapping.ColumnMappings.Add("SW_Revisione", "SW_Revisione");
+            tableMapping.ColumnMappings.Add("SW_Standard", "SW_Standard");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_RF", "SW_P_Opt_RF");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_Use_Oled", "SW_P_Opt_Use_Oled");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_Use_EmButt", "SW_P_Opt_Use_EmButt");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_Use_Backlight", "SW_P_Opt_Use_Backlight");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_ShiftPage", "SW_P_Opt_ShiftPage");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_Use_Accel", "SW_P_Opt_Use_Accel");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_Use_SP", "SW_P_Opt_Use_SP");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_Use_Buzzer", "SW_P_Opt_Use_Buzzer");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_Use_Vibracall", "SW_P_Opt_Use_Vibracall");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_Use_LedTorch", "SW_P_Opt_Use_LedTorch");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_MaxPairDevices", "SW_P_Opt_MaxPairDevices");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_RF", "SW_R_Opt_RF");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Plug_Exp", "SW_R_Opt_Plug_Exp");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Plug_Ple", "SW_R_Opt_Plug_Ple");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Em_Keyb", "SW_R_Opt_Em_Keyb");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Can", "SW_R_Opt_Can");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Prop_Out", "SW_R_Opt_Prop_Out");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_TimeOut", "SW_R_Opt_TimeOut");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Cont_Keys", "SW_R_Opt_Cont_Keys");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_LockSameRow", "SW_R_Opt_LockSameRow");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Use_SP", "SW_R_Opt_Use_SP");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_MaxPairDevices", "SW_R_Opt_MaxPairDevices");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_ShiftPage", "SW_R_Opt_ShiftPage");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Output_No", "SW_R_Opt_Output_No");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Dig_Input_No", "SW_R_Opt_Dig_Input_No");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Ana_Input_No", "SW_R_Opt_Ana_Input_No");
+            tableMapping.ColumnMappings.Add("SW_Revisioni", "SW_Revisioni");
+            tableMapping.ColumnMappings.Add("SW_Funzionamento", "SW_Funzionamento");
+            tableMapping.ColumnMappings.Add("SW_Config", "SW_Config");
+            tableMapping.ColumnMappings.Add("SW_Obsolete_ver", "SW_Obsolete_ver");
+            tableMapping.ColumnMappings.Add("SW_Obsolete_ver_from_date", "SW_Obsolete_ver_from_date");
+            tableMapping.ColumnMappings.Add("SW_P_Lock", "SW_P_Lock");
+            tableMapping.ColumnMappings.Add("SW_R_Lock", "SW_R_Lock");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionStringOk;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT        Id, SW_Code, SW_TipoDevice, SW_Descrizione, SW_Descrizione_EN, SW_Versione, SW_Revisione, SW_Standard, SW_P_Opt_RF, SW_P_Opt_Use_Oled, SW_P_Opt_Use_EmButt, SW_P_Opt_Use_Backlight, 
+                         SW_P_Opt_ShiftPage, SW_P_Opt_Use_Accel, SW_P_Opt_Use_SP, SW_P_Opt_Use_Buzzer, SW_P_Opt_Use_Vibracall, SW_P_Opt_Use_LedTorch, SW_P_Opt_MaxPairDevices, SW_R_Opt_RF, SW_R_Opt_Plug_Exp, 
+                         SW_R_Opt_Plug_Ple, SW_R_Opt_Em_Keyb, SW_R_Opt_Can, SW_R_Opt_Prop_Out, SW_R_Opt_TimeOut, SW_R_Opt_Cont_Keys, SW_R_Opt_LockSameRow, SW_R_Opt_Use_SP, SW_R_Opt_MaxPairDevices, 
+                         SW_R_Opt_ShiftPage, SW_R_Opt_Output_No, SW_R_Opt_Dig_Input_No, SW_R_Opt_Ana_Input_No, SW_Revisioni, SW_Funzionamento, SW_Config, SW_Obsolete_ver, SW_Obsolete_ver_from_date, SW_P_Lock, 
+                         SW_R_Lock
+FROM            GL_Firmware";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT Id, SW_Code, SW_Config, SW_Descrizione, SW_Descrizione_EN, SW_Funzionamento, SW_Obsolete_ver, SW_Obsolete_ver_from_date, SW_P_Lock, SW_P_Opt_MaxPairDevices, SW_P_Opt_RF, SW_P_Opt_ShiftPage, SW_P_Opt_Use_Accel, SW_P_Opt_Use_Backlight, SW_P_Opt_Use_Buzzer, SW_P_Opt_Use_EmButt, SW_P_Opt_Use_LedTorch, SW_P_Opt_Use_Oled, SW_P_Opt_Use_SP, SW_P_Opt_Use_Vibracall, SW_R_Lock, SW_R_Opt_Ana_Input_No, SW_R_Opt_Can, SW_R_Opt_Cont_Keys, SW_R_Opt_Dig_Input_No, SW_R_Opt_Em_Keyb, SW_R_Opt_LockSameRow, SW_R_Opt_MaxPairDevices, SW_R_Opt_Output_No, SW_R_Opt_Plug_Exp, SW_R_Opt_Plug_Ple, SW_R_Opt_Prop_Out, SW_R_Opt_RF, SW_R_Opt_ShiftPage, SW_R_Opt_TimeOut, SW_R_Opt_Use_SP, SW_Revisione, SW_Revisioni, SW_Standard, SW_TipoDevice, SW_Versione FROM GL_Firmware WHERE (SW_Code = @SW_Code) AND (SW_Obsolete_ver = 0)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Code", global::System.Data.SqlDbType.VarChar, 25, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(ds_Programmazione_GL.dt_Firmware_lookupCommesseGLDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual ds_Programmazione_GL.dt_Firmware_lookupCommesseGLDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            ds_Programmazione_GL.dt_Firmware_lookupCommesseGLDataTable dataTable = new ds_Programmazione_GL.dt_Firmware_lookupCommesseGLDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy(ds_Programmazione_GL.dt_Firmware_lookupCommesseGLDataTable dataTable, string SW_Code) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((SW_Code == null)) {
+                throw new global::System.ArgumentNullException("SW_Code");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(SW_Code));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual ds_Programmazione_GL.dt_Firmware_lookupCommesseGLDataTable GetDataBy(string SW_Code) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((SW_Code == null)) {
+                throw new global::System.ArgumentNullException("SW_Code");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(SW_Code));
+            }
+            ds_Programmazione_GL.dt_Firmware_lookupCommesseGLDataTable dataTable = new ds_Programmazione_GL.dt_Firmware_lookupCommesseGLDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class SerialNumbersGL_ObsoleteTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public SerialNumbersGL_ObsoleteTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "SerialNumbersGL_Obsolete";
+            tableMapping.ColumnMappings.Add("Ser_Kit", "Ser_Kit");
+            tableMapping.ColumnMappings.Add("Ser_ID_Cli", "Ser_ID_Cli");
+            tableMapping.ColumnMappings.Add("Ser_Device", "Ser_Device");
+            tableMapping.ColumnMappings.Add("Ser_Device_ID_Code", "Ser_Device_ID_Code");
+            tableMapping.ColumnMappings.Add("Ser_OfficialSerial", "Ser_OfficialSerial");
+            tableMapping.ColumnMappings.Add("Ser_ReadSerial", "Ser_ReadSerial");
+            tableMapping.ColumnMappings.Add("Ser_SW_Code", "Ser_SW_Code");
+            tableMapping.ColumnMappings.Add("Ser_SW_Code_Rev", "Ser_SW_Code_Rev");
+            tableMapping.ColumnMappings.Add("Ser_SW_Std_Type", "Ser_SW_Std_Type");
+            tableMapping.ColumnMappings.Add("Ser_SN_prod", "Ser_SN_prod");
+            tableMapping.ColumnMappings.Add("Ser_Commessa", "Ser_Commessa");
+            tableMapping.ColumnMappings.Add("Ser_DateProduction", "Ser_DateProduction");
+            tableMapping.ColumnMappings.Add("Ser_Spedito", "Ser_Spedito");
+            tableMapping.ColumnMappings.Add("Ser_Data_Spedito", "Ser_Data_Spedito");
+            tableMapping.ColumnMappings.Add("Ser_Substition_ID_ReadSerial", "Ser_Substition_ID_ReadSerial");
+            tableMapping.ColumnMappings.Add("Ser_Note", "Ser_Note");
+            tableMapping.ColumnMappings.Add("Ser_ObsoleteFromDate", "Ser_ObsoleteFromDate");
+            tableMapping.ColumnMappings.Add("Ser_LockLevel", "Ser_LockLevel");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [SerialNumbers_GL_Obsolete] ([Ser_Kit], [Ser_ID_Cli], [Ser_Device], [Ser_Device_ID_Code], [Ser_OfficialSerial], [Ser_ReadSerial], [Ser_SW_Code], [Ser_SW_Code_Rev], [Ser_SW_Std_Type], [Ser_SN_prod], [Ser_Commessa], [Ser_DateProduction], [Ser_Spedito], [Ser_Data_Spedito], [Ser_Substition_ID_ReadSerial], [Ser_Note], [Ser_ObsoleteFromDate], [Ser_LockLevel]) VALUES (@Ser_Kit, @Ser_ID_Cli, @Ser_Device, @Ser_Device_ID_Code, @Ser_OfficialSerial, @Ser_ReadSerial, @Ser_SW_Code, @Ser_SW_Code_Rev, @Ser_SW_Std_Type, @Ser_SN_prod, @Ser_Commessa, @Ser_DateProduction, @Ser_Spedito, @Ser_Data_Spedito, @Ser_Substition_ID_ReadSerial, @Ser_Note, @Ser_ObsoleteFromDate, @Ser_LockLevel)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Kit", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Kit", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_ID_Cli", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_ID_Cli", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Device", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Device", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Device_ID_Code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Device_ID_Code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_OfficialSerial", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_OfficialSerial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_ReadSerial", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_ReadSerial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_SW_Code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_SW_Code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_SW_Code_Rev", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_SW_Code_Rev", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_SW_Std_Type", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_SW_Std_Type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_SN_prod", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_SN_prod", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Commessa", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Commessa", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_DateProduction", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_DateProduction", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Spedito", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Spedito", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Data_Spedito", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Data_Spedito", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Substition_ID_ReadSerial", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Substition_ID_ReadSerial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_Note", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_Note", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_ObsoleteFromDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_ObsoleteFromDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ser_LockLevel", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ser_LockLevel", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionStringOk;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT        Ser_Kit, Ser_ID_Cli, Ser_Device, Ser_Device_ID_Code, Ser_OfficialSerial, Ser_ReadSerial, Ser_SW_Code, Ser_SW_Code_Rev, Ser_SW_Std_Type, Ser_SN_prod, Ser_Commessa, Ser_DateProduction, Ser_Spedito, 
+                         Ser_Data_Spedito, Ser_Substition_ID_ReadSerial, Ser_Note, Ser_ObsoleteFromDate, Ser_LockLevel
+FROM            SerialNumbers_GL_Obsolete";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(ds_Programmazione_GL.SerialNumbersGL_ObsoleteDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual ds_Programmazione_GL.SerialNumbersGL_ObsoleteDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            ds_Programmazione_GL.SerialNumbersGL_ObsoleteDataTable dataTable = new ds_Programmazione_GL.SerialNumbersGL_ObsoleteDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(ds_Programmazione_GL.SerialNumbersGL_ObsoleteDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(ds_Programmazione_GL dataSet) {
+            return this.Adapter.Update(dataSet, "SerialNumbersGL_Obsolete");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(
+                    string Ser_Kit, 
+                    global::System.Nullable<int> Ser_ID_Cli, 
+                    string Ser_Device, 
+                    string Ser_Device_ID_Code, 
+                    string Ser_OfficialSerial, 
+                    string Ser_ReadSerial, 
+                    string Ser_SW_Code, 
+                    string Ser_SW_Code_Rev, 
+                    global::System.Nullable<bool> Ser_SW_Std_Type, 
+                    string Ser_SN_prod, 
+                    string Ser_Commessa, 
+                    global::System.Nullable<global::System.DateTime> Ser_DateProduction, 
+                    bool Ser_Spedito, 
+                    global::System.Nullable<global::System.DateTime> Ser_Data_Spedito, 
+                    string Ser_Substition_ID_ReadSerial, 
+                    string Ser_Note, 
+                    global::System.Nullable<global::System.DateTime> Ser_ObsoleteFromDate, 
+                    global::System.Nullable<int> Ser_LockLevel) {
+            if ((Ser_Kit == null)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Ser_Kit));
+            }
+            if ((Ser_ID_Cli.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(Ser_ID_Cli.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((Ser_Device == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Ser_Device));
+            }
+            if ((Ser_Device_ID_Code == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Ser_Device_ID_Code));
+            }
+            if ((Ser_OfficialSerial == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Ser_OfficialSerial));
+            }
+            if ((Ser_ReadSerial == null)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Ser_ReadSerial));
+            }
+            if ((Ser_SW_Code == null)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Ser_SW_Code));
+            }
+            if ((Ser_SW_Code_Rev == null)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(Ser_SW_Code_Rev));
+            }
+            if ((Ser_SW_Std_Type.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((bool)(Ser_SW_Std_Type.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((Ser_SN_prod == null)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(Ser_SN_prod));
+            }
+            if ((Ser_Commessa == null)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(Ser_Commessa));
+            }
+            if ((Ser_DateProduction.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((System.DateTime)(Ser_DateProduction.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.InsertCommand.Parameters[12].Value = ((bool)(Ser_Spedito));
+            if ((Ser_Data_Spedito.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[13].Value = ((System.DateTime)(Ser_Data_Spedito.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            if ((Ser_Substition_ID_ReadSerial == null)) {
+                this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[14].Value = ((string)(Ser_Substition_ID_ReadSerial));
+            }
+            if ((Ser_Note == null)) {
+                this.Adapter.InsertCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[15].Value = ((string)(Ser_Note));
+            }
+            if ((Ser_ObsoleteFromDate.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[16].Value = ((System.DateTime)(Ser_ObsoleteFromDate.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            if ((Ser_LockLevel.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[17].Value = ((int)(Ser_LockLevel.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class SafetyPointRFID_GLTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public SafetyPointRFID_GLTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "SafetyPointRFID_GL";
+            tableMapping.ColumnMappings.Add("Rfid_ID", "Rfid_ID");
+            tableMapping.ColumnMappings.Add("Rfid_UUID", "Rfid_UUID");
+            tableMapping.ColumnMappings.Add("Rfid_Technology", "Rfid_Technology");
+            tableMapping.ColumnMappings.Add("Rfid_Ser_SN_Prod", "Rfid_Ser_SN_Prod");
+            tableMapping.ColumnMappings.Add("Rfid_Obsolete", "Rfid_Obsolete");
+            tableMapping.ColumnMappings.Add("Rfid_Verified", "Rfid_Verified");
+            tableMapping.ColumnMappings.Add("Rfid_Note", "Rfid_Note");
+            tableMapping.ColumnMappings.Add("Rfid_Ser_OfficialSerial", "Rfid_Ser_OfficialSerial");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [SafetyPointRFID] WHERE (([Rfid_ID] = @Original_Rfid_ID) AND ((@IsNull_Rfid_UUID = 1 AND [Rfid_UUID] IS NULL) OR ([Rfid_UUID] = @Original_Rfid_UUID)) AND ((@IsNull_Rfid_Technology = 1 AND [Rfid_Technology] IS NULL) OR ([Rfid_Technology] = @Original_Rfid_Technology)) AND ((@IsNull_Rfid_Ser_SN_Prod = 1 AND [Rfid_Ser_SN_Prod] IS NULL) OR ([Rfid_Ser_SN_Prod] = @Original_Rfid_Ser_SN_Prod)) AND ((@IsNull_Rfid_Ser_OfficialSerial = 1 AND [Rfid_Ser_OfficialSerial] IS NULL) OR ([Rfid_Ser_OfficialSerial] = @Original_Rfid_Ser_OfficialSerial)) AND ([Rfid_Obsolete] = @Original_Rfid_Obsolete) AND ([Rfid_Verified] = @Original_Rfid_Verified))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Rfid_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rfid_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Rfid_UUID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rfid_UUID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Rfid_UUID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rfid_UUID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Rfid_Technology", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rfid_Technology", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Rfid_Technology", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rfid_Technology", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Rfid_Ser_SN_Prod", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rfid_Ser_SN_Prod", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Rfid_Ser_SN_Prod", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rfid_Ser_SN_Prod", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Rfid_Ser_OfficialSerial", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rfid_Ser_OfficialSerial", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Rfid_Ser_OfficialSerial", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rfid_Ser_OfficialSerial", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Rfid_Obsolete", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rfid_Obsolete", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Rfid_Verified", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rfid_Verified", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [SafetyPointRFID] ([Rfid_UUID], [Rfid_Technology], [Rfid_Ser_SN_Prod], [Rfid_Ser_OfficialSerial], [Rfid_Obsolete], [Rfid_Verified], [Rfid_Note]) VALUES (@Rfid_UUID, @Rfid_Technology, @Rfid_Ser_SN_Prod, @Rfid_Ser_OfficialSerial, @Rfid_Obsolete, @Rfid_Verified, @Rfid_Note);
+SELECT Rfid_ID, Rfid_UUID, Rfid_Technology, Rfid_Ser_SN_Prod, Rfid_Ser_OfficialSerial, Rfid_Obsolete, Rfid_Verified, Rfid_Note FROM SafetyPointRFID WHERE (Rfid_ID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Rfid_UUID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rfid_UUID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Rfid_Technology", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rfid_Technology", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Rfid_Ser_SN_Prod", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rfid_Ser_SN_Prod", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Rfid_Ser_OfficialSerial", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rfid_Ser_OfficialSerial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Rfid_Obsolete", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rfid_Obsolete", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Rfid_Verified", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rfid_Verified", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Rfid_Note", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rfid_Note", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [SafetyPointRFID] SET [Rfid_UUID] = @Rfid_UUID, [Rfid_Technology] = @Rfid_Technology, [Rfid_Ser_SN_Prod] = @Rfid_Ser_SN_Prod, [Rfid_Ser_OfficialSerial] = @Rfid_Ser_OfficialSerial, [Rfid_Obsolete] = @Rfid_Obsolete, [Rfid_Verified] = @Rfid_Verified, [Rfid_Note] = @Rfid_Note WHERE (([Rfid_ID] = @Original_Rfid_ID) AND ((@IsNull_Rfid_UUID = 1 AND [Rfid_UUID] IS NULL) OR ([Rfid_UUID] = @Original_Rfid_UUID)) AND ((@IsNull_Rfid_Technology = 1 AND [Rfid_Technology] IS NULL) OR ([Rfid_Technology] = @Original_Rfid_Technology)) AND ((@IsNull_Rfid_Ser_SN_Prod = 1 AND [Rfid_Ser_SN_Prod] IS NULL) OR ([Rfid_Ser_SN_Prod] = @Original_Rfid_Ser_SN_Prod)) AND ((@IsNull_Rfid_Ser_OfficialSerial = 1 AND [Rfid_Ser_OfficialSerial] IS NULL) OR ([Rfid_Ser_OfficialSerial] = @Original_Rfid_Ser_OfficialSerial)) AND ([Rfid_Obsolete] = @Original_Rfid_Obsolete) AND ([Rfid_Verified] = @Original_Rfid_Verified));
+SELECT Rfid_ID, Rfid_UUID, Rfid_Technology, Rfid_Ser_SN_Prod, Rfid_Ser_OfficialSerial, Rfid_Obsolete, Rfid_Verified, Rfid_Note FROM SafetyPointRFID WHERE (Rfid_ID = @Rfid_ID)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Rfid_UUID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rfid_UUID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Rfid_Technology", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rfid_Technology", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Rfid_Ser_SN_Prod", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rfid_Ser_SN_Prod", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Rfid_Ser_OfficialSerial", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rfid_Ser_OfficialSerial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Rfid_Obsolete", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rfid_Obsolete", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Rfid_Verified", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rfid_Verified", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Rfid_Note", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rfid_Note", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Rfid_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rfid_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Rfid_UUID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rfid_UUID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Rfid_UUID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rfid_UUID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Rfid_Technology", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rfid_Technology", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Rfid_Technology", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rfid_Technology", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Rfid_Ser_SN_Prod", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rfid_Ser_SN_Prod", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Rfid_Ser_SN_Prod", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rfid_Ser_SN_Prod", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Rfid_Ser_OfficialSerial", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rfid_Ser_OfficialSerial", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Rfid_Ser_OfficialSerial", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rfid_Ser_OfficialSerial", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Rfid_Obsolete", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rfid_Obsolete", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Rfid_Verified", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rfid_Verified", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Rfid_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Rfid_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionStringOk;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT        Rfid_ID, Rfid_UUID, Rfid_Technology, Rfid_Ser_SN_Prod, Rfid_Ser_Off" +
+                "icialSerial, Rfid_Obsolete, Rfid_Verified, Rfid_Note\r\nFROM            SafetyPoin" +
+                "tRFID";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(ds_Programmazione_GL.SafetyPointRFID_GLDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual ds_Programmazione_GL.SafetyPointRFID_GLDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            ds_Programmazione_GL.SafetyPointRFID_GLDataTable dataTable = new ds_Programmazione_GL.SafetyPointRFID_GLDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(ds_Programmazione_GL.SafetyPointRFID_GLDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(ds_Programmazione_GL dataSet) {
+            return this.Adapter.Update(dataSet, "SafetyPointRFID_GL");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_Rfid_ID, string Original_Rfid_UUID, string Original_Rfid_Technology, string Original_Rfid_Ser_SN_Prod, string Original_Rfid_Ser_OfficialSerial, bool Original_Rfid_Obsolete, bool Original_Rfid_Verified) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Rfid_ID));
+            if ((Original_Rfid_UUID == null)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Rfid_UUID));
+            }
+            if ((Original_Rfid_Technology == null)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Rfid_Technology));
+            }
+            if ((Original_Rfid_Ser_SN_Prod == null)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Rfid_Ser_SN_Prod));
+            }
+            if ((Original_Rfid_Ser_OfficialSerial == null)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_Rfid_Ser_OfficialSerial));
+            }
+            this.Adapter.DeleteCommand.Parameters[9].Value = ((bool)(Original_Rfid_Obsolete));
+            this.Adapter.DeleteCommand.Parameters[10].Value = ((bool)(Original_Rfid_Verified));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(string Rfid_UUID, string Rfid_Technology, string Rfid_Ser_SN_Prod, string Rfid_Ser_OfficialSerial, bool Rfid_Obsolete, bool Rfid_Verified, string Rfid_Note) {
+            if ((Rfid_UUID == null)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Rfid_UUID));
+            }
+            if ((Rfid_Technology == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Rfid_Technology));
+            }
+            if ((Rfid_Ser_SN_Prod == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Rfid_Ser_SN_Prod));
+            }
+            if ((Rfid_Ser_OfficialSerial == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Rfid_Ser_OfficialSerial));
+            }
+            this.Adapter.InsertCommand.Parameters[4].Value = ((bool)(Rfid_Obsolete));
+            this.Adapter.InsertCommand.Parameters[5].Value = ((bool)(Rfid_Verified));
+            if ((Rfid_Note == null)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Rfid_Note));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string Rfid_UUID, string Rfid_Technology, string Rfid_Ser_SN_Prod, string Rfid_Ser_OfficialSerial, bool Rfid_Obsolete, bool Rfid_Verified, string Rfid_Note, int Original_Rfid_ID, string Original_Rfid_UUID, string Original_Rfid_Technology, string Original_Rfid_Ser_SN_Prod, string Original_Rfid_Ser_OfficialSerial, bool Original_Rfid_Obsolete, bool Original_Rfid_Verified, int Rfid_ID) {
+            if ((Rfid_UUID == null)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Rfid_UUID));
+            }
+            if ((Rfid_Technology == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Rfid_Technology));
+            }
+            if ((Rfid_Ser_SN_Prod == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Rfid_Ser_SN_Prod));
+            }
+            if ((Rfid_Ser_OfficialSerial == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Rfid_Ser_OfficialSerial));
+            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((bool)(Rfid_Obsolete));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((bool)(Rfid_Verified));
+            if ((Rfid_Note == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Rfid_Note));
+            }
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_Rfid_ID));
+            if ((Original_Rfid_UUID == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_Rfid_UUID));
+            }
+            if ((Original_Rfid_Technology == null)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Rfid_Technology));
+            }
+            if ((Original_Rfid_Ser_SN_Prod == null)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_Rfid_Ser_SN_Prod));
+            }
+            if ((Original_Rfid_Ser_OfficialSerial == null)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_Rfid_Ser_OfficialSerial));
+            }
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((bool)(Original_Rfid_Obsolete));
+            this.Adapter.UpdateCommand.Parameters[17].Value = ((bool)(Original_Rfid_Verified));
+            this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Rfid_ID));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string Rfid_UUID, string Rfid_Technology, string Rfid_Ser_SN_Prod, string Rfid_Ser_OfficialSerial, bool Rfid_Obsolete, bool Rfid_Verified, string Rfid_Note, int Original_Rfid_ID, string Original_Rfid_UUID, string Original_Rfid_Technology, string Original_Rfid_Ser_SN_Prod, string Original_Rfid_Ser_OfficialSerial, bool Original_Rfid_Obsolete, bool Original_Rfid_Verified) {
+            return this.Update(Rfid_UUID, Rfid_Technology, Rfid_Ser_SN_Prod, Rfid_Ser_OfficialSerial, Rfid_Obsolete, Rfid_Verified, Rfid_Note, Original_Rfid_ID, Original_Rfid_UUID, Original_Rfid_Technology, Original_Rfid_Ser_SN_Prod, Original_Rfid_Ser_OfficialSerial, Original_Rfid_Obsolete, Original_Rfid_Verified, Original_Rfid_ID);
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class GL_FW_RevisioniTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public GL_FW_RevisioniTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "GL_FW_Revisioni";
+            tableMapping.ColumnMappings.Add("Id", "Id");
+            tableMapping.ColumnMappings.Add("SW_Code", "SW_Code");
+            tableMapping.ColumnMappings.Add("SW_TipoDevice", "SW_TipoDevice");
+            tableMapping.ColumnMappings.Add("SW_Descrizione", "SW_Descrizione");
+            tableMapping.ColumnMappings.Add("SW_Descrizione_EN", "SW_Descrizione_EN");
+            tableMapping.ColumnMappings.Add("SW_Versione", "SW_Versione");
+            tableMapping.ColumnMappings.Add("SW_Revisione", "SW_Revisione");
+            tableMapping.ColumnMappings.Add("SW_Standard", "SW_Standard");
+            tableMapping.ColumnMappings.Add("SW_FamProd", "SW_FamProd");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_RF", "SW_P_Opt_RF");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_Use_Oled", "SW_P_Opt_Use_Oled");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_Use_EmButt", "SW_P_Opt_Use_EmButt");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_Use_Backlight", "SW_P_Opt_Use_Backlight");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_ShiftPage", "SW_P_Opt_ShiftPage");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_Use_Accel", "SW_P_Opt_Use_Accel");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_Use_SP", "SW_P_Opt_Use_SP");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_Use_Buzzer", "SW_P_Opt_Use_Buzzer");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_Use_Vibracall", "SW_P_Opt_Use_Vibracall");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_Use_LedTorch", "SW_P_Opt_Use_LedTorch");
+            tableMapping.ColumnMappings.Add("SW_P_PLD", "SW_P_PLD");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_MaxPairDevices", "SW_P_Opt_MaxPairDevices");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_RF", "SW_R_Opt_RF");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Plug_Exp", "SW_R_Opt_Plug_Exp");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Plug_Ple", "SW_R_Opt_Plug_Ple");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Em_Keyb", "SW_R_Opt_Em_Keyb");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Can", "SW_R_Opt_Can");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Prop_Out", "SW_R_Opt_Prop_Out");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_TimeOut", "SW_R_Opt_TimeOut");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Cont_Keys", "SW_R_Opt_Cont_Keys");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_LockSameRow", "SW_R_Opt_LockSameRow");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Use_SP", "SW_R_Opt_Use_SP");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_MaxPairDevices", "SW_R_Opt_MaxPairDevices");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_ShiftPage", "SW_R_Opt_ShiftPage");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Output_No", "SW_R_Opt_Output_No");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Dig_Input_No", "SW_R_Opt_Dig_Input_No");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Ana_Input_No", "SW_R_Opt_Ana_Input_No");
+            tableMapping.ColumnMappings.Add("SW_Revisioni", "SW_Revisioni");
+            tableMapping.ColumnMappings.Add("SW_Funzionamento", "SW_Funzionamento");
+            tableMapping.ColumnMappings.Add("SW_Config", "SW_Config");
+            tableMapping.ColumnMappings.Add("SW_Obsolete_ver", "SW_Obsolete_ver");
+            tableMapping.ColumnMappings.Add("SW_Obsolete_ver_from_date", "SW_Obsolete_ver_from_date");
+            tableMapping.ColumnMappings.Add("SW_Order", "SW_Order");
+            tableMapping.ColumnMappings.Add("SW_R_Opt_Use_Radius", "SW_R_Opt_Use_Radius");
+            tableMapping.ColumnMappings.Add("SW_CustomPIC", "SW_CustomPIC");
+            tableMapping.ColumnMappings.Add("SW_P_Opt_Use_Radius", "SW_P_Opt_Use_Radius");
+            tableMapping.ColumnMappings.Add("SW_P_Lock", "SW_P_Lock");
+            tableMapping.ColumnMappings.Add("SW_R_Lock", "SW_R_Lock");
+            tableMapping.ColumnMappings.Add("SW_IsPublic", "SW_IsPublic");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [GL_Firmware] ([SW_Code], [SW_TipoDevice], [SW_Descrizione], [SW_Desc" +
+                "rizione_EN], [SW_Versione], [SW_Revisione], [SW_Standard], [SW_FamProd], [SW_P_O" +
+                "pt_RF], [SW_P_Opt_Use_Oled], [SW_P_Opt_Use_EmButt], [SW_P_Opt_Use_Backlight], [S" +
+                "W_P_Opt_ShiftPage], [SW_P_Opt_Use_Accel], [SW_P_Opt_Use_SP], [SW_P_Opt_Use_Buzze" +
+                "r], [SW_P_Opt_Use_Vibracall], [SW_P_Opt_Use_LedTorch], [SW_P_PLD], [SW_P_Opt_Max" +
+                "PairDevices], [SW_R_Opt_RF], [SW_R_Opt_Plug_Exp], [SW_R_Opt_Plug_Ple], [SW_R_Opt" +
+                "_Em_Keyb], [SW_R_Opt_Can], [SW_R_Opt_Prop_Out], [SW_R_Opt_TimeOut], [SW_R_Opt_Co" +
+                "nt_Keys], [SW_R_Opt_LockSameRow], [SW_R_Opt_Use_SP], [SW_R_Opt_MaxPairDevices], " +
+                "[SW_R_Opt_ShiftPage], [SW_R_Opt_Output_No], [SW_R_Opt_Dig_Input_No], [SW_R_Opt_A" +
+                "na_Input_No], [SW_Revisioni], [SW_Funzionamento], [SW_Config], [SW_Obsolete_ver]" +
+                ", [SW_Obsolete_ver_from_date], [SW_R_Opt_Use_Radius], [SW_CustomPIC], [SW_P_Opt_" +
+                "Use_Radius], [SW_P_Lock], [SW_R_Lock], [SW_IsPublic]) VALUES (@SW_Code, @SW_Tipo" +
+                "Device, @SW_Descrizione, @SW_Descrizione_EN, @SW_Versione, @SW_Revisione, @SW_St" +
+                "andard, @SW_FamProd, @SW_P_Opt_RF, @SW_P_Opt_Use_Oled, @SW_P_Opt_Use_EmButt, @SW" +
+                "_P_Opt_Use_Backlight, @SW_P_Opt_ShiftPage, @SW_P_Opt_Use_Accel, @SW_P_Opt_Use_SP" +
+                ", @SW_P_Opt_Use_Buzzer, @SW_P_Opt_Use_Vibracall, @SW_P_Opt_Use_LedTorch, @SW_P_P" +
+                "LD, @SW_P_Opt_MaxPairDevices, @SW_R_Opt_RF, @SW_R_Opt_Plug_Exp, @SW_R_Opt_Plug_P" +
+                "le, @SW_R_Opt_Em_Keyb, @SW_R_Opt_Can, @SW_R_Opt_Prop_Out, @SW_R_Opt_TimeOut, @SW" +
+                "_R_Opt_Cont_Keys, @SW_R_Opt_LockSameRow, @SW_R_Opt_Use_SP, @SW_R_Opt_MaxPairDevi" +
+                "ces, @SW_R_Opt_ShiftPage, @SW_R_Opt_Output_No, @SW_R_Opt_Dig_Input_No, @SW_R_Opt" +
+                "_Ana_Input_No, @SW_Revisioni, @SW_Funzionamento, @SW_Config, @SW_Obsolete_ver, @" +
+                "SW_Obsolete_ver_from_date, @SW_R_Opt_Use_Radius, @SW_CustomPIC, @SW_P_Opt_Use_Ra" +
+                "dius, @SW_P_Lock, @SW_R_Lock, @SW_IsPublic)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_TipoDevice", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_TipoDevice", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Descrizione", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Descrizione", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Descrizione_EN", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Descrizione_EN", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Versione", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Versione", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Revisione", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Revisione", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Standard", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Standard", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_FamProd", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_FamProd", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_RF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_RF", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_Use_Oled", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_Oled", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_Use_EmButt", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_EmButt", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_Use_Backlight", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_Backlight", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_ShiftPage", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_ShiftPage", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_Use_Accel", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_Accel", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_Use_SP", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_SP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_Use_Buzzer", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_Buzzer", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_Use_Vibracall", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_Vibracall", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_Use_LedTorch", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_LedTorch", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_PLD", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_PLD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_MaxPairDevices", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_MaxPairDevices", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_RF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_RF", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Plug_Exp", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Plug_Exp", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Plug_Ple", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Plug_Ple", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Em_Keyb", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Em_Keyb", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Can", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Can", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Prop_Out", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Prop_Out", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_TimeOut", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_TimeOut", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Cont_Keys", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Cont_Keys", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_LockSameRow", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_LockSameRow", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Use_SP", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Use_SP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_MaxPairDevices", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_MaxPairDevices", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_ShiftPage", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_ShiftPage", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Output_No", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Output_No", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Dig_Input_No", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Dig_Input_No", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Ana_Input_No", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Ana_Input_No", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Revisioni", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Revisioni", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Funzionamento", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Funzionamento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Config", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Config", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Obsolete_ver", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Obsolete_ver", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_Obsolete_ver_from_date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Obsolete_ver_from_date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Opt_Use_Radius", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Opt_Use_Radius", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_CustomPIC", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_CustomPIC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Opt_Use_Radius", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Opt_Use_Radius", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_P_Lock", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_P_Lock", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_R_Lock", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_R_Lock", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SW_IsPublic", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SW_IsPublic", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::SmartLineProduction.Properties.Settings.Default.SISTEMATICA_FACTORYConnectionStringOk;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT        Id, SW_Code, SW_TipoDevice, SW_Descrizione, SW_Descrizione_EN, SW_Versione, SW_Revisione, SW_Standard, SW_FamProd, SW_P_Opt_RF, SW_P_Opt_Use_Oled, SW_P_Opt_Use_EmButt, SW_P_Opt_Use_Backlight, 
+                         SW_P_Opt_ShiftPage, SW_P_Opt_Use_Accel, SW_P_Opt_Use_SP, SW_P_Opt_Use_Buzzer, SW_P_Opt_Use_Vibracall, SW_P_Opt_Use_LedTorch, SW_P_PLD, SW_P_Opt_MaxPairDevices, SW_R_Opt_RF, 
+                         SW_R_Opt_Plug_Exp, SW_R_Opt_Plug_Ple, SW_R_Opt_Em_Keyb, SW_R_Opt_Can, SW_R_Opt_Prop_Out, SW_R_Opt_TimeOut, SW_R_Opt_Cont_Keys, SW_R_Opt_LockSameRow, SW_R_Opt_Use_SP, 
+                         SW_R_Opt_MaxPairDevices, SW_R_Opt_ShiftPage, SW_R_Opt_Output_No, SW_R_Opt_Dig_Input_No, SW_R_Opt_Ana_Input_No, SW_Revisioni, SW_Funzionamento, SW_Config, SW_Obsolete_ver, 
+                         SW_Obsolete_ver_from_date, SUBSTRING(SW_Code, 7, 6) AS SW_Order, SW_R_Opt_Use_Radius, SW_CustomPIC, SW_P_Opt_Use_Radius, SW_P_Lock, SW_R_Lock, SW_IsPublic
+FROM            GL_Firmware
+WHERE        (SW_Obsolete_ver = 1)";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(ds_Programmazione_GL.GL_FW_RevisioniDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual ds_Programmazione_GL.GL_FW_RevisioniDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            ds_Programmazione_GL.GL_FW_RevisioniDataTable dataTable = new ds_Programmazione_GL.GL_FW_RevisioniDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(ds_Programmazione_GL.GL_FW_RevisioniDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(ds_Programmazione_GL dataSet) {
+            return this.Adapter.Update(dataSet, "GL_FW_Revisioni");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(
+                    string SW_Code, 
+                    string SW_TipoDevice, 
+                    string SW_Descrizione, 
+                    string SW_Descrizione_EN, 
+                    string SW_Versione, 
+                    string SW_Revisione, 
+                    bool SW_Standard, 
+                    string SW_FamProd, 
+                    string SW_P_Opt_RF, 
+                    bool SW_P_Opt_Use_Oled, 
+                    bool SW_P_Opt_Use_EmButt, 
+                    bool SW_P_Opt_Use_Backlight, 
+                    bool SW_P_Opt_ShiftPage, 
+                    bool SW_P_Opt_Use_Accel, 
+                    bool SW_P_Opt_Use_SP, 
+                    bool SW_P_Opt_Use_Buzzer, 
+                    bool SW_P_Opt_Use_Vibracall, 
+                    bool SW_P_Opt_Use_LedTorch, 
+                    bool SW_P_PLD, 
+                    global::System.Nullable<int> SW_P_Opt_MaxPairDevices, 
+                    string SW_R_Opt_RF, 
+                    bool SW_R_Opt_Plug_Exp, 
+                    bool SW_R_Opt_Plug_Ple, 
+                    bool SW_R_Opt_Em_Keyb, 
+                    bool SW_R_Opt_Can, 
+                    bool SW_R_Opt_Prop_Out, 
+                    string SW_R_Opt_TimeOut, 
+                    global::System.Nullable<int> SW_R_Opt_Cont_Keys, 
+                    bool SW_R_Opt_LockSameRow, 
+                    bool SW_R_Opt_Use_SP, 
+                    global::System.Nullable<int> SW_R_Opt_MaxPairDevices, 
+                    bool SW_R_Opt_ShiftPage, 
+                    global::System.Nullable<int> SW_R_Opt_Output_No, 
+                    global::System.Nullable<int> SW_R_Opt_Dig_Input_No, 
+                    global::System.Nullable<int> SW_R_Opt_Ana_Input_No, 
+                    string SW_Revisioni, 
+                    string SW_Funzionamento, 
+                    string SW_Config, 
+                    bool SW_Obsolete_ver, 
+                    global::System.Nullable<global::System.DateTime> SW_Obsolete_ver_from_date, 
+                    bool SW_R_Opt_Use_Radius, 
+                    global::System.Nullable<bool> SW_CustomPIC, 
+                    global::System.Nullable<bool> SW_P_Opt_Use_Radius, 
+                    global::System.Nullable<int> SW_P_Lock, 
+                    global::System.Nullable<int> SW_R_Lock, 
+                    global::System.Nullable<bool> SW_IsPublic) {
+            if ((SW_Code == null)) {
+                throw new global::System.ArgumentNullException("SW_Code");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(SW_Code));
+            }
+            if ((SW_TipoDevice == null)) {
+                throw new global::System.ArgumentNullException("SW_TipoDevice");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(SW_TipoDevice));
+            }
+            if ((SW_Descrizione == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(SW_Descrizione));
+            }
+            if ((SW_Descrizione_EN == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(SW_Descrizione_EN));
+            }
+            if ((SW_Versione == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(SW_Versione));
+            }
+            if ((SW_Revisione == null)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(SW_Revisione));
+            }
+            this.Adapter.InsertCommand.Parameters[6].Value = ((bool)(SW_Standard));
+            if ((SW_FamProd == null)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(SW_FamProd));
+            }
+            if ((SW_P_Opt_RF == null)) {
+                throw new global::System.ArgumentNullException("SW_P_Opt_RF");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(SW_P_Opt_RF));
+            }
+            this.Adapter.InsertCommand.Parameters[9].Value = ((bool)(SW_P_Opt_Use_Oled));
+            this.Adapter.InsertCommand.Parameters[10].Value = ((bool)(SW_P_Opt_Use_EmButt));
+            this.Adapter.InsertCommand.Parameters[11].Value = ((bool)(SW_P_Opt_Use_Backlight));
+            this.Adapter.InsertCommand.Parameters[12].Value = ((bool)(SW_P_Opt_ShiftPage));
+            this.Adapter.InsertCommand.Parameters[13].Value = ((bool)(SW_P_Opt_Use_Accel));
+            this.Adapter.InsertCommand.Parameters[14].Value = ((bool)(SW_P_Opt_Use_SP));
+            this.Adapter.InsertCommand.Parameters[15].Value = ((bool)(SW_P_Opt_Use_Buzzer));
+            this.Adapter.InsertCommand.Parameters[16].Value = ((bool)(SW_P_Opt_Use_Vibracall));
+            this.Adapter.InsertCommand.Parameters[17].Value = ((bool)(SW_P_Opt_Use_LedTorch));
+            this.Adapter.InsertCommand.Parameters[18].Value = ((bool)(SW_P_PLD));
+            if ((SW_P_Opt_MaxPairDevices.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[19].Value = ((int)(SW_P_Opt_MaxPairDevices.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            if ((SW_R_Opt_RF == null)) {
+                throw new global::System.ArgumentNullException("SW_R_Opt_RF");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[20].Value = ((string)(SW_R_Opt_RF));
+            }
+            this.Adapter.InsertCommand.Parameters[21].Value = ((bool)(SW_R_Opt_Plug_Exp));
+            this.Adapter.InsertCommand.Parameters[22].Value = ((bool)(SW_R_Opt_Plug_Ple));
+            this.Adapter.InsertCommand.Parameters[23].Value = ((bool)(SW_R_Opt_Em_Keyb));
+            this.Adapter.InsertCommand.Parameters[24].Value = ((bool)(SW_R_Opt_Can));
+            this.Adapter.InsertCommand.Parameters[25].Value = ((bool)(SW_R_Opt_Prop_Out));
+            if ((SW_R_Opt_TimeOut == null)) {
+                throw new global::System.ArgumentNullException("SW_R_Opt_TimeOut");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[26].Value = ((string)(SW_R_Opt_TimeOut));
+            }
+            if ((SW_R_Opt_Cont_Keys.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[27].Value = ((int)(SW_R_Opt_Cont_Keys.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[27].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.InsertCommand.Parameters[28].Value = ((bool)(SW_R_Opt_LockSameRow));
+            this.Adapter.InsertCommand.Parameters[29].Value = ((bool)(SW_R_Opt_Use_SP));
+            if ((SW_R_Opt_MaxPairDevices.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[30].Value = ((int)(SW_R_Opt_MaxPairDevices.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[30].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.InsertCommand.Parameters[31].Value = ((bool)(SW_R_Opt_ShiftPage));
+            if ((SW_R_Opt_Output_No.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[32].Value = ((int)(SW_R_Opt_Output_No.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            if ((SW_R_Opt_Dig_Input_No.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[33].Value = ((int)(SW_R_Opt_Dig_Input_No.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[33].Value = global::System.DBNull.Value;
+            }
+            if ((SW_R_Opt_Ana_Input_No.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[34].Value = ((int)(SW_R_Opt_Ana_Input_No.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[34].Value = global::System.DBNull.Value;
+            }
+            if ((SW_Revisioni == null)) {
+                this.Adapter.InsertCommand.Parameters[35].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[35].Value = ((string)(SW_Revisioni));
+            }
+            if ((SW_Funzionamento == null)) {
+                this.Adapter.InsertCommand.Parameters[36].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[36].Value = ((string)(SW_Funzionamento));
+            }
+            if ((SW_Config == null)) {
+                this.Adapter.InsertCommand.Parameters[37].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[37].Value = ((string)(SW_Config));
+            }
+            this.Adapter.InsertCommand.Parameters[38].Value = ((bool)(SW_Obsolete_ver));
+            if ((SW_Obsolete_ver_from_date.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[39].Value = ((System.DateTime)(SW_Obsolete_ver_from_date.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[39].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.InsertCommand.Parameters[40].Value = ((bool)(SW_R_Opt_Use_Radius));
+            if ((SW_CustomPIC.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[41].Value = ((bool)(SW_CustomPIC.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[41].Value = global::System.DBNull.Value;
+            }
+            if ((SW_P_Opt_Use_Radius.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[42].Value = ((bool)(SW_P_Opt_Use_Radius.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[42].Value = global::System.DBNull.Value;
+            }
+            if ((SW_P_Lock.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[43].Value = ((int)(SW_P_Lock.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[43].Value = global::System.DBNull.Value;
+            }
+            if ((SW_R_Lock.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[44].Value = ((int)(SW_R_Lock.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[44].Value = global::System.DBNull.Value;
+            }
+            if ((SW_IsPublic.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[45].Value = ((bool)(SW_IsPublic.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[45].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5805,6 +18587,18 @@ WHERE        (SF_Commesse_GL.Is_Kit = '1') OR
     public partial class TableAdapterManager : global::System.ComponentModel.Component {
         
         private UpdateOrderOption _updateOrder;
+        
+        private GL_FW_ClientiTableAdapter _gL_FW_ClientiTableAdapter;
+        
+        private GL_SerialNumbersTableAdapter _gL_SerialNumbersTableAdapter;
+        
+        private GL_FirmwareTableAdapter _gL_FirmwareTableAdapter;
+        
+        private SerialNumbersGL_ObsoleteTableAdapter _serialNumbersGL_ObsoleteTableAdapter;
+        
+        private SafetyPointRFID_GLTableAdapter _safetyPointRFID_GLTableAdapter;
+        
+        private GL_FW_RevisioniTableAdapter _gL_FW_RevisioniTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -5818,6 +18612,90 @@ WHERE        (SF_Commesse_GL.Is_Kit = '1') OR
             }
             set {
                 this._updateOrder = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public GL_FW_ClientiTableAdapter GL_FW_ClientiTableAdapter {
+            get {
+                return this._gL_FW_ClientiTableAdapter;
+            }
+            set {
+                this._gL_FW_ClientiTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public GL_SerialNumbersTableAdapter GL_SerialNumbersTableAdapter {
+            get {
+                return this._gL_SerialNumbersTableAdapter;
+            }
+            set {
+                this._gL_SerialNumbersTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public GL_FirmwareTableAdapter GL_FirmwareTableAdapter {
+            get {
+                return this._gL_FirmwareTableAdapter;
+            }
+            set {
+                this._gL_FirmwareTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public SerialNumbersGL_ObsoleteTableAdapter SerialNumbersGL_ObsoleteTableAdapter {
+            get {
+                return this._serialNumbersGL_ObsoleteTableAdapter;
+            }
+            set {
+                this._serialNumbersGL_ObsoleteTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public SafetyPointRFID_GLTableAdapter SafetyPointRFID_GLTableAdapter {
+            get {
+                return this._safetyPointRFID_GLTableAdapter;
+            }
+            set {
+                this._safetyPointRFID_GLTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public GL_FW_RevisioniTableAdapter GL_FW_RevisioniTableAdapter {
+            get {
+                return this._gL_FW_RevisioniTableAdapter;
+            }
+            set {
+                this._gL_FW_RevisioniTableAdapter = value;
             }
         }
         
@@ -5840,6 +18718,30 @@ WHERE        (SF_Commesse_GL.Is_Kit = '1') OR
                 if ((this._connection != null)) {
                     return this._connection;
                 }
+                if (((this._gL_FW_ClientiTableAdapter != null) 
+                            && (this._gL_FW_ClientiTableAdapter.Connection != null))) {
+                    return this._gL_FW_ClientiTableAdapter.Connection;
+                }
+                if (((this._gL_SerialNumbersTableAdapter != null) 
+                            && (this._gL_SerialNumbersTableAdapter.Connection != null))) {
+                    return this._gL_SerialNumbersTableAdapter.Connection;
+                }
+                if (((this._gL_FirmwareTableAdapter != null) 
+                            && (this._gL_FirmwareTableAdapter.Connection != null))) {
+                    return this._gL_FirmwareTableAdapter.Connection;
+                }
+                if (((this._serialNumbersGL_ObsoleteTableAdapter != null) 
+                            && (this._serialNumbersGL_ObsoleteTableAdapter.Connection != null))) {
+                    return this._serialNumbersGL_ObsoleteTableAdapter.Connection;
+                }
+                if (((this._safetyPointRFID_GLTableAdapter != null) 
+                            && (this._safetyPointRFID_GLTableAdapter.Connection != null))) {
+                    return this._safetyPointRFID_GLTableAdapter.Connection;
+                }
+                if (((this._gL_FW_RevisioniTableAdapter != null) 
+                            && (this._gL_FW_RevisioniTableAdapter.Connection != null))) {
+                    return this._gL_FW_RevisioniTableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -5853,6 +18755,24 @@ WHERE        (SF_Commesse_GL.Is_Kit = '1') OR
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
+                if ((this._gL_FW_ClientiTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._gL_SerialNumbersTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._gL_FirmwareTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._serialNumbersGL_ObsoleteTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._safetyPointRFID_GLTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._gL_FW_RevisioniTableAdapter != null)) {
+                    count = (count + 1);
+                }
                 return count;
             }
         }
@@ -5864,6 +18784,60 @@ WHERE        (SF_Commesse_GL.Is_Kit = '1') OR
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateUpdatedRows(ds_Programmazione_GL dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._gL_FW_ClientiTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.GL_FW_Clienti.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._gL_FW_ClientiTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._gL_SerialNumbersTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.GL_SerialNumbers.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._gL_SerialNumbersTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._gL_FirmwareTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.GL_Firmware.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._gL_FirmwareTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._serialNumbersGL_ObsoleteTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.SerialNumbersGL_Obsolete.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._serialNumbersGL_ObsoleteTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._safetyPointRFID_GLTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.SafetyPointRFID_GL.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._safetyPointRFID_GLTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._gL_FW_RevisioniTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.GL_FW_Revisioni.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._gL_FW_RevisioniTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -5874,6 +18848,54 @@ WHERE        (SF_Commesse_GL.Is_Kit = '1') OR
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateInsertedRows(ds_Programmazione_GL dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._gL_FW_ClientiTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.GL_FW_Clienti.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._gL_FW_ClientiTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._gL_SerialNumbersTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.GL_SerialNumbers.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._gL_SerialNumbersTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._gL_FirmwareTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.GL_Firmware.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._gL_FirmwareTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._serialNumbersGL_ObsoleteTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.SerialNumbersGL_Obsolete.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._serialNumbersGL_ObsoleteTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._safetyPointRFID_GLTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.SafetyPointRFID_GL.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._safetyPointRFID_GLTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._gL_FW_RevisioniTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.GL_FW_Revisioni.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._gL_FW_RevisioniTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -5884,6 +18906,54 @@ WHERE        (SF_Commesse_GL.Is_Kit = '1') OR
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateDeletedRows(ds_Programmazione_GL dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._gL_FW_RevisioniTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.GL_FW_Revisioni.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._gL_FW_RevisioniTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._safetyPointRFID_GLTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.SafetyPointRFID_GL.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._safetyPointRFID_GLTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._serialNumbersGL_ObsoleteTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.SerialNumbersGL_Obsolete.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._serialNumbersGL_ObsoleteTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._gL_FirmwareTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.GL_Firmware.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._gL_FirmwareTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._gL_SerialNumbersTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.GL_SerialNumbers.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._gL_SerialNumbersTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._gL_FW_ClientiTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.GL_FW_Clienti.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._gL_FW_ClientiTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             return result;
         }
         
@@ -5923,6 +18993,36 @@ WHERE        (SF_Commesse_GL.Is_Kit = '1') OR
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
+            if (((this._gL_FW_ClientiTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._gL_FW_ClientiTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("Tutti gli oggetti TableAdapter gestiti da TableAdapterManager devono utilizzare l" +
+                        "a stessa stringa di connessione.");
+            }
+            if (((this._gL_SerialNumbersTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._gL_SerialNumbersTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("Tutti gli oggetti TableAdapter gestiti da TableAdapterManager devono utilizzare l" +
+                        "a stessa stringa di connessione.");
+            }
+            if (((this._gL_FirmwareTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._gL_FirmwareTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("Tutti gli oggetti TableAdapter gestiti da TableAdapterManager devono utilizzare l" +
+                        "a stessa stringa di connessione.");
+            }
+            if (((this._serialNumbersGL_ObsoleteTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._serialNumbersGL_ObsoleteTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("Tutti gli oggetti TableAdapter gestiti da TableAdapterManager devono utilizzare l" +
+                        "a stessa stringa di connessione.");
+            }
+            if (((this._safetyPointRFID_GLTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._safetyPointRFID_GLTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("Tutti gli oggetti TableAdapter gestiti da TableAdapterManager devono utilizzare l" +
+                        "a stessa stringa di connessione.");
+            }
+            if (((this._gL_FW_RevisioniTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._gL_FW_RevisioniTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("Tutti gli oggetti TableAdapter gestiti da TableAdapterManager devono utilizzare l" +
+                        "a stessa stringa di connessione.");
+            }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
                 throw new global::System.ApplicationException("TableAdapterManager non contiene informazioni di connessione. Impostare la propri" +
@@ -5956,6 +19056,60 @@ WHERE        (SF_Commesse_GL.Is_Kit = '1') OR
             try {
                 // ---- Prepare for update -----------
                 //
+                if ((this._gL_FW_ClientiTableAdapter != null)) {
+                    revertConnections.Add(this._gL_FW_ClientiTableAdapter, this._gL_FW_ClientiTableAdapter.Connection);
+                    this._gL_FW_ClientiTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._gL_FW_ClientiTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._gL_FW_ClientiTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._gL_FW_ClientiTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._gL_FW_ClientiTableAdapter.Adapter);
+                    }
+                }
+                if ((this._gL_SerialNumbersTableAdapter != null)) {
+                    revertConnections.Add(this._gL_SerialNumbersTableAdapter, this._gL_SerialNumbersTableAdapter.Connection);
+                    this._gL_SerialNumbersTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._gL_SerialNumbersTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._gL_SerialNumbersTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._gL_SerialNumbersTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._gL_SerialNumbersTableAdapter.Adapter);
+                    }
+                }
+                if ((this._gL_FirmwareTableAdapter != null)) {
+                    revertConnections.Add(this._gL_FirmwareTableAdapter, this._gL_FirmwareTableAdapter.Connection);
+                    this._gL_FirmwareTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._gL_FirmwareTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._gL_FirmwareTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._gL_FirmwareTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._gL_FirmwareTableAdapter.Adapter);
+                    }
+                }
+                if ((this._serialNumbersGL_ObsoleteTableAdapter != null)) {
+                    revertConnections.Add(this._serialNumbersGL_ObsoleteTableAdapter, this._serialNumbersGL_ObsoleteTableAdapter.Connection);
+                    this._serialNumbersGL_ObsoleteTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._serialNumbersGL_ObsoleteTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._serialNumbersGL_ObsoleteTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._serialNumbersGL_ObsoleteTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._serialNumbersGL_ObsoleteTableAdapter.Adapter);
+                    }
+                }
+                if ((this._safetyPointRFID_GLTableAdapter != null)) {
+                    revertConnections.Add(this._safetyPointRFID_GLTableAdapter, this._safetyPointRFID_GLTableAdapter.Connection);
+                    this._safetyPointRFID_GLTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._safetyPointRFID_GLTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._safetyPointRFID_GLTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._safetyPointRFID_GLTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._safetyPointRFID_GLTableAdapter.Adapter);
+                    }
+                }
+                if ((this._gL_FW_RevisioniTableAdapter != null)) {
+                    revertConnections.Add(this._gL_FW_RevisioniTableAdapter, this._gL_FW_RevisioniTableAdapter.Connection);
+                    this._gL_FW_RevisioniTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._gL_FW_RevisioniTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._gL_FW_RevisioniTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._gL_FW_RevisioniTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._gL_FW_RevisioniTableAdapter.Adapter);
+                    }
+                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -6013,6 +19167,30 @@ WHERE        (SF_Commesse_GL.Is_Kit = '1') OR
             finally {
                 if (workConnOpened) {
                     workConnection.Close();
+                }
+                if ((this._gL_FW_ClientiTableAdapter != null)) {
+                    this._gL_FW_ClientiTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._gL_FW_ClientiTableAdapter]));
+                    this._gL_FW_ClientiTableAdapter.Transaction = null;
+                }
+                if ((this._gL_SerialNumbersTableAdapter != null)) {
+                    this._gL_SerialNumbersTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._gL_SerialNumbersTableAdapter]));
+                    this._gL_SerialNumbersTableAdapter.Transaction = null;
+                }
+                if ((this._gL_FirmwareTableAdapter != null)) {
+                    this._gL_FirmwareTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._gL_FirmwareTableAdapter]));
+                    this._gL_FirmwareTableAdapter.Transaction = null;
+                }
+                if ((this._serialNumbersGL_ObsoleteTableAdapter != null)) {
+                    this._serialNumbersGL_ObsoleteTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._serialNumbersGL_ObsoleteTableAdapter]));
+                    this._serialNumbersGL_ObsoleteTableAdapter.Transaction = null;
+                }
+                if ((this._safetyPointRFID_GLTableAdapter != null)) {
+                    this._safetyPointRFID_GLTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._safetyPointRFID_GLTableAdapter]));
+                    this._safetyPointRFID_GLTableAdapter.Transaction = null;
+                }
+                if ((this._gL_FW_RevisioniTableAdapter != null)) {
+                    this._gL_FW_RevisioniTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._gL_FW_RevisioniTableAdapter]));
+                    this._gL_FW_RevisioniTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
