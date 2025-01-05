@@ -118,21 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="MainMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>503, 17</value>
+    <value>163, 13</value>
   </metadata>
-  <metadata name="pan_Menu_exit.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>309, 134</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="menu_sw_exit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAMhJREFUOE+tk7ENhDAMRRnpRjjRM0C2uSrtjXAjUDAFPQPQUaZJTOnTyylIyaWB
-        8CULy9/+jp3QdXdi3/eniIwiooWNcGV+hhDCZ11XtdbqMAza9300fGJwIvIu6yIglmWJycYYnaZJ53mO
-        hk8Mjpw/EY6Geuq0bZsLIbyIY/jlSNk4zEchXUTEee8fWYdfjiOHkfhmeSjSnaPSrVJ8dK6KQBBk3tqm
-        E19aErlHoHWEY4ncwOklNl8j4BVefkgJEJefckLTz3QVXygn3G0uGcQIAAAAAElFTkSuQmCC
-</value>
-  </data>
   <metadata name="grid_commesse_DataConsegna.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -161,13 +148,16 @@
     <value>True</value>
   </metadata>
   <metadata name="grid_commesse_menu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>868, 56</value>
+    <value>264, 9</value>
   </metadata>
   <metadata name="sFCommesseGLBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>197, 332</value>
+    <value>204, 246</value>
   </metadata>
   <metadata name="ds_Programmazione_GL.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>15, 332</value>
+    <value>22, 246</value>
+  </metadata>
+  <metadata name="ds_Programmazione_GL.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>22, 246</value>
   </metadata>
   <metadata name="dg_dt_tmp_progr_FwKeyId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -179,94 +169,134 @@
     <value>True</value>
   </metadata>
   <metadata name="dtTmpProgrammaBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>282, 95</value>
+    <value>22, 314</value>
   </metadata>
   <metadata name="ds_Programmazione.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>795, 134</value>
+    <value>304, 100</value>
   </metadata>
   <metadata name="sFCommesseSLBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 212</value>
+    <value>28, 346</value>
   </metadata>
   <metadata name="ds_SL.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>613, 17</value>
+    <value>35, 528</value>
   </metadata>
   <metadata name="famProdBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>442, 134</value>
+    <value>679, 104</value>
   </metadata>
   <metadata name="sFCommesseSLSFArticoliBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 95</value>
   </metadata>
+  <metadata name="sFCommesseGLSFArticoliGLBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>452, 275</value>
+  </metadata>
   <metadata name="sFAnagraficaClientiBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>401, 56</value>
+    <value>39, 568</value>
   </metadata>
   <metadata name="serialNumbersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>449, 212</value>
+    <value>446, 340</value>
   </metadata>
   <metadata name="serialNumbersTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>658, 212</value>
+    <value>651, 341</value>
   </metadata>
   <metadata name="sFDistinteBasiBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>695, 17</value>
+    <value>113, 529</value>
   </metadata>
   <metadata name="sF_DistinteBasiTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
+    <value>306, 529</value>
   </metadata>
   <metadata name="sFArticoliBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>492, 173</value>
+    <value>471, 309</value>
   </metadata>
   <metadata name="sF_ArticoliTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>672, 173</value>
+    <value>641, 313</value>
   </metadata>
   <metadata name="sFArticoliToXSWRBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>190, 251</value>
+    <value>188, 162</value>
   </metadata>
   <metadata name="sF_ArticoliToXSWRTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>417, 251</value>
+    <value>415, 162</value>
   </metadata>
   <metadata name="fWClientiBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>221, 56</value>
+    <value>628, 248</value>
   </metadata>
   <metadata name="fW_ClientiTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>323, 17</value>
+    <value>328, 187</value>
   </metadata>
   <metadata name="sF_Commesse_SLTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>231, 212</value>
+    <value>233, 345</value>
   </metadata>
   <metadata name="sF_AnagraficaClientiTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>635, 56</value>
+    <value>268, 567</value>
   </metadata>
   <metadata name="dtFirmwarelookupCommesseSLBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>512, 95</value>
+    <value>496, 566</value>
   </metadata>
   <metadata name="dt_Firmware_lookupCommesseSLTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+    <value>22, 187</value>
   </metadata>
   <metadata name="dtTmpProgrammadtFirmwareBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 134</value>
+    <value>29, 409</value>
   </metadata>
+  <metadata name="pan_Menu_exit.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>30, 12</value>
+  </metadata>
+  <metadata name="pan_Menu_exit.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>30, 12</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="menu_sw_exit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAMhJREFUOE+tk7ENhDAMRRnpRjjRM0C2uSrtjXAjUDAFPQPQUaZJTOnTyylIyaWB
+        8CULy9/+jp3QdXdi3/eniIwiooWNcGV+hhDCZ11XtdbqMAza9300fGJwIvIu6yIglmWJycYYnaZJ53mO
+        hk8Mjpw/EY6Geuq0bZsLIbyIY/jlSNk4zEchXUTEee8fWYdfjiOHkfhmeSjSnaPSrVJ8dK6KQBBk3tqm
+        E19aErlHoHWEY4ncwOklNl8j4BVefkgJEJefckLTz3QVXygn3G0uGcQIAAAAAElFTkSuQmCC
+</value>
+  </data>
   <metadata name="fam_ProdTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>619, 134</value>
+    <value>856, 104</value>
   </metadata>
   <metadata name="firmwareBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>861, 212</value>
+    <value>490, 376</value>
   </metadata>
   <metadata name="firmwareTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 251</value>
+    <value>663, 376</value>
   </metadata>
   <metadata name="sFLastSerialNumberBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 173</value>
+    <value>33, 381</value>
   </metadata>
   <metadata name="sF_LastSerialNumberTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>255, 173</value>
+    <value>265, 377</value>
   </metadata>
   <metadata name="safetyPointRFIDBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>643, 251</value>
+    <value>25, 279</value>
   </metadata>
   <metadata name="safetyPointRFIDTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>859, 251</value>
+    <value>646, 170</value>
   </metadata>
   <metadata name="sF_Commesse_GLTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>413, 332</value>
+    <value>420, 246</value>
+  </metadata>
+  <metadata name="gL_FW_ClientiTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>510, 529</value>
+  </metadata>
+  <metadata name="safetyPointRFID_GLTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>229, 280</value>
+  </metadata>
+  <metadata name="sFCommesseGLSFArticoliGLBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>452, 275</value>
+  </metadata>
+  <metadata name="sF_Articoli_GLTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>716, 279</value>
+  </metadata>
+  <metadata name="gL_SerialNumbersTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>798, 566</value>
+  </metadata>
+  <metadata name="sF_LastSerialNumber_GLTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 605</value>
+  </metadata>
+  <metadata name="gL_FirmwareTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>274, 605</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>636</value>

@@ -50,6 +50,18 @@ namespace SmartLineProduction
 
         private void UC_Programmazione_GL_Commessa_Load(object sender, EventArgs e)
         {
+            // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione_GL.GL_Firmware'. È possibile spostarla o rimuoverla se necessario.
+            this.gL_FirmwareTableAdapter.Fill(this.ds_Programmazione_GL.GL_Firmware);
+            // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione_GL.SF_LastSerialNumber_GL'. È possibile spostarla o rimuoverla se necessario.
+            this.sF_LastSerialNumber_GLTableAdapter.Fill(this.ds_Programmazione_GL.SF_LastSerialNumber_GL);
+            // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione_GL.GL_SerialNumbers'. È possibile spostarla o rimuoverla se necessario.
+            this.gL_SerialNumbersTableAdapter.Fill(this.ds_Programmazione_GL.GL_SerialNumbers);
+            // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione_GL.SF_Articoli_GL'. È possibile spostarla o rimuoverla se necessario.
+            this.sF_Articoli_GLTableAdapter.Fill(this.ds_Programmazione_GL.SF_Articoli_GL);
+            // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione_GL.SafetyPointRFID_GL'. È possibile spostarla o rimuoverla se necessario.
+            this.safetyPointRFID_GLTableAdapter.Fill(this.ds_Programmazione_GL.SafetyPointRFID_GL);
+            // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione_GL.GL_FW_Clienti'. È possibile spostarla o rimuoverla se necessario.
+            this.gL_FW_ClientiTableAdapter.Fill(this.ds_Programmazione_GL.GL_FW_Clienti);
             // Abilita zone dello schermo
             ds_Programmazione_GL.dt_GL_Tmp_Fw.Clear();
             ds_Programmazione_GL.dt_GL_Tmp_Programma.Clear();
