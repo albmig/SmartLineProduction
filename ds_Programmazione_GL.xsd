@@ -822,6 +822,49 @@ WHERE        (SW_Obsolete_ver = 1)</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SF_DistinteBasi_GLTableAdapter" GeneratorDataComponentClassName="SF_DistinteBasi_GLTableAdapter" Name="SF_DistinteBasi_GL" UserDataComponentName="SF_DistinteBasi_GLTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionStringOk (Settings)" DbObjectName="SISTEMATICA_FACTORY.dbo.SF_DistinteBasi" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        RTRIM(ArticoloComposto) AS ArticoloComposto, ProgrComponente, RTRIM(ArticoloComponente) AS ArticoloComponente, DataInizioValidita, DataFineValidita, Quantita, Descrizione, DescrizioneEstesa, Modello
+FROM            SF_DistinteBasi
+WHERE        (RTRIM(ArticoloComposto) LIKE 'XKIT%L')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ArticoloComposto" DataSetColumn="ArticoloComposto" />
+              <Mapping SourceColumn="ProgrComponente" DataSetColumn="ProgrComponente" />
+              <Mapping SourceColumn="ArticoloComponente" DataSetColumn="ArticoloComponente" />
+              <Mapping SourceColumn="DataInizioValidita" DataSetColumn="DataInizioValidita" />
+              <Mapping SourceColumn="DataFineValidita" DataSetColumn="DataFineValidita" />
+              <Mapping SourceColumn="Quantita" DataSetColumn="Quantita" />
+              <Mapping SourceColumn="Descrizione" DataSetColumn="Descrizione" />
+              <Mapping SourceColumn="DescrizioneEstesa" DataSetColumn="DescrizioneEstesa" />
+              <Mapping SourceColumn="Modello" DataSetColumn="Modello" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionStringOk (Settings)" DbObjectName="SISTEMATICA_FACTORY.dbo.SF_DistinteBasi_GL" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy_AllComponents" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="FillBy_AllComponents" GetMethodModifier="Public" GetMethodName="GetDataBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillBy_AllComponents">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT RTRIM(ArticoloComponente) AS ArticoloComponente, RTRIM(ArticoloComposto) AS ArticoloComposto, DataFineValidita, DataInizioValidita, Descrizione, DescrizioneEstesa, Modello, ProgrComponente, Quantita FROM SF_DistinteBasi_GL</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SISTEMATICA_FACTORYConnectionStringOk (Settings)" DbObjectName="SISTEMATICA_FACTORY.dbo.SF_DistinteBasi_GL" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy_Kit" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy_Kit" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy_Kit">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT RTRIM(ArticoloComponente) AS ArticoloComponente, RTRIM(ArticoloComposto) AS ArticoloComposto, DataFineValidita, DataInizioValidita, Descrizione, DescrizioneEstesa, Modello, ProgrComponente, Quantita FROM SF_DistinteBasi_GL WHERE (RTRIM(ArticoloComposto) LIKE 'GKIT%') ORDER BY RTRIM(ArticoloComposto)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -830,7 +873,7 @@ WHERE        (SW_Obsolete_ver = 1)</CommandText>
   <xs:element name="ds_Programmazione_GL" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ds_Programmazione_GL" msprop:Generator_UserDSName="ds_Programmazione_GL">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="SF_Commesse_GL" msprop:Generator_TableClassName="SF_Commesse_GLDataTable" msprop:Generator_TableVarName="tableSF_Commesse_GL" msprop:Generator_TablePropName="SF_Commesse_GL" msprop:Generator_RowDeletingName="SF_Commesse_GLRowDeleting" msprop:Generator_RowChangingName="SF_Commesse_GLRowChanging" msprop:Generator_RowEvHandlerName="SF_Commesse_GLRowChangeEventHandler" msprop:Generator_RowDeletedName="SF_Commesse_GLRowDeleted" msprop:Generator_UserTableName="SF_Commesse_GL" msprop:Generator_RowChangedName="SF_Commesse_GLRowChanged" msprop:Generator_RowEvArgName="SF_Commesse_GLRowChangeEvent" msprop:Generator_RowClassName="SF_Commesse_GLRow">
+        <xs:element name="SF_Commesse_GL" msprop:Generator_TableClassName="SF_Commesse_GLDataTable" msprop:Generator_TableVarName="tableSF_Commesse_GL" msprop:Generator_RowChangedName="SF_Commesse_GLRowChanged" msprop:Generator_TablePropName="SF_Commesse_GL" msprop:Generator_RowDeletingName="SF_Commesse_GLRowDeleting" msprop:Generator_RowChangingName="SF_Commesse_GLRowChanging" msprop:Generator_RowEvHandlerName="SF_Commesse_GLRowChangeEventHandler" msprop:Generator_RowDeletedName="SF_Commesse_GLRowDeleted" msprop:Generator_RowClassName="SF_Commesse_GLRow" msprop:Generator_UserTableName="SF_Commesse_GL" msprop:Generator_RowEvArgName="SF_Commesse_GLRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TipoOrdine" msprop:Generator_ColumnVarNameInTable="columnTipoOrdine" msprop:Generator_ColumnPropNameInRow="TipoOrdine" msprop:Generator_ColumnPropNameInTable="TipoOrdineColumn" msprop:Generator_UserColumnName="TipoOrdine" minOccurs="0">
@@ -935,7 +978,7 @@ WHERE        (SW_Obsolete_ver = 1)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="SF_ArticoliToXSWR_GL" msprop:Generator_TableClassName="SF_ArticoliToXSWR_GLDataTable" msprop:Generator_TableVarName="tableSF_ArticoliToXSWR_GL" msprop:Generator_TablePropName="SF_ArticoliToXSWR_GL" msprop:Generator_RowDeletingName="SF_ArticoliToXSWR_GLRowDeleting" msprop:Generator_RowChangingName="SF_ArticoliToXSWR_GLRowChanging" msprop:Generator_RowEvHandlerName="SF_ArticoliToXSWR_GLRowChangeEventHandler" msprop:Generator_RowDeletedName="SF_ArticoliToXSWR_GLRowDeleted" msprop:Generator_UserTableName="SF_ArticoliToXSWR_GL" msprop:Generator_RowChangedName="SF_ArticoliToXSWR_GLRowChanged" msprop:Generator_RowEvArgName="SF_ArticoliToXSWR_GLRowChangeEvent" msprop:Generator_RowClassName="SF_ArticoliToXSWR_GLRow">
+        <xs:element name="SF_ArticoliToXSWR_GL" msprop:Generator_TableClassName="SF_ArticoliToXSWR_GLDataTable" msprop:Generator_TableVarName="tableSF_ArticoliToXSWR_GL" msprop:Generator_RowChangedName="SF_ArticoliToXSWR_GLRowChanged" msprop:Generator_TablePropName="SF_ArticoliToXSWR_GL" msprop:Generator_RowDeletingName="SF_ArticoliToXSWR_GLRowDeleting" msprop:Generator_RowChangingName="SF_ArticoliToXSWR_GLRowChanging" msprop:Generator_RowEvHandlerName="SF_ArticoliToXSWR_GLRowChangeEventHandler" msprop:Generator_RowDeletedName="SF_ArticoliToXSWR_GLRowDeleted" msprop:Generator_RowClassName="SF_ArticoliToXSWR_GLRow" msprop:Generator_UserTableName="SF_ArticoliToXSWR_GL" msprop:Generator_RowEvArgName="SF_ArticoliToXSWR_GLRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ArtCommessa" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnArtCommessa" msprop:Generator_ColumnPropNameInRow="ArtCommessa" msprop:Generator_ColumnPropNameInTable="ArtCommessaColumn" msprop:Generator_UserColumnName="ArtCommessa" minOccurs="0">
@@ -983,7 +1026,7 @@ WHERE        (SW_Obsolete_ver = 1)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="SF_Articoli_GL" msprop:Generator_TableClassName="SF_Articoli_GLDataTable" msprop:Generator_TableVarName="tableSF_Articoli_GL" msprop:Generator_RowChangedName="SF_Articoli_GLRowChanged" msprop:Generator_TablePropName="SF_Articoli_GL" msprop:Generator_RowDeletingName="SF_Articoli_GLRowDeleting" msprop:Generator_RowChangingName="SF_Articoli_GLRowChanging" msprop:Generator_RowEvHandlerName="SF_Articoli_GLRowChangeEventHandler" msprop:Generator_RowDeletedName="SF_Articoli_GLRowDeleted" msprop:Generator_RowClassName="SF_Articoli_GLRow" msprop:Generator_UserTableName="SF_Articoli_GL" msprop:Generator_RowEvArgName="SF_Articoli_GLRowChangeEvent">
+        <xs:element name="SF_Articoli_GL" msprop:Generator_TableClassName="SF_Articoli_GLDataTable" msprop:Generator_TableVarName="tableSF_Articoli_GL" msprop:Generator_TablePropName="SF_Articoli_GL" msprop:Generator_RowDeletingName="SF_Articoli_GLRowDeleting" msprop:Generator_RowChangingName="SF_Articoli_GLRowChanging" msprop:Generator_RowEvHandlerName="SF_Articoli_GLRowChangeEventHandler" msprop:Generator_RowDeletedName="SF_Articoli_GLRowDeleted" msprop:Generator_UserTableName="SF_Articoli_GL" msprop:Generator_RowChangedName="SF_Articoli_GLRowChanged" msprop:Generator_RowEvArgName="SF_Articoli_GLRowChangeEvent" msprop:Generator_RowClassName="SF_Articoli_GLRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Articolo" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnArticolo" msprop:Generator_ColumnPropNameInRow="Articolo" msprop:Generator_ColumnPropNameInTable="ArticoloColumn" msprop:Generator_UserColumnName="Articolo" minOccurs="0">
@@ -1031,7 +1074,7 @@ WHERE        (SW_Obsolete_ver = 1)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="CommesseGL_Count" msprop:Generator_TableClassName="CommesseGL_CountDataTable" msprop:Generator_TableVarName="tableCommesseGL_Count" msprop:Generator_TablePropName="CommesseGL_Count" msprop:Generator_RowDeletingName="CommesseGL_CountRowDeleting" msprop:Generator_RowChangingName="CommesseGL_CountRowChanging" msprop:Generator_RowEvHandlerName="CommesseGL_CountRowChangeEventHandler" msprop:Generator_RowDeletedName="CommesseGL_CountRowDeleted" msprop:Generator_UserTableName="CommesseGL_Count" msprop:Generator_RowChangedName="CommesseGL_CountRowChanged" msprop:Generator_RowEvArgName="CommesseGL_CountRowChangeEvent" msprop:Generator_RowClassName="CommesseGL_CountRow">
+        <xs:element name="CommesseGL_Count" msprop:Generator_TableClassName="CommesseGL_CountDataTable" msprop:Generator_TableVarName="tableCommesseGL_Count" msprop:Generator_RowChangedName="CommesseGL_CountRowChanged" msprop:Generator_TablePropName="CommesseGL_Count" msprop:Generator_RowDeletingName="CommesseGL_CountRowDeleting" msprop:Generator_RowChangingName="CommesseGL_CountRowChanging" msprop:Generator_RowEvHandlerName="CommesseGL_CountRowChangeEventHandler" msprop:Generator_RowDeletedName="CommesseGL_CountRowDeleted" msprop:Generator_RowClassName="CommesseGL_CountRow" msprop:Generator_UserTableName="CommesseGL_Count" msprop:Generator_RowEvArgName="CommesseGL_CountRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Ser_Commessa" msprop:Generator_ColumnVarNameInTable="columnSer_Commessa" msprop:Generator_ColumnPropNameInRow="Ser_Commessa" msprop:Generator_ColumnPropNameInTable="Ser_CommessaColumn" msprop:Generator_UserColumnName="Ser_Commessa" minOccurs="0">
@@ -1059,7 +1102,7 @@ WHERE        (SW_Obsolete_ver = 1)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="SF_LastSerialNumber_GL" msprop:Generator_TableClassName="SF_LastSerialNumber_GLDataTable" msprop:Generator_TableVarName="tableSF_LastSerialNumber_GL" msprop:Generator_TablePropName="SF_LastSerialNumber_GL" msprop:Generator_RowDeletingName="SF_LastSerialNumber_GLRowDeleting" msprop:Generator_RowChangingName="SF_LastSerialNumber_GLRowChanging" msprop:Generator_RowEvHandlerName="SF_LastSerialNumber_GLRowChangeEventHandler" msprop:Generator_RowDeletedName="SF_LastSerialNumber_GLRowDeleted" msprop:Generator_UserTableName="SF_LastSerialNumber_GL" msprop:Generator_RowChangedName="SF_LastSerialNumber_GLRowChanged" msprop:Generator_RowEvArgName="SF_LastSerialNumber_GLRowChangeEvent" msprop:Generator_RowClassName="SF_LastSerialNumber_GLRow">
+        <xs:element name="SF_LastSerialNumber_GL" msprop:Generator_TableClassName="SF_LastSerialNumber_GLDataTable" msprop:Generator_TableVarName="tableSF_LastSerialNumber_GL" msprop:Generator_RowChangedName="SF_LastSerialNumber_GLRowChanged" msprop:Generator_TablePropName="SF_LastSerialNumber_GL" msprop:Generator_RowDeletingName="SF_LastSerialNumber_GLRowDeleting" msprop:Generator_RowChangingName="SF_LastSerialNumber_GLRowChanging" msprop:Generator_RowEvHandlerName="SF_LastSerialNumber_GLRowChangeEventHandler" msprop:Generator_RowDeletedName="SF_LastSerialNumber_GLRowDeleted" msprop:Generator_RowClassName="SF_LastSerialNumber_GLRow" msprop:Generator_UserTableName="SF_LastSerialNumber_GL" msprop:Generator_RowEvArgName="SF_LastSerialNumber_GLRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Anno" msprop:Generator_ColumnVarNameInTable="columnAnno" msprop:Generator_ColumnPropNameInRow="Anno" msprop:Generator_ColumnPropNameInTable="AnnoColumn" msprop:Generator_UserColumnName="Anno" minOccurs="0">
@@ -1073,7 +1116,7 @@ WHERE        (SW_Obsolete_ver = 1)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="dt_GL_Tmp_Programma" msprop:Generator_TableClassName="dt_GL_Tmp_ProgrammaDataTable" msprop:Generator_TableVarName="tabledt_GL_Tmp_Programma" msprop:Generator_RowChangedName="dt_GL_Tmp_ProgrammaRowChanged" msprop:Generator_TablePropName="dt_GL_Tmp_Programma" msprop:Generator_RowDeletingName="dt_GL_Tmp_ProgrammaRowDeleting" msprop:Generator_RowChangingName="dt_GL_Tmp_ProgrammaRowChanging" msprop:Generator_RowEvHandlerName="dt_GL_Tmp_ProgrammaRowChangeEventHandler" msprop:Generator_RowDeletedName="dt_GL_Tmp_ProgrammaRowDeleted" msprop:Generator_RowClassName="dt_GL_Tmp_ProgrammaRow" msprop:Generator_UserTableName="dt_GL_Tmp_Programma" msprop:Generator_RowEvArgName="dt_GL_Tmp_ProgrammaRowChangeEvent">
+        <xs:element name="dt_GL_Tmp_Programma" msprop:Generator_TableClassName="dt_GL_Tmp_ProgrammaDataTable" msprop:Generator_TableVarName="tabledt_GL_Tmp_Programma" msprop:Generator_TablePropName="dt_GL_Tmp_Programma" msprop:Generator_RowDeletingName="dt_GL_Tmp_ProgrammaRowDeleting" msprop:Generator_RowChangingName="dt_GL_Tmp_ProgrammaRowChanging" msprop:Generator_RowEvHandlerName="dt_GL_Tmp_ProgrammaRowChangeEventHandler" msprop:Generator_RowDeletedName="dt_GL_Tmp_ProgrammaRowDeleted" msprop:Generator_UserTableName="dt_GL_Tmp_Programma" msprop:Generator_RowChangedName="dt_GL_Tmp_ProgrammaRowChanged" msprop:Generator_RowEvArgName="dt_GL_Tmp_ProgrammaRowChangeEvent" msprop:Generator_RowClassName="dt_GL_Tmp_ProgrammaRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="tmp_prog_id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columntmp_prog_id" msprop:Generator_ColumnPropNameInRow="tmp_prog_id" msprop:Generator_ColumnPropNameInTable="tmp_prog_idColumn" msprop:Generator_UserColumnName="tmp_prog_id" type="xs:short" />
@@ -1086,7 +1129,7 @@ WHERE        (SW_Obsolete_ver = 1)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="dt_GL_Tmp_Fw" msprop:Generator_TableClassName="dt_GL_Tmp_FwDataTable" msprop:Generator_TableVarName="tabledt_GL_Tmp_Fw" msprop:Generator_RowChangedName="dt_GL_Tmp_FwRowChanged" msprop:Generator_TablePropName="dt_GL_Tmp_Fw" msprop:Generator_RowDeletingName="dt_GL_Tmp_FwRowDeleting" msprop:Generator_RowChangingName="dt_GL_Tmp_FwRowChanging" msprop:Generator_RowEvHandlerName="dt_GL_Tmp_FwRowChangeEventHandler" msprop:Generator_RowDeletedName="dt_GL_Tmp_FwRowDeleted" msprop:Generator_RowClassName="dt_GL_Tmp_FwRow" msprop:Generator_UserTableName="dt_GL_Tmp_Fw" msprop:Generator_RowEvArgName="dt_GL_Tmp_FwRowChangeEvent">
+        <xs:element name="dt_GL_Tmp_Fw" msprop:Generator_TableClassName="dt_GL_Tmp_FwDataTable" msprop:Generator_TableVarName="tabledt_GL_Tmp_Fw" msprop:Generator_TablePropName="dt_GL_Tmp_Fw" msprop:Generator_RowDeletingName="dt_GL_Tmp_FwRowDeleting" msprop:Generator_RowChangingName="dt_GL_Tmp_FwRowChanging" msprop:Generator_RowEvHandlerName="dt_GL_Tmp_FwRowChangeEventHandler" msprop:Generator_RowDeletedName="dt_GL_Tmp_FwRowDeleted" msprop:Generator_UserTableName="dt_GL_Tmp_Fw" msprop:Generator_RowChangedName="dt_GL_Tmp_FwRowChanged" msprop:Generator_RowEvArgName="dt_GL_Tmp_FwRowChangeEvent" msprop:Generator_RowClassName="dt_GL_Tmp_FwRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="fw_codfw" msprop:Generator_ColumnVarNameInTable="columnfw_codfw" msprop:Generator_ColumnPropNameInRow="fw_codfw" msprop:Generator_ColumnPropNameInTable="fw_codfwColumn" msprop:Generator_UserColumnName="fw_codfw" type="xs:string" minOccurs="0" />
@@ -1101,7 +1144,7 @@ WHERE        (SW_Obsolete_ver = 1)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="GL_FW_Clienti" msprop:Generator_TableClassName="GL_FW_ClientiDataTable" msprop:Generator_TableVarName="tableGL_FW_Clienti" msprop:Generator_TablePropName="GL_FW_Clienti" msprop:Generator_RowDeletingName="GL_FW_ClientiRowDeleting" msprop:Generator_RowChangingName="GL_FW_ClientiRowChanging" msprop:Generator_RowEvHandlerName="GL_FW_ClientiRowChangeEventHandler" msprop:Generator_RowDeletedName="GL_FW_ClientiRowDeleted" msprop:Generator_UserTableName="GL_FW_Clienti" msprop:Generator_RowChangedName="GL_FW_ClientiRowChanged" msprop:Generator_RowEvArgName="GL_FW_ClientiRowChangeEvent" msprop:Generator_RowClassName="GL_FW_ClientiRow">
+        <xs:element name="GL_FW_Clienti" msprop:Generator_TableClassName="GL_FW_ClientiDataTable" msprop:Generator_TableVarName="tableGL_FW_Clienti" msprop:Generator_RowChangedName="GL_FW_ClientiRowChanged" msprop:Generator_TablePropName="GL_FW_Clienti" msprop:Generator_RowDeletingName="GL_FW_ClientiRowDeleting" msprop:Generator_RowChangingName="GL_FW_ClientiRowChanging" msprop:Generator_RowEvHandlerName="GL_FW_ClientiRowChangeEventHandler" msprop:Generator_RowDeletedName="GL_FW_ClientiRowDeleted" msprop:Generator_RowClassName="GL_FW_ClientiRow" msprop:Generator_UserTableName="GL_FW_Clienti" msprop:Generator_RowEvArgName="GL_FW_ClientiRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -1130,7 +1173,7 @@ WHERE        (SW_Obsolete_ver = 1)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="GL_SerialNumbers" msprop:Generator_TableClassName="GL_SerialNumbersDataTable" msprop:Generator_TableVarName="tableGL_SerialNumbers" msprop:Generator_TablePropName="GL_SerialNumbers" msprop:Generator_RowDeletingName="GL_SerialNumbersRowDeleting" msprop:Generator_RowChangingName="GL_SerialNumbersRowChanging" msprop:Generator_RowEvHandlerName="GL_SerialNumbersRowChangeEventHandler" msprop:Generator_RowDeletedName="GL_SerialNumbersRowDeleted" msprop:Generator_UserTableName="GL_SerialNumbers" msprop:Generator_RowChangedName="GL_SerialNumbersRowChanged" msprop:Generator_RowEvArgName="GL_SerialNumbersRowChangeEvent" msprop:Generator_RowClassName="GL_SerialNumbersRow">
+        <xs:element name="GL_SerialNumbers" msprop:Generator_TableClassName="GL_SerialNumbersDataTable" msprop:Generator_TableVarName="tableGL_SerialNumbers" msprop:Generator_RowChangedName="GL_SerialNumbersRowChanged" msprop:Generator_TablePropName="GL_SerialNumbers" msprop:Generator_RowDeletingName="GL_SerialNumbersRowDeleting" msprop:Generator_RowChangingName="GL_SerialNumbersRowChanging" msprop:Generator_RowEvHandlerName="GL_SerialNumbersRowChangeEventHandler" msprop:Generator_RowDeletedName="GL_SerialNumbersRowDeleted" msprop:Generator_RowClassName="GL_SerialNumbersRow" msprop:Generator_UserTableName="GL_SerialNumbers" msprop:Generator_RowEvArgName="GL_SerialNumbersRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -1235,7 +1278,7 @@ WHERE        (SW_Obsolete_ver = 1)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="GL_Firmware" msprop:Generator_TableClassName="GL_FirmwareDataTable" msprop:Generator_TableVarName="tableGL_Firmware" msprop:Generator_TablePropName="GL_Firmware" msprop:Generator_RowDeletingName="GL_FirmwareRowDeleting" msprop:Generator_RowChangingName="GL_FirmwareRowChanging" msprop:Generator_RowEvHandlerName="GL_FirmwareRowChangeEventHandler" msprop:Generator_RowDeletedName="GL_FirmwareRowDeleted" msprop:Generator_UserTableName="GL_Firmware" msprop:Generator_RowChangedName="GL_FirmwareRowChanged" msprop:Generator_RowEvArgName="GL_FirmwareRowChangeEvent" msprop:Generator_RowClassName="GL_FirmwareRow">
+        <xs:element name="GL_Firmware" msprop:Generator_TableClassName="GL_FirmwareDataTable" msprop:Generator_TableVarName="tableGL_Firmware" msprop:Generator_RowChangedName="GL_FirmwareRowChanged" msprop:Generator_TablePropName="GL_Firmware" msprop:Generator_RowDeletingName="GL_FirmwareRowDeleting" msprop:Generator_RowChangingName="GL_FirmwareRowChanging" msprop:Generator_RowEvHandlerName="GL_FirmwareRowChangeEventHandler" msprop:Generator_RowDeletedName="GL_FirmwareRowDeleted" msprop:Generator_RowClassName="GL_FirmwareRow" msprop:Generator_UserTableName="GL_Firmware" msprop:Generator_RowEvArgName="GL_FirmwareRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -1366,7 +1409,7 @@ WHERE        (SW_Obsolete_ver = 1)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="dt_Firmware_lookupCommesseGL" msprop:Generator_TableClassName="dt_Firmware_lookupCommesseGLDataTable" msprop:Generator_TableVarName="tabledt_Firmware_lookupCommesseGL" msprop:Generator_RowChangedName="dt_Firmware_lookupCommesseGLRowChanged" msprop:Generator_TablePropName="dt_Firmware_lookupCommesseGL" msprop:Generator_RowDeletingName="dt_Firmware_lookupCommesseGLRowDeleting" msprop:Generator_RowChangingName="dt_Firmware_lookupCommesseGLRowChanging" msprop:Generator_RowEvHandlerName="dt_Firmware_lookupCommesseGLRowChangeEventHandler" msprop:Generator_RowDeletedName="dt_Firmware_lookupCommesseGLRowDeleted" msprop:Generator_RowClassName="dt_Firmware_lookupCommesseGLRow" msprop:Generator_UserTableName="dt_Firmware_lookupCommesseGL" msprop:Generator_RowEvArgName="dt_Firmware_lookupCommesseGLRowChangeEvent">
+        <xs:element name="dt_Firmware_lookupCommesseGL" msprop:Generator_TableClassName="dt_Firmware_lookupCommesseGLDataTable" msprop:Generator_TableVarName="tabledt_Firmware_lookupCommesseGL" msprop:Generator_TablePropName="dt_Firmware_lookupCommesseGL" msprop:Generator_RowDeletingName="dt_Firmware_lookupCommesseGLRowDeleting" msprop:Generator_RowChangingName="dt_Firmware_lookupCommesseGLRowChanging" msprop:Generator_RowEvHandlerName="dt_Firmware_lookupCommesseGLRowChangeEventHandler" msprop:Generator_RowDeletedName="dt_Firmware_lookupCommesseGLRowDeleted" msprop:Generator_UserTableName="dt_Firmware_lookupCommesseGL" msprop:Generator_RowChangedName="dt_Firmware_lookupCommesseGLRowChanged" msprop:Generator_RowEvArgName="dt_Firmware_lookupCommesseGLRowChangeEvent" msprop:Generator_RowClassName="dt_Firmware_lookupCommesseGLRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -1485,7 +1528,7 @@ WHERE        (SW_Obsolete_ver = 1)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="SerialNumbersGL_Obsolete" msprop:Generator_TableClassName="SerialNumbersGL_ObsoleteDataTable" msprop:Generator_TableVarName="tableSerialNumbersGL_Obsolete" msprop:Generator_RowChangedName="SerialNumbersGL_ObsoleteRowChanged" msprop:Generator_TablePropName="SerialNumbersGL_Obsolete" msprop:Generator_RowDeletingName="SerialNumbersGL_ObsoleteRowDeleting" msprop:Generator_RowChangingName="SerialNumbersGL_ObsoleteRowChanging" msprop:Generator_RowEvHandlerName="SerialNumbersGL_ObsoleteRowChangeEventHandler" msprop:Generator_RowDeletedName="SerialNumbersGL_ObsoleteRowDeleted" msprop:Generator_RowClassName="SerialNumbersGL_ObsoleteRow" msprop:Generator_UserTableName="SerialNumbersGL_Obsolete" msprop:Generator_RowEvArgName="SerialNumbersGL_ObsoleteRowChangeEvent">
+        <xs:element name="SerialNumbersGL_Obsolete" msprop:Generator_TableClassName="SerialNumbersGL_ObsoleteDataTable" msprop:Generator_TableVarName="tableSerialNumbersGL_Obsolete" msprop:Generator_TablePropName="SerialNumbersGL_Obsolete" msprop:Generator_RowDeletingName="SerialNumbersGL_ObsoleteRowDeleting" msprop:Generator_RowChangingName="SerialNumbersGL_ObsoleteRowChanging" msprop:Generator_RowEvHandlerName="SerialNumbersGL_ObsoleteRowChangeEventHandler" msprop:Generator_RowDeletedName="SerialNumbersGL_ObsoleteRowDeleted" msprop:Generator_UserTableName="SerialNumbersGL_Obsolete" msprop:Generator_RowChangedName="SerialNumbersGL_ObsoleteRowChanged" msprop:Generator_RowEvArgName="SerialNumbersGL_ObsoleteRowChangeEvent" msprop:Generator_RowClassName="SerialNumbersGL_ObsoleteRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Ser_Kit" msprop:Generator_ColumnVarNameInTable="columnSer_Kit" msprop:Generator_ColumnPropNameInRow="Ser_Kit" msprop:Generator_ColumnPropNameInTable="Ser_KitColumn" msprop:Generator_UserColumnName="Ser_Kit" minOccurs="0">
@@ -1575,7 +1618,7 @@ WHERE        (SW_Obsolete_ver = 1)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="SafetyPointRFID_GL" msprop:Generator_TableClassName="SafetyPointRFID_GLDataTable" msprop:Generator_TableVarName="tableSafetyPointRFID_GL" msprop:Generator_RowChangedName="SafetyPointRFID_GLRowChanged" msprop:Generator_TablePropName="SafetyPointRFID_GL" msprop:Generator_RowDeletingName="SafetyPointRFID_GLRowDeleting" msprop:Generator_RowChangingName="SafetyPointRFID_GLRowChanging" msprop:Generator_RowEvHandlerName="SafetyPointRFID_GLRowChangeEventHandler" msprop:Generator_RowDeletedName="SafetyPointRFID_GLRowDeleted" msprop:Generator_RowClassName="SafetyPointRFID_GLRow" msprop:Generator_UserTableName="SafetyPointRFID_GL" msprop:Generator_RowEvArgName="SafetyPointRFID_GLRowChangeEvent">
+        <xs:element name="SafetyPointRFID_GL" msprop:Generator_TableClassName="SafetyPointRFID_GLDataTable" msprop:Generator_TableVarName="tableSafetyPointRFID_GL" msprop:Generator_TablePropName="SafetyPointRFID_GL" msprop:Generator_RowDeletingName="SafetyPointRFID_GLRowDeleting" msprop:Generator_RowChangingName="SafetyPointRFID_GLRowChanging" msprop:Generator_RowEvHandlerName="SafetyPointRFID_GLRowChangeEventHandler" msprop:Generator_RowDeletedName="SafetyPointRFID_GLRowDeleted" msprop:Generator_UserTableName="SafetyPointRFID_GL" msprop:Generator_RowChangedName="SafetyPointRFID_GLRowChanged" msprop:Generator_RowEvArgName="SafetyPointRFID_GLRowChangeEvent" msprop:Generator_RowClassName="SafetyPointRFID_GLRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Rfid_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnRfid_ID" msprop:Generator_ColumnPropNameInRow="Rfid_ID" msprop:Generator_ColumnPropNameInTable="Rfid_IDColumn" msprop:Generator_UserColumnName="Rfid_ID" type="xs:int" />
@@ -1619,7 +1662,7 @@ WHERE        (SW_Obsolete_ver = 1)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="GL_FW_Revisioni" msprop:Generator_TableClassName="GL_FW_RevisioniDataTable" msprop:Generator_TableVarName="tableGL_FW_Revisioni" msprop:Generator_TablePropName="GL_FW_Revisioni" msprop:Generator_RowDeletingName="GL_FW_RevisioniRowDeleting" msprop:Generator_RowChangingName="GL_FW_RevisioniRowChanging" msprop:Generator_RowEvHandlerName="GL_FW_RevisioniRowChangeEventHandler" msprop:Generator_RowDeletedName="GL_FW_RevisioniRowDeleted" msprop:Generator_UserTableName="GL_FW_Revisioni" msprop:Generator_RowChangedName="GL_FW_RevisioniRowChanged" msprop:Generator_RowEvArgName="GL_FW_RevisioniRowChangeEvent" msprop:Generator_RowClassName="GL_FW_RevisioniRow">
+        <xs:element name="GL_FW_Revisioni" msprop:Generator_TableClassName="GL_FW_RevisioniDataTable" msprop:Generator_TableVarName="tableGL_FW_Revisioni" msprop:Generator_RowChangedName="GL_FW_RevisioniRowChanged" msprop:Generator_TablePropName="GL_FW_Revisioni" msprop:Generator_RowDeletingName="GL_FW_RevisioniRowDeleting" msprop:Generator_RowChangingName="GL_FW_RevisioniRowChanging" msprop:Generator_RowEvHandlerName="GL_FW_RevisioniRowChangeEventHandler" msprop:Generator_RowDeletedName="GL_FW_RevisioniRowDeleted" msprop:Generator_RowClassName="GL_FW_RevisioniRow" msprop:Generator_UserTableName="GL_FW_Revisioni" msprop:Generator_RowEvArgName="GL_FW_RevisioniRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -1757,6 +1800,63 @@ WHERE        (SW_Obsolete_ver = 1)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="SF_DistinteBasi_GL" msprop:Generator_TableClassName="SF_DistinteBasi_GLDataTable" msprop:Generator_TableVarName="tableSF_DistinteBasi_GL" msprop:Generator_TablePropName="SF_DistinteBasi_GL" msprop:Generator_RowDeletingName="SF_DistinteBasi_GLRowDeleting" msprop:Generator_RowChangingName="SF_DistinteBasi_GLRowChanging" msprop:Generator_RowEvHandlerName="SF_DistinteBasi_GLRowChangeEventHandler" msprop:Generator_RowDeletedName="SF_DistinteBasi_GLRowDeleted" msprop:Generator_UserTableName="SF_DistinteBasi_GL" msprop:Generator_RowChangedName="SF_DistinteBasi_GLRowChanged" msprop:Generator_RowEvArgName="SF_DistinteBasi_GLRowChangeEvent" msprop:Generator_RowClassName="SF_DistinteBasi_GLRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ArticoloComposto" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnArticoloComposto" msprop:Generator_ColumnPropNameInRow="ArticoloComposto" msprop:Generator_ColumnPropNameInTable="ArticoloCompostoColumn" msprop:Generator_UserColumnName="ArticoloComposto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProgrComponente" msprop:Generator_ColumnVarNameInTable="columnProgrComponente" msprop:Generator_ColumnPropNameInRow="ProgrComponente" msprop:Generator_ColumnPropNameInTable="ProgrComponenteColumn" msprop:Generator_UserColumnName="ProgrComponente" type="xs:int" />
+              <xs:element name="ArticoloComponente" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnArticoloComponente" msprop:Generator_ColumnPropNameInRow="ArticoloComponente" msprop:Generator_ColumnPropNameInTable="ArticoloComponenteColumn" msprop:Generator_UserColumnName="ArticoloComponente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DataInizioValidita" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDataInizioValidita" msprop:Generator_ColumnPropNameInRow="DataInizioValidita" msprop:Generator_ColumnPropNameInTable="DataInizioValiditaColumn" msprop:Generator_UserColumnName="DataInizioValidita" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DataFineValidita" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDataFineValidita" msprop:Generator_ColumnPropNameInRow="DataFineValidita" msprop:Generator_ColumnPropNameInTable="DataFineValiditaColumn" msprop:Generator_UserColumnName="DataFineValidita" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Quantita" msprop:Generator_ColumnVarNameInTable="columnQuantita" msprop:Generator_ColumnPropNameInRow="Quantita" msprop:Generator_ColumnPropNameInTable="QuantitaColumn" msprop:Generator_UserColumnName="Quantita" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Descrizione" msprop:Generator_ColumnVarNameInTable="columnDescrizione" msprop:Generator_ColumnPropNameInRow="Descrizione" msprop:Generator_ColumnPropNameInTable="DescrizioneColumn" msprop:Generator_UserColumnName="Descrizione" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DescrizioneEstesa" msprop:Generator_ColumnVarNameInTable="columnDescrizioneEstesa" msprop:Generator_ColumnPropNameInRow="DescrizioneEstesa" msprop:Generator_ColumnPropNameInTable="DescrizioneEstesaColumn" msprop:Generator_UserColumnName="DescrizioneEstesa" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Modello" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnModello" msprop:Generator_ColumnPropNameInRow="Modello" msprop:Generator_ColumnPropNameInTable="ModelloColumn" msprop:Generator_UserColumnName="Modello" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -1778,11 +1878,11 @@ WHERE        (SW_Obsolete_ver = 1)</CommandText>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="SF_Commesse_GL_SF_ArticoliToXSWR_GL" msdata:parent="SF_Commesse_GL" msdata:child="SF_ArticoliToXSWR_GL" msdata:parentkey="Art_Commessa" msdata:childkey="ArtCommessa" msprop:Generator_UserChildTable="SF_ArticoliToXSWR_GL" msprop:Generator_ChildPropName="GetSF_ArticoliToXSWR_GLRows" msprop:Generator_UserRelationName="SF_Commesse_GL_SF_ArticoliToXSWR_GL" msprop:Generator_ParentPropName="SF_Commesse_GLRow" msprop:Generator_RelationVarName="relationSF_Commesse_GL_SF_ArticoliToXSWR_GL" msprop:Generator_UserParentTable="SF_Commesse_GL" />
-      <msdata:Relationship name="SF_Commesse_GL_SF_Articoli_GL" msdata:parent="SF_Commesse_GL" msdata:child="SF_Articoli_GL" msdata:parentkey="Device" msdata:childkey="Articolo" msprop:Generator_UserChildTable="SF_Articoli_GL" msprop:Generator_ChildPropName="GetSF_Articoli_GLRows" msprop:Generator_UserRelationName="SF_Commesse_GL_SF_Articoli_GL" msprop:Generator_RelationVarName="relationSF_Commesse_GL_SF_Articoli_GL" msprop:Generator_UserParentTable="SF_Commesse_GL" msprop:Generator_ParentPropName="SF_Commesse_GLRow" />
-      <msdata:Relationship name="SF_Commesse_GL_CommesseGL_Count" msdata:parent="SF_Commesse_GL" msdata:child="CommesseGL_Count" msdata:parentkey="CommessaLong Art_Commessa Device" msdata:childkey="Ser_Commessa Ser_Kit Ser_Device" msprop:Generator_UserChildTable="CommesseGL_Count" msprop:Generator_ChildPropName="GetCommesseGL_CountRows" msprop:Generator_UserRelationName="SF_Commesse_GL_CommesseGL_Count" msprop:Generator_ParentPropName="SF_Commesse_GLRowParent" msprop:Generator_RelationVarName="relationSF_Commesse_GL_CommesseGL_Count" msprop:Generator_UserParentTable="SF_Commesse_GL" />
-      <msdata:Relationship name="SF_Commesse_GL_GL_FW_Clienti" msdata:parent="SF_Commesse_GL" msdata:child="GL_FW_Clienti" msdata:parentkey="CodAnagrafico" msdata:childkey="Cod_Nominativo" msprop:Generator_UserChildTable="GL_FW_Clienti" msprop:Generator_ChildPropName="GetGL_FW_ClientiRows" msprop:Generator_UserRelationName="SF_Commesse_GL_GL_FW_Clienti" msprop:Generator_ParentPropName="SF_Commesse_GLRow" msprop:Generator_RelationVarName="relationSF_Commesse_GL_GL_FW_Clienti" msprop:Generator_UserParentTable="SF_Commesse_GL" />
-      <msdata:Relationship name="dt_GL_Tmp_Programma_GL_Firmware" msdata:parent="dt_GL_Tmp_Programma" msdata:child="GL_Firmware" msdata:parentkey="tmp_prog_codart_fw" msdata:childkey="SW_Code" msprop:Generator_UserChildTable="GL_Firmware" msprop:Generator_ChildPropName="GetGL_FirmwareRows" msprop:Generator_UserRelationName="dt_GL_Tmp_Programma_GL_Firmware" msprop:Generator_ParentPropName="dt_GL_Tmp_ProgrammaRow" msprop:Generator_RelationVarName="relationdt_GL_Tmp_Programma_GL_Firmware" msprop:Generator_UserParentTable="dt_GL_Tmp_Programma" />
+      <msdata:Relationship name="SF_Commesse_GL_SF_ArticoliToXSWR_GL" msdata:parent="SF_Commesse_GL" msdata:child="SF_ArticoliToXSWR_GL" msdata:parentkey="Art_Commessa" msdata:childkey="ArtCommessa" msprop:Generator_UserChildTable="SF_ArticoliToXSWR_GL" msprop:Generator_ChildPropName="GetSF_ArticoliToXSWR_GLRows" msprop:Generator_UserRelationName="SF_Commesse_GL_SF_ArticoliToXSWR_GL" msprop:Generator_RelationVarName="relationSF_Commesse_GL_SF_ArticoliToXSWR_GL" msprop:Generator_UserParentTable="SF_Commesse_GL" msprop:Generator_ParentPropName="SF_Commesse_GLRow" />
+      <msdata:Relationship name="SF_Commesse_GL_SF_Articoli_GL" msdata:parent="SF_Commesse_GL" msdata:child="SF_Articoli_GL" msdata:parentkey="Device" msdata:childkey="Articolo" msprop:Generator_UserChildTable="SF_Articoli_GL" msprop:Generator_ChildPropName="GetSF_Articoli_GLRows" msprop:Generator_UserRelationName="SF_Commesse_GL_SF_Articoli_GL" msprop:Generator_ParentPropName="SF_Commesse_GLRow" msprop:Generator_RelationVarName="relationSF_Commesse_GL_SF_Articoli_GL" msprop:Generator_UserParentTable="SF_Commesse_GL" />
+      <msdata:Relationship name="SF_Commesse_GL_CommesseGL_Count" msdata:parent="SF_Commesse_GL" msdata:child="CommesseGL_Count" msdata:parentkey="CommessaLong Art_Commessa Device" msdata:childkey="Ser_Commessa Ser_Kit Ser_Device" msprop:Generator_UserChildTable="CommesseGL_Count" msprop:Generator_ChildPropName="GetCommesseGL_CountRows" msprop:Generator_UserRelationName="SF_Commesse_GL_CommesseGL_Count" msprop:Generator_RelationVarName="relationSF_Commesse_GL_CommesseGL_Count" msprop:Generator_UserParentTable="SF_Commesse_GL" msprop:Generator_ParentPropName="SF_Commesse_GLRowParent" />
+      <msdata:Relationship name="SF_Commesse_GL_GL_FW_Clienti" msdata:parent="SF_Commesse_GL" msdata:child="GL_FW_Clienti" msdata:parentkey="CodAnagrafico" msdata:childkey="Cod_Nominativo" msprop:Generator_UserChildTable="GL_FW_Clienti" msprop:Generator_ChildPropName="GetGL_FW_ClientiRows" msprop:Generator_UserRelationName="SF_Commesse_GL_GL_FW_Clienti" msprop:Generator_RelationVarName="relationSF_Commesse_GL_GL_FW_Clienti" msprop:Generator_UserParentTable="SF_Commesse_GL" msprop:Generator_ParentPropName="SF_Commesse_GLRow" />
+      <msdata:Relationship name="dt_GL_Tmp_Programma_GL_Firmware" msdata:parent="dt_GL_Tmp_Programma" msdata:child="GL_Firmware" msdata:parentkey="tmp_prog_codart_fw" msdata:childkey="SW_Code" msprop:Generator_UserChildTable="GL_Firmware" msprop:Generator_ChildPropName="GetGL_FirmwareRows" msprop:Generator_UserRelationName="dt_GL_Tmp_Programma_GL_Firmware" msprop:Generator_RelationVarName="relationdt_GL_Tmp_Programma_GL_Firmware" msprop:Generator_UserParentTable="dt_GL_Tmp_Programma" msprop:Generator_ParentPropName="dt_GL_Tmp_ProgrammaRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

@@ -48,31 +48,59 @@ namespace SmartLineProduction
             InitializeComponent();
         }
 
-        private void UC_Programmazione_GL_Commessa_Load(object sender, EventArgs e)
-        {
-            // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione_GL.GL_Firmware'. È possibile spostarla o rimuoverla se necessario.
-            this.gL_FirmwareTableAdapter.Fill(this.ds_Programmazione_GL.GL_Firmware);
-            // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione_GL.SF_LastSerialNumber_GL'. È possibile spostarla o rimuoverla se necessario.
-            this.sF_LastSerialNumber_GLTableAdapter.Fill(this.ds_Programmazione_GL.SF_LastSerialNumber_GL);
-            // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione_GL.GL_SerialNumbers'. È possibile spostarla o rimuoverla se necessario.
-            this.gL_SerialNumbersTableAdapter.Fill(this.ds_Programmazione_GL.GL_SerialNumbers);
-            // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione_GL.SF_Articoli_GL'. È possibile spostarla o rimuoverla se necessario.
-            this.sF_Articoli_GLTableAdapter.Fill(this.ds_Programmazione_GL.SF_Articoli_GL);
-            // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione_GL.SafetyPointRFID_GL'. È possibile spostarla o rimuoverla se necessario.
-            this.safetyPointRFID_GLTableAdapter.Fill(this.ds_Programmazione_GL.SafetyPointRFID_GL);
-            // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione_GL.GL_FW_Clienti'. È possibile spostarla o rimuoverla se necessario.
-            this.gL_FW_ClientiTableAdapter.Fill(this.ds_Programmazione_GL.GL_FW_Clienti);
-            // Abilita zone dello schermo
-            ds_Programmazione_GL.dt_GL_Tmp_Fw.Clear();
-            ds_Programmazione_GL.dt_GL_Tmp_Programma.Clear();
-            AbilitaSchermo();
+        ///////////////////////////////////////////////////////////////////////////////////////////////
+        /// Funzioni personali
+        ///////////////////////////////////////////////////////////////////////////////////////////////
 
-            CaricaArchivi();
+        private void LeggiConfig()
+        {
+            // Lettura impostazioni
+            glob_FW_folder = Properties.Settings.Default.FW_folder;
+            glob_Commander_path = Properties.Settings.Default.Commander_path;
         }
 
-        /// <summary>
-        /// Routines generiche
-        /// </summary>
+        private void CaricaArchivi()
+        {
+            //ds_commander.dt_Tmp_Fw.Clear();
+            ds_Programmazione_GL.dt_GL_Tmp_Programma.Clear();
+            dg_dt_tmp_programmazione.Refresh();
+            AbilitaSchermo();
+
+            GVar.CloseSplash = false;
+            Splash SplashDB = new Splash();
+            SplashDB.Show();
+
+            //-------------------------------------------------------------------------------//
+            //    GLOBAL LINE
+            //-------------------------------------------------------------------------------//
+
+            // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione_GL.SF_Commesse_GL'. È possibile spostarla o rimuoverla se necessario.
+            this.sF_Commesse_GLTableAdapter.Fill(this.ds_Programmazione_GL.SF_Commesse_GL);
+
+            //-------------------------------------------------------------------------------//
+
+            // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione.SF_LastSerialNumber'. È possibile spostarla o rimuoverla se necessario.
+            this.sF_LastSerialNumber_GLTableAdapter.Fill(this.ds_Programmazione_GL.SF_LastSerialNumber_GL);
+            // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione_GL.SF_DistinteBasi_GL'. È possibile spostarla o rimuoverla se necessario.
+            this.sF_DistinteBasi_GLTableAdapter.Fill(this.ds_Programmazione_GL.SF_DistinteBasi_GL);
+            // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione_GL.GL_Firmware'. È possibile spostarla o rimuoverla se necessario.
+            this.gL_FirmwareTableAdapter.Fill(this.ds_Programmazione_GL.GL_Firmware);
+            // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione_GL.SF_Articoli_GL'. È possibile spostarla o rimuoverla se necessario.
+            this.sF_Articoli_GLTableAdapter.Fill(this.ds_Programmazione_GL.SF_Articoli_GL);
+            // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione_GL.SF_ArticoliToXSWR_GL'. È possibile spostarla o rimuoverla se necessario.
+            this.sF_ArticoliToXSWR_GLTableAdapter.Fill(this.ds_Programmazione_GL.SF_ArticoliToXSWR_GL);
+            // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione_GL.GL_FW_Clienti'. È possibile spostarla o rimuoverla se necessario.
+            this.gL_FW_ClientiTableAdapter.Fill(this.ds_Programmazione_GL.GL_FW_Clienti);
+            // TODO: questa riga di codice carica i dati nella tabella 'ds_commander1.SF_Commesse_SL'. È possibile spostarla o rimuoverla se necessario.
+            this.sF_Commesse_GLTableAdapter.Fill(this.ds_Programmazione_GL.SF_Commesse_GL);
+            // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione_GL.SafetyPointRFID_GL'. È possibile spostarla o rimuoverla se necessario.
+            this.safetyPointRFID_GLTableAdapter.Fill(this.ds_Programmazione_GL.SafetyPointRFID_GL);
+            // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione_GL.GL_SerialNumbers'. È possibile spostarla o rimuoverla se necessario.
+            this.gL_SerialNumbersTableAdapter.Fill(this.ds_Programmazione_GL.GL_SerialNumbers);
+
+            SplashDB.Close();
+        }
+
         private void AbilitaSchermo()
         {
             lab_IDNumber_read.Text = "---";
@@ -91,269 +119,13 @@ namespace SmartLineProduction
             grid_commesse.Refresh();
         }
 
-        private void CaricaArchivi()
-        {
-            //ds_commander.dt_Tmp_Fw.Clear();
-            ds_Programmazione.dt_Tmp_Programma.Clear();
-            dg_dt_tmp_programmazione.Refresh();
-            AbilitaSchermo();
-
-            GVar.CloseSplash = false;
-            Splash SplashDB = new Splash();
-            SplashDB.Show();
-
-            //-------------------------------------------------------------------------------//
-            //    GLOBAL LINE
-            //-------------------------------------------------------------------------------//
-
-            // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione_GL.SF_Commesse_GL'. È possibile spostarla o rimuoverla se necessario.
-            this.sF_Commesse_GLTableAdapter.Fill(this.ds_Programmazione_GL.SF_Commesse_GL);
-
-            //-------------------------------------------------------------------------------//
-
-            // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione.SF_LastSerialNumber'. È possibile spostarla o rimuoverla se necessario.
-            this.sF_LastSerialNumberTableAdapter.Fill(this.ds_Programmazione.SF_LastSerialNumber);
-
-            // TODO: questa riga di codice carica i dati nella tabella 'ds_commander.dt_Firmware'. È possibile spostarla o rimuoverla se necessario.
-            this.sF_DistinteBasiTableAdapter.Fill(this.ds_SL.SF_DistinteBasi);
-            // TODO: questa riga di codice carica i dati nella tabella 'ds_commander.dt_Firmware'. È possibile spostarla o rimuoverla se necessario.
-            this.firmwareTableAdapter.Fill(this.ds_Programmazione.Firmware);
-            // TODO: questa riga di codice carica i dati nella tabella 'ds_commander1.SF_Articoli'. È possibile spostarla o rimuoverla se necessario.
-            this.sF_ArticoliTableAdapter.Fill(this.ds_Programmazione.SF_Articoli);
-            // TODO: questa riga di codice carica i dati nella tabella 'ds_commander1.SF_ArticoliToXSWR'. È possibile spostarla o rimuoverla se necessario.
-            this.sF_ArticoliToXSWRTableAdapter.Fill(this.ds_Programmazione.SF_ArticoliToXSWR);
-            // TODO: questa riga di codice carica i dati nella tabella 'ds_commander1.dt_FW_Clienti'. È possibile spostarla o rimuoverla se necessario.
-            this.fW_ClientiTableAdapter.Fill(this.ds_Programmazione.FW_Clienti);
-            // TODO: questa riga di codice carica i dati nella tabella 'ds_commander1.SF_Commesse_SL'. È possibile spostarla o rimuoverla se necessario.
-            this.sF_Commesse_SLTableAdapter.Fill(this.ds_Programmazione.SF_Commesse_SL);
-            // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione.SafetyPointRFID'. È possibile spostarla o rimuoverla se necessario.
-            this.safetyPointRFIDTableAdapter.Fill(this.ds_Programmazione.SafetyPointRFID);
-            // TODO: questa riga di codice carica i dati nella tabella 'ds_SL.Firmware'. È possibile spostarla o rimuoverla se necessario.
-            this.firmwareTableAdapter.Fill(this.ds_Programmazione.Firmware);
-            // TODO: questa riga di codice carica i dati nella tabella 'ds_SL.SerialNumbers'. È possibile spostarla o rimuoverla se necessario.
-            this.serialNumbersTableAdapter.Fill(this.ds_Programmazione.SerialNumbers);
-
-            SplashDB.Close();
-        }
-
-        private void LeggiConfig()
-        {
-            // Lettura impostazioni
-            glob_FW_folder = Properties.Settings.Default.FW_folder;
-            glob_Commander_path = Properties.Settings.Default.Commander_path;
-        }
-
-        private void grid_commesse_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //////////////////////////////////////////////////////////////////////////////////////////
-            // Controllo se posizionato sulla riga corretta
-
-            int pos_rowselected = grid_commesse.CurrentCell.RowIndex;
-            int pos_rowclicked = e.RowIndex;
-            if (pos_rowselected != pos_rowclicked)
-            {
-                string mess = "Rilevata incongruenza. Selezionare altra riga!";
-                //+"Selected = " + pos_rowclicked.ToString() + " / " + "Clicked = " + pos_rowclicked.ToString()
-
-                MessageBox.Show(mess);
-                return;
-            }
-            //string findCommessaLong = (string)grid_commesse.Rows[e.RowIndex].Cells["grid_commesse_CommessaLong"].Value;
-            //int pos_teorica = sFCommesseSLBindingSource.Position;
-            //int pos_reale = sFCommesseSLBindingSource.Find("CommessaLong", findCommessaLong);
-            //if (pos_reale != pos_teorica)
-            //{
-            //    sFCommesseSLBindingSource.Position = pos_reale;
-            //}
-            //////////////////////////////////////////////////////////////////////////////////////////
-
-
-            // controllo se già evasa
-            if (e.ColumnIndex == grid_commesse.Columns["grid_commesse_CommessaSelezionata"].Index)
-            {
-                int qtadaeva = 0;
-                int qtaevasa = 0;
-
-                try
-                {
-                    qtadaeva = Convert.ToInt32(grid_commesse.Rows[e.RowIndex].Cells["grid_commesse_QtaInOrdine"].Value);
-                                    }
-                catch (FormatException)
-                {
-                    qtadaeva = 0;
-                }
-
-                try
-                {
-                    qtaevasa = Convert.ToInt32(grid_commesse.Rows[e.RowIndex].Cells["grid_commesse_Qta_Evasa"].Value);
-                }
-                catch (FormatException)
-                {
-                    qtaevasa = 0;
-                }
-
-
-                if ((qtaevasa != 0) && (qtaevasa >= qtadaeva))
-                {
-                    MessageBox.Show("Commessa già evasa totalmente!");
-                    //return;
-                }
-            }
-
-            //Setto tipo programmazione
-            glob_tipo_progr = "C";
-
-            //Memorizzo indice riga
-            glob_selectedrecord = sFCommesseSLBindingSource.Position;
-
-            //Controllo su tipo riga
-            DataGridViewRow row = grid_commesse.Rows[e.RowIndex];
-            string CommessaLong = row.Cells["grid_commesse_CommessaLong"].Value.ToString().Trim();
-            string CommessaShort = row.Cells["grid_commesse_CommessaShort"].Value.ToString().Trim();
-            string Kit = row.Cells["grid_commesse_CodArticoloCommessa"].Value.ToString().Trim();
-            string Item = row.Cells["grid_commesse_Device"].Value.ToString().Trim();
-            string Fw = row.Cells["grid_commesse_SwDevice"].Value.ToString().Trim();
-            glob_ID_cli = row.Cells["grid_commesse_CodAnagrafico"].Value.ToString().Trim();
-
-            if ((e.ColumnIndex == grid_commesse.Columns["grid_commesse_ViewDevice"].Index) && (Item != ""))
-            {
-                using (var form = new UC_ImageDevice(Item, WEB_path_image))
-                {
-                    if (form.ShowDialog() == DialogResult.OK)
-                    {
-                    }
-                }
-            }
-
-            if (e.ColumnIndex == grid_commesse.Columns["grid_commesse_CommessaSelezionata"].Index) // Aggiorna
-            {
-                if (Item == "") // Solo Software
-                {
-                    Fw = Kit; //Sovrascrivo il codice software (non ce l'ho) con l'item
-                    AggiornaFwCliente(glob_ID_cli, Fw);
-                }
-                else
-                {
-                    ds_Programmazione_GL.dt_GL_Tmp_Programma.Clear();
-                    ds_SL.dt_TMP_Firmware.Clear();
-
-                    //Ricerca di tutti i device e di tutti i software
-                    TrovaFWDeviceCommesse(CommessaShort);
-                    TrovaFWDeviceKit(Kit, CommessaLong, CommessaShort, Convert.ToInt32(glob_ID_cli), Kit);
-
-                    //Controllo oggetto per capire che FW mettere
-                    ds_SL.dt_TMP_Firmware.DefaultView.Sort = "Livello_FW desc, Cod_FW asc";
-                    string tipodevice = Item.Substring(5, 1);
-                    string filtro = "";
-                    if (tipodevice == "P")
-                    {
-                        filtro = "Is_SWR_P = '1'";
-                    }
-                    if (tipodevice == "R")
-                    {
-                        filtro = "Is_SWR_R = '1'";
-                    }
-                    foreach (DataRow rows in ds_SL.dt_TMP_Firmware.Select(filtro))
-                    {
-                        Fw = rows["Cod_FW"].ToString();
-                        break;
-                    }
-
-                    DataRowView currentRowView = sFCommesseSLSFArticoliBindingSource.Current as DataRowView;
-                    string ID = currentRowView["Modello"].ToString();
-                    AggiungiRigaProg(CommessaLong, Kit, Item, Fw, 0, ID);
-                }
-            }
-
-            grid_commesse.Refresh();
-        }
-
-        private void grid_commesse_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
-        {
-            if (e.RowIndex < 0)
-                return;
-
-            if (e.ColumnIndex == grid_commesse.Columns["grid_commesse_ViewDevice"].Index)
-            {
-                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
-
-                var w = Properties.Resources.Lente.Width;
-                var h = Properties.Resources.Lente.Height;
-                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
-                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
-
-                e.Graphics.DrawImage(Properties.Resources.Lente, new Rectangle(x, y, w, h));
-                e.Handled = true;
-            }
-
-            if (e.ColumnIndex == grid_commesse.Columns["grid_commesse_Device"].Index)
-            {
-                if (grid_commesse.Rows[e.RowIndex].Cells["grid_commesse_Device"].Value.ToString() == "")
-                {
-                    // Verifica se il firmware è già associato al cliente
-                    bool newrecord = false;
-
-                    string CodAnaCli = grid_commesse.Rows[e.RowIndex].Cells["grid_commesse_CodAnagrafico"].Value.ToString();
-                    string Fw = grid_commesse.Rows[e.RowIndex].Cells["grid_commesse_CodArticoloCommessa"].Value.ToString();
-
-                    string sel = "Cod_Nominativo = " + "'" + CodAnaCli + "' AND SW_Code = '" + Fw + "'";
-                    DataRow[] result = ds_Programmazione.FW_Clienti.Select(sel);
-                    if (result.Count() > 0) { newrecord = false; } else { newrecord = true; }
-
-                    if (!newrecord)
-                    {
-                        //grid_commesse.Rows[e.RowIndex].DefaultCellStyle.ForeColor = System.Drawing.Color.Blue;
-                        grid_commesse.Rows[e.RowIndex].DefaultCellStyle.Font = new Font(grid_commesse.DefaultCellStyle.Font, System.Drawing.FontStyle.Strikeout);
-                        if (!glob_show_evasi) { grid_commesse.Rows[e.RowIndex].Visible = false; } else { grid_commesse.Rows[e.RowIndex].Visible = true; }
-                    }
-                }
-            }
-
-            if (e.ColumnIndex == grid_commesse.Columns["grid_commesse_Qta_Evasa"].Index)
-            {
-                if ((grid_commesse.Rows[e.RowIndex].Cells["grid_commesse_Qta_Evasa"].Value != null) && (grid_commesse.Rows[e.RowIndex].Cells["grid_commesse_Qta_Evasa"].Value.ToString() != ""))
-                {
-                    decimal qtadaeva = 0;
-                    decimal qtaevasa = 0;
-
-                    try
-                    {
-                        //qtadaeva = Int32.Parse(grid_commesse.Rows[e.RowIndex].Cells["grid_commesse_QtaDaEvadere"].Value.ToString());
-                        qtadaeva = Convert.ToDecimal(grid_commesse.Rows[e.RowIndex].Cells["grid_commesse_QtaDaEvadere"].Value.ToString());
-                    }
-                    catch (FormatException)
-                    {
-                        qtadaeva = 0;
-                    }
-
-                    try
-                    {
-                        //qtaevasa = Int32.Parse(grid_commesse.Rows[e.RowIndex].Cells["grid_commesse_Qta_Evasa"].Value.ToString());
-                        qtaevasa = Convert.ToDecimal(grid_commesse.Rows[e.RowIndex].Cells["grid_commesse_Qta_Evasa"].Value.ToString());
-                    }
-                    catch (FormatException)
-                    {
-                        qtaevasa = 0;
-                    }
-
-
-                    if ((qtaevasa != 0) && (qtaevasa >= qtadaeva))
-                    {
-                        //grid_commesse.Rows[e.RowIndex].DefaultCellStyle.ForeColor = System.Drawing.Color.Blue;
-                        grid_commesse.Rows[e.RowIndex].DefaultCellStyle.Font = new Font(grid_commesse.DefaultCellStyle.Font, System.Drawing.FontStyle.Strikeout);
-                        //                        if (!glob_show_evasi) { grid_commesse.Rows[e.RowIndex].Visible = false; } else { grid_commesse.Rows[e.RowIndex].Visible = true; }
-                    }
-                }
-            }
-        }
-
         private void AggiornaFwCliente(string CodAnaCli, string Fw)
         {
             // Verifica se nuovo SN o già esistente
             bool newrecord = false;
             //string sel = "Cod_Nominativo = " + "'" + CodAnaCli + "' AND SW_Code = '" + Fw + "'";
             string sel = "Cod_Nominativo = " + CodAnaCli + " AND SW_Code = '" + Fw + "'";
-            DataRow[] result = ds_Programmazione.FW_Clienti.Select(sel);
+            DataRow[] result = ds_Programmazione_GL.GL_FW_Clienti.Select(sel);
             if (result.Length > 0)
             { newrecord = false; }
             else
@@ -363,7 +135,7 @@ namespace SmartLineProduction
             {
                 string des_ita = "";
                 string des_en = "";
-                DataView dv_fw = new DataView(ds_Programmazione.Firmware);
+                DataView dv_fw = new DataView(ds_Programmazione_GL.GL_Firmware);
                 dv_fw.RowFilter = "SW_Code = " + "'" + Fw + "'";
                 if (dv_fw != null)
                 {
@@ -371,15 +143,15 @@ namespace SmartLineProduction
                     des_en = dv_fw[0]["SW_Descrizione_EN"].ToString();
                 }
 
-                DataRow newrow = ds_Programmazione.FW_Clienti.NewRow();
+                DataRow newrow = ds_Programmazione_GL.GL_FW_Clienti.NewRow();
                 newrow["Cod_Nominativo"] = CodAnaCli;
                 newrow["SW_Code"] = Fw;
                 newrow["SW_Des1"] = des_ita;
                 newrow["SW_Des2"] = des_en;
 
-                ds_Programmazione.FW_Clienti.Rows.Add(newrow);
+                ds_Programmazione_GL.GL_FW_Clienti.Rows.Add(newrow);
 
-                fW_ClientiTableAdapter.Update(newrow);
+                gL_FW_ClientiTableAdapter.Update(newrow);
             }
         }
 
@@ -391,7 +163,7 @@ namespace SmartLineProduction
             //DataRow[] rows = ds_commander1.SF_Commesse_SL.Select(filtro);
 
             // Ricerca FW in commesse
-            foreach (DataRow rows in ds_Programmazione.SF_Commesse_SL.Select(filtro))
+            foreach (DataRow rows in ds_Programmazione_GL.SF_Commesse_GL.Select(filtro))
             {
                 bool isswrP = Convert.ToBoolean(rows["Is_SWR_P"]);
                 bool isswrR = Convert.ToBoolean(rows["Is_SWR_R"]);
@@ -457,83 +229,6 @@ namespace SmartLineProduction
             ds_Programmazione_GL.dt_GL_Tmp_Programma.Rows.Add(dr);
 
             return true;
-        }
-
-        private void grid_commesse_menu_Click(object sender, EventArgs e)
-        {
-            Cursor.Current = Cursors.WaitCursor;
-
-            CaricaArchivi();
-
-            Cursor.Current = Cursors.Default;
-        }
-
-        private void grid_commesse_menu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-            var menuText = e.ClickedItem.Text;
-            switch (menuText)
-            {
-                case "Visualizza le commesse evase":
-                    glob_show_evasi = true;
-                    break;
-
-                case "Nascondi le commesse evase":
-                    glob_show_evasi = false;
-                    break;
-            }
-
-            //filtraggio delle righe
-            string filter = "";
-
-            if (!glob_show_evasi)
-            {
-                filter = "Qta_da_Evadere > Qta_Evasa";
-            }
-            sFCommesseSLBindingSource.Filter = filter;
-        }
-
-        private void grid_commesse_menu_Opened(object sender, EventArgs e)
-        {
-            if (glob_show_evasi)
-            {
-                menu_commesse_vis.Checked = true;
-                menu_commesse_nas.Checked = false;
-            }
-            else
-            {
-                menu_commesse_vis.Checked = false;
-                menu_commesse_nas.Checked = true;
-            }
-        }
-
-        private void dg_dt_tmp_programmazione_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            grid_commesse.Enabled = false;
-
-            dos_box.Clear();
-            var senderGrid = (DataGridView)sender;
-
-            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
-                e.RowIndex >= 0)
-            {
-                DataGridViewRow row = dg_dt_tmp_programmazione.Rows[e.RowIndex];
-                string Commessa = row.Cells["dg_dt_tmp_progr_Commessa"].Value.ToString();
-
-                string Kit = row.Cells["dg_dt_tmp_progr_Kit"].Value.ToString();
-                string Item = row.Cells["dg_dt_tmp_progr_Device"].Value.ToString();
-                glob_codice_sistema = Item;
-                string Fw = row.Cells["dg_dt_tmp_progr_Fw"].Value.ToString();
-                glob_codice_fw = Fw;
-
-                int Key_Id = Int16.Parse(row.Cells["dg_dt_tmp_progr_FwKeyId"].Value.ToString());
-                string ID_Hw = row.Cells["dg_dt_tmp_progr_ID_Hardware"].Value.ToString();
-                glob_ID_newcode = ID_Hw;
-                ProgrammaSilicon(Commessa, Kit, Item, Fw, Key_Id, ID_Hw);
-                CaricaArchivi();
-                RiposizionaGridCommesse();
-            }
-
-            grid_commesse.Enabled = true;
         }
 
         private bool ProgrammaSilicon(string Commessa, string Kit, string Item, string cod_fw, int fw_key_id, string ID_Hw)
@@ -1511,9 +1206,9 @@ namespace SmartLineProduction
             {
                 codice_fw = glob_codice_fw;
 
-                //DataView dv_firmware = new DataView(dt_Firmware_lookupCommesseSLTableAdapter);
-                this.dt_Firmware_lookupCommesseSLTableAdapter.FillBy(this.ds_Programmazione.dt_Firmware_lookupCommesseSL, codice_fw);
-                DataRowCollection rowCol = this.ds_Programmazione.dt_Firmware_lookupCommesseSL.Rows;
+                // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione_GL.dt_Firmware_lookupCommesseGL'. È possibile spostarla o rimuoverla se necessario.
+                this.dt_Firmware_lookupCommesseGLTableAdapter1.Fill(this.ds_Programmazione_GL.dt_Firmware_lookupCommesseGL);
+                DataRowCollection rowCol = this.ds_Programmazione_GL.dt_Firmware_lookupCommesseGL.Rows;
                 Fw_isStandard = (bool)rowCol[0]["SW_Standard"];
                 Fw_Rev = rowCol[0]["SW_Revisione"].ToString();
 
@@ -1526,7 +1221,7 @@ namespace SmartLineProduction
             // Verifica se nuovo SN o già esistente
             bool newrecord = false;
             string sel = "Ser_ReadSerial = " + "'" + serial_read + "'";
-            DataRow[] result = ds_Programmazione.SerialNumbers.Select(sel);
+            DataRow[] result = ds_Programmazione_GL.GL_SerialNumbers.Select(sel);
             if (result.Count() > 0) { newrecord = false; } else { newrecord = true; }
 
             //Cancello il record prima di scrivere il nuovo
@@ -1541,8 +1236,8 @@ namespace SmartLineProduction
             try
             {
                 Validate();
-                serialNumbersBindingSource.EndEdit();
-                serialNumbersTableAdapter.Update(this.ds_Programmazione.SerialNumbers);
+                gLSerialNumbersBindingSource.EndEdit();
+                gL_SerialNumbersTableAdapter.Update(this.ds_Programmazione_GL.GL_SerialNumbers);
             }
 #pragma warning disable CS0168 // La variabile 'ex' è dichiarata, ma non viene mai usata
             catch (System.Exception ex)
@@ -1551,7 +1246,7 @@ namespace SmartLineProduction
                 MessageBox.Show("Table 'SerialNumbers' - Update failed");
             }
 
-            DataRow newrow = ds_Programmazione.SerialNumbers.NewRow();
+            DataRow newrow = ds_Programmazione_GL.GL_SerialNumbers.NewRow();
             newrow["Ser_Device_ID_Code"] = ID_Hw;
             newrow["Ser_OfficialSerial"] = serial_write;
             newrow["Ser_ReadSerial"] = serial_read;
@@ -1575,7 +1270,7 @@ namespace SmartLineProduction
 
             try
             {
-                ds_Programmazione.SerialNumbers.Rows.Add(newrow);
+                ds_Programmazione_GL.GL_SerialNumbers.Rows.Add(newrow);
                 serialNumbersTableAdapter.Update(newrow);
             }
             catch (System.Exception ex)
@@ -1590,6 +1285,450 @@ namespace SmartLineProduction
             id_write = glob_ID_code;
             id_write = id_write + ID.Substring(0, 6) + ID.Substring(10, 6);
             return id_write;
+        }
+
+        private void menu_sw_exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private int TrovaLastProgr(string ID_Hw)
+        {
+            int returnLastNumber = 0;
+            string anno = Convert.ToString(DateTime.Now.Year);
+
+            sFLastSerialNumberBindingSource.Filter = "Anno = " + "'" + anno + "'";
+            if (sFLastSerialNumberBindingSource.Count != 0)
+            {
+                DataRowView current = (DataRowView)sFLastSerialNumberBindingSource.Current;
+                returnLastNumber = Convert.ToInt32(current["LastSerialID"]);
+            }
+            return returnLastNumber;
+        }
+
+        private void RiposizionaGridCommesse()
+        {
+            if (glob_selectedrecord != 0)
+            {
+                sFCommesseGLBindingSource.Position = glob_selectedrecord;
+            }
+        }
+
+        private void AggiornaSafetyPointRfid(string Commessa, string bt_device, string tag1, string tag2)
+        {
+            // Prima ricerca - pulizia per UUID 1
+            string filtro = "Rfid_UUID = " + "'" + tag1 + "'";
+            safetyPointRFIDGLBindingSource.Filter = filtro;
+            foreach (DataRowView tagRow in safetyPointRFIDGLBindingSource)
+            {
+                if ((tagRow["Rfid_Ser_SN_Prod"].ToString() != string.Empty) || (tagRow["Rfid_Ser_OfficialSerial"].ToString() != string.Empty))
+                {
+                    tagRow["Rfid_Ser_SN_Prod"] = null;
+                    tagRow["Rfid_Ser_OfficialSerial"] = null;
+                    string oldcontent = tagRow["Rfid_Note"].ToString();
+                    oldcontent = oldcontent + " - Eliminato l'accoppiamento con palmare il " + DateTime.Now.ToString("dd/MM/yyyy");
+                    tagRow["Rfid_Note"] = oldcontent;
+                    try
+                    {
+                        Validate();
+                        this.safetyPointRFIDGLBindingSource.EndEdit();
+                        this.safetyPointRFID_GLTableAdapter.Update(this.ds_Programmazione_GL.SafetyPointRFID_GL);
+                    }
+                    catch (System.Exception ex)
+                    {
+                        MessageBox.Show("Table 'SafetyPointRfid' - Update failed");
+                    }
+                }
+            }
+
+            // Seconda ricerca - pulizia per UUID 2
+            filtro = "Rfid_UUID = " + "'" + tag2 + "'";
+            safetyPointRFIDGLBindingSource.Filter = filtro;
+            foreach (DataRowView tagRow in  safetyPointRFIDGLBindingSource)
+            {
+                if ((tagRow["Rfid_Ser_SN_Prod"].ToString() != string.Empty) || (tagRow["Rfid_Ser_OfficialSerial"].ToString() != string.Empty))
+                {
+                    tagRow["Rfid_Ser_SN_Prod"] = null;
+                    tagRow["Rfid_Ser_OfficialSerial"] = null;
+                    string oldcontent = tagRow["Rfid_Note"].ToString();
+                    oldcontent = oldcontent + " - Eliminato l'accoppiamento con palmare il " + DateTime.Now.ToString("dd/MM/yyyy");
+                    tagRow["Rfid_Note"] = oldcontent;
+                    try
+                    {
+                        Validate();
+                        this.safetyPointRFIDGLBindingSource.EndEdit();
+                        this.safetyPointRFID_GLTableAdapter.Update(this.ds_Programmazione_GL.SafetyPointRFID_GL);
+                    }
+                    catch (System.Exception ex)
+                    {
+                        MessageBox.Show("Table 'SafetyPointRfid' - Update failed");
+                    }
+                }
+            }
+
+            // Terza ricerca - pulizia per codice device
+            filtro = "Rfid_Ser_OfficialSerial = " + "'" + bt_device + "'";
+            safetyPointRFIDGLBindingSource.Filter = filtro;
+            foreach (DataRowView tagRow in safetyPointRFIDGLBindingSource)
+            {
+                if ((tagRow["Rfid_Ser_SN_Prod"].ToString() != string.Empty) || (tagRow["Rfid_Ser_OfficialSerial"].ToString() != string.Empty))
+                {
+                    tagRow["Rfid_Ser_SN_Prod"] = null;
+                    tagRow["Rfid_Ser_OfficialSerial"] = null;
+                    string oldcontent = tagRow["Rfid_Note"].ToString();
+                    oldcontent = oldcontent + " - Eliminato l'accoppiamento con palmare il " + DateTime.Now.ToString("dd/MM/yyyy");
+                    tagRow["Rfid_Note"] = oldcontent;
+                    try
+                    {
+                        Validate();
+                        this.safetyPointRFIDGLBindingSource.EndEdit();
+                        this.safetyPointRFID_GLTableAdapter.Update(this.ds_Programmazione_GL.SafetyPointRFID_GL);
+                    }
+                    catch (System.Exception ex)
+                    {
+                        MessageBox.Show("Table 'SafetyPointRfid' - Update failed");
+                    }
+                }
+            }
+
+            //Scrittura - Tag 1
+            filtro = "Rfid_UUID = " + "'" + tag1 + "'";
+            safetyPointRFIDGLBindingSource.Filter = filtro;
+            foreach (DataRowView tag1Row in safetyPointRFIDGLBindingSource)
+            {
+                tag1Row["Rfid_Ser_OfficialSerial"] = bt_device;
+                string oldcontent = tag1Row["Rfid_Note"].ToString();
+                oldcontent = oldcontent + " - " + Commessa + ": Palmare " + bt_device;
+                tag1Row["Rfid_Note"] = oldcontent;
+                try
+                {
+                    Validate();
+                    this.safetyPointRFIDGLBindingSource.EndEdit();
+                    this.safetyPointRFID_GLTableAdapter.Update(this.ds_Programmazione_GL.SafetyPointRFID_GL);
+                }
+                catch (System.Exception ex)
+                {
+                    MessageBox.Show("Table 'SafetyPointRfid' - Update failed");
+                }
+            }
+
+            //Scrittura - Tag 2
+            filtro = "Rfid_UUID = " + "'" + tag2 + "'";
+            safetyPointRFIDGLBindingSource.Filter = filtro;
+            foreach (DataRowView tag2Row in safetyPointRFIDGLBindingSource)
+            {
+                tag2Row["Rfid_Ser_OfficialSerial"] = bt_device;
+                string oldcontent = tag2Row["Rfid_Note"].ToString();
+                oldcontent = oldcontent + " - " + Commessa + ": Palmare " + bt_device;
+                tag2Row["Rfid_Note"] = oldcontent;
+                try
+                {
+                    Validate();
+                    this.safetyPointRFIDGLBindingSource.EndEdit();
+                    this.safetyPointRFID_GLTableAdapter.Update(this.ds_Programmazione_GL.SafetyPointRFID_GL);
+                }
+                catch (System.Exception ex)
+                {
+                    MessageBox.Show("Table 'SafetyPointRfid' - Update failed");
+                }
+            }
+        }
+
+        ///////////////////////////////////////////////////////////////////////////////////////////////
+        /// Funzioni generate
+        ///////////////////////////////////////////////////////////////////////////////////////////////
+
+        private void UC_Programmazione_GL_Commessa_Load(object sender, EventArgs e)
+        {
+            // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione_GL.SF_LastSerialNumber_GL'. È possibile spostarla o rimuoverla se necessario.
+            this.sF_LastSerialNumber_GLTableAdapter.Fill(this.ds_Programmazione_GL.SF_LastSerialNumber_GL);
+            // Abilita zone dello schermo
+            ds_Programmazione_GL.dt_GL_Tmp_Fw.Clear();
+            ds_Programmazione_GL.dt_GL_Tmp_Programma.Clear();
+            AbilitaSchermo();
+
+            CaricaArchivi();
+        }
+
+        private void grid_commesse_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //////////////////////////////////////////////////////////////////////////////////////////
+            // Controllo se posizionato sulla riga corretta
+
+            int pos_rowselected = grid_commesse.CurrentCell.RowIndex;
+            int pos_rowclicked = e.RowIndex;
+            if (pos_rowselected != pos_rowclicked)
+            {
+                string mess = "Rilevata incongruenza. Selezionare altra riga!";
+                //+"Selected = " + pos_rowclicked.ToString() + " / " + "Clicked = " + pos_rowclicked.ToString()
+
+                MessageBox.Show(mess);
+                return;
+            }
+            //string findCommessaLong = (string)grid_commesse.Rows[e.RowIndex].Cells["grid_commesse_CommessaLong"].Value;
+            //int pos_teorica = sFCommesseSLBindingSource.Position;
+            //int pos_reale = sFCommesseSLBindingSource.Find("CommessaLong", findCommessaLong);
+            //if (pos_reale != pos_teorica)
+            //{
+            //    sFCommesseSLBindingSource.Position = pos_reale;
+            //}
+            //////////////////////////////////////////////////////////////////////////////////////////
+
+
+            // controllo se già evasa
+            if (e.ColumnIndex == grid_commesse.Columns["grid_commesse_CommessaSelezionata"].Index)
+            {
+                int qtadaeva = 0;
+                int qtaevasa = 0;
+
+                try
+                {
+                    qtadaeva = Convert.ToInt32(grid_commesse.Rows[e.RowIndex].Cells["grid_commesse_QtaInOrdine"].Value);
+                                    }
+                catch (FormatException)
+                {
+                    qtadaeva = 0;
+                }
+
+                try
+                {
+                    qtaevasa = Convert.ToInt32(grid_commesse.Rows[e.RowIndex].Cells["grid_commesse_Qta_Evasa"].Value);
+                }
+                catch (FormatException)
+                {
+                    qtaevasa = 0;
+                }
+
+
+                if ((qtaevasa != 0) && (qtaevasa >= qtadaeva))
+                {
+                    MessageBox.Show("Commessa già evasa totalmente!");
+                    //return;
+                }
+            }
+
+            //Setto tipo programmazione
+            glob_tipo_progr = "C";
+
+            //Memorizzo indice riga
+            glob_selectedrecord = sFCommesseGLBindingSource.Position;
+
+            //Controllo su tipo riga
+            DataGridViewRow row = grid_commesse.Rows[e.RowIndex];
+            string CommessaLong = row.Cells["grid_commesse_CommessaLong"].Value.ToString().Trim();
+            string CommessaShort = row.Cells["grid_commesse_CommessaShort"].Value.ToString().Trim();
+            string Kit = row.Cells["grid_commesse_CodArticoloCommessa"].Value.ToString().Trim();
+            string Item = row.Cells["grid_commesse_Device"].Value.ToString().Trim();
+            string Fw = row.Cells["grid_commesse_SwDevice"].Value.ToString().Trim();
+            glob_ID_cli = row.Cells["grid_commesse_CodAnagrafico"].Value.ToString().Trim();
+
+            if ((e.ColumnIndex == grid_commesse.Columns["grid_commesse_ViewDevice"].Index) && (Item != ""))
+            {
+                using (var form = new UC_ImageDevice(Item, WEB_path_image))
+                {
+                    if (form.ShowDialog() == DialogResult.OK)
+                    {
+                    }
+                }
+            }
+
+            if (e.ColumnIndex == grid_commesse.Columns["grid_commesse_CommessaSelezionata"].Index) // Aggiorna
+            {
+                if (Item == "") // Solo Software
+                {
+                    Fw = Kit; //Sovrascrivo il codice software (non ce l'ho) con l'item
+                    AggiornaFwCliente(glob_ID_cli, Fw);
+                }
+                else
+                {
+                    ds_Programmazione_GL.dt_GL_Tmp_Programma.Clear();
+                    ds_SL.dt_TMP_Firmware.Clear();
+
+                    //Ricerca di tutti i device e di tutti i software
+                    TrovaFWDeviceCommesse(CommessaShort);
+                    TrovaFWDeviceKit(Kit, CommessaLong, CommessaShort, Convert.ToInt32(glob_ID_cli), Kit);
+
+                    //Controllo oggetto per capire che FW mettere
+                    ds_SL.dt_TMP_Firmware.DefaultView.Sort = "Livello_FW desc, Cod_FW asc";
+                    string tipodevice = Item.Substring(5, 1);
+                    string filtro = "";
+                    if (tipodevice == "P")
+                    {
+                        filtro = "Is_SWR_P = '1'";
+                    }
+                    if (tipodevice == "R")
+                    {
+                        filtro = "Is_SWR_R = '1'";
+                    }
+                    foreach (DataRow rows in ds_SL.dt_TMP_Firmware.Select(filtro))
+                    {
+                        Fw = rows["Cod_FW"].ToString();
+                        break;
+                    }
+
+                    DataRowView currentRowView = sFCommesseSLSFArticoliBindingSource.Current as DataRowView;
+                    string ID = currentRowView["Modello"].ToString();
+                    AggiungiRigaProg(CommessaLong, Kit, Item, Fw, 0, ID);
+                }
+            }
+
+            grid_commesse.Refresh();
+        }
+
+        private void grid_commesse_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            if (e.RowIndex < 0)
+                return;
+
+            if (e.ColumnIndex == grid_commesse.Columns["grid_commesse_ViewDevice"].Index)
+            {
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+
+                var w = Properties.Resources.Lente.Width;
+                var h = Properties.Resources.Lente.Height;
+                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
+                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
+
+                e.Graphics.DrawImage(Properties.Resources.Lente, new Rectangle(x, y, w, h));
+                e.Handled = true;
+            }
+
+            if (e.ColumnIndex == grid_commesse.Columns["grid_commesse_Device"].Index)
+            {
+                if (grid_commesse.Rows[e.RowIndex].Cells["grid_commesse_Device"].Value.ToString() == "")
+                {
+                    // Verifica se il firmware è già associato al cliente
+                    bool newrecord = false;
+
+                    string CodAnaCli = grid_commesse.Rows[e.RowIndex].Cells["grid_commesse_CodAnagrafico"].Value.ToString();
+                    string Fw = grid_commesse.Rows[e.RowIndex].Cells["grid_commesse_CodArticoloCommessa"].Value.ToString();
+
+                    string sel = "Cod_Nominativo = " + "'" + CodAnaCli + "' AND SW_Code = '" + Fw + "'";
+                    DataRow[] result = ds_Programmazione_GL.GL_FW_Clienti.Select(sel);
+                    if (result.Count() > 0) { newrecord = false; } else { newrecord = true; }
+
+                    if (!newrecord)
+                    {
+                        //grid_commesse.Rows[e.RowIndex].DefaultCellStyle.ForeColor = System.Drawing.Color.Blue;
+                        grid_commesse.Rows[e.RowIndex].DefaultCellStyle.Font = new Font(grid_commesse.DefaultCellStyle.Font, System.Drawing.FontStyle.Strikeout);
+                        if (!glob_show_evasi) { grid_commesse.Rows[e.RowIndex].Visible = false; } else { grid_commesse.Rows[e.RowIndex].Visible = true; }
+                    }
+                }
+            }
+
+            if (e.ColumnIndex == grid_commesse.Columns["grid_commesse_Qta_Evasa"].Index)
+            {
+                if ((grid_commesse.Rows[e.RowIndex].Cells["grid_commesse_Qta_Evasa"].Value != null) && (grid_commesse.Rows[e.RowIndex].Cells["grid_commesse_Qta_Evasa"].Value.ToString() != ""))
+                {
+                    decimal qtadaeva = 0;
+                    decimal qtaevasa = 0;
+
+                    try
+                    {
+                        //qtadaeva = Int32.Parse(grid_commesse.Rows[e.RowIndex].Cells["grid_commesse_QtaDaEvadere"].Value.ToString());
+                        qtadaeva = Convert.ToDecimal(grid_commesse.Rows[e.RowIndex].Cells["grid_commesse_QtaDaEvadere"].Value.ToString());
+                    }
+                    catch (FormatException)
+                    {
+                        qtadaeva = 0;
+                    }
+
+                    try
+                    {
+                        //qtaevasa = Int32.Parse(grid_commesse.Rows[e.RowIndex].Cells["grid_commesse_Qta_Evasa"].Value.ToString());
+                        qtaevasa = Convert.ToDecimal(grid_commesse.Rows[e.RowIndex].Cells["grid_commesse_Qta_Evasa"].Value.ToString());
+                    }
+                    catch (FormatException)
+                    {
+                        qtaevasa = 0;
+                    }
+
+
+                    if ((qtaevasa != 0) && (qtaevasa >= qtadaeva))
+                    {
+                        //grid_commesse.Rows[e.RowIndex].DefaultCellStyle.ForeColor = System.Drawing.Color.Blue;
+                        grid_commesse.Rows[e.RowIndex].DefaultCellStyle.Font = new Font(grid_commesse.DefaultCellStyle.Font, System.Drawing.FontStyle.Strikeout);
+                        //                        if (!glob_show_evasi) { grid_commesse.Rows[e.RowIndex].Visible = false; } else { grid_commesse.Rows[e.RowIndex].Visible = true; }
+                    }
+                }
+            }
+        }
+
+        private void grid_commesse_menu_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+
+            CaricaArchivi();
+
+            Cursor.Current = Cursors.Default;
+        }
+
+        private void grid_commesse_menu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            var menuText = e.ClickedItem.Text;
+            switch (menuText)
+            {
+                case "Visualizza le commesse evase":
+                    glob_show_evasi = true;
+                    break;
+
+                case "Nascondi le commesse evase":
+                    glob_show_evasi = false;
+                    break;
+            }
+
+            //filtraggio delle righe
+            string filter = "";
+
+            if (!glob_show_evasi)
+            {
+                filter = "Qta_da_Evadere > Qta_Evasa";
+            }
+            sFCommesseGLBindingSource.Filter = filter;
+        }
+
+        private void grid_commesse_menu_Opened(object sender, EventArgs e)
+        {
+            if (glob_show_evasi)
+            {
+                menu_commesse_vis.Checked = true;
+                menu_commesse_nas.Checked = false;
+            }
+            else
+            {
+                menu_commesse_vis.Checked = false;
+                menu_commesse_nas.Checked = true;
+            }
+        }
+
+        private void dg_dt_tmp_programmazione_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            grid_commesse.Enabled = false;
+
+            dos_box.Clear();
+            var senderGrid = (DataGridView)sender;
+
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dg_dt_tmp_programmazione.Rows[e.RowIndex];
+                string Commessa = row.Cells["dg_dt_tmp_progr_Commessa"].Value.ToString();
+
+                string Kit = row.Cells["dg_dt_tmp_progr_Kit"].Value.ToString();
+                string Item = row.Cells["dg_dt_tmp_progr_Device"].Value.ToString();
+                glob_codice_sistema = Item;
+                string Fw = row.Cells["dg_dt_tmp_progr_Fw"].Value.ToString();
+                glob_codice_fw = Fw;
+
+                int Key_Id = Int16.Parse(row.Cells["dg_dt_tmp_progr_FwKeyId"].Value.ToString());
+                string ID_Hw = row.Cells["dg_dt_tmp_progr_ID_Hardware"].Value.ToString();
+                glob_ID_newcode = ID_Hw;
+                ProgrammaSilicon(Commessa, Kit, Item, Fw, Key_Id, ID_Hw);
+                CaricaArchivi();
+                RiposizionaGridCommesse();
+            }
+
+            grid_commesse.Enabled = true;
         }
 
         private void tab_control_Program_Selected(object sender, TabControlEventArgs e)
@@ -1614,153 +1753,6 @@ namespace SmartLineProduction
             CaricaArchivi();
 
             Cursor.Current = Cursors.Default;
-        }
-
-        private void menu_sw_exit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private int TrovaLastProgr(string ID_Hw)
-        {
-            int returnLastNumber = 0;
-            string anno = Convert.ToString(DateTime.Now.Year);
-
-            sFLastSerialNumberBindingSource.Filter = "Anno = " + "'" + anno + "'";
-            if (sFLastSerialNumberBindingSource.Count != 0)
-            {
-                DataRowView current = (DataRowView)sFLastSerialNumberBindingSource.Current;
-                returnLastNumber = Convert.ToInt32(current["LastSerialID"]);
-            }
-            return returnLastNumber;
-        }
-
-        private void RiposizionaGridCommesse()
-        {
-            if (glob_selectedrecord!=0)
-            {
-                 sFCommesseSLBindingSource.Position = glob_selectedrecord;
-            }
-        }
-
-        private void AggiornaSafetyPointRfid(string Commessa, string bt_device, string tag1, string tag2)
-        {
-            // Prima ricerca - pulizia per UUID 1
-            string filtro = "Rfid_UUID = " + "'" + tag1 + "'";
-            safetyPointRFIDBindingSource.Filter = filtro;
-            foreach (DataRowView tagRow in safetyPointRFIDBindingSource)
-            {
-                if ((tagRow["Rfid_Ser_SN_Prod"].ToString() != string.Empty) || (tagRow["Rfid_Ser_OfficialSerial"].ToString() != string.Empty))
-                {
-                    tagRow["Rfid_Ser_SN_Prod"] = null;
-                    tagRow["Rfid_Ser_OfficialSerial"] = null;
-                    string oldcontent = tagRow["Rfid_Note"].ToString();
-                    oldcontent = oldcontent + " - Eliminato l'accoppiamento con palmare il " + DateTime.Now.ToString("dd/MM/yyyy");
-                    tagRow["Rfid_Note"] = oldcontent;
-                    try
-                    {
-                        Validate();
-                        this.safetyPointRFIDBindingSource.EndEdit();
-                        this.safetyPointRFIDTableAdapter.Update(this.ds_Programmazione.SafetyPointRFID);
-                    }
-                    catch (System.Exception ex)
-                    {
-                        MessageBox.Show("Table 'SafetyPointRfid' - Update failed");
-                    }
-                }
-            }
-
-            // Seconda ricerca - pulizia per UUID 2
-            filtro = "Rfid_UUID = " + "'" + tag2 + "'";
-            safetyPointRFIDBindingSource.Filter = filtro;
-            foreach (DataRowView tagRow in safetyPointRFIDBindingSource)
-            {
-                if ((tagRow["Rfid_Ser_SN_Prod"].ToString() != string.Empty) || (tagRow["Rfid_Ser_OfficialSerial"].ToString() != string.Empty))
-                {
-                    tagRow["Rfid_Ser_SN_Prod"] = null;
-                    tagRow["Rfid_Ser_OfficialSerial"] = null;
-                    string oldcontent = tagRow["Rfid_Note"].ToString();
-                    oldcontent = oldcontent + " - Eliminato l'accoppiamento con palmare il " + DateTime.Now.ToString("dd/MM/yyyy");
-                    tagRow["Rfid_Note"] = oldcontent;
-                    try
-                    {
-                        Validate();
-                        this.safetyPointRFIDBindingSource.EndEdit();
-                        this.safetyPointRFIDTableAdapter.Update(this.ds_Programmazione.SafetyPointRFID);
-                    }
-                    catch (System.Exception ex)
-                    {
-                        MessageBox.Show("Table 'SafetyPointRfid' - Update failed");
-                    }
-                }
-            }
-
-            // Terza ricerca - pulizia per codice device
-            filtro = "Rfid_Ser_OfficialSerial = " + "'" + bt_device + "'";
-            safetyPointRFIDBindingSource.Filter = filtro;
-            foreach (DataRowView tagRow in safetyPointRFIDBindingSource)
-            {
-                if ((tagRow["Rfid_Ser_SN_Prod"].ToString() != string.Empty) || (tagRow["Rfid_Ser_OfficialSerial"].ToString() != string.Empty))
-                {
-                    tagRow["Rfid_Ser_SN_Prod"] = null;
-                    tagRow["Rfid_Ser_OfficialSerial"] = null;
-                    string oldcontent = tagRow["Rfid_Note"].ToString();
-                    oldcontent = oldcontent + " - Eliminato l'accoppiamento con palmare il " + DateTime.Now.ToString("dd/MM/yyyy");
-                    tagRow["Rfid_Note"] = oldcontent;
-                    try
-                    {
-                        Validate();
-                        this.safetyPointRFIDBindingSource.EndEdit();
-                        this.safetyPointRFIDTableAdapter.Update(this.ds_Programmazione.SafetyPointRFID);
-                    }
-                    catch (System.Exception ex)
-                    {
-                        MessageBox.Show("Table 'SafetyPointRfid' - Update failed");
-                    }
-                }
-            }
-
-            //Scrittura - Tag 1
-            filtro = "Rfid_UUID = " + "'" + tag1 + "'";
-            safetyPointRFIDBindingSource.Filter = filtro;
-            foreach (DataRowView tag1Row in safetyPointRFIDBindingSource)
-            {
-                tag1Row["Rfid_Ser_OfficialSerial"] = bt_device;
-                string oldcontent = tag1Row["Rfid_Note"].ToString();
-                oldcontent = oldcontent + " - " + Commessa + ": Palmare " + bt_device;
-                tag1Row["Rfid_Note"] = oldcontent;
-                try
-                {
-                    Validate();
-                    this.safetyPointRFIDBindingSource.EndEdit();
-                    this.safetyPointRFIDTableAdapter.Update(this.ds_Programmazione.SafetyPointRFID);
-                }
-                catch (System.Exception ex)
-                {
-                    MessageBox.Show("Table 'SafetyPointRfid' - Update failed");
-                }
-            }
-
-            //Scrittura - Tag 2
-            filtro = "Rfid_UUID = " + "'" + tag2 + "'";
-            safetyPointRFIDBindingSource.Filter = filtro;
-            foreach (DataRowView tag2Row in safetyPointRFIDBindingSource)
-            {
-                tag2Row["Rfid_Ser_OfficialSerial"] = bt_device;
-                string oldcontent = tag2Row["Rfid_Note"].ToString();
-                oldcontent = oldcontent + " - " + Commessa + ": Palmare " + bt_device;
-                tag2Row["Rfid_Note"] = oldcontent;
-                try
-                {
-                    Validate();
-                    this.safetyPointRFIDBindingSource.EndEdit();
-                    this.safetyPointRFIDTableAdapter.Update(this.ds_Programmazione.SafetyPointRFID);
-                }
-                catch (System.Exception ex)
-                {
-                    MessageBox.Show("Table 'SafetyPointRfid' - Update failed");
-                }
-            }
         }
     }
 }

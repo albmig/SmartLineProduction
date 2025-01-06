@@ -98,45 +98,6 @@
             this.dg_dt_tmp_progr_FwKeyId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dg_dt_tmp_progr_ID_Hardware = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Programma = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dtTmpProgrammaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ds_Programmazione = new SmartLineProduction.ds_Programmazione();
-            this.sFCommesseSLBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ds_SL = new SmartLineProduction.ds_SL();
-            this.famProdBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.outputPanel = new MetroFramework.Controls.MetroPanel();
-            this.dos_box = new System.Windows.Forms.TextBox();
-            this.sFCommesseSLSFArticoliBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sFAnagraficaClientiBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.serialNumbersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.serialNumbersTableAdapter = new SmartLineProduction.ds_ProgrammazioneTableAdapters.SerialNumbersTableAdapter();
-            this.sFDistinteBasiBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sF_DistinteBasiTableAdapter = new SmartLineProduction.ds_SLTableAdapters.SF_DistinteBasiTableAdapter();
-            this.sFArticoliBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sF_ArticoliTableAdapter = new SmartLineProduction.ds_ProgrammazioneTableAdapters.SF_ArticoliTableAdapter();
-            this.sFArticoliToXSWRBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sF_ArticoliToXSWRTableAdapter = new SmartLineProduction.ds_ProgrammazioneTableAdapters.SF_ArticoliToXSWRTableAdapter();
-            this.fWClientiBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fW_ClientiTableAdapter = new SmartLineProduction.ds_ProgrammazioneTableAdapters.FW_ClientiTableAdapter();
-            this.sF_Commesse_SLTableAdapter = new SmartLineProduction.ds_ProgrammazioneTableAdapters.SF_Commesse_SLTableAdapter();
-            this.sF_AnagraficaClientiTableAdapter = new SmartLineProduction.ds_SLTableAdapters.SF_AnagraficaClientiTableAdapter();
-            this.dtFirmwarelookupCommesseSLBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dt_Firmware_lookupCommesseSLTableAdapter = new SmartLineProduction.ds_ProgrammazioneTableAdapters.dt_Firmware_lookupCommesseSLTableAdapter();
-            this.dtTmpProgrammadtFirmwareBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.layout_orizz_menu = new System.Windows.Forms.TableLayoutPanel();
-            this.pan_Menu_exit = new System.Windows.Forms.MenuStrip();
-            this.menu_sw_exit = new System.Windows.Forms.ToolStripMenuItem();
-            this.fam_ProdTableAdapter = new SmartLineProduction.ds_SLTableAdapters.Fam_ProdTableAdapter();
-            this.firmwareBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.firmwareTableAdapter = new SmartLineProduction.ds_ProgrammazioneTableAdapters.FirmwareTableAdapter();
-            this.sFLastSerialNumberBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sF_LastSerialNumberTableAdapter = new SmartLineProduction.ds_ProgrammazioneTableAdapters.SF_LastSerialNumberTableAdapter();
-            this.safetyPointRFIDBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.safetyPointRFIDTableAdapter = new SmartLineProduction.ds_ProgrammazioneTableAdapters.SafetyPointRFIDTableAdapter();
-            this.sF_Commesse_GLTableAdapter = new SmartLineProduction.ds_Programmazione_GLTableAdapters.SF_Commesse_GLTableAdapter();
-            this.gL_FW_ClientiTableAdapter = new SmartLineProduction.ds_Programmazione_GLTableAdapters.GL_FW_ClientiTableAdapter();
-            this.safetyPointRFID_GLTableAdapter = new SmartLineProduction.ds_Programmazione_GLTableAdapters.SafetyPointRFID_GLTableAdapter();
-            this.sFCommesseGLSFArticoliGLBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sF_Articoli_GLTableAdapter = new SmartLineProduction.ds_Programmazione_GLTableAdapters.SF_Articoli_GLTableAdapter();
             this.tmpprogidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tmpprogcommessaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tmpprogcodartkitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -144,9 +105,50 @@
             this.tmpprogcodartfwDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tmpfwkeyidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tmpIDHardwareDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtTmpProgrammaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ds_SL = new SmartLineProduction.ds_SL();
+            this.famProdBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.outputPanel = new MetroFramework.Controls.MetroPanel();
+            this.dos_box = new System.Windows.Forms.TextBox();
+            this.sFCommesseSLSFArticoliBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sFCommesseGLSFArticoliGLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sFAnagraficaClientiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.serialNumbersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.serialNumbersTableAdapter = new SmartLineProduction.ds_ProgrammazioneTableAdapters.SerialNumbersTableAdapter();
+            this.sFDistinteBasiGLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sF_DistinteBasiGLTableAdapter = new SmartLineProduction.ds_SLTableAdapters.SF_DistinteBasiTableAdapter();
+            this.sFArticoliBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sF_ArticoliTableAdapter = new SmartLineProduction.ds_ProgrammazioneTableAdapters.SF_ArticoliTableAdapter();
+            this.sFArticoliToXSWRBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sF_ArticoliToXSWRTableAdapter = new SmartLineProduction.ds_ProgrammazioneTableAdapters.SF_ArticoliToXSWRTableAdapter();
+            this.sF_AnagraficaClientiTableAdapter = new SmartLineProduction.ds_SLTableAdapters.SF_AnagraficaClientiTableAdapter();
+            this.dt_Firmware_lookupCommesseGLTableAdapter = new SmartLineProduction.ds_ProgrammazioneTableAdapters.dt_Firmware_lookupCommesseSLTableAdapter();
+            this.dtTmpProgrammadtFirmwareBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.layout_orizz_menu = new System.Windows.Forms.TableLayoutPanel();
+            this.pan_Menu_exit = new System.Windows.Forms.MenuStrip();
+            this.menu_sw_exit = new System.Windows.Forms.ToolStripMenuItem();
+            this.gLSerialNumbersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.safetyPointRFIDGLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gLFWClientiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sFArticoliToXSWRGLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sFDistinteBasiGLBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.sFLastSerialNumberGLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fam_ProdTableAdapter = new SmartLineProduction.ds_SLTableAdapters.Fam_ProdTableAdapter();
+            this.firmwareBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.firmwareTableAdapter = new SmartLineProduction.ds_ProgrammazioneTableAdapters.FirmwareTableAdapter();
+            this.sFLastSerialNumberBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sF_LastSerialNumberTableAdapter = new SmartLineProduction.ds_ProgrammazioneTableAdapters.SF_LastSerialNumberTableAdapter();
+            this.sF_Commesse_GLTableAdapter = new SmartLineProduction.ds_Programmazione_GLTableAdapters.SF_Commesse_GLTableAdapter();
+            this.gL_FW_ClientiTableAdapter = new SmartLineProduction.ds_Programmazione_GLTableAdapters.GL_FW_ClientiTableAdapter();
+            this.safetyPointRFID_GLTableAdapter = new SmartLineProduction.ds_Programmazione_GLTableAdapters.SafetyPointRFID_GLTableAdapter();
+            this.sF_Articoli_GLTableAdapter = new SmartLineProduction.ds_Programmazione_GLTableAdapters.SF_Articoli_GLTableAdapter();
             this.gL_SerialNumbersTableAdapter = new SmartLineProduction.ds_Programmazione_GLTableAdapters.GL_SerialNumbersTableAdapter();
             this.sF_LastSerialNumber_GLTableAdapter = new SmartLineProduction.ds_Programmazione_GLTableAdapters.SF_LastSerialNumber_GLTableAdapter();
             this.gL_FirmwareTableAdapter = new SmartLineProduction.ds_Programmazione_GLTableAdapters.GL_FirmwareTableAdapter();
+            this.sF_DistinteBasi_GLTableAdapter = new SmartLineProduction.ds_Programmazione_GLTableAdapters.SF_DistinteBasi_GLTableAdapter();
+            this.sF_ArticoliToXSWR_GLTableAdapter = new SmartLineProduction.ds_Programmazione_GLTableAdapters.SF_ArticoliToXSWR_GLTableAdapter();
+            this.dtFirmwarelookupCommesseGLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dt_Firmware_lookupCommesseGLTableAdapter1 = new SmartLineProduction.ds_Programmazione_GLTableAdapters.dt_Firmware_lookupCommesseGLTableAdapter();
             this.MainMenu.SuspendLayout();
             this.commandPanel.SuspendLayout();
             this.pan_tipoprogramma.SuspendLayout();
@@ -160,26 +162,28 @@
             this.panel_programmazione_grid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_dt_tmp_programmazione)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtTmpProgrammaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ds_Programmazione)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sFCommesseSLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ds_SL)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.famProdBindingSource)).BeginInit();
             this.outputPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sFCommesseSLSFArticoliBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sFCommesseGLSFArticoliGLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sFAnagraficaClientiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serialNumbersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sFDistinteBasiBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sFDistinteBasiGLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sFArticoliBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sFArticoliToXSWRBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fWClientiBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtFirmwarelookupCommesseSLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtTmpProgrammadtFirmwareBindingSource)).BeginInit();
             this.layout_orizz_menu.SuspendLayout();
             this.pan_Menu_exit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gLSerialNumbersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.safetyPointRFIDGLBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gLFWClientiBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sFArticoliToXSWRGLBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sFDistinteBasiGLBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sFLastSerialNumberGLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.firmwareBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sFLastSerialNumberBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.safetyPointRFIDBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sFCommesseGLSFArticoliGLBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtFirmwarelookupCommesseGLBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // MainMenu
@@ -923,20 +927,59 @@
             this.Programma.Text = "Programma ->";
             this.Programma.UseColumnTextForButtonValue = true;
             // 
+            // tmpprogidDataGridViewTextBoxColumn
+            // 
+            this.tmpprogidDataGridViewTextBoxColumn.DataPropertyName = "tmp_prog_id";
+            this.tmpprogidDataGridViewTextBoxColumn.HeaderText = "tmp_prog_id";
+            this.tmpprogidDataGridViewTextBoxColumn.Name = "tmpprogidDataGridViewTextBoxColumn";
+            this.tmpprogidDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tmpprogcommessaDataGridViewTextBoxColumn
+            // 
+            this.tmpprogcommessaDataGridViewTextBoxColumn.DataPropertyName = "tmp_prog_commessa";
+            this.tmpprogcommessaDataGridViewTextBoxColumn.HeaderText = "tmp_prog_commessa";
+            this.tmpprogcommessaDataGridViewTextBoxColumn.Name = "tmpprogcommessaDataGridViewTextBoxColumn";
+            this.tmpprogcommessaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tmpprogcodartkitDataGridViewTextBoxColumn
+            // 
+            this.tmpprogcodartkitDataGridViewTextBoxColumn.DataPropertyName = "tmp_prog_codart_kit";
+            this.tmpprogcodartkitDataGridViewTextBoxColumn.HeaderText = "tmp_prog_codart_kit";
+            this.tmpprogcodartkitDataGridViewTextBoxColumn.Name = "tmpprogcodartkitDataGridViewTextBoxColumn";
+            this.tmpprogcodartkitDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tmpprogcodartitemDataGridViewTextBoxColumn
+            // 
+            this.tmpprogcodartitemDataGridViewTextBoxColumn.DataPropertyName = "tmp_prog_codart_item";
+            this.tmpprogcodartitemDataGridViewTextBoxColumn.HeaderText = "tmp_prog_codart_item";
+            this.tmpprogcodartitemDataGridViewTextBoxColumn.Name = "tmpprogcodartitemDataGridViewTextBoxColumn";
+            this.tmpprogcodartitemDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tmpprogcodartfwDataGridViewTextBoxColumn
+            // 
+            this.tmpprogcodartfwDataGridViewTextBoxColumn.DataPropertyName = "tmp_prog_codart_fw";
+            this.tmpprogcodartfwDataGridViewTextBoxColumn.HeaderText = "tmp_prog_codart_fw";
+            this.tmpprogcodartfwDataGridViewTextBoxColumn.Name = "tmpprogcodartfwDataGridViewTextBoxColumn";
+            this.tmpprogcodartfwDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tmpfwkeyidDataGridViewTextBoxColumn
+            // 
+            this.tmpfwkeyidDataGridViewTextBoxColumn.DataPropertyName = "tmp_fw_key_id";
+            this.tmpfwkeyidDataGridViewTextBoxColumn.HeaderText = "tmp_fw_key_id";
+            this.tmpfwkeyidDataGridViewTextBoxColumn.Name = "tmpfwkeyidDataGridViewTextBoxColumn";
+            this.tmpfwkeyidDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tmpIDHardwareDataGridViewTextBoxColumn
+            // 
+            this.tmpIDHardwareDataGridViewTextBoxColumn.DataPropertyName = "tmp_ID_Hardware";
+            this.tmpIDHardwareDataGridViewTextBoxColumn.HeaderText = "tmp_ID_Hardware";
+            this.tmpIDHardwareDataGridViewTextBoxColumn.Name = "tmpIDHardwareDataGridViewTextBoxColumn";
+            this.tmpIDHardwareDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // dtTmpProgrammaBindingSource
             // 
             this.dtTmpProgrammaBindingSource.DataMember = "dt_GL_Tmp_Programma";
             this.dtTmpProgrammaBindingSource.DataSource = this.ds_Programmazione_GL;
-            // 
-            // ds_Programmazione
-            // 
-            this.ds_Programmazione.DataSetName = "ds_Programmazione";
-            this.ds_Programmazione.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sFCommesseSLBindingSource
-            // 
-            this.sFCommesseSLBindingSource.DataMember = "SF_Commesse_GL";
-            this.sFCommesseSLBindingSource.DataSource = this.ds_Programmazione_GL;
             // 
             // ds_SL
             // 
@@ -981,6 +1024,11 @@
             // 
             this.sFCommesseSLSFArticoliBindingSource.DataSource = this.sFCommesseGLSFArticoliGLBindingSource;
             // 
+            // sFCommesseGLSFArticoliGLBindingSource
+            // 
+            this.sFCommesseGLSFArticoliGLBindingSource.DataMember = "SF_Commesse_GL_SF_Articoli_GL";
+            this.sFCommesseGLSFArticoliGLBindingSource.DataSource = this.sFCommesseGLBindingSource;
+            // 
             // sFAnagraficaClientiBindingSource
             // 
             this.sFAnagraficaClientiBindingSource.DataMember = "SF_AnagraficaClienti";
@@ -995,14 +1043,14 @@
             // 
             this.serialNumbersTableAdapter.ClearBeforeFill = true;
             // 
-            // sFDistinteBasiBindingSource
+            // sFDistinteBasiGLBindingSource
             // 
-            this.sFDistinteBasiBindingSource.DataMember = "SF_DistinteBasi";
-            this.sFDistinteBasiBindingSource.DataSource = this.ds_SL;
+            this.sFDistinteBasiGLBindingSource.DataMember = "SF_DistinteBasi_GL";
+            this.sFDistinteBasiGLBindingSource.DataSource = this.ds_Programmazione_GL;
             // 
-            // sF_DistinteBasiTableAdapter
+            // sF_DistinteBasiGLTableAdapter
             // 
-            this.sF_DistinteBasiTableAdapter.ClearBeforeFill = true;
+            this.sF_DistinteBasiGLTableAdapter.ClearBeforeFill = true;
             // 
             // sFArticoliBindingSource
             // 
@@ -1013,40 +1061,17 @@
             // 
             this.sF_ArticoliTableAdapter.ClearBeforeFill = true;
             // 
-            // sFArticoliToXSWRBindingSource
-            // 
-            this.sFArticoliToXSWRBindingSource.DataMember = "SF_ArticoliToXSWR";
-            this.sFArticoliToXSWRBindingSource.DataSource = this.ds_Programmazione;
-            // 
             // sF_ArticoliToXSWRTableAdapter
             // 
             this.sF_ArticoliToXSWRTableAdapter.ClearBeforeFill = true;
-            // 
-            // fWClientiBindingSource
-            // 
-            this.fWClientiBindingSource.DataMember = "GL_FW_Clienti";
-            this.fWClientiBindingSource.DataSource = this.ds_Programmazione_GL;
-            // 
-            // fW_ClientiTableAdapter
-            // 
-            this.fW_ClientiTableAdapter.ClearBeforeFill = true;
-            // 
-            // sF_Commesse_SLTableAdapter
-            // 
-            this.sF_Commesse_SLTableAdapter.ClearBeforeFill = true;
             // 
             // sF_AnagraficaClientiTableAdapter
             // 
             this.sF_AnagraficaClientiTableAdapter.ClearBeforeFill = true;
             // 
-            // dtFirmwarelookupCommesseSLBindingSource
+            // dt_Firmware_lookupCommesseGLTableAdapter
             // 
-            this.dtFirmwarelookupCommesseSLBindingSource.DataSource = this.ds_SL;
-            this.dtFirmwarelookupCommesseSLBindingSource.Position = 0;
-            // 
-            // dt_Firmware_lookupCommesseSLTableAdapter
-            // 
-            this.dt_Firmware_lookupCommesseSLTableAdapter.ClearBeforeFill = true;
+            this.dt_Firmware_lookupCommesseGLTableAdapter.ClearBeforeFill = true;
             // 
             // dtTmpProgrammadtFirmwareBindingSource
             // 
@@ -1098,6 +1123,36 @@
             this.menu_sw_exit.Text = "Uscita";
             this.menu_sw_exit.Click += new System.EventHandler(this.menu_sw_exit_Click);
             // 
+            // gLSerialNumbersBindingSource
+            // 
+            this.gLSerialNumbersBindingSource.DataMember = "GL_SerialNumbers";
+            this.gLSerialNumbersBindingSource.DataSource = this.ds_Programmazione_GL;
+            // 
+            // safetyPointRFIDGLBindingSource
+            // 
+            this.safetyPointRFIDGLBindingSource.DataMember = "SafetyPointRFID_GL";
+            this.safetyPointRFIDGLBindingSource.DataSource = this.ds_Programmazione_GL;
+            // 
+            // gLFWClientiBindingSource
+            // 
+            this.gLFWClientiBindingSource.DataMember = "GL_FW_Clienti";
+            this.gLFWClientiBindingSource.DataSource = this.ds_Programmazione_GL;
+            // 
+            // sFArticoliToXSWRGLBindingSource
+            // 
+            this.sFArticoliToXSWRGLBindingSource.DataMember = "SF_ArticoliToXSWR_GL";
+            this.sFArticoliToXSWRGLBindingSource.DataSource = this.ds_Programmazione_GL;
+            // 
+            // sFDistinteBasiGLBindingSource1
+            // 
+            this.sFDistinteBasiGLBindingSource1.DataMember = "SF_DistinteBasi_GL";
+            this.sFDistinteBasiGLBindingSource1.DataSource = this.ds_Programmazione_GL;
+            // 
+            // sFLastSerialNumberGLBindingSource
+            // 
+            this.sFLastSerialNumberGLBindingSource.DataMember = "SF_LastSerialNumber_GL";
+            this.sFLastSerialNumberGLBindingSource.DataSource = this.ds_Programmazione_GL;
+            // 
             // fam_ProdTableAdapter
             // 
             this.fam_ProdTableAdapter.ClearBeforeFill = true;
@@ -1120,15 +1175,6 @@
             // 
             this.sF_LastSerialNumberTableAdapter.ClearBeforeFill = true;
             // 
-            // safetyPointRFIDBindingSource
-            // 
-            this.safetyPointRFIDBindingSource.DataMember = "SafetyPointRFID_GL";
-            this.safetyPointRFIDBindingSource.DataSource = this.ds_Programmazione_GL;
-            // 
-            // safetyPointRFIDTableAdapter
-            // 
-            this.safetyPointRFIDTableAdapter.ClearBeforeFill = true;
-            // 
             // sF_Commesse_GLTableAdapter
             // 
             this.sF_Commesse_GLTableAdapter.ClearBeforeFill = true;
@@ -1141,63 +1187,9 @@
             // 
             this.safetyPointRFID_GLTableAdapter.ClearBeforeFill = true;
             // 
-            // sFCommesseGLSFArticoliGLBindingSource
-            // 
-            this.sFCommesseGLSFArticoliGLBindingSource.DataMember = "SF_Commesse_GL_SF_Articoli_GL";
-            this.sFCommesseGLSFArticoliGLBindingSource.DataSource = this.sFCommesseGLBindingSource;
-            // 
             // sF_Articoli_GLTableAdapter
             // 
             this.sF_Articoli_GLTableAdapter.ClearBeforeFill = true;
-            // 
-            // tmpprogidDataGridViewTextBoxColumn
-            // 
-            this.tmpprogidDataGridViewTextBoxColumn.DataPropertyName = "tmp_prog_id";
-            this.tmpprogidDataGridViewTextBoxColumn.HeaderText = "tmp_prog_id";
-            this.tmpprogidDataGridViewTextBoxColumn.Name = "tmpprogidDataGridViewTextBoxColumn";
-            this.tmpprogidDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tmpprogcommessaDataGridViewTextBoxColumn
-            // 
-            this.tmpprogcommessaDataGridViewTextBoxColumn.DataPropertyName = "tmp_prog_commessa";
-            this.tmpprogcommessaDataGridViewTextBoxColumn.HeaderText = "tmp_prog_commessa";
-            this.tmpprogcommessaDataGridViewTextBoxColumn.Name = "tmpprogcommessaDataGridViewTextBoxColumn";
-            this.tmpprogcommessaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tmpprogcodartkitDataGridViewTextBoxColumn
-            // 
-            this.tmpprogcodartkitDataGridViewTextBoxColumn.DataPropertyName = "tmp_prog_codart_kit";
-            this.tmpprogcodartkitDataGridViewTextBoxColumn.HeaderText = "tmp_prog_codart_kit";
-            this.tmpprogcodartkitDataGridViewTextBoxColumn.Name = "tmpprogcodartkitDataGridViewTextBoxColumn";
-            this.tmpprogcodartkitDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tmpprogcodartitemDataGridViewTextBoxColumn
-            // 
-            this.tmpprogcodartitemDataGridViewTextBoxColumn.DataPropertyName = "tmp_prog_codart_item";
-            this.tmpprogcodartitemDataGridViewTextBoxColumn.HeaderText = "tmp_prog_codart_item";
-            this.tmpprogcodartitemDataGridViewTextBoxColumn.Name = "tmpprogcodartitemDataGridViewTextBoxColumn";
-            this.tmpprogcodartitemDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tmpprogcodartfwDataGridViewTextBoxColumn
-            // 
-            this.tmpprogcodartfwDataGridViewTextBoxColumn.DataPropertyName = "tmp_prog_codart_fw";
-            this.tmpprogcodartfwDataGridViewTextBoxColumn.HeaderText = "tmp_prog_codart_fw";
-            this.tmpprogcodartfwDataGridViewTextBoxColumn.Name = "tmpprogcodartfwDataGridViewTextBoxColumn";
-            this.tmpprogcodartfwDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tmpfwkeyidDataGridViewTextBoxColumn
-            // 
-            this.tmpfwkeyidDataGridViewTextBoxColumn.DataPropertyName = "tmp_fw_key_id";
-            this.tmpfwkeyidDataGridViewTextBoxColumn.HeaderText = "tmp_fw_key_id";
-            this.tmpfwkeyidDataGridViewTextBoxColumn.Name = "tmpfwkeyidDataGridViewTextBoxColumn";
-            this.tmpfwkeyidDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tmpIDHardwareDataGridViewTextBoxColumn
-            // 
-            this.tmpIDHardwareDataGridViewTextBoxColumn.DataPropertyName = "tmp_ID_Hardware";
-            this.tmpIDHardwareDataGridViewTextBoxColumn.HeaderText = "tmp_ID_Hardware";
-            this.tmpIDHardwareDataGridViewTextBoxColumn.Name = "tmpIDHardwareDataGridViewTextBoxColumn";
-            this.tmpIDHardwareDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // gL_SerialNumbersTableAdapter
             // 
@@ -1210,6 +1202,23 @@
             // gL_FirmwareTableAdapter
             // 
             this.gL_FirmwareTableAdapter.ClearBeforeFill = true;
+            // 
+            // sF_DistinteBasi_GLTableAdapter
+            // 
+            this.sF_DistinteBasi_GLTableAdapter.ClearBeforeFill = true;
+            // 
+            // sF_ArticoliToXSWR_GLTableAdapter
+            // 
+            this.sF_ArticoliToXSWR_GLTableAdapter.ClearBeforeFill = true;
+            // 
+            // dtFirmwarelookupCommesseGLBindingSource
+            // 
+            this.dtFirmwarelookupCommesseGLBindingSource.DataMember = "dt_Firmware_lookupCommesseGL";
+            this.dtFirmwarelookupCommesseGLBindingSource.DataSource = this.ds_Programmazione_GL;
+            // 
+            // dt_Firmware_lookupCommesseGLTableAdapter1
+            // 
+            this.dt_Firmware_lookupCommesseGLTableAdapter1.ClearBeforeFill = true;
             // 
             // UC_Programmazione_GL_Commessa
             // 
@@ -1245,29 +1254,31 @@
             this.panel_programmazione_grid.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dg_dt_tmp_programmazione)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtTmpProgrammaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ds_Programmazione)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sFCommesseSLBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ds_SL)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.famProdBindingSource)).EndInit();
             this.outputPanel.ResumeLayout(false);
             this.outputPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sFCommesseSLSFArticoliBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sFCommesseGLSFArticoliGLBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sFAnagraficaClientiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.serialNumbersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sFDistinteBasiBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sFDistinteBasiGLBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sFArticoliBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sFArticoliToXSWRBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fWClientiBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtFirmwarelookupCommesseSLBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtTmpProgrammadtFirmwareBindingSource)).EndInit();
             this.layout_orizz_menu.ResumeLayout(false);
             this.layout_orizz_menu.PerformLayout();
             this.pan_Menu_exit.ResumeLayout(false);
             this.pan_Menu_exit.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gLSerialNumbersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.safetyPointRFIDGLBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gLFWClientiBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sFArticoliToXSWRGLBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sFDistinteBasiGLBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sFLastSerialNumberGLBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.firmwareBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sFLastSerialNumberBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.safetyPointRFIDBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sFCommesseGLSFArticoliGLBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtFirmwarelookupCommesseGLBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1298,18 +1309,14 @@
         private ds_SL ds_SL;
         private System.Windows.Forms.BindingSource serialNumbersBindingSource;
         private ds_ProgrammazioneTableAdapters.SerialNumbersTableAdapter serialNumbersTableAdapter;
-        private System.Windows.Forms.BindingSource sFDistinteBasiBindingSource;
-        private ds_SLTableAdapters.SF_DistinteBasiTableAdapter sF_DistinteBasiTableAdapter;
+        private System.Windows.Forms.BindingSource sFDistinteBasiGLBindingSource;
+        private ds_SLTableAdapters.SF_DistinteBasiTableAdapter sF_DistinteBasiGLTableAdapter;
         private System.Windows.Forms.BindingSource firmwareBindingSource;
         private ds_ProgrammazioneTableAdapters.FirmwareTableAdapter firmwareTableAdapter;
         private System.Windows.Forms.BindingSource sFArticoliBindingSource;
         private ds_ProgrammazioneTableAdapters.SF_ArticoliTableAdapter sF_ArticoliTableAdapter;
         private System.Windows.Forms.BindingSource sFArticoliToXSWRBindingSource;
         private ds_ProgrammazioneTableAdapters.SF_ArticoliToXSWRTableAdapter sF_ArticoliToXSWRTableAdapter;
-        private System.Windows.Forms.BindingSource fWClientiBindingSource;
-        private ds_ProgrammazioneTableAdapters.FW_ClientiTableAdapter fW_ClientiTableAdapter;
-        private System.Windows.Forms.BindingSource sFCommesseSLBindingSource;
-        private ds_ProgrammazioneTableAdapters.SF_Commesse_SLTableAdapter sF_Commesse_SLTableAdapter;
         private System.Windows.Forms.BindingSource sFAnagraficaClientiBindingSource;
         private ds_SLTableAdapters.SF_AnagraficaClientiTableAdapter sF_AnagraficaClientiTableAdapter;
         private MetroFramework.Controls.MetroContextMenu grid_commesse_menu;
@@ -1320,15 +1327,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dg_dt_tmp_progr_FwKeyId;
         private System.Windows.Forms.DataGridViewTextBoxColumn dg_dt_tmp_progr_ID_Hardware;
         private System.Windows.Forms.DataGridViewButtonColumn Programma;
-        private System.Windows.Forms.BindingSource dtFirmwarelookupCommesseSLBindingSource;
-        private ds_ProgrammazioneTableAdapters.dt_Firmware_lookupCommesseSLTableAdapter dt_Firmware_lookupCommesseSLTableAdapter;
+        private ds_ProgrammazioneTableAdapters.dt_Firmware_lookupCommesseSLTableAdapter dt_Firmware_lookupCommesseGLTableAdapter;
         private System.Windows.Forms.BindingSource dtTmpProgrammadtFirmwareBindingSource;
         private System.Windows.Forms.TableLayoutPanel layout_orizz_menu;
         private System.Windows.Forms.MenuStrip pan_Menu_exit;
         private System.Windows.Forms.ToolStripMenuItem menu_sw_exit;
         private System.Windows.Forms.BindingSource famProdBindingSource;
         private ds_SLTableAdapters.Fam_ProdTableAdapter fam_ProdTableAdapter;
-        private ds_Programmazione ds_Programmazione;
         private System.Windows.Forms.BindingSource sFLastSerialNumberBindingSource;
         private ds_ProgrammazioneTableAdapters.SF_LastSerialNumberTableAdapter sF_LastSerialNumberTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn grid_commesse_CommessaShort;
@@ -1361,8 +1366,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn deviceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn grid_commesse_ViewDevice;
         private System.Windows.Forms.DataGridViewButtonColumn grid_commesse_CommessaSelezionata;
-        private System.Windows.Forms.BindingSource safetyPointRFIDBindingSource;
-        private ds_ProgrammazioneTableAdapters.SafetyPointRFIDTableAdapter safetyPointRFIDTableAdapter;
         private ds_Programmazione_GL ds_Programmazione_GL;
         private System.Windows.Forms.BindingSource sFCommesseGLBindingSource;
         private ds_Programmazione_GLTableAdapters.SF_Commesse_GLTableAdapter sF_Commesse_GLTableAdapter;
@@ -1380,5 +1383,15 @@
         private ds_Programmazione_GLTableAdapters.GL_SerialNumbersTableAdapter gL_SerialNumbersTableAdapter;
         private ds_Programmazione_GLTableAdapters.SF_LastSerialNumber_GLTableAdapter sF_LastSerialNumber_GLTableAdapter;
         private ds_Programmazione_GLTableAdapters.GL_FirmwareTableAdapter gL_FirmwareTableAdapter;
+        private System.Windows.Forms.BindingSource sFLastSerialNumberGLBindingSource;
+        private ds_Programmazione_GLTableAdapters.SF_DistinteBasi_GLTableAdapter sF_DistinteBasi_GLTableAdapter;
+        private System.Windows.Forms.BindingSource sFDistinteBasiGLBindingSource1;
+        private System.Windows.Forms.BindingSource sFArticoliToXSWRGLBindingSource;
+        private ds_Programmazione_GLTableAdapters.SF_ArticoliToXSWR_GLTableAdapter sF_ArticoliToXSWR_GLTableAdapter;
+        private System.Windows.Forms.BindingSource gLFWClientiBindingSource;
+        private System.Windows.Forms.BindingSource safetyPointRFIDGLBindingSource;
+        private System.Windows.Forms.BindingSource gLSerialNumbersBindingSource;
+        private System.Windows.Forms.BindingSource dtFirmwarelookupCommesseGLBindingSource;
+        private ds_Programmazione_GLTableAdapters.dt_Firmware_lookupCommesseGLTableAdapter dt_Firmware_lookupCommesseGLTableAdapter1;
     }
 }
