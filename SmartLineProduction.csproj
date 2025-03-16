@@ -245,6 +245,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ds_Ncr.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ds_Programmazione_GL.cs">
+      <DependentUpon>ds_Programmazione_GL.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ds_Programmazione_GL.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

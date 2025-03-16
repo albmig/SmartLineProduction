@@ -29,33 +29,78 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Programmazione_GL_Commessa));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MainMenu = new System.Windows.Forms.MenuStrip();
             this.aggiornaArchiviToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.commandPanel = new MetroFramework.Controls.MetroPanel();
             this.pan_tipoprogramma = new MetroFramework.Controls.MetroPanel();
             this.grid_commesse = new MetroFramework.Controls.MetroGrid();
-            this.grid_commesse_CommessaShort = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grid_commesse_CommessaLong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grid_commesse_DataConsegna = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grid_commesse_RagioneSociale = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grid_commesse_NumRiga = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grid_commesse_CodArticoloCommessa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grid_commesse_Device = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grid_commesse_QtaInOrdine = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grid_commesse_QtaDaEvadere = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grid_commesse_Qta_Evasa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grid_commesse_ViewDevice = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.grid_commesse_CommessaSelezionata = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.grid_commesse_menu = new MetroFramework.Controls.MetroContextMenu(this.components);
+            this.menu_commesse_vis = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_commesse_nas = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel_dt_tmp_programmazione = new MetroFramework.Controls.MetroPanel();
+            this.panel_programmazione_output = new MetroFramework.Controls.MetroPanel();
+            this.tbl_Label_ID = new System.Windows.Forms.TableLayoutPanel();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.lab_IDNumber_write = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.lab_SN = new MetroFramework.Controls.MetroLabel();
+            this.lab_PartNumber = new MetroFramework.Controls.MetroLabel();
+            this.lab_IDNumber_read = new MetroFramework.Controls.MetroLabel();
+            this.panel_programmazione_result = new MetroFramework.Controls.MetroPanel();
+            this.panel_programmazione_grid = new MetroFramework.Controls.MetroPanel();
+            this.dg_dt_tmp_programmazione = new MetroFramework.Controls.MetroGrid();
+            this.dg_dt_tmp_progr_FwKeyId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dg_dt_tmp_progr_ID_Hardware = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dg_tmp_progr_TipoDevice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Programma = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.ds_SL = new SmartLineProduction.ds_SL();
+            this.famProdBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.outputPanel = new MetroFramework.Controls.MetroPanel();
+            this.dos_box = new System.Windows.Forms.TextBox();
+            this.sFCommesseSLSFArticoliBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sFCommesseGLSFArticoliGLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sFAnagraficaClientiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.serialNumbersTableAdapter = new SmartLineProduction.ds_ProgrammazioneTableAdapters.SerialNumbersTableAdapter();
+            this.sF_DistinteBasiGLTableAdapter = new SmartLineProduction.ds_SLTableAdapters.SF_DistinteBasiTableAdapter();
+            this.sF_ArticoliTableAdapter = new SmartLineProduction.ds_ProgrammazioneTableAdapters.SF_ArticoliTableAdapter();
+            this.sFArticoliToXSWRBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sF_ArticoliToXSWRTableAdapter = new SmartLineProduction.ds_ProgrammazioneTableAdapters.SF_ArticoliToXSWRTableAdapter();
+            this.sF_AnagraficaClientiTableAdapter = new SmartLineProduction.ds_SLTableAdapters.SF_AnagraficaClientiTableAdapter();
+            this.dt_Firmware_lookupCommesseGLTableAdapter = new SmartLineProduction.ds_ProgrammazioneTableAdapters.dt_Firmware_lookupCommesseSLTableAdapter();
+            this.dtTmpProgrammadtFirmwareBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.layout_orizz_menu = new System.Windows.Forms.TableLayoutPanel();
+            this.pan_Menu_exit = new System.Windows.Forms.MenuStrip();
+            this.menu_sw_exit = new System.Windows.Forms.ToolStripMenuItem();
+            this.fam_ProdTableAdapter = new SmartLineProduction.ds_SLTableAdapters.Fam_ProdTableAdapter();
+            this.firmwareTableAdapter = new SmartLineProduction.ds_ProgrammazioneTableAdapters.FirmwareTableAdapter();
+            this.sF_LastSerialNumberTableAdapter = new SmartLineProduction.ds_ProgrammazioneTableAdapters.SF_LastSerialNumberTableAdapter();
+            this.unboundSource1 = new DevExpress.Data.UnboundSource(this.components);
+            this.grid_commesse_CommessaShort = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grid_commesse_CommessaLong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grid_commesse_RagioneSociale = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grid_commesse_TipoOrdine = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grid_commesse_DataOrdine = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grid_commesse_NumeroOrdine = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,70 +119,32 @@
             this.artCommessaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.qtadaEvadereDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deviceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grid_commesse_ViewDevice = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.grid_commesse_CommessaSelezionata = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.grid_commesse_menu = new MetroFramework.Controls.MetroContextMenu(this.components);
-            this.menu_commesse_vis = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu_commesse_nas = new System.Windows.Forms.ToolStripMenuItem();
             this.sFCommesseGLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ds_Programmazione_GL = new SmartLineProduction.ds_Programmazione_GL();
-            this.panel_dt_tmp_programmazione = new MetroFramework.Controls.MetroPanel();
-            this.panel_programmazione_output = new MetroFramework.Controls.MetroPanel();
-            this.tbl_Label_ID = new System.Windows.Forms.TableLayoutPanel();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.lab_IDNumber_write = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.lab_SN = new MetroFramework.Controls.MetroLabel();
-            this.lab_PartNumber = new MetroFramework.Controls.MetroLabel();
-            this.lab_IDNumber_read = new MetroFramework.Controls.MetroLabel();
-            this.panel_programmazione_result = new MetroFramework.Controls.MetroPanel();
-            this.panel_programmazione_grid = new MetroFramework.Controls.MetroPanel();
-            this.dg_dt_tmp_programmazione = new MetroFramework.Controls.MetroGrid();
-            this.dg_dt_tmp_progr_FwKeyId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dg_dt_tmp_progr_ID_Hardware = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Programma = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.tmpprogidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tmpprogcommessaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tmpprogcodartkitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tmpprogcodartitemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tmpprogcodartfwDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dg_dt_tmp_progr_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dg_dt_tmp_progr_Commessa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dg_dt_tmp_progr_Kit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dg_dt_tmp_progr_Device = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dg_dt_tmp_progr_Fw = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tmpfwkeyidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tmpIDHardwareDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtTmpProgrammaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ds_SL = new SmartLineProduction.ds_SL();
-            this.famProdBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.outputPanel = new MetroFramework.Controls.MetroPanel();
-            this.dos_box = new System.Windows.Forms.TextBox();
-            this.sFCommesseSLSFArticoliBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sFCommesseGLSFArticoliGLBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sFAnagraficaClientiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.uTCreaUniqueOfficialSerialCodeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sFGLid2ProgrammazioneBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ds_Programmazione_GL1 = new SmartLineProduction.ds_Programmazione_GL();
+            this.sFGLid1ProgrammazioneBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gLFirmwarePGBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.serialNumbersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.serialNumbersTableAdapter = new SmartLineProduction.ds_ProgrammazioneTableAdapters.SerialNumbersTableAdapter();
             this.sFDistinteBasiGLBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sF_DistinteBasiGLTableAdapter = new SmartLineProduction.ds_SLTableAdapters.SF_DistinteBasiTableAdapter();
             this.sFArticoliBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sF_ArticoliTableAdapter = new SmartLineProduction.ds_ProgrammazioneTableAdapters.SF_ArticoliTableAdapter();
-            this.sFArticoliToXSWRBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sF_ArticoliToXSWRTableAdapter = new SmartLineProduction.ds_ProgrammazioneTableAdapters.SF_ArticoliToXSWRTableAdapter();
-            this.sF_AnagraficaClientiTableAdapter = new SmartLineProduction.ds_SLTableAdapters.SF_AnagraficaClientiTableAdapter();
-            this.dt_Firmware_lookupCommesseGLTableAdapter = new SmartLineProduction.ds_ProgrammazioneTableAdapters.dt_Firmware_lookupCommesseSLTableAdapter();
-            this.dtTmpProgrammadtFirmwareBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.layout_orizz_menu = new System.Windows.Forms.TableLayoutPanel();
-            this.pan_Menu_exit = new System.Windows.Forms.MenuStrip();
-            this.menu_sw_exit = new System.Windows.Forms.ToolStripMenuItem();
             this.gLSerialNumbersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.safetyPointRFIDGLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gLFWClientiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sFArticoliToXSWRGLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sFDistinteBasiGLBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.sFLastSerialNumberGLBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fam_ProdTableAdapter = new SmartLineProduction.ds_SLTableAdapters.Fam_ProdTableAdapter();
             this.firmwareBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.firmwareTableAdapter = new SmartLineProduction.ds_ProgrammazioneTableAdapters.FirmwareTableAdapter();
             this.sFLastSerialNumberBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sF_LastSerialNumberTableAdapter = new SmartLineProduction.ds_ProgrammazioneTableAdapters.SF_LastSerialNumberTableAdapter();
             this.sF_Commesse_GLTableAdapter = new SmartLineProduction.ds_Programmazione_GLTableAdapters.SF_Commesse_GLTableAdapter();
             this.gL_FW_ClientiTableAdapter = new SmartLineProduction.ds_Programmazione_GLTableAdapters.GL_FW_ClientiTableAdapter();
             this.safetyPointRFID_GLTableAdapter = new SmartLineProduction.ds_Programmazione_GLTableAdapters.SafetyPointRFID_GLTableAdapter();
@@ -149,32 +156,44 @@
             this.sF_ArticoliToXSWR_GLTableAdapter = new SmartLineProduction.ds_Programmazione_GLTableAdapters.SF_ArticoliToXSWR_GLTableAdapter();
             this.dtFirmwarelookupCommesseGLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dt_Firmware_lookupCommesseGLTableAdapter1 = new SmartLineProduction.ds_Programmazione_GLTableAdapters.dt_Firmware_lookupCommesseGLTableAdapter();
+            this.gL_Firmware_PGTableAdapter = new SmartLineProduction.ds_Programmazione_GLTableAdapters.GL_Firmware_PGTableAdapter();
+            this.sF_GL_id1_ProgrammazioneTableAdapter = new SmartLineProduction.ds_Programmazione_GLTableAdapters.SF_GL_id1_ProgrammazioneTableAdapter();
+            this.sF_GL_id2_ProgrammazioneTableAdapter = new SmartLineProduction.ds_Programmazione_GLTableAdapters.SF_GL_id2_ProgrammazioneTableAdapter();
+            this.uT_Crea_Unique_Official_Serial_CodeTableAdapter = new SmartLineProduction.ds_Programmazione_GLTableAdapters.UT_Crea_Unique_Official_Serial_CodeTableAdapter();
+            this.gLPGConfigHexBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gL_PG_Config_HexTableAdapter = new SmartLineProduction.ds_Programmazione_GLTableAdapters.GL_PG_Config_HexTableAdapter();
             this.MainMenu.SuspendLayout();
             this.commandPanel.SuspendLayout();
             this.pan_tipoprogramma.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_commesse)).BeginInit();
             this.grid_commesse_menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sFCommesseGLBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ds_Programmazione_GL)).BeginInit();
             this.panel_dt_tmp_programmazione.SuspendLayout();
             this.panel_programmazione_output.SuspendLayout();
             this.tbl_Label_ID.SuspendLayout();
             this.panel_programmazione_grid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_dt_tmp_programmazione)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtTmpProgrammaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ds_SL)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.famProdBindingSource)).BeginInit();
             this.outputPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sFCommesseSLSFArticoliBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sFCommesseGLSFArticoliGLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sFAnagraficaClientiBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.serialNumbersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sFDistinteBasiGLBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sFArticoliBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sFArticoliToXSWRBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtTmpProgrammadtFirmwareBindingSource)).BeginInit();
             this.layout_orizz_menu.SuspendLayout();
             this.pan_Menu_exit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.unboundSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sFCommesseGLBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ds_Programmazione_GL)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtTmpProgrammaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uTCreaUniqueOfficialSerialCodeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sFGLid2ProgrammazioneBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ds_Programmazione_GL1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sFGLid1ProgrammazioneBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gLFirmwarePGBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serialNumbersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sFDistinteBasiGLBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sFArticoliBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gLSerialNumbersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.safetyPointRFIDGLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gLFWClientiBindingSource)).BeginInit();
@@ -184,6 +203,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.firmwareBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sFLastSerialNumberBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFirmwarelookupCommesseGLBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gLPGConfigHexBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // MainMenu
@@ -247,14 +267,14 @@
             this.grid_commesse.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grid_commesse.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.grid_commesse.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid_commesse.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid_commesse.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.grid_commesse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_commesse.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.grid_commesse_CommessaShort,
@@ -289,14 +309,14 @@
             this.grid_commesse_CommessaSelezionata});
             this.grid_commesse.ContextMenuStrip = this.grid_commesse_menu;
             this.grid_commesse.DataSource = this.sFCommesseGLBindingSource;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grid_commesse.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grid_commesse.DefaultCellStyle = dataGridViewCellStyle18;
             this.grid_commesse.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grid_commesse.EnableHeadersVisualStyles = false;
             this.grid_commesse.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -306,14 +326,14 @@
             this.grid_commesse.Name = "grid_commesse";
             this.grid_commesse.ReadOnly = true;
             this.grid_commesse.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid_commesse.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(19)))), ((int)(((byte)(73)))));
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid_commesse.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.grid_commesse.RowHeadersVisible = false;
             this.grid_commesse.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grid_commesse.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Wheat;
@@ -325,43 +345,15 @@
             this.grid_commesse.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_commesse_CellContentClick);
             this.grid_commesse.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.grid_commesse_CellPainting);
             // 
-            // grid_commesse_CommessaShort
-            // 
-            this.grid_commesse_CommessaShort.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.grid_commesse_CommessaShort.DataPropertyName = "CommessaShort";
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.grid_commesse_CommessaShort.DefaultCellStyle = dataGridViewCellStyle21;
-            this.grid_commesse_CommessaShort.HeaderText = "Commessa";
-            this.grid_commesse_CommessaShort.Name = "grid_commesse_CommessaShort";
-            this.grid_commesse_CommessaShort.ReadOnly = true;
-            this.grid_commesse_CommessaShort.Width = 84;
-            // 
-            // grid_commesse_CommessaLong
-            // 
-            this.grid_commesse_CommessaLong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.grid_commesse_CommessaLong.DataPropertyName = "CommessaLong";
-            this.grid_commesse_CommessaLong.HeaderText = "Commessa";
-            this.grid_commesse_CommessaLong.Name = "grid_commesse_CommessaLong";
-            this.grid_commesse_CommessaLong.ReadOnly = true;
-            this.grid_commesse_CommessaLong.Width = 84;
-            // 
             // grid_commesse_DataConsegna
             // 
             this.grid_commesse_DataConsegna.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.grid_commesse_DataConsegna.DataPropertyName = "Data_Conferma_Consegna";
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.grid_commesse_DataConsegna.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.grid_commesse_DataConsegna.DefaultCellStyle = dataGridViewCellStyle14;
             this.grid_commesse_DataConsegna.HeaderText = "Data Consegna";
             this.grid_commesse_DataConsegna.Name = "grid_commesse_DataConsegna";
             this.grid_commesse_DataConsegna.ReadOnly = true;
-            // 
-            // grid_commesse_RagioneSociale
-            // 
-            this.grid_commesse_RagioneSociale.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.grid_commesse_RagioneSociale.DataPropertyName = "Ragione_Sociale";
-            this.grid_commesse_RagioneSociale.HeaderText = "Ragione Sociale";
-            this.grid_commesse_RagioneSociale.Name = "grid_commesse_RagioneSociale";
-            this.grid_commesse_RagioneSociale.ReadOnly = true;
             // 
             // grid_commesse_NumRiga
             // 
@@ -371,6 +363,7 @@
             this.grid_commesse_NumRiga.Name = "grid_commesse_NumRiga";
             this.grid_commesse_NumRiga.ReadOnly = true;
             this.grid_commesse_NumRiga.Visible = false;
+            this.grid_commesse_NumRiga.Width = 61;
             // 
             // grid_commesse_CodArticoloCommessa
             // 
@@ -394,9 +387,9 @@
             // 
             this.grid_commesse_QtaInOrdine.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.grid_commesse_QtaInOrdine.DataPropertyName = "Qta_Ordinata";
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle23.Format = "N0";
-            this.grid_commesse_QtaInOrdine.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.Format = "N0";
+            this.grid_commesse_QtaInOrdine.DefaultCellStyle = dataGridViewCellStyle15;
             this.grid_commesse_QtaInOrdine.HeaderText = "Q.tà in Ordine";
             this.grid_commesse_QtaInOrdine.Name = "grid_commesse_QtaInOrdine";
             this.grid_commesse_QtaInOrdine.ReadOnly = true;
@@ -406,10 +399,10 @@
             // 
             this.grid_commesse_QtaDaEvadere.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.grid_commesse_QtaDaEvadere.DataPropertyName = "Qta_da_Evadere";
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle24.Format = "N0";
-            dataGridViewCellStyle24.NullValue = null;
-            this.grid_commesse_QtaDaEvadere.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.Format = "N0";
+            dataGridViewCellStyle16.NullValue = null;
+            this.grid_commesse_QtaDaEvadere.DefaultCellStyle = dataGridViewCellStyle16;
             this.grid_commesse_QtaDaEvadere.HeaderText = "Q.tà da evadere";
             this.grid_commesse_QtaDaEvadere.Name = "grid_commesse_QtaDaEvadere";
             this.grid_commesse_QtaDaEvadere.ReadOnly = true;
@@ -419,158 +412,13 @@
             // 
             this.grid_commesse_Qta_Evasa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.grid_commesse_Qta_Evasa.DataPropertyName = "Qta_Evasa";
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.grid_commesse_Qta_Evasa.DefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.grid_commesse_Qta_Evasa.DefaultCellStyle = dataGridViewCellStyle17;
             this.grid_commesse_Qta_Evasa.HeaderText = "Q.tà Evasa";
             this.grid_commesse_Qta_Evasa.Name = "grid_commesse_Qta_Evasa";
             this.grid_commesse_Qta_Evasa.ReadOnly = true;
             this.grid_commesse_Qta_Evasa.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.grid_commesse_Qta_Evasa.Width = 76;
-            // 
-            // grid_commesse_TipoOrdine
-            // 
-            this.grid_commesse_TipoOrdine.DataPropertyName = "TipoOrdine";
-            this.grid_commesse_TipoOrdine.HeaderText = "TipoOrdine";
-            this.grid_commesse_TipoOrdine.Name = "grid_commesse_TipoOrdine";
-            this.grid_commesse_TipoOrdine.ReadOnly = true;
-            this.grid_commesse_TipoOrdine.Visible = false;
-            // 
-            // grid_commesse_DataOrdine
-            // 
-            this.grid_commesse_DataOrdine.DataPropertyName = "Data_Ordine";
-            this.grid_commesse_DataOrdine.HeaderText = "Data_Ordine";
-            this.grid_commesse_DataOrdine.Name = "grid_commesse_DataOrdine";
-            this.grid_commesse_DataOrdine.ReadOnly = true;
-            this.grid_commesse_DataOrdine.Visible = false;
-            // 
-            // grid_commesse_NumeroOrdine
-            // 
-            this.grid_commesse_NumeroOrdine.DataPropertyName = "Numero_Ordine";
-            this.grid_commesse_NumeroOrdine.HeaderText = "Numero_Ordine";
-            this.grid_commesse_NumeroOrdine.Name = "grid_commesse_NumeroOrdine";
-            this.grid_commesse_NumeroOrdine.ReadOnly = true;
-            this.grid_commesse_NumeroOrdine.Visible = false;
-            // 
-            // grid_commesse_UM
-            // 
-            this.grid_commesse_UM.DataPropertyName = "UM";
-            this.grid_commesse_UM.HeaderText = "UM";
-            this.grid_commesse_UM.Name = "grid_commesse_UM";
-            this.grid_commesse_UM.ReadOnly = true;
-            this.grid_commesse_UM.Visible = false;
-            // 
-            // grid_commesse_TipoRiga
-            // 
-            this.grid_commesse_TipoRiga.DataPropertyName = "TipoRiga";
-            this.grid_commesse_TipoRiga.HeaderText = "TipoRiga";
-            this.grid_commesse_TipoRiga.Name = "grid_commesse_TipoRiga";
-            this.grid_commesse_TipoRiga.ReadOnly = true;
-            this.grid_commesse_TipoRiga.Visible = false;
-            // 
-            // grid_commesse_IsSwrP
-            // 
-            this.grid_commesse_IsSwrP.DataPropertyName = "Is_SWR_P";
-            this.grid_commesse_IsSwrP.HeaderText = "Is_SWR_P";
-            this.grid_commesse_IsSwrP.Name = "grid_commesse_IsSwrP";
-            this.grid_commesse_IsSwrP.ReadOnly = true;
-            this.grid_commesse_IsSwrP.Visible = false;
-            // 
-            // grid_commesse_IsSwrR
-            // 
-            this.grid_commesse_IsSwrR.DataPropertyName = "Is_SWR_R";
-            this.grid_commesse_IsSwrR.HeaderText = "Is_SWR_R";
-            this.grid_commesse_IsSwrR.Name = "grid_commesse_IsSwrR";
-            this.grid_commesse_IsSwrR.ReadOnly = true;
-            this.grid_commesse_IsSwrR.Visible = false;
-            // 
-            // grid_commesse_SwDevice
-            // 
-            this.grid_commesse_SwDevice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.grid_commesse_SwDevice.DataPropertyName = "SW_Device";
-            this.grid_commesse_SwDevice.HeaderText = "Fw Device";
-            this.grid_commesse_SwDevice.Name = "grid_commesse_SwDevice";
-            this.grid_commesse_SwDevice.ReadOnly = true;
-            this.grid_commesse_SwDevice.Visible = false;
-            // 
-            // grid_commesse_CodAnagrafico
-            // 
-            this.grid_commesse_CodAnagrafico.DataPropertyName = "CodAnagrafico";
-            this.grid_commesse_CodAnagrafico.HeaderText = "CodAnagrafico";
-            this.grid_commesse_CodAnagrafico.Name = "grid_commesse_CodAnagrafico";
-            this.grid_commesse_CodAnagrafico.ReadOnly = true;
-            this.grid_commesse_CodAnagrafico.Visible = false;
-            // 
-            // grid_commesse_QtaOrdinata
-            // 
-            this.grid_commesse_QtaOrdinata.DataPropertyName = "Qta_Ordinata";
-            this.grid_commesse_QtaOrdinata.HeaderText = "Qta_Ordinata";
-            this.grid_commesse_QtaOrdinata.Name = "grid_commesse_QtaOrdinata";
-            this.grid_commesse_QtaOrdinata.ReadOnly = true;
-            this.grid_commesse_QtaOrdinata.Visible = false;
-            // 
-            // grid_commesse_StatoCommessa
-            // 
-            this.grid_commesse_StatoCommessa.DataPropertyName = "StatoCommessa";
-            this.grid_commesse_StatoCommessa.HeaderText = "StatoCommessa";
-            this.grid_commesse_StatoCommessa.Name = "grid_commesse_StatoCommessa";
-            this.grid_commesse_StatoCommessa.ReadOnly = true;
-            this.grid_commesse_StatoCommessa.Visible = false;
-            // 
-            // grid_commesse_IsKit
-            // 
-            this.grid_commesse_IsKit.DataPropertyName = "Is_Kit";
-            this.grid_commesse_IsKit.HeaderText = "Is_Kit";
-            this.grid_commesse_IsKit.Name = "grid_commesse_IsKit";
-            this.grid_commesse_IsKit.ReadOnly = true;
-            this.grid_commesse_IsKit.Visible = false;
-            // 
-            // grid_commesse_DataFineValidita
-            // 
-            this.grid_commesse_DataFineValidita.DataPropertyName = "DataFineValidita";
-            this.grid_commesse_DataFineValidita.HeaderText = "DataFineValidita";
-            this.grid_commesse_DataFineValidita.Name = "grid_commesse_DataFineValidita";
-            this.grid_commesse_DataFineValidita.ReadOnly = true;
-            this.grid_commesse_DataFineValidita.Visible = false;
-            // 
-            // dataConfermaConsegnaDataGridViewTextBoxColumn
-            // 
-            this.dataConfermaConsegnaDataGridViewTextBoxColumn.DataPropertyName = "Data_Conferma_Consegna";
-            this.dataConfermaConsegnaDataGridViewTextBoxColumn.HeaderText = "Data_Conferma_Consegna";
-            this.dataConfermaConsegnaDataGridViewTextBoxColumn.Name = "dataConfermaConsegnaDataGridViewTextBoxColumn";
-            this.dataConfermaConsegnaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dataConfermaConsegnaDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // numeroRigaDataGridViewTextBoxColumn
-            // 
-            this.numeroRigaDataGridViewTextBoxColumn.DataPropertyName = "Numero_Riga";
-            this.numeroRigaDataGridViewTextBoxColumn.HeaderText = "Numero_Riga";
-            this.numeroRigaDataGridViewTextBoxColumn.Name = "numeroRigaDataGridViewTextBoxColumn";
-            this.numeroRigaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.numeroRigaDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // artCommessaDataGridViewTextBoxColumn
-            // 
-            this.artCommessaDataGridViewTextBoxColumn.DataPropertyName = "Art_Commessa";
-            this.artCommessaDataGridViewTextBoxColumn.HeaderText = "Art_Commessa";
-            this.artCommessaDataGridViewTextBoxColumn.Name = "artCommessaDataGridViewTextBoxColumn";
-            this.artCommessaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.artCommessaDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // qtadaEvadereDataGridViewTextBoxColumn
-            // 
-            this.qtadaEvadereDataGridViewTextBoxColumn.DataPropertyName = "Qta_da_Evadere";
-            this.qtadaEvadereDataGridViewTextBoxColumn.HeaderText = "Qta_da_Evadere";
-            this.qtadaEvadereDataGridViewTextBoxColumn.Name = "qtadaEvadereDataGridViewTextBoxColumn";
-            this.qtadaEvadereDataGridViewTextBoxColumn.ReadOnly = true;
-            this.qtadaEvadereDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // deviceDataGridViewTextBoxColumn
-            // 
-            this.deviceDataGridViewTextBoxColumn.DataPropertyName = "Device";
-            this.deviceDataGridViewTextBoxColumn.HeaderText = "Device";
-            this.deviceDataGridViewTextBoxColumn.Name = "deviceDataGridViewTextBoxColumn";
-            this.deviceDataGridViewTextBoxColumn.ReadOnly = true;
-            this.deviceDataGridViewTextBoxColumn.Visible = false;
             // 
             // grid_commesse_ViewDevice
             // 
@@ -614,16 +462,6 @@
             this.menu_commesse_nas.Name = "menu_commesse_nas";
             this.menu_commesse_nas.Size = new System.Drawing.Size(228, 22);
             this.menu_commesse_nas.Text = "Nascondi le commesse evase";
-            // 
-            // sFCommesseGLBindingSource
-            // 
-            this.sFCommesseGLBindingSource.DataMember = "SF_Commesse_GL";
-            this.sFCommesseGLBindingSource.DataSource = this.ds_Programmazione_GL;
-            // 
-            // ds_Programmazione_GL
-            // 
-            this.ds_Programmazione_GL.DataSetName = "ds_Programmazione_GL";
-            this.ds_Programmazione_GL.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel_dt_tmp_programmazione
             // 
@@ -841,35 +679,36 @@
             this.dg_dt_tmp_programmazione.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dg_dt_tmp_programmazione.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dg_dt_tmp_programmazione.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(89)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg_dt_tmp_programmazione.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(89)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_dt_tmp_programmazione.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dg_dt_tmp_programmazione.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dg_dt_tmp_programmazione.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dg_dt_tmp_progr_Id,
+            this.dg_dt_tmp_progr_Commessa,
+            this.dg_dt_tmp_progr_Kit,
+            this.dg_dt_tmp_progr_Device,
+            this.dg_dt_tmp_progr_Fw,
             this.dg_dt_tmp_progr_FwKeyId,
             this.dg_dt_tmp_progr_ID_Hardware,
-            this.Programma,
-            this.tmpprogidDataGridViewTextBoxColumn,
-            this.tmpprogcommessaDataGridViewTextBoxColumn,
-            this.tmpprogcodartkitDataGridViewTextBoxColumn,
-            this.tmpprogcodartitemDataGridViewTextBoxColumn,
-            this.tmpprogcodartfwDataGridViewTextBoxColumn,
             this.tmpfwkeyidDataGridViewTextBoxColumn,
-            this.tmpIDHardwareDataGridViewTextBoxColumn});
+            this.tmpIDHardwareDataGridViewTextBoxColumn,
+            this.dg_tmp_progr_TipoDevice,
+            this.Programma});
             this.dg_dt_tmp_programmazione.DataSource = this.dtTmpProgrammaBindingSource;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dg_dt_tmp_programmazione.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dg_dt_tmp_programmazione.DefaultCellStyle = dataGridViewCellStyle7;
             this.dg_dt_tmp_programmazione.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dg_dt_tmp_programmazione.EnableHeadersVisualStyles = false;
             this.dg_dt_tmp_programmazione.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -880,14 +719,14 @@
             this.dg_dt_tmp_programmazione.Name = "dg_dt_tmp_programmazione";
             this.dg_dt_tmp_programmazione.ReadOnly = true;
             this.dg_dt_tmp_programmazione.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(89)))));
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg_dt_tmp_programmazione.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(89)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(96)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_dt_tmp_programmazione.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dg_dt_tmp_programmazione.RowHeadersVisible = false;
             this.dg_dt_tmp_programmazione.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dg_dt_tmp_programmazione.RowTemplate.Height = 32;
@@ -908,6 +747,7 @@
             this.dg_dt_tmp_progr_FwKeyId.Name = "dg_dt_tmp_progr_FwKeyId";
             this.dg_dt_tmp_progr_FwKeyId.ReadOnly = true;
             this.dg_dt_tmp_progr_FwKeyId.Visible = false;
+            this.dg_dt_tmp_progr_FwKeyId.Width = 105;
             // 
             // dg_dt_tmp_progr_ID_Hardware
             // 
@@ -918,6 +758,15 @@
             this.dg_dt_tmp_progr_ID_Hardware.ReadOnly = true;
             this.dg_dt_tmp_progr_ID_Hardware.Width = 86;
             // 
+            // dg_tmp_progr_TipoDevice
+            // 
+            this.dg_tmp_progr_TipoDevice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dg_tmp_progr_TipoDevice.DataPropertyName = "tmp_TipoDevice";
+            this.dg_tmp_progr_TipoDevice.HeaderText = "Device";
+            this.dg_tmp_progr_TipoDevice.Name = "dg_tmp_progr_TipoDevice";
+            this.dg_tmp_progr_TipoDevice.ReadOnly = true;
+            this.dg_tmp_progr_TipoDevice.Width = 63;
+            // 
             // Programma
             // 
             this.Programma.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -926,60 +775,6 @@
             this.Programma.ReadOnly = true;
             this.Programma.Text = "Programma ->";
             this.Programma.UseColumnTextForButtonValue = true;
-            // 
-            // tmpprogidDataGridViewTextBoxColumn
-            // 
-            this.tmpprogidDataGridViewTextBoxColumn.DataPropertyName = "tmp_prog_id";
-            this.tmpprogidDataGridViewTextBoxColumn.HeaderText = "tmp_prog_id";
-            this.tmpprogidDataGridViewTextBoxColumn.Name = "tmpprogidDataGridViewTextBoxColumn";
-            this.tmpprogidDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tmpprogcommessaDataGridViewTextBoxColumn
-            // 
-            this.tmpprogcommessaDataGridViewTextBoxColumn.DataPropertyName = "tmp_prog_commessa";
-            this.tmpprogcommessaDataGridViewTextBoxColumn.HeaderText = "tmp_prog_commessa";
-            this.tmpprogcommessaDataGridViewTextBoxColumn.Name = "tmpprogcommessaDataGridViewTextBoxColumn";
-            this.tmpprogcommessaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tmpprogcodartkitDataGridViewTextBoxColumn
-            // 
-            this.tmpprogcodartkitDataGridViewTextBoxColumn.DataPropertyName = "tmp_prog_codart_kit";
-            this.tmpprogcodartkitDataGridViewTextBoxColumn.HeaderText = "tmp_prog_codart_kit";
-            this.tmpprogcodartkitDataGridViewTextBoxColumn.Name = "tmpprogcodartkitDataGridViewTextBoxColumn";
-            this.tmpprogcodartkitDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tmpprogcodartitemDataGridViewTextBoxColumn
-            // 
-            this.tmpprogcodartitemDataGridViewTextBoxColumn.DataPropertyName = "tmp_prog_codart_item";
-            this.tmpprogcodartitemDataGridViewTextBoxColumn.HeaderText = "tmp_prog_codart_item";
-            this.tmpprogcodartitemDataGridViewTextBoxColumn.Name = "tmpprogcodartitemDataGridViewTextBoxColumn";
-            this.tmpprogcodartitemDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tmpprogcodartfwDataGridViewTextBoxColumn
-            // 
-            this.tmpprogcodartfwDataGridViewTextBoxColumn.DataPropertyName = "tmp_prog_codart_fw";
-            this.tmpprogcodartfwDataGridViewTextBoxColumn.HeaderText = "tmp_prog_codart_fw";
-            this.tmpprogcodartfwDataGridViewTextBoxColumn.Name = "tmpprogcodartfwDataGridViewTextBoxColumn";
-            this.tmpprogcodartfwDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tmpfwkeyidDataGridViewTextBoxColumn
-            // 
-            this.tmpfwkeyidDataGridViewTextBoxColumn.DataPropertyName = "tmp_fw_key_id";
-            this.tmpfwkeyidDataGridViewTextBoxColumn.HeaderText = "tmp_fw_key_id";
-            this.tmpfwkeyidDataGridViewTextBoxColumn.Name = "tmpfwkeyidDataGridViewTextBoxColumn";
-            this.tmpfwkeyidDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tmpIDHardwareDataGridViewTextBoxColumn
-            // 
-            this.tmpIDHardwareDataGridViewTextBoxColumn.DataPropertyName = "tmp_ID_Hardware";
-            this.tmpIDHardwareDataGridViewTextBoxColumn.HeaderText = "tmp_ID_Hardware";
-            this.tmpIDHardwareDataGridViewTextBoxColumn.Name = "tmpIDHardwareDataGridViewTextBoxColumn";
-            this.tmpIDHardwareDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dtTmpProgrammaBindingSource
-            // 
-            this.dtTmpProgrammaBindingSource.DataMember = "dt_GL_Tmp_Programma";
-            this.dtTmpProgrammaBindingSource.DataSource = this.ds_Programmazione_GL;
             // 
             // ds_SL
             // 
@@ -1034,28 +829,13 @@
             this.sFAnagraficaClientiBindingSource.DataMember = "SF_AnagraficaClienti";
             this.sFAnagraficaClientiBindingSource.DataSource = this.ds_SL;
             // 
-            // serialNumbersBindingSource
-            // 
-            this.serialNumbersBindingSource.DataMember = "GL_SerialNumbers";
-            this.serialNumbersBindingSource.DataSource = this.ds_Programmazione_GL;
-            // 
             // serialNumbersTableAdapter
             // 
             this.serialNumbersTableAdapter.ClearBeforeFill = true;
             // 
-            // sFDistinteBasiGLBindingSource
-            // 
-            this.sFDistinteBasiGLBindingSource.DataMember = "SF_DistinteBasi_GL";
-            this.sFDistinteBasiGLBindingSource.DataSource = this.ds_Programmazione_GL;
-            // 
             // sF_DistinteBasiGLTableAdapter
             // 
             this.sF_DistinteBasiGLTableAdapter.ClearBeforeFill = true;
-            // 
-            // sFArticoliBindingSource
-            // 
-            this.sFArticoliBindingSource.DataMember = "SF_Articoli_GL";
-            this.sFArticoliBindingSource.DataSource = this.ds_Programmazione_GL;
             // 
             // sF_ArticoliTableAdapter
             // 
@@ -1123,6 +903,313 @@
             this.menu_sw_exit.Text = "Uscita";
             this.menu_sw_exit.Click += new System.EventHandler(this.menu_sw_exit_Click);
             // 
+            // fam_ProdTableAdapter
+            // 
+            this.fam_ProdTableAdapter.ClearBeforeFill = true;
+            // 
+            // firmwareTableAdapter
+            // 
+            this.firmwareTableAdapter.ClearBeforeFill = true;
+            // 
+            // sF_LastSerialNumberTableAdapter
+            // 
+            this.sF_LastSerialNumberTableAdapter.ClearBeforeFill = true;
+            // 
+            // grid_commesse_CommessaShort
+            // 
+            this.grid_commesse_CommessaShort.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.grid_commesse_CommessaShort.DataPropertyName = "CommessaShort";
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.grid_commesse_CommessaShort.DefaultCellStyle = dataGridViewCellStyle13;
+            this.grid_commesse_CommessaShort.HeaderText = "Commessa";
+            this.grid_commesse_CommessaShort.Name = "grid_commesse_CommessaShort";
+            this.grid_commesse_CommessaShort.ReadOnly = true;
+            this.grid_commesse_CommessaShort.Width = 84;
+            // 
+            // grid_commesse_CommessaLong
+            // 
+            this.grid_commesse_CommessaLong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.grid_commesse_CommessaLong.DataPropertyName = "CommessaLong";
+            this.grid_commesse_CommessaLong.HeaderText = "Commessa";
+            this.grid_commesse_CommessaLong.Name = "grid_commesse_CommessaLong";
+            this.grid_commesse_CommessaLong.ReadOnly = true;
+            this.grid_commesse_CommessaLong.Width = 84;
+            // 
+            // grid_commesse_RagioneSociale
+            // 
+            this.grid_commesse_RagioneSociale.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.grid_commesse_RagioneSociale.DataPropertyName = "Ragione_Sociale";
+            this.grid_commesse_RagioneSociale.HeaderText = "Ragione Sociale";
+            this.grid_commesse_RagioneSociale.Name = "grid_commesse_RagioneSociale";
+            this.grid_commesse_RagioneSociale.ReadOnly = true;
+            // 
+            // grid_commesse_TipoOrdine
+            // 
+            this.grid_commesse_TipoOrdine.DataPropertyName = "TipoOrdine";
+            this.grid_commesse_TipoOrdine.HeaderText = "TipoOrdine";
+            this.grid_commesse_TipoOrdine.Name = "grid_commesse_TipoOrdine";
+            this.grid_commesse_TipoOrdine.ReadOnly = true;
+            this.grid_commesse_TipoOrdine.Visible = false;
+            // 
+            // grid_commesse_DataOrdine
+            // 
+            this.grid_commesse_DataOrdine.DataPropertyName = "Data_Ordine";
+            this.grid_commesse_DataOrdine.HeaderText = "Data_Ordine";
+            this.grid_commesse_DataOrdine.Name = "grid_commesse_DataOrdine";
+            this.grid_commesse_DataOrdine.ReadOnly = true;
+            this.grid_commesse_DataOrdine.Visible = false;
+            // 
+            // grid_commesse_NumeroOrdine
+            // 
+            this.grid_commesse_NumeroOrdine.DataPropertyName = "Numero_Ordine";
+            this.grid_commesse_NumeroOrdine.HeaderText = "Numero_Ordine";
+            this.grid_commesse_NumeroOrdine.Name = "grid_commesse_NumeroOrdine";
+            this.grid_commesse_NumeroOrdine.ReadOnly = true;
+            this.grid_commesse_NumeroOrdine.Visible = false;
+            // 
+            // grid_commesse_UM
+            // 
+            this.grid_commesse_UM.DataPropertyName = "UM";
+            this.grid_commesse_UM.HeaderText = "UM";
+            this.grid_commesse_UM.Name = "grid_commesse_UM";
+            this.grid_commesse_UM.ReadOnly = true;
+            this.grid_commesse_UM.Visible = false;
+            // 
+            // grid_commesse_TipoRiga
+            // 
+            this.grid_commesse_TipoRiga.DataPropertyName = "TipoRiga";
+            this.grid_commesse_TipoRiga.HeaderText = "TipoRiga";
+            this.grid_commesse_TipoRiga.Name = "grid_commesse_TipoRiga";
+            this.grid_commesse_TipoRiga.ReadOnly = true;
+            this.grid_commesse_TipoRiga.Visible = false;
+            // 
+            // grid_commesse_IsSwrP
+            // 
+            this.grid_commesse_IsSwrP.DataPropertyName = "Is_SWR_P";
+            this.grid_commesse_IsSwrP.HeaderText = "Is_SWR_P";
+            this.grid_commesse_IsSwrP.Name = "grid_commesse_IsSwrP";
+            this.grid_commesse_IsSwrP.ReadOnly = true;
+            this.grid_commesse_IsSwrP.Visible = false;
+            // 
+            // grid_commesse_IsSwrR
+            // 
+            this.grid_commesse_IsSwrR.DataPropertyName = "Is_SWR_R";
+            this.grid_commesse_IsSwrR.HeaderText = "Is_SWR_R";
+            this.grid_commesse_IsSwrR.Name = "grid_commesse_IsSwrR";
+            this.grid_commesse_IsSwrR.ReadOnly = true;
+            this.grid_commesse_IsSwrR.Visible = false;
+            // 
+            // grid_commesse_SwDevice
+            // 
+            this.grid_commesse_SwDevice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.grid_commesse_SwDevice.DataPropertyName = "SW_Device";
+            this.grid_commesse_SwDevice.HeaderText = "Fw Device";
+            this.grid_commesse_SwDevice.Name = "grid_commesse_SwDevice";
+            this.grid_commesse_SwDevice.ReadOnly = true;
+            this.grid_commesse_SwDevice.Visible = false;
+            this.grid_commesse_SwDevice.Width = 75;
+            // 
+            // grid_commesse_CodAnagrafico
+            // 
+            this.grid_commesse_CodAnagrafico.DataPropertyName = "CodAnagrafico";
+            this.grid_commesse_CodAnagrafico.HeaderText = "CodAnagrafico";
+            this.grid_commesse_CodAnagrafico.Name = "grid_commesse_CodAnagrafico";
+            this.grid_commesse_CodAnagrafico.ReadOnly = true;
+            this.grid_commesse_CodAnagrafico.Visible = false;
+            // 
+            // grid_commesse_QtaOrdinata
+            // 
+            this.grid_commesse_QtaOrdinata.DataPropertyName = "Qta_Ordinata";
+            this.grid_commesse_QtaOrdinata.HeaderText = "Qta_Ordinata";
+            this.grid_commesse_QtaOrdinata.Name = "grid_commesse_QtaOrdinata";
+            this.grid_commesse_QtaOrdinata.ReadOnly = true;
+            this.grid_commesse_QtaOrdinata.Visible = false;
+            // 
+            // grid_commesse_StatoCommessa
+            // 
+            this.grid_commesse_StatoCommessa.DataPropertyName = "StatoCommessa";
+            this.grid_commesse_StatoCommessa.HeaderText = "StatoCommessa";
+            this.grid_commesse_StatoCommessa.Name = "grid_commesse_StatoCommessa";
+            this.grid_commesse_StatoCommessa.ReadOnly = true;
+            this.grid_commesse_StatoCommessa.Visible = false;
+            // 
+            // grid_commesse_IsKit
+            // 
+            this.grid_commesse_IsKit.DataPropertyName = "Is_Kit";
+            this.grid_commesse_IsKit.HeaderText = "Is_Kit";
+            this.grid_commesse_IsKit.Name = "grid_commesse_IsKit";
+            this.grid_commesse_IsKit.ReadOnly = true;
+            this.grid_commesse_IsKit.Visible = false;
+            // 
+            // grid_commesse_DataFineValidita
+            // 
+            this.grid_commesse_DataFineValidita.DataPropertyName = "DataFineValidita";
+            this.grid_commesse_DataFineValidita.HeaderText = "DataFineValidita";
+            this.grid_commesse_DataFineValidita.Name = "grid_commesse_DataFineValidita";
+            this.grid_commesse_DataFineValidita.ReadOnly = true;
+            this.grid_commesse_DataFineValidita.Visible = false;
+            // 
+            // dataConfermaConsegnaDataGridViewTextBoxColumn
+            // 
+            this.dataConfermaConsegnaDataGridViewTextBoxColumn.DataPropertyName = "Data_Conferma_Consegna";
+            this.dataConfermaConsegnaDataGridViewTextBoxColumn.HeaderText = "Data_Conferma_Consegna";
+            this.dataConfermaConsegnaDataGridViewTextBoxColumn.Name = "dataConfermaConsegnaDataGridViewTextBoxColumn";
+            this.dataConfermaConsegnaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataConfermaConsegnaDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // numeroRigaDataGridViewTextBoxColumn
+            // 
+            this.numeroRigaDataGridViewTextBoxColumn.DataPropertyName = "Numero_Riga";
+            this.numeroRigaDataGridViewTextBoxColumn.HeaderText = "Numero_Riga";
+            this.numeroRigaDataGridViewTextBoxColumn.Name = "numeroRigaDataGridViewTextBoxColumn";
+            this.numeroRigaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.numeroRigaDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // artCommessaDataGridViewTextBoxColumn
+            // 
+            this.artCommessaDataGridViewTextBoxColumn.DataPropertyName = "Art_Commessa";
+            this.artCommessaDataGridViewTextBoxColumn.HeaderText = "Art_Commessa";
+            this.artCommessaDataGridViewTextBoxColumn.Name = "artCommessaDataGridViewTextBoxColumn";
+            this.artCommessaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.artCommessaDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // qtadaEvadereDataGridViewTextBoxColumn
+            // 
+            this.qtadaEvadereDataGridViewTextBoxColumn.DataPropertyName = "Qta_da_Evadere";
+            this.qtadaEvadereDataGridViewTextBoxColumn.HeaderText = "Qta_da_Evadere";
+            this.qtadaEvadereDataGridViewTextBoxColumn.Name = "qtadaEvadereDataGridViewTextBoxColumn";
+            this.qtadaEvadereDataGridViewTextBoxColumn.ReadOnly = true;
+            this.qtadaEvadereDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // deviceDataGridViewTextBoxColumn
+            // 
+            this.deviceDataGridViewTextBoxColumn.DataPropertyName = "Device";
+            this.deviceDataGridViewTextBoxColumn.HeaderText = "Device";
+            this.deviceDataGridViewTextBoxColumn.Name = "deviceDataGridViewTextBoxColumn";
+            this.deviceDataGridViewTextBoxColumn.ReadOnly = true;
+            this.deviceDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // sFCommesseGLBindingSource
+            // 
+            this.sFCommesseGLBindingSource.DataMember = "SF_Commesse_GL";
+            this.sFCommesseGLBindingSource.DataSource = this.ds_Programmazione_GL;
+            // 
+            // ds_Programmazione_GL
+            // 
+            this.ds_Programmazione_GL.DataSetName = "ds_Programmazione_GL";
+            this.ds_Programmazione_GL.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dg_dt_tmp_progr_Id
+            // 
+            this.dg_dt_tmp_progr_Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dg_dt_tmp_progr_Id.DataPropertyName = "tmp_prog_id";
+            this.dg_dt_tmp_progr_Id.HeaderText = "tmp_prog_id";
+            this.dg_dt_tmp_progr_Id.Name = "dg_dt_tmp_progr_Id";
+            this.dg_dt_tmp_progr_Id.ReadOnly = true;
+            this.dg_dt_tmp_progr_Id.Visible = false;
+            this.dg_dt_tmp_progr_Id.Width = 76;
+            // 
+            // dg_dt_tmp_progr_Commessa
+            // 
+            this.dg_dt_tmp_progr_Commessa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dg_dt_tmp_progr_Commessa.DataPropertyName = "tmp_prog_commessa";
+            this.dg_dt_tmp_progr_Commessa.HeaderText = "Commessa";
+            this.dg_dt_tmp_progr_Commessa.Name = "dg_dt_tmp_progr_Commessa";
+            this.dg_dt_tmp_progr_Commessa.ReadOnly = true;
+            this.dg_dt_tmp_progr_Commessa.Width = 84;
+            // 
+            // dg_dt_tmp_progr_Kit
+            // 
+            this.dg_dt_tmp_progr_Kit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dg_dt_tmp_progr_Kit.DataPropertyName = "tmp_prog_codart_kit";
+            this.dg_dt_tmp_progr_Kit.HeaderText = "Codice Kit";
+            this.dg_dt_tmp_progr_Kit.Name = "dg_dt_tmp_progr_Kit";
+            this.dg_dt_tmp_progr_Kit.ReadOnly = true;
+            this.dg_dt_tmp_progr_Kit.Width = 75;
+            // 
+            // dg_dt_tmp_progr_Device
+            // 
+            this.dg_dt_tmp_progr_Device.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dg_dt_tmp_progr_Device.DataPropertyName = "tmp_prog_codart_item";
+            this.dg_dt_tmp_progr_Device.HeaderText = "Codice Device";
+            this.dg_dt_tmp_progr_Device.Name = "dg_dt_tmp_progr_Device";
+            this.dg_dt_tmp_progr_Device.ReadOnly = true;
+            this.dg_dt_tmp_progr_Device.Width = 93;
+            // 
+            // dg_dt_tmp_progr_Fw
+            // 
+            this.dg_dt_tmp_progr_Fw.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dg_dt_tmp_progr_Fw.DataPropertyName = "tmp_prog_codart_fw";
+            this.dg_dt_tmp_progr_Fw.HeaderText = "Firmware";
+            this.dg_dt_tmp_progr_Fw.Name = "dg_dt_tmp_progr_Fw";
+            this.dg_dt_tmp_progr_Fw.ReadOnly = true;
+            this.dg_dt_tmp_progr_Fw.Width = 77;
+            // 
+            // tmpfwkeyidDataGridViewTextBoxColumn
+            // 
+            this.tmpfwkeyidDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.tmpfwkeyidDataGridViewTextBoxColumn.DataPropertyName = "tmp_fw_key_id";
+            this.tmpfwkeyidDataGridViewTextBoxColumn.HeaderText = "tmp_fw_key_id";
+            this.tmpfwkeyidDataGridViewTextBoxColumn.Name = "tmpfwkeyidDataGridViewTextBoxColumn";
+            this.tmpfwkeyidDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tmpfwkeyidDataGridViewTextBoxColumn.Visible = false;
+            this.tmpfwkeyidDataGridViewTextBoxColumn.Width = 105;
+            // 
+            // tmpIDHardwareDataGridViewTextBoxColumn
+            // 
+            this.tmpIDHardwareDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.tmpIDHardwareDataGridViewTextBoxColumn.DataPropertyName = "tmp_ID_Hardware";
+            this.tmpIDHardwareDataGridViewTextBoxColumn.HeaderText = "tmp_ID_Hardware";
+            this.tmpIDHardwareDataGridViewTextBoxColumn.Name = "tmpIDHardwareDataGridViewTextBoxColumn";
+            this.tmpIDHardwareDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tmpIDHardwareDataGridViewTextBoxColumn.Visible = false;
+            this.tmpIDHardwareDataGridViewTextBoxColumn.Width = 121;
+            // 
+            // dtTmpProgrammaBindingSource
+            // 
+            this.dtTmpProgrammaBindingSource.DataMember = "dt_GL_Tmp_Programma";
+            this.dtTmpProgrammaBindingSource.DataSource = this.ds_Programmazione_GL;
+            // 
+            // uTCreaUniqueOfficialSerialCodeBindingSource
+            // 
+            this.uTCreaUniqueOfficialSerialCodeBindingSource.DataMember = "UT_Crea_Unique_Official_Serial_Code";
+            this.uTCreaUniqueOfficialSerialCodeBindingSource.DataSource = this.ds_Programmazione_GL;
+            // 
+            // sFGLid2ProgrammazioneBindingSource
+            // 
+            this.sFGLid2ProgrammazioneBindingSource.DataMember = "SF_GL_id2_Programmazione";
+            this.sFGLid2ProgrammazioneBindingSource.DataSource = this.ds_Programmazione_GL1;
+            // 
+            // ds_Programmazione_GL1
+            // 
+            this.ds_Programmazione_GL1.DataSetName = "ds_Programmazione_GL";
+            this.ds_Programmazione_GL1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sFGLid1ProgrammazioneBindingSource
+            // 
+            this.sFGLid1ProgrammazioneBindingSource.DataMember = "SF_GL_id1_Programmazione";
+            this.sFGLid1ProgrammazioneBindingSource.DataSource = this.ds_Programmazione_GL;
+            // 
+            // gLFirmwarePGBindingSource
+            // 
+            this.gLFirmwarePGBindingSource.DataMember = "GL_Firmware_PG";
+            this.gLFirmwarePGBindingSource.DataSource = this.ds_Programmazione_GL;
+            // 
+            // serialNumbersBindingSource
+            // 
+            this.serialNumbersBindingSource.DataMember = "GL_SerialNumbers";
+            this.serialNumbersBindingSource.DataSource = this.ds_Programmazione_GL;
+            // 
+            // sFDistinteBasiGLBindingSource
+            // 
+            this.sFDistinteBasiGLBindingSource.DataMember = "SF_DistinteBasi_GL";
+            this.sFDistinteBasiGLBindingSource.DataSource = this.ds_Programmazione_GL;
+            // 
+            // sFArticoliBindingSource
+            // 
+            this.sFArticoliBindingSource.DataMember = "SF_Articoli_GL";
+            this.sFArticoliBindingSource.DataSource = this.ds_Programmazione_GL;
+            // 
             // gLSerialNumbersBindingSource
             // 
             this.gLSerialNumbersBindingSource.DataMember = "GL_SerialNumbers";
@@ -1153,27 +1240,15 @@
             this.sFLastSerialNumberGLBindingSource.DataMember = "SF_LastSerialNumber_GL";
             this.sFLastSerialNumberGLBindingSource.DataSource = this.ds_Programmazione_GL;
             // 
-            // fam_ProdTableAdapter
-            // 
-            this.fam_ProdTableAdapter.ClearBeforeFill = true;
-            // 
             // firmwareBindingSource
             // 
             this.firmwareBindingSource.DataMember = "GL_Firmware";
             this.firmwareBindingSource.DataSource = this.ds_Programmazione_GL;
             // 
-            // firmwareTableAdapter
-            // 
-            this.firmwareTableAdapter.ClearBeforeFill = true;
-            // 
             // sFLastSerialNumberBindingSource
             // 
             this.sFLastSerialNumberBindingSource.DataMember = "SF_LastSerialNumber_GL";
             this.sFLastSerialNumberBindingSource.DataSource = this.ds_Programmazione_GL;
-            // 
-            // sF_LastSerialNumberTableAdapter
-            // 
-            this.sF_LastSerialNumberTableAdapter.ClearBeforeFill = true;
             // 
             // sF_Commesse_GLTableAdapter
             // 
@@ -1220,6 +1295,31 @@
             // 
             this.dt_Firmware_lookupCommesseGLTableAdapter1.ClearBeforeFill = true;
             // 
+            // gL_Firmware_PGTableAdapter
+            // 
+            this.gL_Firmware_PGTableAdapter.ClearBeforeFill = true;
+            // 
+            // sF_GL_id1_ProgrammazioneTableAdapter
+            // 
+            this.sF_GL_id1_ProgrammazioneTableAdapter.ClearBeforeFill = true;
+            // 
+            // sF_GL_id2_ProgrammazioneTableAdapter
+            // 
+            this.sF_GL_id2_ProgrammazioneTableAdapter.ClearBeforeFill = true;
+            // 
+            // uT_Crea_Unique_Official_Serial_CodeTableAdapter
+            // 
+            this.uT_Crea_Unique_Official_Serial_CodeTableAdapter.ClearBeforeFill = true;
+            // 
+            // gLPGConfigHexBindingSource
+            // 
+            this.gLPGConfigHexBindingSource.DataMember = "GL_PG_Config_Hex";
+            this.gLPGConfigHexBindingSource.DataSource = this.ds_Programmazione_GL;
+            // 
+            // gL_PG_Config_HexTableAdapter
+            // 
+            this.gL_PG_Config_HexTableAdapter.ClearBeforeFill = true;
+            // 
             // UC_Programmazione_GL_Commessa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1245,15 +1345,12 @@
             this.pan_tipoprogramma.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grid_commesse)).EndInit();
             this.grid_commesse_menu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.sFCommesseGLBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ds_Programmazione_GL)).EndInit();
             this.panel_dt_tmp_programmazione.ResumeLayout(false);
             this.panel_programmazione_output.ResumeLayout(false);
             this.tbl_Label_ID.ResumeLayout(false);
             this.tbl_Label_ID.PerformLayout();
             this.panel_programmazione_grid.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dg_dt_tmp_programmazione)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtTmpProgrammaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ds_SL)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.famProdBindingSource)).EndInit();
             this.outputPanel.ResumeLayout(false);
@@ -1261,15 +1358,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.sFCommesseSLSFArticoliBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sFCommesseGLSFArticoliGLBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sFAnagraficaClientiBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.serialNumbersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sFDistinteBasiGLBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sFArticoliBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sFArticoliToXSWRBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtTmpProgrammadtFirmwareBindingSource)).EndInit();
             this.layout_orizz_menu.ResumeLayout(false);
             this.layout_orizz_menu.PerformLayout();
             this.pan_Menu_exit.ResumeLayout(false);
             this.pan_Menu_exit.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.unboundSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sFCommesseGLBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ds_Programmazione_GL)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtTmpProgrammaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uTCreaUniqueOfficialSerialCodeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sFGLid2ProgrammazioneBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ds_Programmazione_GL1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sFGLid1ProgrammazioneBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gLFirmwarePGBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.serialNumbersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sFDistinteBasiGLBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sFArticoliBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gLSerialNumbersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.safetyPointRFIDGLBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gLFWClientiBindingSource)).EndInit();
@@ -1279,6 +1385,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.firmwareBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sFLastSerialNumberBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFirmwarelookupCommesseGLBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gLPGConfigHexBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1324,9 +1431,6 @@
         private System.Windows.Forms.ToolStripMenuItem menu_commesse_nas;
         private System.Windows.Forms.BindingSource sFCommesseSLSFArticoliBindingSource;
         private System.Windows.Forms.BindingSource dtTmpProgrammaBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dg_dt_tmp_progr_FwKeyId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dg_dt_tmp_progr_ID_Hardware;
-        private System.Windows.Forms.DataGridViewButtonColumn Programma;
         private ds_ProgrammazioneTableAdapters.dt_Firmware_lookupCommesseSLTableAdapter dt_Firmware_lookupCommesseGLTableAdapter;
         private System.Windows.Forms.BindingSource dtTmpProgrammadtFirmwareBindingSource;
         private System.Windows.Forms.TableLayoutPanel layout_orizz_menu;
@@ -1373,13 +1477,6 @@
         private ds_Programmazione_GLTableAdapters.SafetyPointRFID_GLTableAdapter safetyPointRFID_GLTableAdapter;
         private System.Windows.Forms.BindingSource sFCommesseGLSFArticoliGLBindingSource;
         private ds_Programmazione_GLTableAdapters.SF_Articoli_GLTableAdapter sF_Articoli_GLTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tmpprogidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tmpprogcommessaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tmpprogcodartkitDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tmpprogcodartitemDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tmpprogcodartfwDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tmpfwkeyidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tmpIDHardwareDataGridViewTextBoxColumn;
         private ds_Programmazione_GLTableAdapters.GL_SerialNumbersTableAdapter gL_SerialNumbersTableAdapter;
         private ds_Programmazione_GLTableAdapters.SF_LastSerialNumber_GLTableAdapter sF_LastSerialNumber_GLTableAdapter;
         private ds_Programmazione_GLTableAdapters.GL_FirmwareTableAdapter gL_FirmwareTableAdapter;
@@ -1393,5 +1490,28 @@
         private System.Windows.Forms.BindingSource gLSerialNumbersBindingSource;
         private System.Windows.Forms.BindingSource dtFirmwarelookupCommesseGLBindingSource;
         private ds_Programmazione_GLTableAdapters.dt_Firmware_lookupCommesseGLTableAdapter dt_Firmware_lookupCommesseGLTableAdapter1;
+        private System.Windows.Forms.BindingSource gLFirmwarePGBindingSource;
+        private ds_Programmazione_GLTableAdapters.GL_Firmware_PGTableAdapter gL_Firmware_PGTableAdapter;
+        private DevExpress.Data.UnboundSource unboundSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dg_dt_tmp_progr_Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dg_dt_tmp_progr_Commessa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dg_dt_tmp_progr_Kit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dg_dt_tmp_progr_Device;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dg_dt_tmp_progr_Fw;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dg_dt_tmp_progr_FwKeyId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dg_dt_tmp_progr_ID_Hardware;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tmpfwkeyidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tmpIDHardwareDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dg_tmp_progr_TipoDevice;
+        private System.Windows.Forms.DataGridViewButtonColumn Programma;
+        private System.Windows.Forms.BindingSource sFGLid1ProgrammazioneBindingSource;
+        private ds_Programmazione_GLTableAdapters.SF_GL_id1_ProgrammazioneTableAdapter sF_GL_id1_ProgrammazioneTableAdapter;
+        private ds_Programmazione_GL ds_Programmazione_GL1;
+        private System.Windows.Forms.BindingSource sFGLid2ProgrammazioneBindingSource;
+        private ds_Programmazione_GLTableAdapters.SF_GL_id2_ProgrammazioneTableAdapter sF_GL_id2_ProgrammazioneTableAdapter;
+        private System.Windows.Forms.BindingSource uTCreaUniqueOfficialSerialCodeBindingSource;
+        private ds_Programmazione_GLTableAdapters.UT_Crea_Unique_Official_Serial_CodeTableAdapter uT_Crea_Unique_Official_Serial_CodeTableAdapter;
+        private System.Windows.Forms.BindingSource gLPGConfigHexBindingSource;
+        private ds_Programmazione_GLTableAdapters.GL_PG_Config_HexTableAdapter gL_PG_Config_HexTableAdapter;
     }
 }

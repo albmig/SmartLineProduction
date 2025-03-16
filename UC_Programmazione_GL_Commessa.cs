@@ -37,8 +37,12 @@ namespace SmartLineProduction
         public string glob_ID_cli = "";
         public int glob_LockLevel = 0;
 
+        public bool glob_Standard_FW = true;
+        public bool glob_IsGolden = false;
+
         public bool glob_show_evasi = true;
         public int glob_selectedrecord = 0;
+        public string UT_Crea_Unique_Official_Serial_Code = string.Empty;
 
         public string glob_tag_1 = string.Empty;
         public string glob_tag_2 = string.Empty;
@@ -78,8 +82,11 @@ namespace SmartLineProduction
             this.sF_Commesse_GLTableAdapter.Fill(this.ds_Programmazione_GL.SF_Commesse_GL);
 
             //-------------------------------------------------------------------------------//
-
-            // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione.SF_LastSerialNumber'. È possibile spostarla o rimuoverla se necessario.
+            // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione_GL1.SF_GL_id2_Programmazione'. È possibile spostarla o rimuoverla se necessario.
+            this.sF_GL_id2_ProgrammazioneTableAdapter.Fill(this.ds_Programmazione_GL1.SF_GL_id2_Programmazione);
+            // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione_GL.SF_GL_id1_Programmazione'. È possibile spostarla o rimuoverla se necessario.
+            this.sF_GL_id1_ProgrammazioneTableAdapter.Fill(this.ds_Programmazione_GL.SF_GL_id1_Programmazione);
+            // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione_GL.SF_LastSerialNumber_GL'. È possibile spostarla o rimuoverla se necessario.
             this.sF_LastSerialNumber_GLTableAdapter.Fill(this.ds_Programmazione_GL.SF_LastSerialNumber_GL);
             // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione_GL.SF_DistinteBasi_GL'. È possibile spostarla o rimuoverla se necessario.
             this.sF_DistinteBasi_GLTableAdapter.Fill(this.ds_Programmazione_GL.SF_DistinteBasi_GL);
@@ -97,6 +104,10 @@ namespace SmartLineProduction
             this.safetyPointRFID_GLTableAdapter.Fill(this.ds_Programmazione_GL.SafetyPointRFID_GL);
             // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione_GL.GL_SerialNumbers'. È possibile spostarla o rimuoverla se necessario.
             this.gL_SerialNumbersTableAdapter.Fill(this.ds_Programmazione_GL.GL_SerialNumbers);
+            // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione_GL.GL_Firmware_PG'. È possibile spostarla o rimuoverla se necessario.
+            this.gL_Firmware_PGTableAdapter.Fill(this.ds_Programmazione_GL.GL_Firmware_PG);
+            // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione_GL.GL_PG_Config_Hex'. È possibile spostarla o rimuoverla se necessario.
+            this.gL_PG_Config_HexTableAdapter.Fill(this.ds_Programmazione_GL.GL_PG_Config_Hex);
 
             SplashDB.Close();
         }
@@ -160,7 +171,6 @@ namespace SmartLineProduction
             ds_SL.dt_TMP_Firmware.Clear();
 
             string filtro = "CommessaShort = " + "'" + commessashort + "'";
-            //DataRow[] rows = ds_commander1.SF_Commesse_SL.Select(filtro);
 
             // Ricerca FW in commesse
             foreach (DataRow rows in ds_Programmazione_GL.SF_Commesse_GL.Select(filtro))
@@ -187,18 +197,19 @@ namespace SmartLineProduction
 
         private void TrovaFWDeviceKit(string kit, string commessalong, string commessashort, int codanacli, string artcommessa)
         {
-            string filtro = "ArticoloComposto = " + "'" + kit + "'" + " AND DataFineValidita = '' AND ArticoloComponente like 'XSWR%'";
+            string filtro = "ArticoloComposto = " + "'" + kit + "'" + " AND DataFineValidita = '' AND ArticoloComponente like 'GSWR%'";
 
             // Ricerca FW in commesse
-            foreach (DataRow rows in ds_SL.SF_DistinteBasi.Select(filtro))
+            //foreach (DataRow rows in ds_SL.SF_DistinteBasi.Select(filtro))
+            foreach (DataRow rows in ds_Programmazione_GL.SF_DistinteBasi_GL.Select(filtro))
             {
                 string componente = rows["ArticoloComponente"].ToString().Trim();
 
                 bool isswrP = false;
                 bool isswrR = false;
 
-                if (componente.StartsWith("XSWRP")) { isswrP = true; }
-                if (componente.StartsWith("XSWRR")) { isswrR = true; }
+                if (componente.StartsWith("GSWRP")) { isswrP = true; }
+                if (componente.StartsWith("GSWRR")) { isswrR = true; }
 
                 if (isswrP || isswrR)
                 {
@@ -217,7 +228,7 @@ namespace SmartLineProduction
             }
         }
 
-        private bool AggiungiRigaProg(string Commessa, string Kit, string Item, string cod_fw, int fw_key_id, string ID_Hw)
+        private bool AggiungiRigaProg(string Commessa, string Kit, string Item, string cod_fw, int fw_key_id, string ID_Hw, char TipoDevice)
         {
             DataRow dr = ds_Programmazione_GL.dt_GL_Tmp_Programma.NewRow();
             dr["tmp_prog_commessa"] = Commessa;
@@ -226,12 +237,13 @@ namespace SmartLineProduction
             dr["tmp_prog_codart_fw"] = cod_fw;
             dr["tmp_fw_key_id"] = fw_key_id;
             dr["tmp_ID_Hardware"] = ID_Hw;
+            dr["tmp_TipoDevice"] = TipoDevice;
             ds_Programmazione_GL.dt_GL_Tmp_Programma.Rows.Add(dr);
 
             return true;
         }
 
-        private bool ProgrammaSilicon(string Commessa, string Kit, string Item, string cod_fw, int fw_key_id, string ID_Hw)
+        private bool ProgrammaSilicon(string Commessa, string Kit, string Item, string cod_fw, int fw_key_id, string ID_Hw, string tipodev, string ID1, string ID2, string ID3, bool is_standard_fw, bool is_golden)
         {
             string nome_fw_full = "";
             string nome_fw_boot = "";
@@ -264,17 +276,23 @@ namespace SmartLineProduction
             }
 
             //Creazione nuovo codice Flash
-            string ID_Hw_longversion = "";
-            int LastNumber = TrovaLastProgr(ID_Hw) + 1;
-            string strLastNumber = LastNumber.ToString();
-            strLastNumber = strLastNumber.PadLeft(8, '0');
-            string anno = Convert.ToString(DateTime.Now.Year);
-            ID_Hw_longversion = ID_Hw + anno + strLastNumber;
+            //string ID_Hw_longversion = "";
+            //int LastNumber = TrovaLastProgr(ID_Hw) + 1;
+            //string strLastNumber = LastNumber.ToString();
+            //strLastNumber = strLastNumber.PadLeft(8, '0');
+
+            //            UT_Crea_Unique_Official_Serial_Code = Define_Unique_Serial_Code(Item);
+            UT_Crea_Unique_Official_Serial_Code = Define_Unique_Serial_Code(ID1);
+
+            //string anno = Convert.ToString(DateTime.Now.Year);
+            //ID_Hw_longversion = ID_Hw + anno + strLastNumber;
+
             /////////////////////////////////////////////////
 
             //Program_Board(Commessa, Kit, Item, fw_key_id, nome_fw_full, nome_fw_boot, nome_fw_conf, ID_Hw);                         //vecchio sistema
             glob_Program_OK = true;
-            Program_Board(Commessa, Kit, Item, fw_key_id, nome_fw_full, nome_fw_boot, nome_fw_conf, ID_Hw_longversion);           //nuovo sistema
+            //            Program_Board(Commessa, Kit, Item, fw_key_id, nome_fw_full, nome_fw_boot, nome_fw_conf, ID_Hw_longversion);           //nuovo sistema
+            Program_Board(Commessa, Kit, Item, fw_key_id, nome_fw_full, nome_fw_boot, nome_fw_conf, UT_Crea_Unique_Official_Serial_Code, ID1, ID2, ID3, is_standard_fw, is_golden, tipodev);           //nuovo sistema
 
             if (glob_Program_OK)
             {
@@ -307,9 +325,10 @@ namespace SmartLineProduction
             if (!GFunctions.PrintMask()) { MessageBox.Show("Riscontrato problema sulla stampante! Verificare connessione!"); }
         }
 
-        public void Program_Board(string Commessa, string Kit, string Item, int fw_key_id, string nome_fw_full, string nome_fw_boot, string nome_fw_conf, string ID_Hw)
+        public void Program_Board(string Commessa, string Kit, string Item, int fw_key_id, string nome_fw_full, string nome_fw_boot, string nome_fw_conf, string ID_Hw, string ID1, string ID2, string ID3, bool is_standard_fw, bool is_golden, string tipodev)
         {
-            glob_ID_code = ID_Hw;
+            //glob_ID_code = ID_Hw;
+            glob_ID_code = ID1;
 
             dos_box.Clear();
 
@@ -394,19 +413,20 @@ namespace SmartLineProduction
                         lab_IDNumber_read.Text = linea_ID.Substring(17, 16);
                         glob_ser_num_read = linea_ID.Substring(17, 16);
 
-                        //Doppia versione per nome bluetooth
-                        if (ID_Hw.Count() == 4)
-                        {
-                            glob_ser_num_write = ConvertiID(glob_ser_num_read);
-                            lab_IDNumber_write.Text = glob_ser_num_write;
-                        }
-                        else
-                        {
-                            glob_ser_num_write = ID_Hw;
-                            lab_IDNumber_write.Text = glob_ser_num_write;
-                        }
-                        //ser_num_write = GVar.glob_result_id[0].ToString() + GVar.glob_result_id[1].ToString() + GVar.glob_result_id[2].ToString() + GVar.glob_result_id[3].ToString() +
-                        //                lab_IDNumber.Text.Substring(0, 6) + lab_IDNumber.Text.Substring(10, 6);
+                        // 23.02.2025 - parte non più necessaria
+                        ////Doppia versione per nome bluetooth
+                        //if (ID_Hw.Count() == 4)
+                        //{
+                        //    glob_ser_num_write = ConvertiID(glob_ser_num_read);
+                        //    lab_IDNumber_write.Text = glob_ser_num_write;
+                        //}
+                        //else
+                        //{
+                        //    glob_ser_num_write = ID_Hw;
+                        //    lab_IDNumber_write.Text = glob_ser_num_write;
+                        //}
+                        ////ser_num_write = GVar.glob_result_id[0].ToString() + GVar.glob_result_id[1].ToString() + GVar.glob_result_id[2].ToString() + GVar.glob_result_id[3].ToString() +
+                        ////                lab_IDNumber.Text.Substring(0, 6) + lab_IDNumber.Text.Substring(10, 6);
                         break;
                     }
                 }
@@ -680,18 +700,24 @@ namespace SmartLineProduction
 
             }
 
-            //Scrittura ID - I parte
+            //Scrittura glob_ID_code
             try
             {
                 string coppia_1 = "";
                 string coppia_2 = "";
+                string coppia_3 = "";
+                string coppia_4 = "";
+                string coppia_5 = "";
 
                 coppia_1 = glob_ID_code.Substring(0, 2);
                 coppia_2 = glob_ID_code.Substring(2, 2);
+                coppia_3 = glob_ID_code.Substring(4, 2);
+                coppia_4 = glob_ID_code.Substring(6, 2);
+                coppia_5 = glob_ID_code.Substring(8, 2);
 
                 var proc = Process.Start(psi);
 
-                string verifyprogramstring = Properties.Settings.Default.Commander_path + @"\commander.exe flash --patch 0x0fe00000:0x" + coppia_2 + coppia_1 + ":2" + " " + glob_device;
+                string verifyprogramstring = Properties.Settings.Default.Commander_path + @"\commander.exe flash --patch 0x0fe00000:0x" + coppia_5 + coppia_4 + coppia_3 + coppia_2 + coppia_1 + ":5" + " " + glob_device;
 
                 proc.StandardInput.WriteLine(verifyprogramstring);
                 proc.StandardInput.WriteLine("exit");
@@ -749,39 +775,166 @@ namespace SmartLineProduction
 
             }
 
-            //Scrittura ID - II  parte
-            if (glob_ID_code.Length == 16)
+            // Lettura Hex
+            //Cancellare assegnazione temporanea
+
+            if (ID3 == "SC-2024-A2GP09")
+            {
+                string mess = "Configurazione " + ID3 + " non presente nella tabella GL_PG_Config_Hex";
+                MessageBox.Show(mess);
+                ID3 = "SC-2024-A0002";
+            }
+
+            string hex_value = string.Empty;
+            try
+            {
+                hex_value = this.gL_PG_Config_HexTableAdapter.Get_Hex(ID3);
+            }
+            catch (NullReferenceException ex)
+            {
+                string mess = "Configurazione " + ID3 + " non presente nella tabella GL_PG_Config_Hex";
+                MessageBox.Show(mess);
+
+                dos_box.Clear();
+                dos_box.Refresh();
+                text_dos = "";
+                glob_Program_OK = false;
+                return;
+            }
+
+            if (hex_value == null)
+            {
+                string mess = "Configurazione " + ID3 + " non presente nella tabella GL_PG_Config_Hex";
+                MessageBox.Show(mess);
+
+                dos_box.Clear();
+                dos_box.Refresh();
+                text_dos = "";
+                glob_Program_OK = false;
+                return;
+            }
+
+            //Scrittura Hex su file
+            string hextempfile = Path.Combine(Path.GetTempPath(), "HexTempFile.bin");
+            if (File.Exists(hextempfile)) { File.Delete(hextempfile); }
+
+            try
+            {
+                using (BinaryWriter bw = new BinaryWriter(File.Open(hextempfile, FileMode.Create)))
+                {
+                    //writes the data to the stream
+                    bw.Write(hex_value);
+                }
+            }
+            catch (IOException ioexp)
+            {
+                Console.WriteLine("Error: {0}", ioexp.Message);
+            }
+
+            //Inserimento Hex File
+            if ((is_golden) && (tipodev == "R"))
             {
                 try
                 {
-                    string coppia_1 = "";
-                    string coppia_2 = "";
-                    string coppia_3 = "";
-                    string coppia_4 = "";
-                    string coppia_5 = "";
-                    string coppia_6 = "";
-                    string coppia_7 = "";
-                    string coppia_8 = "";
+                    var proc = Process.Start(psi);
 
-                    if (glob_ID_code.Length == 16)
+                    //string programstring = Properties.Settings.Default.Commander_path + @"\commander.exe flash " + '"' + hextempfile + '"' + " --address 0x020 " + glob_device;
+                    string programstring = Properties.Settings.Default.Commander_path + @"\commander.exe flash " + '"' + hextempfile + '"' + " --address 0x0fe00020 " + glob_device;
+
+                    proc.StandardInput.WriteLine(programstring);
+                    proc.StandardInput.WriteLine("exit");
+
+                    text_dos = proc.StandardOutput.ReadToEnd();
+                    dos_box.Text = dos_box.Text + text_dos + "\n======================================================================" + Environment.NewLine;
+                    dos_box.Refresh();
+
+                    if (text_dos.Contains("ERROR: Cannot connect to J-Link via USB.") ||
+                        text_dos.Contains("ERROR: Could not open J-Link connection.") ||
+                        text_dos.Contains("ERROR: Unspecified error during flashing.") ||
+                        text_dos.Contains("ERROR: Could not connect debugger."))
                     {
-                        coppia_1 = glob_ID_code.Substring(0, 2);
-                        coppia_2 = glob_ID_code.Substring(2, 2);
-                        coppia_3 = glob_ID_code.Substring(4, 2);
-                        coppia_4 = glob_ID_code.Substring(6, 2);
-                        coppia_5 = glob_ID_code.Substring(8, 2);
-                        coppia_6 = glob_ID_code.Substring(10, 2);
-                        coppia_7 = glob_ID_code.Substring(12, 2);
-                        coppia_8 = glob_ID_code.Substring(14, 2);
+                        MessageBox.Show("Interfaccia non collegata correttamente / Errore di programmazione");
+                        dos_box.Clear();
+                        dos_box.Refresh();
+                        text_dos = "";
+                        glob_Program_OK = false;
+                        return;
+                    }
+                    if (text_dos.Contains("ERROR: Verification failed!"))
+                    {
+                        MessageBox.Show("La verifica ha riscontrato un problema!");
+                        dos_box.Clear();
+                        dos_box.Refresh();
+                        text_dos = "";
+                        glob_Program_OK = false;
+                        return;
                     }
 
+                    dos_box.SelectionStart = dos_box.Text.Length;
+                    dos_box.ScrollToCaret();
+                }
+#pragma warning disable CS0168 // La variabile 'ex' è dichiarata, ma non viene mai usata
+                catch (Exception ex)
+#pragma warning restore CS0168 // La variabile 'ex' è dichiarata, ma non viene mai usata
+                {
+
+                }
+            }
+
+            //05.03.2025
+            //scrivere hex da[GL_PG_Config_Hex] con chiave su ID3 se golden=1 and ricevitore
+            //string programstring = Properties.Settings.Default.Commander_path + @"\commander.exe flash " + '"' + hex file + '"' + " --address 0x020 " + glob_device;
+            //prendere hex --> su file temporaneo
+            //altrimenti se golden=0 or palmare proseguo
+
+            //scrivere ordine lungo 20 car G2024xxxxxxx numero commessa
+            //verifyprogramstring = Properties.Settings.Default.Commander_path + @"\commander.exe flash --patch 0x0FE00010:0x" + coppia_4 + coppia_3 + coppia_2 + coppia_1 + ":4" + " " + glob_device;
+            //verifyprogramstring = Properties.Settings.Default.Commander_path + @"\commander.exe flash --patch 0x0FE00014:0x" + coppia 10 + coppia 9 + coppia_8 + coppia_7 + coppia_6 + coppia_5 + ":6" + " " + glob_device;
+
+            //scrivere ID2
+            //verifyprogramstring = Properties.Settings.Default.Commander_path + @"\commander.exe flash --patch 0x0FE00024:0x" + coppia_4 + coppia_3 + coppia_2 + coppia_1 + ":4" + " " + glob_device;
+
+            //fine
+            //scrittura [GL_SerialNumbers]
+            //ser_read_serial = lab_IDNumber_read.Text
+            //ser_official_serial = ID_HW = UT_Crea_Unique_Official_Serial_Code
+
+            //serialNumbersBindingSource palmare verificare indirizzi - no configurazione
+
+            string UI_coppia_1 = string.Empty;
+            string UI_coppia_2 = string.Empty;
+            string UI_coppia_3 = string.Empty;
+            string UI_coppia_4 = string.Empty;
+            string UI_coppia_5 = string.Empty;
+            string UI_coppia_6 = string.Empty;
+            string UI_coppia_7 = string.Empty;
+            string UI_coppia_8 = string.Empty;
+            string UI_coppia_9 = string.Empty;
+            string UI_coppia_10 = string.Empty;
+
+            if (UT_Crea_Unique_Official_Serial_Code.Length == 20)
+            {
+                UI_coppia_1 = UT_Crea_Unique_Official_Serial_Code.Substring(0, 2);
+                UI_coppia_2 = UT_Crea_Unique_Official_Serial_Code.Substring(2, 2);
+                UI_coppia_3 = UT_Crea_Unique_Official_Serial_Code.Substring(4, 2);
+                UI_coppia_4 = UT_Crea_Unique_Official_Serial_Code.Substring(6, 2);
+                UI_coppia_5 = UT_Crea_Unique_Official_Serial_Code.Substring(8, 2);
+                UI_coppia_6 = UT_Crea_Unique_Official_Serial_Code.Substring(10, 2);
+                UI_coppia_7 = UT_Crea_Unique_Official_Serial_Code.Substring(12, 2);
+                UI_coppia_8 = UT_Crea_Unique_Official_Serial_Code.Substring(14, 2);
+                UI_coppia_9 = UT_Crea_Unique_Official_Serial_Code.Substring(16, 2);
+                UI_coppia_10 = UT_Crea_Unique_Official_Serial_Code.Substring(18, 2);
+            }
+            //Scrittura Unique_ID - I Parte
+            if (UT_Crea_Unique_Official_Serial_Code.Length == 20)
+            {
+                try
+                {
                     var proc = Process.Start(psi);
 
                     string verifyprogramstring = "";
-                    if (glob_ID_code.Length == 16)
-                    {
-                        verifyprogramstring = Properties.Settings.Default.Commander_path + @"\commander.exe flash --patch 0x0FE007F0:0x" + coppia_8 + coppia_7 + coppia_6 + coppia_5 + coppia_4 + coppia_3 + ":6" + " " + glob_device;
-                    }
+                    verifyprogramstring = Properties.Settings.Default.Commander_path + @"\commander.exe flash --patch 0x0FE00010:0x" + UI_coppia_4 + UI_coppia_3 + UI_coppia_2 + UI_coppia_1 + ":4" + " " + glob_device;
+
                     proc.StandardInput.WriteLine(verifyprogramstring);
                     proc.StandardInput.WriteLine("exit");
 
@@ -840,143 +993,88 @@ namespace SmartLineProduction
 
             }
 
-
-            //////////////////////////////////////////////////////////////////////////
-            //Aggiornamento RTC
-            //////////////////////////////////////////////////////////////////////////
-
-            string TipoDevice = Item.Substring(5, 1);
-            if (TipoDevice == "R")
+            //Scrittura Unique_ID - II Parte
+            if (UT_Crea_Unique_Official_Serial_Code.Length == 20)
             {
-                bool success = false;
-                int retry = 0;
-
-                while (!success && retry < 3)
+                try
                 {
-                    try
+                    var proc = Process.Start(psi);
+
+                    string verifyprogramstring = "";
+                    verifyprogramstring = Properties.Settings.Default.Commander_path + @"\commander.exe flash --patch 0x0FE00014:0x" + UI_coppia_10 + UI_coppia_9 + UI_coppia_8 + UI_coppia_7 + UI_coppia_6 + UI_coppia_5 + ":6" + " " + glob_device;
+                    proc.StandardInput.WriteLine(verifyprogramstring);
+                    proc.StandardInput.WriteLine("exit");
+
+                    text_dos = proc.StandardOutput.ReadToEnd();
+                    dos_box.Text = dos_box.Text + text_dos + "\n======================================================================" + Environment.NewLine;
+
+                    if (text_dos.Contains("ERROR: Cannot connect to J-Link via USB.") ||
+                        text_dos.Contains("ERROR: Could not open J-Link connection.") ||
+                        text_dos.Contains("ERROR: Unspecified error during flashing.") ||
+                        text_dos.Contains("ERROR: Could not connect debugger."))
                     {
-                        var proc = Process.Start(psi);
-
-                        string verifyprogramstring = "";
-
-                        verifyprogramstring = Properties.Settings.Default.Commander_path + @"\sistematica-dsktp-ble.exe " + ID_Hw;
-
-                        proc.StandardInput.WriteLine(verifyprogramstring);
-                        proc.StandardInput.WriteLine("exit");
-
-                        text_dos = proc.StandardOutput.ReadToEnd();
-                        dos_box.Text = dos_box.Text + text_dos + "\n======================================================================" + Environment.NewLine;
-
-                        //Analizza risultati
-                        int BTresult = -1;
-                        if (text_dos.Contains("RESULT_0")) { BTresult = 0; }
-                        if (text_dos.Contains("RESULT_1")) { BTresult = 1; }
-                        if (text_dos.Contains("RESULT_2")) { BTresult = 2; }
-                        if (text_dos.Contains("RESULT_3")) { BTresult = 3; }
-                        if (text_dos.Contains("RESULT_4")) { BTresult = 4; }
-                        if (text_dos.Contains("RESULT_5")) { BTresult = 5; }
-                        if (text_dos.Contains("RESULT_6")) { BTresult = 6; }
-
-                        //var lastLine = text_dos.Split('\n').Last();
-                        switch (BTresult)
-                        {
-                            case 0:
-                                success = true;
-                                break;
-                            case 1:
-                                MessageBox.Show("Bluetooth non abilitato!");
-                                dos_box.Clear();
-                                dos_box.Refresh();
-                                text_dos = "";
-                                glob_Program_OK = false;
-                                break;
-                            case 2:
-                                MessageBox.Show("Device non trovato!");
-                                dos_box.Clear();
-                                dos_box.Refresh();
-                                text_dos = "";
-                                glob_Program_OK = false;
-                                break;
-                            case 3:
-                                MessageBox.Show("Errore di connessione!");
-                                dos_box.Clear();
-                                dos_box.Refresh();
-                                text_dos = "";
-                                glob_Program_OK = false;
-                                break;
-                            case 4:
-                                MessageBox.Show("Errore di scrittura RTC!");
-                                dos_box.Clear();
-                                dos_box.Refresh();
-                                text_dos = "";
-                                glob_Program_OK = false;
-                                break;
-                            case 5:
-                                MessageBox.Show("Errore nella ricerca dei servizi BT!");
-                                dos_box.Clear();
-                                dos_box.Refresh();
-                                text_dos = "";
-                                glob_Program_OK = false;
-                                break;
-                            case 6:
-                                MessageBox.Show("Errore nella ricerca delle caratteristiche BT!");
-                                dos_box.Clear();
-                                dos_box.Refresh();
-                                text_dos = "";
-                                glob_Program_OK = false;
-                                break;
-                        }
-
-                        dos_box.SelectionStart = dos_box.Text.Length;
-                        dos_box.ScrollToCaret();
+                        MessageBox.Show("Interfaccia non collegata correttamente / Errore di programmazione");
+                        dos_box.Clear();
+                        dos_box.Refresh();
+                        text_dos = "";
+                        glob_Program_OK = false;
+                        return;
                     }
-                    catch (Exception ex)
+                    if (text_dos.Contains("ERROR: Verification failed!"))
                     {
+                        MessageBox.Show("La verifica ha riscontrato un problema!");
+                        dos_box.Clear();
+                        dos_box.Refresh();
+                        text_dos = "";
+                        glob_Program_OK = false;
+                        return;
                     }
+
+                    if (text_dos.Contains("DONE"))
+                    {
+                        System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+                        string sound = @"\\dc\AREA_IT\AREA_SOFTWARE_SISTEMATICA\SmartLineProduction\tada.wav";
+                        player.SoundLocation = sound;
+                        player.Load();
+                        player.Play();
+                    }
+                    else
+                    {
+                        System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+                        string sound = @"\\dc\AREA_IT\AREA_SOFTWARE_SISTEMATICA\SmartLineProduction\Yamaha.wav";
+                        player.SoundLocation = sound;
+                        player.Load();
+                        player.Play();
+                        glob_Program_OK = false;
+                    }
+
+                    dos_box.SelectionStart = dos_box.Text.Length;
+                    dos_box.ScrollToCaret();
                 }
+#pragma warning disable CS0168 // La variabile 'ex' è dichiarata, ma non viene mai usata
+                catch (Exception ex)
+#pragma warning restore CS0168 // La variabile 'ex' è dichiarata, ma non viene mai usata
+                {
+
+                }
+
             }
 
-            //////////////////////////////////////////////////////////////////////////
-            //Scrittura TAG
-            //////////////////////////////////////////////////////////////////////////
-
-            glob_tag_1 = string.Empty;
-            glob_tag_2 = string.Empty;
-
-            if ((TipoDevice == "P") && (Item.Substring(0, 3) == "XET"))
+            //Scrittura ID2
+            if (ID2.Length == 8)
             {
-                UC_ConfirmTAG uC_ConfirmTAG = new UC_ConfirmTAG();
-                DialogResult diag = uC_ConfirmTAG.ShowDialog();
-
-                if (diag == DialogResult.Abort)
-                {
-                    uC_ConfirmTAG.tag_1 = "11:11:11:11:11:11:11";
-                    uC_ConfirmTAG.tag_2 = "22:22:22:22:22:22:22";
-                }
-
-                glob_tag_1 = uC_ConfirmTAG.tag_1;
-                glob_tag_2 = uC_ConfirmTAG.tag_2;
-
-                //Scrittura TAG 1
                 try
                 {
-                    string coppia_1 = glob_tag_1.Substring(0, 2);
-                    string coppia_2 = glob_tag_1.Substring(3, 2);
-                    string coppia_3 = glob_tag_1.Substring(6, 2);
-                    string coppia_4 = glob_tag_1.Substring(9, 2);
-                    string coppia_5 = glob_tag_1.Substring(12, 2);
-                    string coppia_6 = glob_tag_1.Substring(15, 2);
-                    string coppia_7 = glob_tag_1.Substring(18, 2);
-                    string coppia_8 = glob_tag_1.Substring(21, 2);
+                    string ID2_coppia_1 = ID2.Substring(0, 2);
+                    string ID2_coppia_2 = ID2.Substring(2, 2);
+                    string ID2_coppia_3 = ID2.Substring(4, 2);
+                    string ID2_coppia_4 = ID2.Substring(6, 2);
 
                     var proc = Process.Start(psi);
 
                     string verifyprogramstring = "";
-                    if (ID_Hw.Length == 16)
-                    {
-                        verifyprogramstring = Properties.Settings.Default.Commander_path + @"\commander.exe flash --patch 0x0FE007E0:0x" +
-                            coppia_8 + coppia_7 + coppia_6 + coppia_5 + coppia_4 + coppia_3 + coppia_2 + coppia_1 + ":8" + " " + glob_device;
-                    }
+                    verifyprogramstring = Properties.Settings.Default.Commander_path + @"\commander.exe flash --patch 0x0FE00024:0x" + ID2_coppia_4 + ID2_coppia_3 + ID2_coppia_2 + ID2_coppia_1 + ":4" + " " + glob_device;
+
                     proc.StandardInput.WriteLine(verifyprogramstring);
                     proc.StandardInput.WriteLine("exit");
 
@@ -1026,150 +1124,11 @@ namespace SmartLineProduction
                     dos_box.SelectionStart = dos_box.Text.Length;
                     dos_box.ScrollToCaret();
                 }
+#pragma warning disable CS0168 // La variabile 'ex' è dichiarata, ma non viene mai usata
                 catch (Exception ex)
+#pragma warning restore CS0168 // La variabile 'ex' è dichiarata, ma non viene mai usata
                 {
-                }
 
-                //Scrittura TAG 2
-                try
-                {
-                    string coppia_9 = glob_tag_2.Substring(0, 2);
-                    string coppia_10 = glob_tag_2.Substring(3, 2);
-                    string coppia_11 = glob_tag_2.Substring(6, 2);
-                    string coppia_12 = glob_tag_2.Substring(9, 2);
-                    string coppia_13 = glob_tag_2.Substring(12, 2);
-                    string coppia_14 = glob_tag_2.Substring(15, 2);
-                    string coppia_15 = glob_tag_2.Substring(18, 2);
-                    string coppia_16 = glob_tag_2.Substring(21, 2);
-
-                    var proc = Process.Start(psi);
-
-                    string verifyprogramstring = "";
-                    if (ID_Hw.Length == 16)
-                    {
-                        verifyprogramstring = Properties.Settings.Default.Commander_path + @"\commander.exe flash --patch 0x0FE007E8:0x" +
-                            coppia_16 + coppia_15 + coppia_14 + coppia_13 + coppia_12 + coppia_11 + coppia_10 + coppia_9 + ":8" + " " + glob_device;
-                    }
-                    proc.StandardInput.WriteLine(verifyprogramstring);
-                    proc.StandardInput.WriteLine("exit");
-
-                    text_dos = proc.StandardOutput.ReadToEnd();
-                    dos_box.Text = dos_box.Text + text_dos + "\n======================================================================" + Environment.NewLine;
-
-                    if (text_dos.Contains("ERROR: Cannot connect to J-Link via USB.") ||
-                        text_dos.Contains("ERROR: Could not open J-Link connection.") ||
-                        text_dos.Contains("ERROR: Unspecified error during flashing.") ||
-                        text_dos.Contains("ERROR: Could not connect debugger."))
-                    {
-                        MessageBox.Show("Interfaccia non collegata correttamente / Errore di programmazione");
-                        dos_box.Clear();
-                        dos_box.Refresh();
-                        text_dos = "";
-                        glob_Program_OK = false;
-                        return;
-                    }
-                    if (text_dos.Contains("ERROR: Verification failed!"))
-                    {
-                        MessageBox.Show("La verifica ha riscontrato un problema!");
-                        dos_box.Clear();
-                        dos_box.Refresh();
-                        text_dos = "";
-                        glob_Program_OK = false;
-                        return;
-                    }
-
-                    if (text_dos.Contains("DONE"))
-                    {
-                        System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-                        string sound = @"\\dc\AREA_IT\AREA_SOFTWARE_SISTEMATICA\SmartLineProduction\tada.wav";
-                        player.SoundLocation = sound;
-                        player.Load();
-                        player.Play();
-                    }
-                    else
-                    {
-                        System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-                        string sound = @"\\dc\AREA_IT\AREA_SOFTWARE_SISTEMATICA\SmartLineProduction\Yamaha.wav";
-                        player.SoundLocation = sound;
-                        player.Load();
-                        player.Play();
-                        glob_Program_OK = false;
-                    }
-
-                    dos_box.SelectionStart = dos_box.Text.Length;
-                    dos_box.ScrollToCaret();
-                }
-                catch (Exception ex)
-                {
-                }
-
-                //Scrittura AREA DI MEMORIA per chiusura programmazione
-                try
-                {
-                    string chiusura_1 = "11";
-                    string chiusura_2 = "22";
-                    string chiusura_3 = "33";
-                    string chiusura_4 = "44";
-
-                    var proc = Process.Start(psi);
-
-                    string verifyprogramstring = "";
-                    if (ID_Hw.Length == 16)
-                    {
-                        verifyprogramstring = Properties.Settings.Default.Commander_path + @"\commander.exe flash --patch 0x0FE007F8:0x" +
-                            chiusura_4 + chiusura_3 + chiusura_2 + chiusura_1 + ":4" + " " + glob_device;
-                    }
-                    proc.StandardInput.WriteLine(verifyprogramstring);
-                    proc.StandardInput.WriteLine("exit");
-
-                    text_dos = proc.StandardOutput.ReadToEnd();
-                    dos_box.Text = dos_box.Text + text_dos + "\n======================================================================" + Environment.NewLine;
-
-                    if (text_dos.Contains("ERROR: Cannot connect to J-Link via USB.") ||
-                        text_dos.Contains("ERROR: Could not open J-Link connection.") ||
-                        text_dos.Contains("ERROR: Unspecified error during flashing.") ||
-                        text_dos.Contains("ERROR: Could not connect debugger."))
-                    {
-                        MessageBox.Show("Interfaccia non collegata correttamente / Errore di programmazione");
-                        dos_box.Clear();
-                        dos_box.Refresh();
-                        text_dos = "";
-                        glob_Program_OK = false;
-                        return;
-                    }
-                    if (text_dos.Contains("ERROR: Verification failed!"))
-                    {
-                        MessageBox.Show("La verifica ha riscontrato un problema!");
-                        dos_box.Clear();
-                        dos_box.Refresh();
-                        text_dos = "";
-                        glob_Program_OK = false;
-                        return;
-                    }
-
-                    if (text_dos.Contains("DONE"))
-                    {
-                        System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-                        string sound = @"\\dc\AREA_IT\AREA_SOFTWARE_SISTEMATICA\SmartLineProduction\tada.wav";
-                        player.SoundLocation = sound;
-                        player.Load();
-                        player.Play();
-                    }
-                    else
-                    {
-                        System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-                        string sound = @"\\dc\AREA_IT\AREA_SOFTWARE_SISTEMATICA\SmartLineProduction\Yamaha.wav";
-                        player.SoundLocation = sound;
-                        player.Load();
-                        player.Play();
-                        glob_Program_OK = false;
-                    }
-
-                    dos_box.SelectionStart = dos_box.Text.Length;
-                    dos_box.ScrollToCaret();
-                }
-                catch (Exception ex)
-                {
                 }
 
             }
@@ -1306,6 +1265,29 @@ namespace SmartLineProduction
             return returnLastNumber;
         }
 
+        private string Define_Unique_Serial_Code(string device_item)
+        {
+            string return_Code = string.Empty;
+            bool already_exists = true;
+
+            do
+            {
+                return_Code = this.uT_Crea_Unique_Official_Serial_CodeTableAdapter.UT_Crea_Unique_Official_Serial_CodeGetRandomCode(device_item, 10).ToString();
+
+                if (this.gL_SerialNumbersTableAdapter.Check_Ser_OfficialSerial_Exists(return_Code) == 1)
+                {
+                    already_exists = true;
+                }
+                else
+                {
+                    already_exists = false;
+                }
+
+            } while (already_exists);
+
+            return return_Code;
+        }
+
         private void RiposizionaGridCommesse()
         {
             if (glob_selectedrecord != 0)
@@ -1344,7 +1326,7 @@ namespace SmartLineProduction
             // Seconda ricerca - pulizia per UUID 2
             filtro = "Rfid_UUID = " + "'" + tag2 + "'";
             safetyPointRFIDGLBindingSource.Filter = filtro;
-            foreach (DataRowView tagRow in  safetyPointRFIDGLBindingSource)
+            foreach (DataRowView tagRow in safetyPointRFIDGLBindingSource)
             {
                 if ((tagRow["Rfid_Ser_SN_Prod"].ToString() != string.Empty) || (tagRow["Rfid_Ser_OfficialSerial"].ToString() != string.Empty))
                 {
@@ -1440,8 +1422,6 @@ namespace SmartLineProduction
 
         private void UC_Programmazione_GL_Commessa_Load(object sender, EventArgs e)
         {
-            // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione_GL.SF_LastSerialNumber_GL'. È possibile spostarla o rimuoverla se necessario.
-            this.sF_LastSerialNumber_GLTableAdapter.Fill(this.ds_Programmazione_GL.SF_LastSerialNumber_GL);
             // Abilita zone dello schermo
             ds_Programmazione_GL.dt_GL_Tmp_Fw.Clear();
             ds_Programmazione_GL.dt_GL_Tmp_Programma.Clear();
@@ -1484,7 +1464,7 @@ namespace SmartLineProduction
                 try
                 {
                     qtadaeva = Convert.ToInt32(grid_commesse.Rows[e.RowIndex].Cells["grid_commesse_QtaInOrdine"].Value);
-                                    }
+                }
                 catch (FormatException)
                 {
                     qtadaeva = 0;
@@ -1541,6 +1521,40 @@ namespace SmartLineProduction
                 }
                 else
                 {
+                    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                    // 09.02.2025 - commentato e rifatto completamente
+                    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+                    //ds_Programmazione_GL.dt_GL_Tmp_Programma.Clear();
+                    //ds_SL.dt_TMP_Firmware.Clear();
+
+                    ////Ricerca di tutti i device e di tutti i software
+                    //TrovaFWDeviceCommesse(CommessaShort);
+                    //TrovaFWDeviceKit(Kit, CommessaLong, CommessaShort, Convert.ToInt32(glob_ID_cli), Kit);
+
+                    ////Controllo oggetto per capire che FW mettere
+                    //ds_SL.dt_TMP_Firmware.DefaultView.Sort = "Livello_FW desc, Cod_FW asc";
+                    //string tipodevice = Item.Substring(5, 1);
+                    //string filtro = "";
+                    //if (tipodevice == "P")
+                    //{
+                    //    filtro = "Is_SWR_P = '1'";
+                    //}
+                    //if (tipodevice == "R")
+                    //{
+                    //    filtro = "Is_SWR_R = '1'";
+                    //}
+                    //foreach (DataRow rows in ds_SL.dt_TMP_Firmware.Select(filtro))
+                    //{
+                    //    Fw = rows["Cod_FW"].ToString();
+                    //    break;
+                    //}
+
+                    //DataRowView currentRowView = sFCommesseSLSFArticoliBindingSource.Current as DataRowView;
+                    //string ID = currentRowView["Modello"].ToString();
+                    //AggiungiRigaProg(CommessaLong, Kit, Item, Fw, 0, ID);
+
+                    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                     ds_Programmazione_GL.dt_GL_Tmp_Programma.Clear();
                     ds_SL.dt_TMP_Firmware.Clear();
 
@@ -1550,7 +1564,21 @@ namespace SmartLineProduction
 
                     //Controllo oggetto per capire che FW mettere
                     ds_SL.dt_TMP_Firmware.DefaultView.Sort = "Livello_FW desc, Cod_FW asc";
-                    string tipodevice = Item.Substring(5, 1);
+
+                    //string tipodevice = Item.Substring(5, 1);
+                    string tipodevice = string.Empty;
+                    try
+                    {
+                        tipodevice = this.gL_Firmware_PGTableAdapter.GetDeviceType(Fw).ToString();
+                    }
+                    catch (NullReferenceException ex)
+                    {
+                        string mess = "Firmware non presente nella tabella\r\nGL_Firmware_PG";
+
+                        MessageBox.Show(mess);
+                        return;
+                    }
+
                     string filtro = "";
                     if (tipodevice == "P")
                     {
@@ -1568,7 +1596,16 @@ namespace SmartLineProduction
 
                     DataRowView currentRowView = sFCommesseSLSFArticoliBindingSource.Current as DataRowView;
                     string ID = currentRowView["Modello"].ToString();
-                    AggiungiRigaProg(CommessaLong, Kit, Item, Fw, 0, ID);
+                    AggiungiRigaProg(CommessaLong, Kit, Item, Fw, 0, ID, 'R');
+
+                    //Definisco se Standard FW
+                    int res = (int)this.gL_Firmware_PGTableAdapter.IsStandardFW(Fw);
+                    if (res == 0) { glob_Standard_FW = false; } else { glob_Standard_FW = true; }
+
+                    //Definisco se sw Golden
+                    glob_IsGolden = (bool)this.gL_Firmware_PGTableAdapter.IsGoldenFW(Fw);
+                    //bool result = this.gL_Firmware_PGTableAdapter.IsGoldenFW(Fw);
+                    //if (res == 0) { glob_IsGolden = false; } else { glob_IsGolden = true; }
                 }
             }
 
@@ -1720,10 +1757,21 @@ namespace SmartLineProduction
                 string Fw = row.Cells["dg_dt_tmp_progr_Fw"].Value.ToString();
                 glob_codice_fw = Fw;
 
+                string tipodev = row.Cells["dg_tmp_progr_TipoDevice"].Value.ToString();
+
                 int Key_Id = Int16.Parse(row.Cells["dg_dt_tmp_progr_FwKeyId"].Value.ToString());
                 string ID_Hw = row.Cells["dg_dt_tmp_progr_ID_Hardware"].Value.ToString();
                 glob_ID_newcode = ID_Hw;
-                ProgrammaSilicon(Commessa, Kit, Item, Fw, Key_Id, ID_Hw);
+
+                string ID1 = row.Cells["dg_dt_tmp_progr_ID_Hardware"].Value.ToString().Trim();
+                string ID2 = this.sF_GL_id1_ProgrammazioneTableAdapter.Get_ID1(Item).Trim();
+                string ID3 = this.sF_GL_id2_ProgrammazioneTableAdapter.Get_ID2(Commessa).Trim();
+
+                // ID1 = ID HW
+                // ID2 = ID Opzioni Attivate --> arat0000 - attributo 4000: campo "Valore"
+                // ID3 - IDConfigurazione ----> DATT0000 - TipoDocumento = 'G' and Attributo = 1000 and Gruppo = 1 - campo "Valore"
+
+                ProgrammaSilicon(Commessa, Kit, Item, Fw, Key_Id, ID_Hw, tipodev, ID1, ID2, ID3, glob_Standard_FW, glob_IsGolden);
                 CaricaArchivi();
                 RiposizionaGridCommesse();
             }
