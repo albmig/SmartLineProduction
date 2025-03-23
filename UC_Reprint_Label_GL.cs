@@ -12,28 +12,28 @@ using System.IO;
 
 namespace SmartLineProduction
 {
-    public partial class UC_Reprint_Label : MetroFramework.Forms.MetroForm
+    public partial class UC_Reprint_Label_GL : MetroFramework.Forms.MetroForm
     {
         //public string Answer { get { return cb_Correzione.Text; } }
 
-        public UC_Reprint_Label()
+        public UC_Reprint_Label_GL()
         {
             InitializeComponent();
         }
 
-        private void but_abort_UC_Reprint_Label_Click(object sender, EventArgs e)
+        private void but_abort_UC_Reprint_Label_GL_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void but_close_UC_Reprint_Label_Click(object sender, EventArgs e)
+        private void but_close_UC_Reprint_Label_GL_Click(object sender, EventArgs e)
         {
             GVar.Brother_Default_pos_x = Convert.ToInt32(trigger_coord_x.Value);
             GVar.Brother_Default_pos_y = Convert.ToInt32(trigger_coord_y.Value);
             this.Close();
         }
 
-        private void UC_Reprint_Label_Load(object sender, EventArgs e)
+        private void UC_Reprint_Label_GL_Load(object sender, EventArgs e)
         {
             // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione.Firmware'. È possibile spostarla o rimuoverla se necessario.
             this.firmwareTableAdapter.Fill(this.ds_Programmazione.Firmware);

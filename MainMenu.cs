@@ -569,13 +569,13 @@ namespace SmartLineProduction
             //if ((Result_ip_221 == 1) && (Result_ping_221))
             if (Result_ping_221)
             {
-                pic_221.Image = global::SmartLineProduction.Properties.Resources.Small_Icona_OK;
-                pic_221.Refresh();
+                pic_SL.Image = global::SmartLineProduction.Properties.Resources.Small_Icona_OK;
+                pic_SL.Refresh();
             }
             else
             {
-                pic_221.Image = global::SmartLineProduction.Properties.Resources.Small_Icona_NotOK;
-                pic_221.Refresh();
+                pic_SL.Image = global::SmartLineProduction.Properties.Resources.Small_Icona_NotOK;
+                pic_SL.Refresh();
             }
 
             //Interroga 192.168.0.222 - TJ-4120TN_Antiman
@@ -594,16 +594,47 @@ namespace SmartLineProduction
             //if ((Result_ip_222 == 1) && (Result_ping_222))
             if (Result_ping_222)
             {
-                pic_222.Image = global::SmartLineProduction.Properties.Resources.Small_Icona_OK;
-                pic_222.Refresh();
+                pic_Antiman.Image = global::SmartLineProduction.Properties.Resources.Small_Icona_OK;
+                pic_Antiman.Refresh();
             }
             else
             {
-                pic_222.Image = global::SmartLineProduction.Properties.Resources.Small_Icona_NotOK;
-                pic_222.Refresh();
+                pic_Antiman.Image = global::SmartLineProduction.Properties.Resources.Small_Icona_NotOK;
+                pic_Antiman.Refresh();
+            }
+
+            //Interroga 192.168.0.222 - TJ-4120TN_Antiman
+            //Eliminata l'interrogazione tramite openport in quanto crea processo di spool
+            //int Result_ip_222 = BROLIB_DLL.openport(GVar.Brother_Antiman_addr);
+
+            //Interroga IP tramite ping
+            bool Result_ping_255 = false;
+            try
+            {
+                Ping myPing = new Ping();
+                PingReply reply = myPing.Send("192.168.0.255", 1000);
+                if (reply.Status.ToString() == "Success") { Result_ping_255 = true; }
+            }
+            catch { }
+            //if ((Result_ip_255 == 1) && (Result_ping_255))
+            if (Result_ping_255)
+            {
+                pict_GL.Image = global::SmartLineProduction.Properties.Resources.Small_Icona_OK;
+                pict_GL.Refresh();
+            }
+            else
+            {
+                pict_GL.Image = global::SmartLineProduction.Properties.Resources.Small_Icona_NotOK;
+                pict_GL.Refresh();
             }
 
             //Lettura Configurazione in risorse
+            if (GFunctions.LeggiConfig_GL())
+            {
+                Brother_GL_pos_x.Text = "x: " + GVar.Brother_GL_pos_x.ToString();
+                Brother_GL_pos_y.Text = "y: " + GVar.Brother_GL_pos_y.ToString();
+            }
+
             if (GFunctions.LeggiConfig_SL())
             {
                 Brother_SL_pos_x.Text = "x: " + GVar.Brother_SL_pos_x.ToString();

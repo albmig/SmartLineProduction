@@ -34,12 +34,17 @@
             this.layout_orizz_menu = new System.Windows.Forms.TableLayoutPanel();
             this.MainMenuStrip = new System.Windows.Forms.MenuStrip();
             this.spedizioneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
             this.fasiDiAvanzamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.programmazioneSmartLineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.programmaDaCommessaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.riprogrammazionePlugClonazioneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.programmazionePerProgettazioneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.programmazioneGlobalLineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.programmazioneCommessaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
             this.spedizioneToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.individuazioneEtichetteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.raccoltaDatasheetPerCommessaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -93,26 +98,26 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.lab_Brother_0 = new MetroFramework.Controls.MetroLabel();
             this.lab_Printer_Titolo = new MetroFramework.Controls.MetroLabel();
-            this.pic_221 = new System.Windows.Forms.PictureBox();
+            this.pic_SL = new System.Windows.Forms.PictureBox();
             this.lab_Brother_1 = new MetroFramework.Controls.MetroLabel();
-            this.pic_222 = new System.Windows.Forms.PictureBox();
+            this.pic_Antiman = new System.Windows.Forms.PictureBox();
+            this.pict_GL = new System.Windows.Forms.PictureBox();
             this.Brother_SL_pos_x = new MetroFramework.Controls.MetroLabel();
             this.Brother_SL_pos_y = new MetroFramework.Controls.MetroLabel();
             this.Brother_Antiman_pos_x = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.tog_Printers = new DevExpress.XtraEditors.ToggleSwitch();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.lab_Brother_Default = new MetroFramework.Controls.MetroLabel();
-            this.tog_Printers = new DevExpress.XtraEditors.ToggleSwitch();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.Brother_GL_pos_x = new MetroFramework.Controls.MetroLabel();
+            this.Brother_GL_pos_y = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
             this.lab_resources_path = new MetroFramework.Controls.MetroLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.miniToolStrip = new System.Windows.Forms.MenuStrip();
             this.Brother_timer = new System.Windows.Forms.Timer(this.components);
-            this.programmazioneGlobalLineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
-            this.programmazioneCommessaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.layout_Menu.SuspendLayout();
             this.layout_orizz_menu.SuspendLayout();
             this.MainMenuStrip.SuspendLayout();
@@ -120,8 +125,9 @@
             this.MainPanel.SuspendLayout();
             this.docker_printers.SuspendLayout();
             this.layout_BrotherPrinters.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_221)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_222)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_SL)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Antiman)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pict_GL)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tog_Printers.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -220,6 +226,11 @@
             this.spedizioneToolStripMenuItem.Size = new System.Drawing.Size(115, 21);
             this.spedizioneToolStripMenuItem.Text = "Fasi di lavorazione";
             // 
+            // toolStripSeparator12
+            // 
+            this.toolStripSeparator12.Name = "toolStripSeparator12";
+            this.toolStripSeparator12.Size = new System.Drawing.Size(285, 6);
+            // 
             // fasiDiAvanzamentoToolStripMenuItem
             // 
             this.fasiDiAvanzamentoToolStripMenuItem.Name = "fasiDiAvanzamentoToolStripMenuItem";
@@ -264,6 +275,31 @@
             this.programmazionePerProgettazioneToolStripMenuItem.Size = new System.Drawing.Size(295, 22);
             this.programmazionePerProgettazioneToolStripMenuItem.Text = "Programmazione per Progettazione";
             this.programmazionePerProgettazioneToolStripMenuItem.Click += new System.EventHandler(this.programmazionePerProgettazioneToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(285, 6);
+            // 
+            // programmazioneGlobalLineToolStripMenuItem
+            // 
+            this.programmazioneGlobalLineToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.programmazioneCommessaToolStripMenuItem});
+            this.programmazioneGlobalLineToolStripMenuItem.Name = "programmazioneGlobalLineToolStripMenuItem";
+            this.programmazioneGlobalLineToolStripMenuItem.Size = new System.Drawing.Size(288, 22);
+            this.programmazioneGlobalLineToolStripMenuItem.Text = "--- Programmazione GlobalLine ---";
+            // 
+            // programmazioneCommessaToolStripMenuItem
+            // 
+            this.programmazioneCommessaToolStripMenuItem.Name = "programmazioneCommessaToolStripMenuItem";
+            this.programmazioneCommessaToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
+            this.programmazioneCommessaToolStripMenuItem.Text = "Programmazione - Commessa";
+            this.programmazioneCommessaToolStripMenuItem.Click += new System.EventHandler(this.programmazioneCommessaToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator11
+            // 
+            this.toolStripSeparator11.Name = "toolStripSeparator11";
+            this.toolStripSeparator11.Size = new System.Drawing.Size(285, 6);
             // 
             // spedizioneToolStripMenuItem1
             // 
@@ -501,14 +537,14 @@
             // prodottiAttivatiToolStripMenuItem1
             // 
             this.prodottiAttivatiToolStripMenuItem1.Name = "prodottiAttivatiToolStripMenuItem1";
-            this.prodottiAttivatiToolStripMenuItem1.Size = new System.Drawing.Size(177, 22);
+            this.prodottiAttivatiToolStripMenuItem1.Size = new System.Drawing.Size(178, 22);
             this.prodottiAttivatiToolStripMenuItem1.Text = "Prodotti attivati";
             this.prodottiAttivatiToolStripMenuItem1.Click += new System.EventHandler(this.prodottiAttivatiToolStripMenuItem1_Click);
             // 
             // tracciaturaProdottiToolStripMenuItem
             // 
             this.tracciaturaProdottiToolStripMenuItem.Name = "tracciaturaProdottiToolStripMenuItem";
-            this.tracciaturaProdottiToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.tracciaturaProdottiToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.tracciaturaProdottiToolStripMenuItem.Text = "Tracciatura prodotti";
             this.tracciaturaProdottiToolStripMenuItem.Click += new System.EventHandler(this.tracciaturaProdottiToolStripMenuItem_Click);
             // 
@@ -678,26 +714,35 @@
             this.layout_BrotherPrinters.Controls.Add(this.metroLabel1, 1, 1);
             this.layout_BrotherPrinters.Controls.Add(this.lab_Brother_0, 0, 1);
             this.layout_BrotherPrinters.Controls.Add(this.lab_Printer_Titolo, 0, 0);
-            this.layout_BrotherPrinters.Controls.Add(this.pic_221, 2, 1);
+            this.layout_BrotherPrinters.Controls.Add(this.pic_SL, 2, 1);
             this.layout_BrotherPrinters.Controls.Add(this.lab_Brother_1, 0, 2);
-            this.layout_BrotherPrinters.Controls.Add(this.pic_222, 2, 2);
+            this.layout_BrotherPrinters.Controls.Add(this.pic_Antiman, 2, 2);
+            this.layout_BrotherPrinters.Controls.Add(this.pict_GL, 2, 3);
             this.layout_BrotherPrinters.Controls.Add(this.Brother_SL_pos_x, 3, 1);
             this.layout_BrotherPrinters.Controls.Add(this.Brother_SL_pos_y, 4, 1);
             this.layout_BrotherPrinters.Controls.Add(this.Brother_Antiman_pos_x, 3, 2);
             this.layout_BrotherPrinters.Controls.Add(this.metroLabel3, 1, 2);
-            this.layout_BrotherPrinters.Controls.Add(this.metroLabel2, 0, 3);
-            this.layout_BrotherPrinters.Controls.Add(this.lab_Brother_Default, 1, 3);
-            this.layout_BrotherPrinters.Controls.Add(this.tog_Printers, 0, 4);
+            this.layout_BrotherPrinters.Controls.Add(this.tog_Printers, 0, 6);
+            this.layout_BrotherPrinters.Controls.Add(this.metroLabel2, 0, 5);
+            this.layout_BrotherPrinters.Controls.Add(this.lab_Brother_Default, 1, 5);
+            this.layout_BrotherPrinters.Controls.Add(this.metroLabel4, 0, 3);
+            this.layout_BrotherPrinters.Controls.Add(this.Brother_GL_pos_x, 3, 3);
+            this.layout_BrotherPrinters.Controls.Add(this.Brother_GL_pos_y, 4, 3);
+            this.layout_BrotherPrinters.Controls.Add(this.metroLabel5, 1, 3);
             this.layout_BrotherPrinters.Dock = System.Windows.Forms.DockStyle.Top;
             this.layout_BrotherPrinters.Location = new System.Drawing.Point(3, 3);
             this.layout_BrotherPrinters.Name = "layout_BrotherPrinters";
-            this.layout_BrotherPrinters.RowCount = 5;
-            this.layout_BrotherPrinters.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.layout_BrotherPrinters.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.layout_BrotherPrinters.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.layout_BrotherPrinters.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.layout_BrotherPrinters.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.layout_BrotherPrinters.Size = new System.Drawing.Size(480, 100);
+            this.layout_BrotherPrinters.RowCount = 7;
+            this.layout_BrotherPrinters.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.layout_BrotherPrinters.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.layout_BrotherPrinters.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.layout_BrotherPrinters.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.layout_BrotherPrinters.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.layout_BrotherPrinters.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.layout_BrotherPrinters.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.layout_BrotherPrinters.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.layout_BrotherPrinters.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.layout_BrotherPrinters.Size = new System.Drawing.Size(480, 190);
             this.layout_BrotherPrinters.TabIndex = 4;
             // 
             // Brother_Antiman_pos_y
@@ -706,7 +751,7 @@
             this.Brother_Antiman_pos_y.AutoSize = true;
             this.Brother_Antiman_pos_y.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.Brother_Antiman_pos_y.ForeColor = System.Drawing.Color.White;
-            this.Brother_Antiman_pos_y.Location = new System.Drawing.Point(430, 40);
+            this.Brother_Antiman_pos_y.Location = new System.Drawing.Point(430, 60);
             this.Brother_Antiman_pos_y.Name = "Brother_Antiman_pos_y";
             this.Brother_Antiman_pos_y.Size = new System.Drawing.Size(154, 19);
             this.Brother_Antiman_pos_y.TabIndex = 22;
@@ -720,13 +765,14 @@
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.metroLabel1.ForeColor = System.Drawing.Color.White;
-            this.metroLabel1.Location = new System.Drawing.Point(142, 20);
+            this.metroLabel1.Location = new System.Drawing.Point(142, 32);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(98, 19);
             this.metroLabel1.TabIndex = 15;
             this.metroLabel1.Text = "192.168.0.221";
             this.metroLabel1.UseCustomBackColor = true;
             this.metroLabel1.UseCustomForeColor = true;
+            this.metroLabel1.Visible = false;
             // 
             // lab_Brother_0
             // 
@@ -734,7 +780,7 @@
             this.lab_Brother_0.AutoSize = true;
             this.lab_Brother_0.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.lab_Brother_0.ForeColor = System.Drawing.Color.White;
-            this.lab_Brother_0.Location = new System.Drawing.Point(3, 20);
+            this.lab_Brother_0.Location = new System.Drawing.Point(3, 32);
             this.lab_Brother_0.Name = "lab_Brother_0";
             this.lab_Brother_0.Size = new System.Drawing.Size(95, 19);
             this.lab_Brother_0.TabIndex = 5;
@@ -749,7 +795,7 @@
             this.layout_BrotherPrinters.SetColumnSpan(this.lab_Printer_Titolo, 3);
             this.lab_Printer_Titolo.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.lab_Printer_Titolo.ForeColor = System.Drawing.Color.White;
-            this.lab_Printer_Titolo.Location = new System.Drawing.Point(3, 0);
+            this.lab_Printer_Titolo.Location = new System.Drawing.Point(3, 4);
             this.lab_Printer_Titolo.Name = "lab_Printer_Titolo";
             this.lab_Printer_Titolo.Size = new System.Drawing.Size(165, 19);
             this.lab_Printer_Titolo.TabIndex = 4;
@@ -757,16 +803,16 @@
             this.lab_Printer_Titolo.UseCustomBackColor = true;
             this.lab_Printer_Titolo.UseCustomForeColor = true;
             // 
-            // pic_221
+            // pic_SL
             // 
-            this.pic_221.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pic_221.BackColor = System.Drawing.Color.Transparent;
-            this.pic_221.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pic_221.Location = new System.Drawing.Point(246, 23);
-            this.pic_221.Name = "pic_221";
-            this.pic_221.Size = new System.Drawing.Size(19, 14);
-            this.pic_221.TabIndex = 17;
-            this.pic_221.TabStop = false;
+            this.pic_SL.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pic_SL.BackColor = System.Drawing.Color.Transparent;
+            this.pic_SL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pic_SL.Location = new System.Drawing.Point(246, 35);
+            this.pic_SL.Name = "pic_SL";
+            this.pic_SL.Size = new System.Drawing.Size(19, 14);
+            this.pic_SL.TabIndex = 17;
+            this.pic_SL.TabStop = false;
             // 
             // lab_Brother_1
             // 
@@ -774,7 +820,7 @@
             this.lab_Brother_1.AutoSize = true;
             this.lab_Brother_1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.lab_Brother_1.ForeColor = System.Drawing.Color.White;
-            this.lab_Brother_1.Location = new System.Drawing.Point(3, 40);
+            this.lab_Brother_1.Location = new System.Drawing.Point(3, 60);
             this.lab_Brother_1.Name = "lab_Brother_1";
             this.lab_Brother_1.Size = new System.Drawing.Size(133, 19);
             this.lab_Brother_1.TabIndex = 6;
@@ -782,16 +828,27 @@
             this.lab_Brother_1.UseCustomBackColor = true;
             this.lab_Brother_1.UseCustomForeColor = true;
             // 
-            // pic_222
+            // pic_Antiman
             // 
-            this.pic_222.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pic_222.BackColor = System.Drawing.Color.Transparent;
-            this.pic_222.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pic_222.Location = new System.Drawing.Point(246, 43);
-            this.pic_222.Name = "pic_222";
-            this.pic_222.Size = new System.Drawing.Size(19, 14);
-            this.pic_222.TabIndex = 18;
-            this.pic_222.TabStop = false;
+            this.pic_Antiman.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pic_Antiman.BackColor = System.Drawing.Color.Transparent;
+            this.pic_Antiman.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pic_Antiman.Location = new System.Drawing.Point(246, 63);
+            this.pic_Antiman.Name = "pic_Antiman";
+            this.pic_Antiman.Size = new System.Drawing.Size(19, 14);
+            this.pic_Antiman.TabIndex = 18;
+            this.pic_Antiman.TabStop = false;
+            // 
+            // pict_GL
+            // 
+            this.pict_GL.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pict_GL.BackColor = System.Drawing.Color.Transparent;
+            this.pict_GL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pict_GL.Location = new System.Drawing.Point(246, 91);
+            this.pict_GL.Name = "pict_GL";
+            this.pict_GL.Size = new System.Drawing.Size(19, 14);
+            this.pict_GL.TabIndex = 29;
+            this.pict_GL.TabStop = false;
             // 
             // Brother_SL_pos_x
             // 
@@ -799,7 +856,7 @@
             this.Brother_SL_pos_x.AutoSize = true;
             this.Brother_SL_pos_x.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.Brother_SL_pos_x.ForeColor = System.Drawing.Color.White;
-            this.Brother_SL_pos_x.Location = new System.Drawing.Point(271, 20);
+            this.Brother_SL_pos_x.Location = new System.Drawing.Point(271, 32);
             this.Brother_SL_pos_x.Name = "Brother_SL_pos_x";
             this.Brother_SL_pos_x.Size = new System.Drawing.Size(115, 19);
             this.Brother_SL_pos_x.TabIndex = 16;
@@ -813,7 +870,7 @@
             this.Brother_SL_pos_y.AutoSize = true;
             this.Brother_SL_pos_y.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.Brother_SL_pos_y.ForeColor = System.Drawing.Color.White;
-            this.Brother_SL_pos_y.Location = new System.Drawing.Point(430, 20);
+            this.Brother_SL_pos_y.Location = new System.Drawing.Point(430, 32);
             this.Brother_SL_pos_y.Name = "Brother_SL_pos_y";
             this.Brother_SL_pos_y.Size = new System.Drawing.Size(116, 19);
             this.Brother_SL_pos_y.TabIndex = 20;
@@ -827,7 +884,7 @@
             this.Brother_Antiman_pos_x.AutoSize = true;
             this.Brother_Antiman_pos_x.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.Brother_Antiman_pos_x.ForeColor = System.Drawing.Color.White;
-            this.Brother_Antiman_pos_x.Location = new System.Drawing.Point(271, 40);
+            this.Brother_Antiman_pos_x.Location = new System.Drawing.Point(271, 60);
             this.Brother_Antiman_pos_x.Name = "Brother_Antiman_pos_x";
             this.Brother_Antiman_pos_x.Size = new System.Drawing.Size(153, 19);
             this.Brother_Antiman_pos_x.TabIndex = 21;
@@ -841,49 +898,21 @@
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.metroLabel3.ForeColor = System.Drawing.Color.White;
-            this.metroLabel3.Location = new System.Drawing.Point(142, 40);
+            this.metroLabel3.Location = new System.Drawing.Point(142, 60);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(98, 19);
             this.metroLabel3.TabIndex = 19;
             this.metroLabel3.Text = "192.168.0.222";
             this.metroLabel3.UseCustomBackColor = true;
             this.metroLabel3.UseCustomForeColor = true;
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel2.ForeColor = System.Drawing.Color.White;
-            this.metroLabel2.Location = new System.Drawing.Point(3, 60);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(104, 19);
-            this.metroLabel2.TabIndex = 23;
-            this.metroLabel2.Text = "Brother default:";
-            this.metroLabel2.UseCustomBackColor = true;
-            this.metroLabel2.UseCustomForeColor = true;
-            // 
-            // lab_Brother_Default
-            // 
-            this.lab_Brother_Default.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lab_Brother_Default.AutoSize = true;
-            this.layout_BrotherPrinters.SetColumnSpan(this.lab_Brother_Default, 3);
-            this.lab_Brother_Default.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lab_Brother_Default.ForeColor = System.Drawing.Color.White;
-            this.lab_Brother_Default.Location = new System.Drawing.Point(142, 60);
-            this.lab_Brother_Default.Name = "lab_Brother_Default";
-            this.lab_Brother_Default.Size = new System.Drawing.Size(129, 19);
-            this.lab_Brother_Default.TabIndex = 24;
-            this.lab_Brother_Default.Text = "lab_Brother_Default";
-            this.lab_Brother_Default.UseCustomBackColor = true;
-            this.lab_Brother_Default.UseCustomForeColor = true;
+            this.metroLabel3.Visible = false;
             // 
             // tog_Printers
             // 
             this.tog_Printers.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tog_Printers.AutoSizeInLayoutControl = true;
             this.layout_BrotherPrinters.SetColumnSpan(this.tog_Printers, 4);
-            this.tog_Printers.Location = new System.Drawing.Point(3, 83);
+            this.tog_Printers.Location = new System.Drawing.Point(3, 171);
             this.tog_Printers.Name = "tog_Printers";
             this.tog_Printers.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tog_Printers.Properties.Appearance.ForeColor = System.Drawing.Color.White;
@@ -894,7 +923,96 @@
             this.tog_Printers.Properties.OnText = "On";
             this.tog_Printers.Size = new System.Drawing.Size(401, 20);
             this.tog_Printers.TabIndex = 25;
+            this.tog_Printers.Visible = false;
             this.tog_Printers.Toggled += new System.EventHandler(this.tog_Printers_Toggled);
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel2.ForeColor = System.Drawing.Color.White;
+            this.metroLabel2.Location = new System.Drawing.Point(3, 144);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(104, 19);
+            this.metroLabel2.TabIndex = 23;
+            this.metroLabel2.Text = "Brother default:";
+            this.metroLabel2.UseCustomBackColor = true;
+            this.metroLabel2.UseCustomForeColor = true;
+            this.metroLabel2.Visible = false;
+            // 
+            // lab_Brother_Default
+            // 
+            this.lab_Brother_Default.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lab_Brother_Default.AutoSize = true;
+            this.layout_BrotherPrinters.SetColumnSpan(this.lab_Brother_Default, 3);
+            this.lab_Brother_Default.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.lab_Brother_Default.ForeColor = System.Drawing.Color.White;
+            this.lab_Brother_Default.Location = new System.Drawing.Point(142, 144);
+            this.lab_Brother_Default.Name = "lab_Brother_Default";
+            this.lab_Brother_Default.Size = new System.Drawing.Size(129, 19);
+            this.lab_Brother_Default.TabIndex = 24;
+            this.lab_Brother_Default.Text = "lab_Brother_Default";
+            this.lab_Brother_Default.UseCustomBackColor = true;
+            this.lab_Brother_Default.UseCustomForeColor = true;
+            this.lab_Brother_Default.Visible = false;
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel4.ForeColor = System.Drawing.Color.White;
+            this.metroLabel4.Location = new System.Drawing.Point(3, 88);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(98, 19);
+            this.metroLabel4.TabIndex = 26;
+            this.metroLabel4.Text = "TJ-4120TN_GL";
+            this.metroLabel4.UseCustomBackColor = true;
+            this.metroLabel4.UseCustomForeColor = true;
+            // 
+            // Brother_GL_pos_x
+            // 
+            this.Brother_GL_pos_x.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.Brother_GL_pos_x.AutoSize = true;
+            this.Brother_GL_pos_x.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.Brother_GL_pos_x.ForeColor = System.Drawing.Color.White;
+            this.Brother_GL_pos_x.Location = new System.Drawing.Point(271, 88);
+            this.Brother_GL_pos_x.Name = "Brother_GL_pos_x";
+            this.Brother_GL_pos_x.Size = new System.Drawing.Size(118, 19);
+            this.Brother_GL_pos_x.TabIndex = 27;
+            this.Brother_GL_pos_x.Text = "Brother_GL_pos_x";
+            this.Brother_GL_pos_x.UseCustomBackColor = true;
+            this.Brother_GL_pos_x.UseCustomForeColor = true;
+            // 
+            // Brother_GL_pos_y
+            // 
+            this.Brother_GL_pos_y.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.Brother_GL_pos_y.AutoSize = true;
+            this.Brother_GL_pos_y.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.Brother_GL_pos_y.ForeColor = System.Drawing.Color.White;
+            this.Brother_GL_pos_y.Location = new System.Drawing.Point(430, 88);
+            this.Brother_GL_pos_y.Name = "Brother_GL_pos_y";
+            this.Brother_GL_pos_y.Size = new System.Drawing.Size(119, 19);
+            this.Brother_GL_pos_y.TabIndex = 28;
+            this.Brother_GL_pos_y.Text = "Brother_GL_pos_y";
+            this.Brother_GL_pos_y.UseCustomBackColor = true;
+            this.Brother_GL_pos_y.UseCustomForeColor = true;
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel5.ForeColor = System.Drawing.Color.White;
+            this.metroLabel5.Location = new System.Drawing.Point(142, 88);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(98, 19);
+            this.metroLabel5.TabIndex = 30;
+            this.metroLabel5.Text = "192.168.0.222";
+            this.metroLabel5.UseCustomBackColor = true;
+            this.metroLabel5.UseCustomForeColor = true;
+            this.metroLabel5.Visible = false;
             // 
             // metroTextBox1
             // 
@@ -980,36 +1098,6 @@
             this.Brother_timer.Interval = 1000;
             this.Brother_timer.Tick += new System.EventHandler(this.Brother_timer_Tick);
             // 
-            // programmazioneGlobalLineToolStripMenuItem
-            // 
-            this.programmazioneGlobalLineToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.programmazioneCommessaToolStripMenuItem});
-            this.programmazioneGlobalLineToolStripMenuItem.Name = "programmazioneGlobalLineToolStripMenuItem";
-            this.programmazioneGlobalLineToolStripMenuItem.Size = new System.Drawing.Size(288, 22);
-            this.programmazioneGlobalLineToolStripMenuItem.Text = "--- Programmazione GlobalLine ---";
-            // 
-            // toolStripSeparator7
-            // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(285, 6);
-            // 
-            // toolStripSeparator11
-            // 
-            this.toolStripSeparator11.Name = "toolStripSeparator11";
-            this.toolStripSeparator11.Size = new System.Drawing.Size(285, 6);
-            // 
-            // toolStripSeparator12
-            // 
-            this.toolStripSeparator12.Name = "toolStripSeparator12";
-            this.toolStripSeparator12.Size = new System.Drawing.Size(285, 6);
-            // 
-            // programmazioneCommessaToolStripMenuItem
-            // 
-            this.programmazioneCommessaToolStripMenuItem.Name = "programmazioneCommessaToolStripMenuItem";
-            this.programmazioneCommessaToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
-            this.programmazioneCommessaToolStripMenuItem.Text = "Programmazione - Commessa";
-            this.programmazioneCommessaToolStripMenuItem.Click += new System.EventHandler(this.programmazioneCommessaToolStripMenuItem_Click);
-            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1039,8 +1127,9 @@
             this.docker_printers.ResumeLayout(false);
             this.layout_BrotherPrinters.ResumeLayout(false);
             this.layout_BrotherPrinters.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_221)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_222)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_SL)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Antiman)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pict_GL)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tog_Printers.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -1112,8 +1201,8 @@
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel Brother_SL_pos_x;
         private MetroFramework.Controls.MetroTextBox metroTextBox1;
-        private System.Windows.Forms.PictureBox pic_221;
-        private System.Windows.Forms.PictureBox pic_222;
+        private System.Windows.Forms.PictureBox pic_SL;
+        private System.Windows.Forms.PictureBox pic_Antiman;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel Brother_SL_pos_y;
         private MetroFramework.Controls.MetroLabel Brother_Antiman_pos_y;
@@ -1132,6 +1221,11 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator11;
         private System.Windows.Forms.ToolStripMenuItem programmazioneCommessaToolStripMenuItem;
+        private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroLabel Brother_GL_pos_y;
+        private MetroFramework.Controls.MetroLabel Brother_GL_pos_x;
+        private System.Windows.Forms.PictureBox pict_GL;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
     }
 }
 

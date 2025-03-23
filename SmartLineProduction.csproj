@@ -416,6 +416,12 @@
     <Compile Include="UC_Quality_new_version.designer.cs">
       <DependentUpon>UC_Quality_new_version.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_Reprint_Label_GL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC_Reprint_Label_GL.designer.cs">
+      <DependentUpon>UC_Reprint_Label_GL.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_ViewConfig.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -717,6 +723,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Quality_new_version.resx">
       <DependentUpon>UC_Quality_new_version.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Reprint_Label_GL.resx">
+      <DependentUpon>UC_Reprint_Label_GL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_ViewConfig.resx">
       <DependentUpon>UC_ViewConfig.cs</DependentUpon>

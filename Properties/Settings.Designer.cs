@@ -117,5 +117,17 @@ namespace SmartLineProduction.Properties {
                 return ((string)(this["SISTEMATICA_FACTORYConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("178|89")]
+        public string Settings_Brother_GL {
+            get {
+                return ((string)(this["Settings_Brother_GL"]));
+            }
+            set {
+                this["Settings_Brother_GL"] = value;
+            }
+        }
     }
 }

@@ -37,6 +37,29 @@ namespace SmartLineProduction
 
             return true;
         }
+        public static bool LeggiConfig_GL()
+        {
+            int pos_x = 0;
+            int pos_y = 0;
+            int posdiv = 0;
+            string config_text = string.Empty;
+
+            // TJ-4120TN_SL
+            config_text = Properties.Settings.Default.Settings_Brother_GL;
+            posdiv = config_text.IndexOf("|");
+            pos_x = Convert.ToInt32(config_text.Substring(0, posdiv));
+            pos_y = Convert.ToInt32(config_text.Substring(posdiv + 1, (config_text.Length - posdiv - 1)));
+            GVar.Brother_GL_pos_x = pos_x;
+            GVar.Brother_GL_pos_y = pos_y;
+
+            if (GVar.Brother_default == GVar.Brother_GL_addr)
+            {
+                GVar.Brother_Default_pos_x = GVar.Brother_GL_pos_x;
+                GVar.Brother_Default_pos_y = GVar.Brother_GL_pos_y;
+            }
+
+            return true;
+        }
 
         public static bool LeggiConfig_Antiman()
         {
@@ -100,13 +123,34 @@ namespace SmartLineProduction
             return true;
         }
 
-        public static bool PrintMask ()
+        public static bool PrintMask()
         {
             bool endprint = false;
             do
             {
                 UC_Reprint_Label uC_Reprint_Label = new UC_Reprint_Label();
                 var result = uC_Reprint_Label.ShowDialog();
+
+                if (result == DialogResult.Yes)
+                {
+                    PrintLabelBrother();
+                    WriteConfig_Coordinate();
+                    endprint = false;
+                }
+                else
+                {
+                    endprint = true;
+                }
+            } while (!endprint);
+            return true;
+        }
+        public static bool PrintMask_GL()
+        {
+            bool endprint = false;
+            do
+            {
+                UC_Reprint_Label_GL uC_Reprint_Label_GL = new UC_Reprint_Label_GL();
+                var result = uC_Reprint_Label_GL.ShowDialog();
 
                 if (result == DialogResult.Yes)
                 {
@@ -129,6 +173,11 @@ namespace SmartLineProduction
             if (GVar.Brother_default == GVar.Brother_SL_addr)
             {
                 Properties.Settings.Default.Settings_Brother_SL = configsave;
+            }
+
+            if (GVar.Brother_default == GVar.Brother_GL_addr)
+            {
+                Properties.Settings.Default.Settings_Brother_GL = configsave;
             }
 
             if (GVar.Brother_default == GVar.Brother_Antiman_addr)

@@ -9651,33 +9651,31 @@ namespace SmartLineProduction {
             
             private global::System.Data.DataColumn columnid;
             
-            private global::System.Data.DataColumn columncode;
+            private global::System.Data.DataColumn columnCode;
             
-            private global::System.Data.DataColumn columnhash;
+            private global::System.Data.DataColumn columnNome;
             
-            private global::System.Data.DataColumn columnhex;
+            private global::System.Data.DataColumn columnProdotto_Ricevitore_Code;
             
-            private global::System.Data.DataColumn columnreceiver_family_id;
+            private global::System.Data.DataColumn columnProdotto_Ricevitore_Num_Outs;
             
-            private global::System.Data.DataColumn columnconfiguration;
+            private global::System.Data.DataColumn columnProdotto_Ricevitore_Eccezione_CAN;
             
-            private global::System.Data.DataColumn columnyear;
+            private global::System.Data.DataColumn columnHash;
             
-            private global::System.Data.DataColumn columnyear_serial;
+            private global::System.Data.DataColumn columnHex_Full;
             
-            private global::System.Data.DataColumn columnconfiguration_bytes;
+            private global::System.Data.DataColumn columnHex_Page1;
             
-            private global::System.Data.DataColumn columnpage_1_bytes;
+            private global::System.Data.DataColumn columnHex_Page2;
             
-            private global::System.Data.DataColumn columnpage_2_bytes;
+            private global::System.Data.DataColumn columnHex_Page3;
             
-            private global::System.Data.DataColumn columnpage_3_bytes;
+            private global::System.Data.DataColumn columnHex_Page4;
             
-            private global::System.Data.DataColumn columnpage_4_bytes;
+            private global::System.Data.DataColumn columnCreated_At;
             
-            private global::System.Data.DataColumn columncreated_at;
-            
-            private global::System.Data.DataColumn columnupdated_at;
+            private global::System.Data.DataColumn columnUpdated_At;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -9722,113 +9720,105 @@ namespace SmartLineProduction {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn codeColumn {
+            public global::System.Data.DataColumn CodeColumn {
                 get {
-                    return this.columncode;
+                    return this.columnCode;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn hashColumn {
+            public global::System.Data.DataColumn NomeColumn {
                 get {
-                    return this.columnhash;
+                    return this.columnNome;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn hexColumn {
+            public global::System.Data.DataColumn Prodotto_Ricevitore_CodeColumn {
                 get {
-                    return this.columnhex;
+                    return this.columnProdotto_Ricevitore_Code;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn receiver_family_idColumn {
+            public global::System.Data.DataColumn Prodotto_Ricevitore_Num_OutsColumn {
                 get {
-                    return this.columnreceiver_family_id;
+                    return this.columnProdotto_Ricevitore_Num_Outs;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn configurationColumn {
+            public global::System.Data.DataColumn Prodotto_Ricevitore_Eccezione_CANColumn {
                 get {
-                    return this.columnconfiguration;
+                    return this.columnProdotto_Ricevitore_Eccezione_CAN;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn yearColumn {
+            public global::System.Data.DataColumn HashColumn {
                 get {
-                    return this.columnyear;
+                    return this.columnHash;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn year_serialColumn {
+            public global::System.Data.DataColumn Hex_FullColumn {
                 get {
-                    return this.columnyear_serial;
+                    return this.columnHex_Full;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn configuration_bytesColumn {
+            public global::System.Data.DataColumn Hex_Page1Column {
                 get {
-                    return this.columnconfiguration_bytes;
+                    return this.columnHex_Page1;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn page_1_bytesColumn {
+            public global::System.Data.DataColumn Hex_Page2Column {
                 get {
-                    return this.columnpage_1_bytes;
+                    return this.columnHex_Page2;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn page_2_bytesColumn {
+            public global::System.Data.DataColumn Hex_Page3Column {
                 get {
-                    return this.columnpage_2_bytes;
+                    return this.columnHex_Page3;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn page_3_bytesColumn {
+            public global::System.Data.DataColumn Hex_Page4Column {
                 get {
-                    return this.columnpage_3_bytes;
+                    return this.columnHex_Page4;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn page_4_bytesColumn {
+            public global::System.Data.DataColumn Created_AtColumn {
                 get {
-                    return this.columnpage_4_bytes;
+                    return this.columnCreated_At;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn created_atColumn {
+            public global::System.Data.DataColumn Updated_AtColumn {
                 get {
-                    return this.columncreated_at;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn updated_atColumn {
-                get {
-                    return this.columnupdated_at;
+                    return this.columnUpdated_At;
                 }
             }
             
@@ -9869,24 +9859,23 @@ namespace SmartLineProduction {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public GL_PG_Config_HexRow AddGL_PG_Config_HexRow(int id, string code, string hash, string hex, string receiver_family_id, string configuration, int year, int year_serial, byte[] configuration_bytes, byte[] page_1_bytes, byte[] page_2_bytes, byte[] page_3_bytes, byte[] page_4_bytes, System.DateTime created_at, System.DateTime updated_at) {
+            public GL_PG_Config_HexRow AddGL_PG_Config_HexRow(int id, string Code, string Nome, string Prodotto_Ricevitore_Code, int Prodotto_Ricevitore_Num_Outs, int Prodotto_Ricevitore_Eccezione_CAN, string Hash, string Hex_Full, string Hex_Page1, string Hex_Page2, string Hex_Page3, string Hex_Page4, System.DateTime Created_At, System.DateTime Updated_At) {
                 GL_PG_Config_HexRow rowGL_PG_Config_HexRow = ((GL_PG_Config_HexRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
-                        code,
-                        hash,
-                        hex,
-                        receiver_family_id,
-                        configuration,
-                        year,
-                        year_serial,
-                        configuration_bytes,
-                        page_1_bytes,
-                        page_2_bytes,
-                        page_3_bytes,
-                        page_4_bytes,
-                        created_at,
-                        updated_at};
+                        Code,
+                        Nome,
+                        Prodotto_Ricevitore_Code,
+                        Prodotto_Ricevitore_Num_Outs,
+                        Prodotto_Ricevitore_Eccezione_CAN,
+                        Hash,
+                        Hex_Full,
+                        Hex_Page1,
+                        Hex_Page2,
+                        Hex_Page3,
+                        Hex_Page4,
+                        Created_At,
+                        Updated_At};
                 rowGL_PG_Config_HexRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowGL_PG_Config_HexRow);
                 return rowGL_PG_Config_HexRow;
@@ -9917,20 +9906,19 @@ namespace SmartLineProduction {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
                 this.columnid = base.Columns["id"];
-                this.columncode = base.Columns["code"];
-                this.columnhash = base.Columns["hash"];
-                this.columnhex = base.Columns["hex"];
-                this.columnreceiver_family_id = base.Columns["receiver_family_id"];
-                this.columnconfiguration = base.Columns["configuration"];
-                this.columnyear = base.Columns["year"];
-                this.columnyear_serial = base.Columns["year_serial"];
-                this.columnconfiguration_bytes = base.Columns["configuration_bytes"];
-                this.columnpage_1_bytes = base.Columns["page_1_bytes"];
-                this.columnpage_2_bytes = base.Columns["page_2_bytes"];
-                this.columnpage_3_bytes = base.Columns["page_3_bytes"];
-                this.columnpage_4_bytes = base.Columns["page_4_bytes"];
-                this.columncreated_at = base.Columns["created_at"];
-                this.columnupdated_at = base.Columns["updated_at"];
+                this.columnCode = base.Columns["Code"];
+                this.columnNome = base.Columns["Nome"];
+                this.columnProdotto_Ricevitore_Code = base.Columns["Prodotto_Ricevitore_Code"];
+                this.columnProdotto_Ricevitore_Num_Outs = base.Columns["Prodotto_Ricevitore_Num_Outs"];
+                this.columnProdotto_Ricevitore_Eccezione_CAN = base.Columns["Prodotto_Ricevitore_Eccezione_CAN"];
+                this.columnHash = base.Columns["Hash"];
+                this.columnHex_Full = base.Columns["Hex_Full"];
+                this.columnHex_Page1 = base.Columns["Hex_Page1"];
+                this.columnHex_Page2 = base.Columns["Hex_Page2"];
+                this.columnHex_Page3 = base.Columns["Hex_Page3"];
+                this.columnHex_Page4 = base.Columns["Hex_Page4"];
+                this.columnCreated_At = base.Columns["Created_At"];
+                this.columnUpdated_At = base.Columns["Updated_At"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9938,52 +9926,58 @@ namespace SmartLineProduction {
             private void InitClass() {
                 this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid);
-                this.columncode = new global::System.Data.DataColumn("code", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncode);
-                this.columnhash = new global::System.Data.DataColumn("hash", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnhash);
-                this.columnhex = new global::System.Data.DataColumn("hex", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnhex);
-                this.columnreceiver_family_id = new global::System.Data.DataColumn("receiver_family_id", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnreceiver_family_id);
-                this.columnconfiguration = new global::System.Data.DataColumn("configuration", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnconfiguration);
-                this.columnyear = new global::System.Data.DataColumn("year", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnyear);
-                this.columnyear_serial = new global::System.Data.DataColumn("year_serial", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnyear_serial);
-                this.columnconfiguration_bytes = new global::System.Data.DataColumn("configuration_bytes", typeof(byte[]), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnconfiguration_bytes);
-                this.columnpage_1_bytes = new global::System.Data.DataColumn("page_1_bytes", typeof(byte[]), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnpage_1_bytes);
-                this.columnpage_2_bytes = new global::System.Data.DataColumn("page_2_bytes", typeof(byte[]), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnpage_2_bytes);
-                this.columnpage_3_bytes = new global::System.Data.DataColumn("page_3_bytes", typeof(byte[]), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnpage_3_bytes);
-                this.columnpage_4_bytes = new global::System.Data.DataColumn("page_4_bytes", typeof(byte[]), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnpage_4_bytes);
-                this.columncreated_at = new global::System.Data.DataColumn("created_at", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncreated_at);
-                this.columnupdated_at = new global::System.Data.DataColumn("updated_at", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnupdated_at);
+                this.columnCode = new global::System.Data.DataColumn("Code", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCode);
+                this.columnNome = new global::System.Data.DataColumn("Nome", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNome);
+                this.columnProdotto_Ricevitore_Code = new global::System.Data.DataColumn("Prodotto_Ricevitore_Code", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProdotto_Ricevitore_Code);
+                this.columnProdotto_Ricevitore_Num_Outs = new global::System.Data.DataColumn("Prodotto_Ricevitore_Num_Outs", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProdotto_Ricevitore_Num_Outs);
+                this.columnProdotto_Ricevitore_Eccezione_CAN = new global::System.Data.DataColumn("Prodotto_Ricevitore_Eccezione_CAN", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProdotto_Ricevitore_Eccezione_CAN);
+                this.columnHash = new global::System.Data.DataColumn("Hash", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHash);
+                this.columnHex_Full = new global::System.Data.DataColumn("Hex_Full", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHex_Full);
+                this.columnHex_Page1 = new global::System.Data.DataColumn("Hex_Page1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHex_Page1);
+                this.columnHex_Page2 = new global::System.Data.DataColumn("Hex_Page2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHex_Page2);
+                this.columnHex_Page3 = new global::System.Data.DataColumn("Hex_Page3", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHex_Page3);
+                this.columnHex_Page4 = new global::System.Data.DataColumn("Hex_Page4", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHex_Page4);
+                this.columnCreated_At = new global::System.Data.DataColumn("Created_At", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCreated_At);
+                this.columnUpdated_At = new global::System.Data.DataColumn("Updated_At", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUpdated_At);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
                 this.columnid.AllowDBNull = false;
                 this.columnid.Unique = true;
-                this.columncode.AllowDBNull = false;
-                this.columncode.MaxLength = 255;
-                this.columnhash.AllowDBNull = false;
-                this.columnhash.MaxLength = 255;
-                this.columnhex.AllowDBNull = false;
-                this.columnhex.MaxLength = 1073741823;
-                this.columnreceiver_family_id.AllowDBNull = false;
-                this.columnreceiver_family_id.MaxLength = 255;
-                this.columnconfiguration.AllowDBNull = false;
-                this.columnconfiguration.MaxLength = 1073741823;
-                this.columnyear.AllowDBNull = false;
-                this.columnyear_serial.AllowDBNull = false;
-                this.columnconfiguration_bytes.AllowDBNull = false;
-                this.columnpage_1_bytes.AllowDBNull = false;
+                this.columnCode.AllowDBNull = false;
+                this.columnCode.MaxLength = 255;
+                this.columnNome.AllowDBNull = false;
+                this.columnNome.MaxLength = 255;
+                this.columnProdotto_Ricevitore_Code.AllowDBNull = false;
+                this.columnProdotto_Ricevitore_Code.MaxLength = 255;
+                this.columnProdotto_Ricevitore_Num_Outs.AllowDBNull = false;
+                this.columnProdotto_Ricevitore_Eccezione_CAN.AllowDBNull = false;
+                this.columnHash.AllowDBNull = false;
+                this.columnHash.MaxLength = 255;
+                this.columnHex_Full.AllowDBNull = false;
+                this.columnHex_Full.MaxLength = 1073741823;
+                this.columnHex_Page1.AllowDBNull = false;
+                this.columnHex_Page1.MaxLength = 1073741823;
+                this.columnHex_Page2.AllowDBNull = false;
+                this.columnHex_Page2.MaxLength = 1073741823;
+                this.columnHex_Page3.AllowDBNull = false;
+                this.columnHex_Page3.MaxLength = 1073741823;
+                this.columnHex_Page4.AllowDBNull = false;
+                this.columnHex_Page4.MaxLength = 1073741823;
+                this.columnCreated_At.AllowDBNull = false;
+                this.columnUpdated_At.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -17176,244 +17170,145 @@ namespace SmartLineProduction {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string code {
+            public string Code {
                 get {
-                    return ((string)(this[this.tableGL_PG_Config_Hex.codeColumn]));
+                    return ((string)(this[this.tableGL_PG_Config_Hex.CodeColumn]));
                 }
                 set {
-                    this[this.tableGL_PG_Config_Hex.codeColumn] = value;
+                    this[this.tableGL_PG_Config_Hex.CodeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string hash {
+            public string Nome {
                 get {
-                    return ((string)(this[this.tableGL_PG_Config_Hex.hashColumn]));
+                    return ((string)(this[this.tableGL_PG_Config_Hex.NomeColumn]));
                 }
                 set {
-                    this[this.tableGL_PG_Config_Hex.hashColumn] = value;
+                    this[this.tableGL_PG_Config_Hex.NomeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string hex {
+            public string Prodotto_Ricevitore_Code {
                 get {
-                    return ((string)(this[this.tableGL_PG_Config_Hex.hexColumn]));
+                    return ((string)(this[this.tableGL_PG_Config_Hex.Prodotto_Ricevitore_CodeColumn]));
                 }
                 set {
-                    this[this.tableGL_PG_Config_Hex.hexColumn] = value;
+                    this[this.tableGL_PG_Config_Hex.Prodotto_Ricevitore_CodeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string receiver_family_id {
+            public int Prodotto_Ricevitore_Num_Outs {
                 get {
-                    return ((string)(this[this.tableGL_PG_Config_Hex.receiver_family_idColumn]));
+                    return ((int)(this[this.tableGL_PG_Config_Hex.Prodotto_Ricevitore_Num_OutsColumn]));
                 }
                 set {
-                    this[this.tableGL_PG_Config_Hex.receiver_family_idColumn] = value;
+                    this[this.tableGL_PG_Config_Hex.Prodotto_Ricevitore_Num_OutsColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string configuration {
+            public int Prodotto_Ricevitore_Eccezione_CAN {
                 get {
-                    return ((string)(this[this.tableGL_PG_Config_Hex.configurationColumn]));
+                    return ((int)(this[this.tableGL_PG_Config_Hex.Prodotto_Ricevitore_Eccezione_CANColumn]));
                 }
                 set {
-                    this[this.tableGL_PG_Config_Hex.configurationColumn] = value;
+                    this[this.tableGL_PG_Config_Hex.Prodotto_Ricevitore_Eccezione_CANColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int year {
+            public string Hash {
                 get {
-                    return ((int)(this[this.tableGL_PG_Config_Hex.yearColumn]));
+                    return ((string)(this[this.tableGL_PG_Config_Hex.HashColumn]));
                 }
                 set {
-                    this[this.tableGL_PG_Config_Hex.yearColumn] = value;
+                    this[this.tableGL_PG_Config_Hex.HashColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int year_serial {
+            public string Hex_Full {
                 get {
-                    return ((int)(this[this.tableGL_PG_Config_Hex.year_serialColumn]));
+                    return ((string)(this[this.tableGL_PG_Config_Hex.Hex_FullColumn]));
                 }
                 set {
-                    this[this.tableGL_PG_Config_Hex.year_serialColumn] = value;
+                    this[this.tableGL_PG_Config_Hex.Hex_FullColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public byte[] configuration_bytes {
+            public string Hex_Page1 {
                 get {
-                    return ((byte[])(this[this.tableGL_PG_Config_Hex.configuration_bytesColumn]));
+                    return ((string)(this[this.tableGL_PG_Config_Hex.Hex_Page1Column]));
                 }
                 set {
-                    this[this.tableGL_PG_Config_Hex.configuration_bytesColumn] = value;
+                    this[this.tableGL_PG_Config_Hex.Hex_Page1Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public byte[] page_1_bytes {
+            public string Hex_Page2 {
                 get {
-                    return ((byte[])(this[this.tableGL_PG_Config_Hex.page_1_bytesColumn]));
+                    return ((string)(this[this.tableGL_PG_Config_Hex.Hex_Page2Column]));
                 }
                 set {
-                    this[this.tableGL_PG_Config_Hex.page_1_bytesColumn] = value;
+                    this[this.tableGL_PG_Config_Hex.Hex_Page2Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public byte[] page_2_bytes {
+            public string Hex_Page3 {
                 get {
-                    try {
-                        return ((byte[])(this[this.tableGL_PG_Config_Hex.page_2_bytesColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'page_2_bytes\' nella tabella \'GL_PG_Config_Hex\' è DBNull." +
-                                "", e);
-                    }
+                    return ((string)(this[this.tableGL_PG_Config_Hex.Hex_Page3Column]));
                 }
                 set {
-                    this[this.tableGL_PG_Config_Hex.page_2_bytesColumn] = value;
+                    this[this.tableGL_PG_Config_Hex.Hex_Page3Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public byte[] page_3_bytes {
+            public string Hex_Page4 {
                 get {
-                    try {
-                        return ((byte[])(this[this.tableGL_PG_Config_Hex.page_3_bytesColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'page_3_bytes\' nella tabella \'GL_PG_Config_Hex\' è DBNull." +
-                                "", e);
-                    }
+                    return ((string)(this[this.tableGL_PG_Config_Hex.Hex_Page4Column]));
                 }
                 set {
-                    this[this.tableGL_PG_Config_Hex.page_3_bytesColumn] = value;
+                    this[this.tableGL_PG_Config_Hex.Hex_Page4Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public byte[] page_4_bytes {
+            public System.DateTime Created_At {
                 get {
-                    try {
-                        return ((byte[])(this[this.tableGL_PG_Config_Hex.page_4_bytesColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'page_4_bytes\' nella tabella \'GL_PG_Config_Hex\' è DBNull." +
-                                "", e);
-                    }
+                    return ((global::System.DateTime)(this[this.tableGL_PG_Config_Hex.Created_AtColumn]));
                 }
                 set {
-                    this[this.tableGL_PG_Config_Hex.page_4_bytesColumn] = value;
+                    this[this.tableGL_PG_Config_Hex.Created_AtColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime created_at {
+            public System.DateTime Updated_At {
                 get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableGL_PG_Config_Hex.created_atColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'created_at\' nella tabella \'GL_PG_Config_Hex\' è DBNull.", e);
-                    }
+                    return ((global::System.DateTime)(this[this.tableGL_PG_Config_Hex.Updated_AtColumn]));
                 }
                 set {
-                    this[this.tableGL_PG_Config_Hex.created_atColumn] = value;
+                    this[this.tableGL_PG_Config_Hex.Updated_AtColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime updated_at {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableGL_PG_Config_Hex.updated_atColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'updated_at\' nella tabella \'GL_PG_Config_Hex\' è DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableGL_PG_Config_Hex.updated_atColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Ispage_2_bytesNull() {
-                return this.IsNull(this.tableGL_PG_Config_Hex.page_2_bytesColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setpage_2_bytesNull() {
-                this[this.tableGL_PG_Config_Hex.page_2_bytesColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Ispage_3_bytesNull() {
-                return this.IsNull(this.tableGL_PG_Config_Hex.page_3_bytesColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setpage_3_bytesNull() {
-                this[this.tableGL_PG_Config_Hex.page_3_bytesColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Ispage_4_bytesNull() {
-                return this.IsNull(this.tableGL_PG_Config_Hex.page_4_bytesColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setpage_4_bytesNull() {
-                this[this.tableGL_PG_Config_Hex.page_4_bytesColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Iscreated_atNull() {
-                return this.IsNull(this.tableGL_PG_Config_Hex.created_atColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setcreated_atNull() {
-                this[this.tableGL_PG_Config_Hex.created_atColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isupdated_atNull() {
-                return this.IsNull(this.tableGL_PG_Config_Hex.updated_atColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setupdated_atNull() {
-                this[this.tableGL_PG_Config_Hex.updated_atColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -25222,85 +25117,80 @@ SELECT Id, SW_Code, SW_TipoDevice, SW_Descrizione, SW_Descrizione_EN, SW_Version
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "GL_PG_Config_Hex";
             tableMapping.ColumnMappings.Add("id", "id");
-            tableMapping.ColumnMappings.Add("code", "code");
-            tableMapping.ColumnMappings.Add("hash", "hash");
-            tableMapping.ColumnMappings.Add("hex", "hex");
-            tableMapping.ColumnMappings.Add("receiver_family_id", "receiver_family_id");
-            tableMapping.ColumnMappings.Add("configuration", "configuration");
-            tableMapping.ColumnMappings.Add("year", "year");
-            tableMapping.ColumnMappings.Add("year_serial", "year_serial");
-            tableMapping.ColumnMappings.Add("configuration_bytes", "configuration_bytes");
-            tableMapping.ColumnMappings.Add("page_1_bytes", "page_1_bytes");
-            tableMapping.ColumnMappings.Add("page_2_bytes", "page_2_bytes");
-            tableMapping.ColumnMappings.Add("page_3_bytes", "page_3_bytes");
-            tableMapping.ColumnMappings.Add("page_4_bytes", "page_4_bytes");
-            tableMapping.ColumnMappings.Add("created_at", "created_at");
-            tableMapping.ColumnMappings.Add("updated_at", "updated_at");
+            tableMapping.ColumnMappings.Add("Code", "Code");
+            tableMapping.ColumnMappings.Add("Nome", "Nome");
+            tableMapping.ColumnMappings.Add("Prodotto_Ricevitore_Code", "Prodotto_Ricevitore_Code");
+            tableMapping.ColumnMappings.Add("Prodotto_Ricevitore_Num_Outs", "Prodotto_Ricevitore_Num_Outs");
+            tableMapping.ColumnMappings.Add("Prodotto_Ricevitore_Eccezione_CAN", "Prodotto_Ricevitore_Eccezione_CAN");
+            tableMapping.ColumnMappings.Add("Hash", "Hash");
+            tableMapping.ColumnMappings.Add("Hex_Full", "Hex_Full");
+            tableMapping.ColumnMappings.Add("Hex_Page1", "Hex_Page1");
+            tableMapping.ColumnMappings.Add("Hex_Page2", "Hex_Page2");
+            tableMapping.ColumnMappings.Add("Hex_Page3", "Hex_Page3");
+            tableMapping.ColumnMappings.Add("Hex_Page4", "Hex_Page4");
+            tableMapping.ColumnMappings.Add("Created_At", "Created_At");
+            tableMapping.ColumnMappings.Add("Updated_At", "Updated_At");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[GL_PG_Config_Hex] WHERE (([id] = @Original_id) AND ([code] = @Original_code) AND ([hash] = @Original_hash) AND ([receiver_family_id] = @Original_receiver_family_id) AND ([year] = @Original_year) AND ([year_serial] = @Original_year_serial) AND ((@IsNull_created_at = 1 AND [created_at] IS NULL) OR ([created_at] = @Original_created_at)) AND ((@IsNull_updated_at = 1 AND [updated_at] IS NULL) OR ([updated_at] = @Original_updated_at)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [GL_PG_Configurazioni] WHERE (([id] = @Original_id) AND ([Code] = @Original_Code) AND ([Nome] = @Original_Nome) AND ([Prodotto_Ricevitore_Code] = @Original_Prodotto_Ricevitore_Code) AND ([Prodotto_Ricevitore_Num_Outs] = @Original_Prodotto_Ricevitore_Num_Outs) AND ([Prodotto_Ricevitore_Eccezione_CAN] = @Original_Prodotto_Ricevitore_Eccezione_CAN) AND ([Hash] = @Original_Hash) AND ([Created_At] = @Original_Created_At) AND ([Updated_At] = @Original_Updated_At))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_code", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "code", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_hash", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "hash", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_receiver_family_id", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "receiver_family_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_year", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "year", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_year_serial", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "year_serial", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_created_at", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "created_at", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_created_at", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "created_at", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_updated_at", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "updated_at", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_updated_at", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "updated_at", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Code", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Code", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nome", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nome", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Prodotto_Ricevitore_Code", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prodotto_Ricevitore_Code", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Prodotto_Ricevitore_Num_Outs", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prodotto_Ricevitore_Num_Outs", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Prodotto_Ricevitore_Eccezione_CAN", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prodotto_Ricevitore_Eccezione_CAN", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Hash", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hash", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Created_At", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Created_At", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Updated_At", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Updated_At", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[GL_PG_Config_Hex] ([id], [code], [hash], [hex], [receiver_family_id], [configuration], [year], [year_serial], [configuration_bytes], [page_1_bytes], [page_2_bytes], [page_3_bytes], [page_4_bytes], [created_at], [updated_at]) VALUES (@id, @code, @hash, @hex, @receiver_family_id, @configuration, @year, @year_serial, @configuration_bytes, @page_1_bytes, @page_2_bytes, @page_3_bytes, @page_4_bytes, @created_at, @updated_at);
-SELECT id, code, hash, hex, receiver_family_id, configuration, year, year_serial, configuration_bytes, page_1_bytes, page_2_bytes, page_3_bytes, page_4_bytes, created_at, updated_at FROM GL_PG_Config_Hex WHERE (id = @id)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [GL_PG_Configurazioni] ([id], [Code], [Nome], [Prodotto_Ricevitore_Code], [Prodotto_Ricevitore_Num_Outs], [Prodotto_Ricevitore_Eccezione_CAN], [Hash], [Hex_Full], [Hex_Page1], [Hex_Page2], [Hex_Page3], [Hex_Page4], [Created_At], [Updated_At]) VALUES (@id, @Code, @Nome, @Prodotto_Ricevitore_Code, @Prodotto_Ricevitore_Num_Outs, @Prodotto_Ricevitore_Eccezione_CAN, @Hash, @Hex_Full, @Hex_Page1, @Hex_Page2, @Hex_Page3, @Hex_Page4, @Created_At, @Updated_At);
+SELECT id, Code, Nome, Prodotto_Ricevitore_Code, Prodotto_Ricevitore_Num_Outs, Prodotto_Ricevitore_Eccezione_CAN, Hash, Hex_Full, Hex_Page1, Hex_Page2, Hex_Page3, Hex_Page4, Created_At, Updated_At FROM GL_PG_Configurazioni WHERE (id = @id)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@code", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@hash", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "hash", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@hex", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "hex", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@receiver_family_id", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "receiver_family_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@configuration", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "configuration", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@year", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "year", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@year_serial", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "year_serial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@configuration_bytes", global::System.Data.SqlDbType.Image, 0, global::System.Data.ParameterDirection.Input, 0, 0, "configuration_bytes", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@page_1_bytes", global::System.Data.SqlDbType.Image, 0, global::System.Data.ParameterDirection.Input, 0, 0, "page_1_bytes", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@page_2_bytes", global::System.Data.SqlDbType.Image, 0, global::System.Data.ParameterDirection.Input, 0, 0, "page_2_bytes", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@page_3_bytes", global::System.Data.SqlDbType.Image, 0, global::System.Data.ParameterDirection.Input, 0, 0, "page_3_bytes", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@page_4_bytes", global::System.Data.SqlDbType.Image, 0, global::System.Data.ParameterDirection.Input, 0, 0, "page_4_bytes", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@created_at", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "created_at", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@updated_at", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "updated_at", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Code", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nome", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nome", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Prodotto_Ricevitore_Code", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prodotto_Ricevitore_Code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Prodotto_Ricevitore_Num_Outs", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prodotto_Ricevitore_Num_Outs", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Prodotto_Ricevitore_Eccezione_CAN", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prodotto_Ricevitore_Eccezione_CAN", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Hash", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hash", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Hex_Full", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hex_Full", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Hex_Page1", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hex_Page1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Hex_Page2", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hex_Page2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Hex_Page3", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hex_Page3", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Hex_Page4", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hex_Page4", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Created_At", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Created_At", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Updated_At", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Updated_At", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[GL_PG_Config_Hex] SET [id] = @id, [code] = @code, [hash] = @hash, [hex] = @hex, [receiver_family_id] = @receiver_family_id, [configuration] = @configuration, [year] = @year, [year_serial] = @year_serial, [configuration_bytes] = @configuration_bytes, [page_1_bytes] = @page_1_bytes, [page_2_bytes] = @page_2_bytes, [page_3_bytes] = @page_3_bytes, [page_4_bytes] = @page_4_bytes, [created_at] = @created_at, [updated_at] = @updated_at WHERE (([id] = @Original_id) AND ([code] = @Original_code) AND ([hash] = @Original_hash) AND ([receiver_family_id] = @Original_receiver_family_id) AND ([year] = @Original_year) AND ([year_serial] = @Original_year_serial) AND ((@IsNull_created_at = 1 AND [created_at] IS NULL) OR ([created_at] = @Original_created_at)) AND ((@IsNull_updated_at = 1 AND [updated_at] IS NULL) OR ([updated_at] = @Original_updated_at)));
-SELECT id, code, hash, hex, receiver_family_id, configuration, year, year_serial, configuration_bytes, page_1_bytes, page_2_bytes, page_3_bytes, page_4_bytes, created_at, updated_at FROM GL_PG_Config_Hex WHERE (id = @id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [GL_PG_Configurazioni] SET [id] = @id, [Code] = @Code, [Nome] = @Nome, [Prodotto_Ricevitore_Code] = @Prodotto_Ricevitore_Code, [Prodotto_Ricevitore_Num_Outs] = @Prodotto_Ricevitore_Num_Outs, [Prodotto_Ricevitore_Eccezione_CAN] = @Prodotto_Ricevitore_Eccezione_CAN, [Hash] = @Hash, [Hex_Full] = @Hex_Full, [Hex_Page1] = @Hex_Page1, [Hex_Page2] = @Hex_Page2, [Hex_Page3] = @Hex_Page3, [Hex_Page4] = @Hex_Page4, [Created_At] = @Created_At, [Updated_At] = @Updated_At WHERE (([id] = @Original_id) AND ([Code] = @Original_Code) AND ([Nome] = @Original_Nome) AND ([Prodotto_Ricevitore_Code] = @Original_Prodotto_Ricevitore_Code) AND ([Prodotto_Ricevitore_Num_Outs] = @Original_Prodotto_Ricevitore_Num_Outs) AND ([Prodotto_Ricevitore_Eccezione_CAN] = @Original_Prodotto_Ricevitore_Eccezione_CAN) AND ([Hash] = @Original_Hash) AND ([Created_At] = @Original_Created_At) AND ([Updated_At] = @Original_Updated_At));
+SELECT id, Code, Nome, Prodotto_Ricevitore_Code, Prodotto_Ricevitore_Num_Outs, Prodotto_Ricevitore_Eccezione_CAN, Hash, Hex_Full, Hex_Page1, Hex_Page2, Hex_Page3, Hex_Page4, Created_At, Updated_At FROM GL_PG_Configurazioni WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@code", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@hash", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "hash", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@hex", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "hex", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@receiver_family_id", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "receiver_family_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@configuration", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "configuration", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@year", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "year", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@year_serial", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "year_serial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@configuration_bytes", global::System.Data.SqlDbType.Image, 0, global::System.Data.ParameterDirection.Input, 0, 0, "configuration_bytes", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@page_1_bytes", global::System.Data.SqlDbType.Image, 0, global::System.Data.ParameterDirection.Input, 0, 0, "page_1_bytes", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@page_2_bytes", global::System.Data.SqlDbType.Image, 0, global::System.Data.ParameterDirection.Input, 0, 0, "page_2_bytes", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@page_3_bytes", global::System.Data.SqlDbType.Image, 0, global::System.Data.ParameterDirection.Input, 0, 0, "page_3_bytes", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@page_4_bytes", global::System.Data.SqlDbType.Image, 0, global::System.Data.ParameterDirection.Input, 0, 0, "page_4_bytes", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@created_at", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "created_at", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@updated_at", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "updated_at", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Code", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nome", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nome", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Prodotto_Ricevitore_Code", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prodotto_Ricevitore_Code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Prodotto_Ricevitore_Num_Outs", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prodotto_Ricevitore_Num_Outs", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Prodotto_Ricevitore_Eccezione_CAN", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prodotto_Ricevitore_Eccezione_CAN", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Hash", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hash", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Hex_Full", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hex_Full", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Hex_Page1", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hex_Page1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Hex_Page2", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hex_Page2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Hex_Page3", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hex_Page3", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Hex_Page4", global::System.Data.SqlDbType.NText, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hex_Page4", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Created_At", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Created_At", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Updated_At", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Updated_At", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_code", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "code", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_hash", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "hash", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_receiver_family_id", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "receiver_family_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_year", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "year", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_year_serial", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "year_serial", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_created_at", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "created_at", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_created_at", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "created_at", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_updated_at", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "updated_at", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_updated_at", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "updated_at", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Code", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Code", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nome", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nome", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Prodotto_Ricevitore_Code", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prodotto_Ricevitore_Code", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Prodotto_Ricevitore_Num_Outs", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prodotto_Ricevitore_Num_Outs", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Prodotto_Ricevitore_Eccezione_CAN", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prodotto_Ricevitore_Eccezione_CAN", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Hash", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Hash", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Created_At", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Created_At", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Updated_At", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Updated_At", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -25316,16 +25206,14 @@ SELECT id, code, hash, hex, receiver_family_id, configuration, year, year_serial
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id, code, hash, hex, receiver_family_id, configuration, year, year_serial," +
-                " configuration_bytes, page_1_bytes, page_2_bytes, page_3_bytes, page_4_bytes, cr" +
-                "eated_at, updated_at FROM dbo.GL_PG_Config_Hex";
+            this._commandCollection[0].CommandText = "SELECT        GL_PG_Configurazioni.*\r\nFROM            GL_PG_Configurazioni";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        hex\r\nFROM            GL_PG_Config_Hex\r\nWHERE        (code = @Param)" +
-                "";
+            this._commandCollection[1].CommandText = "SELECT        Hex_Full\r\nFROM            GL_PG_Configurazioni\r\nWHERE        (Code " +
+                "= @Param)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Param", global::System.Data.SqlDbType.NVarChar, 255, global::System.Data.ParameterDirection.Input, 0, 0, "code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Param", global::System.Data.SqlDbType.NVarChar, 255, global::System.Data.ParameterDirection.Input, 0, 0, "Code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -25385,44 +25273,36 @@ SELECT id, code, hash, hex, receiver_family_id, configuration, year, year_serial
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id, string Original_code, string Original_hash, string Original_receiver_family_id, int Original_year, int Original_year_serial, global::System.Nullable<global::System.DateTime> Original_created_at, global::System.Nullable<global::System.DateTime> Original_updated_at) {
+        public virtual int Delete(int Original_id, string Original_Code, string Original_Nome, string Original_Prodotto_Ricevitore_Code, int Original_Prodotto_Ricevitore_Num_Outs, int Original_Prodotto_Ricevitore_Eccezione_CAN, string Original_Hash, System.DateTime Original_Created_At, System.DateTime Original_Updated_At) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
-            if ((Original_code == null)) {
-                throw new global::System.ArgumentNullException("Original_code");
+            if ((Original_Code == null)) {
+                throw new global::System.ArgumentNullException("Original_Code");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_code));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Code));
             }
-            if ((Original_hash == null)) {
-                throw new global::System.ArgumentNullException("Original_hash");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_hash));
-            }
-            if ((Original_receiver_family_id == null)) {
-                throw new global::System.ArgumentNullException("Original_receiver_family_id");
+            if ((Original_Nome == null)) {
+                throw new global::System.ArgumentNullException("Original_Nome");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_receiver_family_id));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Nome));
             }
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_year));
-            this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_year_serial));
-            if ((Original_created_at.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((System.DateTime)(Original_created_at.Value));
+            if ((Original_Prodotto_Ricevitore_Code == null)) {
+                throw new global::System.ArgumentNullException("Original_Prodotto_Ricevitore_Code");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Prodotto_Ricevitore_Code));
             }
-            if ((Original_updated_at.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((System.DateTime)(Original_updated_at.Value));
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_Prodotto_Ricevitore_Num_Outs));
+            this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_Prodotto_Ricevitore_Eccezione_CAN));
+            if ((Original_Hash == null)) {
+                throw new global::System.ArgumentNullException("Original_Hash");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Hash));
             }
+            this.Adapter.DeleteCommand.Parameters[7].Value = ((System.DateTime)(Original_Created_At));
+            this.Adapter.DeleteCommand.Parameters[8].Value = ((System.DateTime)(Original_Updated_At));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -25443,82 +25323,66 @@ SELECT id, code, hash, hex, receiver_family_id, configuration, year, year_serial
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int id, string code, string hash, string hex, string receiver_family_id, string configuration, int year, int year_serial, byte[] configuration_bytes, byte[] page_1_bytes, byte[] page_2_bytes, byte[] page_3_bytes, byte[] page_4_bytes, global::System.Nullable<global::System.DateTime> created_at, global::System.Nullable<global::System.DateTime> updated_at) {
+        public virtual int Insert(int id, string Code, string Nome, string Prodotto_Ricevitore_Code, int Prodotto_Ricevitore_Num_Outs, int Prodotto_Ricevitore_Eccezione_CAN, string Hash, string Hex_Full, string Hex_Page1, string Hex_Page2, string Hex_Page3, string Hex_Page4, System.DateTime Created_At, System.DateTime Updated_At) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(id));
-            if ((code == null)) {
-                throw new global::System.ArgumentNullException("code");
+            if ((Code == null)) {
+                throw new global::System.ArgumentNullException("Code");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(code));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Code));
             }
-            if ((hash == null)) {
-                throw new global::System.ArgumentNullException("hash");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(hash));
-            }
-            if ((hex == null)) {
-                throw new global::System.ArgumentNullException("hex");
+            if ((Nome == null)) {
+                throw new global::System.ArgumentNullException("Nome");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(hex));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Nome));
             }
-            if ((receiver_family_id == null)) {
-                throw new global::System.ArgumentNullException("receiver_family_id");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(receiver_family_id));
-            }
-            if ((configuration == null)) {
-                throw new global::System.ArgumentNullException("configuration");
+            if ((Prodotto_Ricevitore_Code == null)) {
+                throw new global::System.ArgumentNullException("Prodotto_Ricevitore_Code");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(configuration));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Prodotto_Ricevitore_Code));
             }
-            this.Adapter.InsertCommand.Parameters[6].Value = ((int)(year));
-            this.Adapter.InsertCommand.Parameters[7].Value = ((int)(year_serial));
-            if ((configuration_bytes == null)) {
-                throw new global::System.ArgumentNullException("configuration_bytes");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((byte[])(configuration_bytes));
-            }
-            if ((page_1_bytes == null)) {
-                throw new global::System.ArgumentNullException("page_1_bytes");
+            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(Prodotto_Ricevitore_Num_Outs));
+            this.Adapter.InsertCommand.Parameters[5].Value = ((int)(Prodotto_Ricevitore_Eccezione_CAN));
+            if ((Hash == null)) {
+                throw new global::System.ArgumentNullException("Hash");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((byte[])(page_1_bytes));
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Hash));
             }
-            if ((page_2_bytes == null)) {
-                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((byte[])(page_2_bytes));
-            }
-            if ((page_3_bytes == null)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            if ((Hex_Full == null)) {
+                throw new global::System.ArgumentNullException("Hex_Full");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((byte[])(page_3_bytes));
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(Hex_Full));
             }
-            if ((page_4_bytes == null)) {
-                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[12].Value = ((byte[])(page_4_bytes));
-            }
-            if ((created_at.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[13].Value = ((System.DateTime)(created_at.Value));
+            if ((Hex_Page1 == null)) {
+                throw new global::System.ArgumentNullException("Hex_Page1");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(Hex_Page1));
             }
-            if ((updated_at.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[14].Value = ((System.DateTime)(updated_at.Value));
+            if ((Hex_Page2 == null)) {
+                throw new global::System.ArgumentNullException("Hex_Page2");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(Hex_Page2));
             }
+            if ((Hex_Page3 == null)) {
+                throw new global::System.ArgumentNullException("Hex_Page3");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(Hex_Page3));
+            }
+            if ((Hex_Page4 == null)) {
+                throw new global::System.ArgumentNullException("Hex_Page4");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(Hex_Page4));
+            }
+            this.Adapter.InsertCommand.Parameters[12].Value = ((System.DateTime)(Created_At));
+            this.Adapter.InsertCommand.Parameters[13].Value = ((System.DateTime)(Updated_At));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -25541,140 +25405,116 @@ SELECT id, code, hash, hex, receiver_family_id, configuration, year, year_serial
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
                     int id, 
-                    string code, 
-                    string hash, 
-                    string hex, 
-                    string receiver_family_id, 
-                    string configuration, 
-                    int year, 
-                    int year_serial, 
-                    byte[] configuration_bytes, 
-                    byte[] page_1_bytes, 
-                    byte[] page_2_bytes, 
-                    byte[] page_3_bytes, 
-                    byte[] page_4_bytes, 
-                    global::System.Nullable<global::System.DateTime> created_at, 
-                    global::System.Nullable<global::System.DateTime> updated_at, 
+                    string Code, 
+                    string Nome, 
+                    string Prodotto_Ricevitore_Code, 
+                    int Prodotto_Ricevitore_Num_Outs, 
+                    int Prodotto_Ricevitore_Eccezione_CAN, 
+                    string Hash, 
+                    string Hex_Full, 
+                    string Hex_Page1, 
+                    string Hex_Page2, 
+                    string Hex_Page3, 
+                    string Hex_Page4, 
+                    System.DateTime Created_At, 
+                    System.DateTime Updated_At, 
                     int Original_id, 
-                    string Original_code, 
-                    string Original_hash, 
-                    string Original_receiver_family_id, 
-                    int Original_year, 
-                    int Original_year_serial, 
-                    global::System.Nullable<global::System.DateTime> Original_created_at, 
-                    global::System.Nullable<global::System.DateTime> Original_updated_at) {
+                    string Original_Code, 
+                    string Original_Nome, 
+                    string Original_Prodotto_Ricevitore_Code, 
+                    int Original_Prodotto_Ricevitore_Num_Outs, 
+                    int Original_Prodotto_Ricevitore_Eccezione_CAN, 
+                    string Original_Hash, 
+                    System.DateTime Original_Created_At, 
+                    System.DateTime Original_Updated_At) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(id));
-            if ((code == null)) {
-                throw new global::System.ArgumentNullException("code");
+            if ((Code == null)) {
+                throw new global::System.ArgumentNullException("Code");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(code));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Code));
             }
-            if ((hash == null)) {
-                throw new global::System.ArgumentNullException("hash");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(hash));
-            }
-            if ((hex == null)) {
-                throw new global::System.ArgumentNullException("hex");
+            if ((Nome == null)) {
+                throw new global::System.ArgumentNullException("Nome");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(hex));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Nome));
             }
-            if ((receiver_family_id == null)) {
-                throw new global::System.ArgumentNullException("receiver_family_id");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(receiver_family_id));
-            }
-            if ((configuration == null)) {
-                throw new global::System.ArgumentNullException("configuration");
+            if ((Prodotto_Ricevitore_Code == null)) {
+                throw new global::System.ArgumentNullException("Prodotto_Ricevitore_Code");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(configuration));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Prodotto_Ricevitore_Code));
             }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(year));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(year_serial));
-            if ((configuration_bytes == null)) {
-                throw new global::System.ArgumentNullException("configuration_bytes");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((byte[])(configuration_bytes));
-            }
-            if ((page_1_bytes == null)) {
-                throw new global::System.ArgumentNullException("page_1_bytes");
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Prodotto_Ricevitore_Num_Outs));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Prodotto_Ricevitore_Eccezione_CAN));
+            if ((Hash == null)) {
+                throw new global::System.ArgumentNullException("Hash");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((byte[])(page_1_bytes));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Hash));
             }
-            if ((page_2_bytes == null)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((byte[])(page_2_bytes));
-            }
-            if ((page_3_bytes == null)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            if ((Hex_Full == null)) {
+                throw new global::System.ArgumentNullException("Hex_Full");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((byte[])(page_3_bytes));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Hex_Full));
             }
-            if ((page_4_bytes == null)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((byte[])(page_4_bytes));
-            }
-            if ((created_at.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((System.DateTime)(created_at.Value));
+            if ((Hex_Page1 == null)) {
+                throw new global::System.ArgumentNullException("Hex_Page1");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Hex_Page1));
             }
-            if ((updated_at.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((System.DateTime)(updated_at.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_id));
-            if ((Original_code == null)) {
-                throw new global::System.ArgumentNullException("Original_code");
+            if ((Hex_Page2 == null)) {
+                throw new global::System.ArgumentNullException("Hex_Page2");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_code));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Hex_Page2));
             }
-            if ((Original_hash == null)) {
-                throw new global::System.ArgumentNullException("Original_hash");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_hash));
-            }
-            if ((Original_receiver_family_id == null)) {
-                throw new global::System.ArgumentNullException("Original_receiver_family_id");
+            if ((Hex_Page3 == null)) {
+                throw new global::System.ArgumentNullException("Hex_Page3");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_receiver_family_id));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Hex_Page3));
             }
-            this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_year));
-            this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_year_serial));
-            if ((Original_created_at.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((System.DateTime)(Original_created_at.Value));
+            if ((Hex_Page4 == null)) {
+                throw new global::System.ArgumentNullException("Hex_Page4");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Hex_Page4));
             }
-            if ((Original_updated_at.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((System.DateTime)(Original_updated_at.Value));
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(Created_At));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((System.DateTime)(Updated_At));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_id));
+            if ((Original_Code == null)) {
+                throw new global::System.ArgumentNullException("Original_Code");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_Code));
             }
+            if ((Original_Nome == null)) {
+                throw new global::System.ArgumentNullException("Original_Nome");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_Nome));
+            }
+            if ((Original_Prodotto_Ricevitore_Code == null)) {
+                throw new global::System.ArgumentNullException("Original_Prodotto_Ricevitore_Code");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_Prodotto_Ricevitore_Code));
+            }
+            this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_Prodotto_Ricevitore_Num_Outs));
+            this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_Prodotto_Ricevitore_Eccezione_CAN));
+            if ((Original_Hash == null)) {
+                throw new global::System.ArgumentNullException("Original_Hash");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_Hash));
+            }
+            this.Adapter.UpdateCommand.Parameters[21].Value = ((System.DateTime)(Original_Created_At));
+            this.Adapter.UpdateCommand.Parameters[22].Value = ((System.DateTime)(Original_Updated_At));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -25696,35 +25536,35 @@ SELECT id, code, hash, hex, receiver_family_id, configuration, year, year_serial
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
-                    string code, 
-                    string hash, 
-                    string hex, 
-                    string receiver_family_id, 
-                    string configuration, 
-                    int year, 
-                    int year_serial, 
-                    byte[] configuration_bytes, 
-                    byte[] page_1_bytes, 
-                    byte[] page_2_bytes, 
-                    byte[] page_3_bytes, 
-                    byte[] page_4_bytes, 
-                    global::System.Nullable<global::System.DateTime> created_at, 
-                    global::System.Nullable<global::System.DateTime> updated_at, 
+                    string Code, 
+                    string Nome, 
+                    string Prodotto_Ricevitore_Code, 
+                    int Prodotto_Ricevitore_Num_Outs, 
+                    int Prodotto_Ricevitore_Eccezione_CAN, 
+                    string Hash, 
+                    string Hex_Full, 
+                    string Hex_Page1, 
+                    string Hex_Page2, 
+                    string Hex_Page3, 
+                    string Hex_Page4, 
+                    System.DateTime Created_At, 
+                    System.DateTime Updated_At, 
                     int Original_id, 
-                    string Original_code, 
-                    string Original_hash, 
-                    string Original_receiver_family_id, 
-                    int Original_year, 
-                    int Original_year_serial, 
-                    global::System.Nullable<global::System.DateTime> Original_created_at, 
-                    global::System.Nullable<global::System.DateTime> Original_updated_at) {
-            return this.Update(Original_id, code, hash, hex, receiver_family_id, configuration, year, year_serial, configuration_bytes, page_1_bytes, page_2_bytes, page_3_bytes, page_4_bytes, created_at, updated_at, Original_id, Original_code, Original_hash, Original_receiver_family_id, Original_year, Original_year_serial, Original_created_at, Original_updated_at);
+                    string Original_Code, 
+                    string Original_Nome, 
+                    string Original_Prodotto_Ricevitore_Code, 
+                    int Original_Prodotto_Ricevitore_Num_Outs, 
+                    int Original_Prodotto_Ricevitore_Eccezione_CAN, 
+                    string Original_Hash, 
+                    System.DateTime Original_Created_At, 
+                    System.DateTime Original_Updated_At) {
+            return this.Update(Original_id, Code, Nome, Prodotto_Ricevitore_Code, Prodotto_Ricevitore_Num_Outs, Prodotto_Ricevitore_Eccezione_CAN, Hash, Hex_Full, Hex_Page1, Hex_Page2, Hex_Page3, Hex_Page4, Created_At, Updated_At, Original_id, Original_Code, Original_Nome, Original_Prodotto_Ricevitore_Code, Original_Prodotto_Ricevitore_Num_Outs, Original_Prodotto_Ricevitore_Eccezione_CAN, Original_Hash, Original_Created_At, Original_Updated_At);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual string Get_Hex(string Param) {
+        public virtual object Get_Hex(string Param) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
             if ((Param == null)) {
                 throw new global::System.ArgumentNullException("Param");
@@ -25751,7 +25591,7 @@ SELECT id, code, hash, hex, receiver_family_id, configuration, year, year_serial
                 return null;
             }
             else {
-                return ((string)(returnValue));
+                return ((object)(returnValue));
             }
         }
     }

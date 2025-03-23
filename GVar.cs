@@ -30,6 +30,7 @@ namespace SmartLineProduction
         //public static string Brother_SL_addr = @"\\192.168.0.8\TJ-4120TN_SL";
         //public static string Brother_Antiman_addr = @"\\192.168.0.8\TJ-4120TN_Antiman";
         public static string Brother_SL_addr = @"\\DC\TJ-4120TN_SL";
+        public static string Brother_GL_addr = @"\\DC\TJ-4120TN_GL";
         public static string Brother_Antiman_addr = @"\\DC\TJ-4120TN_Antiman";
         public static string Brother_default = Brother_Antiman_addr;
 
@@ -37,6 +38,8 @@ namespace SmartLineProduction
         public static int Brother_Antiman_pos_y = 0;
         public static int Brother_SL_pos_x = 0;
         public static int Brother_SL_pos_y = 0;
+        public static int Brother_GL_pos_x = 0;
+        public static int Brother_GL_pos_y = 0;
         public static int Brother_Default_pos_x = 0;
         public static int Brother_Default_pos_y = 0;
 
