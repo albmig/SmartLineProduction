@@ -124,15 +124,6 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="menu_sw_exit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAMhJREFUOE+tk7ENhDAMRRnpRjjRM0C2uSrtjXAjUDAFPQPQUaZJTOnTyylIyaWB
-        8CULy9/+jp3QdXdi3/eniIwiooWNcGV+hhDCZ11XtdbqMAza9300fGJwIvIu6yIglmWJycYYnaZJ53mO
-        hk8Mjpw/EY6Geuq0bZsLIbyIY/jlSNk4zEchXUTEee8fWYdfjiOHkfhmeSjSnaPSrVJ8dK6KQBBk3tqm
-        E19aErlHoHWEY4ncwOklNl8j4BVefkgJEJefckLTz3QVXygn3G0uGcQIAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="MainPanel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEBLAEsAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcI
@@ -29164,6 +29155,21 @@
         aIBEYGiARGBogERgaIBEYGiARGBogERgaIBEPCRDP+38AgC2xe3D4XDpkv5H/3AKAMB2eKFraHZpgO3y
         +Y3LVx64Z+i7pn7FKQgA60Zmvlp8fM/Qd039onMAAKyT+8x8ZOi7pn78xuUrrzsHA8A60D0vPZ26SLOr
         hjbmvnrX4ACwDh6yPu3yP+Hmbv8LHxRYAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <metadata name="MainMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>150, 17</value>
+  </metadata>
+  <metadata name="pan_Menu_exit.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="menu_sw_exit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAMhJREFUOE+tk7ENhDAMRRnpRjjRM0C2uSrtjXAjUDAFPQPQUaZJTOnTyylIyaWB
+        8CULy9/+jp3QdXdi3/eniIwiooWNcGV+hhDCZ11XtdbqMAza9300fGJwIvIu6yIglmWJycYYnaZJ53mO
+        hk8Mjpw/EY6Geuq0bZsLIbyIY/jlSNk4zEchXUTEee8fWYdfjiOHkfhmeSjSnaPSrVJ8dK6KQBBk3tqm
+        E19aErlHoHWEY4ncwOklNl8j4BVefkgJEJefckLTz3QVXygn3G0uGcQIAAAAAElFTkSuQmCC
 </value>
   </data>
   <metadata name="miniToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

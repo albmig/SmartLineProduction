@@ -232,11 +232,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ds_Eventi.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ds_FixError.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ds_FixError.xsd</DependentUpon>
-    </Compile>
     <Compile Include="ds_FwClienti.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -254,6 +249,11 @@
       <DependentUpon>ds_Programmazione_GL.xsd</DependentUpon>
     </Compile>
     <Compile Include="ds_Programmazione_GL.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_Programmazione_GL.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_Programmazione_GL1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ds_Programmazione_GL.xsd</DependentUpon>
@@ -905,17 +905,6 @@
     <None Include="ds_Eventi.xss">
       <DependentUpon>ds_Eventi.xsd</DependentUpon>
     </None>
-    <None Include="ds_FixError.xsc">
-      <DependentUpon>ds_FixError.xsd</DependentUpon>
-    </None>
-    <None Include="ds_FixError.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ds_FixError.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ds_FixError.xss">
-      <DependentUpon>ds_FixError.xsd</DependentUpon>
-    </None>
     <None Include="ds_FwClienti.xsc">
       <DependentUpon>ds_FwClienti.xsd</DependentUpon>
     </None>
@@ -944,7 +933,7 @@
     <None Include="ds_Programmazione_GL.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ds_Programmazione_GL.Designer.cs</LastGenOutput>
+      <LastGenOutput>ds_Programmazione_GL1.Designer.cs</LastGenOutput>
     </None>
     <None Include="ds_Programmazione_GL.xss">
       <DependentUpon>ds_Programmazione_GL.xsd</DependentUpon>

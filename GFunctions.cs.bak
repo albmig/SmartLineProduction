@@ -84,6 +84,7 @@ namespace SmartLineProduction
 
             return true;
         }
+
         public static bool PrintLabelBrother()
         {
             int a = BROLIB_DLL.openport(GVar.Brother_default); if (a != 1) { return false; }
@@ -112,46 +113,6 @@ namespace SmartLineProduction
             string testo = '"' + GVar.PrintMask_String + '"';
 
             command = "QRCODE " + GVar.Brother_Default_pos_x.ToString() + "," + GVar.Brother_Default_pos_y.ToString() + ",L,3,A,180,M2,S7," + testo;
-            a = BROLIB_DLL.sendcommand(command); if (a != 1) { return false; }
-            command = "CODEPAGE 1252";
-            a = BROLIB_DLL.sendcommand(command); if (a != 1) { return false; }
-
-            a = BROLIB_DLL.printlabel("1", "1"); if (a != 1) { return false; }
-            a = BROLIB_DLL.closeport(); if (a != 1) { return false; }
-
-            return true;
-        }
-
-        public static bool PrintLabel_GL()
-        {
-            string Brother_GL = @"\\DC\TJ-4120TN_GL";
-            //string Brother_GL = @"TJ - 4120TN_GL";
-            int a = BROLIB_DLL.openport(Brother_GL); if (a != 1) { return false; }
-            string command = string.Empty;
-            command = "SIZE 23.7 mm, 8 mm";
-            a = BROLIB_DLL.sendcommand(command); if (a != 1) { return false; }
-            command = "DIRECTION 0,0";
-            a = BROLIB_DLL.sendcommand(command); if (a != 1) { return false; }
-            command = "REFERENCE 0,0";
-            a = BROLIB_DLL.sendcommand(command); if (a != 1) { return false; }
-            command = "OFFSET 0 mm";
-            a = BROLIB_DLL.sendcommand(command); if (a != 1) { return false; }
-            command = "SET REWIND OFF";
-            a = BROLIB_DLL.sendcommand(command); if (a != 1) { return false; }
-            command = "SET PEEL OFF";
-            a = BROLIB_DLL.sendcommand(command); if (a != 1) { return false; }
-            command = "SET CUTTER OFF";
-            a = BROLIB_DLL.sendcommand(command); if (a != 1) { return false; }
-            command = "SET PARTIAL_CUTTER OFF";
-            a = BROLIB_DLL.sendcommand(command); if (a != 1) { return false; }
-            command = "SET TEAR ON";
-            a = BROLIB_DLL.sendcommand(command); if (a != 1) { return false; }
-            command = "CLS";
-            a = BROLIB_DLL.sendcommand(command); if (a != 1) { return false; }
-
-            string testo = '"' + GVar.PrintMask_String + '"';
-
-            command = "QRCODE " + GVar.Brother_Default_pos_x.ToString() + "," + GVar.Brother_GL_pos_y.ToString() + ",L,3,A,180,M2,S7," + testo;
             a = BROLIB_DLL.sendcommand(command); if (a != 1) { return false; }
             command = "CODEPAGE 1252";
             a = BROLIB_DLL.sendcommand(command); if (a != 1) { return false; }
@@ -193,10 +154,8 @@ namespace SmartLineProduction
 
                 if (result == DialogResult.Yes)
                 {
-                    //                    PrintLabelBrother();
-                    PrintLabel_GL();
-//                    WriteConfig_Coordinate();
-                    WriteConfig_GL_Coordinate();
+                    PrintLabelBrother();
+                    WriteConfig_Coordinate();
                     endprint = false;
                 }
                 else
@@ -206,6 +165,7 @@ namespace SmartLineProduction
             } while (!endprint);
             return true;
         }
+
         public static bool WriteConfig_Coordinate()
         {
             string configsave = GVar.Brother_Default_pos_x.ToString() + "|" + GVar.Brother_Default_pos_y.ToString();
@@ -228,15 +188,5 @@ namespace SmartLineProduction
 
             return true;
         }
-
-        public static bool WriteConfig_GL_Coordinate()
-        {
-            string configsave = GVar.Brother_GL_pos_x.ToString() + "|" + GVar.Brother_GL_pos_y.ToString();
-
-                Properties.Settings.Default.Settings_Brother_GL = configsave;
-
-            return true;
-        }
-
     }
 }

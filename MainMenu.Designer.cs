@@ -758,6 +758,7 @@
             this.Brother_Antiman_pos_y.Text = "Brother_Antiman_pos_y";
             this.Brother_Antiman_pos_y.UseCustomBackColor = true;
             this.Brother_Antiman_pos_y.UseCustomForeColor = true;
+            this.Brother_Antiman_pos_y.Visible = false;
             // 
             // metroLabel1
             // 
@@ -827,6 +828,7 @@
             this.lab_Brother_1.Text = "TJ-4120TN_Antiman";
             this.lab_Brother_1.UseCustomBackColor = true;
             this.lab_Brother_1.UseCustomForeColor = true;
+            this.lab_Brother_1.Visible = false;
             // 
             // pic_Antiman
             // 
@@ -838,6 +840,7 @@
             this.pic_Antiman.Size = new System.Drawing.Size(19, 14);
             this.pic_Antiman.TabIndex = 18;
             this.pic_Antiman.TabStop = false;
+            this.pic_Antiman.Visible = false;
             // 
             // pict_GL
             // 
@@ -891,6 +894,7 @@
             this.Brother_Antiman_pos_x.Text = "Brother_Antiman_pos_x";
             this.Brother_Antiman_pos_x.UseCustomBackColor = true;
             this.Brother_Antiman_pos_x.UseCustomForeColor = true;
+            this.Brother_Antiman_pos_x.Visible = false;
             // 
             // metroLabel3
             // 

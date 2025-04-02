@@ -83,7 +83,7 @@ namespace SmartLineProduction
 
             //-------------------------------------------------------------------------------//
             // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione_GL1.SF_GL_id2_Programmazione'. È possibile spostarla o rimuoverla se necessario.
-            this.sF_GL_id2_ProgrammazioneTableAdapter.Fill(this.ds_Programmazione_GL.SF_GL_id2_Programmazione);
+            this.sF_GL_id2_ProgrammazioneTableAdapter.Fill(this.ds_Programmazione_GL1.SF_GL_id2_Programmazione);
             // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione_GL.SF_GL_id1_Programmazione'. È possibile spostarla o rimuoverla se necessario.
             this.sF_GL_id1_ProgrammazioneTableAdapter.Fill(this.ds_Programmazione_GL.SF_GL_id1_Programmazione);
             // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione_GL.SF_LastSerialNumber_GL'. È possibile spostarla o rimuoverla se necessario.
@@ -108,10 +108,6 @@ namespace SmartLineProduction
             this.gL_Firmware_PGTableAdapter.Fill(this.ds_Programmazione_GL.GL_Firmware_PG);
             // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione_GL.GL_PG_Config_Hex'. È possibile spostarla o rimuoverla se necessario.
             this.gL_PG_Config_HexTableAdapter.Fill(this.ds_Programmazione_GL.GL_PG_Config_Hex);
-            // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione_GL1.SF_GL_Can_Active'. È possibile spostarla o rimuoverla se necessario.
-            this.sF_GL_Can_ActiveTableAdapter.Fill(this.ds_Programmazione_GL1.SF_GL_Can_Active);
-            // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione_GL.SF_GL_ID_Unlock'. È possibile spostarla o rimuoverla se necessario.
-            this.sF_GL_ID_UnlockTableAdapter.Fill(this.ds_Programmazione_GL.SF_GL_ID_Unlock);
 
             SplashDB.Close();
         }
@@ -279,67 +275,32 @@ namespace SmartLineProduction
                 }
             }
 
+            //Creazione nuovo codice Flash
+            //string ID_Hw_longversion = "";
+            //int LastNumber = TrovaLastProgr(ID_Hw) + 1;
+            //string strLastNumber = LastNumber.ToString();
+            //strLastNumber = strLastNumber.PadLeft(8, '0');
 
+            //            UT_Crea_Unique_Official_Serial_Code = Define_Unique_Serial_Code(Item);
             UT_Crea_Unique_Official_Serial_Code = Define_Unique_Serial_Code(ID2);
 
+            //string anno = Convert.ToString(DateTime.Now.Year);
+            //ID_Hw_longversion = ID_Hw + anno + strLastNumber;
+
+            /////////////////////////////////////////////////
+
+            //Program_Board(Commessa, Kit, Item, fw_key_id, nome_fw_full, nome_fw_boot, nome_fw_conf, ID_Hw);                         //vecchio sistema
             glob_Program_OK = true;
+            //            Program_Board(Commessa, Kit, Item, fw_key_id, nome_fw_full, nome_fw_boot, nome_fw_conf, ID_Hw_longversion);           //nuovo sistema
             Program_Board(Commessa, Kit, Item, fw_key_id, nome_fw_full, nome_fw_boot, nome_fw_conf, UT_Crea_Unique_Official_Serial_Code, ID1, ID2, ID3, is_standard_fw, is_golden, tipodev);           //nuovo sistema
-
-            string   DB_Ser_Kit                         = Kit;
-            int      DB_Ser_ID_Cli                      = Int32.Parse(glob_ID_cli);
-            string   DB_Ser_Device                      = Item;
-            string   DB_Ser_Device_ID_Code              = ID2;
-            string   DB_Ser_OfficialSerial              = UT_Crea_Unique_Official_Serial_Code;
-            string   DB_Ser_ReadSerial                  = glob_ser_num_read;
-            string   DB_Ser_SW_Code                     = cod_fw;
-            int      DB_Ser_SW_Code_Rev                 = (int)this.gL_Firmware_PGTableAdapter.GetRev(cod_fw);
-            bool     DB_Ser_SW_Std_Type                 = is_standard_fw;
-            string   DB_Ser_SN_prod                     = string.Empty;                             //NULL
-            string   DB_Ser_Commessa                    = Commessa;
-            DateTime DB_Ser_DateProduction              = DateTime.Now;
-            bool     DB_Ser_Spedito                     = false;
-            //DateTime? DB_Ser_Data_Spedito                = DBNull.Value;                                     //NULL
-            string   DB_Ser_Substition_ID_ReadSerial    = string.Empty;                             //NULL
-            string   DB_Ser_Note                        = string.Empty;                             //NULL                                                                   //NULL
-            int      DB_Ser_LockLevel                   = 0;
-            string   DB_Ser_Device_ID_Code_Start        = ID1;
-
-            bool     DB_Ser_Golden_Unlock;
-            if (this.sF_GL_ID_UnlockTableAdapter.GetUnlock(Commessa) == "NO") { DB_Ser_Golden_Unlock = false; } else { DB_Ser_Golden_Unlock = true; }
-            string   DB_Ser_Cfg_Init                     = ID3;
-            bool DB_Ser_CAN;
-            if (this.sF_GL_Can_ActiveTableAdapter.GetCanValue(Item) == "NO") { DB_Ser_CAN = false; } else { DB_Ser_CAN = true; }
 
             if (glob_Program_OK)
             {
                 if (glob_tipo_progr == "C")
                 {
-//                    AggiornaSN(Commessa, Kit, Item, fw_key_id, nome_fw_full, ID_Hw, glob_ser_num_read, glob_ser_num_write, glob_ID_cli);
-                    AggiornaSN_GL(  DB_Ser_Kit, 
-                                    DB_Ser_ID_Cli, 
-                                    DB_Ser_Device, 
-                                    DB_Ser_Device_ID_Code, 
-                                    DB_Ser_OfficialSerial, 
-                                    DB_Ser_ReadSerial, 
-                                    DB_Ser_SW_Code, 
-                                    DB_Ser_SW_Code_Rev, 
-                                    DB_Ser_SW_Std_Type, 
-                                    DB_Ser_SN_prod, 
-                                    DB_Ser_Commessa, 
-                                    DB_Ser_DateProduction, 
-                                    DB_Ser_Spedito, 
-                                    //DB_Ser_Data_Spedito, 
-                                    DB_Ser_Substition_ID_ReadSerial, 
-                                    DB_Ser_Note, 
-                                    DB_Ser_LockLevel, 
-                                    DB_Ser_Device_ID_Code_Start,
-                                    DB_Ser_Golden_Unlock,
-                                    DB_Ser_Cfg_Init,
-                                    DB_Ser_CAN
-                                    );
-
-                    //AggiornaFwCliente(glob_ID_cli, glob_codice_fw);
-                    //AggiornaSafetyPointRfid(Commessa, glob_ser_num_write, glob_tag_1, glob_tag_2);
+                    AggiornaSN(Commessa, Kit, Item, fw_key_id, nome_fw_full, ID_Hw, glob_ser_num_read, glob_ser_num_write, glob_ID_cli);
+                    AggiornaFwCliente(glob_ID_cli, glob_codice_fw);
+                    AggiornaSafetyPointRfid(Commessa, glob_ser_num_write, glob_tag_1, glob_tag_2);
                 }
             }
 
@@ -361,15 +322,7 @@ namespace SmartLineProduction
             //GVar.PrintMask_WarningPic = (bool)this.firmwareTableAdapter.IsCustomPic(glob_codice_fw);
             GVar.PrintMask_Firmware = glob_codice_fw;
 
-            if (!GFunctions.PrintMask()) { MessageBox.Show("Riscontrato problema sulla stampante! Verificare connessione!"); }
-        }
-        private void PrintLabel_GL(string Item)
-        {
-            //Stampa Etichetta
-            GVar.PrintMask_String = Item;
-            //GVar.PrintMask_WarningPic = (bool)this.firmwareTableAdapter.IsCustomPic(glob_codice_fw);
-            GVar.PrintMask_Firmware = glob_codice_fw;
-
+            //if (!GFunctions.PrintMask()) { MessageBox.Show("Riscontrato problema sulla stampante! Verificare connessione!"); }
             if (!GFunctions.PrintMask_GL()) { MessageBox.Show("Riscontrato problema sulla stampante! Verificare connessione!"); }
         }
 
@@ -528,6 +481,214 @@ namespace SmartLineProduction
 #pragma warning restore CS0168 // La variabile 'ex' è dichiarata, ma non viene mai usata
             {
 
+            }
+
+            //Inserimento firmware (conf_ Versione con Tommaso)
+            try
+            {
+                var proc = Process.Start(psi);
+
+                string programstring = Properties.Settings.Default.Commander_path + @"\commander.exe flash " + '"' + nome_fw_conf + '"' + " --address 0x0 " + glob_device;
+                proc.StandardInput.WriteLine(programstring);
+                proc.StandardInput.WriteLine("exit");
+
+                text_dos = proc.StandardOutput.ReadToEnd();
+                dos_box.Text = dos_box.Text + text_dos + "\n======================================================================" + Environment.NewLine;
+                dos_box.Refresh();
+
+                if (text_dos.Contains("ERROR: Cannot connect to J-Link via USB.") ||
+                    text_dos.Contains("ERROR: Could not open J-Link connection.") ||
+                    text_dos.Contains("ERROR: Unspecified error during flashing.") ||
+                    text_dos.Contains("ERROR: Could not connect debugger."))
+                {
+                    MessageBox.Show("Interfaccia non collegata correttamente / Errore di programmazione");
+                    dos_box.Clear();
+                    dos_box.Refresh();
+                    text_dos = "";
+                    glob_Program_OK = false;
+                    return;
+                }
+                if (text_dos.Contains("ERROR: Verification failed!"))
+                {
+                    MessageBox.Show("La verifica ha riscontrato un problema!");
+                    dos_box.Clear();
+                    dos_box.Refresh();
+                    text_dos = "";
+                    glob_Program_OK = false;
+                    return;
+                }
+
+                dos_box.SelectionStart = dos_box.Text.Length;
+                dos_box.ScrollToCaret();
+            }
+#pragma warning disable CS0168 // La variabile 'ex' è dichiarata, ma non viene mai usata
+            catch (Exception ex)
+#pragma warning restore CS0168 // La variabile 'ex' è dichiarata, ma non viene mai usata
+            {
+
+            }
+
+            //Verifica (conf_ Versione con Eugeniu)
+            try
+            {
+                var proc = Process.Start(psi);
+
+                //string verifyprogramstring = Properties.Settings.Default.Commander_path + @"\commander.exe verify " + glob_codice_fw_fulltmppath + " " + glob_device;
+                string verifyprogramstring = Properties.Settings.Default.Commander_path + @"\commander.exe verify " + '"' + nome_fw_conf + '"' + " " + glob_device;
+                proc.StandardInput.WriteLine(verifyprogramstring);
+                proc.StandardInput.WriteLine("exit");
+
+                text_dos = proc.StandardOutput.ReadToEnd();
+                dos_box.Text = dos_box.Text + text_dos + "\n======================================================================" + Environment.NewLine;
+                dos_box.Refresh();
+
+                if (text_dos.Contains("ERROR: Cannot connect to J-Link via USB.") ||
+                    text_dos.Contains("ERROR: Could not open J-Link connection.") ||
+                    text_dos.Contains("ERROR: Unspecified error during flashing.") ||
+                    text_dos.Contains("ERROR: Could not connect debugger."))
+                {
+                    MessageBox.Show("Interfaccia non collegata correttamente / Errore di programmazione");
+                    dos_box.Clear();
+                    dos_box.Refresh();
+                    text_dos = "";
+                    glob_Program_OK = false;
+                    return;
+                }
+                if (text_dos.Contains("ERROR: Verification failed!"))
+                {
+                    MessageBox.Show("La verifica ha riscontrato un problema!");
+                    dos_box.Clear();
+                    dos_box.Refresh();
+                    text_dos = "";
+                    glob_Program_OK = false;
+                    return;
+                }
+
+                if (text_dos.Contains("DONE"))
+                {
+                    System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+                    string sound = @"\\dc\AREA_IT\AREA_SOFTWARE_SISTEMATICA\SmartLineProduction\tada.wav";
+                    player.SoundLocation = sound;
+                    player.Load();
+                    player.Play();
+                }
+                else
+                {
+                    System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+                    string sound = @"\\dc\AREA_IT\AREA_SOFTWARE_SISTEMATICA\SmartLineProduction\Yamaha.wav";
+                    player.SoundLocation = sound;
+                    player.Load();
+                    player.Play();
+                    glob_Program_OK = false;
+                }
+
+                dos_box.SelectionStart = dos_box.Text.Length;
+                dos_box.ScrollToCaret();
+            }
+#pragma warning disable CS0168 // La variabile 'ex' è dichiarata, ma non viene mai usata
+            catch (Exception ex)
+#pragma warning restore CS0168 // La variabile 'ex' è dichiarata, ma non viene mai usata
+            {
+
+            }
+
+            // Lettura Hex
+            //Cancellare assegnazione temporanea
+
+            string hex_value = string.Empty;
+            try
+            {
+                hex_value = this.gL_PG_Config_HexTableAdapter.Get_Hex(ID3).ToString();
+            }
+            catch (NullReferenceException ex)
+            {
+                string mess = "Configurazione " + ID3 + " non presente nella tabella GL_PG_Config_Hex";
+                MessageBox.Show(mess);
+
+                dos_box.Clear();
+                dos_box.Refresh();
+                text_dos = "";
+                glob_Program_OK = false;
+                return;
+            }
+
+            if (hex_value == null)
+            {
+                string mess = "Configurazione " + ID3 + " non presente nella tabella GL_PG_Config_Hex";
+                MessageBox.Show(mess);
+
+                dos_box.Clear();
+                dos_box.Refresh();
+                text_dos = "";
+                glob_Program_OK = false;
+                return;
+            }
+
+            //Scrittura Hex su file
+            string hextempfile = Path.Combine(Path.GetTempPath(), "HexTempFile.bin");
+            if (File.Exists(hextempfile)) { File.Delete(hextempfile); }
+
+            try
+            {
+                using (BinaryWriter bw = new BinaryWriter(File.Open(hextempfile, FileMode.Create)))
+                {
+                    //writes the data to the stream
+                    bw.Write(hex_value);
+                }
+            }
+            catch (IOException ioexp)
+            {
+                Console.WriteLine("Error: {0}", ioexp.Message);
+            }
+
+            //Inserimento Hex File
+            if ((is_golden) && (tipodev == "R"))
+            {
+                try
+                {
+                    var proc = Process.Start(psi);
+
+                    //string programstring = Properties.Settings.Default.Commander_path + @"\commander.exe flash " + '"' + hextempfile + '"' + " --address 0x020 " + glob_device;
+                    string programstring = Properties.Settings.Default.Commander_path + @"\commander.exe flash " + '"' + hextempfile + '"' + " --address 0x0fe00020 " + glob_device;
+
+                    proc.StandardInput.WriteLine(programstring);
+                    proc.StandardInput.WriteLine("exit");
+
+                    text_dos = proc.StandardOutput.ReadToEnd();
+                    dos_box.Text = dos_box.Text + text_dos + "\n======================================================================" + Environment.NewLine;
+                    dos_box.Refresh();
+
+                    if (text_dos.Contains("ERROR: Cannot connect to J-Link via USB.") ||
+                        text_dos.Contains("ERROR: Could not open J-Link connection.") ||
+                        text_dos.Contains("ERROR: Unspecified error during flashing.") ||
+                        text_dos.Contains("ERROR: Could not connect debugger."))
+                    {
+                        MessageBox.Show("Interfaccia non collegata correttamente / Errore di programmazione");
+                        dos_box.Clear();
+                        dos_box.Refresh();
+                        text_dos = "";
+                        glob_Program_OK = false;
+                        return;
+                    }
+                    if (text_dos.Contains("ERROR: Verification failed!"))
+                    {
+                        MessageBox.Show("La verifica ha riscontrato un problema!");
+                        dos_box.Clear();
+                        dos_box.Refresh();
+                        text_dos = "";
+                        glob_Program_OK = false;
+                        return;
+                    }
+
+                    dos_box.SelectionStart = dos_box.Text.Length;
+                    dos_box.ScrollToCaret();
+                }
+#pragma warning disable CS0168 // La variabile 'ex' è dichiarata, ma non viene mai usata
+                catch (Exception ex)
+#pragma warning restore CS0168 // La variabile 'ex' è dichiarata, ma non viene mai usata
+                {
+
+                }
             }
 
             //Inserimento firmware (boot_ Versione con Tommaso)
@@ -810,28 +971,49 @@ namespace SmartLineProduction
             string UI_car_19 = string.Empty;
             string UI_car_20 = string.Empty;
 
+            //byte[] hex_1;
+            //byte[] hex_2;
+            //byte[] hex_3;
+            //byte[] hex_4;
+            //byte[] hex_5;
+            //byte[] hex_6;
+            //byte[] hex_7;
+            //byte[] hex_8;
+            //byte[] hex_9;
+            //byte[] hex_10;
+            //byte[] hex_11;
+            //byte[] hex_12;
+            //byte[] hex_13;
+            //byte[] hex_14;
+            //byte[] hex_15;
+            //byte[] hex_16;
+            //byte[] hex_17;
+            //byte[] hex_18;
+            //byte[] hex_19;
+            //byte[] hex_20;
+
             //if (UT_Crea_Unique_Official_Serial_Code.Length == 20)
             //{
-            UI_car_1 = UT_Crea_Unique_Official_Serial_Code.Substring(0, 1);
-            UI_car_2 = UT_Crea_Unique_Official_Serial_Code.Substring(1, 1);
-            UI_car_3 = UT_Crea_Unique_Official_Serial_Code.Substring(2, 1);
-            UI_car_4 = UT_Crea_Unique_Official_Serial_Code.Substring(3, 1);
-            UI_car_5 = UT_Crea_Unique_Official_Serial_Code.Substring(4, 1);
-            UI_car_6 = UT_Crea_Unique_Official_Serial_Code.Substring(5, 1);
-            UI_car_7 = UT_Crea_Unique_Official_Serial_Code.Substring(6, 1);
-            UI_car_8 = UT_Crea_Unique_Official_Serial_Code.Substring(7, 1);
-            UI_car_9 = UT_Crea_Unique_Official_Serial_Code.Substring(8, 1);
-            UI_car_10 = UT_Crea_Unique_Official_Serial_Code.Substring(9, 1);
-            UI_car_11 = UT_Crea_Unique_Official_Serial_Code.Substring(10, 1);
-            UI_car_12 = UT_Crea_Unique_Official_Serial_Code.Substring(11, 1);
-            UI_car_13 = UT_Crea_Unique_Official_Serial_Code.Substring(12, 1);
-            UI_car_14 = UT_Crea_Unique_Official_Serial_Code.Substring(13, 1);
-            UI_car_15 = UT_Crea_Unique_Official_Serial_Code.Substring(14, 1);
-            UI_car_16 = UT_Crea_Unique_Official_Serial_Code.Substring(15, 1);
-            UI_car_17 = UT_Crea_Unique_Official_Serial_Code.Substring(16, 1);
-            UI_car_18 = UT_Crea_Unique_Official_Serial_Code.Substring(17, 1);
-            UI_car_19 = UT_Crea_Unique_Official_Serial_Code.Substring(18, 1);
-            UI_car_20 = UT_Crea_Unique_Official_Serial_Code.Substring(19, 1);
+                UI_car_1 = UT_Crea_Unique_Official_Serial_Code.Substring(0, 1);
+                UI_car_2 = UT_Crea_Unique_Official_Serial_Code.Substring(1, 1);
+                UI_car_3 = UT_Crea_Unique_Official_Serial_Code.Substring(2, 1);
+                UI_car_4 = UT_Crea_Unique_Official_Serial_Code.Substring(3, 1);
+                UI_car_5 = UT_Crea_Unique_Official_Serial_Code.Substring(4, 1);
+                UI_car_6 = UT_Crea_Unique_Official_Serial_Code.Substring(5, 1);
+                UI_car_7 = UT_Crea_Unique_Official_Serial_Code.Substring(6, 1);
+                UI_car_8 = UT_Crea_Unique_Official_Serial_Code.Substring(7, 1);
+                UI_car_9 = UT_Crea_Unique_Official_Serial_Code.Substring(8, 1);
+                UI_car_10 = UT_Crea_Unique_Official_Serial_Code.Substring(9, 1);
+                UI_car_11 = UT_Crea_Unique_Official_Serial_Code.Substring(10, 1);
+                UI_car_12 = UT_Crea_Unique_Official_Serial_Code.Substring(11, 1);
+                UI_car_13 = UT_Crea_Unique_Official_Serial_Code.Substring(12, 1);
+                UI_car_14 = UT_Crea_Unique_Official_Serial_Code.Substring(13, 1);
+                UI_car_15 = UT_Crea_Unique_Official_Serial_Code.Substring(14, 1);
+                UI_car_16 = UT_Crea_Unique_Official_Serial_Code.Substring(15, 1);
+                UI_car_17 = UT_Crea_Unique_Official_Serial_Code.Substring(16, 1);
+                UI_car_18 = UT_Crea_Unique_Official_Serial_Code.Substring(17, 1);
+                UI_car_19 = UT_Crea_Unique_Official_Serial_Code.Substring(18, 1);
+                UI_car_20 = UT_Crea_Unique_Official_Serial_Code.Substring(19, 1);
 
             byte[] hex_1 = Encoding.ASCII.GetBytes(UI_car_1);
             byte[] hex_2 = Encoding.ASCII.GetBytes(UI_car_2);
@@ -1012,236 +1194,6 @@ namespace SmartLineProduction
 
             }
 
-            //Inserimento firmware (conf_ Versione con Tommaso)
-            try
-            {
-                var proc = Process.Start(psi);
-
-                string programstring = Properties.Settings.Default.Commander_path + @"\commander.exe flash " + '"' + nome_fw_conf + '"' + " --address 0x0 " + glob_device;
-                proc.StandardInput.WriteLine(programstring);
-                proc.StandardInput.WriteLine("exit");
-
-                text_dos = proc.StandardOutput.ReadToEnd();
-                dos_box.Text = dos_box.Text + text_dos + "\n======================================================================" + Environment.NewLine;
-                dos_box.Refresh();
-
-                if (text_dos.Contains("ERROR: Cannot connect to J-Link via USB.") ||
-                    text_dos.Contains("ERROR: Could not open J-Link connection.") ||
-                    text_dos.Contains("ERROR: Unspecified error during flashing.") ||
-                    text_dos.Contains("ERROR: Could not connect debugger."))
-                {
-                    MessageBox.Show("Interfaccia non collegata correttamente / Errore di programmazione");
-                    dos_box.Clear();
-                    dos_box.Refresh();
-                    text_dos = "";
-                    glob_Program_OK = false;
-                    return;
-                }
-                if (text_dos.Contains("ERROR: Verification failed!"))
-                {
-                    MessageBox.Show("La verifica ha riscontrato un problema!");
-                    dos_box.Clear();
-                    dos_box.Refresh();
-                    text_dos = "";
-                    glob_Program_OK = false;
-                    return;
-                }
-
-                dos_box.SelectionStart = dos_box.Text.Length;
-                dos_box.ScrollToCaret();
-            }
-#pragma warning disable CS0168 // La variabile 'ex' è dichiarata, ma non viene mai usata
-            catch (Exception ex)
-#pragma warning restore CS0168 // La variabile 'ex' è dichiarata, ma non viene mai usata
-            {
-
-            }
-
-            //Verifica (conf_ Versione con Eugeniu)
-            try
-            {
-                var proc = Process.Start(psi);
-
-                //string verifyprogramstring = Properties.Settings.Default.Commander_path + @"\commander.exe verify " + glob_codice_fw_fulltmppath + " " + glob_device;
-                string verifyprogramstring = Properties.Settings.Default.Commander_path + @"\commander.exe verify " + '"' + nome_fw_conf + '"' + " " + glob_device;
-                proc.StandardInput.WriteLine(verifyprogramstring);
-                proc.StandardInput.WriteLine("exit");
-
-                text_dos = proc.StandardOutput.ReadToEnd();
-                dos_box.Text = dos_box.Text + text_dos + "\n======================================================================" + Environment.NewLine;
-                dos_box.Refresh();
-
-                if (text_dos.Contains("ERROR: Cannot connect to J-Link via USB.") ||
-                    text_dos.Contains("ERROR: Could not open J-Link connection.") ||
-                    text_dos.Contains("ERROR: Unspecified error during flashing.") ||
-                    text_dos.Contains("ERROR: Could not connect debugger."))
-                {
-                    MessageBox.Show("Interfaccia non collegata correttamente / Errore di programmazione");
-                    dos_box.Clear();
-                    dos_box.Refresh();
-                    text_dos = "";
-                    glob_Program_OK = false;
-                    return;
-                }
-                if (text_dos.Contains("ERROR: Verification failed!"))
-                {
-                    MessageBox.Show("La verifica ha riscontrato un problema!");
-                    dos_box.Clear();
-                    dos_box.Refresh();
-                    text_dos = "";
-                    glob_Program_OK = false;
-                    return;
-                }
-
-                if (text_dos.Contains("DONE"))
-                {
-                    System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-                    string sound = @"\\dc\AREA_IT\AREA_SOFTWARE_SISTEMATICA\SmartLineProduction\tada.wav";
-                    player.SoundLocation = sound;
-                    player.Load();
-                    player.Play();
-                }
-                else
-                {
-                    System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-                    string sound = @"\\dc\AREA_IT\AREA_SOFTWARE_SISTEMATICA\SmartLineProduction\Yamaha.wav";
-                    player.SoundLocation = sound;
-                    player.Load();
-                    player.Play();
-                    glob_Program_OK = false;
-                }
-
-                dos_box.SelectionStart = dos_box.Text.Length;
-                dos_box.ScrollToCaret();
-            }
-#pragma warning disable CS0168 // La variabile 'ex' è dichiarata, ma non viene mai usata
-            catch (Exception ex)
-#pragma warning restore CS0168 // La variabile 'ex' è dichiarata, ma non viene mai usata
-            {
-
-            }
-
-
-            //Inserimento Hex File
-            if ((is_golden) && (tipodev == "R"))
-            {
-
-                // Lettura Hex
-                //Cancellare assegnazione temporanea
-
-                string hex_value = string.Empty;
-                try
-                {
-                    hex_value = this.gL_PG_Config_HexTableAdapter.Get_Hex(ID3).ToString();
-                }
-                catch (NullReferenceException ex)
-                {
-                    string mess = "Configurazione " + ID3 + " non presente nella tabella GL_PG_Config_Hex";
-                    MessageBox.Show(mess);
-
-                    dos_box.Clear();
-                    dos_box.Refresh();
-                    text_dos = "";
-                    glob_Program_OK = false;
-                    return;
-                }
-
-                if (hex_value == null)
-                {
-                    string mess = "Configurazione " + ID3 + " non presente nella tabella GL_PG_Config_Hex";
-                    MessageBox.Show(mess);
-
-                    dos_box.Clear();
-                    dos_box.Refresh();
-                    text_dos = "";
-                    glob_Program_OK = false;
-                    return;
-                }
-
-                //Scrittura Hex su file
-
-                string hextempfile = Path.Combine(Path.GetTempPath(), "HexTempFile.bin");
-                if (File.Exists(hextempfile)) { File.Delete(hextempfile); }
-
-                int lung = (hex_value.Length / 2);
-                //byte[] Hex_Array = Enumerable.Repeat(0x20, lung).ToArray();
-                byte[] byteArray = new byte[lung];
-
-                int y = 0;
-                for (int i = 0; i < hex_value.Length; i = i + 2)
-                {
-                    if (i == 270)
-                    { }
-
-                    string pezzo = (string)hex_value.Substring(i, 2);
-                    string pezzomaiusc = pezzo.ToUpper();
-                    byteArray[y] = Convert.ToByte(pezzomaiusc, 16);
-                    y++;
-                }
-
-
-                try
-                {
-                    using (BinaryWriter bw = new BinaryWriter(File.Open(hextempfile, FileMode.Create)))
-                    {
-                        //writes the data to the stream
-                        bw.Write(byteArray);
-                    }
-                }
-                catch (IOException ioexp)
-                {
-                    Console.WriteLine("Error: {0}", ioexp.Message);
-                }
-
-                try
-                {
-                    var proc = Process.Start(psi);
-
-                    //string programstring = Properties.Settings.Default.Commander_path + @"\commander.exe flash " + '"' + hextempfile + '"' + " --address 0x020 " + glob_device;
-                    string programstring = Properties.Settings.Default.Commander_path + @"\commander.exe flash " + '"' + hextempfile + '"' + " --address 0x0fe00020 " + glob_device;
-
-                    proc.StandardInput.WriteLine(programstring);
-                    proc.StandardInput.WriteLine("exit");
-
-                    text_dos = proc.StandardOutput.ReadToEnd();
-                    dos_box.Text = dos_box.Text + text_dos + "\n======================================================================" + Environment.NewLine;
-                    dos_box.Refresh();
-
-                    if (text_dos.Contains("ERROR: Cannot connect to J-Link via USB.") ||
-                        text_dos.Contains("ERROR: Could not open J-Link connection.") ||
-                        text_dos.Contains("ERROR: Unspecified error during flashing.") ||
-                        text_dos.Contains("ERROR: Could not connect debugger."))
-                    {
-                        MessageBox.Show("Interfaccia non collegata correttamente / Errore di programmazione");
-                        dos_box.Clear();
-                        dos_box.Refresh();
-                        text_dos = "";
-                        glob_Program_OK = false;
-                        return;
-                    }
-                    if (text_dos.Contains("ERROR: Verification failed!"))
-                    {
-                        MessageBox.Show("La verifica ha riscontrato un problema!");
-                        dos_box.Clear();
-                        dos_box.Refresh();
-                        text_dos = "";
-                        glob_Program_OK = false;
-                        return;
-                    }
-
-                    dos_box.SelectionStart = dos_box.Text.Length;
-                    dos_box.ScrollToCaret();
-                }
-#pragma warning disable CS0168 // La variabile 'ex' è dichiarata, ma non viene mai usata
-                catch (Exception ex)
-#pragma warning restore CS0168 // La variabile 'ex' è dichiarata, ma non viene mai usata
-                {
-
-                }
-            }
-
-
-
 
 
             //////////////////////////////////////////////////////////////////////////
@@ -1250,8 +1202,7 @@ namespace SmartLineProduction
             {
                 if (glob_Program_OK)
                 {
-                    //PrintLabel(UT_Crea_Unique_Official_Serial_Code);
-                    PrintLabel_GL(UT_Crea_Unique_Official_Serial_Code);
+                    PrintLabel(UT_Crea_Unique_Official_Serial_Code);
                 }
             }
         }
@@ -1343,123 +1294,6 @@ namespace SmartLineProduction
             {
                 ds_Programmazione_GL.GL_SerialNumbers.Rows.Add(newrow);
                 serialNumbersTableAdapter.Update(newrow);
-            }
-            catch (System.Exception ex)
-            {
-                MessageBox.Show("Table 'SerialNumbers' - Update failed");
-            }
-        }
-
-        private void AggiornaSN_GL( string DB_Ser_Kit,
-                                    int DB_Ser_ID_Cli,
-                                    string DB_Ser_Device,
-                                    string DB_Ser_Device_ID_Code,
-                                    string DB_Ser_OfficialSerial,
-                                    string DB_Ser_ReadSerial,
-                                    string DB_Ser_SW_Code,
-                                    int DB_Ser_SW_Code_Rev,
-                                    bool DB_Ser_SW_Std_Type,
-                                    string DB_Ser_SN_prod,
-                                    string DB_Ser_Commessa,
-                                    DateTime DB_Ser_DateProduction,
-                                    bool DB_Ser_Spedito,
-                                    //DateTime DB_Ser_Data_Spedito,
-                                    string DB_Ser_Substition_ID_ReadSerial,
-                                    string DB_Ser_Note,
-                                    int DB_Ser_LockLevel,
-                                    string DB_Ser_Device_ID_Code_Start,
-                                    bool DB_Ser_Golden_Unlock,
-                                    string DB_Ser_Cfg_Init,
-                                    bool DB_Ser_CAN
-            )
-        {
-            if (glob_tipo_progr == "L") //programmazione libera
-            {
-                //dv.RowFilter = "fw_id = " + fw_key_id;
-                //if (dv.Count > 0)
-                //{
-                //    codice_fw = dv[0]["fw_codfw"].ToString();
-                //}
-            }
-
-            // Verifica se nuovo SN o già esistente
-            bool newrecord = false;
-            string sel = "Ser_ReadSerial = " + "'" + DB_Ser_ReadSerial + "'";
-            DataRow[] result = ds_Programmazione_GL.GL_SerialNumbers.Select(sel);
-            if (result.Count() > 0) { newrecord = false; } else { newrecord = true; }
-
-            //Cancello il record prima di scrivere il nuovo
-            if (!newrecord)
-            {
-                foreach (DataRow row in result)
-                {
-                    row.Delete();
-                }
-            }
-
-            try
-            {
-                Validate();
-                gLSerialNumbersBindingSource.EndEdit();
-                gL_SerialNumbersTableAdapter.Update(this.ds_Programmazione_GL.GL_SerialNumbers);
-            }
-            catch (System.Exception ex)
-            {
-                MessageBox.Show("Table 'SerialNumbers' - Update failed");
-            }
-
-            DataRow newrow = ds_Programmazione_GL.GL_SerialNumbers.NewRow();
-            newrow["Ser_Kit"] = DB_Ser_Kit.Trim();
-            newrow["Ser_ID_Cli"] = DB_Ser_ID_Cli;
-            newrow["Ser_Device"] = DB_Ser_Device.Trim();
-            newrow["Ser_Device_ID_Code"] = DB_Ser_Device_ID_Code.Trim();
-            newrow["Ser_OfficialSerial"] = DB_Ser_OfficialSerial.Trim();
-            newrow["Ser_ReadSerial"] = DB_Ser_ReadSerial.Trim();
-            newrow["Ser_SW_Code"] = DB_Ser_SW_Code.Trim();
-            newrow["Ser_SW_Code_Rev"] = DB_Ser_SW_Code_Rev;
-            newrow["Ser_SW_Std_Type"] = DB_Ser_SW_Std_Type;
-            newrow["Ser_SN_prod"] = DB_Ser_SN_prod;
-            newrow["Ser_Commessa"] = DB_Ser_Commessa.Trim();
-            newrow["Ser_DateProduction"] = DB_Ser_DateProduction;
-            newrow["Ser_Spedito"] = DB_Ser_Spedito;
-            //newrow["Ser_Data_Spedito"] = DB_Ser_Data_Spedito;
-            newrow["Ser_Data_Spedito"] = DBNull.Value;
-            newrow["Ser_Substition_ID_ReadSerial"] = DB_Ser_Substition_ID_ReadSerial;
-            //newrow["Ser_Note"] = DB_Ser_Note;
-            newrow["Ser_Note"] = DBNull.Value;
-            newrow["Ser_LockLevel"] = DB_Ser_LockLevel;
-            newrow["Ser_Device_ID_Code_Start"] = DB_Ser_Device_ID_Code_Start.Trim();
-            newrow["Ser_Golden_Unlock"] = DB_Ser_Golden_Unlock;
-            newrow["Ser_Cfg_Init"] = DB_Ser_Cfg_Init.Trim();
-            //newrow["Ser_CAN"] = DB_Ser_CAN;
-
-
-
-            //newrow["Ser_Device_ID_Code"] = ID_Hw;
-            //newrow["Ser_OfficialSerial"] = serial_write;
-            //newrow["Ser_ReadSerial"] = serial_read;
-            //newrow["Ser_SW_Code"] = codice_fw;
-            //newrow["Ser_Spedito"] = false;
-            //newrow["Ser_DateProduction"] = DateTime.Now;
-            //newrow["Ser_LockLevel"] = glob_LockLevel;
-
-            //if (glob_tipo_progr == "C") //C-Commessa K-Kit D-Device L-Libera
-            //{
-            //    newrow["Ser_Commessa"] = DB_Ser_Commessa;
-            //    newrow["Ser_Kit"] = DB_Ser_Kit;
-            //    newrow["Ser_ID_Cli"] = DB_Ser_ID_Cli;
-            //    newrow["Ser_Device"] = DB_Ser_Device;
-
-            //    //riga modificata il 20/05/2021 per programmare i custom ma consentire di vedere anche gli altri firmware
-            //    //newrow["Ser_SW_Std_Type"] = Fw_isStandard;
-            //    newrow["Ser_SW_Std_Type"] = true;
-            //    newrow["Ser_SW_Code_Rev"] = Fw_Rev;
-            //}
-
-            try
-            {
-                ds_Programmazione_GL.GL_SerialNumbers.Rows.Add(newrow);
-                gL_SerialNumbersTableAdapter.Update(newrow);
             }
             catch (System.Exception ex)
             {
@@ -1651,10 +1485,6 @@ namespace SmartLineProduction
 
         private void UC_Programmazione_GL_Commessa_Load(object sender, EventArgs e)
         {
-            // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione_GL.SF_GL_Can_Active'. È possibile spostarla o rimuoverla se necessario.
-            this.sF_GL_Can_ActiveTableAdapter.Fill(this.ds_Programmazione_GL.SF_GL_Can_Active);
-            // TODO: questa riga di codice carica i dati nella tabella 'ds_Programmazione_GL.SF_GL_ID_Unlock'. È possibile spostarla o rimuoverla se necessario.
-            this.sF_GL_ID_UnlockTableAdapter.Fill(this.ds_Programmazione_GL.SF_GL_ID_Unlock);
             // Abilita zone dello schermo
             ds_Programmazione_GL.dt_GL_Tmp_Fw.Clear();
             ds_Programmazione_GL.dt_GL_Tmp_Programma.Clear();
@@ -1829,8 +1659,7 @@ namespace SmartLineProduction
 
                     DataRowView currentRowView = sFCommesseSLSFArticoliBindingSource.Current as DataRowView;
                     string ID = currentRowView["Modello"].ToString();
-                    //AggiungiRigaProg(CommessaLong, Kit, Item, Fw, 0, ID, 'R');
-                    AggiungiRigaProg(CommessaLong, Kit, Item, Fw, 0, ID, char.Parse(tipodevice));
+                    AggiungiRigaProg(CommessaLong, Kit, Item, Fw, 0, ID, 'R');
 
                     //Definisco se Standard FW
                     int res = (int)this.gL_Firmware_PGTableAdapter.IsStandardFW(Fw);

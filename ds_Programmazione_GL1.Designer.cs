@@ -70,14 +70,6 @@ namespace SmartLineProduction {
         
         private dt_GL_Tmp_FwDataTable tabledt_GL_Tmp_Fw;
         
-        private global::System.Data.DataRelation relationSF_Commesse_GL_SF_ArticoliToXSWR_GL;
-        
-        private global::System.Data.DataRelation relationSF_Commesse_GL_SF_Articoli_GL;
-        
-        private global::System.Data.DataRelation relationSF_Commesse_GL_CommesseGL_Count;
-        
-        private global::System.Data.DataRelation relationSF_Commesse_GL_GL_FW_Clienti;
-        
         private global::System.Data.DataRelation relationdt_GL_Tmp_Programma_GL_Firmware;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
@@ -732,10 +724,6 @@ namespace SmartLineProduction {
                     this.tabledt_GL_Tmp_Fw.InitVars();
                 }
             }
-            this.relationSF_Commesse_GL_SF_ArticoliToXSWR_GL = this.Relations["SF_Commesse_GL_SF_ArticoliToXSWR_GL"];
-            this.relationSF_Commesse_GL_SF_Articoli_GL = this.Relations["SF_Commesse_GL_SF_Articoli_GL"];
-            this.relationSF_Commesse_GL_CommesseGL_Count = this.Relations["SF_Commesse_GL_CommesseGL_Count"];
-            this.relationSF_Commesse_GL_GL_FW_Clienti = this.Relations["SF_Commesse_GL_GL_FW_Clienti"];
             this.relationdt_GL_Tmp_Programma_GL_Firmware = this.Relations["dt_GL_Tmp_Programma_GL_Firmware"];
         }
         
@@ -793,26 +781,6 @@ namespace SmartLineProduction {
             base.Tables.Add(this.tabledt_GL_Tmp_Programma);
             this.tabledt_GL_Tmp_Fw = new dt_GL_Tmp_FwDataTable();
             base.Tables.Add(this.tabledt_GL_Tmp_Fw);
-            this.relationSF_Commesse_GL_SF_ArticoliToXSWR_GL = new global::System.Data.DataRelation("SF_Commesse_GL_SF_ArticoliToXSWR_GL", new global::System.Data.DataColumn[] {
-                        this.tableSF_Commesse_GL.Art_CommessaColumn}, new global::System.Data.DataColumn[] {
-                        this.tableSF_ArticoliToXSWR_GL.ArtCommessaColumn}, false);
-            this.Relations.Add(this.relationSF_Commesse_GL_SF_ArticoliToXSWR_GL);
-            this.relationSF_Commesse_GL_SF_Articoli_GL = new global::System.Data.DataRelation("SF_Commesse_GL_SF_Articoli_GL", new global::System.Data.DataColumn[] {
-                        this.tableSF_Commesse_GL.DeviceColumn}, new global::System.Data.DataColumn[] {
-                        this.tableSF_Articoli_GL.ArticoloColumn}, false);
-            this.Relations.Add(this.relationSF_Commesse_GL_SF_Articoli_GL);
-            this.relationSF_Commesse_GL_CommesseGL_Count = new global::System.Data.DataRelation("SF_Commesse_GL_CommesseGL_Count", new global::System.Data.DataColumn[] {
-                        this.tableSF_Commesse_GL.CommessaLongColumn,
-                        this.tableSF_Commesse_GL.Art_CommessaColumn,
-                        this.tableSF_Commesse_GL.DeviceColumn}, new global::System.Data.DataColumn[] {
-                        this.tableCommesseGL_Count.Ser_CommessaColumn,
-                        this.tableCommesseGL_Count.Ser_KitColumn,
-                        this.tableCommesseGL_Count.Ser_DeviceColumn}, false);
-            this.Relations.Add(this.relationSF_Commesse_GL_CommesseGL_Count);
-            this.relationSF_Commesse_GL_GL_FW_Clienti = new global::System.Data.DataRelation("SF_Commesse_GL_GL_FW_Clienti", new global::System.Data.DataColumn[] {
-                        this.tableSF_Commesse_GL.CodAnagraficoColumn}, new global::System.Data.DataColumn[] {
-                        this.tableGL_FW_Clienti.Cod_NominativoColumn}, false);
-            this.Relations.Add(this.relationSF_Commesse_GL_GL_FW_Clienti);
             this.relationdt_GL_Tmp_Programma_GL_Firmware = new global::System.Data.DataRelation("dt_GL_Tmp_Programma_GL_Firmware", new global::System.Data.DataColumn[] {
                         this.tabledt_GL_Tmp_Programma.tmp_prog_codart_fwColumn}, new global::System.Data.DataColumn[] {
                         this.tableGL_Firmware.SW_CodeColumn}, false);
@@ -1130,8 +1098,6 @@ namespace SmartLineProduction {
             
             private global::System.Data.DataColumn columnSW_Device;
             
-            private global::System.Data.DataColumn columnQta_Evasa;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public SF_Commesse_GLDataTable() {
@@ -1335,14 +1301,6 @@ namespace SmartLineProduction {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Qta_EvasaColumn {
-                get {
-                    return this.columnQta_Evasa;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1399,8 +1357,7 @@ namespace SmartLineProduction {
                         int Is_SWR_R, 
                         string DataFineValidita, 
                         string Device, 
-                        string SW_Device, 
-                        int Qta_Evasa) {
+                        string SW_Device) {
                 SF_Commesse_GLRow rowSF_Commesse_GLRow = ((SF_Commesse_GLRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         TipoOrdine,
@@ -1423,8 +1380,7 @@ namespace SmartLineProduction {
                         Is_SWR_R,
                         DataFineValidita,
                         Device,
-                        SW_Device,
-                        Qta_Evasa};
+                        SW_Device};
                 rowSF_Commesse_GLRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSF_Commesse_GLRow);
                 return rowSF_Commesse_GLRow;
@@ -1468,7 +1424,6 @@ namespace SmartLineProduction {
                 this.columnDataFineValidita = base.Columns["DataFineValidita"];
                 this.columnDevice = base.Columns["Device"];
                 this.columnSW_Device = base.Columns["SW_Device"];
-                this.columnQta_Evasa = base.Columns["Qta_Evasa"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1516,8 +1471,6 @@ namespace SmartLineProduction {
                 base.Columns.Add(this.columnDevice);
                 this.columnSW_Device = new global::System.Data.DataColumn("SW_Device", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSW_Device);
-                this.columnQta_Evasa = new global::System.Data.DataColumn("Qta_Evasa", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnQta_Evasa);
                 this.columnTipoOrdine.MaxLength = 3;
                 this.columnCommessaLong.MaxLength = 20;
                 this.columnCommessaShort.MaxLength = 20;
@@ -1534,7 +1487,6 @@ namespace SmartLineProduction {
                 this.columnDataFineValidita.MaxLength = 30;
                 this.columnDevice.MaxLength = 25;
                 this.columnSW_Device.MaxLength = 25;
-                this.columnQta_Evasa.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1798,18 +1750,15 @@ namespace SmartLineProduction {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SF_ArticoliToXSWR_GLRow AddSF_ArticoliToXSWR_GLRow(SF_Commesse_GLRow parentSF_Commesse_GLRowBySF_Commesse_GL_SF_ArticoliToXSWR_GL, string CodiceFw, string Descrizione, string DescrizioneEstesa, string DataInizioValidita, string DataFineValidita) {
+            public SF_ArticoliToXSWR_GLRow AddSF_ArticoliToXSWR_GLRow(string ArtCommessa, string CodiceFw, string Descrizione, string DescrizioneEstesa, string DataInizioValidita, string DataFineValidita) {
                 SF_ArticoliToXSWR_GLRow rowSF_ArticoliToXSWR_GLRow = ((SF_ArticoliToXSWR_GLRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
+                        ArtCommessa,
                         CodiceFw,
                         Descrizione,
                         DescrizioneEstesa,
                         DataInizioValidita,
                         DataFineValidita};
-                if ((parentSF_Commesse_GLRowBySF_Commesse_GL_SF_ArticoliToXSWR_GL != null)) {
-                    columnValuesArray[0] = parentSF_Commesse_GLRowBySF_Commesse_GL_SF_ArticoliToXSWR_GL[9];
-                }
                 rowSF_ArticoliToXSWR_GLRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSF_ArticoliToXSWR_GLRow);
                 return rowSF_ArticoliToXSWR_GLRow;
@@ -2128,18 +2077,15 @@ namespace SmartLineProduction {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SF_Articoli_GLRow AddSF_Articoli_GLRow(SF_Commesse_GLRow parentSF_Commesse_GLRowBySF_Commesse_GL_SF_Articoli_GL, string Descrizione, string DescrizioneEstesa, string Modello, string Prefix_3, string Prefix_5) {
+            public SF_Articoli_GLRow AddSF_Articoli_GLRow(string Articolo, string Descrizione, string DescrizioneEstesa, string Modello, string Prefix_3, string Prefix_5) {
                 SF_Articoli_GLRow rowSF_Articoli_GLRow = ((SF_Articoli_GLRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
+                        Articolo,
                         Descrizione,
                         DescrizioneEstesa,
                         Modello,
                         Prefix_3,
                         Prefix_5};
-                if ((parentSF_Commesse_GLRowBySF_Commesse_GL_SF_Articoli_GL != null)) {
-                    columnValuesArray[0] = parentSF_Commesse_GLRowBySF_Commesse_GL_SF_Articoli_GL[19];
-                }
                 rowSF_Articoli_GLRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSF_Articoli_GLRow);
                 return rowSF_Articoli_GLRow;
@@ -3002,17 +2948,14 @@ namespace SmartLineProduction {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public GL_FW_ClientiRow AddGL_FW_ClientiRow(SF_Commesse_GLRow parentSF_Commesse_GLRowBySF_Commesse_GL_GL_FW_Clienti, string SW_Code, string SW_Des1, string SW_Des2) {
+            public GL_FW_ClientiRow AddGL_FW_ClientiRow(int Cod_Nominativo, string SW_Code, string SW_Des1, string SW_Des2) {
                 GL_FW_ClientiRow rowGL_FW_ClientiRow = ((GL_FW_ClientiRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        null,
+                        Cod_Nominativo,
                         SW_Code,
                         SW_Des1,
                         SW_Des2};
-                if ((parentSF_Commesse_GLRowBySF_Commesse_GL_GL_FW_Clienti != null)) {
-                    columnValuesArray[1] = parentSF_Commesse_GLRowBySF_Commesse_GL_GL_FW_Clienti[7];
-                }
                 rowGL_FW_ClientiRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowGL_FW_ClientiRow);
                 return rowGL_FW_ClientiRow;
@@ -10213,8 +10156,6 @@ namespace SmartLineProduction {
             
             private global::System.Data.DataColumn columnValore;
             
-            private global::System.Data.DataColumn columnModello;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public SF_GL_ID_UnlockDataTable() {
@@ -10314,14 +10255,6 @@ namespace SmartLineProduction {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ModelloColumn {
-                get {
-                    return this.columnModello;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -10357,7 +10290,7 @@ namespace SmartLineProduction {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SF_GL_ID_UnlockRow AddSF_GL_ID_UnlockRow(string TipoOrdine, int NumOrdine, int NumRigo, string Articolo, string Commessa, string Gruppo, int Attributo, string Valore, string Modello) {
+            public SF_GL_ID_UnlockRow AddSF_GL_ID_UnlockRow(string TipoOrdine, int NumOrdine, int NumRigo, string Articolo, string Commessa, string Gruppo, int Attributo, string Valore) {
                 SF_GL_ID_UnlockRow rowSF_GL_ID_UnlockRow = ((SF_GL_ID_UnlockRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         TipoOrdine,
@@ -10367,8 +10300,7 @@ namespace SmartLineProduction {
                         Commessa,
                         Gruppo,
                         Attributo,
-                        Valore,
-                        Modello};
+                        Valore};
                 rowSF_GL_ID_UnlockRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSF_GL_ID_UnlockRow);
                 return rowSF_GL_ID_UnlockRow;
@@ -10399,7 +10331,6 @@ namespace SmartLineProduction {
                 this.columnGruppo = base.Columns["Gruppo"];
                 this.columnAttributo = base.Columns["Attributo"];
                 this.columnValore = base.Columns["Valore"];
-                this.columnModello = base.Columns["Modello"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10421,20 +10352,14 @@ namespace SmartLineProduction {
                 base.Columns.Add(this.columnAttributo);
                 this.columnValore = new global::System.Data.DataColumn("Valore", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnValore);
-                this.columnModello = new global::System.Data.DataColumn("Modello", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnModello);
                 this.columnTipoOrdine.AllowDBNull = false;
                 this.columnTipoOrdine.MaxLength = 3;
                 this.columnNumOrdine.AllowDBNull = false;
                 this.columnNumRigo.AllowDBNull = false;
                 this.columnArticolo.MaxLength = 25;
                 this.columnCommessa.MaxLength = 20;
-                this.columnGruppo.ReadOnly = true;
                 this.columnGruppo.MaxLength = 15;
-                this.columnAttributo.ReadOnly = true;
-                this.columnValore.ReadOnly = true;
                 this.columnValore.MaxLength = 255;
-                this.columnModello.MaxLength = 20;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12015,22 +11940,6 @@ namespace SmartLineProduction {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Qta_Evasa {
-                get {
-                    try {
-                        return ((int)(this[this.tableSF_Commesse_GL.Qta_EvasaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Qta_Evasa\' nella tabella \'SF_Commesse_GL\' è DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSF_Commesse_GL.Qta_EvasaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsTipoOrdineNull() {
                 return this.IsNull(this.tableSF_Commesse_GL.TipoOrdineColumn);
             }
@@ -12244,62 +12153,6 @@ namespace SmartLineProduction {
             public void SetSW_DeviceNull() {
                 this[this.tableSF_Commesse_GL.SW_DeviceColumn] = global::System.Convert.DBNull;
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsQta_EvasaNull() {
-                return this.IsNull(this.tableSF_Commesse_GL.Qta_EvasaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetQta_EvasaNull() {
-                this[this.tableSF_Commesse_GL.Qta_EvasaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SF_ArticoliToXSWR_GLRow[] GetSF_ArticoliToXSWR_GLRows() {
-                if ((this.Table.ChildRelations["SF_Commesse_GL_SF_ArticoliToXSWR_GL"] == null)) {
-                    return new SF_ArticoliToXSWR_GLRow[0];
-                }
-                else {
-                    return ((SF_ArticoliToXSWR_GLRow[])(base.GetChildRows(this.Table.ChildRelations["SF_Commesse_GL_SF_ArticoliToXSWR_GL"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SF_Articoli_GLRow[] GetSF_Articoli_GLRows() {
-                if ((this.Table.ChildRelations["SF_Commesse_GL_SF_Articoli_GL"] == null)) {
-                    return new SF_Articoli_GLRow[0];
-                }
-                else {
-                    return ((SF_Articoli_GLRow[])(base.GetChildRows(this.Table.ChildRelations["SF_Commesse_GL_SF_Articoli_GL"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public CommesseGL_CountRow[] GetCommesseGL_CountRows() {
-                if ((this.Table.ChildRelations["SF_Commesse_GL_CommesseGL_Count"] == null)) {
-                    return new CommesseGL_CountRow[0];
-                }
-                else {
-                    return ((CommesseGL_CountRow[])(base.GetChildRows(this.Table.ChildRelations["SF_Commesse_GL_CommesseGL_Count"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public GL_FW_ClientiRow[] GetGL_FW_ClientiRows() {
-                if ((this.Table.ChildRelations["SF_Commesse_GL_GL_FW_Clienti"] == null)) {
-                    return new GL_FW_ClientiRow[0];
-                }
-                else {
-                    return ((GL_FW_ClientiRow[])(base.GetChildRows(this.Table.ChildRelations["SF_Commesse_GL_GL_FW_Clienti"])));
-                }
-            }
         }
         
         /// <summary>
@@ -12415,17 +12268,6 @@ namespace SmartLineProduction {
                 }
                 set {
                     this[this.tableSF_ArticoliToXSWR_GL.DataFineValiditaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SF_Commesse_GLRow SF_Commesse_GLRow {
-                get {
-                    return ((SF_Commesse_GLRow)(this.GetParentRow(this.Table.ParentRelations["SF_Commesse_GL_SF_ArticoliToXSWR_GL"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["SF_Commesse_GL_SF_ArticoliToXSWR_GL"]);
                 }
             }
             
@@ -12615,17 +12457,6 @@ namespace SmartLineProduction {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SF_Commesse_GLRow SF_Commesse_GLRow {
-                get {
-                    return ((SF_Commesse_GLRow)(this.GetParentRow(this.Table.ParentRelations["SF_Commesse_GL_SF_Articoli_GL"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["SF_Commesse_GL_SF_Articoli_GL"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsArticoloNull() {
                 return this.IsNull(this.tableSF_Articoli_GL.ArticoloColumn);
             }
@@ -12773,17 +12604,6 @@ namespace SmartLineProduction {
                 }
                 set {
                     this[this.tableCommesseGL_Count.QtaEvasaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SF_Commesse_GLRow SF_Commesse_GLRowParent {
-                get {
-                    return ((SF_Commesse_GLRow)(this.GetParentRow(this.Table.ParentRelations["SF_Commesse_GL_CommesseGL_Count"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["SF_Commesse_GL_CommesseGL_Count"]);
                 }
             }
             
@@ -12989,17 +12809,6 @@ namespace SmartLineProduction {
                 }
                 set {
                     this[this.tableGL_FW_Clienti.SW_Des2Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SF_Commesse_GLRow SF_Commesse_GLRow {
-                get {
-                    return ((SF_Commesse_GLRow)(this.GetParentRow(this.Table.ParentRelations["SF_Commesse_GL_GL_FW_Clienti"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["SF_Commesse_GL_GL_FW_Clienti"]);
                 }
             }
             
@@ -18329,22 +18138,6 @@ namespace SmartLineProduction {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Modello {
-                get {
-                    try {
-                        return ((string)(this[this.tableSF_GL_ID_Unlock.ModelloColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'Modello\' nella tabella \'SF_GL_ID_Unlock\' è DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSF_GL_ID_Unlock.ModelloColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsArticoloNull() {
                 return this.IsNull(this.tableSF_GL_ID_Unlock.ArticoloColumn);
             }
@@ -18401,18 +18194,6 @@ namespace SmartLineProduction {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetValoreNull() {
                 this[this.tableSF_GL_ID_Unlock.ValoreColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsModelloNull() {
-                return this.IsNull(this.tableSF_GL_ID_Unlock.ModelloColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetModelloNull() {
-                this[this.tableSF_GL_ID_Unlock.ModelloColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -20045,7 +19826,6 @@ namespace SmartLineProduction.ds_Programmazione_GLTableAdapters {
             tableMapping.ColumnMappings.Add("DataFineValidita", "DataFineValidita");
             tableMapping.ColumnMappings.Add("Device", "Device");
             tableMapping.ColumnMappings.Add("SW_Device", "SW_Device");
-            tableMapping.ColumnMappings.Add("Qta_Evasa", "Qta_Evasa");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -20062,13 +19842,7 @@ namespace SmartLineProduction.ds_Programmazione_GLTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        SF_Commesse_GL.TipoOrdine, SF_Commesse_GL.CommessaLong, SF_Commesse_GL.CommessaShort, SF_Commesse_GL.Data_Ordine, SF_Commesse_GL.Data_Conferma_Consegna, SF_Commesse_GL.Numero_Ordine, 
-                         SF_Commesse_GL.Numero_Riga, SF_Commesse_GL.CodAnagrafico, SF_Commesse_GL.Ragione_Sociale, SF_Commesse_GL.Art_Commessa, SF_Commesse_GL.UM, SF_Commesse_GL.Qta_Ordinata, 
-                         SF_Commesse_GL.Qta_da_Evadere, SF_Commesse_GL.StatoCommessa, SF_Commesse_GL.TipoRiga, SF_Commesse_GL.Is_Kit, SF_Commesse_GL.Is_SWR_P, SF_Commesse_GL.Is_SWR_R, 
-                         SF_Commesse_GL.DataFineValidita, SF_Commesse_GL.Device, SF_Commesse_GL.SW_Device, CASE WHEN CommesseGL_Count.qtaevasa IS NULL THEN 0 ELSE CommesseGL_Count.qtaevasa END AS Qta_Evasa
-FROM            SF_Commesse_GL LEFT OUTER JOIN
-                         CommesseGL_Count ON SF_Commesse_GL.CommessaLong = CommesseGL_Count.Ser_Commessa AND SF_Commesse_GL.Art_Commessa = CommesseGL_Count.Ser_Kit AND 
-                         SF_Commesse_GL.Device = CommesseGL_Count.Ser_Device";
+            this._commandCollection[0].CommandText = @"SELECT TipoOrdine, CommessaLong, CommessaShort, Data_Ordine, Data_Conferma_Consegna, Numero_Ordine, Numero_Riga, CodAnagrafico, Ragione_Sociale, Art_Commessa, UM, Qta_Ordinata, Qta_da_Evadere, StatoCommessa, TipoRiga, Is_Kit, Is_SWR_P, Is_SWR_R, DataFineValidita, Device, SW_Device FROM dbo.SF_Commesse_GL";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -24973,8 +24747,8 @@ SELECT Id, SW_Code, SW_TipoDevice, SW_Descrizione, SW_Descrizione_EN, SW_Version
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Param", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT        SW_Revisione\r\nFROM            GL_Firmware_PG\r\nWHERE        (SW_Atti" +
-                "vo = 1) AND (SW_Code = @Param)";
+            this._commandCollection[2].CommandText = "SELECT        SW_Revisione\r\nFROM            GL_Firmware_PG\r\nWHERE        (SW_Code" +
+                " = @Param) AND (SW_Attivo = 1)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Param", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "SW_Code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
@@ -25460,7 +25234,7 @@ SELECT Id, SW_Code, SW_TipoDevice, SW_Descrizione, SW_Descrizione_EN, SW_Version
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual global::System.Nullable<int> GetRev(string Param) {
+        public virtual global::System.Nullable<int> GetRevision(string Param) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
             if ((Param == null)) {
                 throw new global::System.ArgumentNullException("Param");
@@ -27138,7 +26912,6 @@ SELECT id, Code, Nome, Prodotto_Ricevitore_Code, Prodotto_Ricevitore_Num_Outs, P
             tableMapping.ColumnMappings.Add("Gruppo", "Gruppo");
             tableMapping.ColumnMappings.Add("Attributo", "Attributo");
             tableMapping.ColumnMappings.Add("Valore", "Valore");
-            tableMapping.ColumnMappings.Add("Modello", "Modello");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -27152,18 +26925,24 @@ SELECT id, Code, Nome, Prodotto_Ricevitore_Code, Prodotto_Ricevitore_Num_Outs, P
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT TipoOrdine, NumOrdine, NumRigo, Articolo, Commessa, Gruppo, Attributo, Val" +
-                "ore, Modello FROM dbo.SF_GL_ID_Unlock";
+                "ore FROM dbo.SF_GL_ID_Unlock";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        Valore\r\nFROM            SF_GL_ID_Unlock\r\nWHERE        (Commessa = @" +
-                "Param)";
+            this._commandCollection[1].CommandText = "SELECT        Modello\r\nFROM            SF_GL_ID_Unlock\r\nWHERE        (Commessa = " +
+                "@Param2)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Param", global::System.Data.SqlDbType.Char, 20, global::System.Data.ParameterDirection.Input, 0, 0, "Commessa", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Param2", global::System.Data.SqlDbType.Char, 20, global::System.Data.ParameterDirection.Input, 0, 0, "Commessa", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT        Valore\r\nFROM            SF_GL_ID_Unlock\r\nWHERE        (Commessa = @" +
+                "Param)";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Param", global::System.Data.SqlDbType.Char, 20, global::System.Data.ParameterDirection.Input, 0, 0, "Commessa", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -27193,8 +26972,42 @@ SELECT id, Code, Nome, Prodotto_Ricevitore_Code, Prodotto_Ricevitore_Num_Outs, P
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual object GetUnlock(string Param) {
+        public virtual string GetModello(string Param2) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            if ((Param2 == null)) {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[0].Value = ((string)(Param2));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((string)(returnValue));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual string GetUnlock(string Param) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
             if ((Param == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -27220,7 +27033,7 @@ SELECT id, Code, Nome, Prodotto_Ricevitore_Code, Prodotto_Ricevitore_Num_Outs, P
                 return null;
             }
             else {
-                return ((object)(returnValue));
+                return ((string)(returnValue));
             }
         }
     }
@@ -27410,7 +27223,7 @@ SELECT id, Code, Nome, Prodotto_Ricevitore_Code, Prodotto_Ricevitore_Num_Outs, P
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual object GetCanValue(string Param) {
+        public virtual string GetCanValue(string Param) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
             if ((Param == null)) {
                 throw new global::System.ArgumentNullException("Param");
@@ -27437,7 +27250,7 @@ SELECT id, Code, Nome, Prodotto_Ricevitore_Code, Prodotto_Ricevitore_Num_Outs, P
                 return null;
             }
             else {
-                return ((object)(returnValue));
+                return ((string)(returnValue));
             }
         }
     }

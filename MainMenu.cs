@@ -612,7 +612,7 @@ namespace SmartLineProduction
             try
             {
                 Ping myPing = new Ping();
-                PingReply reply = myPing.Send("192.168.0.255", 1000);
+                PingReply reply = myPing.Send("192.168.0.222", 1000);
                 if (reply.Status.ToString() == "Success") { Result_ping_255 = true; }
             }
             catch { }
