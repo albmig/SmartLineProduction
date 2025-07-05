@@ -60,7 +60,11 @@ namespace SmartLineProduction
         {
             // Lettura impostazioni
             glob_FW_folder = Properties.Settings.Default.FW_folder;
-            glob_Commander_path = Properties.Settings.Default.Commander_path;
+            glob_Commander_path = Properties.Settings.Default.Commander_path_SL + "_GL";
+            if (!Directory.Exists(glob_Commander_path))
+            {
+                MessageBox.Show("Attenzione! Folder Commander: " + glob_Commander_path + " non trovato!");
+            }
         }
 
         private void CaricaArchivi()
@@ -399,11 +403,11 @@ namespace SmartLineProduction
                 var proc = Process.Start(psi);
 
                 // Setting "DEBUG MODE"
-                proc.StandardInput.WriteLine(Properties.Settings.Default.Commander_path + @"\commander.exe adapter dbgmode OUT");
+                proc.StandardInput.WriteLine(Properties.Settings.Default.Commander_path_GL + @"\commander.exe adapter dbgmode OUT");
 
                 // La riga sottostante è da verificare
-                proc.StandardInput.WriteLine(Properties.Settings.Default.Commander_path + @"\commander.exe device info " + glob_device);
-                proc.StandardInput.WriteLine(Properties.Settings.Default.Commander_path + @"\commander.exe --version");
+                proc.StandardInput.WriteLine(Properties.Settings.Default.Commander_path_GL + @"\commander.exe device info " + glob_device);
+                proc.StandardInput.WriteLine(Properties.Settings.Default.Commander_path_GL + @"\commander.exe --version");
                 proc.StandardInput.WriteLine("exit");
 
                 text_dos = proc.StandardOutput.ReadToEnd();
@@ -500,7 +504,7 @@ namespace SmartLineProduction
             {
                 var proc = Process.Start(psi);
 
-                string programstring = Properties.Settings.Default.Commander_path + @"\commander.exe device masserase " + glob_device;
+                string programstring = Properties.Settings.Default.Commander_path_GL + @"\commander.exe device masserase " + glob_device;
                 proc.StandardInput.WriteLine(programstring);
                 proc.StandardInput.WriteLine("exit");
 
@@ -530,12 +534,12 @@ namespace SmartLineProduction
 
             }
 
-            //Inserimento firmware (boot_ Versione con Tommaso)
+            //Inserimento firmware (conf_ Versione con Tommaso)
             try
             {
                 var proc = Process.Start(psi);
 
-                string programstring = Properties.Settings.Default.Commander_path + @"\commander.exe flash " + '"' + nome_fw_boot + '"' + " --address 0x0 " + glob_device;
+                string programstring = Properties.Settings.Default.Commander_path_GL + @"\commander.exe flash " + '"' + nome_fw_conf + '"' + " --address 0x0 " + glob_device;
                 proc.StandardInput.WriteLine(programstring);
                 proc.StandardInput.WriteLine("exit");
 
@@ -575,13 +579,13 @@ namespace SmartLineProduction
 
             }
 
-            //Verifica (boot_ Versione con Eugeniu)
+            //Verifica (conf_ Versione con Eugeniu)
             try
             {
                 var proc = Process.Start(psi);
 
                 //string verifyprogramstring = Properties.Settings.Default.Commander_path + @"\commander.exe verify " + glob_codice_fw_fulltmppath + " " + glob_device;
-                string verifyprogramstring = Properties.Settings.Default.Commander_path + @"\commander.exe verify " + '"' + nome_fw_boot + '"' + " " + glob_device;
+                string verifyprogramstring = Properties.Settings.Default.Commander_path_GL + @"\commander.exe verify " + '"' + nome_fw_conf + '"' + " " + glob_device;
                 proc.StandardInput.WriteLine(verifyprogramstring);
                 proc.StandardInput.WriteLine("exit");
 
@@ -656,7 +660,7 @@ namespace SmartLineProduction
 
                 var proc = Process.Start(psi);
 
-                string verifyprogramstring = Properties.Settings.Default.Commander_path + @"\commander.exe flash --patch 0x0fe00000:0x" + coppia_5 + coppia_4 + coppia_3 + coppia_2 + coppia_1 + ":5" + " " + glob_device;
+                string verifyprogramstring = Properties.Settings.Default.Commander_path_GL + @"\commander.exe flash --patch 0x0fe00000:0x" + coppia_5 + coppia_4 + coppia_3 + coppia_2 + coppia_1 + ":5" + " " + glob_device;
 
                 proc.StandardInput.WriteLine(verifyprogramstring);
                 proc.StandardInput.WriteLine("exit");
@@ -727,7 +731,7 @@ namespace SmartLineProduction
                     var proc = Process.Start(psi);
 
                     string verifyprogramstring = "";
-                    verifyprogramstring = Properties.Settings.Default.Commander_path + @"\commander.exe flash --patch 0x0FE00024:0x" + ID1_coppia_4 + ID1_coppia_3 + ID1_coppia_2 + ID1_coppia_1 + ":4" + " " + glob_device;
+                    verifyprogramstring = Properties.Settings.Default.Commander_path_GL + @"\commander.exe flash --patch 0x0FE00024:0x" + ID1_coppia_4 + ID1_coppia_3 + ID1_coppia_2 + ID1_coppia_1 + ":4" + " " + glob_device;
 
                     proc.StandardInput.WriteLine(verifyprogramstring);
                     proc.StandardInput.WriteLine("exit");
@@ -885,7 +889,7 @@ namespace SmartLineProduction
                     var proc = Process.Start(psi);
 
                     string verifyprogramstring = "";
-                    verifyprogramstring = Properties.Settings.Default.Commander_path + @"\commander.exe flash --patch 0x0FE00010:0x" + s_hex_15 + s_hex_14 + s_hex_13 + s_hex_12 + s_hex_11 + ":5" + " " + glob_device;
+                    verifyprogramstring = Properties.Settings.Default.Commander_path_GL + @"\commander.exe flash --patch 0x0FE00010:0x" + s_hex_15 + s_hex_14 + s_hex_13 + s_hex_12 + s_hex_11 + ":5" + " " + glob_device;
 
                     proc.StandardInput.WriteLine(verifyprogramstring);
                     proc.StandardInput.WriteLine("exit");
@@ -953,7 +957,7 @@ namespace SmartLineProduction
                     var proc = Process.Start(psi);
 
                     string verifyprogramstring = "";
-                    verifyprogramstring = Properties.Settings.Default.Commander_path + @"\commander.exe flash --patch 0x0FE00015:0x" + s_hex_20 + s_hex_19 + s_hex_18 + s_hex_17 + s_hex_16 + ":5" + " " + glob_device;
+                    verifyprogramstring = Properties.Settings.Default.Commander_path_GL + @"\commander.exe flash --patch 0x0FE00015:0x" + s_hex_20 + s_hex_19 + s_hex_18 + s_hex_17 + s_hex_16 + ":5" + " " + glob_device;
                     proc.StandardInput.WriteLine(verifyprogramstring);
                     proc.StandardInput.WriteLine("exit");
 
@@ -1011,116 +1015,6 @@ namespace SmartLineProduction
                 }
 
             }
-
-            //Inserimento firmware (conf_ Versione con Tommaso)
-            try
-            {
-                var proc = Process.Start(psi);
-
-                string programstring = Properties.Settings.Default.Commander_path + @"\commander.exe flash " + '"' + nome_fw_conf + '"' + " --address 0x0 " + glob_device;
-                proc.StandardInput.WriteLine(programstring);
-                proc.StandardInput.WriteLine("exit");
-
-                text_dos = proc.StandardOutput.ReadToEnd();
-                dos_box.Text = dos_box.Text + text_dos + "\n======================================================================" + Environment.NewLine;
-                dos_box.Refresh();
-
-                if (text_dos.Contains("ERROR: Cannot connect to J-Link via USB.") ||
-                    text_dos.Contains("ERROR: Could not open J-Link connection.") ||
-                    text_dos.Contains("ERROR: Unspecified error during flashing.") ||
-                    text_dos.Contains("ERROR: Could not connect debugger."))
-                {
-                    MessageBox.Show("Interfaccia non collegata correttamente / Errore di programmazione");
-                    dos_box.Clear();
-                    dos_box.Refresh();
-                    text_dos = "";
-                    glob_Program_OK = false;
-                    return;
-                }
-                if (text_dos.Contains("ERROR: Verification failed!"))
-                {
-                    MessageBox.Show("La verifica ha riscontrato un problema!");
-                    dos_box.Clear();
-                    dos_box.Refresh();
-                    text_dos = "";
-                    glob_Program_OK = false;
-                    return;
-                }
-
-                dos_box.SelectionStart = dos_box.Text.Length;
-                dos_box.ScrollToCaret();
-            }
-#pragma warning disable CS0168 // La variabile 'ex' è dichiarata, ma non viene mai usata
-            catch (Exception ex)
-#pragma warning restore CS0168 // La variabile 'ex' è dichiarata, ma non viene mai usata
-            {
-
-            }
-
-            //Verifica (conf_ Versione con Eugeniu)
-            try
-            {
-                var proc = Process.Start(psi);
-
-                //string verifyprogramstring = Properties.Settings.Default.Commander_path + @"\commander.exe verify " + glob_codice_fw_fulltmppath + " " + glob_device;
-                string verifyprogramstring = Properties.Settings.Default.Commander_path + @"\commander.exe verify " + '"' + nome_fw_conf + '"' + " " + glob_device;
-                proc.StandardInput.WriteLine(verifyprogramstring);
-                proc.StandardInput.WriteLine("exit");
-
-                text_dos = proc.StandardOutput.ReadToEnd();
-                dos_box.Text = dos_box.Text + text_dos + "\n======================================================================" + Environment.NewLine;
-                dos_box.Refresh();
-
-                if (text_dos.Contains("ERROR: Cannot connect to J-Link via USB.") ||
-                    text_dos.Contains("ERROR: Could not open J-Link connection.") ||
-                    text_dos.Contains("ERROR: Unspecified error during flashing.") ||
-                    text_dos.Contains("ERROR: Could not connect debugger."))
-                {
-                    MessageBox.Show("Interfaccia non collegata correttamente / Errore di programmazione");
-                    dos_box.Clear();
-                    dos_box.Refresh();
-                    text_dos = "";
-                    glob_Program_OK = false;
-                    return;
-                }
-                if (text_dos.Contains("ERROR: Verification failed!"))
-                {
-                    MessageBox.Show("La verifica ha riscontrato un problema!");
-                    dos_box.Clear();
-                    dos_box.Refresh();
-                    text_dos = "";
-                    glob_Program_OK = false;
-                    return;
-                }
-
-                if (text_dos.Contains("DONE"))
-                {
-                    System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-                    string sound = @"\\dc\AREA_IT\AREA_SOFTWARE_SISTEMATICA\SmartLineProduction\tada.wav";
-                    player.SoundLocation = sound;
-                    player.Load();
-                    player.Play();
-                }
-                else
-                {
-                    System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-                    string sound = @"\\dc\AREA_IT\AREA_SOFTWARE_SISTEMATICA\SmartLineProduction\Yamaha.wav";
-                    player.SoundLocation = sound;
-                    player.Load();
-                    player.Play();
-                    glob_Program_OK = false;
-                }
-
-                dos_box.SelectionStart = dos_box.Text.Length;
-                dos_box.ScrollToCaret();
-            }
-#pragma warning disable CS0168 // La variabile 'ex' è dichiarata, ma non viene mai usata
-            catch (Exception ex)
-#pragma warning restore CS0168 // La variabile 'ex' è dichiarata, ma non viene mai usata
-            {
-
-            }
-
 
             //Inserimento Hex File
             if ((is_golden) && (tipodev == "R"))
@@ -1198,7 +1092,7 @@ namespace SmartLineProduction
                     var proc = Process.Start(psi);
 
                     //string programstring = Properties.Settings.Default.Commander_path + @"\commander.exe flash " + '"' + hextempfile + '"' + " --address 0x020 " + glob_device;
-                    string programstring = Properties.Settings.Default.Commander_path + @"\commander.exe flash " + '"' + hextempfile + '"' + " --address 0x0fe00020 " + glob_device;
+                    string programstring = Properties.Settings.Default.Commander_path_GL + @"\commander.exe flash " + '"' + hextempfile + '"' + " --address 0x0fe00020 " + glob_device;
 
                     proc.StandardInput.WriteLine(programstring);
                     proc.StandardInput.WriteLine("exit");
@@ -1240,9 +1134,114 @@ namespace SmartLineProduction
                 }
             }
 
+            //Inserimento firmware (boot_ Versione con Tommaso)
+            try
+            {
+                var proc = Process.Start(psi);
 
+                string programstring = Properties.Settings.Default.Commander_path_GL + @"\commander.exe flash " + '"' + nome_fw_boot + '"' + " --address 0x0 " + glob_device;
+                proc.StandardInput.WriteLine(programstring);
+                proc.StandardInput.WriteLine("exit");
 
+                text_dos = proc.StandardOutput.ReadToEnd();
+                dos_box.Text = dos_box.Text + text_dos + "\n======================================================================" + Environment.NewLine;
+                dos_box.Refresh();
 
+                if (text_dos.Contains("ERROR: Cannot connect to J-Link via USB.") ||
+                    text_dos.Contains("ERROR: Could not open J-Link connection.") ||
+                    text_dos.Contains("ERROR: Unspecified error during flashing.") ||
+                    text_dos.Contains("ERROR: Could not connect debugger."))
+                {
+                    MessageBox.Show("Interfaccia non collegata correttamente / Errore di programmazione");
+                    dos_box.Clear();
+                    dos_box.Refresh();
+                    text_dos = "";
+                    glob_Program_OK = false;
+                    return;
+                }
+                if (text_dos.Contains("ERROR: Verification failed!"))
+                {
+                    MessageBox.Show("La verifica ha riscontrato un problema!");
+                    dos_box.Clear();
+                    dos_box.Refresh();
+                    text_dos = "";
+                    glob_Program_OK = false;
+                    return;
+                }
+
+                dos_box.SelectionStart = dos_box.Text.Length;
+                dos_box.ScrollToCaret();
+            }
+#pragma warning disable CS0168 // La variabile 'ex' è dichiarata, ma non viene mai usata
+            catch (Exception ex)
+#pragma warning restore CS0168 // La variabile 'ex' è dichiarata, ma non viene mai usata
+            {
+
+            }
+
+            //Verifica (boot_ Versione con Eugeniu)
+            try
+            {
+                var proc = Process.Start(psi);
+
+                //string verifyprogramstring = Properties.Settings.Default.Commander_path + @"\commander.exe verify " + glob_codice_fw_fulltmppath + " " + glob_device;
+                string verifyprogramstring = Properties.Settings.Default.Commander_path_GL + @"\commander.exe verify " + '"' + nome_fw_boot + '"' + " " + glob_device;
+                proc.StandardInput.WriteLine(verifyprogramstring);
+                proc.StandardInput.WriteLine("exit");
+
+                text_dos = proc.StandardOutput.ReadToEnd();
+                dos_box.Text = dos_box.Text + text_dos + "\n======================================================================" + Environment.NewLine;
+                dos_box.Refresh();
+
+                if (text_dos.Contains("ERROR: Cannot connect to J-Link via USB.") ||
+                    text_dos.Contains("ERROR: Could not open J-Link connection.") ||
+                    text_dos.Contains("ERROR: Unspecified error during flashing.") ||
+                    text_dos.Contains("ERROR: Could not connect debugger."))
+                {
+                    MessageBox.Show("Interfaccia non collegata correttamente / Errore di programmazione");
+                    dos_box.Clear();
+                    dos_box.Refresh();
+                    text_dos = "";
+                    glob_Program_OK = false;
+                    return;
+                }
+                if (text_dos.Contains("ERROR: Verification failed!"))
+                {
+                    MessageBox.Show("La verifica ha riscontrato un problema!");
+                    dos_box.Clear();
+                    dos_box.Refresh();
+                    text_dos = "";
+                    glob_Program_OK = false;
+                    return;
+                }
+
+                if (text_dos.Contains("DONE"))
+                {
+                    System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+                    string sound = @"\\dc\AREA_IT\AREA_SOFTWARE_SISTEMATICA\SmartLineProduction\tada.wav";
+                    player.SoundLocation = sound;
+                    player.Load();
+                    player.Play();
+                }
+                else
+                {
+                    System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+                    string sound = @"\\dc\AREA_IT\AREA_SOFTWARE_SISTEMATICA\SmartLineProduction\Yamaha.wav";
+                    player.SoundLocation = sound;
+                    player.Load();
+                    player.Play();
+                    glob_Program_OK = false;
+                }
+
+                dos_box.SelectionStart = dos_box.Text.Length;
+                dos_box.ScrollToCaret();
+            }
+#pragma warning disable CS0168 // La variabile 'ex' è dichiarata, ma non viene mai usata
+            catch (Exception ex)
+#pragma warning restore CS0168 // La variabile 'ex' è dichiarata, ma non viene mai usata
+            {
+
+            }
 
             //////////////////////////////////////////////////////////////////////////
 

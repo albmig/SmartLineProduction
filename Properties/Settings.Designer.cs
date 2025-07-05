@@ -49,12 +49,12 @@ namespace SmartLineProduction.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("C:\\Commander")]
-        public string Commander_path {
+        public string Commander_path_SL {
             get {
-                return ((string)(this["Commander_path"]));
+                return ((string)(this["Commander_path_SL"]));
             }
             set {
-                this["Commander_path"] = value;
+                this["Commander_path_SL"] = value;
             }
         }
         
@@ -127,6 +127,18 @@ namespace SmartLineProduction.Properties {
             }
             set {
                 this["Settings_Brother_GL"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Commander_GL")]
+        public string Commander_path_GL {
+            get {
+                return ((string)(this["Commander_path_GL"]));
+            }
+            set {
+                this["Commander_path_GL"] = value;
             }
         }
     }

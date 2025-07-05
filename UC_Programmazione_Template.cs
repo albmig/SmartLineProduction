@@ -218,7 +218,7 @@ namespace SmartLineProduction
         {
             // Lettura impostazioni
             glob_FW_folder = Properties.Settings.Default.FW_folder;
-            glob_Commander_path = Properties.Settings.Default.Commander_path;
+            glob_Commander_path = Properties.Settings.Default.Commander_path_SL;
 
             // Assegna le variabili per lo schermo
             tb_FW_folder.Text = glob_FW_folder;
@@ -844,11 +844,11 @@ namespace SmartLineProduction
                 var proc = Process.Start(psi);
 
                 // Setting "DEBUG MODE"
-                proc.StandardInput.WriteLine(Properties.Settings.Default.Commander_path + @"\commander.exe adapter dbgmode OUT");
+                proc.StandardInput.WriteLine(Properties.Settings.Default.Commander_path_SL + @"\commander.exe adapter dbgmode OUT");
 
                 // La riga sottostante è da verificare
-                proc.StandardInput.WriteLine(Properties.Settings.Default.Commander_path + @"\commander.exe device info " + glob_device);
-                proc.StandardInput.WriteLine(Properties.Settings.Default.Commander_path + @"\commander.exe --version");
+                proc.StandardInput.WriteLine(Properties.Settings.Default.Commander_path_SL + @"\commander.exe device info " + glob_device);
+                proc.StandardInput.WriteLine(Properties.Settings.Default.Commander_path_SL + @"\commander.exe --version");
                 proc.StandardInput.WriteLine("exit");
 
                 text_dos = proc.StandardOutput.ReadToEnd();
@@ -1006,7 +1006,7 @@ namespace SmartLineProduction
             {
                 var proc = Process.Start(psi);
 
-                string programstring = Properties.Settings.Default.Commander_path + @"\commander.exe device masserase " + glob_device;
+                string programstring = Properties.Settings.Default.Commander_path_SL + @"\commander.exe device masserase " + glob_device;
                 proc.StandardInput.WriteLine(programstring);
                 proc.StandardInput.WriteLine("exit");
 
@@ -1040,7 +1040,7 @@ namespace SmartLineProduction
             {
                 var proc = Process.Start(psi);
 
-                string programstring = Properties.Settings.Default.Commander_path + @"\commander.exe flash " + '"' + nome_fw_boot + '"' + " --address 0x0 " + glob_device;
+                string programstring = Properties.Settings.Default.Commander_path_SL + @"\commander.exe flash " + '"' + nome_fw_boot + '"' + " --address 0x0 " + glob_device;
                 proc.StandardInput.WriteLine(programstring);
                 proc.StandardInput.WriteLine("exit");
 
@@ -1086,7 +1086,7 @@ namespace SmartLineProduction
                 var proc = Process.Start(psi);
 
                 //string verifyprogramstring = Properties.Settings.Default.Commander_path + @"\commander.exe verify " + glob_codice_fw_fulltmppath + " " + glob_device;
-                string verifyprogramstring = Properties.Settings.Default.Commander_path + @"\commander.exe verify " + '"' + nome_fw_boot + '"' + " " + glob_device;
+                string verifyprogramstring = Properties.Settings.Default.Commander_path_SL + @"\commander.exe verify " + '"' + nome_fw_boot + '"' + " " + glob_device;
                 proc.StandardInput.WriteLine(verifyprogramstring);
                 proc.StandardInput.WriteLine("exit");
 
@@ -1149,7 +1149,7 @@ namespace SmartLineProduction
             {
                 var proc = Process.Start(psi);
 
-                string programstring = Properties.Settings.Default.Commander_path + @"\commander.exe flash " + '"' + nome_fw_conf + '"' + " --address 0x0 " + glob_device;
+                string programstring = Properties.Settings.Default.Commander_path_SL + @"\commander.exe flash " + '"' + nome_fw_conf + '"' + " --address 0x0 " + glob_device;
                 proc.StandardInput.WriteLine(programstring);
                 proc.StandardInput.WriteLine("exit");
 
@@ -1195,7 +1195,7 @@ namespace SmartLineProduction
                 var proc = Process.Start(psi);
 
                 //string verifyprogramstring = Properties.Settings.Default.Commander_path + @"\commander.exe verify " + glob_codice_fw_fulltmppath + " " + glob_device;
-                string verifyprogramstring = Properties.Settings.Default.Commander_path + @"\commander.exe verify " + '"' + nome_fw_conf + '"' + " " + glob_device;
+                string verifyprogramstring = Properties.Settings.Default.Commander_path_SL + @"\commander.exe verify " + '"' + nome_fw_conf + '"' + " " + glob_device;
                 proc.StandardInput.WriteLine(verifyprogramstring);
                 proc.StandardInput.WriteLine("exit");
 
@@ -1289,11 +1289,11 @@ namespace SmartLineProduction
                 string verifyprogramstring = "";
                 if (glob_ID_code.Length == 4)
                 {
-                    verifyprogramstring = Properties.Settings.Default.Commander_path + @"\commander.exe flash --patch 0x0fe00000:0x" + coppia_2 + coppia_1 + ":2" + " " + glob_device;
+                    verifyprogramstring = Properties.Settings.Default.Commander_path_SL + @"\commander.exe flash --patch 0x0fe00000:0x" + coppia_2 + coppia_1 + ":2" + " " + glob_device;
                 }
                 if (glob_ID_code.Length == 16)
                 {
-                    verifyprogramstring = Properties.Settings.Default.Commander_path + @"\commander.exe flash --patch 0x0fe00000:0x" + coppia_8 + coppia_7 + coppia_6 + coppia_5 + coppia_4 + coppia_3 + coppia_2 + coppia_1 + ":8" + " " + glob_device;
+                    verifyprogramstring = Properties.Settings.Default.Commander_path_SL + @"\commander.exe flash --patch 0x0fe00000:0x" + coppia_8 + coppia_7 + coppia_6 + coppia_5 + coppia_4 + coppia_3 + coppia_2 + coppia_1 + ":8" + " " + glob_device;
                 }
                 proc.StandardInput.WriteLine(verifyprogramstring);
                 proc.StandardInput.WriteLine("exit");

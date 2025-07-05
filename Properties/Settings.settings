@@ -13,7 +13,7 @@
     <Setting Name="FW_folder" Type="System.String" Scope="User">
       <Value Profile="(Default)">\\dc\AREA_IT\AREA_FIRMWARE\GlobalLine\Compilati</Value>
     </Setting>
-    <Setting Name="Commander_path" Type="System.String" Scope="User">
+    <Setting Name="Commander_path_SL" Type="System.String" Scope="User">
       <Value Profile="(Default)">C:\Commander</Value>
     </Setting>
     <Setting Name="Doc_folder" Type="System.String" Scope="User">
@@ -38,6 +38,9 @@
     </Setting>
     <Setting Name="Settings_Brother_GL" Type="System.String" Scope="User">
       <Value Profile="(Default)">178|89</Value>
+    </Setting>
+    <Setting Name="Commander_path_GL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Commander_GL</Value>
     </Setting>
   </Settings>
 </SettingsFile>
