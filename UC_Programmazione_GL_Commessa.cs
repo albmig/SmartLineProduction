@@ -290,28 +290,28 @@ namespace SmartLineProduction
             glob_Program_OK = true;
             Program_Board(Commessa, Kit, Item, fw_key_id, nome_fw_full, nome_fw_boot, nome_fw_conf, UT_Crea_Unique_Official_Serial_Code, ID1, ID2, ID3, is_standard_fw, is_golden, tipodev);           //nuovo sistema
 
-            string   DB_Ser_Kit                         = Kit;
-            int      DB_Ser_ID_Cli                      = Int32.Parse(glob_ID_cli);
-            string   DB_Ser_Device                      = Item;
-            string   DB_Ser_Device_ID_Code              = ID2;
-            string   DB_Ser_OfficialSerial              = UT_Crea_Unique_Official_Serial_Code;
-            string   DB_Ser_ReadSerial                  = glob_ser_num_read;
-            string   DB_Ser_SW_Code                     = cod_fw;
-            int      DB_Ser_SW_Code_Rev                 = (int)this.gL_Firmware_PGTableAdapter.GetRev(cod_fw);
-            bool     DB_Ser_SW_Std_Type                 = is_standard_fw;
-            string   DB_Ser_SN_prod                     = string.Empty;                             //NULL
-            string   DB_Ser_Commessa                    = Commessa;
-            DateTime DB_Ser_DateProduction              = DateTime.Now;
-            bool     DB_Ser_Spedito                     = false;
+            string DB_Ser_Kit = Kit;
+            int DB_Ser_ID_Cli = Int32.Parse(glob_ID_cli);
+            string DB_Ser_Device = Item;
+            string DB_Ser_Device_ID_Code = ID2;
+            string DB_Ser_OfficialSerial = UT_Crea_Unique_Official_Serial_Code;
+            string DB_Ser_ReadSerial = glob_ser_num_read;
+            string DB_Ser_SW_Code = cod_fw;
+            int DB_Ser_SW_Code_Rev = (int)this.gL_Firmware_PGTableAdapter.GetRev(cod_fw);
+            bool DB_Ser_SW_Std_Type = is_standard_fw;
+            string DB_Ser_SN_prod = string.Empty;                             //NULL
+            string DB_Ser_Commessa = Commessa;
+            DateTime DB_Ser_DateProduction = DateTime.Now;
+            bool DB_Ser_Spedito = false;
             //DateTime? DB_Ser_Data_Spedito                = DBNull.Value;                                     //NULL
-            string   DB_Ser_Substition_ID_ReadSerial    = string.Empty;                             //NULL
-            string   DB_Ser_Note                        = string.Empty;                             //NULL                                                                   //NULL
-            int      DB_Ser_LockLevel                   = 0;
-            string   DB_Ser_Device_ID_Code_Start        = ID1;
+            string DB_Ser_Substition_ID_ReadSerial = string.Empty;                             //NULL
+            string DB_Ser_Note = string.Empty;                             //NULL                                                                   //NULL
+            int DB_Ser_LockLevel = 0;
+            string DB_Ser_Device_ID_Code_Start = ID1;
 
-            bool     DB_Ser_Golden_Unlock;
+            bool DB_Ser_Golden_Unlock;
             if (this.sF_GL_ID_UnlockTableAdapter.GetUnlock(Commessa) == "NO") { DB_Ser_Golden_Unlock = false; } else { DB_Ser_Golden_Unlock = true; }
-            string   DB_Ser_Cfg_Init                     = ID3;
+            string DB_Ser_Cfg_Init = ID3;
             bool DB_Ser_CAN;
             if (this.sF_GL_Can_ActiveTableAdapter.GetCanValue(Item) == "NO") { DB_Ser_CAN = false; } else { DB_Ser_CAN = true; }
 
@@ -319,24 +319,24 @@ namespace SmartLineProduction
             {
                 if (glob_tipo_progr == "C")
                 {
-//                    AggiornaSN(Commessa, Kit, Item, fw_key_id, nome_fw_full, ID_Hw, glob_ser_num_read, glob_ser_num_write, glob_ID_cli);
-                    AggiornaSN_GL(  DB_Ser_Kit, 
-                                    DB_Ser_ID_Cli, 
-                                    DB_Ser_Device, 
-                                    DB_Ser_Device_ID_Code, 
-                                    DB_Ser_OfficialSerial, 
-                                    DB_Ser_ReadSerial, 
-                                    DB_Ser_SW_Code, 
-                                    DB_Ser_SW_Code_Rev, 
-                                    DB_Ser_SW_Std_Type, 
-                                    DB_Ser_SN_prod, 
-                                    DB_Ser_Commessa, 
-                                    DB_Ser_DateProduction, 
-                                    DB_Ser_Spedito, 
+                    //                    AggiornaSN(Commessa, Kit, Item, fw_key_id, nome_fw_full, ID_Hw, glob_ser_num_read, glob_ser_num_write, glob_ID_cli);
+                    AggiornaSN_GL(DB_Ser_Kit,
+                                    DB_Ser_ID_Cli,
+                                    DB_Ser_Device,
+                                    DB_Ser_Device_ID_Code,
+                                    DB_Ser_OfficialSerial,
+                                    DB_Ser_ReadSerial,
+                                    DB_Ser_SW_Code,
+                                    DB_Ser_SW_Code_Rev,
+                                    DB_Ser_SW_Std_Type,
+                                    DB_Ser_SN_prod,
+                                    DB_Ser_Commessa,
+                                    DB_Ser_DateProduction,
+                                    DB_Ser_Spedito,
                                     //DB_Ser_Data_Spedito, 
-                                    DB_Ser_Substition_ID_ReadSerial, 
-                                    DB_Ser_Note, 
-                                    DB_Ser_LockLevel, 
+                                    DB_Ser_Substition_ID_ReadSerial,
+                                    DB_Ser_Note,
+                                    DB_Ser_LockLevel,
                                     DB_Ser_Device_ID_Code_Start,
                                     DB_Ser_Golden_Unlock,
                                     DB_Ser_Cfg_Init,
@@ -378,8 +378,9 @@ namespace SmartLineProduction
             if (!GFunctions.PrintMask_GL()) { MessageBox.Show("Riscontrato problema sulla stampante! Verificare connessione!"); }
         }
 
-        public void Program_Board(string Commessa, string Kit, string Item, int fw_key_id, string nome_fw_full, string nome_fw_boot, string nome_fw_conf, string ID_Hw, string ID1, string ID2, string ID3, bool is_standard_fw, bool is_golden, string tipodev)
+        public bool Program_Board(string Commessa, string Kit, string Item, int fw_key_id, string nome_fw_full, string nome_fw_boot, string nome_fw_conf, string ID_Hw, string ID1, string ID2, string ID3, bool is_standard_fw, bool is_golden, string tipodev)
         {
+            glob_Program_OK = true;
             //glob_ID_code = ID_Hw;
             glob_ID_code = ID1;
 
@@ -424,7 +425,7 @@ namespace SmartLineProduction
                     dos_box.Refresh();
                     text_dos = "";
                     glob_Program_OK = false;
-                    return;
+                    return glob_Program_OK;
                 }
 
                 dos_box.SelectionStart = dos_box.Text.Length;
@@ -522,7 +523,7 @@ namespace SmartLineProduction
                     dos_box.Refresh();
                     text_dos = "";
                     glob_Program_OK = false;
-                    return;
+                    return glob_Program_OK;
                 }
 
                 dos_box.SelectionStart = dos_box.Text.Length;
@@ -558,7 +559,7 @@ namespace SmartLineProduction
                     dos_box.Refresh();
                     text_dos = "";
                     glob_Program_OK = false;
-                    return;
+                    return glob_Program_OK;
                 }
                 if (text_dos.Contains("ERROR: Verification failed!"))
                 {
@@ -567,7 +568,7 @@ namespace SmartLineProduction
                     dos_box.Refresh();
                     text_dos = "";
                     glob_Program_OK = false;
-                    return;
+                    return glob_Program_OK;
                 }
 
                 dos_box.SelectionStart = dos_box.Text.Length;
@@ -604,7 +605,7 @@ namespace SmartLineProduction
                     dos_box.Refresh();
                     text_dos = "";
                     glob_Program_OK = false;
-                    return;
+                    return glob_Program_OK;
                 }
                 if (text_dos.Contains("ERROR: Verification failed!"))
                 {
@@ -613,7 +614,7 @@ namespace SmartLineProduction
                     dos_box.Refresh();
                     text_dos = "";
                     glob_Program_OK = false;
-                    return;
+                    return glob_Program_OK;
                 }
 
                 if (text_dos.Contains("DONE"))
@@ -632,6 +633,7 @@ namespace SmartLineProduction
                     player.Load();
                     player.Play();
                     glob_Program_OK = false;
+                    return glob_Program_OK;
                 }
 
                 dos_box.SelectionStart = dos_box.Text.Length;
@@ -679,7 +681,7 @@ namespace SmartLineProduction
                     dos_box.Refresh();
                     text_dos = "";
                     glob_Program_OK = false;
-                    return;
+                    return glob_Program_OK;
                 }
                 if (text_dos.Contains("ERROR: Verification failed!"))
                 {
@@ -688,7 +690,7 @@ namespace SmartLineProduction
                     dos_box.Refresh();
                     text_dos = "";
                     glob_Program_OK = false;
-                    return;
+                    return glob_Program_OK;
                 }
 
                 if (text_dos.Contains("DONE"))
@@ -707,6 +709,7 @@ namespace SmartLineProduction
                     player.Load();
                     player.Play();
                     glob_Program_OK = false;
+                    return glob_Program_OK;
                 }
 
                 dos_box.SelectionStart = dos_box.Text.Length;
@@ -750,7 +753,7 @@ namespace SmartLineProduction
                         dos_box.Refresh();
                         text_dos = "";
                         glob_Program_OK = false;
-                        return;
+                        return glob_Program_OK;
                     }
                     if (text_dos.Contains("ERROR: Verification failed!"))
                     {
@@ -759,7 +762,7 @@ namespace SmartLineProduction
                         dos_box.Refresh();
                         text_dos = "";
                         glob_Program_OK = false;
-                        return;
+                        return glob_Program_OK;
                     }
 
                     if (text_dos.Contains("DONE"))
@@ -778,6 +781,7 @@ namespace SmartLineProduction
                         player.Load();
                         player.Play();
                         glob_Program_OK = false;
+                        return glob_Program_OK;
                     }
 
                     dos_box.SelectionStart = dos_box.Text.Length;
@@ -908,7 +912,7 @@ namespace SmartLineProduction
                         dos_box.Refresh();
                         text_dos = "";
                         glob_Program_OK = false;
-                        return;
+                        return glob_Program_OK;
                     }
                     if (text_dos.Contains("ERROR: Verification failed!"))
                     {
@@ -917,7 +921,7 @@ namespace SmartLineProduction
                         dos_box.Refresh();
                         text_dos = "";
                         glob_Program_OK = false;
-                        return;
+                        return glob_Program_OK;
                     }
 
                     if (text_dos.Contains("DONE"))
@@ -936,6 +940,7 @@ namespace SmartLineProduction
                         player.Load();
                         player.Play();
                         glob_Program_OK = false;
+                        return glob_Program_OK;
                     }
 
                     dos_box.SelectionStart = dos_box.Text.Length;
@@ -975,7 +980,7 @@ namespace SmartLineProduction
                         dos_box.Refresh();
                         text_dos = "";
                         glob_Program_OK = false;
-                        return;
+                        return glob_Program_OK;
                     }
                     if (text_dos.Contains("ERROR: Verification failed!"))
                     {
@@ -984,7 +989,7 @@ namespace SmartLineProduction
                         dos_box.Refresh();
                         text_dos = "";
                         glob_Program_OK = false;
-                        return;
+                        return glob_Program_OK;
                     }
 
                     if (text_dos.Contains("DONE"))
@@ -1003,6 +1008,7 @@ namespace SmartLineProduction
                         player.Load();
                         player.Play();
                         glob_Program_OK = false;
+                        return glob_Program_OK;
                     }
 
                     dos_box.SelectionStart = dos_box.Text.Length;
@@ -1038,7 +1044,7 @@ namespace SmartLineProduction
                     dos_box.Refresh();
                     text_dos = "";
                     glob_Program_OK = false;
-                    return;
+                    return glob_Program_OK;
                 }
 
                 if (hex_value == null)
@@ -1050,7 +1056,7 @@ namespace SmartLineProduction
                     dos_box.Refresh();
                     text_dos = "";
                     glob_Program_OK = false;
-                    return;
+                    return glob_Program_OK;
                 }
 
                 //Scrittura Hex su file
@@ -1112,7 +1118,7 @@ namespace SmartLineProduction
                         dos_box.Refresh();
                         text_dos = "";
                         glob_Program_OK = false;
-                        return;
+                        return glob_Program_OK;
                     }
                     if (text_dos.Contains("ERROR: Verification failed!"))
                     {
@@ -1121,7 +1127,7 @@ namespace SmartLineProduction
                         dos_box.Refresh();
                         text_dos = "";
                         glob_Program_OK = false;
-                        return;
+                        return glob_Program_OK;
                     }
 
                     dos_box.SelectionStart = dos_box.Text.Length;
@@ -1158,7 +1164,7 @@ namespace SmartLineProduction
                     dos_box.Refresh();
                     text_dos = "";
                     glob_Program_OK = false;
-                    return;
+                    return glob_Program_OK;
                 }
                 if (text_dos.Contains("ERROR: Verification failed!"))
                 {
@@ -1167,7 +1173,7 @@ namespace SmartLineProduction
                     dos_box.Refresh();
                     text_dos = "";
                     glob_Program_OK = false;
-                    return;
+                    return glob_Program_OK;
                 }
 
                 dos_box.SelectionStart = dos_box.Text.Length;
@@ -1204,7 +1210,7 @@ namespace SmartLineProduction
                     dos_box.Refresh();
                     text_dos = "";
                     glob_Program_OK = false;
-                    return;
+                    return glob_Program_OK;
                 }
                 if (text_dos.Contains("ERROR: Verification failed!"))
                 {
@@ -1213,7 +1219,7 @@ namespace SmartLineProduction
                     dos_box.Refresh();
                     text_dos = "";
                     glob_Program_OK = false;
-                    return;
+                    return glob_Program_OK;
                 }
 
                 if (text_dos.Contains("DONE"))
@@ -1232,6 +1238,7 @@ namespace SmartLineProduction
                     player.Load();
                     player.Play();
                     glob_Program_OK = false;
+                    return glob_Program_OK;
                 }
 
                 dos_box.SelectionStart = dos_box.Text.Length;
@@ -1254,6 +1261,8 @@ namespace SmartLineProduction
                     PrintLabel_GL(UT_Crea_Unique_Official_Serial_Code);
                 }
             }
+
+            return glob_Program_OK;
         }
 
         private void AggiornaSN(string Commessa, string Kit, string Item, int fw_key_id, string nome_fw_full, string ID_Hw, string serial_read, string serial_write, string ID_Cli)
@@ -1350,7 +1359,7 @@ namespace SmartLineProduction
             }
         }
 
-        private void AggiornaSN_GL( string DB_Ser_Kit,
+        private void AggiornaSN_GL(string DB_Ser_Kit,
                                     int DB_Ser_ID_Cli,
                                     string DB_Ser_Device,
                                     string DB_Ser_Device_ID_Code,
