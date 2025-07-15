@@ -60,7 +60,8 @@ namespace SmartLineProduction
         {
             // Lettura impostazioni
             glob_FW_folder = Properties.Settings.Default.FW_folder;
-            glob_Commander_path = Properties.Settings.Default.Commander_path_SL + "_GL";
+            //glob_Commander_path = Properties.Settings.Default.Commander_path_SL + "_GL";
+            glob_Commander_path = Properties.Settings.Default.Commander_path_GL;
             if (!Directory.Exists(glob_Commander_path))
             {
                 MessageBox.Show("Attenzione! Folder Commander: " + glob_Commander_path + " non trovato!");
